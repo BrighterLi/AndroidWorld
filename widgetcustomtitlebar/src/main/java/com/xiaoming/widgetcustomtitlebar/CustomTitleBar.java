@@ -40,6 +40,7 @@ public class CustomTitleBar extends RelativeLayout {
 
     //初始化资源文件
     private void initRes(Context context, AttributeSet attrs) {
+        //TypedArray：属性的集合，AttributeSet：XML文件中定义的View的属性的集合
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomTitleBar);
         String title = typedArray.getString(R.styleable.CustomTitleBar_title);
         int leftIcon = typedArray.getResourceId(R.styleable.CustomTitleBar_left_icon, R.drawable.icon_close);
@@ -53,7 +54,7 @@ public class CustomTitleBar extends RelativeLayout {
         ivMore.setImageResource(rightIcon);
         tvMore.setText(rightText);
 
-        //根据传入胡type值自定义
+        //根据传入的type值自定义
         if(titleBarType == 10) { //显示文字
             ivMore.setVisibility(View.GONE);
             tvMore.setVisibility(View.VISIBLE);
