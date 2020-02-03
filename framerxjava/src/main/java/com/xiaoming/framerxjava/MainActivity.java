@@ -35,6 +35,8 @@ public class MainActivity extends Activity {
                 switch (position) {
                     case 0:
                         startActivity(new Intent(MainActivity.this, RxJavaDemoActivity.class));
+                    case 1:
+                        startActivity(new Intent(MainActivity.this, RxJavaDemo2Activity.class));
                 }
 
             }
@@ -43,5 +45,6 @@ public class MainActivity extends Activity {
 
     private void initDemoList() {
         demoNameList.add("RxJava Demo(观察者和被观察者分开写)");
+        demoNameList.add("RxJava Demo(观察者和被观察者不分开写，链式调用)");
     }
 }
