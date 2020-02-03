@@ -1,1 +1,1 @@
-include ':app', ':widgetcustomtitlebar', ':widgetwheelview'
+include ':app', ':widgetcustomtitlebar', ':widgetwheelview', ':framerxjava'
