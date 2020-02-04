@@ -40,7 +40,10 @@ https://www.jb51.net/article/88663.htm
   (1) 请求；上传；下载；封装；原理
 
 4 框架(网络)—Retrofit
-
+  底层基于OKHttp;使用注解
+  (1)请求方法注解 Get Post
+  (2)标记类注解
+  (3)参数类注解 Body Path Field Query
 5 框架(路由)—Router
 
 
