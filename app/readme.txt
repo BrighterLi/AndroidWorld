@@ -1,5 +1,5 @@
 1控件— 自定义View—组合方式
-<1> 自定义滚动显示器
+<1> 自定义标题栏
 https://www.jb51.net/article/88663.htm
 实现功能：
 (1) 自定义View标题栏布局
@@ -19,7 +19,39 @@ https://www.jb51.net/article/88663.htm
     竖直居中:android:layout_centerVertical="true"
 (3) 自定义属性
      </declare-styleable>
-
+<2>自定义滚动显示器
+    https://blog.csdn.net/yun382657988/article/details/84761433
+   (1)布局加载方式
+      LayoutInflater布局加载器
+      Android基础之LayoutInflater的使用:https://blog.csdn.net/weixin_37292229/article/details/70046279
+      1) 什么是LayoutInflater
+      Inflater英文意思是膨胀，在Android中应该是扩展的意思吧。
+      LayoutInflater是一个用于将xml布局文件加载为View或者ViewGroup对象的工具，我们可以称之为布局加载器。
+            在应用中自定义一个view，需要获取这个view的布局，需要用到
+            (LinearLayout) LayoutInflater.from(context).inflate(R.layout.contentitem, null);
+      2)如何获取LayoutInflater
+      LayoutInflater是一个抽象类，不可以通过new的方式获得它的实例。
+      获取LayoutInflater通常有以下三种方式。
+      1> LayoutInflater inflater = LayoutInflater.from(context);
+      2> 在Activity内部调用getLayoutInflater()方法
+      3> LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+       实际上，1和2两种方式都是调用的3。
+      3)使用场景：使用场景根据实际需要更改，这只是举例子。
+       1> 在Fragment中
+       inflater.inflate(R.layout.fragment_home, container, false)
+       解释：当在Fragment的onCreateView()方法中填充并返回View时，要将attachToRoot设为false。如果传入true，会抛出IllegalStateException，
+       因为指定的子View已经有父View了。我们只需要设置View的参数，而添加、移除或替换Fragment则是FragmentManager的事情。
+       2> 在adapter中
+       LayoutInflater.from(mContext).inflate(R.layout.layout_top_category_item, parent, false)
+       解释：RecyclerView负责决定什么时候展示这个View，不需要我们指定添加。
+       3> 自定义View
+       View view = LayoutInflater.from(getContext()).inflate(R.layout.view_common_banner, this);
+       把我们的布局文件添加到我们自定义View当中，比如自定义View继承的ViewGroup（比如Framlayout）中，也就是当前的this。
+       4) LayoutInflater.from(context).inflate()和View.inflate的区别。
+       View.inflate()是封装了LayoutInflater的inflate()方法，由于是静态方法，比较简便；但LayoutInflater相当于
+       比View多了一个attachToRoot参数的inflate()方法，功能更强大。可以设置是否添加到root布局当中。View是当root不为null的时候，默认添加的。
+       5) LayoutInflater的作用类似于findViewById(),LayoutInflater是用来实例化整个布局文件，而findViewById()是实例化布局文中的View,
+       是找具体某一个xml下的具体 widget控件。
 2 框架(函数响应式编程)—RxJava Demo
 (1) 观察者、被观察者、订阅
 (2) 操作符
@@ -44,6 +76,8 @@ https://www.jb51.net/article/88663.htm
   (1)请求方法注解 Get Post
   (2)标记类注解
   (3)参数类注解 Body Path Field Query
+
 5 框架(路由)—Router
+
 
 

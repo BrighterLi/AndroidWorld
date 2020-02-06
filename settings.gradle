@@ -1,1 +1,1 @@
-include ':app', ':widgetcustomtitlebar', ':widgetwheelview', ':framerxjava', ':frameretrofit', ':frameokhttp', ':framearouter'
+include ':app', ':widgetcustomtitlebar', ':widgetwheelview', ':framerxjava', ':frameretrofit', ':frameokhttp', ':framearouter', ':layoutinflater'
