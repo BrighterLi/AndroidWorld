@@ -26,7 +26,7 @@ import java.util.List;
 public class WheelView extends ScrollView {
     public static final String TAG = WheelView.class.getSimpleName();
 
-    //静态内部类
+    //静态内部类，作为回调接口使用
     public static class OnWheelViewListener {
         public void onSelected(int selectedIndex, String item) {
         }
@@ -214,9 +214,9 @@ public class WheelView extends ScrollView {
                 return;
             }
             if(position == i) {
-                itemView.setTextColor(context.getResources().getColor(R.color.green));
+                itemView.setTextColor(context.getResources().getColor(R.color.red));
             } else {
-                itemView.setTextColor(context.getResources().getColor(R.color.color_999999));
+                itemView.setTextColor(context.getResources().getColor(R.color.green));
             }
         }
     }

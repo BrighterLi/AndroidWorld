@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
     private void showDialog(TextView textView, ArrayList<String> list, int selected) {
        showChoiceDialog(list, textView, selected, new WheelView.OnWheelViewListener() {
            @Override
-           public void onSelected(int selectedIndex, String item) {
+           public void onSelected(int selectedIndex, String item) { //监听回调
                selectedText = item;
            }
        });
@@ -88,11 +88,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void showChoiceDialog(ArrayList<String> dataList, final TextView textView, int selected, WheelView.OnWheelViewListener listener) {
         selectedText = "";
+        //动态加载布局dialog_wheelview
         View outerView = LayoutInflater.from(this).inflate(R.layout.dialog_wheelview, null);
+        //加载布局dialog_wheelview的控件wheel_view
         final WheelView wheelView = outerView.findViewById(R.id.wheel_view);
         wheelView.setOffset(2); // 对话框中当前项上面和下面的项数
         wheelView.setItems(dataList); // 设置数据源
-        wheelView.setSeletion(selected); // 默认选中第三项
+        wheelView.setSeletion(selected); // 默认选中项
         wheelView.setOnWheelViewListener(listener);
 
         // 显示对话框
@@ -101,8 +103,8 @@ public class MainActivity extends AppCompatActivity {
                 .setPositiveButton("确认", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        textView.setText(selectedText);
-                        textView.setTextColor(MainActivity.this.getResources().getColor(R.color.green));
+                        textView.setText(selectedText); //设置textView显示内容
+                        textView.setTextColor(MainActivity.this.getResources().getColor(R.color.red)); //设置textView内容颜色
                     }
                 })
                 .setNegativeButton("取消",null).create();

@@ -96,3 +96,8 @@ https://www.jb51.net/article/88663.htm
   在onCreate里面使用setContentView方法来载入一个在xml里定义好的界面.
  (3) 什么是已经被载入的layout,什么是还没有载入的,我们启动一个应用,与入口Activity相关的layout
  {常见的是main.xml}就是被载入的,即在onCreate()中的.而其他的layout是没有被载入的.就要动态载入了或通过另一个activity.
+
+ (4)Activity中的findViewById()和View中的findViewById()区别
+  https://blog.csdn.net/DavidHuang2017/article/details/78249035
+  findViewById是有上下文的，默认是在Activity的主布局中，当在一些主布局的View中，子布局中
+  比如dialog中，就要用view.findViewById(),才行。要不然报空指针错误。
