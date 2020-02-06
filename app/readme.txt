@@ -52,7 +52,8 @@ https://www.jb51.net/article/88663.htm
        比View多了一个attachToRoot参数的inflate()方法，功能更强大。可以设置是否添加到root布局当中。View是当root不为null的时候，默认添加的。
        5) LayoutInflater的作用类似于findViewById(),LayoutInflater是用来实例化整个布局文件，而findViewById()是实例化布局文中的View,
        是找具体某一个xml下的具体 widget控件。
-2 框架(函数响应式编程)—RxJava Demo
+2 框架
+<1> 框架(函数响应式编程)—RxJava Demo
 (1) 观察者、被观察者、订阅
 (2) 操作符
     创建操作符：
@@ -67,17 +68,31 @@ https://www.jb51.net/article/88663.htm
     变换操作符：
     map:
     flatMap:
-3 框架(网络)—OkHttp
+<2> 框架(网络)—OkHttp
   https://blog.csdn.net/yubo_725/article/details/51180617
   (1) 请求；上传；下载；封装；原理
 
-4 框架(网络)—Retrofit
+<3> 框架(网络)—Retrofit
   底层基于OKHttp;使用注解
   (1)请求方法注解 Get Post
   (2)标记类注解
   (3)参数类注解 Body Path Field Query
 
-5 框架(路由)—Router
+<4> 框架(路由)—Router
 
-
-
+3 其他
+ <1> LayoutInflater
+  https://www.cnblogs.com/wwicked/articles/4339629.html
+  (1) LayoutInflater和findViewById的区别
+  // LayoutInflater的作用是，把一个View的对象与XML布局文件关联并实例化
+  View itemView = inflater.inflate(R.layout.list_view_item, null);
+  // View的对象实例化之后，可以通过findViewById()查找布局文件中的指定Id的组件
+  TextView title = (TextView) itemView.findViewById(R.id.txtTitle);
+  TextView text = (TextView) itemView.findViewById(R.id.txtContent);
+  (2) LayoutInflater的作用及用法：
+  作用：  1、对于一个没有被载入或者想要动态载入的界面, 都需要使用inflate来载入.
+  2、对于一个已经载入的Activity, 就可以使用实现了这个Activity的的findViewById方法来获得其中的界面元素.
+  方法： Android里面想要创建一个画面的时候, 初学一般都是新建一个类, 继承Activity基类, 然后
+  在onCreate里面使用setContentView方法来载入一个在xml里定义好的界面.
+ (3) 什么是已经被载入的layout,什么是还没有载入的,我们启动一个应用,与入口Activity相关的layout
+ {常见的是main.xml}就是被载入的,即在onCreate()中的.而其他的layout是没有被载入的.就要动态载入了或通过另一个activity.
