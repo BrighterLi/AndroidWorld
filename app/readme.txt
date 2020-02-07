@@ -52,6 +52,39 @@ https://www.jb51.net/article/88663.htm
        比View多了一个attachToRoot参数的inflate()方法，功能更强大。可以设置是否添加到root布局当中。View是当root不为null的时候，默认添加的。
        5) LayoutInflater的作用类似于findViewById(),LayoutInflater是用来实例化整个布局文件，而findViewById()是实例化布局文中的View,
        是找具体某一个xml下的具体 widget控件。
+
+   <3> 各种自定义View Demo
+     https://blog.csdn.net/yilei0033/article/details/79445540
+     https://blog.csdn.net/qq_37217804/article/details/80894986
+    (1) android自定义组件一般有三种实现方式：
+        一、组合控件：组合控件，顾名思义就是将一些小的控件组合起来形成一个新的控件，这些小的控件多是系统自带的控件。
+        二、自绘控件: 何为自绘控件，就是完全用Paint和canvas画出来的，就是在onDraw()方法里面绘画，在onMeasure()方法里面进行测量，
+        如果是容器在onLayout()方法中定位每个子组件。
+        三、继承控件: 就是继承已有的控件，创建新控件，保留继承的父控件的特性，并且还可以引入新特性。
+        自绘控件也分两种，自定义组件和自定义容器，自定义组件是继承View类，自定义容器时继承ViewGrounp
+     (2) srollTo(int x,int y)
+         srollTo(int x,int y)表示的是移动到哪个坐标点,是将View中的内容偏移至坐标(x,y)处，注意移动的是内容，而不是View。
+         srcollBy(int x,int y)
+         srollTo(x,y)表示的是移动的增量dx和dy,这个和scrollBy有点类似，其实srollToBy方法在其内部是调用了scrollTo()方法，
+         但是参数x是内容横向移动相应距离，参数y是内容纵向移动相应距离，也就是说直接在原来坐标的基础上再继续移动。
+         (为正时代表右向左或者下向上)
+         https://blog.csdn.net/znouy/article/details/51338256
+         getSrcollX(): getScrollX() 就是当前view的左上角相对于母视图的左上角的X轴偏移量
+         getScrollY(): getScrollY() 就是当前view的左上角相对于母视图的左上角的Y轴偏移量
+
+         规则：左加右减，上加下减
+         瞬间移动视图的内容 : 利用 View的 scroll 方法
+             1). scrollBy(int x, int y) : 滑动指定的偏移量 (从当前位置瞬间 )
+                    x: x 轴上的偏移量 , x>0内容向左滑动 , x<0 内容向右滑动 , x=0 水平方向不滑动
+                    y: y 轴上的偏移量 , y>0内容向上滑动 , y<0 内容向下滑动 , y=0 垂直方向不滑动
+              2). scrollTo(int x, int y) : 滑动到指定的偏移量 ( 从当前位置瞬间 )
+                    x: 目标位置 x轴上的偏移量 , x>0 移动到原始位置的左侧 , x<0移动到原始位置的右侧 ,x=0 移动到水平原始位置
+
+
+                    y: 目标位置 y轴上的偏移量 , y>0 移动到原始位置的上侧 , y<0移动到原始位置的下侧 ,y=0 移动到垂直原始位置
+         区别：by ：每次执行都会移动
+              to ：如果参数是死的，那么每次执行只能移动到固定位置
+
 2 框架
 <1> 框架(函数响应式编程)—RxJava Demo
 (1) 观察者、被观察者、订阅

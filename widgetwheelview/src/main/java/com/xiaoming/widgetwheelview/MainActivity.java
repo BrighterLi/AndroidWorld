@@ -74,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
                 showDialog(tvWeight, weightList, 40);
             }
         });
-
     }
 
     private void showDialog(TextView textView, ArrayList<String> list, int selected) {
@@ -91,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
         //动态加载布局dialog_wheelview
         View outerView = LayoutInflater.from(this).inflate(R.layout.dialog_wheelview, null);
         //加载布局dialog_wheelview的控件wheel_view
+        //wheelView对象可以通过该种方式产生，而不是new
         final WheelView wheelView = outerView.findViewById(R.id.wheel_view);
         wheelView.setOffset(2); // 对话框中当前项上面和下面的项数
         wheelView.setItems(dataList); // 设置数据源
@@ -98,8 +98,8 @@ public class MainActivity extends AppCompatActivity {
         wheelView.setOnWheelViewListener(listener);
 
         // 显示对话框
-        AlertDialog alertDialog = new AlertDialog.Builder(this)
-                .setView(outerView)
+        AlertDialog alertDialog = new AlertDialog.Builder(this) //创建对话框
+                .setView(outerView) //将view放进Dialog,自定义对话框界面
                 .setPositiveButton("确认", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
