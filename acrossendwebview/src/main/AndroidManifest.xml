@@ -19,6 +19,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".openh5.OpenH5Activity">
+        <intent-filter>
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+    </activity>
+        <activity android:name=".webviewandjs.WebviewAndJSActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
