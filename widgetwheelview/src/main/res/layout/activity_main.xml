@@ -13,6 +13,11 @@
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_weight="1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_design"
+        android:gravity="center"
+        android:textSize="14sp"
         android:text="选择年龄"/>
 
     <TextView
@@ -20,6 +25,9 @@
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_weight="1"
+        android:background="@drawable/shape_design"
+        android:gravity="center"
+        android:textSize="14sp"
         android:text="选择身高"/>
 
     <TextView
@@ -27,6 +35,11 @@
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_design"
+        android:gravity="center"
+        android:textSize="14sp"
         android:text="选择体重"/>
 
 </LinearLayout>
