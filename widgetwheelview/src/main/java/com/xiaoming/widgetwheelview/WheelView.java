@@ -23,7 +23,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-//时间选择器-单列
+//时间选择器-单列，可扩展至2列，3列，4列
 public class WheelView extends ScrollView {
     public static final String TAG = WheelView.class.getSimpleName();
 
