@@ -17,13 +17,13 @@ import java.util.List;
 public class AddressPopupWindow extends LinearLayout {
 
     FrameLayout flFork;// 叉
-    TextView tvProvince;
+    TextView tvProvince; //省
     TextView tvCity;
     TextView tvArea;
-    View bottomLineProvince;
+    View bottomLineProvince; //横线指示器
     View bottomLineCity;
     View bottomLineArea;
-    RecyclerView recycleView;
+    RecyclerView recycleView; //滚动列表
 
     private OnForkClickListener onForkClickListener;
     private OnRpwItemClickListener onRpwItemClickListener;
@@ -46,6 +46,7 @@ public class AddressPopupWindow extends LinearLayout {
 
     public AddressPopupWindow(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        //加载AddressPopupWindow的布局
         LayoutInflater.from(context).inflate(R.layout.address_popupwindow, this, true);
         setBackgroundResource(R.color.white);
     }

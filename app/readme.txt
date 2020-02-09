@@ -1,5 +1,5 @@
 1控件— 自定义View—组合方式
-<1> 自定义标题栏
+<1> 自定义标题栏 WidgetCustomTitleBar
 https://www.jb51.net/article/88663.htm
 实现功能：
 (1) 自定义View标题栏布局
@@ -19,7 +19,7 @@ https://www.jb51.net/article/88663.htm
     竖直居中:android:layout_centerVertical="true"
 (3) 自定义属性
      </declare-styleable>
-<2>自定义滚动显示器
+<2>自定义滚动显示器 WidgetWheelView
     https://blog.csdn.net/yun382657988/article/details/84761433
    (1)布局加载方式
       LayoutInflater布局加载器
@@ -84,7 +84,17 @@ https://www.jb51.net/article/88663.htm
                     y: 目标位置 y轴上的偏移量 , y>0 移动到原始位置的上侧 , y<0移动到原始位置的下侧 ,y=0 移动到垂直原始位置
          区别：by ：每次执行都会移动
               to ：如果参数是死的，那么每次执行只能移动到固定位置
-
+    <4> 自定义地址选择器 WidgetAddressSelector
+     (1) Android的对话框有两种：PopupWindow和AlertDialog。
+             它们的不同点在于：AlertDialog的位置固定，而PopupWindow的位置可以随意
+         AlertDialog是非阻塞线程的，AlertDialog弹出的时候，后台可是还可以做其他事情。
+         而PopupWindow是阻塞线程的, 这就意味着在我们退出这个弹出框之前，程序会一直等待。
+              从效果上去总结看，dialog和popWindow在一般的弹出效果上能做到一样的效果，但是dialog默认在屏幕的居中弹出，
+         popWindow则可以更灵活的通过设置动化效果，从上下左右边缘地带弹出来，还能更方便的控制显示在屏幕上的位置。
+              从需求上，如果让显示的就是居中弹出的小窗口，背景带蒙层，那么用dialog更方便，因为popWindow得手动添加蒙层，
+          不如dialog便捷，而且当按下物理返回键的时候，dialog会dismiss，但是popWindow默认不会进行dismiss操作，程序会最小化，也就是说，popWindow要手写物理按键的监听。
+     (2) 自定义dialog 默认的显示位置是window 的位置
+         可以通过dialog或者窗口对象 window 然后通过window 去设置dialog的上下中的位置
 2 框架
 <1> 框架(函数响应式编程)—RxJava Demo
 (1) 观察者、被观察者、订阅
