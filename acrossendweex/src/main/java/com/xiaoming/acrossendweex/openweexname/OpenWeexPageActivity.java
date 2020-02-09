@@ -11,8 +11,9 @@ import com.taobao.weex.WXSDKInstance;
 import com.taobao.weex.common.WXRenderStrategy;
 import com.taobao.weex.utils.WXFileUtils;
 
-//Native -> Weex,Android打开Weex页面
+//Native -> Weex,Android打开本地Weex页面
 //https://blog.csdn.net/weixin_33742618/article/details/91380769
+//https://blog.csdn.net/nyb521/article/details/82656791
 public class OpenWeexPageActivity extends AppCompatActivity implements IWXRenderListener {
     WXSDKInstance mWXSDKInstance;
     private Handler mHandler = new Handler();
@@ -54,7 +55,7 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
          * width 为-1 默认全屏，可以自己定制。
          * height =-1 默认全屏，可以自己定制。
          */
-        //渲染页面
+        //渲染页面，home.js就是weex打包好后给你的js文件
         mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("home.js", this), null, null, -1,-1, WXRenderStrategy.APPEND_ASYNC);
     }
 

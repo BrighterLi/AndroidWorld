@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        demoNameList.add("Android打开Weex页面");
+        demoNameList.add("Android打开本地Weex页面");
     }
 
     private void initView() {
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
-                    case 0:
+                    case 0: //Android打开本地Weex页面
                         startActivity(new Intent(MainActivity.this, OpenWeexPageActivity.class));
                 }
             }
