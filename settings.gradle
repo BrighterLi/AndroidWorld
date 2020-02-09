@@ -1,1 +1,1 @@
-include ':app', ':widgetcustomtitlebar', ':widgetwheelview', ':framerxjava', ':frameretrofit', ':frameokhttp', ':framearouter', ':layoutinflater', ':widgetaddressselector', ':acrossendwebview', ':acrossendweex'
+include ':app', ':widgetcustomtitlebar', ':widgetwheelview', ':framerxjava', ':frameretrofit', ':frameokhttp', ':framearouter', ':layoutinflater', ':widgetaddressselector', ':acrossendwebview', ':acrossendweex', ':widgettimeselector'
