@@ -134,3 +134,11 @@ https://www.jb51.net/article/88663.htm
   https://blog.csdn.net/DavidHuang2017/article/details/78249035
   findViewById是有上下文的，默认是在Activity的主布局中，当在一些主布局的View中，子布局中
   比如dialog中，就要用view.findViewById(),才行。要不然报空指针错误。
+
+  4 跨段交互(Across End)
+  <1> WebView
+   (1) android.annotation.SuppressLint
+       Lint是一个静态检查器，它围绕Android项目的正确性、安全性、性能、可用性以及可访问性进行分析。
+       它检查的对象包括XML资源、位图、ProGuard配置文件、源文件甚至编译后的字节码。
+       Lint包含了API版本检查、性能检查以及其他诸多特性。
+       其中还有一个重要的改动是Lint可以使用@SuppressLint标注忽略指定的警告。

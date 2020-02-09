@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.xiaoming.acrossendwebview.openh5.OpenH5Activity;
-import com.xiaoming.acrossendwebview.webviewandjs.WebviewAndJSActivity;
+import com.xiaoming.acrossendwebview.webviewandjs.WebViewAndJSActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                       startActivity(new Intent(MainActivity.this, OpenH5Activity.class));
                     case 1:
-                        startActivity(new Intent(MainActivity.this, WebviewAndJSActivity.class));
+                        startActivity(new Intent(MainActivity.this, WebViewAndJSActivity.class));
                 }
             }
         });

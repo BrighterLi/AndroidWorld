@@ -23,7 +23,7 @@
             <category android:name="android.intent.category.LAUNCHER"/>
         </intent-filter>
     </activity>
-        <activity android:name=".webviewandjs.WebviewAndJSActivity">
+        <activity android:name=".webviewandjs.WebViewAndJSActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>

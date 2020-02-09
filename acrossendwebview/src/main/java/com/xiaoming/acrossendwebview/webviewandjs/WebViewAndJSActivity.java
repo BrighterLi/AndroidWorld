@@ -14,11 +14,14 @@ import android.widget.Toast;
 
 import com.xiaoming.acrossendwebview.R;
 
-public class WebviewAndJSActivity extends Activity {
-    private static final String TAG = "WebviewAndJSActivity";
+//https://www.cnblogs.com/ssqqhh/p/5657944.html
+//JsBridge: https://www.jianshu.com/p/fd29ef3922d8
+public class WebViewAndJSActivity extends Activity {
+    private static final String TAG = "WebViewAndJSActivity";
     private WebView mWebView;
     private Button btnShow;
 
+    //@SuppressLint标注忽略指定的警告
     @SuppressLint("JavascriptInterface")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +41,9 @@ public class WebviewAndJSActivity extends Activity {
     private void initData() {
         mWebView.setWebChromeClient(new WebChromeClient());
         WebSettings webSettings = mWebView.getSettings();
-        //是否支持 Js 使用
+        //是否支持 Js 使用,允许JavaScript执行,设置与Js交互的权限
         webSettings.setJavaScriptEnabled(true);
-        //设置本地调用对象及其接口(js调用android)
+        //设置本地调用对象及其接口(js调用android),添加一个对象, 让javascript可以访问该对象的方法
         mWebView.addJavascriptInterface(new JsInteraction(),"control");
         //加载本地h5页面
         mWebView.loadUrl("file:///android_asset/h5.html");
@@ -56,8 +59,14 @@ public class WebviewAndJSActivity extends Activity {
         });
     }
 
-    //Android本地方法
+    /**
+     * 第1种：
+     * 映射的JS对象名
+     * 4.2版本前直接使用该方法存在严重漏洞
+     */
+    //Android本地方法,js可以调用
     public class JsInteraction {
+        //@JavascriptInterface注解来提高安全等级，没有注解的方法，js无法调用
         @JavascriptInterface
         public void toastMessage(String message) {
             Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
