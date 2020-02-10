@@ -96,9 +96,12 @@ https://www.jb51.net/article/88663.htm
           不如dialog便捷，而且当按下物理返回键的时候，dialog会dismiss，但是popWindow默认不会进行dismiss操作，程序会最小化，也就是说，popWindow要手写物理按键的监听。
      (2) 自定义dialog 默认的显示位置是window 的位置
          可以通过dialog或者窗口对象 window 然后通过window 去设置dialog的上下中的位置
-   <5> 时间选择器 WidgetTimeSelector
+   <5> 时间选择器 WidgetTimeSelector  不依赖第三方选择器
        需求：联动；圆角；由下到上弹出；回调刷新；显示一列二列三列可选；
        https://blog.csdn.net/qq_22393017/article/details/58099486
+
+   <6> 时间选择器 WidgetTimeSelector2 依赖第三方选择器
+       需求：联动；圆角；由下到上弹出；回调刷新；显示一列二列三列可选；
 2 框架
 <1> 框架(函数响应式编程)—RxJava Demo
 (1) 观察者、被观察者、订阅
