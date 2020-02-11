@@ -17,6 +17,9 @@ https://www.jb51.net/article/88663.htm
     水平垂直居中：android:layout_centerInParent = "true"
     水平居中:android:layout_centerHorizontal="true"
     竖直居中:android:layout_centerVertical="true"
+
+    layout_gravity="center_vertical"和 layout_centerVertical="true"区别?
+    都表示当前控件在父容器的位置是垂直居中,后者的父容器只能是相对布局
 (3) 自定义属性
      </declare-styleable>
 <2>自定义滚动显示器 WidgetWheelView
@@ -102,6 +105,10 @@ https://www.jb51.net/article/88663.htm
 
    <6> 时间选择器 WidgetTimeSelector2 依赖第三方选择器
        需求：联动；圆角；由下到上弹出；回调刷新；显示一列二列三列可选；
+
+   <7> PopupWindow  弹窗
+       (1) 两种弹窗  PopupWindow;Dialog
+           都可以通过将自定义的view设置进去，从而自定义弹窗内容。
 2 框架
 <1> 框架(函数响应式编程)—RxJava Demo
 (1) 观察者、被观察者、订阅
@@ -167,4 +174,7 @@ https://www.jb51.net/article/88663.htm
    //加载本地资源
    mWXSDKInstance.render(template,template,options,jsonInitData,WXRenderStrategy.APPEND_ASYNC);}
 
-
+5 网络
+ <1> Cookie、Session
+  https://blog.csdn.net/lishuai05251986/article/details/84804199
+<2> token
