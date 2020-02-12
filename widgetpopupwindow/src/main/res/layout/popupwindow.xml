@@ -50,7 +50,9 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"/>
+                    android:layout_height="6dp"
+                    android:background="#999999"/>
+
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
