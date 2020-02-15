@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,14 +29,18 @@ public class MainActivity extends AppCompatActivity {
                 switch (position) {
                     case 0:
                         startActivity(new Intent(MainActivity.this, OnePermissionActivity.class));
+                        break;
                     case 1:
                         startActivity(new Intent(MainActivity.this, MultiPermissionActivity.class));
+                        break;
+                        default:
+                            break;
                 }
             }
         });
 
         //适配器
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,demoListData);
+        ArrayAdapter arrayAdapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1,demoListData);
         //绑定适配器,相当于将数据放入到view
         listView.setAdapter(arrayAdapter);
     }
