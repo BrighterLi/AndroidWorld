@@ -100,11 +100,11 @@ https://www.jb51.net/article/88663.htm
      (2) 自定义dialog 默认的显示位置是window 的位置
          可以通过dialog或者窗口对象 window 然后通过window 去设置dialog的上下中的位置
    <5> 时间选择器 WidgetTimeSelector  不依赖第三方选择器
-       需求：联动；圆角；由下到上弹出；回调刷新；显示一列二列三列可选；
+       需求：联动；圆角；由下到上弹出；回调刷新；显示一列二列三列可选；前端传字段控制消失移除；
        https://blog.csdn.net/qq_22393017/article/details/58099486
 
    <6> 时间选择器 WidgetTimeSelector2 依赖第三方选择器
-       需求：联动；圆角；由下到上弹出；回调刷新；显示一列二列三列可选；
+       需求：联动；圆角；由下到上弹出；回调刷新；显示一列二列三列可选；前端传字段控制消失移除
 
    <7> PopupWindow  弹窗
        (1) 两种弹窗  PopupWindow;Dialog
@@ -158,8 +158,12 @@ https://www.jb51.net/article/88663.htm
   https://blog.csdn.net/DavidHuang2017/article/details/78249035
   findViewById是有上下文的，默认是在Activity的主布局中，当在一些主布局的View中，子布局中
   比如dialog中，就要用view.findViewById(),才行。要不然报空指针错误。
+ <2> Authority 权限
+    https://blog.csdn.net/man_help/article/details/52316501
+    https://blog.csdn.net/wangpf2011/article/details/80589648
 
-  4 跨段交互(Across End)
+
+4 跨端交互(Across End)
   <1> WebView
    (1) android.annotation.SuppressLint
        Lint是一个静态检查器，它围绕Android项目的正确性、安全性、性能、可用性以及可访问性进行分析。
