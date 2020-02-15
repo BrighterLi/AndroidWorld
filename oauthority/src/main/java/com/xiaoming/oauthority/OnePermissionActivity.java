@@ -41,6 +41,7 @@ public class OnePermissionActivity extends AppCompatActivity {
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
             //如果没有则请求该权限
             Toast.makeText(this, "无此权限，进行申请", Toast.LENGTH_SHORT).show();
+            //此方法异步执行，会弹出权限请求对话框，让用户授权，并回调 onRequestPermissionsResult 来告知授权结果
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE},1);
         } else { //有该权限
             //则可以做对应的事情
