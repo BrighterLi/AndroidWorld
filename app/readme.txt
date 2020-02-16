@@ -1,4 +1,4 @@
-1控件— 自定义View—组合方式
+1 Widget控件— 自定义View—组合方式
 <1> 自定义标题栏 WidgetCustomTitleBar
 https://www.jb51.net/article/88663.htm
 实现功能：
@@ -109,6 +109,17 @@ https://www.jb51.net/article/88663.htm
    <7> PopupWindow  弹窗
        (1) 两种弹窗  PopupWindow;Dialog
            都可以通过将自定义的view设置进去，从而自定义弹窗内容。
+
+   <8> Dialog
+    (1) AlertDialog AlertDialog.Builder
+        https://blog.csdn.net/canot/article/details/50526409
+        提示信息的控件AlertDialog(对话框)，同时它也是其他 Dialog的的父类,比如ProgressDialog，TimePickerDialog等，而AlertDialog的父类是：Dialog。
+         另外，不像Toast和Notification，AlertDialog并不能直接new出来，如果你打开 AlertDialog的源码，会发现构造方法是protected的，
+         如果我们要创建AlertDialog的话,需要使用到该类中的一个静态内部类：public static class Builder，然后来调用AlertDialog 里的相关方法，
+         来对AlertDialog进行定制，最后调用show()方法来显示我们的AlertDialog对话框。
+    (2) AlertDialog Dialog
+       https://blog.csdn.net/alangdangjia/article/details/9026759
+
 2 框架
 <1> 框架(函数响应式编程)—RxJava Demo
 (1) 观察者、被观察者、订阅
@@ -160,7 +171,10 @@ https://www.jb51.net/article/88663.htm
   比如dialog中，就要用view.findViewById(),才行。要不然报空指针错误。
  <2> Authority 权限
     https://blog.csdn.net/man_help/article/details/52316501
+    https://blog.csdn.net/yushuangping/article/details/83758957
     https://blog.csdn.net/wangpf2011/article/details/80589648
+    自定义提示Dialog:https://www.cnblogs.com/whycxb/p/9742385.html
+    自定义提示Dialog:https://www.jianshu.com/p/c83503f0384d
 
 
 4 跨端交互(Across End)
