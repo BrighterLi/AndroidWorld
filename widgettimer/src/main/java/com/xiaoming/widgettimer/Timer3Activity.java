@@ -36,7 +36,7 @@ public class Timer3Activity extends AppCompatActivity {
     }
 
     //内部类
-    class MyThread extends Thread{
+    class MyThread extends Thread{ //这里也可用Runnable接口实现
         @Override
         public void run() {
             while (true) {
