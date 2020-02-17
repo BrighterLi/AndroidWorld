@@ -9,6 +9,7 @@ import android.widget.ListView;
 import android.widget.ArrayAdapter;
 
 import com.xiaoming.widgetlistview.listview2.ListView2Activity;
+import com.xiaoming.widgetlistview.listview3.ListView3Activity;
 
 import java.util.ArrayList;
 import java.util.List;

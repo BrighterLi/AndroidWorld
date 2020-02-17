@@ -20,7 +20,7 @@ public class ListView2Activity extends AppCompatActivity {
         //初始化天气数据
         initWeather();
 
-        //适配器
+        //适配器，将上下文、ListView子项布局的id、列表数据 传递进来
         WeatherAdapter weatherAdapter = new WeatherAdapter(this, R.layout.list_view2_item, weatherList);
         listView.setAdapter(weatherAdapter);
     }
