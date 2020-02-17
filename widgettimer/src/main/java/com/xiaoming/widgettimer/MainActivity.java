@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //三种常用定时器:https://www.cnblogs.com/dame/p/8085983.html
-//延时方法
+//三种延时方法：https://www.cnblogs.com/dame/p/8085983.html
 public class MainActivity extends AppCompatActivity {
     private ListView listView;
     private List<String> demoListData = new ArrayList<>();
@@ -30,13 +30,26 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0:
-                        startActivity(new Intent(MainActivity.this, Timer1Activity.class));
                         break;
                     case 1:
-                        startActivity(new Intent(MainActivity.this, Timer2Activity.class));
+                        startActivity(new Intent(MainActivity.this, Timer1Activity.class));
                         break;
                     case 2:
+                        startActivity(new Intent(MainActivity.this, Timer2Activity.class));
+                        break;
+                    case 3:
                         startActivity(new Intent(MainActivity.this, Timer3Activity.class));
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        startActivity(new Intent(MainActivity.this, DelayedMethod1Activity.class));
+                        break;
+                    case 6:
+                        startActivity(new Intent(MainActivity.this, DelayedMethod2Activity.class));
+                        break;
+                    case 7:
+                        startActivity(new Intent(MainActivity.this, DelayedMethod3Activity.class));
                         break;
                 }
             }
@@ -49,9 +62,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+        demoListData.add("三种定时器");
         demoListData.add("第一种定时器：Handler类的postDelayed方法");
         demoListData.add("第二种定时器：用handler+timer+timeTask方法");
         demoListData.add("第三种定时器：Thread+handler方法");
+        demoListData.add("三种延时方法");
+        demoListData.add("第一种延时方法：Handler的postDelayed方法");
+        demoListData.add("第二种延时方法：timer + TimerTask方法");
+        demoListData.add("第三种延时方法：Thread方法");
     }
 
 }
