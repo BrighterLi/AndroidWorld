@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
         demoListData.add("第一种定时器：Handler类的postDelayed方法");
         demoListData.add("第二种定时器：用handler+timer+timeTask方法");
-        demoListData.add("第一种定时器：Handler类的postDelayed方法");
+        demoListData.add("第三种定时器：Thread+handler方法");
     }
 
 }
