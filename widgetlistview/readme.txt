@@ -23,7 +23,34 @@ https://blog.csdn.net/maybeforever/article/details/95998029
    而不必每次都重新创建很多对象，从而提升性能。通过将所有控件的实例都缓存在了ViewHolder里，就不需要每次通过findViewById()方法来获取控件实例。
 
   ps:性能测试对比？
+      加载10000条item，对比内存，滑动流畅度...
 
   4 点击事件
+  使用OnItemClickListener()方法为ListView注册监听器。部分代码如下：
+  //为ListView添加点击事件
+          listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+              @Override
+              public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                  Weather weather = weatherList.get(position);
+                  Toast.makeText(MainActivity.this, weather.getName(), Toast.LENGTH_SHORT).show();
+              }
+          });
+
+          对ListView中的setOnItemClickListener的OnItemClick()方法进行介绍：
+          //完整版
+          public void onItemClick(AdapterView<?> parent, View view, int position, long id) {}
+          //简版
+          OnItemClick(AdapterView agr0, View arg1, int arg2, long arg3)
+         举个例子：X,Y两个ListView，X里面有1,2,3,4这4个item，Y里面有a，b，c，d这4个item，如果你点击了b这个item，如下：
+         （1）arg0，即parent
+         相当于ListView Y适配器的一个指针，可以通过它来获得Y里面装的一切东西，通俗点就是告诉你，你点的是Y不是X。
+         （2）arg1，即view
+         是你点b这个view句柄，就是你可以用这个view，来获得b里的控件的id后操作控件，通过它可以获得该项中的各个组件，例如：arg1.textview.setText(“abc”)。
+         （3）arg2，即position
+         是b在Y适配器里的位置（生成ListView时，适配器一个一个的做item，然后把他们按顺序排好队，再放到ListView里，意思就是这个b是第position号做好的）。
+         （4）arg3，即id
+         是b在ListView Y里面的第几行，在没有headerView、用户添加的view以及footerView的情况下，position和id的值是一样的。
+
+
 二 RecycleView
 三 ScrollView
