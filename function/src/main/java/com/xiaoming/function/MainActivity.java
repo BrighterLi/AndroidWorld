@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                         startActivity(new Intent(MainActivity.this, IsRootActivity.class));
                         break;
+                    case 1:
+                        startActivity(new Intent(MainActivity.this, IsVoLteEnabledActivity.class));
+                        break;
                 }
             }
         });
@@ -41,5 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         demoListData.add("判断安卓设备是否root");
+        demoListData.add("获取VoLte开关开关状态");
     }
 }
