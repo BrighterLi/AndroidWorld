@@ -1,5 +1,6 @@
 一 ListView
 https://blog.csdn.net/maybeforever/article/details/95998029
+https://www.jianshu.com/p/da23fe946ed1
  1 基本用法
     （1）由于数组中的数据无法直接传递给ListView，我们需要借助适配器（Adapter）来完成。
     （2）ArrayAdapter可以通过泛型来指定要适配的数据，然后在构造函数中把要适配的数据传入。
@@ -53,4 +54,25 @@ https://blog.csdn.net/maybeforever/article/details/95998029
 
 
 二 RecycleView
+       RecyclerView 可以说是一个增强版的ListView，不仅可以轻松实现和 ListView 同样的效果，还优化了 ListView 中存在的各种不足之处。
+       RecyclerView 也属于新增控件，为了让 RecyclerView 在所有 Android 版本上都能使用，将 RecyclerView 定义在了 support 库当中。
+   因此首先要在项目的 build.gradle 中添加相应的依赖库才行。flexible（可扩展性）是RecyclerView的特点。RecyclerView是support-v7包中的新组件
+        RecyclerView并不会完全替代ListView（这点从ListView没有被标记为@Deprecated可以看出），两者的使用场景不一样。但是RecyclerView的出现会让很多开源项目被废弃，
+   例如横向滚动的ListView, 横向滚动的GridView, 瀑布流控件，因为RecyclerView能够实现所有这些功能。
+
+   RecylerView相对于ListView的优点罗列如下：
+   RecyclerView封装了viewholder的回收复用，也就是说RecyclerView标准化了ViewHolder，编写Adapter面向的是ViewHolder而不再是View了，复用的逻辑被封装了，写起来更加简单。
+   直接省去了listview中convertView.setTag(holder)和convertView.getTag()这些繁琐的步骤。
+   提供了一种插拔式的体验，高度的解耦，异常的灵活，针对一个Item的显示RecyclerView专门抽取出了相应的类，来控制Item的显示，使其的扩展性非常强。
+   设置布局管理器以控制Item的布局方式，横向、竖向以及瀑布流方式
+   例如：你想控制横向或者纵向滑动列表效果可以通过LinearLayoutManager这个类来进行控制(与GridView效果对应的是GridLayoutManager,与瀑布流对应的还StaggeredGridLayoutManager等)。也就是说RecyclerView不再拘泥于ListView的线性展示方式，它也可以实现GridView的效果等多种效果。
+   可设置Item的间隔样式（可绘制）
+   通过继承RecyclerView的ItemDecoration这个类，然后针对自己的业务需求去书写代码。
+   可以控制Item增删的动画，可以通过ItemAnimator这个类进行控制，当然针对增删的动画，RecyclerView有其自己默认的实现。
+   但是关于Item的点击和长按事件，需要用户自己去实现。
+
+
+
+
+
 三 ScrollView
