@@ -48,7 +48,8 @@
             android:drawablePadding="3dp"
             android:drawableTop="@drawable/tab_menu_deal"
             android:gravity="center"
-            android:textColor="@drawable/tab_menu_deal_text"/>
+            android:textColor="@drawable/tab_menu_deal_text"
+            android:text="交易"/>
 
         <TextView
             android:id="@+id/txt_poi"

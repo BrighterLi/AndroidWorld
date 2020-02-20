@@ -1,0 +1,2 @@
+Extends的使用
+  公共功能放在BaseActivity
