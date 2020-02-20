@@ -55,7 +55,7 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
          * width 为-1 默认全屏，可以自己定制。
          * height =-1 默认全屏，可以自己定制。
          */
-        //渲染页面，home.js就是weex打包好后给你的js文件
+        //渲染页面，ic_menu_deal_off.js就是weex打包好后给你的js文件
         mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("home.js", this), null, null, -1,-1, WXRenderStrategy.APPEND_ASYNC);
     }
 
