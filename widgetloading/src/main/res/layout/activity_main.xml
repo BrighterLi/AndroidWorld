@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/bt_normal_dialog"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="普通的圆形进度条对话框"/>
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/bt_linear_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="普通的条形进度条对话框，不更新进度"/>
+
+    <Button
+        android:id="@+id/bt_linear_dialog_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="普通的条形进度条对话框，更新进度"/>
+</LinearLayout>
