@@ -15,6 +15,22 @@ public class LinearDialogUpdateActivity extends AppCompatActivity {
     private int add;
     private final static int MAX_VALUE = 100;
 
+    //在主线程里执行UI的状态的变化。这个Handler是在主线程创建的，默认绑定的主线程
+    Handler handler = new Handler() {
+        @Override   //这里可以去掉。？
+        public void handleMessage(Message msg) {
+            if(msg.what == 123) {
+                //设置进度条的进度
+                progressDialog.setProgress(currentProgress);
+            }
+            if(currentProgress >= MAX_VALUE) {
+                //让进度条消失
+                progressDialog.dismiss();
+            }
+            super.handleMessage(msg);
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,22 +73,6 @@ public class LinearDialogUpdateActivity extends AppCompatActivity {
             }
         });
     }
-
-    //在主线程里执行UI的状态的变化。这个Handler是在主线程创建的，默认绑定的主线程
-    Handler handler = new Handler() {
-        @Override   //这里可以去掉。？
-        public void handleMessage(Message msg) {
-            if(msg.what == 123) {
-                //设置进度条的进度
-                progressDialog.setProgress(currentProgress);
-            }
-            if(currentProgress >= MAX_VALUE) {
-                //让进度条消失
-                progressDialog.dismiss();
-            }
-            super.handleMessage(msg);
-        }
-    };
 
     //设置一个耗时的方法
     private int useTime() {
