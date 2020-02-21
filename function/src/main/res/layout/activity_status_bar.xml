@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StatusBarActivity">
+
+    <Button
+        android:id="@+id/bt_get_statusbar_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取状态栏高度"/>
+
+    <Button
+        android:id="@+id/bt_change_statusbar_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="改变状态栏颜色"/>
+
+</LinearLayout>

@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
                     case 1:
                         startActivity(new Intent(MainActivity.this, IsVoLteEnabledActivity.class));
                         break;
+                    case 2:
+                        startActivity(new Intent(MainActivity.this, StatusBarActivity.class));
                 }
             }
         });
@@ -45,5 +47,6 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
         demoListData.add("判断安卓设备是否root");
         demoListData.add("获取VoLte开关开关状态");
+        demoListData.add("获取状态栏高度，改变状态栏颜色");
     }
 }
