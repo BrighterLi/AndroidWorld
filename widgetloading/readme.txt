@@ -10,7 +10,7 @@
   android:max=”200”    滚动条最大值
   android:progress=”0” 滚动条当前值
   android:visibility=”visible”  滚动条是否可见
-
+  style滚动条样式：progressBarStyleHorizontal一个长条形,progressBarStyleLarge一个大圆形样式
   setProgress(int) 设置当前值
 
 3 ProgressDialog vs ProgressBar
