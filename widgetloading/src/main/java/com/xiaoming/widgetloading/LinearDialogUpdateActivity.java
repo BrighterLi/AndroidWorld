@@ -51,7 +51,7 @@ public class LinearDialogUpdateActivity extends AppCompatActivity {
                 //这里设置为不可以通过按取消按钮关闭进度条
                 progressDialog.setCancelable(false);
                 progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-                //progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                //progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER); //圆形
                 //这里设置的是是否显示进度,设为false才是显示
                 progressDialog.setIndeterminate(false);
                 progressDialog.show();
@@ -61,7 +61,7 @@ public class LinearDialogUpdateActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         super.run();
-                        while (currentProgress < MAX_VALUE) {
+                        while (currentProgress < MAX_VALUE) {  //未达到最大值一直进行
                             //这里的算法是决定进度条变化的,可以按需要写
                             currentProgress = 2 * useTime();
                             //把信息码发送给handle让更新界面

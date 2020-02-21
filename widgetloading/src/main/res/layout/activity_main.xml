@@ -7,6 +7,11 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ProgressDialog:"/>
+
     <Button
         android:id="@+id/bt_normal_dialog"
         android:layout_width="match_parent"
@@ -24,4 +29,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="普通的条形进度条对话框，更新进度"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ProgressBar:"/>
+
+    <Button
+        android:id="@+id/bt_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ProgressBar"/>
+
 </LinearLayout>

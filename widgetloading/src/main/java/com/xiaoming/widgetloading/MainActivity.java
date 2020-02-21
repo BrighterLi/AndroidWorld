@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btNormalDialog;
     private Button btLinearDialog;
     private Button btLinearDialogUpdate;
-
+    private Button btProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +22,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btNormalDialog = findViewById(R.id.bt_normal_dialog);
         btLinearDialog = findViewById(R.id.bt_linear_dialog);
         btLinearDialogUpdate = findViewById(R.id.bt_linear_dialog_update);
+        btProgressBar = findViewById(R.id.bt_progressbar);
 
         //注册监听
         btNormalDialog.setOnClickListener(this);
         btLinearDialog.setOnClickListener(this);
         btLinearDialogUpdate.setOnClickListener(this);
+        btProgressBar.setOnClickListener(this);
     }
 
     @Override
@@ -40,6 +42,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_linear_dialog_update:
                 startActivity(new Intent(MainActivity.this, LinearDialogUpdateActivity.class));
+                break;
+            case R.id.bt_progressbar:
+                startActivity(new Intent(MainActivity.this, ProgressBarActivity.class));
+                break;
         }
     }
 }
