@@ -17,6 +17,7 @@
         android:layout_height="50dp"
         android:text="Hello"
         android:gravity="center"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:background="#CBFAC0"/>
 
 </LinearLayout>

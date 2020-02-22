@@ -1,7 +1,8 @@
-1 线性RecyclerView
-https://blog.csdn.net/qq_36243942/article/details/82187204?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
+1 RecyclerView
+  https://blog.csdn.net/qq_36243942/article/details/82187204?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
+  (1)线性RecyclerView   item显示文字图片；分割线；
 2 RecyclerView嵌套
-https://www.cnblogs.com/jymblog/p/6812609.html
+  https://www.cnblogs.com/jymblog/p/6812609.html
 
 RecycleView
        RecyclerView 可以说是一个增强版的ListView，不仅可以轻松实现和 ListView 同样的效果，还优化了 ListView 中存在的各种不足之处。
