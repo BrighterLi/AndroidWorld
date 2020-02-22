@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import com.xiaoming.widgetrecyclerview.gridrecyclerview.GridRecyclerViewActivity;
 import com.xiaoming.widgetrecyclerview.horilinearrecyclerview.HoriLinearRecyclerViewActivity;
 import com.xiaoming.widgetrecyclerview.linearrecyclerview.LinearRecyclerViewActivity;
+import com.xiaoming.widgetrecyclerview.nestrecyclerview.NestRecyclerViewActivity;
 import com.xiaoming.widgetrecyclerview.waterfallrecyclerview.WaterfallRecyclerViewActivity;
 
 import java.util.ArrayList;
@@ -46,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
                     case 3:
                         startActivity(new Intent(MainActivity.this, WaterfallRecyclerViewActivity.class));
                         break;
+                    case 4:
+                        startActivity(new Intent(MainActivity.this, NestRecyclerViewActivity.class));
+                        break;
                 }
             }
         });
@@ -60,5 +64,7 @@ public class MainActivity extends AppCompatActivity {
         demoListData.add("线性水平RecyclerView");
         demoListData.add("网格视图的RecyclerView");
         demoListData.add("瀑布流视图的RecyclerView");
+
+        demoListData.add("RecyclerView嵌套：横向+垂直");
     }
 }

@@ -16,9 +16,13 @@
      一会是文字，一会是图片，或语音或视频，使用RecyclerView就可以根据不同的ViewHolder在一个页面把不同类型的item显示出来。
 
 2 RecyclerView嵌套
+ (1) RecyclerView+RecyclerView 横向+垂直
+  https://blog.csdn.net/chentyit/article/details/79307199?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
+ (2) RecyclerView+RecyclerView 垂直+垂直
   https://cloud.tencent.com/developer/article/1471841
   https://www.jianshu.com/p/c5ccf0c38186
   https://www.cnblogs.com/jymblog/p/6812609.html
+  https://blog.csdn.net/L_201607/article/details/83216448?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
 
 RecycleView
        RecyclerView 可以说是一个增强版的ListView，不仅可以轻松实现和 ListView 同样的效果，还优化了 ListView 中存在的各种不足之处。
