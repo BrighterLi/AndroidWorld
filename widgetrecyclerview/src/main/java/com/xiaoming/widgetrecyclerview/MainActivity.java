@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 
+import com.xiaoming.widgetrecyclerview.gridrecyclerview.GridRecyclerViewActivity;
 import com.xiaoming.widgetrecyclerview.horilinearrecyclerview.HoriLinearRecyclerViewActivity;
 import com.xiaoming.widgetrecyclerview.linearrecyclerview.LinearRecyclerViewActivity;
 
@@ -37,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
                     case 1:
                         startActivity(new Intent(MainActivity.this, HoriLinearRecyclerViewActivity.class));
                         break;
+                    case 2:
+                        startActivity(new Intent(MainActivity.this, GridRecyclerViewActivity.class));
+                        break;
                 }
             }
         });
@@ -49,5 +53,6 @@ public class MainActivity extends AppCompatActivity {
         demoListData = new ArrayList<>();
         demoListData.add("线性垂直RecyclerView");
         demoListData.add("线性水平RecyclerView");
+        demoListData.add("网格视图的RecyclerView");
     }
 }
