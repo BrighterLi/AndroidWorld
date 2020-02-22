@@ -16,6 +16,7 @@ import com.xiaoming.widgetrecyclerview.waterfallrecyclerview.WaterfallRecyclerVi
 import java.util.ArrayList;
 import java.util.List;
 
+//https://blog.csdn.net/qq_36243942/article/details/82187204?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
 public class MainActivity extends AppCompatActivity {
     private ListView listView;
     private List<String> demoListData;

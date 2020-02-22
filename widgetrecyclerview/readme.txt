@@ -10,7 +10,14 @@
   (2) 线性水平RecycleView的简单使用
   (3) 网格视图的RecyclerView的简单使用（类似GridView）
   (4) RecyclerView实现瀑布流布局
+  (5) RecyclerView根据不同的ViewHolder实现不同的Item
+     在RecyclerView本来只是引用一个布局文件来显示，比如里面有图片和文字结合，我们如果使用引用布局文件，就全部是显示这个布局文件有的内容，
+     但是我们现在是向让他显示多个布局文件的东西，我们在一个RecyclerView，先引用布局A(只有文字)，再引用布局B(只有图片)，其实就像我们微信聊天页面一样，
+     一会是文字，一会是图片，或语音或视频，使用RecyclerView就可以根据不同的ViewHolder在一个页面把不同类型的item显示出来。
+
 2 RecyclerView嵌套
+  https://cloud.tencent.com/developer/article/1471841
+  https://www.jianshu.com/p/c5ccf0c38186
   https://www.cnblogs.com/jymblog/p/6812609.html
 
 RecycleView
