@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 
+import com.xiaoming.widgetrecyclerview.horilinearrecyclerview.HoriLinearRecyclerViewActivity;
 import com.xiaoming.widgetrecyclerview.linearrecyclerview.LinearRecyclerViewActivity;
 
 import java.util.ArrayList;
@@ -32,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
                 switch (position) {
                     case 0:
                         startActivity(new Intent(MainActivity.this, LinearRecyclerViewActivity.class));
+                        break;
+                    case 1:
+                        startActivity(new Intent(MainActivity.this, HoriLinearRecyclerViewActivity.class));
+                        break;
                 }
             }
         });
@@ -42,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         demoListData = new ArrayList<>();
-        demoListData.add("线性RecyclerView");
+        demoListData.add("线性垂直RecyclerView");
+        demoListData.add("线性水平RecyclerView");
     }
 }

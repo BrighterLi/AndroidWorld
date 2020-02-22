@@ -1,6 +1,13 @@
 1 RecyclerView
   https://blog.csdn.net/qq_36243942/article/details/82187204?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
-  (1)线性RecyclerView   item显示文字图片；分割线；点击位置
+  (1)线性垂直RecyclerView
+     1)item显示文字图片；
+     2)分割线:使用addItemDecoration（）方法可以用来设置分割线，传进去的参数是ItemDecotation类型的对象；
+     3)点击位置:
+       方式一：直接在LinearAdapter的onBindViewHolder（）方法中直接实现监听器接口，然后绑定监听器即可。
+       方式二：因为RecyclerView没有和ListView和GridView一样在外部有监听器接口，但是可以通过回调函数在外部实现监听的方法（不同类），想在LinearRecycleView.java中实现监听怎么做？
+       原理：在LinearAdapter这个类里面写一个接口，然后在LinearRecycleView实现这个接口，然后复写里面的Onclick（）方法，通过函数的回调实现在LinearRecycleView这个类监听LinearAdapter这个类的事件。
+  (2) 线性水平RecycleView的简单使用
 2 RecyclerView嵌套
   https://www.cnblogs.com/jymblog/p/6812609.html
 
