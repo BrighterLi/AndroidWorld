@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.xiaoming.widgetrecyclerview.R;
 
@@ -31,10 +32,27 @@ public class GridRecyclerViewAdapter extends RecyclerView.Adapter<GridRecyclerVi
     }
 
     @Override
-    public void onBindViewHolder(GridRecyclerViewAdapter.GridViewHolder holder, int position) {
+    public void onBindViewHolder(GridRecyclerViewAdapter.GridViewHolder holder, final int position) {
         //设置itemView的控件具体的值
         holder.textView.setText("Hello bright");
         holder.imageView.setImageResource(R.drawable.liner_rv_pic);
+
+        //设置监听器，短点击
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, "短点击位置：" + position, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //长点击
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(mContext, "长点击位置：" + position, Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
     }
 
     //返回列表item个数
