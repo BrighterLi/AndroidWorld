@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.xiaoming.widgetrecyclerview.R;
 
@@ -31,10 +32,19 @@ public class LinearRecyclerViewAdapter extends RecyclerView.Adapter<LinearRecycl
     }
 
     @Override
-    public void onBindViewHolder(LinearRecyclerViewAdapter.LinearViewHolder holder, int position) {
+    public void onBindViewHolder(LinearRecyclerViewAdapter.LinearViewHolder holder, final int position) {
         //通过holder设置TextView的内容,设置ImageView的内容
         holder.textView.setText("Hello bright");
         holder.imageView.setImageResource(R.drawable.liner_rv_pic);
+
+        //直接在LinearAdapter的onBindViewHolder()方法中直接实现监听器接口，然后绑定监听器
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //显示点击位置
+                Toast.makeText(mContext, "点击位置：" + position, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     //item的数量设为25

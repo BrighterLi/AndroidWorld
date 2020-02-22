@@ -1,6 +1,6 @@
 1 RecyclerView
   https://blog.csdn.net/qq_36243942/article/details/82187204?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
-  (1)线性RecyclerView   item显示文字图片；分割线；
+  (1)线性RecyclerView   item显示文字图片；分割线；点击位置
 2 RecyclerView嵌套
   https://www.cnblogs.com/jymblog/p/6812609.html
 
