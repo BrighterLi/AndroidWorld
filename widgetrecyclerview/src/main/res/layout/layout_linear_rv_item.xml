@@ -4,6 +4,13 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+    <ImageView
+        android:id="@+id/linear_rv_item_pic_id"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#4DB3B3"
+        android:scaleType="centerCrop"/>
+
     <TextView
         android:id="@+id/linear_rv_item_title_id"
         android:layout_width="match_parent"

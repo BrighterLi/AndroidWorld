@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.ImageView;
 
 import com.xiaoming.widgetrecyclerview.R;
 
@@ -31,8 +32,9 @@ public class LinearRecyclerViewAdapter extends RecyclerView.Adapter<LinearRecycl
 
     @Override
     public void onBindViewHolder(LinearRecyclerViewAdapter.LinearViewHolder holder, int position) {
-        //通过holder设置TextView的内容
+        //通过holder设置TextView的内容,设置ImageView的内容
         holder.textView.setText("Hello bright");
+        holder.imageView.setImageResource(R.drawable.liner_rv_pic);
     }
 
     //item的数量设为25
@@ -44,11 +46,14 @@ public class LinearRecyclerViewAdapter extends RecyclerView.Adapter<LinearRecycl
     class LinearViewHolder extends RecyclerView.ViewHolder{
         //声明layout_linear_lv_item布局控件的变量
         private TextView textView;
+        private ImageView imageView;
 
         //获取控件对象
         public LinearViewHolder(View itemView) {
             super(itemView);
+
             textView = itemView.findViewById(R.id.linear_rv_item_title_id);
+            imageView = itemView.findViewById(R.id.linear_rv_item_pic_id);
         }
     }
 }
