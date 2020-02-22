@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".gridrecyclerview.GridRecyclerViewActivity"></activity>
+        <activity android:name=".waterfallrecyclerview.WaterfallRecyclerViewActivity"></activity>
+        <activity android:name=".gridrecyclerview.GridRecyclerViewActivity" />
         <activity android:name=".horilinearrecyclerview.HoriLinearRecyclerViewActivity" />
         <activity android:name=".linearrecyclerview.LinearRecyclerViewActivity" />
         <activity android:name=".MainActivity">

@@ -9,6 +9,7 @@
        原理：在LinearAdapter这个类里面写一个接口，然后在LinearRecycleView实现这个接口，然后复写里面的Onclick（）方法，通过函数的回调实现在LinearRecycleView这个类监听LinearAdapter这个类的事件。
   (2) 线性水平RecycleView的简单使用
   (3) 网格视图的RecyclerView的简单使用（类似GridView）
+  (4) RecyclerView实现瀑布流布局
 2 RecyclerView嵌套
   https://www.cnblogs.com/jymblog/p/6812609.html
 
