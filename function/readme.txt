@@ -6,4 +6,4 @@
      https://blog.csdn.net/maosidiaoxian/article/details/51734895
 5 拍照
 6 截屏
-7
+7 改变图片的颜色，将图片置灰

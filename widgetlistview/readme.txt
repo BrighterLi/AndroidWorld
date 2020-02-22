@@ -71,6 +71,7 @@ https://www.jianshu.com/p/da23fe946ed1
    可以控制Item增删的动画，可以通过ItemAnimator这个类进行控制，当然针对增删的动画，RecyclerView有其自己默认的实现。
    但是关于Item的点击和长按事件，需要用户自己去实现。
 
+   https://blog.csdn.net/qq_36243942/article/details/82187204?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
 
 
 
