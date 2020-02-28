@@ -8,20 +8,9 @@ https://www.jb51.net/article/88663.htm
 (4) 直接可以在布局控件里设置属性
 
 知识点：
-(1) TypedArray：属性的集合
-    AttributeSet：XML文件中定义的View的属性的集合
-    attrs： 这个View自身的属性集合，是一个int数组
-(2) android:gravity 主要是对自身View的位置控制。
-    android:layout_gravity 主要用于设置View 或者 Layout 在其父组件中的对齐方式。
-    RelativeLayout：
-    水平垂直居中：android:layout_centerInParent = "true"
-    水平居中:android:layout_centerHorizontal="true"
-    竖直居中:android:layout_centerVertical="true"
-
-    layout_gravity="center_vertical"和 layout_centerVertical="true"区别?
-    都表示当前控件在父容器的位置是垂直居中,后者的父容器只能是相对布局
-(3) 自定义属性
-     </declare-styleable>
+(1)
+(2)
+(3)
 <2>自定义滚动显示器 WidgetWheelView
     https://blog.csdn.net/yun382657988/article/details/84761433
    (1)布局加载方式
