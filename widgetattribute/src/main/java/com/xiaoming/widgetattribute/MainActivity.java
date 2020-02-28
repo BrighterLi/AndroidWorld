@@ -9,6 +9,7 @@ import android.widget.ListView;
 import android.widget.ArrayAdapter;
 
 import com.xiaoming.widgetattribute.image.ImageAttributeActivity;
+import com.xiaoming.widgetattribute.image.ScaleTypeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
                 switch (position) {
                     case 0: startActivity(new Intent(MainActivity.this, ImageAttributeActivity.class));
                     break;
+                    case 1: startActivity(new Intent(MainActivity.this, ScaleTypeActivity.class));
+                        break;
                 }
             }
         });
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initListDemoData() {
         demoListData = new ArrayList<>();
-        demoListData.add("Image");
+        demoListData.add("一般属性");
+        demoListData.add("ScaleType");
     }
 }
