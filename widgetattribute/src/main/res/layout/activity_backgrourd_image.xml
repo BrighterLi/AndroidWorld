@@ -5,23 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".image.ImageAttributeActivity">
+    tools:context=".image.BackgroundImageActivity">
 
-    <!--<TextView
-        android:id="@+id/text"
+    <!-- .9.png的使用-->
+    <TextView
+    android:id="@+id/text1"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="100dp"
+    android:background="@drawable/shadow"
+    android:text="text1"/>
+
+    <TextView
+        android:id="@+id/text2"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="100dp"
-        android:background2="#d2b48c"
-        android:text="text"/>-->
-    <ImageView
-        android:id="@+id/image"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/image"
-        android:background="#b0c4de"/>
+        android:background="@drawable/background"
+        android:text="text2"/>
 
 
 </LinearLayout>

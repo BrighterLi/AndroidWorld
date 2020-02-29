@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/landscape"
-        android:background="#a9a9a9"/>-->
+        android:background2="#a9a9a9"/>-->
 
     <!--<ImageView
         android:layout_marginTop="10dp"
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/landscape"
-        android:background="#a9a9a9"/>-->
+        android:background2="#a9a9a9"/>-->
 
         <ImageView
             android:layout_marginTop="10dp"

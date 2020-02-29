@@ -1,3 +1,4 @@
+图片本身大小；图片裁剪；dp,px;BitMap;阴影；
 控件属性实践
 Image;TextView;
 padding;MarginTop;Params;
@@ -45,7 +46,8 @@ Image
    8.android:scaleType=“fit_end”
    把原图按照比例放大缩小到ImageView的高度，显示在ImageVIew的end（后部/尾部/底部）
 
-(6) .9.png 作为背景
+(6) 阴影，边框
+ .9.png 作为背景
     https://blog.csdn.net/sunbinkang/article/details/77331718
         9patch图片的作用就是在图片拉伸的时候保证其不会失真。所以我们使用.9图片，让图片在指定的位置拉伸和在指定的位置显示内容，
     这样图片的边边角角就不会出现失真了。
@@ -61,5 +63,5 @@ Image
 
 (8) 图片拿过来时本身的大小
 
-    自定义属性
+(9) 自定义属性
     </declare-styleable>

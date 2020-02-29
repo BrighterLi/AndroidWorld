@@ -1,5 +1,6 @@
 package com.xiaoming.widgetattribute;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 
+import com.xiaoming.widgetattribute.image.BackgroundImageActivity;
 import com.xiaoming.widgetattribute.image.ImageAttributeActivity;
 import com.xiaoming.widgetattribute.image.ScaleTypeActivity;
 
@@ -37,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
                     break;
                     case 1: startActivity(new Intent(MainActivity.this, ScaleTypeActivity.class));
                         break;
+                    case 2: startActivity(new Intent(MainActivity.this, BackgroundImageActivity.class));
+                        break;
+                    case 3: startActivity(new Intent(MainActivity.this, ShadowActivity.class));
+                        break;
                 }
             }
         });
@@ -46,5 +52,7 @@ public class MainActivity extends AppCompatActivity {
         demoListData = new ArrayList<>();
         demoListData.add("一般属性");
         demoListData.add("ScaleType");
+        demoListData.add(".9图作为背景");
+        demoListData.add("背景设置阴影");
     }
 }
