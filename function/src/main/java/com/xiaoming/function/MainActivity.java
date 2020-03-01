@@ -36,8 +36,13 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 2:
                         startActivity(new Intent(MainActivity.this, StatusBarActivity.class));
+                        break;
                     case 3:
                         startActivity(new Intent(MainActivity.this, PhoneOperatorActivity.class));
+                        break;
+                    case 4:
+                        startActivity(new Intent(MainActivity.this, NetworkStrengthActivity.class));
+                        break;
                 }
             }
         });
@@ -51,5 +56,6 @@ public class MainActivity extends AppCompatActivity {
         demoListData.add("获取VoLte开关开关状态");
         demoListData.add("获取状态栏高度，改变状态栏颜色");
         demoListData.add("获取手机运营商");
+        demoListData.add("获取信号强度");
     }
 }
