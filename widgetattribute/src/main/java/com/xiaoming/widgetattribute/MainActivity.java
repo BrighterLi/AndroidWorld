@@ -1,6 +1,5 @@
 package com.xiaoming.widgetattribute;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,9 +8,12 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 
-import com.xiaoming.widgetattribute.image.BackgroundImageActivity;
+import com.xiaoming.widgetattribute.shadow.BackgroundImageActivity;
 import com.xiaoming.widgetattribute.image.ImageAttributeActivity;
 import com.xiaoming.widgetattribute.image.ScaleTypeActivity;
+import com.xiaoming.widgetattribute.shadow.ShadowActivity;
+import com.xiaoming.widgetattribute.shadow.ShadowActivity2;
+import com.xiaoming.widgetattribute.shadow.ShadowActivity3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 3: startActivity(new Intent(MainActivity.this, ShadowActivity.class));
                         break;
+                    case 4: startActivity(new Intent(MainActivity.this, ShadowActivity2.class));
+                        break;
+                    case 5: startActivity(new Intent(MainActivity.this, ShadowActivity3.class));
+                        break;
                 }
             }
         });
@@ -53,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
         demoListData.add("一般属性");
         demoListData.add("ScaleType");
         demoListData.add(".9图作为背景");
-        demoListData.add("背景设置阴影");
+        demoListData.add("通过elevation设置背景阴影");
+        demoListData.add("通过xml文件设置背影阴影和边框和圆角");
+        demoListData.add("通过xml文件设置背影阴影和上下边框");
     }
 }

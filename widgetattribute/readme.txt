@@ -47,16 +47,27 @@ Image
    把原图按照比例放大缩小到ImageView的高度，显示在ImageVIew的end（后部/尾部/底部）
 
 (6) 阴影，边框
- .9.png 作为背景
+ 1).9.png 作为背景
     https://blog.csdn.net/sunbinkang/article/details/77331718
         9patch图片的作用就是在图片拉伸的时候保证其不会失真。所以我们使用.9图片，让图片在指定的位置拉伸和在指定的位置显示内容，
     这样图片的边边角角就不会出现失真了。
         9patch和一般图片的区别在于.9图片有四条黑边，而一般的图片没有，这四条黑边就是用来拉伸和指定显示位置的。
         使用.9图片后，整个图片应该是包裹着你想要显示的内容的，而没有使用的话整个控件布局看起来特别糟糕。
+ 2) drawable/.xml文件
+    https://blog.csdn.net/brokge/article/details/9713041
+    https://www.jb51.net/article/128265.htm
+       shape    可以很方便的帮我们画出想要的背景，相对于png图片来说，使用shape可以减少安装包的大小，而且能够更好的适配不同的手机。
+       android:shape=["rectangle" | "oval" | "line" | "ring"]这里可以看出，shape可以画四种图形，分别是:矩形(rectangle)、椭圆(oval)、线(line)、圆环(ring)。
+       solid:填充颜色
+       圆角矩形:corners:圆角大小。
+       stroke：边框
+       layer-list   将多个图片或上面两种效果按照顺序层叠起来
 
+    View Elevation；CardView；
 
 (7) android代码中设置margin  LayoutParams
    LayoutParams继承于Android.View.ViewGroup.LayoutParams，相当于一个Layout的信息包，它封装了Layout的位置、高、宽等信息。
+    ViewGroup.LayoutParams
    LinearLayout.LayoutParams   //父布局是LinearLayout
    FrameLayout.LayoutParams  //父布局是FrameLayout
    RelativeLayout.LayoutParams //父布局是RelativeLayout

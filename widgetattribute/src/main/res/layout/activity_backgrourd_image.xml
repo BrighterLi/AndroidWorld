@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".image.BackgroundImageActivity">
+    tools:context=".shadow.BackgroundImageActivity">
 
     <!-- .9.png的使用-->
     <TextView
