@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StatusBarActivity"></activity>
+        <activity android:name=".PhoneOperatorActivity"></activity>
+        <activity android:name=".StatusBarActivity" />
         <activity android:name=".ReflectActivity" />
         <activity android:name=".IsVoLteEnabledActivity" />
         <activity android:name=".IsRootActivity" />

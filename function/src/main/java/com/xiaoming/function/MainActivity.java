@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 2:
                         startActivity(new Intent(MainActivity.this, StatusBarActivity.class));
+                    case 3:
+                        startActivity(new Intent(MainActivity.this, PhoneOperatorActivity.class));
                 }
             }
         });
@@ -48,5 +50,6 @@ public class MainActivity extends AppCompatActivity {
         demoListData.add("判断安卓设备是否root");
         demoListData.add("获取VoLte开关开关状态");
         demoListData.add("获取状态栏高度，改变状态栏颜色");
+        demoListData.add("获取手机运营商");
     }
 }
