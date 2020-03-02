@@ -2,7 +2,6 @@ package com.xiaoming.widgetreddot;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
-import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.SuperscriptSpan;
@@ -26,6 +25,7 @@ public class RedDotTextView extends TextView {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
+    //覆写setText方法
     @Override
     public void setText(CharSequence text, BufferType type) {
         super.setText(text, type);
