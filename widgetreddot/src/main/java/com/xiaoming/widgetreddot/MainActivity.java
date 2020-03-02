@@ -3,6 +3,7 @@ package com.xiaoming.widgetreddot;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+//https://blog.csdn.net/killer991684069/article/details/53509555
 public class MainActivity extends AppCompatActivity {
 
     @Override

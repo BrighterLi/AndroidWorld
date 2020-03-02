@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".AlertDialogActivity">
 
-    <ListView
-        android:id="@+id/lv_main"
+    <Button
+        android:id="@+id/show_dialog_bt"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
+        android:layout_height="wrap_content"
+        android:text="AlertDialog"/>
 
 </LinearLayout>
