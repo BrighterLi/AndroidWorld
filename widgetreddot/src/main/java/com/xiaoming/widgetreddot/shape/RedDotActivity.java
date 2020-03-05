@@ -1,7 +1,9 @@
-package com.xiaoming.widgetreddot;
+package com.xiaoming.widgetreddot.shape;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.xiaoming.widgetreddot.R;
 
 //https://blog.csdn.net/killer991684069/article/details/53509555
 public class RedDotActivity extends AppCompatActivity {

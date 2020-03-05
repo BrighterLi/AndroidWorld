@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RedDotActivity">
+    tools:context=".shape.RedDotActivity">
 
     //这里将shape资源作为textView的圆形背景
-    <com.xiaoming.widgetreddot.RedDotTextView
+    <com.xiaoming.widgetreddot.shape.RedDotTextView
         android:background="@drawable/red_dot_circle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

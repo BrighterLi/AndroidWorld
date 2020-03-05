@@ -1,4 +1,4 @@
-package com.xiaoming.widgetreddot;
+package com.xiaoming.widgetreddot.shape;
 
 import android.content.Context;
 import android.support.annotation.Nullable;

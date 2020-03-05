@@ -8,6 +8,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 
+import com.xiaoming.widgetreddot.customreddot.CustomRedDotActivity;
+import com.xiaoming.widgetreddot.shape.RedDotActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
                 switch (position) {
                     case 0:
                         startActivity(new Intent(MainActivity.this, RedDotActivity.class));
+                        break;
+                    case 1:
+                        startActivity(new Intent(MainActivity.this, CustomRedDotActivity.class));
+                        break;
                 }
             }
         });
@@ -40,5 +47,6 @@ public class MainActivity extends AppCompatActivity {
     private void initDemoListData() {
         demoListData = new ArrayList<>();
         demoListData.add("通过shape资源制作消息红点");
+        demoListData.add("通过自定义View制作消息红点");
     }
 }
