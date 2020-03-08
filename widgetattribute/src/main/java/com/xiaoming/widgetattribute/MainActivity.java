@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         demoListData.add("通过xml文件设置背影阴影和边框和圆角");
         demoListData.add("通过xml文件设置背影阴影和上下边框");
         //布局
-        demoListData.add("布局");
+        demoListData.add("布局 LinearLayout");
 
     }
 }

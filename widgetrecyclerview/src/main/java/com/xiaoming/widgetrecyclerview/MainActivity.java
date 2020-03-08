@@ -1,5 +1,6 @@
 package com.xiaoming.widgetrecyclerview;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import com.xiaoming.widgetrecyclerview.gridrecyclerview.GridRecyclerViewActivity
 import com.xiaoming.widgetrecyclerview.horilinearrecyclerview.HoriLinearRecyclerViewActivity;
 import com.xiaoming.widgetrecyclerview.linearrecyclerview.LinearRecyclerViewActivity;
 import com.xiaoming.widgetrecyclerview.nestrecyclerview.NestRecyclerViewActivity;
+import com.xiaoming.widgetrecyclerview.twoitemsrecyclerview.TwoItemsRecyclerViewActivity;
 import com.xiaoming.widgetrecyclerview.waterfallrecyclerview.WaterfallRecyclerViewActivity;
 
 import java.util.ArrayList;
@@ -50,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
                     case 4:
                         startActivity(new Intent(MainActivity.this, NestRecyclerViewActivity.class));
                         break;
+                    case 5:
+                        startActivity(new Intent(MainActivity.this, TwoItemsRecyclerViewActivity.class));
+                        break;
                 }
             }
         });
@@ -66,5 +71,7 @@ public class MainActivity extends AppCompatActivity {
         demoListData.add("瀑布流视图的RecyclerView");
 
         demoListData.add("RecyclerView嵌套：横向+垂直");
+
+        demoListData.add("RecyclerView根据不同的ViewHolder实现不同的Item");
     }
 }
