@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 5: startActivity(new Intent(MainActivity.this, ShadowActivity3.class));
                         break;
+                    case 6: startActivity(new Intent(MainActivity.this, LinearLayoutActivity.class));
+                        break;
                 }
             }
         });
@@ -58,9 +60,13 @@ public class MainActivity extends AppCompatActivity {
         demoListData = new ArrayList<>();
         demoListData.add("一般属性");
         demoListData.add("ScaleType");
+        //背景、阴影、边框
         demoListData.add(".9图作为背景");
         demoListData.add("通过elevation设置背景阴影");
         demoListData.add("通过xml文件设置背影阴影和边框和圆角");
         demoListData.add("通过xml文件设置背影阴影和上下边框");
+        //布局
+        demoListData.add("布局");
+
     }
 }

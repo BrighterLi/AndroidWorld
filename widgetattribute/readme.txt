@@ -7,7 +7,7 @@ TypedArray：属性的集合
     AttributeSet：XML文件中定义的View的属性的集合
     attrs： 这个View自身的属性集合，是一个int数组
 
-Image
+1 Image
 (1) android:layout_width="match_parent"
     android:layout_height="match_parent"
 
@@ -76,3 +76,7 @@ Image
 
 (9) 自定义属性
     </declare-styleable>
+
+2 布局
+  LinearLayout RelativeLayout
+  (1) 子View不会超过父View的大小

@@ -166,20 +166,7 @@ https://www.jb51.net/article/88663.htm
     自定义提示Dialog:https://www.jianshu.com/p/c83503f0384d
 
 
-4 跨端交互(Across End)
-  <1> WebView
-   (1) android.annotation.SuppressLint
-       Lint是一个静态检查器，它围绕Android项目的正确性、安全性、性能、可用性以及可访问性进行分析。
-       它检查的对象包括XML资源、位图、ProGuard配置文件、源文件甚至编译后的字节码。
-       Lint包含了API版本检查、性能检查以及其他诸多特性。
-       其中还有一个重要的改动是Lint可以使用@SuppressLint标注忽略指定的警告。
-
-   <2> Weex
-   (1) 加载weex分为两种情况，一种是加载本地，一种是加载网络。
-   //加载网络资源url
-   mWXSDKInstance.renderByUrl(url,url,options,jsonInitData,WXRenderStrategy.APPEND_ASYNC);}
-   //加载本地资源
-   mWXSDKInstance.render(template,template,options,jsonInitData,WXRenderStrategy.APPEND_ASYNC);}
+4
 
 5 网络
  <1> Cookie、Session
