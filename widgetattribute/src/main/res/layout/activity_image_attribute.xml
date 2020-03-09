@@ -56,4 +56,21 @@
         android:layout_height="wrap_content"
         android:src="@drawable/image"
         android:background="#b0c4de"/>
+
+    //LinearLayout ImageView  padding
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/image5"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image"
+            android:background="#b0c4de"/>
+    </LinearLayout>
 </LinearLayout>
