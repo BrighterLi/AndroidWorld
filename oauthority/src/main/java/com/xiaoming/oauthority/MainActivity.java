@@ -33,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
                     case 1:
                         startActivity(new Intent(MainActivity.this, MultiPermissionActivity.class));
                         break;
+                    case 2:
+
+                        break;
+                    case 3:
+
+                        break;
+                    case 4:
+                        startActivity(new Intent(MainActivity.this,NotificationPermissionActivity.class));
+                        break;
                         default:
                             break;
                 }
@@ -49,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
         demoListData.add("单个权限申请");
         demoListData.add("多个权限申请");
         demoListData.add("使用权限第三库");
+
         demoListData.add("自定义弹出的Dialog提示框");
+
+        demoListData.add("通知权限判断");
     }
 }
