@@ -36,12 +36,12 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     //fastjson
-    compile 'com.alibaba:fastjson:1.1.45'
+    implementation 'com.alibaba:fastjson:1.1.45'
     //weex_sdk
-    compile 'com.taobao.android:weex_sdk:0.9.5@aar'
+    implementation 'com.taobao.android:weex_sdk:0.9.5@aar'
     //glide
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
     //?用在哪里了
-    compile 'com.android.support:recyclerview-v7:24.2.1'
+    implementation 'com.android.support:recyclerview-v7:24.2.1'
 
 }

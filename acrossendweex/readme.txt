@@ -1,3 +1,8 @@
+weex 提供了扩展机制，可以根据自己的业务进行定制自己的功能。
+主要分为三类扩展：
+Module 扩展 非 UI 的特定功能。例如 sendHttp、openURL 等。
+Component 扩展 实现特别功能的 Native 控件。例如：RichTextview，RefreshListview 等。
+Adapter 扩展 Weex 对一些基础功能实现了统一的接口，可实现这些接口来定制自己的业务。例如：图片下载等。
 
 WeexContainer-Android
 https://www.ctolib.com/topics-131448.html
