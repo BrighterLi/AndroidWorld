@@ -24,7 +24,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-//获取信号强度
+//获取网络信号强度
 //https://blog.csdn.net/weixin_38141453/article/details/85017342?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
 public class NetworkStrengthActivity extends AppCompatActivity {
     private int dbm;

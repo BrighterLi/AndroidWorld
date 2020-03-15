@@ -18,3 +18,5 @@ Android实现电话录音与上传的功能(云服务器)/面对面录音；图�
     ActivityManager.RunningAppProcessInfo
     ActivityManager通过.getRunningAppProcesses()获取当前运行列表这个方法，在5.0以后已经被deprecated掉了
   方案三：监听Home键点击
+9 防止按钮快速重复点击
+ https://www.cnblogs.com/dingxiansen/p/10442255.html

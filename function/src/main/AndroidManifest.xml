@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xiaoming.function">
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:name=".MyApplication"
@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NetworkStrengthActivity"></activity>
+        <activity android:name=".FastClickActivity"></activity>
+        <activity android:name=".NetworkStrengthActivity" />
         <activity android:name=".PhoneOperatorActivity" />
         <activity android:name=".StatusBarActivity" />
         <activity android:name=".ReflectActivity" />

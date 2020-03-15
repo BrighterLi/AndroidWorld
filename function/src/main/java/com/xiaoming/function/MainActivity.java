@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
                     case 4:
                         startActivity(new Intent(MainActivity.this, NetworkStrengthActivity.class));
                         break;
+                    case 5:
+                        startActivity(new Intent(MainActivity.this, FastClickActivity.class));
+                        break;
                 }
             }
         });
@@ -57,5 +60,6 @@ public class MainActivity extends AppCompatActivity {
         demoListData.add("获取状态栏高度，改变状态栏颜色");
         demoListData.add("获取手机运营商");
         demoListData.add("获取信号强度");
+        demoListData.add("防止快速重复点击");
     }
 }
