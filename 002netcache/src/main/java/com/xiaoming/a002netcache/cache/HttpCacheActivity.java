@@ -1,4 +1,4 @@
-package com.xiaoming.a002netcache;
+package com.xiaoming.a002netcache.cache;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -12,6 +12,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.xiaoming.a002netcache.R;
 
 import java.io.File;
 import java.io.IOException;

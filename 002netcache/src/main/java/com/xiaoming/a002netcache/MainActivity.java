@@ -8,6 +8,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 
+import com.xiaoming.a002netcache.cache.HttpCacheActivity;
+import com.xiaoming.a002netcache.cache.mapcache.MapCacheTestActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0:
-                        startActivity(new Intent(MainActivity.this,HttpCacheActivity.class));
+                        startActivity(new Intent(MainActivity.this, HttpCacheActivity.class));
+                        break;
+                    case 1:
+                        startActivity(new Intent(MainActivity.this, MapCacheTestActivity.class));
                         break;
                 }
             }
@@ -43,5 +49,6 @@ public class MainActivity extends AppCompatActivity {
     private void  initDemoListData() {
         demoListData = new ArrayList<>();
         demoListData.add("Http下载图片进行缓存");
+        demoListData.add("Map内存进行缓存");
     }
 }

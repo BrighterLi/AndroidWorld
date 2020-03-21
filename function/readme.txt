@@ -1,13 +1,12 @@
-Android实现电话录音与上传的功能(云服务器)/面对面录音；图片压缩；
 1 android设备是否root
-2 获取volte开关状态
-3 反射
+2 获取volte开关状态 0
+3 反射 0
 4 安卓获取状态栏
   改变状态栏颜色
      https://blog.csdn.net/maosidiaoxian/article/details/51734895
-5 拍照
-6 截屏
-7 改变图片的颜色，将图片置灰
+5 拍照0
+6 截屏0
+7 改变图片的颜色，将图片置灰0
 8 Android 监听APP进入后台或切换到前台
  Android 监听APP进入后台或切换到前台方案对比:
   https://www.cnblogs.com/zhujiabin/p/9336663.html
@@ -20,3 +19,5 @@ Android实现电话录音与上传的功能(云服务器)/面对面录音；图�
   方案三：监听Home键点击
 9 防止按钮快速重复点击
  https://www.cnblogs.com/dingxiansen/p/10442255.html
+10 Android实现电话录音与上传的功能(云服务器)/面对面录音；图片压缩；0
+11 超时0
