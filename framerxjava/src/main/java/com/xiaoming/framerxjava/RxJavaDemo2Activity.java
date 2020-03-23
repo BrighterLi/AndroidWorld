@@ -28,12 +28,13 @@ public class RxJavaDemo2Activity extends Activity {
         //just:不断地将事件添加到任务队列中
         //map:转换，如下将Host字符串转化成Host+s字符串
         //subscribe:订阅
+        // 被观察者
         Observable.just("itachi85").map(new Func1<String, String>() {
             @Override
             public String call(String s) {
                 return Host + s;
             }
-        }).subscribe(new Action1<String>() {
+        }).subscribe(new Action1<String>() { //观察者
             @Override
             public void call(String s) {
                 Toast.makeText(RxJavaDemo2Activity.this, s, Toast.LENGTH_LONG).show();
