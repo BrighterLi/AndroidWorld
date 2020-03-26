@@ -16,3 +16,6 @@
 
  Rxjava+Retrofit
     Rxjava、Retrofit返回json数据解析异常处理:https://www.jianshu.com/p/337c06f322c2
+
+Subscription
+https://www.jianshu.com/p/c26f96c0ab81

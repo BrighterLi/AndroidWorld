@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 final String result = response.body().string();
-                //开启子线程执行耗时操作
+                //在主线程中对View的操作
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 final String result = response.body().string();
+                //在主线程中对View的操作
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
