@@ -1,3 +1,5 @@
  Intent.ACTION_VIEW
  String android.intent.action.VIEW
  用于显示用户的数据。比较通用，会根据用户的数据类型打开相应的Activity。比如 tel:13400010001打开拨号程序，http://www.g.cn则会打开浏览器等。
+ 微信跳转技术,浏览器唤起微信,weixin://dl/business/?ticket=
+ http://www.bubuko.com/infodetail-2824830.html?__cf_chl_jschl_tk__=a599663b4fbf17a4735efa170c722a45fc720c62-1585333942-0-AUpiUpHPFGAyMt9j5n1xz4ZgmOawkaJb8M2OYIR7dz60Dsj1UvgbWqKQP-sEW9UnStEUUjYjKVhN4Tk841v9OAb0Wwyd5H2pcRWboQzrc8X5Tm87e3Ml4HI9RirHxRY3kHWz4dXEWfIswNd3_mVoGDYEDBS1AH_0pv4F5YpacnJDja3hDsKb5_uqCgXv4ctJuF-hV_InhauMLQ_jViwpvSy4vCYlCLUF10hY11qZldLiUKn2ZCzFWupoPqGUGXjZxCH9qE6hLjjxeiJaBmdFrB7z9GDlKE-0rZwWj0VBUvODrO5638onBLQW7On9qj6ELQ
