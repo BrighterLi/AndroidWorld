@@ -1,0 +1,4 @@
+webview
+webview是SDK中封装的一款基于webkit内核(后面开始基于Chromium内核)的浏览器组件，通过它我们可以实现网页的展示，
+实现某些实时性强的内容的更新，现在流行的混合型移动端其实最大一点好处就是可以实现热更新，webview其实也有那么一点意味在里面。
+https://blog.csdn.net/qq_28057577/article/details/56483798
