@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         request();
     }
 
+    //Get请求
     //https://blog.csdn.net/qq_30711091/article/details/80804582
     private void doRetrofit() {
         //总共出现三处url，其中base+Get+传入参数
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //Get请求
     //https://blog.csdn.net/zhiyuan0932/article/details/54318944
     private void request() {
         //总共出现三处url，其中base+Get+传入参数

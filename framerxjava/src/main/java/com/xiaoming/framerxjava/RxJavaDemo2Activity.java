@@ -29,7 +29,7 @@ public class RxJavaDemo2Activity extends Activity {
         //map:转换，如下将Host字符串转化成Host+s字符串
         //subscribe:订阅
         // 被观察者
-        Observable.just("itachi85").map(new Func1<String, String>() {
+        Observable.just("itachi85").map(new Func1<String, String>() { // map Func1
             @Override
             public String call(String s) {
                 return Host + s;
