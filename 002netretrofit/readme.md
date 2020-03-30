@@ -1,5 +1,5 @@
-get请求
-post请求
+getRetrofit是一个Http请求库，和其它Http库最大区别在于通过大范围使用注解简化Http请求。目前Retrofit 2.0底层是依赖OkHttp实现的，
+也就是说Retrofit本质上就是对OkHttp的更进一步封装。
 文件上传
 文件下载
 开启日志拦截
