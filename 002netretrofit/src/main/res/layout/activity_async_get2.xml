@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".asynget.GetActivity">
+    tools:context=".asyncget2.AsyncGet2Activity">
 
     <Button
-        android:id="@+id/btn_get_net"
+        android:id="@+id/btn_asyn_get2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="get请求"/>
+        android:text="Get异步请求2"/>
+
     <TextView
         android:id="@+id/tv_show"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
 </LinearLayout>

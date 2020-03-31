@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.xiaoming.a002netretrofit.R;
 
@@ -60,11 +61,13 @@ public class SynGetActivity extends AppCompatActivity implements View.OnClickLis
             public void run() {
                 //4.Call对象执行请求
                 try {
-                    Response<ResponseBody> response = call.execute(); //同步请求
+                    final Response<ResponseBody> response = call.execute(); //同步请求
                     final String result = response.body().string();
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
+                            //Response.raw,获取来自服务器的原始套接字响应
+                            Toast.makeText(SynGetActivity.this, "response.raw():"+response.raw(), Toast.LENGTH_SHORT).show();
                             tvShow.setText(result);
                         }
                     });

@@ -1,4 +1,4 @@
-package com.xiaoming.a002netretrofit.get;
+package com.xiaoming.a002netretrofit.asynget;
 
 public class ShopBean {
     private int error_code;

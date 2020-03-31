@@ -11,9 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".synget.SynGetActivity"></activity>
+        <activity android:name=".asyncget2.AsyncGet2Activity"></activity>
+        <activity android:name=".synget.SynGetActivity" />
         <activity android:name=".PostActivity" />
-        <activity android:name=".get.GetActivity" />
+        <activity android:name=".asynget.GetActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

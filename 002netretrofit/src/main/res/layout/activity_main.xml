@@ -13,6 +13,11 @@
         android:layout_height="wrap_content"
         android:text="Get异步请求"/>
     <Button
+        android:id="@+id/btn_asyn_get2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get异步请求2"/>
+    <Button
         android:id="@+id/btn_syn_get"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

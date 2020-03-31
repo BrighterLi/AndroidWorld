@@ -1,4 +1,4 @@
-package com.xiaoming.a002netretrofit.get;
+package com.xiaoming.a002netretrofit.asynget;
 
 
 import retrofit2.Call;
