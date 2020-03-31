@@ -1,5 +1,16 @@
 getRetrofit是一个Http请求库，和其它Http库最大区别在于通过大范围使用注解简化Http请求。目前Retrofit 2.0底层是依赖OkHttp实现的，
 也就是说Retrofit本质上就是对OkHttp的更进一步封装。
+
+请求步骤：
+
+1，定义接口（封装URL地址和数据请求）
+2，实例化Retrofit
+3，通过Retrofit实例创建接口服务对象
+4，接口服务对象调用接口中的方法，获取Call对象
+5，Call对象执行请求（异步、同步请求）
+
+Get
+Post
 文件上传
 文件下载
 开启日志拦截

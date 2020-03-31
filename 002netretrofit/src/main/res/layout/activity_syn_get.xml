@@ -5,17 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".synget.SynGetActivity">
 
-    <Button
-        android:id="@+id/btn_get"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Get异步请求"/>
     <Button
         android:id="@+id/btn_syn_get"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Get同步请求"/>
+        android:text="GET同步请求"/>
+
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
 </LinearLayout>

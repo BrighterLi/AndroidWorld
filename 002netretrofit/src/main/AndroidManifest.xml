@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xiaoming.a002netretrofit">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PostActivity"></activity>
+        <activity android:name=".synget.SynGetActivity"></activity>
+        <activity android:name=".PostActivity" />
         <activity android:name=".get.GetActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
