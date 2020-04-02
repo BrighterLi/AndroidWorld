@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PostActivity">
+    android:orientation="vertical"
+    tools:context=".post.PostActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_asyn_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post异步请求" />
+
+        <Button
+            android:id="@+id/btn_syn_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post同步请求" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
