@@ -18,7 +18,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-//demo报404错误，应该是该链接资源失效了
+//demo报404错误，应该是该链接资源失效了？？？
 //Post请求，同步，异步
 //https://www.cnblogs.com/guanxinjing/p/11594249.html
 public class PostActivity extends AppCompatActivity {

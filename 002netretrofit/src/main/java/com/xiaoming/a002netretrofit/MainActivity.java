@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.xiaoming.a002netretrofit.asyncget2.AsyncGet2Activity;
 import com.xiaoming.a002netretrofit.asynget.GetActivity;
 import com.xiaoming.a002netretrofit.post.PostActivity;
+import com.xiaoming.a002netretrofit.post2.Post2Activity;
 import com.xiaoming.a002netretrofit.synget.SynGetActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnAsyncGet2;
     private Button btnSynGet;
     private Button btnPost;
+    private Button btnPost2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +33,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnAsyncGet2 = findViewById(R.id.btn_asyn_get2);
         btnSynGet = findViewById(R.id.btn_syn_get);
         btnPost = findViewById(R.id.btn_post);
+        btnPost2 = findViewById(R.id.btn_post2);
 
         btnGet.setOnClickListener(this);
         btnAsyncGet2.setOnClickListener(this);
         btnSynGet.setOnClickListener(this);
         btnPost.setOnClickListener(this);
+        btnPost2.setOnClickListener(this);
     }
 
     @Override
@@ -52,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_post:
                 startActivity(new Intent(MainActivity.this, PostActivity.class));
+                break;
+            case R.id.btn_post2:
+                startActivity(new Intent(MainActivity.this, Post2Activity.class));
                 break;
         }
     }
