@@ -3,63 +3,41 @@ package com.xiaoming.function;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.AdapterView;
-import android.widget.ListView;
+import android.widget.Button;
 
-//各种功能Demo
-public class MainActivity extends AppCompatActivity {
-    private ListView demoListView;
-    private List<String> demoListData = new ArrayList<>();
+import com.xiaoming.function.androidknowledgepoints.AndroidKnowledgePointsActivity;
+import com.xiaoming.function.method.MethodsActivity;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private Button btnMethod;
+    private Button btnAndroidKnowledge;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initData();
-        demoListView = findViewById(R.id.lv_main);
-        demoListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position) {
-                    case 0:
-                        startActivity(new Intent(MainActivity.this, IsRootActivity.class));
-                        break;
-                    case 1:
-                        startActivity(new Intent(MainActivity.this, IsVoLteEnabledActivity.class));
-                        break;
-                    case 2:
-                        startActivity(new Intent(MainActivity.this, StatusBarActivity.class));
-                        break;
-                    case 3:
-                        startActivity(new Intent(MainActivity.this, PhoneOperatorActivity.class));
-                        break;
-                    case 4:
-                        startActivity(new Intent(MainActivity.this, NetworkStrengthActivity.class));
-                        break;
-                    case 5:
-                        startActivity(new Intent(MainActivity.this, FastClickActivity.class));
-                        break;
-                }
-            }
-        });
-
-        ArrayAdapter<String>  adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,demoListData);
-        demoListView.setAdapter(adapter);
+        initView();
     }
 
-    private void initData() {
-        demoListData.add("判断安卓设备是否root");
-        demoListData.add("获取VoLte开关开关状态");
-        demoListData.add("获取状态栏高度，改变状态栏颜色");
-        demoListData.add("获取手机运营商");
-        demoListData.add("获取信号强度");
-        demoListData.add("防止快速重复点击");
+    private void initView() {
+        btnMethod = findViewById(R.id.btn_method);
+        btnAndroidKnowledge = findViewById(R.id.btn_android_knowledge);
+
+        btnMethod.setOnClickListener(this);
+        btnAndroidKnowledge.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_method:
+                startActivity(new Intent(MainActivity.this, MethodsActivity.class));
+                break;
+            case R.id.btn_android_knowledge:
+                startActivity(new Intent(MainActivity.this, AndroidKnowledgePointsActivity.class));
+                break;
+        }
     }
 }

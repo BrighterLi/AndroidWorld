@@ -1,4 +1,4 @@
-package com.xiaoming.function;
+package com.xiaoming.function.method;
 
 import android.Manifest;
 import android.content.Context;
@@ -21,6 +21,8 @@ import android.telephony.SignalStrength;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.xiaoming.function.R;
 
 import java.util.List;
 

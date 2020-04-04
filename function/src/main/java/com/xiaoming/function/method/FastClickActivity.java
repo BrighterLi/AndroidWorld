@@ -1,4 +1,4 @@
-package com.xiaoming.function;
+package com.xiaoming.function.method;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.xiaoming.function.R;
 
 //防止快速点击
 public class FastClickActivity extends AppCompatActivity {

@@ -1,8 +1,10 @@
-package com.xiaoming.function;
+package com.xiaoming.function.method;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.xiaoming.function.R;
 
 import java.io.BufferedReader;
 import java.io.File;

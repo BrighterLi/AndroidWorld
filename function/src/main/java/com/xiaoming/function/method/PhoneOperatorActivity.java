@@ -1,10 +1,12 @@
-package com.xiaoming.function;
+package com.xiaoming.function.method;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.widget.Toast;
+
+import com.xiaoming.function.R;
 
 //获取手机运营商
 public class PhoneOperatorActivity extends AppCompatActivity {

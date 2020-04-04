@@ -1,4 +1,4 @@
-package com.xiaoming.function;
+package com.xiaoming.function.method;
 
 //防止快速点击，全局
 public class FastClickUtils {

@@ -1,4 +1,4 @@
-package com.xiaoming.function;
+package com.xiaoming.function.method;
 
 import android.content.Context;
 import android.os.Build;
@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.widget.Toast;
+
+import com.xiaoming.function.R;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

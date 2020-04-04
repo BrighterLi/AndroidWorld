@@ -12,13 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FastClickActivity"></activity>
-        <activity android:name=".NetworkStrengthActivity" />
-        <activity android:name=".PhoneOperatorActivity" />
-        <activity android:name=".StatusBarActivity" />
-        <activity android:name=".ReflectActivity" />
-        <activity android:name=".IsVoLteEnabledActivity" />
-        <activity android:name=".IsRootActivity" />
+        <activity android:name=".androidknowledgepoints.DialogShowActivity"></activity>
+        <activity android:name=".method.MethodsActivity" />
+        <activity android:name=".androidknowledgepoints.AndroidKnowledgePointsActivity" />
+        <activity android:name=".method.FastClickActivity" />
+        <activity android:name=".method.NetworkStrengthActivity" />
+        <activity android:name=".method.PhoneOperatorActivity" />
+        <activity android:name=".method.StatusBarActivity" />
+        <activity android:name=".method.ReflectActivity" />
+        <activity android:name=".method.IsVoLteEnabledActivity" />
+        <activity android:name=".method.IsRootActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

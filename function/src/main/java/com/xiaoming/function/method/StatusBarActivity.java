@@ -1,8 +1,6 @@
-package com.xiaoming.function;
+package com.xiaoming.function.method;
 
 import android.app.Activity;
-import android.app.Dialog;
-import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -13,6 +11,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 import android.widget.FrameLayout;
+
+import com.xiaoming.function.R;
 
 import java.lang.reflect.Field;
 

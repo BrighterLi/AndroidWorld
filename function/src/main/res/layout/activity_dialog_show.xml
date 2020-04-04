@@ -4,19 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".method.StatusBarActivity">
+    tools:context=".androidknowledgepoints.DialogShowActivity">
 
     <Button
-        android:id="@+id/bt_get_statusbar_height"
+        android:id="@+id/btn_click"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="获取状态栏高度"/>
-
-    <Button
-        android:id="@+id/bt_change_statusbar_color"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="改变状态栏颜色"/>
+        android:text="click"/>
 
 </LinearLayout>
