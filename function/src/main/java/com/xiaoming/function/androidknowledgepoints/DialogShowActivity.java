@@ -26,6 +26,8 @@ public class DialogShowActivity extends AppCompatActivity {
         });
     }
 
+    //在子线程中弹出Toast，会报错
+    //解决方式：先调用Looper.prepare();再调用Toast.makeText().show();最后再调用Looper.loop();
     private void showCustomDialog() {
         new Thread(new Runnable() {
             @Override
