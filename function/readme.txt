@@ -20,10 +20,11 @@
   方案三：监听Home键点击
 9 防止按钮快速重复点击
  https://www.cnblogs.com/dingxiansen/p/10442255.html
-10 Android实现电话录音与上传的功能(云服务器)/面对面录音；图片压缩；0
+10 Android实现电话录音与上传的功能(云服务器)/面对面录音；图片压缩；?
 11 超时0
 
 二、Android知识点
 1 Toast、Dialog不能在子线程里弹出。
  否则会crash崩溃
  解决方式：先调用Looper.prepare();再调用Toast.makeText().show();最后再调用Looper.loop();
+2 onKeyDown ?

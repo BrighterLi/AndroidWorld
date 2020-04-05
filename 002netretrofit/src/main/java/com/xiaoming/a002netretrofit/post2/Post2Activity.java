@@ -21,7 +21,7 @@ import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-//报502错误？？？
+//报502 – 网关错误？？？
 //post同步请求
 //https://www.jianshu.com/p/73ebc8036dc3
 public class Post2Activity extends AppCompatActivity implements View.OnClickListener{
@@ -104,7 +104,7 @@ public class Post2Activity extends AppCompatActivity implements View.OnClickList
                 // 2.获取到ApiServer接口服务对象
                 mApiServer = mRetrofit.create(ApiServer.class);
 
-                // 获取到请求类型
+                // 获取到请求类型,MediaType指的是要传递的数据的MIME类型
                 MediaType mediaType = MediaType.parse("application/json;charset=UTF-8");
 
                 // 获取到请求内容
