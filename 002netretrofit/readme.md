@@ -24,10 +24,19 @@ baseUrl添加的是地址的主域名,@GET 包含的是请求地址，是主域
 主域名为：http://plus31.366ec.net/
 @GET包含的地址为：/Route.axd?method=vast.Store.manager.list
 
+Get/Post
+Demo:https://www.cnblogs.com/guanxinjing/p/11594249.html
+
 拦截器
+拦截器可以用来转换，重试，重写请求的机制。
 拦截器的主要作用在于显示网络传输的数据，在调试的时候，方便我们查看上传以及服务器返回的内容。
-据我所知，Retrofit2有两种拦截器：
+api描述，翻译过来其实就是可以通过拦截器拦截即将发出的请求及对响应结果做相应处理，典型的处理方式是修改header。其实我们可能不仅要处理header，
+有时也需要添加统一参数，都可以在拦截器内部完成。
+Retrofit2有两种拦截器：
 1、Interceptor
 这个拦截器的**优点**在于，你可以从回调中获取你所需要的部分内容，然后自定义输出。**缺点**在于无法获取传输的内容，以及返回的内容。
 2、HttpLoggingInterceptor
 这个拦截器的**优点**在于你可以获取到所有的内容，然后输出。**缺点**是你无法自定义地选择你所需要的部分。
+
+缓存
+Demo:https://www.jb51.net/article/130463.htm
