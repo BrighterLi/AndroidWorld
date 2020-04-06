@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".upload.UploadActivity"></activity>
+        <activity android:name=".cache.CacheActivity"></activity>
+        <activity android:name=".Interceptor.InterceptorActivity" />
+        <activity android:name=".download.DownloadActivity" />
+        <activity android:name=".upload.UploadActivity" />
         <activity android:name=".get3.Get3Activity" />
         <activity android:name=".post2.Post2Activity" />
         <activity android:name=".asyncget2.AsyncGet2Activity" />
