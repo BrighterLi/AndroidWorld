@@ -3,3 +3,6 @@ https://blog.csdn.net/weixin_34191734/article/details/89622411?depth_1-utm_sourc
 打开相机 拍照
 裁剪
 返回裁剪后在照片
+照片保存
+图片可以缩放
+裁剪框缩放

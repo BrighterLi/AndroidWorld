@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imgShow;
     public final int PHOTO_REQUEST_CODE = 1; //相册
     public final int CAMERA_REQUEST_CODE = 2; //相机
+    public final int CROP_REQUEST_CODE = 3; //裁剪
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
             case PHOTO_REQUEST_CODE:
                 //获取相册选中的图片数据Uri
                 Uri imageUri = data.getData();
+                cropPic(imageUri);
                 try {
                     // 将图片Uri转化成Bitmap
                     Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
@@ -107,7 +109,42 @@ public class MainActivity extends AppCompatActivity {
                 Bitmap bitmap = ((Bitmap) bundle.get("data"));
                 imgShow.setImageBitmap(bitmap);
                 break;
+            case CROP_REQUEST_CODE:
+                if(data != null) {
+                    Bundle bundle2 = data.getExtras();
+                    if(bundle2 != null) {
+                        Bitmap bitmap2 = bundle2.getParcelable("data");
+                        imgShow.setImageBitmap(bitmap2);
+                    }
+                }
+                break;
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    //https://blog.csdn.net/wufeng55/article/details/80918749
+    //裁剪图片
+    private void cropPic(Uri data) {
+        if(data == null) {
+            return;
+        }
+        Intent cropIntent = new Intent("com.android.camera.action.CROP");
+        cropIntent.setDataAndType(data, "image/*");
+        // 开启裁剪：打开的Intent所显示的View可裁剪
+        cropIntent.putExtra("crop", "true");
+        // 裁剪输出大小
+        cropIntent.putExtra("aspectX", 2);
+        cropIntent.putExtra("aspectY", 1);
+        /**
+         * return-data
+         * 这个属性决定我们在 onActivityResult 中接收到的是什么数据，
+         * 如果设置为true 那么data将会返回一个bitmap
+         * 如果设置为false，则会将图片保存到本地并将对应的uri返回，当然这个uri得有我们自己设定。
+         * 系统裁剪完成后将会将裁剪完成的图片保存在我们所这设定这个uri地址上。我们只需要在裁剪完成后直接调用该uri来设置图片，就可以了。
+         */
+        cropIntent.putExtra("return-data", true);
+        startActivityForResult(cropIntent, CROP_REQUEST_CODE);
+
+
     }
 }
