@@ -28,3 +28,4 @@
  否则会crash崩溃
  解决方式：先调用Looper.prepare();再调用Toast.makeText().show();最后再调用Looper.loop();
 2 onKeyDown ?
+3 ThreadLocal ?
