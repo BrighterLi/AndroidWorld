@@ -2,9 +2,12 @@ package com.xiaoming.functionbaidumaker.marker;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.ImageView;
 
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
@@ -14,6 +17,8 @@ import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.xiaoming.functionbaidumaker.R;
+
+import static com.baidu.mapapi.BMapManager.getContext;
 
 //https://www.cnblogs.com/mfmdaoyou/p/6755845.html
 public class MarkerActivity extends AppCompatActivity {
@@ -29,8 +34,14 @@ public class MarkerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maker);
 
+        initData();
         initView();
         showMapViewMaker();
+    }
+
+    //获取数据初始化数据
+    private void initData() {
+
     }
 
     private void initView() {
@@ -74,6 +85,14 @@ public class MarkerActivity extends AppCompatActivity {
     }
 
     private void showMapViewMaker() {
+        //marker自定义布局
+        View markerView = LayoutInflater.from(getContext()).inflate(R.layout.layout_marker, null);
+        TextView markerText = markerView.findViewById(R.id.tv_marker_text);
+        ImageView markerImg = markerView.findViewById(R.id.img_marker);
+        markerText.setText("自定义文本");
+        //构建marker图标
+        BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromView(markerView);
+
         mBaiduMap = mMapView.getMap();
         //获取地图中心点
         //LatLng latLng = mBaiduMap.getMapStatus().target;
@@ -84,7 +103,8 @@ public class MarkerActivity extends AppCompatActivity {
         BitmapDescriptor bitmap = BitmapDescriptorFactory.fromResource(R.drawable.icon_map_marker);
         //准备marker option加入marker使用
          mMarkerOptions =  new MarkerOptions().icon(bitmap).position(latLng);
-        mMarkerOptions2 =  new MarkerOptions().icon(bitmap).position(latLng2);
+         //使用了自定义的marker布局
+         mMarkerOptions2 =  new MarkerOptions().icon(bitmapDescriptor).position(latLng2);
         //在地图上添加Marker
          mMarker = ((Marker) mBaiduMap.addOverlay(mMarkerOptions));
          mBaiduMap.addOverlay(mMarkerOptions2);

@@ -7,8 +7,10 @@ http://lbsyun.baidu.com/index.php?title=FAQ/iOS/map
 百度地图 Android SDK - 标注（Marker）的基本使用:https://www.cnblogs.com/mfmdaoyou/p/6755845.html
 
 实现功能：
-(1)点标记
+(1)点标记显示
 从服务器获取过来经纬度，然后把对应的建筑物加上标识显示在地图上
+(2)绘制自定义Marker，图标数字显示
+(3) 将所有Marker放入屏幕内显示
 
 步骤：
 (1)注册和获取秘钥
