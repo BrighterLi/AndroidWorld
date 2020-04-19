@@ -10,7 +10,9 @@ http://lbsyun.baidu.com/index.php?title=FAQ/iOS/map
 (1)点标记显示
 从服务器获取过来经纬度，然后把对应的建筑物加上标识显示在地图上
 (2)绘制自定义Marker，图标数字显示
+Android 百度地图自定义地图覆盖物（Marker）:https://blog.csdn.net/Crystal_xing/article/details/84317600
 (3) 将所有Marker放入屏幕内显示
+关于百度地图将所有marker显示在屏幕内:https://blog.csdn.net/qq_34507714/article/details/79023533
 
 步骤：
 (1)注册和获取秘钥
