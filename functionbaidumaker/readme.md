@@ -1,4 +1,5 @@
 百度地图资料：
+1 点标记功能
 (1)点标记
 安卓：http://lbs.baidu.com/index.php?title=androidsdk/guide/render-map/point
 iOS：http://lbs.baidu.com/index.php?title=iossdk/guide/map-render/point
@@ -22,3 +23,6 @@ http://lbsyun.baidu.com/index.php?title=androidsdk/sdkandev-download
 (3)Android Studio工程配置
 http://lbsyun.baidu.com/index.php?title=androidsdk/guide/create-project/androidstudio
 (4)显示地图
+
+2 自定义MapView
+Weex地图组件开发流程及使用（android）:https://blog.csdn.net/qq_33718648/article/details/79895097

@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.xiaoming.functionbaidumaker.custommapview.MyMapViewActivity;
 import com.xiaoming.functionbaidumaker.marker.MarkerActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private Button btnMaker;
+    private Button btnCustomMapView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +23,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initView() {
         btnMaker = findViewById(R.id.btn_maker);
+        btnCustomMapView = findViewById(R.id.btn_custom_map_view);
         btnMaker.setOnClickListener(this);
+        btnCustomMapView.setOnClickListener(this);
     }
 
     @Override
@@ -29,6 +33,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn_maker:
                 startActivity(new Intent(MainActivity.this, MarkerActivity.class));
+                break;
+            case R.id.btn_custom_map_view:
+                startActivity(new Intent(MainActivity.this, MyMapViewActivity.class));
                 break;
         }
     }

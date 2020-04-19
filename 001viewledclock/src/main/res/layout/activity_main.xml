@@ -4,19 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_maker"
-        android:layout_width="match_parent"
+    <com.xiaoming.a001viewledclock.LEDClockView
+        android:id="@+id/led_clock_view"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="点标记Marker"/>
-
-    <Button
-        android:id="@+id/btn_custom_map_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="自定义Map View"/>
-
+        android:layout_centerInParent="true"
+        android:layout_gravity="center">
+    </com.xiaoming.a001viewledclock.LEDClockView>
 </LinearLayout>
