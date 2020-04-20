@@ -37,3 +37,4 @@ http://lbsyun.baidu.com/index.php?title=android-locsdk/guide/create-project/andr
 (1) 初始化
 (2) 设置宽高的自定义属性
 Android——自定义View时添加自己的属性 ：https://www.iteye.com/blog/androidstudy-828462
+(3) 动态设置属性 set

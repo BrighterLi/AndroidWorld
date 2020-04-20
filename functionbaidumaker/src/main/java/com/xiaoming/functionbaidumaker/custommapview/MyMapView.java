@@ -1,9 +1,11 @@
 package com.xiaoming.functionbaidumaker.custommapview;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.baidu.mapapi.map.BaiduMap;
@@ -15,6 +17,9 @@ public class MyMapView extends LinearLayout{
     private static final String TAG = "MyMapView";
     private MapView mMapView;
     private BaiduMap mBaiduMap;
+    private  int mWidth;
+    private  int mHeight;
+
     public MyMapView(Context context) {
         super(context);
         Log.d(TAG,"MyMapView#1");
@@ -46,9 +51,20 @@ public class MyMapView extends LinearLayout{
     }
 
     private void init(Context context) {
-        Log.d(TAG,"init");
+        Log.d(TAG,"init#bright5#height:" + mHeight);
         LinearLayout.inflate(context, R.layout.layout_map, this); //获取布局
         mMapView = findViewById(R.id.map); //得到MapView对象
+
+        //MyMapView的宽高
+        if(mHeight <= 0) {
+            mHeight = ViewGroup.LayoutParams.MATCH_PARENT;
+        }
+        if (mWidth <=0) {
+            mWidth = ViewGroup.LayoutParams.MATCH_PARENT;
+        }
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(mWidth, mHeight);
+        mMapView.setLayoutParams(params);
+
         if(mBaiduMap == null) {
             mBaiduMap = mMapView.getMap(); //得到地图控制对象
         }
@@ -57,15 +73,24 @@ public class MyMapView extends LinearLayout{
         mMapView.onCreate(context,Bundle.EMPTY);
     }
 
-    public void setWidth() {
-
+    public void setWidth(int width) {
+        mWidth = width;
+        //刷新布局
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(mHeight, mWidth);
+        setLayoutParams(params);
+        requestLayout();
     }
 
-    public void setHeight() {
-
+    public void setHeight(int height) {
+        Log.d("bright5","bright5#setHeight");
+        mHeight = height;
+        //刷新布局
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(mHeight, mWidth);
+        setLayoutParams(params);
+        requestLayout();
     }
 
-    public void setArrayPoint() {
+    public static void setArrayPoint() {
 
     }
 }
