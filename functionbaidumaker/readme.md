@@ -1,3 +1,8 @@
+2020.4.20：Android 地图 SDK V6.3.0
+Android定位SDK：获取经纬度
+Android 地图 SDK：点标记
+
+
 百度地图资料：
 1 点标记功能
 (1)点标记
@@ -26,3 +31,9 @@ http://lbsyun.baidu.com/index.php?title=androidsdk/guide/create-project/androids
 
 2 自定义MapView
 Weex地图组件开发流程及使用（android）:https://blog.csdn.net/qq_33718648/article/details/79895097
+
+3 定位功能
+http://lbsyun.baidu.com/index.php?title=android-locsdk/guide/create-project/android-studio
+(1) 初始化
+(2) 设置宽高的自定义属性
+Android——自定义View时添加自己的属性 ：https://www.iteye.com/blog/androidstudy-828462

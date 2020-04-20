@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyMapView">
+        <attr name="mapViewWidth" format="dimension"/>
+        <attr name="mapViewHeight" format="dimension"/>
+    </declare-styleable>
+</resources>

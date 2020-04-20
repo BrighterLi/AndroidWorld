@@ -3,11 +3,94 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <compositeConfiguration>
-          <compositeBuild compositeDefinitionSource="SCRIPT" />
-        </compositeConfiguration>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/000algorithm" />
+            <option value="$PROJECT_DIR$/000datastructure" />
+            <option value="$PROJECT_DIR$/001customview" />
+            <option value="$PROJECT_DIR$/001view" />
+            <option value="$PROJECT_DIR$/001viewcustom" />
+            <option value="$PROJECT_DIR$/001viewimage" />
+            <option value="$PROJECT_DIR$/001viewledclock" />
+            <option value="$PROJECT_DIR$/001viewtextonimagview" />
+            <option value="$PROJECT_DIR$/002net" />
+            <option value="$PROJECT_DIR$/002netcache" />
+            <option value="$PROJECT_DIR$/002nethttpurlconnection" />
+            <option value="$PROJECT_DIR$/002netretrofit" />
+            <option value="$PROJECT_DIR$/002netrxjavaandokhttpandretrofit" />
+            <option value="$PROJECT_DIR$/002rxjavaandretrofit" />
+            <option value="$PROJECT_DIR$/003thread" />
+            <option value="$PROJECT_DIR$/003threadpool" />
+            <option value="$PROJECT_DIR$/003threadsafe" />
+            <option value="$PROJECT_DIR$/acrossendflutter" />
+            <option value="$PROJECT_DIR$/acrossendwebview" />
+            <option value="$PROJECT_DIR$/acrossendweex" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/backendserver" />
+            <option value="$PROJECT_DIR$/datastorage" />
+            <option value="$PROJECT_DIR$/datastoragefile" />
+            <option value="$PROJECT_DIR$/datastoragesqlite" />
+            <option value="$PROJECT_DIR$/designpatterns" />
+            <option value="$PROJECT_DIR$/frameapp" />
+            <option value="$PROJECT_DIR$/framearouter" />
+            <option value="$PROJECT_DIR$/framebutterknife" />
+            <option value="$PROJECT_DIR$/frameglide" />
+            <option value="$PROJECT_DIR$/framemvc" />
+            <option value="$PROJECT_DIR$/frameokhttp" />
+            <option value="$PROJECT_DIR$/frameretrofit" />
+            <option value="$PROJECT_DIR$/framerxjava" />
+            <option value="$PROJECT_DIR$/frametinker" />
+            <option value="$PROJECT_DIR$/fuctionchoosephotoandcrop" />
+            <option value="$PROJECT_DIR$/fuctionmodule" />
+            <option value="$PROJECT_DIR$/function" />
+            <option value="$PROJECT_DIR$/functionbaidumaker" />
+            <option value="$PROJECT_DIR$/javaknowledgepoints" />
+            <option value="$PROJECT_DIR$/ndk" />
+            <option value="$PROJECT_DIR$/oauthority" />
+            <option value="$PROJECT_DIR$/oencode" />
+            <option value="$PROJECT_DIR$/oenum" />
+            <option value="$PROJECT_DIR$/oexception" />
+            <option value="$PROJECT_DIR$/oextends" />
+            <option value="$PROJECT_DIR$/ohandler" />
+            <option value="$PROJECT_DIR$/oinnerclass" />
+            <option value="$PROJECT_DIR$/ointent" />
+            <option value="$PROJECT_DIR$/ojson" />
+            <option value="$PROJECT_DIR$/olayoutinflater" />
+            <option value="$PROJECT_DIR$/rxlifecycle" />
+            <option value="$PROJECT_DIR$/thirdpartyinterfaces" />
+            <option value="$PROJECT_DIR$/tools" />
+            <option value="$PROJECT_DIR$/toolsgradle" />
+            <option value="$PROJECT_DIR$/toolsmaven" />
+            <option value="$PROJECT_DIR$/widgetactivity" />
+            <option value="$PROJECT_DIR$/widgetaddressselector" />
+            <option value="$PROJECT_DIR$/widgetanimation" />
+            <option value="$PROJECT_DIR$/widgetattribute" />
+            <option value="$PROJECT_DIR$/widgetbanner" />
+            <option value="$PROJECT_DIR$/widgetbottomnavigationbar" />
+            <option value="$PROJECT_DIR$/widgetcustomloading" />
+            <option value="$PROJECT_DIR$/widgetcustomtimekeeper" />
+            <option value="$PROJECT_DIR$/widgetcustomtitlebar" />
+            <option value="$PROJECT_DIR$/widgetdialog" />
+            <option value="$PROJECT_DIR$/widgetfragment" />
+            <option value="$PROJECT_DIR$/widgethomeactivityframework" />
+            <option value="$PROJECT_DIR$/widgetlistview" />
+            <option value="$PROJECT_DIR$/widgetloading" />
+            <option value="$PROJECT_DIR$/widgetpopupwindow" />
+            <option value="$PROJECT_DIR$/widgetpulltorefresh" />
+            <option value="$PROJECT_DIR$/widgetrecyclerview" />
+            <option value="$PROJECT_DIR$/widgetreddot" />
+            <option value="$PROJECT_DIR$/widgettensorflow" />
+            <option value="$PROJECT_DIR$/widgettimer" />
+            <option value="$PROJECT_DIR$/widgettimeselector" />
+            <option value="$PROJECT_DIR$/widgettimeselector2" />
+            <option value="$PROJECT_DIR$/widgetviewpager" />
+            <option value="$PROJECT_DIR$/widgetwheelview" />
+            <option value="$PROJECT_DIR$/widigetimageview" />
+          </set>
+        </option>
         <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>

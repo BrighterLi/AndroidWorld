@@ -17,7 +17,13 @@ public class MyMapViewActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        //获取MyMapView对象
         mMyMapView = findViewById(R.id.my_map_view);
-        //mMyMapView = new MyMapView(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mMyMapView.onResume();
     }
 }
