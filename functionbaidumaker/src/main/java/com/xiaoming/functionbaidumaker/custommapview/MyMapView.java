@@ -1,5 +1,7 @@
 package com.xiaoming.functionbaidumaker.custommapview;
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
@@ -23,6 +26,7 @@ import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.xiaoming.functionbaidumaker.R;
+import com.xiaoming.functionbaidumaker.marker.MarkerActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -168,6 +172,9 @@ public class MyMapView extends LinearLayout{
         ImageView markerImg = markerView.findViewById(R.id.img_marker);
         if(pointList.size() > 0) {
             for(int i = 0; i < pointList.size(); i++) {
+                if(pointList.get(i) == null) {
+                    continue;
+                }
                 markerText.setText(pointList.get(i).title);
                 //构建marker图标
                 BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromView(markerView);
@@ -178,6 +185,13 @@ public class MyMapView extends LinearLayout{
                 MarkerOptions option =  new MarkerOptions().icon(bitmapDescriptor).position(point);
                 //在地图上添加Marker
                 Marker marker = ((Marker) mBaiduMap.addOverlay(option));
+                Bundle bundle = new Bundle();
+                bundle.putString("id",pointList.get(i).title);
+                marker.setExtraInfo(bundle);
+                //保存住对应的Marker对象
+                pointList.get(i).setMarker(marker);
+                //实现 Marker 的点击事件响应
+                setMarkerClick(mBaiduMap);
             }
         }
     }
@@ -209,5 +223,18 @@ public class MyMapView extends LinearLayout{
         MapStatusUpdate mapStatusUpdate = MapStatusUpdateFactory.newMapStatus(mapStatus);
         //改变地图状态
         mBaiduMap.setMapStatus(mapStatusUpdate);
+    }
+
+    private void setMarkerClick(BaiduMap baiduMap) {
+        // Marker 的点击事件
+        baiduMap.setOnMarkerClickListener(new BaiduMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                Bundle bundle = marker.getExtraInfo();
+                String title = bundle.getString("id");
+                Toast.makeText(getContext(), "Title" + title, Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
     }
 }
