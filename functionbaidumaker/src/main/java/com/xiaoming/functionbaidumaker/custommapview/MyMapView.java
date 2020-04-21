@@ -256,4 +256,10 @@ public class MyMapView extends LinearLayout{
         pointList.add(bean);
         setArrayPoint(null);
     }
+
+    //获取定位的经纬度
+    public void getUserLocation() {
+        mBaiduMap.setMyLocationEnabled(true);
+    }
+
 }
