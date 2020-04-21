@@ -35,7 +35,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.baidu.mapapi.BMapManager.getContext;
 
 //新建MyMapView继承LinearLayout类，开发一个自定义的组合组件
 public class MyMapView extends LinearLayout{
@@ -47,6 +46,7 @@ public class MyMapView extends LinearLayout{
     private  int mHeight;
     private float centerLatitude;
     private float centerLongitude;
+    private MarkerClickListener mMarkerClickListener;
     List<MarkerPointBean> pointList = new ArrayList<>();
 
     public MyMapView(Context context) {
@@ -186,13 +186,25 @@ public class MyMapView extends LinearLayout{
                 //在地图上添加Marker
                 Marker marker = ((Marker) mBaiduMap.addOverlay(option));
                 Bundle bundle = new Bundle();
-                bundle.putString("id",pointList.get(i).title);
+                bundle.putString("title",pointList.get(i).title);
                 marker.setExtraInfo(bundle);
                 //保存住对应的Marker对象
                 pointList.get(i).setMarker(marker);
-                //实现 Marker 的点击事件响应
-                setMarkerClick(mBaiduMap);
             }
+
+            //实现 Marker 的点击事件响应
+            mBaiduMap.setOnMarkerClickListener(new BaiduMap.OnMarkerClickListener() {
+                @Override
+                public boolean onMarkerClick(Marker marker) {
+                    Bundle bundle = marker.getExtraInfo();
+                    String title = bundle.getString("title");
+                    if(mMarkerClickListener != null) {
+                        mMarkerClickListener.onMarkerClick(title);
+                    }
+                    Toast.makeText(getContext(), "点击title：" + title, Toast.LENGTH_SHORT).show();
+                    return false;
+                }
+            });
         }
     }
 
@@ -225,16 +237,11 @@ public class MyMapView extends LinearLayout{
         mBaiduMap.setMapStatus(mapStatusUpdate);
     }
 
-    private void setMarkerClick(BaiduMap baiduMap) {
-        // Marker 的点击事件
-        baiduMap.setOnMarkerClickListener(new BaiduMap.OnMarkerClickListener() {
-            @Override
-            public boolean onMarkerClick(Marker marker) {
-                Bundle bundle = marker.getExtraInfo();
-                String title = bundle.getString("id");
-                Toast.makeText(getContext(), "Title" + title, Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        });
+    public void setMarkerClickListener(MarkerClickListener listener) {
+        mMarkerClickListener = listener;
+    }
+
+    public interface MarkerClickListener {
+        void onMarkerClick(String title);
     }
 }

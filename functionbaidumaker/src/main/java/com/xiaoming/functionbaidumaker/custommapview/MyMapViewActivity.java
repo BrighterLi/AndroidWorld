@@ -3,6 +3,7 @@ package com.xiaoming.functionbaidumaker.custommapview;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.xiaoming.functionbaidumaker.R;
 
@@ -47,6 +48,14 @@ public class MyMapViewActivity extends AppCompatActivity {
         //mMyMapView.setZoom(4); //缩放级别
         //mMyMapView.setLatitude((float)29.806651); //用来设置默认中心点
         //mMyMapView.setLongitude((float)121.606983); //用来设置默认中心点
+
+        //Marker点击回调
+        mMyMapView.setMarkerClickListener(new MyMapView.MarkerClickListener() {
+            @Override
+            public void onMarkerClick(String title) {
+                Toast.makeText(MyMapViewActivity.this, "点击回调：" + title, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
