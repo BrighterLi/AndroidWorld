@@ -6,19 +6,19 @@
 
     <ImageView
         android:id="@+id/img_marker"
-        android:layout_width="42dp"
-        android:layout_height="60dp"
+        android:layout_width="63dp"
+        android:layout_height="90dp"
         android:src="@drawable/icon_map_marker"/>
 
     <TextView
         android:id="@+id/tv_marker_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="22dp"
+        android:layout_height="18dp"
         android:gravity="center"
         android:layout_below="@+id/img_marker"
-        android:layout_marginLeft="11.5dp"
-        android:layout_marginTop="-47dp"
+        android:layout_marginLeft="20.2dp"
+        android:layout_marginTop="-65dp"
         android:textColor="#ffff6830"
         android:text="11"
-        android:textSize="14sp"/>
+        android:textSize="12sp"/>
 </RelativeLayout>

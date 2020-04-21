@@ -35,12 +35,12 @@ public class MyMapViewActivity extends AppCompatActivity {
                 "  {\n" +
                 "    \"latitude\": \"39.963175\",\n" +
                 "    \"longitude\": \"116.400244\",\n" +
-                "    \"title\": \"2\"\n" +
+                "    \"title\": \"22\"\n" +
                 "  },\n" +
                 "  {\n" +
                 "    \"latitude\": \"39.947246\",\n" +
                 "    \"longitude\": \"116.414977\",\n" +
-                "    \"title\": \"3\"\n" +
+                "    \"title\": \"333\"\n" +
                 "  }\n" +
                 "]";
         mMyMapView.setArrayPoint(str2); //锚点
