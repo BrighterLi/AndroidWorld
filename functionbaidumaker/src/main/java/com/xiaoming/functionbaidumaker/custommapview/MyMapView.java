@@ -148,22 +148,24 @@ public class MyMapView extends LinearLayout{
 
     //使用json列表的输入形式
     public void setArrayPoint(String json) {
-        //解析数据
-        try {
-            JSONArray jsonArray = new JSONArray(json);
-            if(jsonArray != null && jsonArray.length() > 0) {
-                for(int i= 0; i < jsonArray.length(); i++) {
-                    JSONObject jsonObject = jsonArray.getJSONObject(i);
-                    MarkerPointBean bean = new MarkerPointBean();
-                    bean.latitude = (float) jsonObject.optDouble("latitude");
-                    bean.longitude = (float)jsonObject.optDouble("longitude");
-                    bean.title = jsonObject.optString("title");
-                    pointList.add(bean);
+        if(json != null) {
+            //解析数据
+            try {
+                JSONArray jsonArray = new JSONArray(json);
+                if(jsonArray != null && jsonArray.length() > 0) {
+                    for(int i= 0; i < jsonArray.length(); i++) {
+                        JSONObject jsonObject = jsonArray.getJSONObject(i);
+                        MarkerPointBean bean = new MarkerPointBean();
+                        bean.latitude = (float) jsonObject.optDouble("latitude");
+                        bean.longitude = (float)jsonObject.optDouble("longitude");
+                        bean.title = jsonObject.optString("title");
+                        pointList.add(bean);
+                    }
                 }
-            }
 
-        } catch (JSONException e) {
-            e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
 
         //marker自定义布局
@@ -243,5 +245,15 @@ public class MyMapView extends LinearLayout{
 
     public interface MarkerClickListener {
         void onMarkerClick(String title);
+    }
+
+    //添加锚点
+    public void addPointAnnotation(float latitude, float longitude, String title) {
+        MarkerPointBean bean = new MarkerPointBean();
+        bean.latitude = latitude;
+        bean.longitude = longitude;
+        bean.title = title;
+        pointList.add(bean);
+        setArrayPoint(null);
     }
 }

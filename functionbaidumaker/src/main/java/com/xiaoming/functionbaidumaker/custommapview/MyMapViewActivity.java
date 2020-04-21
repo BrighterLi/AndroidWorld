@@ -49,6 +49,8 @@ public class MyMapViewActivity extends AppCompatActivity {
         //mMyMapView.setLatitude((float)29.806651); //用来设置默认中心点
         //mMyMapView.setLongitude((float)121.606983); //用来设置默认中心点
 
+        mMyMapView.addPointAnnotation((float)38.947246, (float)115.414977, "5"); //添加锚点
+
         //Marker点击回调
         mMyMapView.setMarkerClickListener(new MyMapView.MarkerClickListener() {
             @Override
