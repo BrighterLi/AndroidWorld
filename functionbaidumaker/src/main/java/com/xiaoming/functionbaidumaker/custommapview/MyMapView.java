@@ -5,20 +5,45 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.baidu.mapapi.map.BaiduMap;
+import com.baidu.mapapi.map.BitmapDescriptor;
+import com.baidu.mapapi.map.BitmapDescriptorFactory;
+import com.baidu.mapapi.map.MapStatus;
+import com.baidu.mapapi.map.MapStatusUpdate;
+import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
+import com.baidu.mapapi.map.Marker;
+import com.baidu.mapapi.map.MarkerOptions;
+import com.baidu.mapapi.model.LatLng;
 import com.xiaoming.functionbaidumaker.R;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.baidu.mapapi.BMapManager.getContext;
 
 //新建MyMapView继承LinearLayout类，开发一个自定义的组合组件
 public class MyMapView extends LinearLayout{
     private static final String TAG = "MyMapView";
     private MapView mMapView;
     private BaiduMap mBaiduMap;
+    private Marker mMarker;
     private  int mWidth;
     private  int mHeight;
+    private float centerLatitude;
+    private float centerLongitude;
+    List<MarkerPointBean> pointList = new ArrayList<>();
 
     public MyMapView(Context context) {
         super(context);
@@ -51,9 +76,9 @@ public class MyMapView extends LinearLayout{
     }
 
     private void init(Context context) {
-        Log.d(TAG,"init#bright5#height:" + mHeight);
+        Log.d(TAG,"init#bright#height:" + mHeight);
         LinearLayout.inflate(context, R.layout.layout_map, this); //获取布局
-        mMapView = findViewById(R.id.map); //得到MapView对象
+        mMapView = findViewById(R.id.map); //得到MapView
 
         //MyMapView的宽高
         if(mHeight <= 0) {
@@ -69,8 +94,11 @@ public class MyMapView extends LinearLayout{
             mBaiduMap = mMapView.getMap(); //得到地图控制对象
         }
 
+        //setArrayPoint();
         //创建地图视图
-        mMapView.onCreate(context,Bundle.EMPTY);
+        //mMapView.onCreate(context,Bundle.EMPTY);
+
+
     }
 
     public void setWidth(int width) {
@@ -90,7 +118,101 @@ public class MyMapView extends LinearLayout{
         requestLayout();
     }
 
-    public static void setArrayPoint() {
+    public void setArrayPoint() {
+        //marker自定义布局
+        View markerView = LayoutInflater.from(getContext()).inflate(R.layout.layout_marker, null);
+        TextView markerText = markerView.findViewById(R.id.tv_marker_text);
+        ImageView markerImg = markerView.findViewById(R.id.img_marker);
+        //markerText.setText("自定义文本");
+        //构建marker图标
+        BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromView(markerView);
 
+        //Marker图标
+        LatLng point = new LatLng(39.963175, 116.400244);
+        LatLng point2 = new LatLng(39.947246, 116.414977);
+        //准备maker view
+        BitmapDescriptor bitmap = BitmapDescriptorFactory.fromResource(R.drawable.icon_map_marker);
+        //准备marker option加入marker使用
+        //MarkerOptions mMarkerOptions =  new MarkerOptions().icon(bitmap).position(point);
+        //使用了自定义的marker布局
+        MarkerOptions mMarkerOptions =  new MarkerOptions().icon(bitmapDescriptor).position(point);
+        MarkerOptions mMarkerOptions2 =  new MarkerOptions().icon(bitmapDescriptor).position(point2);
+        //在地图上添加Marker
+        mMarker = ((Marker) mBaiduMap.addOverlay(mMarkerOptions));
+        mBaiduMap.addOverlay(mMarkerOptions2);
+    }
+
+    //使用json列表的输入形式
+    public void setArrayPoint(String json) {
+        //解析数据
+        try {
+            JSONArray jsonArray = new JSONArray(json);
+            if(jsonArray != null && jsonArray.length() > 0) {
+                for(int i= 0; i < jsonArray.length(); i++) {
+                    JSONObject jsonObject = jsonArray.getJSONObject(i);
+                    MarkerPointBean bean = new MarkerPointBean();
+                    bean.latitude = (float) jsonObject.optDouble("latitude");
+                    bean.longitude = (float)jsonObject.optDouble("longitude");
+                    bean.title = jsonObject.optString("title");
+                    pointList.add(bean);
+                }
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        //marker自定义布局
+        View markerView = LayoutInflater.from(getContext()).inflate(R.layout.layout_marker, null);
+        TextView markerText = markerView.findViewById(R.id.tv_marker_text);
+        ImageView markerImg = markerView.findViewById(R.id.img_marker);
+        //markerText.setText("自定义文本");
+        //构建marker图标
+        BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromView(markerView);
+
+        if(pointList.size() > 0) {
+            for(int i = 0; i < pointList.size(); i++) {
+                //Marker图标
+                LatLng point = new LatLng(pointList.get(i).latitude, pointList.get(i).longitude);
+                //准备marker option加入marker使用
+                //使用了自定义的marker布局
+                MarkerOptions option =  new MarkerOptions().icon(bitmapDescriptor).position(point);
+                //在地图上添加Marker
+                Marker marker = ((Marker) mBaiduMap.addOverlay(option));
+                /*if(markerText.getText() != null) {
+                    markerText.setText("");
+                }
+                markerText.setText(pointList.get(i).title);*/
+            }
+        }
+    }
+
+    //设置地图缩放级别
+    public void setZoom(float zoom) {
+        MapStatusUpdate update = MapStatusUpdateFactory.zoomTo(zoom);
+        mBaiduMap.animateMapStatus(update);
+    }
+
+    // 经度，用来设置中心点
+    public void setLatitude(float latitude) {
+        centerLatitude = latitude;
+        setMapCenter();
+    }
+    // 纬度，用来设置中心点
+    public void setLongitude(float longitude) {
+        centerLongitude = longitude;
+        setMapCenter();
+    }
+
+    //设置中心点
+    private void setMapCenter() {
+        LatLng center = new LatLng(centerLatitude,centerLongitude);
+        MapStatus mapStatus = new MapStatus.Builder()
+                .target(center)
+                .build();
+        //定义MapStatusUpdate对象，以便描述地图状态将要发生的变化
+        MapStatusUpdate mapStatusUpdate = MapStatusUpdateFactory.newMapStatus(mapStatus);
+        //改变地图状态
+        mBaiduMap.setMapStatus(mapStatusUpdate);
     }
 }

@@ -99,7 +99,7 @@ public class MarkerActivity extends AppCompatActivity {
         //定义Marker图标
         LatLng  latLng = new LatLng(39.963175, 116.400244);
         LatLng latLng2 = new LatLng(39.947246, 116.414977);
-        //准备maker在照片
+        //准备maker view
         BitmapDescriptor bitmap = BitmapDescriptorFactory.fromResource(R.drawable.icon_map_marker);
         //准备marker option加入marker使用
          mMarkerOptions =  new MarkerOptions().icon(bitmap).position(latLng);

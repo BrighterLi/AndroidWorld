@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/img_marker"
+        android:layout_width="42dp"
+        android:layout_height="60dp"
+        android:src="@drawable/icon_map_marker"/>
 
     <TextView
         android:id="@+id/tv_marker_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000"
-        android:text="1"
-        android:textSize="15sp"/>
-    <ImageView
-        android:id="@+id/img_marker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/icon_map_marker"/>
-</LinearLayout>
+        android:gravity="center"
+        android:layout_below="@+id/img_marker"
+        android:layout_marginLeft="11.5dp"
+        android:layout_marginTop="-47dp"
+        android:textColor="#ffff6830"
+        android:text="11"
+        android:textSize="14sp"/>
+</RelativeLayout>
