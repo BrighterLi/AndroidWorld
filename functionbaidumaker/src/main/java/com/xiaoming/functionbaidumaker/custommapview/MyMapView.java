@@ -166,12 +166,11 @@ public class MyMapView extends LinearLayout{
         View markerView = LayoutInflater.from(getContext()).inflate(R.layout.layout_marker, null);
         TextView markerText = markerView.findViewById(R.id.tv_marker_text);
         ImageView markerImg = markerView.findViewById(R.id.img_marker);
-        //markerText.setText("自定义文本");
-        //构建marker图标
-        BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromView(markerView);
-
         if(pointList.size() > 0) {
             for(int i = 0; i < pointList.size(); i++) {
+                markerText.setText(pointList.get(i).title);
+                //构建marker图标
+                BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromView(markerView);
                 //Marker图标
                 LatLng point = new LatLng(pointList.get(i).latitude, pointList.get(i).longitude);
                 //准备marker option加入marker使用
@@ -179,10 +178,6 @@ public class MyMapView extends LinearLayout{
                 MarkerOptions option =  new MarkerOptions().icon(bitmapDescriptor).position(point);
                 //在地图上添加Marker
                 Marker marker = ((Marker) mBaiduMap.addOverlay(option));
-                /*if(markerText.getText() != null) {
-                    markerText.setText("");
-                }
-                markerText.setText(pointList.get(i).title);*/
             }
         }
     }
