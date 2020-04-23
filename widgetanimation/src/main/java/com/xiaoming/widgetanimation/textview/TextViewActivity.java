@@ -1,15 +1,19 @@
 package com.xiaoming.widgetanimation.textview;
 
+import android.animation.Animator;
+import android.animation.AnimatorSet;
 import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
 import android.os.Handler;
+import android.support.annotation.AnimatorRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.DecelerateInterpolator;
 import android.view.animation.OvershootInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.TextView;
@@ -31,13 +35,16 @@ public class TextViewActivity extends AppCompatActivity {
         //showShake3();
         //showShake4();
 
-        showBlowUpAnimation();
+        //showBlowUpAnimation();
+        /*showBlowUpAnimation2();
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 showShake3();
             }
-        }, 1000);
+        }, 1000);*/
+
+        multiAnimation();
     }
 
     //从小变大
@@ -75,6 +82,7 @@ public class TextViewActivity extends AppCompatActivity {
 
     }
 
+    //属性动画 上下颤抖
     //https://blog.csdn.net/zhangcanyan/article/details/54896456?utm_source=blogxgwz4
     //https://github.com/lzyzsd/AndroidSeekAttention
    private void showShake3() {
@@ -84,6 +92,7 @@ public class TextViewActivity extends AppCompatActivity {
        animator.start();
    }
 
+    //属性动画 左右颤抖
     private void showShake4() {
         ObjectAnimator nopeAnimator = nope(tvShow);
         nopeAnimator.setRepeatCount(ValueAnimator.INFINITE);
@@ -159,4 +168,36 @@ public class TextViewActivity extends AppCompatActivity {
         return ObjectAnimator.ofPropertyValuesHolder(view, pvhTranslateX).
                 setDuration(500);
     }
+
+    //属性动画 缩放
+    //https://blog.csdn.net/gruhgd/article/details/84101543
+    public void showBlowUpAnimation2() {
+        AnimatorSet animatorSet = new AnimatorSet();
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(tvShow, "scaleX", 0, 1f);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(tvShow, "scaleY", 0, 1f);
+        animatorSet.setDuration(1000);
+        animatorSet.setInterpolator(new DecelerateInterpolator());
+        animatorSet.play(scaleX).with(scaleY);//两个动画同时开始
+        animatorSet.start();
+    }
+
+    //多个属性动画顺序播放
+    public void multiAnimation() {
+        AnimatorSet animatorSet = new AnimatorSet();
+        //第一个动画 放大动画
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(tvShow, "scaleX", 0, 1f);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(tvShow, "scaleY", 0, 1f);
+        animatorSet.setDuration(1000);
+        animatorSet.setInterpolator(new DecelerateInterpolator());
+
+        //第二个动画，上下颤抖动画
+        ObjectAnimator animator = tada(tvShow);
+        animator.setRepeatCount(0);
+
+        animatorSet.play(scaleX).with(scaleY).before(animator);//两个动画同时开始
+        animatorSet.start();
+    }
 }
+
+//动画执行监听
+//https://blog.csdn.net/weixin_43808025/article/details/86552222
