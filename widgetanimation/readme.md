@@ -26,3 +26,4 @@ ObjectAnimator，ValueAnimator
  https://blog.csdn.net/zhangcanyan/article/details/54896456?utm_source=blogxgwz4
  https://blog.csdn.net/qq_36574212/article/details/82900452
 android怎么做iphone那种图片抖动动画的效果(包括button和EditText):http://m.myexception.cn/iphone/1708029.html
+https://www.cnblogs.com/loaderman/p/10207077.html

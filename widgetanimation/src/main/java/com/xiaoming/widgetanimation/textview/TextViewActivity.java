@@ -47,14 +47,14 @@ public class TextViewActivity extends AppCompatActivity {
         multiAnimation();
     }
 
-    //从小变大
+    //补间动画从小变大
     private void showBlowUpAnimation() {
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.textview_blow_up);
         animation.setFillAfter(true); //结束后保存状态
         tvShow.startAnimation(animation);
     }
 
-    //左右/上下抖动
+    //补间动画左右/上下抖动
     private void showShake() {
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.textview_shake);
         tvShow.startAnimation(animation);
@@ -69,7 +69,7 @@ public class TextViewActivity extends AppCompatActivity {
         animation.setRepeatMode(Animation.REVERSE);
         tvShow.startAnimation(animation);*/
 
-        //左右不停摇摆
+        //补间动画，左右不停摇摆
         TranslateAnimation alphaAnimation2 = new TranslateAnimation(150f, 350f, 50, 50);
         alphaAnimation2.setDuration(1000); //动画持续时间
         alphaAnimation2.setRepeatCount(Animation.INFINITE);
@@ -100,7 +100,7 @@ public class TextViewActivity extends AppCompatActivity {
     }
 
     public static ObjectAnimator tada(View view) {
-        return tada(view, 1f);
+        return tada(view, 5f);
     }
 
     public static ObjectAnimator tada(View view, float shakeFactor) {
