@@ -1,13 +1,13 @@
-package com.xiaoming.function.androidknowledges;
+package com.fenqile.a001viewlayoutparams;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class AndroidKnowledgePointsActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_android_knowledge_points);
+        setContentView(R.layout.activity_main);
     }
 }
