@@ -4,7 +4,7 @@ import android.app.Application;
 
 import com.taobao.weex.InitConfig;
 import com.taobao.weex.WXSDKEngine;
-import com.xiaoming.acrossendweex.openweexname.ImageAdapter;
+import com.xiaoming.acrossendweex.openweexpage.ImageAdapter;
 
 public class MyApplication extends Application {
     public static MyApplication mInstance;

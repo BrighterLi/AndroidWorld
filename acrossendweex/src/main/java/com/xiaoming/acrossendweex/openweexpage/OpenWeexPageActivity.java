@@ -1,15 +1,17 @@
-package com.xiaoming.acrossendweex.openweexname;
+package com.xiaoming.acrossendweex.openweexpage;
 
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.FrameLayout;
 
 import com.taobao.weex.IWXRenderListener;
 import com.taobao.weex.WXSDKEngine;
 import com.taobao.weex.WXSDKInstance;
 import com.taobao.weex.common.WXRenderStrategy;
 import com.taobao.weex.utils.WXFileUtils;
+import com.xiaoming.acrossendweex.R;
 
 //Native -> Weex,Android打开本地Weex页面
 //https://blog.csdn.net/weixin_33742618/article/details/91380769
@@ -17,14 +19,18 @@ import com.taobao.weex.utils.WXFileUtils;
 public class OpenWeexPageActivity extends AppCompatActivity implements IWXRenderListener {
     WXSDKInstance mWXSDKInstance;
     private Handler mHandler = new Handler();
+    private FrameLayout mWeexContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_open_weex_page);
+
+        mWeexContainer = findViewById(R.id.weex_container);
 
         //WXSDKInstance
         mWXSDKInstance = new WXSDKInstance(this);
+        //注册监听
         mWXSDKInstance.registerRenderListener(this);
 
         loadPage();
@@ -55,14 +61,17 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
          * width 为-1 默认全屏，可以自己定制。
          * height =-1 默认全屏，可以自己定制。
          */
-        //渲染页面，home.js就是weex打包好后给你的js文件
+        //加载本地weex页面。渲染页面，home.js就是weex打包好后给你的js文件
         mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("home.js", this), null, null, -1,-1, WXRenderStrategy.APPEND_ASYNC);
     }
 
-    //创建View
+    //创建View，这个view就是weex页面
     @Override
     public void onViewCreated(WXSDKInstance wxsdkInstance, View view) {
-        setContentView(view);
+        //setContentView(view);
+        if(mWeexContainer != null) {
+            mWeexContainer.addView(view);
+        }
     }
 
     //渲染成功

@@ -1,4 +1,4 @@
-package com.xiaoming.acrossendweex.openweexname;
+package com.xiaoming.acrossendweex.openweexpage;
 
 
 import android.widget.ImageView;
