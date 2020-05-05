@@ -54,7 +54,7 @@ public class FQLWXMapComponent extends WXComponent<MyMapView> {
         //获取CustomMapView对象
         this.mapView = new MyMapView(context);
         Log.d("FQLWXMapComponent","bright5#FQLWXMapComponent#initComponentHostView");
-        mapView.setMarkerClickListener(new CustomMapView.MarkerClickListener() {
+        /*mapView.setMarkerClickListener(new CustomMapView.MarkerClickListener() {
             @Override
             public void onMarkerClick(String title) {
                 Log.d("FQLWXMapComponent","bright5#FQLWXMapComponent#onMarkerClick");
@@ -62,7 +62,7 @@ public class FQLWXMapComponent extends WXComponent<MyMapView> {
                 inMap.put("title", title);
                 fireEvent("pointAnnotationClick",inMap);
             }
-        });
+        });*/
         Log.d("FQLWXMapComponent","bright5#FQLWXMapComponent#mapView:" + mapView.toString());
         return this.mapView;
     }
@@ -161,7 +161,7 @@ public class FQLWXMapComponent extends WXComponent<MyMapView> {
         }
     }
 
-    //设置地图中心点
+    /*//设置地图中心点
     @JSMethod(uiThread = true)
     public void setMapCenter(String json) {
         try {
@@ -173,7 +173,7 @@ public class FQLWXMapComponent extends WXComponent<MyMapView> {
             e.printStackTrace();
         }
     }
-
+*/
     //获取定位
     @JSMethod
     public void getUserLocation() {
