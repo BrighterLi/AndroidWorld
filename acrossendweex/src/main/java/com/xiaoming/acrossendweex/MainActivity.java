@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import com.xiaoming.acrossendweex.openweexpage.OpenWeexPageActivity;
+import com.xiaoming.acrossendweex.weexcustomcomponent.WeexComponentActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         demoNameList.add("Android打开本地Weex页面");
+        demoNameList.add("WeexComponent自定义");
     }
 
     private void initView() {
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 switch (position) {
                     case 0: //Android打开本地Weex页面
                         startActivity(new Intent(MainActivity.this, OpenWeexPageActivity.class));
+                    case 1: //Android打开本地Weex页面
+                        startActivity(new Intent(MainActivity.this, WeexComponentActivity.class));
                 }
             }
         });

@@ -44,4 +44,7 @@ dependencies {
     //?用在哪里了
     implementation 'com.android.support:recyclerview-v7:24.2.1'
 
+    //本工程的functionbaidumaker库
+    implementation project(':functionbaidumaker')
+
 }
