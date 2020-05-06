@@ -3,6 +3,7 @@ package com.xiaoming.acrossendweex.openweexpage;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
@@ -21,10 +22,13 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
     WXSDKInstance mWXSDKInstance;
     private Handler mHandler = new Handler();
     private FrameLayout mWeexContainer;
+    private LinearLayout mContentView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mContentView = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.activity_open_weex_page,null, false);
         setContentView(R.layout.activity_open_weex_page);
 
         mWeexContainer = findViewById(R.id.weex_container);
@@ -34,7 +38,9 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
         //注册监听
         mWXSDKInstance.registerRenderListener(this);
 
+        mContentView.setBackgroundResource(R.drawable.activity_background);
         loadPage();
+        mContentView.setBackgroundResource(R.drawable.activity_background);
         getWindow().getDecorView().setBackgroundResource(R.drawable.activity_background);
         //getWindow().getDecorView().setBackgroundResource(R.drawable.activity_background);
         View decorView = getWindow().getDecorView();
@@ -82,6 +88,7 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
             mWeexContainer.addView(view);
         }
         view.setBackgroundResource(R.drawable.activity_background);
+        mWeexContainer.setBackgroundResource(R.drawable.activity_background);
         //mWeexContainer.setBackgroundColor(getColor(android.R.color.holo_purple));
     }
 
