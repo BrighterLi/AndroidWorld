@@ -36,6 +36,7 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
 
         loadPage();
         getWindow().getDecorView().setBackgroundResource(R.drawable.activity_background);
+        //getWindow().getDecorView().setBackgroundResource(R.drawable.activity_background);
         View decorView = getWindow().getDecorView();
         if (decorView instanceof FrameLayout) {
             LinearLayout ll = (LinearLayout) ((FrameLayout) decorView).getChildAt(0);
