@@ -14,9 +14,15 @@
         android:text="点标记Marker"/>
 
     <Button
-        android:id="@+id/btn_custom_map_view"
+    android:id="@+id/btn_custom_map_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="自定义Map View"/>
+
+    <Button
+        android:id="@+id/btn_wx_component_map_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="自定义Map View"/>
+        android:text="自定义Weex Component Map View"/>
 
 </LinearLayout>

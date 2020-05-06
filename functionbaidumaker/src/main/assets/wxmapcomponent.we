@@ -1,0 +1,27 @@
+<template>
+    <div class="wrapper">
+        <FQLWXMapComponent ref="FqlText_limitSaleCountDown_sec" width="750" height="13340">
+        1111
+        111
+        111
+        </FQLWXMapComponent>
+        <preview-code ></preview-code>
+    </div>
+</template>
+<script>
+    const G_WEEX_EVENT = weex.requireModule('event');
+    import PreviewCode from '～preview_code@1.0';
+    export default {
+        data() {
+            return {
+            }
+        },
+        create() {
+        },
+        mounted(){
+        },
+        components: {
+            PreviewCode
+        }
+    }
+</script>

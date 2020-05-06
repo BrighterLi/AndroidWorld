@@ -228,7 +228,19 @@ public class MyMapView extends LinearLayout{
     }
 
     //设置中心点
-    private void setMapCenter() {
+    public void setMapCenter() {
+        LatLng center = new LatLng(centerLatitude,centerLongitude);
+        MapStatus mapStatus = new MapStatus.Builder()
+                .target(center)
+                .build();
+        //定义MapStatusUpdate对象，以便描述地图状态将要发生的变化
+        MapStatusUpdate mapStatusUpdate = MapStatusUpdateFactory.newMapStatus(mapStatus);
+        //改变地图状态
+        mBaiduMap.setMapStatus(mapStatusUpdate);
+    }
+
+    //设置中心点
+    public void setMapCenter(float centerLatitude, float centerLongitude) {
         LatLng center = new LatLng(centerLatitude,centerLongitude);
         MapStatus mapStatus = new MapStatus.Builder()
                 .target(center)

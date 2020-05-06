@@ -1,11 +1,9 @@
-package com.xiaoming.acrossendweex.weexcustomcomponent;
+package com.xiaoming.functionbaidumaker.weexmapview;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
-import com.xiaoming.acrossendweex.R;
-
 import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 
@@ -14,8 +12,10 @@ import com.taobao.weex.WXSDKEngine;
 import com.taobao.weex.WXSDKInstance;
 import com.taobao.weex.common.WXRenderStrategy;
 import com.taobao.weex.utils.WXFileUtils;
+import com.xiaoming.functionbaidumaker.R;
 
 public class WeexComponentActivity extends AppCompatActivity implements IWXRenderListener {
+    private static final String TAG = "WeexComponentActivity";
     WXSDKInstance mWXSDKInstance;
     private Handler mHandler = new Handler();
     private FrameLayout mWeexContainer;
@@ -23,9 +23,9 @@ public class WeexComponentActivity extends AppCompatActivity implements IWXRende
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_weex_component);
+        setContentView(R.layout.activity_weex_component2);
 
-        mWeexContainer = findViewById(R.id.weex_component_container);
+        mWeexContainer = findViewById(R.id.weex_component_container2);
 
         //WXSDKInstance
         mWXSDKInstance = new WXSDKInstance(this);
@@ -70,12 +70,14 @@ public class WeexComponentActivity extends AppCompatActivity implements IWXRende
         //setContentView(view);
         if(mWeexContainer != null) {
             mWeexContainer.addView(view);
+            Log.v(TAG, "bright5#onViewCreated");
         }
     }
 
     //渲染成功
     @Override
     public void onRenderSuccess(WXSDKInstance wxsdkInstance, int i, int i1) {
+        Log.v(TAG, "bright5#onRenderSuccess");
 
     }
 
@@ -88,7 +90,6 @@ public class WeexComponentActivity extends AppCompatActivity implements IWXRende
     //异常
     @Override
     public void onException(WXSDKInstance wxsdkInstance, String s, String s1) {
-
     }
 
     @Override
@@ -96,6 +97,7 @@ public class WeexComponentActivity extends AppCompatActivity implements IWXRende
         super.onResume();
         if(mWXSDKInstance != null) {
             mWXSDKInstance.onActivityResume();
+            Log.v(TAG, "bright5#onResume");
         }
     }
 

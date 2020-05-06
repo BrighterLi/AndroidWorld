@@ -1,5 +1,4 @@
-/*
-package com.xiaoming.acrossendweex.weexcustomcomponent;
+package com.xiaoming.functionbaidumaker.weexmapview;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -11,7 +10,6 @@ import com.taobao.weex.dom.WXDomObject;
 import com.taobao.weex.ui.component.WXComponent;
 import com.taobao.weex.ui.component.WXComponentProp;
 import com.taobao.weex.ui.component.WXVContainer;
-import com.xiaoming.acrossendweex.R;
 import com.xiaoming.functionbaidumaker.custommapview.MyMapView;
 
 import org.json.JSONException;
@@ -20,29 +18,22 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-*/
-/**
- * Created by brightli on 2020.4.20.
- * 百度地图Weex组件
- *//*
-
-
 public class FQLWXMapComponent extends WXComponent<MyMapView> {
     MyMapView mapView;
     WXSDKInstance wxSdkInstance; //weex实例对象，用于获得上下文
 
     public FQLWXMapComponent(WXSDKInstance instance, WXDomObject dom, WXVContainer parent) {
         super(instance, dom, parent);
-        Log.d("FQLWXMapComponent","bright5#FQLWXMapComponent");
+        Log.d("FQLWXMapComponent", "bright5#FQLWXMapComponent");
         wxSdkInstance = instance;
     }
 
-    */
-/*public FQLWXMapComponent(WXSDKInstance instance, WXDomObject dom, WXVContainer parent, int type) {
+
+    /*public FQLWXMapComponent(WXSDKInstance instance, WXDomObject dom, WXVContainer parent, int type) {
         super(instance, dom, parent, type);
         Log.d("FQLWXMapComponent","bright5#FQLWXMapComponent2");
         wxSdkInstance = instance;
-    }*//*
+    }*/
 
 
     @Override
@@ -52,25 +43,25 @@ public class FQLWXMapComponent extends WXComponent<MyMapView> {
         //View view = LayoutInflater.from(context).inflate(R.layout.custom_map_view, null);
         //mapView = view.findViewById(R.id.custom_map);
 
-        */
-/*if (PermissionCheckUtil.checkLBS()) {
+
+       /*if (PermissionCheckUtil.checkLBS()) {
             Log.d("FQLWXMapComponent","bright5#FQLWXMapComponent#initComponentHostView#PermissionCheckUtil.checkLBS()");
-        }*//*
+        }*/
 
 
         //获取CustomMapView对象
         this.mapView = new MyMapView(context);
         Log.d("FQLWXMapComponent","bright5#FQLWXMapComponent#initComponentHostView");
-        */
-/*mapView.setMarkerClickListener(new CustomMapView.MarkerClickListener() {
+
+        mapView.setMarkerClickListener(new MyMapView.MarkerClickListener() {
             @Override
             public void onMarkerClick(String title) {
-                Log.d("FQLWXMapComponent","bright5#FQLWXMapComponent#onMarkerClick");
+                Log.d("FQLWXMapComponent", "bright5#FQLWXMapComponent#onMarkerClick");
                 Map inMap = new HashMap<>();
                 inMap.put("title", title);
-                fireEvent("pointAnnotationClick",inMap);
+                fireEvent("pointAnnotationClick", inMap);
             }
-        });*//*
+        });
 
         Log.d("FQLWXMapComponent","bright5#FQLWXMapComponent#mapView:" + mapView.toString());
         return this.mapView;
@@ -170,9 +161,8 @@ public class FQLWXMapComponent extends WXComponent<MyMapView> {
         }
     }
 
-    */
-/*//*
-/设置地图中心点
+
+//设置地图中心点
     @JSMethod(uiThread = true)
     public void setMapCenter(String json) {
         try {
@@ -184,7 +174,7 @@ public class FQLWXMapComponent extends WXComponent<MyMapView> {
             e.printStackTrace();
         }
     }
-*//*
+
 
     //获取定位
     @JSMethod
@@ -193,4 +183,3 @@ public class FQLWXMapComponent extends WXComponent<MyMapView> {
     }
 
 }
-*/

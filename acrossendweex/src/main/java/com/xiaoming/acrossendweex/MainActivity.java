@@ -49,8 +49,10 @@ public class MainActivity extends AppCompatActivity {
                 switch (position) {
                     case 0: //Android打开本地Weex页面
                         startActivity(new Intent(MainActivity.this, OpenWeexPageActivity.class));
+                        break;
                     case 1: //Android打开本地Weex页面
                         startActivity(new Intent(MainActivity.this, WeexComponentActivity.class));
+                        break;
                 }
             }
         });
