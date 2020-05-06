@@ -37,7 +37,7 @@ public class WeexComponentActivity extends AppCompatActivity implements IWXRende
 
     private void loadPage() {
         //WXSDKEngine初始化
-        if(!WXSDKEngine.isInitialized()) {
+        if (!WXSDKEngine.isInitialized()) {
             //WXSDKEngine未初始化，延时500ms执行
             mHandler.postDelayed(new Runnable() {
                 @Override
@@ -61,15 +61,16 @@ public class WeexComponentActivity extends AppCompatActivity implements IWXRende
          * height =-1 默认全屏，可以自己定制。
          */
         //加载本地weex页面。渲染页面，home.js就是weex打包好后给你的js文件
-        mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("wxmapcomponent.js", this), null, null, -1,-1, WXRenderStrategy.APPEND_ASYNC);
+        mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("wxmapcomponent.js", this), null, null, -1, -1, WXRenderStrategy.APPEND_ASYNC);
     }
 
     //创建View，这个view就是weex页面
     @Override
     public void onViewCreated(WXSDKInstance wxsdkInstance, View view) {
         //setContentView(view);
-        if(mWeexContainer != null) {
+        if (mWeexContainer != null) {
             mWeexContainer.addView(view);
+
         }
     }
 
@@ -94,7 +95,7 @@ public class WeexComponentActivity extends AppCompatActivity implements IWXRende
     @Override
     protected void onResume() {
         super.onResume();
-        if(mWXSDKInstance != null) {
+        if (mWXSDKInstance != null) {
             mWXSDKInstance.onActivityResume();
         }
     }
@@ -102,7 +103,7 @@ public class WeexComponentActivity extends AppCompatActivity implements IWXRende
     @Override
     protected void onPause() {
         super.onPause();
-        if(mWXSDKInstance != null) {
+        if (mWXSDKInstance != null) {
             mWXSDKInstance.onActivityPause();
         }
     }
@@ -110,7 +111,7 @@ public class WeexComponentActivity extends AppCompatActivity implements IWXRende
     @Override
     protected void onStop() {
         super.onStop();
-        if(mWXSDKInstance != null) {
+        if (mWXSDKInstance != null) {
             mWXSDKInstance.onActivityStop();
         }
     }
@@ -118,7 +119,7 @@ public class WeexComponentActivity extends AppCompatActivity implements IWXRende
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(mWXSDKInstance != null) {
+        if (mWXSDKInstance != null) {
             mWXSDKInstance.onActivityDestroy();
         }
     }

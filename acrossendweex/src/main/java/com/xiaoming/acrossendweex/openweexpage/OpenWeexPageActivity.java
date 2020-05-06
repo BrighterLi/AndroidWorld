@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 import com.taobao.weex.IWXRenderListener;
 import com.taobao.weex.WXSDKEngine;
@@ -34,6 +35,13 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
         mWXSDKInstance.registerRenderListener(this);
 
         loadPage();
+        getWindow().getDecorView().setBackgroundResource(R.drawable.activity_background);
+        View decorView = getWindow().getDecorView();
+        if (decorView instanceof FrameLayout) {
+            LinearLayout ll = (LinearLayout) ((FrameLayout) decorView).getChildAt(0);
+            FrameLayout content = (FrameLayout) ll.getChildAt(1);
+            content.getChildAt(0).setBackgroundResource(R.drawable.activity_background);
+        }
     }
 
     private void loadPage() {
@@ -72,12 +80,14 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
         if(mWeexContainer != null) {
             mWeexContainer.addView(view);
         }
+        view.setBackgroundResource(R.drawable.activity_background);
+        //mWeexContainer.setBackgroundColor(getColor(android.R.color.holo_purple));
     }
 
     //渲染成功
     @Override
     public void onRenderSuccess(WXSDKInstance wxsdkInstance, int i, int i1) {
-
+        mWeexContainer.setBackgroundResource(R.drawable.activity_background);
     }
 
     //刷新成功
