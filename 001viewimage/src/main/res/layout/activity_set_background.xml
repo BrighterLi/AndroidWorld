@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".SetBackgroundActivity">
 
-    <!-- android:background="#ffffff"-->
+    <!-- android:background="#ffffff" 设置成白色背景-->
+    <!--android:background="#00000000" 设置成透明-->
+    <!--android:background="@drawable/activity_background" 设置背景图片-->
 
     <TextView
         android:layout_width="match_parent"

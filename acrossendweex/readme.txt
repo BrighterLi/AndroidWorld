@@ -32,3 +32,6 @@ Bundle验证签名
    //加载本地资源
    mWXSDKInstance.render(template,template,options,jsonInitData,WXRenderStrategy.APPEND_ASYNC);}
    (2) Android弹出Weex弹窗
+
+自定义Component
+https://www.bookstack.cn/read/weex/guide-extend-android.md

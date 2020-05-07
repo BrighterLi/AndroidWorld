@@ -28,7 +28,7 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mContentView = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.activity_open_weex_page,null, false);
+        //mContentView = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.activity_open_weex_page,null, false);
         setContentView(R.layout.activity_open_weex_page);
 
         mWeexContainer = findViewById(R.id.weex_container);
@@ -38,11 +38,10 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
         //注册监听
         mWXSDKInstance.registerRenderListener(this);
 
-        mContentView.setBackgroundResource(R.drawable.activity_background);
+        //mContentView.setBackgroundResource(R.drawable.activity_background);
         loadPage();
-        mContentView.setBackgroundResource(R.drawable.activity_background);
+        //mContentView.setBackgroundResource(R.drawable.activity_background);
         getWindow().getDecorView().setBackgroundResource(R.drawable.activity_background);
-        //getWindow().getDecorView().setBackgroundResource(R.drawable.activity_background);
         View decorView = getWindow().getDecorView();
         if (decorView instanceof FrameLayout) {
             LinearLayout ll = (LinearLayout) ((FrameLayout) decorView).getChildAt(0);
@@ -77,7 +76,7 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
          * height =-1 默认全屏，可以自己定制。
          */
         //加载本地weex页面。渲染页面，home.js就是weex打包好后给你的js文件
-        mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("home.js", this), null, null, -1,-1, WXRenderStrategy.APPEND_ASYNC);
+        mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("HelloWorld3.js", this), null, null, -1,-1, WXRenderStrategy.APPEND_ASYNC);
     }
 
     //创建View，这个view就是weex页面
@@ -95,7 +94,7 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
     //渲染成功
     @Override
     public void onRenderSuccess(WXSDKInstance wxsdkInstance, int i, int i1) {
-        mWeexContainer.setBackgroundResource(R.drawable.activity_background);
+        //mWeexContainer.setBackgroundResource(R.drawable.activity_background);
     }
 
     //刷新成功
