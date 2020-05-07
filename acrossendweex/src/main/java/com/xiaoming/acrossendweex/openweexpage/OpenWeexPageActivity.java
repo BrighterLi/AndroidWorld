@@ -39,14 +39,19 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
         mWXSDKInstance.registerRenderListener(this);
 
         loadPage();
+        //不起作用,因为都被weex页面给遮挡住了
         //mContentView.setBackgroundResource(R.drawable.activity_background);
+
+        ////不起作用
         getWindow().getDecorView().setBackgroundResource(R.drawable.activity_background);
-        View decorView = getWindow().getDecorView();
+
+        //不起作用
+       /* View decorView = getWindow().getDecorView();
         if (decorView instanceof FrameLayout) {
             LinearLayout ll = (LinearLayout) ((FrameLayout) decorView).getChildAt(0);
             FrameLayout content = (FrameLayout) ll.getChildAt(1);
             content.getChildAt(0).setBackgroundResource(R.drawable.activity_background);
-        }
+        }*/
     }
 
     private void loadPage() {
@@ -84,9 +89,12 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
         //setContentView(view);
         if(mWeexContainer != null) {
             mWeexContainer.addView(view);
+            //不起作用
+            //view.setBackgroundColor(0xffff6830);
         }
+        //不起作用
         //view.setBackgroundResource(R.drawable.activity_background);
-        mWeexContainer.setBackgroundResource(R.drawable.activity_background);
+        //mWeexContainer.setBackgroundResource(R.drawable.activity_background);
         //mWeexContainer.setBackgroundColor(getColor(android.R.color.holo_purple));
     }
 
