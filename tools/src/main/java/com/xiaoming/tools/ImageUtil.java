@@ -1,4 +1,4 @@
-package com.fenqile.tools2;
+package com.xiaoming.tools;
 
 public class ImageUtil {
 }
