@@ -38,7 +38,6 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
         //注册监听
         mWXSDKInstance.registerRenderListener(this);
 
-        //mContentView.setBackgroundResource(R.drawable.activity_background);
         loadPage();
         //mContentView.setBackgroundResource(R.drawable.activity_background);
         getWindow().getDecorView().setBackgroundResource(R.drawable.activity_background);
@@ -86,7 +85,7 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
         if(mWeexContainer != null) {
             mWeexContainer.addView(view);
         }
-        view.setBackgroundResource(R.drawable.activity_background);
+        //view.setBackgroundResource(R.drawable.activity_background);
         mWeexContainer.setBackgroundResource(R.drawable.activity_background);
         //mWeexContainer.setBackgroundColor(getColor(android.R.color.holo_purple));
     }
@@ -94,7 +93,6 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
     //渲染成功
     @Override
     public void onRenderSuccess(WXSDKInstance wxsdkInstance, int i, int i1) {
-        //mWeexContainer.setBackgroundResource(R.drawable.activity_background);
     }
 
     //刷新成功
