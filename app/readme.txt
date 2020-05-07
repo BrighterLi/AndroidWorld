@@ -1,3 +1,7 @@
+gradle
+buildTypes {} 封装此项目的所有构建类型配置
+
+
 1 Widget控件— 自定义View—组合方式
 <1> 自定义标题栏 WidgetCustomTitleBar
 https://www.jb51.net/article/88663.htm
