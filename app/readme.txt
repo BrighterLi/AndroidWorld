@@ -1,5 +1,13 @@
 gradle
+Android Gradle新增buildtypes以及编译前执行自定义task:https://blog.csdn.net/u010849674/article/details/80680254
 buildTypes {} 封装此项目的所有构建类型配置
+添加buildTypes
+一般我们通过gradle构建的命令是(之后为了简化，只写windows的)：
+gradlew build               # windows
+打包命令是：
+gradlew assembleRelease
+
+
 
 
 1 Widget控件— 自定义View—组合方式
