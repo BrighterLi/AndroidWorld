@@ -8,6 +8,16 @@ gradlew build               # windows
 gradlew assembleRelease
 
 
+flutter开发
+Flutter学习小计：Android原生项目引入Flutter：https://www.jianshu.com/p/7b6522e3e8f1
+Android原生页面跳转Flutter页面
+基本思路就是将Flutter编写的页面嵌入到Activity中，官方提供了两种方式：通过FlutterView和FlutterFragment
+Flutter页面跳转Android原生页面
+在实现Flutter页面跳转Android原生页面之前首先介绍一下Platform Channel，它是Flutter和原生通信的工具，有三种类型：
+BasicMessageChannel：用于传递字符串和半结构化的信息，Flutter和平台端进行消息数据交换时候可以使用。
+MethodChannel：用于传递方法调用（method invocation），Flutter和平台端进行直接方法调用时候可以使用。
+EventChannel：用于数据流（event streams）的通信，Flutter和平台端进行事件监听、取消等可以使用。
+
 
 
 1 Widget控件— 自定义View—组合方式
