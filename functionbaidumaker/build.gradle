@@ -41,7 +41,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     //将前面添加在libs的jar文件集成到我们的工程中
     implementation files('libs/BaiduLBS_Android.jar')
-
     //fastjson
     implementation 'com.alibaba:fastjson:1.1.45'
     //weex_sdk

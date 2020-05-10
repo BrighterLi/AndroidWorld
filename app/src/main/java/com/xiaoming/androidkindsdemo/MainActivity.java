@@ -29,7 +29,9 @@ public class MainActivity extends AppCompatActivity implements View.
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_flutter:
-                startActivity(new Intent(MainActivity.this, CustomFlutterActivity.class));
+                Intent intent = new Intent(this, CustomFlutterActivity.class);
+                intent.putExtra("key", "home");
+                startActivity(intent);
                 break;
         }
     }
