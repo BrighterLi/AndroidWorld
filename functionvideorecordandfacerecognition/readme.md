@@ -15,4 +15,11 @@ js-api方式提供
 
 
 2 人脸识别
+Android SDK
+Face Detector
+https://www.cnblogs.com/mainroadlee/p/android_sdk_face_detection.html
 第三方sdk
+旷视；讯飞；
+虹软
+官网：http://www.arcsoft.com.cn/ai/arcface.html
+https://www.jianshu.com/p/75733cff88a3
