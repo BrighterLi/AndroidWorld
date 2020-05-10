@@ -23,9 +23,9 @@ public class CustomFlutterActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flutter);
 
-        //以FlutterFragment的方式
+        //以FlutterFragment的方式加载Flutter页面
         mEngineFlutterFragment = new CustomFlutterFragment.NewEngineFragmentBuilder(CustomFlutterFragment.class)
-                .renderMode(FlutterView.RenderMode.texture)
+                .renderMode(FlutterView.RenderMode.texture)  //渲染方式
                 .build();
 
         //MainActivity跳转过来Intent携带的参数
