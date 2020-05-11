@@ -3,9 +3,6 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <compositeConfiguration>
-          <compositeBuild compositeDefinitionSource="SCRIPT" />
-        </compositeConfiguration>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
@@ -35,6 +32,7 @@
             <option value="$PROJECT_DIR$/acrossendflutter" />
             <option value="$PROJECT_DIR$/acrossendwebview" />
             <option value="$PROJECT_DIR$/acrossendweex" />
+            <option value="$PROJECT_DIR$/acrosslibrary" />
             <option value="$PROJECT_DIR$/androidknowledgepoints" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/backendserver" />
@@ -98,7 +96,7 @@
             <option value="$PROJECT_DIR$/widgetviewpager" />
             <option value="$PROJECT_DIR$/widgetwheelview" />
             <option value="$PROJECT_DIR$/widigetimageview" />
-            <option value="E:/flutter_mix/.android/Flutter" />
+            <option value="$PROJECT_DIR$/../flutter_mix/.android/Flutter" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
