@@ -26,30 +26,30 @@ public class MyMapViewActivity extends AppCompatActivity {
         //mMyMapView.setHeight(500);
         //mMyMapView.setWidth(500);
         //mMyMapView.setArrayPoint(); //锚点
-        String str = "[{\"latitude\":\"39.963175\", \"longitude\":\"116.400244\", \"title\":\"1\"}]";
-        String str2 = "[\n" +
+        //String str = "[{\"latitude\":\"39.963175\", \"longitude\":\"116.400244\", \"title\":\"1\"}]";
+        String str = "[\n" +
                 "  {\n" +
-                "    \"latitude\": \"22.112\",\n" +
-                "    \"longitude\": \"113.224\",\n" +
+                "    \"latitude\": \"39.963175\",\n" +
+                "    \"longitude\": \"116.400224\",\n" +
                 "    \"title\": \"1\"\n" +
                 "  },\n" +
                 "  {\n" +
-                "    \"latitude\": \"39.963175\",\n" +
-                "    \"longitude\": \"116.400244\",\n" +
+                "    \"latitude\": \"39.947246\",\n" +
+                "    \"longitude\": \"120.414977\",\n" +
                 "    \"title\": \"22\"\n" +
                 "  },\n" +
                 "  {\n" +
-                "    \"latitude\": \"39.947246\",\n" +
-                "    \"longitude\": \"116.414977\",\n" +
+                "    \"latitude\": \"22.543569\",\n" +
+                "    \"longitude\": \"113.951433\",\n" +
                 "    \"title\": \"333\"\n" +
                 "  }\n" +
                 "]";
-        mMyMapView.setArrayPoint(str2); //锚点
+        mMyMapView.setArrayPoint(str); //锚点
         //mMyMapView.setZoom(4); //缩放级别
         //mMyMapView.setLatitude((float)29.806651); //用来设置默认中心点
         //mMyMapView.setLongitude((float)121.606983); //用来设置默认中心点
 
-        mMyMapView.addPointAnnotation((float)38.947246, (float)115.414977, "5"); //添加锚点
+        //mMyMapView.addPointAnnotation((float)38.947246, (float)115.414977, "5"); //添加锚点
 
         //Marker点击回调
         mMyMapView.setMarkerClickListener(new MyMapView.MarkerClickListener() {

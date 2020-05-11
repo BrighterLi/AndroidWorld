@@ -24,7 +24,10 @@ import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
+import com.baidu.mapapi.map.OverlayOptions;
+import com.baidu.mapapi.map.Polyline;
 import com.baidu.mapapi.model.LatLng;
+import com.baidu.mapapi.model.LatLngBounds;
 import com.xiaoming.functionbaidumaker.R;
 import com.xiaoming.functionbaidumaker.marker.MarkerActivity;
 
@@ -48,6 +51,7 @@ public class MyMapView extends LinearLayout{
     private float centerLongitude;
     private MarkerClickListener mMarkerClickListener;
     List<MarkerPointBean> pointList = new ArrayList<>();
+    private List<OverlayOptions> mListMarkerOptions = new ArrayList<>();
 
     public MyMapView(Context context) {
         super(context);
@@ -122,12 +126,11 @@ public class MyMapView extends LinearLayout{
         requestLayout();
     }
 
-    public void setArrayPoint() {
+    public void setArrayPoint2() {
         //marker自定义布局
         View markerView = LayoutInflater.from(getContext()).inflate(R.layout.layout_marker, null);
         TextView markerText = markerView.findViewById(R.id.tv_marker_text);
         ImageView markerImg = markerView.findViewById(R.id.img_marker);
-        //markerText.setText("自定义文本");
         //构建marker图标
         BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromView(markerView);
 
@@ -144,6 +147,52 @@ public class MyMapView extends LinearLayout{
         //在地图上添加Marker
         mMarker = ((Marker) mBaiduMap.addOverlay(mMarkerOptions));
         mBaiduMap.addOverlay(mMarkerOptions2);
+    }
+
+    public void setArrayPoint() {
+        //marker自定义布局
+        View markerView = LayoutInflater.from(getContext()).inflate(R.layout.layout_marker, null);
+        TextView markerText = markerView.findViewById(R.id.tv_marker_text);
+        ImageView markerImg = markerView.findViewById(R.id.img_marker);
+
+        if(pointList.size() > 0) {
+            for(int i = 0; i < pointList.size(); i++) {
+                if(pointList.get(i) == null) {
+                    continue;
+                }
+                markerText.setText(pointList.get(i).title);
+                //构建marker图标
+                BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromView(markerView);
+                //Marker图标
+                LatLng point = new LatLng(pointList.get(i).latitude, pointList.get(i).longitude);
+                //准备marker option加入marker使用
+                //使用了自定义的marker布局
+                MarkerOptions option =  new MarkerOptions().icon(bitmapDescriptor).position(point);
+                //mListMarkerOptions.add(option);
+                //在地图上添加Marker
+                Marker marker = ((Marker) mBaiduMap.addOverlay(option));
+                //在每个marker上保存一些信息，在点击时用
+                Bundle bundle = new Bundle();
+                bundle.putString("title", pointList.get(i).title);
+                marker.setExtraInfo(bundle);
+                //保存住对应的Marker对象
+                pointList.get(i).setMarker(marker);
+
+                // 实现Marker的点击事件
+                mBaiduMap.setOnMarkerClickListener(new BaiduMap.OnMarkerClickListener() {
+                    @Override
+                    public boolean onMarkerClick(Marker marker) {
+                        Bundle bundle = marker.getExtraInfo();
+                        String title = bundle.getString("title");
+                        if(mMarkerClickListener != null) {
+                            mMarkerClickListener.onMarkerClick(title);
+                        }
+
+                        return true;
+                    }
+                });
+            }
+        }
     }
 
     //使用json列表的输入形式
@@ -192,7 +241,26 @@ public class MyMapView extends LinearLayout{
                 marker.setExtraInfo(bundle);
                 //保存住对应的Marker对象
                 pointList.get(i).setMarker(marker);
+                //mListMarkerOptions.add(option);
             }
+            //showAllAnnotation();
+
+            Log.d(TAG, "bright#setArrayPoint#pointList.size():" + pointList.size());
+            List<LatLng> points = new ArrayList<>(3);
+            for(int i = 0;i < pointList.size();i++) {
+                Log.d(TAG, "bright#setArrayPoint#pointList.size()2:" + pointList.size());
+                Log.d(TAG, "bright#setArrayPoint#pointList.size()2:" + pointList.get(i).latitude + "l: " + pointList.get(i).longitude);
+                //points.add(new LatLng(Double.valueOf(pointList.get(i).latitude),Double.valueOf(points.get(i).longitude)));
+                //Log.d(TAG, "bright#setArrayPoint#pointList.size()3:" + pointList.size());
+            }
+            LatLngBounds.Builder builder = new LatLngBounds.Builder();
+            for (LatLng p : points) {
+                builder = builder.include(p);
+            }
+            LatLngBounds latLngBounds = builder.build();
+            MapStatusUpdate us = MapStatusUpdateFactory.newLatLngBounds(builder.build());
+            MapStatusUpdateFactory.newLatLngBounds(latLngBounds, mMapView.getWidth(), mMapView.getHeight());
+            mBaiduMap.animateMapStatus(us);
 
             //实现 Marker 的点击事件响应
             mBaiduMap.setOnMarkerClickListener(new BaiduMap.OnMarkerClickListener() {
@@ -269,9 +337,39 @@ public class MyMapView extends LinearLayout{
         setArrayPoint(null);
     }
 
-    //获取定位的经纬度
+    //获取定位的经纬度,暂未实现
     public void getUserLocation() {
         mBaiduMap.setMyLocationEnabled(true);
+    }
+
+    //该方法无法实现自适应显示所有的marker点
+    //屏幕内显示所有的marker
+    //https://blog.csdn.net/a1018875550/article/details/42365057
+    public void showAllAnnotation() {
+        final OverlayManager mOverlayManager = new OverlayManager(mBaiduMap){
+
+            @Override
+            public boolean onPolylineClick(Polyline polyline) {
+                return true;
+            }
+
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                /*Bundle bundle = marker.getExtraInfo();
+                String title = bundle.getString("title");
+                if(mMarkerClickListener != null) {
+                    mMarkerClickListener.onMarkerClick(title);
+                }*/
+                return true;
+            }
+
+            @Override
+            public List<OverlayOptions> getOverlayOptions() {
+                return mListMarkerOptions;
+            }
+        };
+        mOverlayManager.addToMap();
+        mOverlayManager.zoomToSpan();
     }
 
 }

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initView() {
         btnMaker = findViewById(R.id.btn_maker);
         btnCustomMapView = findViewById(R.id.btn_custom_map_view);
-        btnCustomMapView = findViewById(R.id.btn_wx_component_map_view);
+        btnWxComponentMapView = findViewById(R.id.btn_wx_component_map_view);
 
         btnMaker.setOnClickListener(this);
         btnCustomMapView.setOnClickListener(this);
