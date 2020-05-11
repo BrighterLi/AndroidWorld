@@ -26,6 +26,7 @@ import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.map.Polyline;
+import com.baidu.mapapi.map.PolylineOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.model.LatLngBounds;
 import com.xiaoming.functionbaidumaker.R;
@@ -245,23 +246,6 @@ public class MyMapView extends LinearLayout{
             }
             //showAllAnnotation();
 
-            Log.d(TAG, "bright#setArrayPoint#pointList.size():" + pointList.size());
-            List<LatLng> points = new ArrayList<>(3);
-            for(int i = 0;i < pointList.size();i++) {
-                Log.d(TAG, "bright#setArrayPoint#pointList.size()2:" + pointList.size());
-                Log.d(TAG, "bright#setArrayPoint#pointList.size()2:" + pointList.get(i).latitude + "l: " + pointList.get(i).longitude);
-                //points.add(new LatLng(Double.valueOf(pointList.get(i).latitude),Double.valueOf(points.get(i).longitude)));
-                //Log.d(TAG, "bright#setArrayPoint#pointList.size()3:" + pointList.size());
-            }
-            LatLngBounds.Builder builder = new LatLngBounds.Builder();
-            for (LatLng p : points) {
-                builder = builder.include(p);
-            }
-            LatLngBounds latLngBounds = builder.build();
-            MapStatusUpdate us = MapStatusUpdateFactory.newLatLngBounds(builder.build());
-            MapStatusUpdateFactory.newLatLngBounds(latLngBounds, mMapView.getWidth(), mMapView.getHeight());
-            mBaiduMap.animateMapStatus(us);
-
             //实现 Marker 的点击事件响应
             mBaiduMap.setOnMarkerClickListener(new BaiduMap.OnMarkerClickListener() {
                 @Override
@@ -276,6 +260,21 @@ public class MyMapView extends LinearLayout{
                 }
             });
         }
+
+        Log.d(TAG, "bright#setArrayPoint#pointList.size():" + pointList.size());
+        List<LatLng> points = new ArrayList<>();
+        for(int j = 0;j < pointList.size();j++) {
+            points.add(new LatLng(Double.valueOf(pointList.get(j).latitude),Double.valueOf(pointList.get(j).longitude)));
+        }
+        LatLngBounds.Builder builder = new LatLngBounds.Builder();
+        for (LatLng p : points) {
+            builder = builder.include(p);
+        }
+        LatLngBounds latLngBounds = builder.build();
+        MapStatusUpdate us = MapStatusUpdateFactory.newLatLngBounds(builder.build());
+        Log.d(TAG, "bright#setArrayPoint#mMapView.getWidth:" + mMapView.getLayoutParams().width + "  mMapView.getHeight;" + mMapView.getLayoutParams().height);
+        MapStatusUpdateFactory.newLatLngBounds(latLngBounds, 1920, 1080);
+        mBaiduMap.animateMapStatus(us);
     }
 
     //设置地图缩放级别
@@ -371,5 +370,123 @@ public class MyMapView extends LinearLayout{
         mOverlayManager.addToMap();
         mOverlayManager.zoomToSpan();
     }
+
+    //https://ask.csdn.net/questions/204414
+    //https://ask.csdn.net/questions/204363
+
+    //https://blog.csdn.net/zengchao2013/article/details/50456547?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase
+    //https://blog.csdn.net/lwx675652056/article/details/74326628?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase
+
+    public void showAnnotation() {
+
+        Log.d(TAG, "bright#setArrayPoint#pointList.size():" + pointList.size());
+        List<LatLng> points = new ArrayList<>();
+        for(int j = 0;j < pointList.size();j++) {
+            points.add(new LatLng(Double.valueOf(pointList.get(j).latitude),Double.valueOf(pointList.get(j).longitude)));
+        }
+        LatLngBounds.Builder builder = new LatLngBounds.Builder();
+        for (LatLng p : points) {
+            builder = builder.include(p);
+        }
+        LatLngBounds latLngBounds = builder.build();
+        MapStatusUpdate us = MapStatusUpdateFactory.newLatLngBounds(builder.build());
+        Log.d(TAG, "bright#setArrayPoint#mMapView.getWidth:" + mMapView.getLayoutParams().width + "  mMapView.getHeight;" + mMapView.getLayoutParams().height);
+        MapStatusUpdateFactory.newLatLngBounds(latLngBounds, 1920, 1080);
+        mBaiduMap.animateMapStatus(us);
+    }
+
+    public void showAnnotation3() {
+        mBaiduMap.setOnMapLoadedCallback(new BaiduMap.OnMapLoadedCallback() {
+            @Override
+            public void onMapLoaded() {
+                String json = "[\n" +
+                        "  {\n" +
+                        "    \"latitude\": \"39.963175\",\n" +
+                        "    \"longitude\": \"116.400224\",\n" +
+                        "    \"title\": \"1\"\n" +
+                        "  },\n" +
+                        "  {\n" +
+                        "    \"latitude\": \"39.947246\",\n" +
+                        "    \"longitude\": \"120.414977\",\n" +
+                        "    \"title\": \"22\"\n" +
+                        "  },\n" +
+                        "  {\n" +
+                        "    \"latitude\": \"22.543569\",\n" +
+                        "    \"longitude\": \"113.951433\",\n" +
+                        "    \"title\": \"333\"\n" +
+                        "  }\n" +
+                        "]";
+                //解析数据
+                try {
+                    JSONArray jsonArray = new JSONArray(json);
+                    if(jsonArray != null && jsonArray.length() > 0) {
+                        for(int i= 0; i < jsonArray.length(); i++) {
+                            JSONObject jsonObject = jsonArray.getJSONObject(i);
+                            MarkerPointBean bean = new MarkerPointBean();
+                            bean.latitude = (float) jsonObject.optDouble("latitude");
+                            bean.longitude = (float)jsonObject.optDouble("longitude");
+                            bean.title = jsonObject.optString("title");
+                            pointList.add(bean);
+                        }
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                Log.d(TAG, "bright#setArrayPoint#pointList.size():" + pointList.size());
+                List<LatLng> points = new ArrayList<>();
+                for(int j = 0;j < pointList.size();j++) {
+                    points.add(new LatLng(Double.valueOf(pointList.get(j).latitude),Double.valueOf(pointList.get(j).longitude)));
+                }
+                OverlayOptions ooPolyline = new PolylineOptions().width(10).
+                        color(0x00FFFFFF).points(points);
+                mBaiduMap.addOverlay(ooPolyline);
+                LatLngBounds.Builder builder = new LatLngBounds.Builder();
+                for (LatLng p : points) {
+                    builder = builder.include(p);
+                }
+                LatLngBounds latLngBounds = builder.build();
+                MapStatusUpdate us = MapStatusUpdateFactory.newLatLngBounds(builder.build());
+                Log.d(TAG, "bright#setArrayPoint#mMapView.getWidth:" + mMapView.getWidth() + "  mMapView.getHeight;" + mMapView.getHeight());
+                MapStatusUpdateFactory.newLatLngBounds(latLngBounds, mMapView.getWidth(), mMapView.getHeight());
+                //MapStatusUpdateFactory.newLatLngBounds(latLngBounds, 1920, 1080);
+                mBaiduMap.animateMapStatus(us);
+            }
+        });
+    }
+
+   public void showAnnotation2() {
+        mBaiduMap.setOnMapLoadedCallback(new BaiduMap.OnMapLoadedCallback() {
+            @Override
+            public void onMapLoaded() {
+                // 路线
+                LatLng p1 = new LatLng(31.209933, 121.608515);
+                LatLng p2 = new LatLng(30.905841, 121.927665);
+                LatLng p3 = new LatLng(31.049502, 121.432088);
+                LatLng p4 = new LatLng(31.160318, 121.434962);
+                LatLng p5 = new LatLng(34.283806, 117.198051);
+                LatLng p6 = new LatLng(29.545097, 106.568581);
+                LatLng p7 = new LatLng(34.358342, 108.922285);
+                List<LatLng> points = new ArrayList<LatLng>();
+                points.add(p1);
+                points.add(p2);
+                points.add(p3);
+                points.add(p4);
+                points.add(p5);
+                points.add(p6);
+                points.add(p7);
+                OverlayOptions ooPolyline = new PolylineOptions().width(10)
+                        .color(0xAAFF0000).points(points);
+                mBaiduMap.addOverlay(ooPolyline);
+                LatLngBounds.Builder builder = new LatLngBounds.Builder();
+                for (LatLng p : points) {
+                    builder = builder.include(p);
+                }
+                LatLngBounds latlngBounds = builder.build();
+                MapStatusUpdate u = MapStatusUpdateFactory.newLatLngBounds(latlngBounds,mMapView.getWidth(),mMapView.getHeight());
+                mBaiduMap.animateMapStatus(u);
+            }
+        });
+   }
 
 }

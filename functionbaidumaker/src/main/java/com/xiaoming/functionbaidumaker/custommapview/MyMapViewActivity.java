@@ -44,7 +44,9 @@ public class MyMapViewActivity extends AppCompatActivity {
                 "    \"title\": \"333\"\n" +
                 "  }\n" +
                 "]";
-        mMyMapView.setArrayPoint(str); //锚点
+        //mMyMapView.setArrayPoint(str); //锚点
+
+        mMyMapView.showAnnotation3();
         //mMyMapView.setZoom(4); //缩放级别
         //mMyMapView.setLatitude((float)29.806651); //用来设置默认中心点
         //mMyMapView.setLongitude((float)121.606983); //用来设置默认中心点
