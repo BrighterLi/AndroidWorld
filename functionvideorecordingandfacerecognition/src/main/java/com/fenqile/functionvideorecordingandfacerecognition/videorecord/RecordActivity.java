@@ -30,14 +30,14 @@ public class RecordActivity extends AppCompatActivity implements SurfaceHolder.C
     private Button mBtnPlay;
     private ImageView mImageView;
     private TextView mTextView;
-    private MediaRecorder mMediaRecorder;
-    private SurfaceHolder mSurfaceHolder;
+    private MediaRecorder mMediaRecorder; //视频录像功能类
+    private SurfaceHolder mSurfaceHolder; //作用就像一个关于Surface的监听器，提供访问和控制SurfaceView背后的Surface 相关的方法
     private Camera mCamera;
     private boolean mStartedFlg = false; //是否正在录像
     private boolean mIsPlay = false; //是否正在播放录像
     private String mPath;
     private int mText = 0;
-    private MediaPlayer mMediaPlayer;
+    private MediaPlayer mMediaPlayer; //视频播放功能类
 
 
     @Override
@@ -51,6 +51,7 @@ public class RecordActivity extends AppCompatActivity implements SurfaceHolder.C
     }
 
     private android.os.Handler handler = new android.os.Handler();
+    //计时任务
     private Runnable runnable = new Runnable() {
         @Override
         public void run() {
@@ -71,25 +72,29 @@ public class RecordActivity extends AppCompatActivity implements SurfaceHolder.C
         mBtnStartStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //如果正在播放视频
                 if(mIsPlay) {
                     if(mMediaPlayer != null) {
                         mIsPlay = false;
+                        //停止录制视频
                         mMediaPlayer.stop();
                         mMediaPlayer.reset();
                         mMediaPlayer.release();
                         mMediaPlayer = null;
                     }
                 }
+                //如果不是正在录制视频，则开始录制
                 if(!mStartedFlg) {
-                    handler.postDelayed(runnable, 1000);
+                    handler.postDelayed(runnable, 1000); //开始计时
                     mImageView.setVisibility(View.GONE);
                     if(mMediaRecorder == null) {
                         mMediaRecorder = new MediaRecorder();
                     }
 
-                    mCamera = Camera.open(Camera.CameraInfo.CAMERA_FACING_BACK);
+                    //打开摄像头
+                    mCamera = Camera.open(Camera.CameraInfo.CAMERA_FACING_FRONT); //前置摄像头
                     if(mCamera != null) {
-                        mCamera.setDisplayOrientation(90);
+                        mCamera.setDisplayOrientation(90);//摄像头角度
                         mCamera.unlock();
                         mMediaRecorder.setCamera(mCamera);
                     }
@@ -106,24 +111,30 @@ public class RecordActivity extends AppCompatActivity implements SurfaceHolder.C
                         mMediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
                         mMediaRecorder.setVideoEncoder(MediaRecorder.VideoEncoder.MPEG_4_SP);
 
-                        mMediaRecorder.setVideoSize(640, 480);
+                        mMediaRecorder.setVideoSize(640, 480); //?
                         mMediaRecorder.setVideoFrameRate(30);
                         mMediaRecorder.setVideoEncodingBitRate(3 * 1024 * 1024);
                         mMediaRecorder.setOrientationHint(90);
 
                         //设置记录会话的最大持续时间(毫秒)
-                        mMediaRecorder.setMaxDuration(30 * 1000);
+                        mMediaRecorder.setMaxDuration(60 * 1000);
                         mMediaRecorder.setPreviewDisplay(mSurfaceHolder.getSurface());
 
+                        //视频存储的路径
                         mPath = getSDPath();
                         if(mPath != null) {
+                            //创建文件
                             File dir = new File(mPath + "/recordvideo");
                             if(!dir.exists()) {
                                 dir.mkdir();
                             }
-                            mPath = dir + "/" + getData() + ".mp4";
+                            mPath = dir + "/" + getData() + ".mp4"; // mPath: /storage/emulated/0/recordvideo/录制时间.mp4
+                            Log.d(TAG, "bright#initView#mPath: " + mPath);
+                            //如何上传到服务器？
+                            //把视频放到本地sd card的mPath路径的文件
                             mMediaRecorder.setOutputFile(mPath);
                             mMediaRecorder.prepare();
+                            //开始录屏
                             mMediaRecorder.start();
                             mStartedFlg = true;
                             mBtnStartStop.setText("Stop");
@@ -134,10 +145,10 @@ public class RecordActivity extends AppCompatActivity implements SurfaceHolder.C
                         e.printStackTrace();
                     }
                 } else {
-                    //stop
+                    //如果正在录制视频,则停止录制
                     if(mStartedFlg) {
                         try {
-                            handler.removeCallbacks(runnable);
+                            handler.removeCallbacks(runnable); //停止计时
                             mMediaRecorder.stop();
                             mMediaRecorder.reset();
                             mMediaRecorder.release();
@@ -156,6 +167,7 @@ public class RecordActivity extends AppCompatActivity implements SurfaceHolder.C
             }
         });
 
+        //视频播放
         mBtnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -165,16 +177,17 @@ public class RecordActivity extends AppCompatActivity implements SurfaceHolder.C
                     mMediaPlayer = new MediaPlayer();
                 }
                 mMediaPlayer.reset();
-                Uri uri = Uri.parse(mPath);
+                Uri uri = Uri.parse(mPath); //通过文件的路径String转化成Uri
                 mMediaPlayer = MediaPlayer.create(RecordActivity.this, uri);
                 mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-                mMediaPlayer.setDisplay(mSurfaceHolder);
+                mMediaPlayer.setDisplay(mSurfaceHolder); //视频播放？
 
                 try {
                     mMediaPlayer.prepare();
-                } catch (IOException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
+                //视频播放
                 mMediaPlayer.start();
             }
         });
@@ -217,10 +230,11 @@ public class RecordActivity extends AppCompatActivity implements SurfaceHolder.C
     public String getSDPath() {
         File sdDir = null;
         //获取sd卡是否存在
-        boolean sdCardExist = Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
+        boolean sdCardExist = Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED); //sdcard
         if(sdCardExist) {
             //获取根目录
-            sdDir = Environment.getExternalStorageDirectory();
+            sdDir = Environment.getExternalStorageDirectory(); //sdDir: /storage/emulated/0
+            Log.d(TAG, "bright#sdDir:" + sdDir.toString());
             return sdDir.toString();
         }
         return null;
