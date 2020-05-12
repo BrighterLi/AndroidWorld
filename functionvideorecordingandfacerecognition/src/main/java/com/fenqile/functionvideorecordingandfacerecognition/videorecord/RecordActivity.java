@@ -1,13 +1,13 @@
-package com.xiaoming.functionvideorecordandfacerecognition.videorecord;
+package com.fenqile.functionvideorecordingandfacerecognition.videorecord;
 
 import android.hardware.Camera;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.net.Uri;
-import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -17,11 +17,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.xiaoming.functionvideorecordandfacerecognition.R;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Calendar;
+import com.fenqile.functionvideorecordingandfacerecognition.R;
 
 //https://blog.csdn.net/woshizisezise/article/details/51878566
 public class RecordActivity extends AppCompatActivity implements SurfaceHolder.Callback{
@@ -195,8 +194,8 @@ public class RecordActivity extends AppCompatActivity implements SurfaceHolder.C
     }
 
     /**
-    * 获取系统时间
-    */
+     * 获取系统时间
+     */
     public static String getData() {
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
@@ -212,9 +211,9 @@ public class RecordActivity extends AppCompatActivity implements SurfaceHolder.C
     }
 
     /**
-    * 获取SD path
-    *
-    * */
+     * 获取SD path
+     *
+     * */
     public String getSDPath() {
         File sdDir = null;
         //获取sd卡是否存在
