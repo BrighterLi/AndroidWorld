@@ -19,7 +19,12 @@ Android SDK
 Face Detector
 https://www.cnblogs.com/mainroadlee/p/android_sdk_face_detection.html
 第三方sdk
-旷视；讯飞；
+旷视；讯飞；OpenCV；nncn;Face++；百度；阿里；
 虹软
 官网：http://www.arcsoft.com.cn/ai/arcface.html
 https://www.jianshu.com/p/75733cff88a3
+
+功能实现点
+(1) 人脸识别自定义框
+(2) 判断人脸是否在录像框内？
+(3) 判断是否是真人/活体检测
