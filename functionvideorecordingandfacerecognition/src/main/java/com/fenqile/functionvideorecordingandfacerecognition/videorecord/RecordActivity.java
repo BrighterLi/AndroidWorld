@@ -21,11 +21,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Calendar;
 import com.fenqile.functionvideorecordingandfacerecognition.R;
+import com.fenqile.functionvideorecordingandfacerecognition.videorecord.view.CustomSurfaceView;
 
 //https://blog.csdn.net/woshizisezise/article/details/51878566
 public class RecordActivity extends AppCompatActivity implements SurfaceHolder.Callback{
     private static final String TAG = "RecordActivity";
-    private SurfaceView mSurfaceView;
+    private CustomSurfaceView mSurfaceView;
     private Button mBtnStartStop;
     private Button mBtnPlay;
     private ImageView mImageView;
