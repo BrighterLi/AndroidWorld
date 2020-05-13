@@ -1,3 +1,5 @@
+人脸检测、人脸追踪、人脸识别、年龄识别、性别识别
+Android集成虹软人脸、人证对比，活体检测:https://www.jianshu.com/p/8dee89ec4a24
 1 录制视频
 (1) 功能点
 ui
@@ -14,11 +16,12 @@ js-api方式提供
 第二种方法就是利用安卓自带的MediaRecorder来录制视频，并制定视频保存路径，并且可以通过Camera来播放录制的视频。
 
 
-2 人脸识别
+2 人脸检测
 Android SDK
 Face Detector
 https://www.cnblogs.com/mainroadlee/p/android_sdk_face_detection.html
 第三方sdk
+Face++，百度，阿里这些需要用HTTP进行网络请求返回结果，OpenCV、虹软可以本地检测
 旷视；讯飞；OpenCV；nncn;Face++；百度；阿里；虹软；
 虹软：
 官网：http://www.arcsoft.com.cn/ai/arcface.html
@@ -34,3 +37,6 @@ Android多种方式实现相机圆形预览的示例代码:https://www.jb51.net/
 android 圆形人脸识别框:https://blog.csdn.net/baidu_35824246/article/details/83420579
 (2) 判断人脸是否在圆形录屏框内，不在圆形框内则提醒用户
 (3) 判断是否是真人/活体检测
+
+3 人脸识别
+活体动态人脸识别Demo:https://pan.baidu.com/s/1i5oXoJ7?errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=#list/path=%2F&parentPath=%2Fsharelink2684872685-1049510151020102
