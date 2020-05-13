@@ -268,6 +268,12 @@ public class MyMapView extends LinearLayout{
         mBaiduMap.animateMapStatus(update);
     }
 
+    // 获取地图缩放比例
+    public float getMapZoom() {
+        float zoom = mBaiduMap.getMapStatus().zoom;
+        return zoom;
+    }
+
     // 经度，用来设置中心点
     public void setLatitude(float latitude) {
         centerLatitude = latitude;
@@ -479,8 +485,10 @@ public class MyMapView extends LinearLayout{
                 MapStatusUpdate us = MapStatusUpdateFactory.newLatLngBounds(builder.build());
                 Log.d(TAG, "bright#setArrayPoint#mMapView.getWidth:" + mMapView.getWidth() + "  mMapView.getHeight;" + mMapView.getHeight());
                 MapStatusUpdateFactory.newLatLngBounds(latLngBounds, mMapView.getWidth(), mMapView.getHeight());
-                //MapStatusUpdateFactory.newLatLngBounds(latLngBounds, 1920, 1080);
                 mBaiduMap.animateMapStatus(us);
+                //由于发现有些marker点会超出屏幕边缘一点点，所以在当前的zoom级别情况下减少一个级别，让所有的点都能显示在屏幕
+                float newZoom = getMapZoom();
+                setZoom(newZoom - 1);
             }
         });
     }

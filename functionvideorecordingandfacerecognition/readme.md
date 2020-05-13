@@ -19,16 +19,18 @@ Android SDK
 Face Detector
 https://www.cnblogs.com/mainroadlee/p/android_sdk_face_detection.html
 第三方sdk
-旷视；讯飞；OpenCV；nncn;Face++；百度；阿里；
-虹软
+旷视；讯飞；OpenCV；nncn;Face++；百度；阿里；虹软；
+虹软：
 官网：http://www.arcsoft.com.cn/ai/arcface.html
 https://www.jianshu.com/p/75733cff88a3
+百度：
+Android打造圆形相机并实现人脸识别（三）：https://blog.csdn.net/CarsonWoo/article/details/105393590?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-9
 
 功能实现点
-(1) 人脸识别自定义圆形框
+(1) 录屏自定义圆形框
 绘制圆形surfaceview，解决预览框的畸变问题：
 https://blog.csdn.net/qunqunstyle99/article/details/80864214?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-8.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-8.nonecase
 Android多种方式实现相机圆形预览的示例代码:https://www.jb51.net/article/167750.htm
 android 圆形人脸识别框:https://blog.csdn.net/baidu_35824246/article/details/83420579
-(2) 判断人脸是否在录像框内？
+(2) 判断人脸是否在圆形录屏框内，不在圆形框内则提醒用户
 (3) 判断是否是真人/活体检测
