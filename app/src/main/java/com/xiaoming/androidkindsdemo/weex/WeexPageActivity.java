@@ -6,7 +6,7 @@ import android.os.Bundle;
 import com.xiaoming.androidkindsdemo.R;
 import com.xiaoming.androidkindsdemo.base.BaseActivity;
 
-public class WXPageActivity extends BaseActivity {
+public class WeexPageActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
