@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".jnidemo1.JNITools$JniActivity" />
+        <activity android:name=".jnidemo2.Jni2Activity" />
+        <activity android:name=".jnidemo.JniActivity"></activity>
     </application>
 
 </manifest>

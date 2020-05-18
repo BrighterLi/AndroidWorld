@@ -63,7 +63,6 @@ public class CustomSurfaceView extends SurfaceView {
         Log.v(TAG, "bright#onMeasure#widthMeasureSpec=" + screenWidth + " heightMeasureSpec= " + screenHeight);
         //绘制的输入参数必须是整数型，做浮点型运算后为float型数据，故需要做取整操作
         //存储测量得到的宽度和高度
-        Cust
     }
 
     //负责把当前这个View绘制出来
