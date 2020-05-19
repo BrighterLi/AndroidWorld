@@ -2,7 +2,7 @@ package com.fenqile.androidknowledgepoints.jnidemo;
 
 public class JNITools {
     static {
-        System.loadLibrary("androidknowledgepoints");
+        System.loadLibrary("androidknowledgepoints");//与Android.mk文件中设置的一致，不需要手动添加前缀
     }
 
     //加法

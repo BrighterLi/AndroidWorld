@@ -38,8 +38,8 @@ JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved){
     };
 
     //找到对应的JNITools类
-    jclass jClassName=(*env)->FindClass(env,"com/gebilaolitou/jni/JNITools");
-
+    //jclass jClassName=(*env)->FindClass(env,"com/gebilaolitou/jni/JNITools");
+    jclass jClassName=(*env)->FindClass(env,"com/fenqile/androidknowledgepoints/jnidemo/JNITools");
     //开始注册
     jint ret = (*env)->RegisterNatives(env,jClassName,method, 4);
 

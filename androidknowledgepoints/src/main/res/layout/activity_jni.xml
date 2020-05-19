@@ -67,12 +67,12 @@
         android:text="相除"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="计算结果"/>
-    </LinearLayout>
 
 </LinearLayout>

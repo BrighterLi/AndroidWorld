@@ -9,10 +9,6 @@ import android.widget.TextView;
 
 import com.fenqile.androidknowledgepoints.R;
 
-import static com.fenqile.androidknowledgepoints.jnidemo.JNITools.add;
-import static com.fenqile.androidknowledgepoints.jnidemo.JNITools.div;
-import static com.fenqile.androidknowledgepoints.jnidemo.JNITools.mul;
-import static com.fenqile.androidknowledgepoints.jnidemo.JNITools.sub;
 
 //Android JNI学习——Demo演示:https://www.jianshu.com/p/0f34c097028a
 public class JniActivity extends AppCompatActivity implements View.OnClickListener{
@@ -57,16 +53,16 @@ public class JniActivity extends AppCompatActivity implements View.OnClickListen
         int b = Integer.parseInt(strB);
         switch (view.getId()) {
             case R.id.add:
-                result = add(a, b);
+                result = JNITools.add(a, b);
                 break;
             case R.id.sub:
-                result = sub(a, b);
+                result = JNITools.sub(a, b);
                 break;
             case R.id.mul:
-                result = mul(a, b);
+                result = JNITools.mul(a, b);
                 break;
             case R.id.div:
-                result = div(a, b);
+                result = JNITools.div(a, b);
                 break;
         }
         tvResult.setText("" + result);
