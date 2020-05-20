@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".vivodetection.DetectionActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+    <Button
+        android:id="@+id/btn_start_detect"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#004AF1"
+        android:textColor="#ffffffff"
+        android:text="开始检测"/>
+
+    <Button
+        android:id="@+id/btn_stop_detect"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#004AF1"
+        android:textColor="#ffffffff"
+        android:text="暂止检测"/>
+   </LinearLayout>
+
+    <SurfaceView
+        android:id="@+id/surface_view_detect"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_detect_time"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="检测时间"/>
+        <TextView
+            android:id="@+id/tv_action_state"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="动作状态"/>
+        <TextView
+            android:id="@+id/tv_vivo_state"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="活体状态"/>
+
+    </LinearLayout>
+     <TextView
+        android:id="@+id/tv_action_tips"
+         android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请按照提示操作"/>
+
+</LinearLayout>

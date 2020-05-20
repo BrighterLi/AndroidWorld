@@ -27,7 +27,9 @@
         <activity android:name=".arcface.ArcFaceActivity" />
         <activity android:name=".videorecord.RecordActivity" />
         <activity android:name=".videorecord2.RecordActivity2" />
-        <activity android:name=".arcface.VivoDetectionActivity"></activity>
+        <activity android:name=".arcface.VivoDetectionActivity" />
+        <activity android:name=".vivodetection.VivoDetectActivity" />
+        <activity android:name=".vivodetection.DetectionActivity"></activity>
     </application>
 
 </manifest>

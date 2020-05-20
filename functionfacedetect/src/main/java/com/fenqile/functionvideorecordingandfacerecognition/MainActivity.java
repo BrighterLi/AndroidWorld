@@ -7,11 +7,12 @@ import android.view.View;
 import android.widget.Button;
 
 import com.fenqile.functionvideorecordingandfacerecognition.videorecord.RecordActivity;
+import com.fenqile.functionvideorecordingandfacerecognition.vivodetection.VivoDetectActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private Button mBtnRecordVideo;
-    private Button mBtnFaceRecognition;
+    private Button mBtnVivoDetect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +24,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initView() {
         mBtnRecordVideo = findViewById(R.id.btn_record_video);
-        mBtnFaceRecognition = findViewById(R.id.btn_face_recognition);
+        mBtnVivoDetect = findViewById(R.id.btn_vivo_detect);
 
         mBtnRecordVideo.setOnClickListener(this);
-        mBtnFaceRecognition.setOnClickListener(this);
+        mBtnVivoDetect.setOnClickListener(this);
     }
 
     @Override
@@ -34,6 +35,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn_record_video:
                 startActivity(new Intent(MainActivity.this, RecordActivity.class));
+                break;
+            case R.id.btn_vivo_detect:
+                startActivity(new Intent(MainActivity.this, VivoDetectActivity.class));
                 break;
         }
     }
