@@ -50,6 +50,21 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
         initView();
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if(mCamera != null) {
+            mCamera.setPreviewCallback(null);
+            mCamera.stopPreview();
+            mCamera.release();
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
     private void initView() {
         mBtnStartDetect = findViewById(R.id.btn_start_detect);
         mBtnStopDetect = findViewById(R.id.btn_stop_detect);
@@ -88,7 +103,20 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
 
     @Override
     public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i1, int i2) {
+        if(surfaceHolder.getSurface() == null) {
+            return;
+        }
 
+        mCamera.stopPreview();
+
+        try {
+            mCamera.setPreviewCallback(this);
+            mCamera.setPreviewDisplay(surfaceHolder);
+            mCamera.startPreview();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Log.d(TAG, "bright#Error starting camera preview: " + e.getMessage());
+        }
     }
 
     @Override
@@ -96,9 +124,39 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
 
     }
 
+    //Camera.PreviewCallback回调
     @Override
     public void onPreviewFrame(byte[] bytes, Camera camera) {
+        long currentTime = System.currentTimeMillis();
+        final Camera.Size previewSize = mCamera.getParameters().getPreviewSize();
 
+        //获取活体检测的结果
+        int state = 0;
+        //int state = mLiveDetection
+        long diff = System.currentTimeMillis() - currentTime;
+        mTvDetectTime.setText("检测时间:" + String.valueOf(diff));
+        if(state % 10 == 0) {
+            mTvVivoState.setText("活体状态：假脸");
+        } else {
+            mTvVivoState.setText("活体状态：真脸");
+        }
+
+        if(state / 10 == 6) {
+            mTvActionState.setText("动作状态：不能检测到人脸");
+        } else if (state / 10 == 0) {
+            mTvActionState.setText("动作状态：正常");
+        } else if (state / 10 == 1) {
+            mTvActionState.setText("动作状态：摇头");
+        } else if (state / 10 == 2) {
+            mTvActionState.setText("动作状态：抬头");
+        } else if (state / 10 == 3) {
+            mTvActionState.setText("动作状态：低头");
+        } else if (state / 10 == 4) {
+            mTvActionState.setText("动作状态：闭眼");
+        } else if (state / 10 == 5) {
+            mTvActionState.setText("动作状态：张嘴");
+        }
+        Log.d(TAG, "bright#state:" + state);
     }
 
     //判断权限是否开启
