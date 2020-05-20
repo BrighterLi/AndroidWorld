@@ -6,6 +6,7 @@ import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,7 +38,6 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
     private Camera.Parameters mCameraParas;
 
     private Camera mCamera;
-    private SurfaceView mCameraSurface = null;
     private int mCameraWidth = 480;
     private int mCameraHeight = 270;
 
@@ -74,11 +74,16 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
                 mCamera.setPreviewCallback(null);
             }
         });
+
+        //SurfaceView添加回调
+        mSurfaceViewDetect.getHolder().addCallback(this);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
-        callCamera(mCameraSurface.getHolder());
+        Log.d(TAG, "bright#surfaceCreated");
+        callCamera(mSurfaceViewDetect.getHolder());
     }
 
     @Override
@@ -122,7 +127,7 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
         switch (requestCode) {
             case 1:
                 if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    initCamera(mCameraSurface.getHolder());
+                    initCamera(mSurfaceViewDetect.getHolder());
                 } else {
                     Toast.makeText(this, "you refused the camera function", Toast.LENGTH_SHORT).show();
                 }
@@ -158,7 +163,7 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
         mCameraParas.setPreviewSize(mCameraWidth, mCameraHeight);
         try {
             //把摄像头获得画面显示在SurfaceView控件里面
-            mCamera.setPreviewDisplay(mCameraSurface.getHolder());
+            mCamera.setPreviewDisplay(mSurfaceViewDetect.getHolder());
         } catch (IOException e) {
             e.printStackTrace();
         }
