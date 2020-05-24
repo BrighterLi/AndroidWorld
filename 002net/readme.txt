@@ -8,3 +8,10 @@ Apache:HttpClient;Java:HttpURLConnection
  (1)掉登录态/没登录态：未登录/账号掉了/账号退出了/没有获取到登录状态
  (2)实现登录态的几种方式
   https://www.jianshu.com/p/f91fb5bd75b0
+
+
+2 dns
+域名解析
+Android解析域名获取IP：https://blog.csdn.net/u013072976/article/details/79074687
+域名拦截
+Android Okhttp拦截器(修改baseurl)：https://www.csdn.net/gather_2a/MtTakgwsNTE0Ny1ibG9n.html
