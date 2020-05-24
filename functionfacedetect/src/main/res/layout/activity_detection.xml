@@ -30,11 +30,25 @@
         android:text="暂止检测"/>
    </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <SurfaceView
         android:id="@+id/surface_view_detect"
         android:layout_gravity="center"
         android:layout_width="300dp"
         android:layout_height="300dp" />
+     <com.fenqile.functionvideorecordingandfacerecognition.vivodetection.FaceMask
+         android:id="@+id/face_mask"
+         android:layout_gravity="center"
+         android:layout_width="300dp"
+         android:layout_height="300dp"
+         android:layout_alignParentTop="@+id/surface_view_detect"
+         android:layout_marginTop="-5dp"
+         android:layout_marginBottom="-3dp"
+         android:background="@drawable/face_mask"/>
+
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

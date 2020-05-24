@@ -31,11 +31,12 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
     private Button mBtnStartDetect;
     private Button mBtnStopDetect;
     private SurfaceView mSurfaceViewDetect;
-    private TextView mTvDetectTime;
-    private TextView mTvActionState;
-    private TextView mTvVivoState;
-    private TextView mTvActionTips;
+    public TextView mTvDetectTime;
+    public TextView mTvActionState;
+    public TextView mTvVivoState;
+    public static TextView mTvActionTips;
     private Camera.Parameters mCameraParas;
+    private VivoDetection mVivoDetection;
 
     private Camera mCamera;
     private int mCameraWidth = 480;
@@ -131,8 +132,7 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
         final Camera.Size previewSize = mCamera.getParameters().getPreviewSize();
 
         //获取活体检测的结果
-        int state = 0;
-        //int state = mLiveDetection
+        int state = mVivoDetection.aliveDetection(bytes, previewSize.height, previewSize.width);
         long diff = System.currentTimeMillis() - currentTime;
         mTvDetectTime.setText("检测时间:" + String.valueOf(diff));
         if(state % 10 == 0) {
