@@ -224,7 +224,11 @@ public class NetDetectActivity extends AppCompatActivity {
     }
     //UID
     //操作系统
-    //域名解析
 
+    //域名解析
+    //https://blog.csdn.net/u013072976/article/details/79074687
+    private String[] getIPAddressFromDomainName() {
+        return null;
+    }
     //ping
 }
