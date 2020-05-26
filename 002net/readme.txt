@@ -11,6 +11,9 @@ Apache:HttpClient;Java:HttpURLConnection
 
 
 2 dns
+获取dns
+获取公网出口IP
+Android 获取外网IP地址：https://www.jianshu.com/p/1e3eaf887191
 域名解析
 Android解析域名获取IP：https://blog.csdn.net/u013072976/article/details/79074687
 域名拦截
