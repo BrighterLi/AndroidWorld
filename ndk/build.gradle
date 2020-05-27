@@ -14,13 +14,11 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        //配置cmake build参数
         externalNativeBuild {
             cmake {
-                cppFlags "-std=c++11 -frtti -fexceptions"
-//                abiFilters  'armeabi', 'armeabi-v7a', 'arm64-v8a'
-                abiFilters  'armeabi-v7a'
-
-
+                arguments "-DANDROID_TOOLCHAIN=clang"
+                abiFilters "armeabi-v7a", "armeabi","x86"
             }
         }
     }
@@ -32,14 +30,14 @@ android {
         }
     }
 
+    //cmake构建的配置文件
     externalNativeBuild {
         cmake {
-//            path "CMakeLists.txt"
+            path "CMakeLists.txt"
             //version '3.10.2'  //add
-            path 'src/main/cpp/CMakeLists.txt'
+            //path 'src/main/cpp/CMakeLists.txt'
         }
     }
-
 }
 
 dependencies {
