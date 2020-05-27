@@ -7,6 +7,11 @@
     android:orientation="vertical"
     tools:context=".NetDetectActivity">
 
+    <EditText
+        android:id="@+id/et_domain_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="www.baidu.com"/>
     <Button
         android:id="@+id/bt_net_detect"
         android:layout_width="match_parent"

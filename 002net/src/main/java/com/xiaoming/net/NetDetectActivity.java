@@ -5,9 +5,11 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import org.json.JSONObject;
@@ -17,9 +19,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.net.UnknownHostException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -28,15 +32,11 @@ import java.util.regex.Pattern;
 public class NetDetectActivity extends AppCompatActivity {
     private static final String TAG = "NetDetectActivity";
     private Button mBtnNetDetect;
-    private TextView mTvDnsAddress;
-    private String outIp2;
-    private StringBuilder netInfoStrBuilder = new StringBuilder();
-
-    private String[] platforms = {
-            "http://pv.sohu.com/cityjson",
-            "http://pv.sohu.com/cityjson?ie=utf-8",
-            "http://ip.chinaz.com/getip.aspx"
-    };
+    private TextView mTvNetInfo;
+    private EditText mEtInputDn;
+    private String outIp;
+    private String[] parsedIpArray;
+    private StringBuilder netInfoStrBuilder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,26 +48,47 @@ public class NetDetectActivity extends AppCompatActivity {
 
     private void initView() {
         mBtnNetDetect = findViewById(R.id.bt_net_detect);
-        mTvDnsAddress = findViewById(R.id.tv_dns_address);
+        mTvNetInfo = findViewById(R.id.tv_dns_address);
+        mEtInputDn = findViewById(R.id.et_domain_name);
 
         mBtnNetDetect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                netInfoStrBuilder = new StringBuilder();
                 String dnsAddress = getDnsAddress();
-                String outIp = getOutNetIp(NetDetectActivity.this, 0);
-                Log.d(TAG, "bright#dns地址：" + dnsAddress + "\n" +  "公网出口IP:" + outIp);
-                netInfoStrBuilder.append("dns地址：" + dnsAddress + "\n" +  "公网出口IP:" + outIp);
-                mTvDnsAddress.setText(netInfoStrBuilder.toString());
+                Log.d(TAG, "bright#dns地址：" + dnsAddress);
+                netInfoStrBuilder.append("dns地址：" + dnsAddress);
+                mTvNetInfo.setText(netInfoStrBuilder.toString());
+
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        outIp2 =  getOutNetIp2();
-                        netInfoStrBuilder.append("\n" + "公网出口Ip2:" + outIp2 + "\n");
+                        outIp =  getOutNetIp();
+                        netInfoStrBuilder.append("\n" + "公网出口Ip：" + outIp + "\n");
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Log.d(TAG, "bright#公网出口Ip2:" + outIp2);
-                                mTvDnsAddress.setText(netInfoStrBuilder.toString());
+                                Log.d(TAG, "bright#公网出口Ip：" + outIp);
+                                mTvNetInfo.setText(netInfoStrBuilder.toString());
+                            }
+                        });
+                    }
+                }).start();
+
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        String inputDn = mEtInputDn.getText().toString();
+                        parsedIpArray = getIPAddressFromDomainName(inputDn);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                if(parsedIpArray != null && parsedIpArray.length > 0) {
+                                    for (int i = 0; i < parsedIpArray.length; i++) {
+                                        netInfoStrBuilder.append("\n" + "解析的ip地址：" + parsedIpArray[i]);
+                                    }
+                                }
+                                mTvNetInfo.setText(netInfoStrBuilder);
                             }
                         });
                     }
@@ -100,73 +121,6 @@ public class NetDetectActivity extends AppCompatActivity {
         }
     }
 
-    //公网出口IP 获取到的总是局域网的Ip
-    //https://www.jianshu.com/p/1e3eaf887191
-    private String getOutNetIp(Context context, int index) {
-        if (index < platforms.length) {
-            BufferedReader reader = null;
-            HttpURLConnection urlConnection = null;
-            try {
-                URL url = null;
-                url = new URL(platforms[index]);
-                urlConnection = (HttpURLConnection) url.openConnection();
-                urlConnection.setRequestMethod("GET");
-                urlConnection.setReadTimeout(5000);
-                urlConnection.setConnectTimeout(5000);
-                urlConnection.setDoInput(true);
-                urlConnection.setUseCaches(false);
-                int responseCode = urlConnection.getResponseCode();
-                if (responseCode == HttpURLConnection.HTTP_OK) { //找到服务器的情况下,可能还会找到别的网站返回html格式的数据
-                    InputStream inputStream = urlConnection.getInputStream();
-                    reader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));//注意编码，会出现乱码
-                    StringBuilder stringBuilder = new StringBuilder();
-                    String line = null;
-                    while ((line = reader.readLine()) != null) {
-                        stringBuilder.append(line);
-                    }
-                    reader.close();//内部会关闭 InputStream
-                    urlConnection.disconnect();
-
-                    if(index == 0 || index == 1) {
-                        //截取字符串
-                        int startIndex = stringBuilder.indexOf("{");
-                        int endIndex = stringBuilder.indexOf("}");
-                        String json = stringBuilder.substring(startIndex, endIndex+1);
-                        JSONObject jsonObject = new JSONObject(json);
-                        String ip = jsonObject.getString("cip");
-                        return ip;
-                    } else if(index == 2) {
-                        JSONObject jsonObject = new JSONObject(stringBuilder.toString());
-                        return jsonObject.getString("ip");
-                    }
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        } else {
-            Log.e(TAG,"bright#localNetIp:" + getLocalNetIp(context));
-            return getLocalNetIp(context);
-        }
-        return getOutNetIp(context, ++index);
-    }
-
-    private String getLocalNetIp(Context context) {
-        WifiManager wifiManager = ((WifiManager) context.getSystemService(Context.WIFI_SERVICE));
-        if(!wifiManager.isWifiEnabled()) {
-            wifiManager.setWifiEnabled(true);
-        }
-
-        WifiInfo wifiInfo = wifiManager.getConnectionInfo();
-        int ipAddress = wifiInfo.getIpAddress();
-        String ip = intToIp(ipAddress);
-        return ip;
-    }
-
-    //这段是转换成点分式IP的码
-    private static String intToIp(int ip) {
-        return (ip & 0xFF) + "." + ((ip >> 8) & 0xFF) + "." + ((ip >> 16) &     0xFF) + "." + (ip >> 24 & 0xFF);
-    }
-
 
     //https://www.cnblogs.com/feijian/p/6601427.html
     /**
@@ -178,7 +132,7 @@ public class NetDetectActivity extends AppCompatActivity {
      * @Title: GetNetIp
      * @Description:
      */
-    public static String getOutNetIp2() {
+    public static String getOutNetIp() {
         URL infoUrl = null;
         InputStream inStream = null;
         String ipLine = "";
@@ -227,8 +181,24 @@ public class NetDetectActivity extends AppCompatActivity {
 
     //域名解析
     //https://blog.csdn.net/u013072976/article/details/79074687
-    private String[] getIPAddressFromDomainName() {
-        return null;
+    private String[] getIPAddressFromDomainName(String host) {
+        if(host.isEmpty() || TextUtils.isEmpty(host)) {
+            return null;
+        }
+        String[] ipAddressArr = null;
+        try {
+            InetAddress[] inetAddressesArr = InetAddress.getAllByName(host);
+            if(inetAddressesArr != null && inetAddressesArr.length >0) {
+                ipAddressArr = new String[inetAddressesArr.length];
+                for (int i = 0;i < inetAddressesArr.length;i++) {
+                    ipAddressArr[i] = inetAddressesArr[i].getHostAddress();
+                }
+            }
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return ipAddressArr;
     }
     //ping
 }
