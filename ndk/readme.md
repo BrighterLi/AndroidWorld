@@ -10,3 +10,7 @@ Android NDK开发-简单Demo（二）:https://blog.csdn.net/lynnlee_36/article/d
 
 3 老项目配置ndk环境
 基于已有项目的NDK环境配置：https://www.jianshu.com/p/2ff3f94328f6
+
+4 NDK开发
+Android Studio NDK开发——三步实现HelloWorld一篇就够了：
+https://blog.csdn.net/w690333243/article/details/78184056
