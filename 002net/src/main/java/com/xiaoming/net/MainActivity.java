@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 
+import com.xiaoming.net.netdetect.NetDetectActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 

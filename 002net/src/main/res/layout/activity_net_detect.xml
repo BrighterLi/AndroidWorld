@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".NetDetectActivity">
+    tools:context=".netdetect.NetDetectActivity">
 
     <EditText
         android:id="@+id/et_domain_name"
@@ -20,7 +20,6 @@
     <TextView
         android:id="@+id/tv_dns_address"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="dns地址"/>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

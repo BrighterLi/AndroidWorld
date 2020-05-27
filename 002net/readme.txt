@@ -10,11 +10,15 @@ Apache:HttpClient;Java:HttpURLConnection
   https://www.jianshu.com/p/f91fb5bd75b0
 
 
-2 dns
-获取dns
-获取公网出口IP
+2 网络相关检测
+(1)网络是否正常连接(和网络已连接但是否可以正常访问不一样)
+Android 中网络连接检测和使用ping检测网络是否可访问：https://blog.csdn.net/yyanjun/article/details/81197991?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase
+(2)获取dns
+(3)获取公网出口IP
 Android 获取外网IP地址：https://www.jianshu.com/p/1e3eaf887191
-域名解析
+(4)域名解析
 Android解析域名获取IP：https://blog.csdn.net/u013072976/article/details/79074687
-域名拦截
+(5)ping
+Android检测网络接口访问速度，ping接口获取访问时间平均值:https://blog.csdn.net/jie_0754/article/details/88718976?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase
+(6)域名拦截
 Android Okhttp拦截器(修改baseurl)：https://www.csdn.net/gather_2a/MtTakgwsNTE0Ny1ibG9n.html

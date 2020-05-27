@@ -1,4 +1,4 @@
-package com.xiaoming.net;
+package com.xiaoming.net.netdetect;
 
 import android.content.Context;
 import android.net.wifi.WifiInfo;
@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.xiaoming.net.R;
 
 import org.json.JSONObject;
 
@@ -37,6 +39,8 @@ public class NetDetectActivity extends AppCompatActivity {
     private String outIp;
     private String[] parsedIpArray;
     private StringBuilder netInfoStrBuilder;
+    private boolean isPingGood;
+    private String netDelayTime = "-1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +68,7 @@ public class NetDetectActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         outIp =  getOutNetIp();
-                        netInfoStrBuilder.append("\n" + "公网出口Ip：" + outIp + "\n");
+                        netInfoStrBuilder.append("\n" + "公网出口Ip：" + outIp);
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -80,9 +84,15 @@ public class NetDetectActivity extends AppCompatActivity {
                     public void run() {
                         String inputDn = mEtInputDn.getText().toString();
                         parsedIpArray = getIPAddressFromDomainName(inputDn);
+                        isPingGood = pingDn(inputDn);
+                        if(!isPingGood) {
+                            netDelayTime = "-1";
+                        }
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
+                                netInfoStrBuilder.append("\n\n" + "是否Ping通：" + isPingGood );
+                                netInfoStrBuilder.append("\n" + "网络延迟：" + netDelayTime + "ms" );
                                 if(parsedIpArray != null && parsedIpArray.length > 0) {
                                     for (int i = 0; i < parsedIpArray.length; i++) {
                                         netInfoStrBuilder.append("\n" + "解析的ip地址：" + parsedIpArray[i]);
@@ -182,7 +192,8 @@ public class NetDetectActivity extends AppCompatActivity {
     //域名解析
     //https://blog.csdn.net/u013072976/article/details/79074687
     private String[] getIPAddressFromDomainName(String host) {
-        if(host.isEmpty() || TextUtils.isEmpty(host)) {
+        //网络正常
+        if(TextUtils.isEmpty(host)) {
             return null;
         }
         String[] ipAddressArr = null;
@@ -195,10 +206,48 @@ public class NetDetectActivity extends AppCompatActivity {
                 }
             }
         } catch (UnknownHostException e) {
+            //域名无效，网络异常
             e.printStackTrace();
             return null;
         }
         return ipAddressArr;
     }
+
     //ping
+    //https://blog.csdn.net/ccc20134/article/details/46830573
+    //https://blog.csdn.net/djfgduyhgfu/article/details/70251116
+    private boolean pingDn(String host) {
+        if(TextUtils.isEmpty(host)) {
+            return false;
+        }
+        String dn = host;
+        try {
+            Process process = Runtime.getRuntime().exec("ping -c 4 -w 100 " + dn); //ping 1次
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String str = new String();
+            while ((str = bufferedReader.readLine()) != null){
+                if(str.contains("avg")) {
+                    int i = str.indexOf("/", 20);
+                    int j = str.indexOf(".", i);
+                    netDelayTime = str.substring(i+1, j);
+                    Log.v(TAG, "bright#延迟：" + str.substring(i+1, j) + "ms");
+                }
+            }
+
+            //ping状态
+            int status = process.waitFor();
+            if(status == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            Log.v(TAG,"bright");
+        }
+        return false;
+    }
 }
