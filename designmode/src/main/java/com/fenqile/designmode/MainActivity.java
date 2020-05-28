@@ -1,4 +1,4 @@
-package com.xiaoming.designpatterns;
+package com.fenqile.designmode;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

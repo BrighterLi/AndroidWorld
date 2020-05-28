@@ -1,4 +1,4 @@
-package com.xiaoming.designpatterns;
+package com.fenqile.designmode;
 
 import org.junit.Test;
 

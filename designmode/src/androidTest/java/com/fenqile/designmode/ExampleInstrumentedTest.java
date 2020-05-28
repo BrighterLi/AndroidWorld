@@ -1,4 +1,4 @@
-package com.xiaoming.designpatterns;
+package com.fenqile.designmode;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.xiaoming.designpatterns", appContext.getPackageName());
+        assertEquals("com.fenqile.designmode", appContext.getPackageName());
     }
 }
