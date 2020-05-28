@@ -42,3 +42,6 @@ Android集成虹软人脸、人证对比，活体检测:https://www.jianshu.com/
 
 3 人脸识别
 活体动态人脸识别Demo:https://pan.baidu.com/s/1i5oXoJ7?errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=#list/path=%2F&parentPath=%2Fsharelink2684872685-1049510151020102
+
+4 openvc
+opencvandroid配置:https://www.csdn.net/gather_27/MtjaAgzsMTgzMC1ibG9n.html
