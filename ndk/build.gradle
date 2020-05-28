@@ -17,8 +17,10 @@ android {
         //配置cmake build参数
         externalNativeBuild {
             cmake {
+                // 向变量传递参数：arguments "-D变量名=参数"
+                // 向变量传递多个参数（参数之间使用空格隔开）：arguments "-D变量名=参数1 参数2"
                 arguments "-DANDROID_TOOLCHAIN=clang"
-                abiFilters "armeabi-v7a", "armeabi","x86"
+                abiFilters "armeabi-v7a", "armeabi","x86" //平台支持，java是跨平台语言，C语言不是，这里添加的是支持的平台
             }
         }
     }

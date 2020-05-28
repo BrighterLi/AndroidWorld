@@ -1,3 +1,5 @@
+所有c/c++代码都会自动被编译成为so库文件才能发布
+
 1 NDK demo
 Android NDK开发之从环境搭建到Demo级十步流:https://www.cnblogs.com/guanmanman/p/6769240.html
 Android NDK开发-环境搭建（一）:https://blog.csdn.net/lynnlee_36/article/details/81254708
@@ -14,3 +16,9 @@ Android NDK开发-简单Demo（二）:https://blog.csdn.net/lynnlee_36/article/d
 4 NDK开发
 Android Studio NDK开发——三步实现HelloWorld一篇就够了：
 https://blog.csdn.net/w690333243/article/details/78184056
+Android Studio 3.0 Jni 开发环境配置 ndk cmake编译 多个C/C++文件添加配置:
+https://blog.csdn.net/m0_37677536/article/details/78557573
+
+5 cmake
+Android Studio build.gradle 中配置 cmake，及各 arguments 详解:
+https://blog.csdn.net/afei__/article/details/81271594

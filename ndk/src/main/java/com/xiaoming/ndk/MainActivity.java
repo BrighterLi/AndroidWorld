@@ -14,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
         initView();
         String strFromNDK = HelloNDK.sayHello();
-        mTvShow.setText(strFromNDK);
+        int add = HelloNDK.add(1, 2);
+        mTvShow.setText("c：" + strFromNDK+ "\ncpp：" + add);
     }
 
     private void initView() {

@@ -7,7 +7,21 @@ Android JNI学习——Demo演示:https://www.jianshu.com/p/0f34c097028a
 2 注解
 3 动态代理
 4 点击Button/屏幕接下来的流程
-5 域名劫持
-6 okhttp+rxjava+retrofit原理
+5 网络
+域名劫持；
+6 框架
+okhttp+rxjava+retrofit原理；
 7 性能优化，卡顿优化
 8 反射
+9 扫二维码
+10 lifecycle
+11 重定向
+12 Handler
+13 脚本注入
+14 代码混淆
+Android Studio系列之代码混淆proguardFiles：https://blog.csdn.net/fine1938768839/article/details/75529260
+15 apm
+16 jekens
+17 hook
+18 控件
+列表选择器；
