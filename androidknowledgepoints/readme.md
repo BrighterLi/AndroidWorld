@@ -8,6 +8,7 @@
 Bugly;APM;
 5 框架
 okhttp+rxjava+retrofit原理；
+easypermissions;
 6 架构
 mvc;mvp;
 7 工具
@@ -17,6 +18,9 @@ jekens；gradle
 列表选择器；
 9 设计模式
 10 跨端
+11 屏幕适配
+12 数据挖掘与分析
+13 深度学习
 
 二 零散知识点
 1 jni
@@ -30,7 +34,7 @@ Android JNI学习——Demo演示:https://www.jianshu.com/p/0f34c097028a
 4 点击Button/屏幕接下来的流程
 5 sql
 6 flutter.gradle
-7
+7 爬虫
 8 反射
 9 扫二维码
 10 lifecycle
