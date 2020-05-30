@@ -49,6 +49,7 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
         setContentView(R.layout.activity_detection);
 
         initView();
+        mVivoDetection = new VivoDetection("/sdcard/AliveDetection");
     }
 
     @Override

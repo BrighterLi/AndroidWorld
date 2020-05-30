@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     };
 
+    //图片置灰
     public void procSrc2Gray() {
         Mat rgbMat = new Mat();
         Mat grayMat = new Mat();

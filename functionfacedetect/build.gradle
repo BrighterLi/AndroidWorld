@@ -6,20 +6,20 @@ android {
 
     defaultConfig {
         applicationId "com.fenqile.functionvideorecordingandfacerecognition"
-        minSdkVersion 15
+        minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        /*externalNativeBuild {
+        externalNativeBuild {
             cmake {
                 cppFlags "-std=c++11 -frtti -fexceptions" // 指定一些编译选项
 //                abiFilters  'armeabi', 'armeabi-v7a', 'arm64-v8a'
                 abiFilters  'armeabi-v7a'
             }
-        }*/
+        }
     }
     buildTypes { //封装此项目的所有构建类型配置
         release { //正式版
@@ -28,13 +28,13 @@ android {
         }
     }
 
-   /* externalNativeBuild { //native编译支持
+    externalNativeBuild { //native编译支持
         cmake {
 //            path "CMakeLists.txt"
             //version '3.10.2'  //add
             path 'src/main/cpp/CMakeLists.txt'
         }
-    }*/
+    }
 }
 
 dependencies {
@@ -45,4 +45,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation project(':openCVLibrary342')
 }

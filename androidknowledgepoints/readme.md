@@ -1,5 +1,6 @@
 一 知识点分类
 1 View
+时钟；
 2 net
 域名劫持；
 3 thread
@@ -50,3 +51,5 @@ Android Studio系列之代码混淆proguardFiles：https://blog.csdn.net/fine193
 19 加密解密
 base64;
 20 单元测试
+21 ThreadLocal
+22
