@@ -1,0 +1,1 @@
+AndroidStudio 导入OpenCV 教程:https://blog.csdn.net/qq_33198758/article/details/82984216

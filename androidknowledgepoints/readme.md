@@ -43,9 +43,10 @@ Android JNI学习——Demo演示:https://www.jianshu.com/p/0f34c097028a
 13 脚本注入
 14 代码混淆
 Android Studio系列之代码混淆proguardFiles：https://blog.csdn.net/fine1938768839/article/details/75529260
-15
-16
+15 自定义异常
+16 堆栈
 17 hook
-18
+18 自定义权限
 19 加密解密
 base64;
+20 单元测试
