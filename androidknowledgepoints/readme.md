@@ -5,8 +5,9 @@
 域名劫持；
 3 thread
 4 性能
-卡顿优化;
-Bugly;APM;
+卡顿优化;Bugly;APM;内存优化；
+图片优化；
+网络优化；
 5 框架
 okhttp+rxjava+retrofit原理；
 easypermissions;
@@ -24,6 +25,8 @@ jekens；gradle
 11 屏幕适配
 12 数据挖掘与分析
 13 深度学习
+14 C++
+ndk;
 
 二 零散知识点
 1 jni

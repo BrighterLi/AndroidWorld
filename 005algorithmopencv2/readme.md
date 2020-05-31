@@ -1,0 +1,1 @@
+Android NDK学习笔记：Android Studio3.1+CMAKE+OpenCV3.4配置:https://blog.csdn.net/alisa_xf/article/details/81475134
