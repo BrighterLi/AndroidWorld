@@ -10,8 +10,10 @@ Bugly;APM;
 5 框架
 okhttp+rxjava+retrofit原理；
 easypermissions;
+eventBus;
 6 架构
 mvc;mvp;
+重构；
 7 工具
 Debug;
 jekens；gradle
@@ -52,4 +54,4 @@ Android Studio系列之代码混淆proguardFiles：https://blog.csdn.net/fine193
 base64;
 20 单元测试
 21 ThreadLocal
-22
+22 断言

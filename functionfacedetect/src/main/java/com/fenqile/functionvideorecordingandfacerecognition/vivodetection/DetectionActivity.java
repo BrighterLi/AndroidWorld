@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 
+//引入opnCV,通过导入openCV并在CMakeList设置即可，无需依赖openCV的Module
 public class DetectionActivity extends AppCompatActivity implements SurfaceHolder.Callback, Camera.PreviewCallback {
     private static final String TAG = "DetectionActivity";
     private Button mBtnStartDetect;

@@ -17,6 +17,7 @@ import org.opencv.android.Utils;
 import org.opencv.core.Mat;
 import org.opencv.imgproc.Imgproc;
 
+//使用直接依赖openCV的Module方式：implementation project(':openCVLibrary342')
 //https://blog.csdn.net/qq_33198758/article/details/82984216
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private ImageView mIvGray;
