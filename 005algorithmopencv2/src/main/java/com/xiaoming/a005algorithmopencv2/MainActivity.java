@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 //引入OpenCV：使用OpenCV sdk，不依赖OpenCV的Module
+//https://blog.csdn.net/alisa_xf/article/details/81475134
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     // Used to load the 'native-lib' library on application startup.
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //将图片转成Bitmap
         mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.old);
-        mIv.setImageBitmap(mBitmap);
+        mIv.setImageBitmap(mBitmap); //显示图片
 
         mBt1.setOnClickListener(this);
         mBt2.setOnClickListener(this);
@@ -56,12 +57,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mIv.setImageBitmap(mBitmap);
     }
 
+    //图片置灰
     private void gray() {
         int w = mBitmap.getWidth();
         int h = mBitmap.getHeight();
-        int[] piexls = new int[w*h];
+        int[] piexls = new int[w*h]; //像素
         mBitmap.getPixels(piexls, 0, w, 0, 0, w, h);
-        int[] resultData = bitmap2Gray(piexls, w, h);
+        int[] resultData = bitmap2Gray(piexls, w, h); //置灰
         Bitmap resultImage = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
         resultImage.setPixels(resultData, 0 ,w, 0, 0, w, h);
         mIv.setImageBitmap(resultImage);

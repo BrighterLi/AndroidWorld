@@ -5,7 +5,7 @@
 域名劫持；
 3 thread
 4 性能
-卡顿优化;Bugly;APM;内存优化；
+卡顿优化;Bugly;APM;内存优化；native crash;
 图片优化；
 网络优化；
 5 框架
@@ -27,6 +27,7 @@ jekens；gradle
 13 深度学习
 14 C++
 ndk;
+15 JVM
 
 二 零散知识点
 1 jni
@@ -58,3 +59,4 @@ base64;
 20 单元测试
 21 ThreadLocal
 22 断言
+23 图片的高宽

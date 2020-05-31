@@ -27,3 +27,7 @@ https://blog.csdn.net/m0_37677536/article/details/78557573
 5 cmake
 Android Studio build.gradle 中配置 cmake，及各 arguments 详解:
 https://blog.csdn.net/afei__/article/details/81271594
+
+6 JNI接口
+Jni接口-深入研究参数的传递（一）：https://www.cnblogs.com/lsnproj/archive/2012/01/09/2317519.html
+Jni中图片传递的3种方式（转）：https://www.cnblogs.com/zl1991/p/7778394.html
