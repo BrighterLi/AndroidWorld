@@ -14,6 +14,7 @@ public class SearchNumModelImpl implements SearchNumInterface {
         mContext = context;
     }
 
+    //Model:通过名字查询号码，返回给View显示
     @Override
     public void getNum(String name, SearchNumListener listener) {
         if(isEmptyString(name) || isEmptyString(searchNumber(name))) {

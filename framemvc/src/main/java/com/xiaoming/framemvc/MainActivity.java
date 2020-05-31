@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements SearchNumListener
 
     @Override
     public void onSuccess(String num) {
-        //通过名字查询号码，返回给View显示
+        //Model:通过名字查询号码，返回给View显示
         mTvNum.setText(num);
     }
 
