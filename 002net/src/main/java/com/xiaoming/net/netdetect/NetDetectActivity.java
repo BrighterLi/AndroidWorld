@@ -69,7 +69,11 @@ public class NetDetectActivity extends AppCompatActivity {
 
                 //以太网IP地址
                 String localIpAddress = getLocalIpAddress();
-                netInfoStrBuilder.append("以太网地址：" + localIpAddress);
+                netInfoStrBuilder.append("\n以太网地址：" + localIpAddress);
+
+                //本机Dns地址
+                String localIp = getLocalDns(mEtInputDn.getText().toString());
+                netInfoStrBuilder.append("\n本机Dns地址：" + localIp);
                 mTvNetInfo.setText(netInfoStrBuilder.toString());
 
                 new Thread(new Runnable() {
@@ -77,6 +81,8 @@ public class NetDetectActivity extends AppCompatActivity {
                     public void run() {
                         outIp =  getOutNetIp();
                         netInfoStrBuilder.append("\n" + "公网出口Ip：" + outIp);
+                        String ipAddress = getIpByDn(mEtInputDn.getText().toString());
+                        netInfoStrBuilder.append("\n域名解析Ip地址：" + ipAddress);
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -281,4 +287,48 @@ public class NetDetectActivity extends AppCompatActivity {
         }
         return "GetHostIP Fail,Please clear the shareReference";
     }
+
+    //域名解析的Ip
+    private String getIpByDn(String host) {
+        String ipAddress = null;
+       try {
+           InetAddress inetAddress = InetAddress.getByName(host);
+           ipAddress = inetAddress.getHostAddress();
+       } catch (UnknownHostException e) {
+           e.printStackTrace();
+       }
+       return ipAddress;
+   }
+
+    //https://www.tah1986.com/42824.html
+    public String getLocalDns(String dns) {
+        Process process = null;
+        String str = "";
+        BufferedReader reader = null;
+        try {
+            process = Runtime.getRuntime().exec("getprop net." + dns);
+            reader = new BufferedReader(new InputStreamReader(
+                    process.getInputStream()));
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                str += line;
+            }
+            reader.close();
+            process.waitFor();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (reader != null) {
+                    reader.close();
+                }
+                process.destroy();
+            } catch (Exception e) {
+            }
+        }
+        return str.trim();
+    }
+
 }

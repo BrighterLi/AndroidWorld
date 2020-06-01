@@ -1,5 +1,7 @@
 Cookie;Session;Token;网关；基本的网络数据请求方式与数据解析；上传下载；网络图片；重定向；域名；User-Agent;
+
 https://blog.csdn.net/u012195214/article/details/78889602
+Java获取本机外网ip地址的方法:https://blog.csdn.net/qq_35348457/article/details/78734482
 
 Apache:HttpClient;Java:HttpURLConnection
 无论是我们自己封装的网络请求类，还是第三方网络的网络的请求框架，都离不开这两个类库。
@@ -22,3 +24,14 @@ Android解析域名获取IP：https://blog.csdn.net/u013072976/article/details/7
 Android检测网络接口访问速度，ping接口获取访问时间平均值:https://blog.csdn.net/jie_0754/article/details/88718976?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase
 (6)域名拦截
 Android Okhttp拦截器(修改baseurl)：https://www.csdn.net/gather_2a/MtTakgwsNTE0Ny1ibG9n.html
+
+3
+ip地址 cmd ipconfig
+本地区各运营商dns
+DNS 服务器 cmd nslookup
+DHCP服务器 cmd ipconfig/all
+默认网关
+本地DNS:以10.开头，私有地址就是在互联网上不使用,而被用在局域网络中的地址
+本地区联通移动电信DNS:
+vpn
+
