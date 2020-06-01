@@ -23,9 +23,12 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.InetAddress;
 import java.net.MalformedURLException;
+import java.net.NetworkInterface;
+import java.net.SocketException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.UnknownHostException;
+import java.util.Enumeration;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -59,9 +62,14 @@ public class NetDetectActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 netInfoStrBuilder = new StringBuilder();
+                //dns
                 String dnsAddress = getDnsAddress();
                 Log.d(TAG, "bright#dns地址：" + dnsAddress);
                 netInfoStrBuilder.append("dns地址：" + dnsAddress);
+
+                //以太网IP地址
+                String localIpAddress = getLocalIpAddress();
+                netInfoStrBuilder.append("以太网地址：" + localIpAddress);
                 mTvNetInfo.setText(netInfoStrBuilder.toString());
 
                 new Thread(new Runnable() {
@@ -107,6 +115,7 @@ public class NetDetectActivity extends AppCompatActivity {
         });
     }
 
+    //本机Dns
     //https://www.cnblogs.com/alex-zhao/p/5254624.html
     private String getDnsAddress() {
         Process cmdProcess = null;
@@ -249,5 +258,27 @@ public class NetDetectActivity extends AppCompatActivity {
             Log.v(TAG,"bright");
         }
         return false;
+    }
+
+    public static String getLocalIpAddress() {
+        try {
+            for (Enumeration<NetworkInterface> en = NetworkInterface
+                    .getNetworkInterfaces(); en.hasMoreElements();) {
+                NetworkInterface intf = en.nextElement();
+                for (Enumeration<InetAddress> enumIpAddr = intf
+                        .getInetAddresses(); enumIpAddr.hasMoreElements();) {
+                    InetAddress inetAddress = enumIpAddr.nextElement();
+                    if (!inetAddress.isLoopbackAddress()) {
+                       String ipAddress = inetAddress.getHostAddress().toString();
+                        if(!ipAddress.contains("::"))
+                            return inetAddress.getHostAddress().toString();
+                    }else
+                        continue;
+                }
+            }
+        } catch (SocketException ex) {
+            Log.e("", ex.toString());
+        }
+        return "GetHostIP Fail,Please clear the shareReference";
     }
 }
