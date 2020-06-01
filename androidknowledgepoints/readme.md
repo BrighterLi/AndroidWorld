@@ -2,7 +2,7 @@
 1 View
 时钟；
 2 net
-域名劫持；
+域名劫持；跨域访问；
 3 thread
 4 性能
 卡顿优化;Bugly;APM;内存优化；native crash;

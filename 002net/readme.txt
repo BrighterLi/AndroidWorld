@@ -2,6 +2,7 @@ Cookie;Session;Token;网关；基本的网络数据请求方式与数据解析�
 
 https://blog.csdn.net/u012195214/article/details/78889602
 Java获取本机外网ip地址的方法:https://blog.csdn.net/qq_35348457/article/details/78734482
+根据客户端IP地址，通过DNS解析合适的服务器IP：https://blog.csdn.net/yangzhengqui/article/details/81529973
 
 Apache:HttpClient;Java:HttpURLConnection
 无论是我们自己封装的网络请求类，还是第三方网络的网络的请求框架，都离不开这两个类库。
@@ -34,4 +35,10 @@ DHCP服务器 cmd ipconfig/all
 本地DNS:以10.开头，私有地址就是在互联网上不使用,而被用在局域网络中的地址
 本地区联通移动电信DNS:
 vpn
+内网ip vs 外网ip:
+内网Dns/本地Dns vs 外网Dns/出口Dns:
 
+
+查询客户出口DNS服务器地址的网址：
+https://www.dns.la/tools/
+http/nstool.netease.com/
