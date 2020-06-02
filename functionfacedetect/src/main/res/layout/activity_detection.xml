@@ -38,7 +38,7 @@
         android:layout_gravity="center"
         android:layout_width="300dp"
         android:layout_height="300dp" />
-     <com.fenqile.functionvideorecordingandfacerecognition.vivodetection.FaceMask
+     <com.xiaoming.functionvideorecordingandfacerecognition.vivodetection.FaceMask
          android:id="@+id/face_mask"
          android:layout_gravity="center"
          android:layout_width="300dp"
