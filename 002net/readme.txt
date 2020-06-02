@@ -4,6 +4,7 @@ https://blog.csdn.net/u012195214/article/details/78889602
 Java获取本机外网ip地址的方法:https://blog.csdn.net/qq_35348457/article/details/78734482
 根据客户端IP地址，通过DNS解析合适的服务器IP：https://blog.csdn.net/yangzhengqui/article/details/81529973
 《网络万用表》
+DNS服务——搭建企业内网DNS服务器的作用:https://blog.csdn.net/weixin_34184158/article/details/94235613?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-5.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-5.nonecase
 
 Apache:HttpClient;Java:HttpURLConnection
 无论是我们自己封装的网络请求类，还是第三方网络的网络的请求框架，都离不开这两个类库。

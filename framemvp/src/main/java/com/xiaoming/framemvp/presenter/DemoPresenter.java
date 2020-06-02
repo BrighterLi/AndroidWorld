@@ -1,6 +1,6 @@
 package com.xiaoming.framemvp.presenter;
 
-import com.xiaoming.framemvp.DemoFragment;
+import com.xiaoming.framemvp.view.DemoFragment;
 import com.xiaoming.framemvp.modle.Data;
 
 public class DemoPresenter implements DemoContract.Presenter{

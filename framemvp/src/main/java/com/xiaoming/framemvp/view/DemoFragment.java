@@ -1,4 +1,4 @@
-package com.xiaoming.framemvp;
+package com.xiaoming.framemvp.view;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.xiaoming.framemvp.R;
 import com.xiaoming.framemvp.presenter.DemoContract;
 
 //把view的操作都写在这里，把view的操作彻底独立出来

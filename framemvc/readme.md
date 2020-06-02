@@ -2,6 +2,7 @@ Android MVC:https://www.jianshu.com/p/3e7573126514
 什么是mvc设计模式 （附代码示例）:https://blog.csdn.net/Detective_/article/details/79260315?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-6.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-6.nonecase
 
 Android MVP模式简单例子实战:https://blog.csdn.net/qq_33048603/article/details/52824322
+Android App的设计架构：MVC,MVP,MVVM与架构:https://www.jianshu.com/p/b9549aa0e1fe
 
 理解MVC：
 我们通过示意图1来理解MVC是如何在Android上运作起来的。
