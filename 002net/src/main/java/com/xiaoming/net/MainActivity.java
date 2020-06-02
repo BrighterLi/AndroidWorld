@@ -9,6 +9,7 @@ import android.widget.ListView;
 import android.widget.ArrayAdapter;
 
 import com.xiaoming.net.netdetect.NetDetectActivity;
+import com.xiaoming.net.packegenet.PackegeNetDetectActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initDemoData() {
         mDemoDataList.add("网络检测");
+        mDemoDataList.add("网络检测封装");
     }
 
     private void initView() {
@@ -42,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
                 switch (position) {
                     case 0:
                         startActivity(new Intent(MainActivity.this, NetDetectActivity.class));
+                        break;
+                    case 1:
+                        startActivity(new Intent(MainActivity.this, PackegeNetDetectActivity.class));
                         break;
                 }
             }
