@@ -3,6 +3,7 @@ Cookie;Session;Token;网关；基本的网络数据请求方式与数据解析�
 https://blog.csdn.net/u012195214/article/details/78889602
 Java获取本机外网ip地址的方法:https://blog.csdn.net/qq_35348457/article/details/78734482
 根据客户端IP地址，通过DNS解析合适的服务器IP：https://blog.csdn.net/yangzhengqui/article/details/81529973
+《网络万用表》
 
 Apache:HttpClient;Java:HttpURLConnection
 无论是我们自己封装的网络请求类，还是第三方网络的网络的请求框架，都离不开这两个类库。

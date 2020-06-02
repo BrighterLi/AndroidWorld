@@ -73,7 +73,7 @@ public class NetDetectActivity extends AppCompatActivity {
 
                 String dns[] = DnsUtil.getDnsFromCommand();
                 for(int i=0; i<dns.length;i++) {
-                    netInfoStrBuilder.append("\ndns：" + dns[i]);
+                    netInfoStrBuilder.append("\ndns"  + i + "：" + dns[i]);
                 }
                 mTvNetInfo.setText(netInfoStrBuilder.toString());
 
