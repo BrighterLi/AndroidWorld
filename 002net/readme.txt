@@ -26,7 +26,9 @@ Android检测网络接口访问速度，ping接口获取访问时间平均值:ht
 (6)域名拦截
 Android Okhttp拦截器(修改baseurl)：https://www.csdn.net/gather_2a/MtTakgwsNTE0Ny1ibG9n.html
 
-3
+3 网络参数
+Android获取外网和内网的IP：https://blog.csdn.net/xiechengfa/article/details/45378035
+
 ip地址 cmd ipconfig
 本地区各运营商dns
 DNS 服务器 cmd nslookup
@@ -35,10 +37,10 @@ DHCP服务器 cmd ipconfig/all
 本地DNS:以10.开头，私有地址就是在互联网上不使用,而被用在局域网络中的地址
 本地区联通移动电信DNS:
 vpn
-内网ip vs 外网ip:
+内网ip vs 外网ip/公网ip:
 内网Dns/本地Dns vs 外网Dns/出口Dns:
 
 
 查询客户出口DNS服务器地址的网址：
 https://www.dns.la/tools/
-http/nstool.netease.com/
+http://nstool.netease.com/2222

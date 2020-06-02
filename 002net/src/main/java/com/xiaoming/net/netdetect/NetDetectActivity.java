@@ -71,9 +71,10 @@ public class NetDetectActivity extends AppCompatActivity {
                 String localIpAddress = getLocalIpAddress();
                 netInfoStrBuilder.append("\n以太网地址：" + localIpAddress);
 
-                //本机Dns地址
-                String localIp = getLocalDns(mEtInputDn.getText().toString());
-                netInfoStrBuilder.append("\n本机Dns地址：" + localIp);
+                String dns[] = DnsUtil.getDnsFromCommand();
+                for(int i=0; i<dns.length;i++) {
+                    netInfoStrBuilder.append("\ndns：" + dns[i]);
+                }
                 mTvNetInfo.setText(netInfoStrBuilder.toString());
 
                 new Thread(new Runnable() {
@@ -121,7 +122,7 @@ public class NetDetectActivity extends AppCompatActivity {
         });
     }
 
-    //本机Dns
+    //wifi情况下,获取到是内网Dns
     //https://www.cnblogs.com/alex-zhao/p/5254624.html
     private String getDnsAddress() {
         Process cmdProcess = null;
@@ -299,36 +300,4 @@ public class NetDetectActivity extends AppCompatActivity {
        }
        return ipAddress;
    }
-
-    //https://www.tah1986.com/42824.html
-    public String getLocalDns(String dns) {
-        Process process = null;
-        String str = "";
-        BufferedReader reader = null;
-        try {
-            process = Runtime.getRuntime().exec("getprop net." + dns);
-            reader = new BufferedReader(new InputStreamReader(
-                    process.getInputStream()));
-            String line = null;
-            while ((line = reader.readLine()) != null) {
-                str += line;
-            }
-            reader.close();
-            process.waitFor();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (reader != null) {
-                    reader.close();
-                }
-                process.destroy();
-            } catch (Exception e) {
-            }
-        }
-        return str.trim();
-    }
-
 }
