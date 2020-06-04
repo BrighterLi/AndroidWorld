@@ -1,5 +1,6 @@
 package com.xiaoming.widgetpopupwindow;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private PopupWindow popupWindow;
     private View contentView;
     private Button btClick;
+    private Button btDialogActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +25,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btClick = findViewById(R.id.bt_click);
+        btDialogActivity = findViewById(R.id.bt_dialog_activity);
+
         btClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openPopupWindow(v);
+            }
+        });
+
+        btDialogActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, DialogActivity.class));
             }
         });
     }
