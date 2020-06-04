@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".lottie.LottieNetworkAnimActivity"></activity>
+        <activity android:name=".lottie.LottieAnimationActivity2" />
+        <activity android:name=".lottie.LottieAnimationActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".textview.TextViewActivity" />
-        <activity android:name=".lottie.LottieActivity"></activity>
+        <activity android:name=".lottie.LottieActivity" />
     </application>
 
 </manifest>
