@@ -20,6 +20,7 @@ public class AlertDialogActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showAlertDialog();
+                //showAlertDialog();
             }
         });
     }

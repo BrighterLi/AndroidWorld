@@ -1,5 +1,7 @@
 package com.xiaoming.widgetpopupwindow;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openPopupWindow(v);
+                //startActivity(new Intent(MainActivity.this, DialogActivity.class));
             }
         });
 
@@ -38,10 +41,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, DialogActivity.class));
+                showAlertDialog();
+                //Activity的dialog
+                //startActivity(new Intent(MainActivity.this, DialogActivity.class));
             }
         });
     }
 
+
+   //PopupWindow弹窗
     private void openPopupWindow(View parent) {
         if(popupWindow == null) {
             LayoutInflater layoutInflater = LayoutInflater.from(this);
@@ -75,5 +83,19 @@ public class MainActivity extends AppCompatActivity {
                 getWindow().setAttributes(lp);
             }
         });
+    }
+
+    //AlertDialog
+    private void showAlertDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle("标题")
+                .setMessage("内容")
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                })
+                .create().show();
     }
 }
