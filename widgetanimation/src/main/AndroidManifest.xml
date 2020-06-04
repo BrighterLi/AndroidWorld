@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".textview.TextViewActivity"></activity>
+        <activity android:name=".textview.TextViewActivity" />
+        <activity android:name=".lottie.LottieActivity"></activity>
     </application>
 
 </manifest>

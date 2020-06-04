@@ -28,6 +28,8 @@ jekens；gradle
 14 C++
 ndk;
 15 JVM
+16 新技术
+热修复；AOP;
 
 二 零散知识点
 1 jni
@@ -72,3 +74,5 @@ base64;
 先说AlertDialog，弹出来之后，背面会变灰，并没有阻塞后台的进程，如果没特殊控制，点击后面灰暗处，弹框会消失掉的。
 至于PopupWindow，则是弹出来，后面没有任何变化，并且阻塞该应用的进程，如果一直没退出，应用汇一直等待，点击后面也是没有反应的。
 27 多个Dialog控制一个一个顺序弹出
+28 动画使用Lottie
+   Lottie- 让Android动画实现更简单:https://www.jianshu.com/p/cae606f45c0b

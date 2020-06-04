@@ -27,3 +27,13 @@ ObjectAnimator，ValueAnimator
  https://blog.csdn.net/qq_36574212/article/details/82900452
 android怎么做iphone那种图片抖动动画的效果(包括button和EditText):http://m.myexception.cn/iphone/1708029.html
 https://www.cnblogs.com/loaderman/p/10207077.html
+
+3 Lottie
+android：Lottie--让Android动画更优雅:https://www.jianshu.com/p/1f011bc472cd
+Android Lottie动画初探:https://www.jianshu.com/p/0a5cf2261b4b?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
+要实现这些特效，大概有以下几种方式:
+(1)使用帧动画。但是一个动画需要添加很多张图片，apk体积必然变大，并且还要根据不同的尺寸进行适配。
+(2)用 Gif。但是使用Gif 占用空间较大，同样需要为各种屏幕尺寸、分辨率做适配，同时原生Android本身是不支持gif直接展示的。
+(3)编码加图片辅助。这种方式繁琐并且不易维护，稍作修改就要推倒重新来过。
+(5)Android 5.x 之后提供了对 SVG 的支持，通过 VectorDrawable、AnimatedVectorDrawable 的结合可以实现一些稍微复杂的动画，但是问题和前2个类似。
+那么，现在有一个方案，不使用大量图片，甚至零图片，不占空间，不占内存，不需要适配，且易于维护，简单而且方便。
