@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InnerClassAndVariableActivity"></activity>
+        <activity android:name=".InnerClassAndVariableActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +20,7 @@
         <activity android:name=".jnidemo1.JNITools$JniActivity" />
         <activity android:name=".jnidemo2.Jni2Activity" />
         <activity android:name=".jnidemo.JniActivity" />
+        <activity android:name=".a01widgets.video.VideoActivity"></activity>
     </application>
 
 </manifest>

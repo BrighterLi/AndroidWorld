@@ -3,6 +3,7 @@ package com.xiaoming.widgetanimation.lottie;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.LottieComposition;
@@ -47,16 +48,18 @@ public class LottieNetworkAnimActivity extends AppCompatActivity {
         if(mOkHttpClient == null) {
             mOkHttpClient = new OkHttpClient();
         }
+
+        //报错：java.net.ConnectException: Failed to connect to www.chenailing.cn/121.43.38.23:80
         mOkHttpClient.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-
+                Log.d("LottieNetworkAnim", "bright#onResponse#onFailure\n" + e.toString());
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 if(!response.isSuccessful()) {
-
+                    Log.d("LottieNetworkAnim", "bright#onResponse2");
                 }
 
                 try {
@@ -65,10 +68,12 @@ public class LottieNetworkAnimActivity extends AppCompatActivity {
 
                         @Override
                         public void onCompositionLoaded(@Nullable LottieComposition composition) {
+                            Log.d("LottieNetworkAnim", "bright#onResponse3");
                             setComposition(composition);
                         }
                     });
                 } catch (Exception e) {
+                    Log.d("LottieNetworkAnim", "bright#onResponse4");
                     e.printStackTrace();
                 }
             }

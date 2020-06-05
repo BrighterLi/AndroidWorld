@@ -37,7 +37,7 @@ public class LottieAnimationActivity2 extends AppCompatActivity implements View.
         mBtStop.setOnClickListener(this);
 
         //初始化，引入json
-        LottieComposition.Factory.fromAssetFileName(this, "data.json", new OnCompositionLoadedListener() {
+        LottieComposition.Factory.fromAssetFileName(this, "loading.json", new OnCompositionLoadedListener() {
             @Override
             public void onCompositionLoaded(@Nullable LottieComposition lottieComposition) {
                 //这句话是关键，相当于将空间和json绑定
