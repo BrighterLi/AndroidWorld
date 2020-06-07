@@ -1,5 +1,6 @@
 package com.xiaoming.net;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.widget.ArrayAdapter;
 
 import com.xiaoming.net.netdetect.NetDetectActivity;
 import com.xiaoming.net.packegenet.PackegeNetDetectActivity;
+import com.xiaoming.net.pingnet.PingNetActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private void initDemoData() {
         mDemoDataList.add("网络检测");
         mDemoDataList.add("网络检测封装");
+        mDemoDataList.add("ping网络");
     }
 
     private void initView() {
@@ -47,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 1:
                         startActivity(new Intent(MainActivity.this, PackegeNetDetectActivity.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(MainActivity.this, PingNetActivity.class));
                         break;
                 }
             }

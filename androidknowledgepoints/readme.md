@@ -1,6 +1,8 @@
 一 知识点分类
 1 View
-时钟；
+时钟；浮标；
+组件
+下拉刷新；
 2 net
 域名劫持；跨域访问；Http,Https；
 3 thread
@@ -83,7 +85,11 @@ Java之阻塞和非阻塞以及同步和异步的区别：https://blog.csdn.net/
 28 动画使用Lottie
    Lottie- 让Android动画实现更简单:https://www.jianshu.com/p/cae606f45c0b
 29 hook lancet
+30
 
 三 相关Demo
-一款Android图文精选app，通过抓取网页获得图文列表。目前包含猫弄（MONO）早午茶、站酷（Zcool）精选、国家地理（National Geographic）每日一图、知乎日报、豆瓣一刻（Moment）。
+1 一款Android图文精选app，通过抓取网页获得图文列表。目前包含猫弄（MONO）早午茶、站酷（Zcool）精选、国家地理（National Geographic）每日一图、知乎日报、豆瓣一刻（Moment）。
 https://github.com/XunMengWinter/Now
+2 天气预报
+天气预报API接口：http://tianqiapi.com/
+
