@@ -82,3 +82,8 @@ Java之阻塞和非阻塞以及同步和异步的区别：https://blog.csdn.net/
 27 多个Dialog控制一个一个顺序弹出
 28 动画使用Lottie
    Lottie- 让Android动画实现更简单:https://www.jianshu.com/p/cae606f45c0b
+29 hook lancet
+
+三 相关Demo
+一款Android图文精选app，通过抓取网页获得图文列表。目前包含猫弄（MONO）早午茶、站酷（Zcool）精选、国家地理（National Geographic）每日一图、知乎日报、豆瓣一刻（Moment）。
+https://github.com/XunMengWinter/Now
