@@ -42,7 +42,7 @@ public class LottieAnimationActivity2 extends AppCompatActivity implements View.
             public void onCompositionLoaded(@Nullable LottieComposition lottieComposition) {
                 //这句话是关键，相当于将空间和json绑定
                 mLottieAnimView.setComposition(lottieComposition);
-                mLottieAnimView.playAnimation();
+                //mLottieAnimView.playAnimation();
             }
         });
 
