@@ -1,3 +1,4 @@
+一键生成App
 1 App框架
 (1) App骨架
  顶部导航+底部Tab+HomeActivity+n个Fragment
