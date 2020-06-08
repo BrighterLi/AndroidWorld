@@ -29,14 +29,14 @@ public class PingNetUtil {
                 return pingNetEntity;
             }
             successReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String parsedId;
+            if((parsedId = getParsedIp(successReader.readLine())) != null) {
+                pingNetEntity.setParsedIp(parsedId);
+            }
             while ((line = successReader.readLine()) != null) {
                 Log.i(TAG, "bright#ping#line：" + line);
                 append(pingNetEntity.getResultBuffer(), line);
                 String time;
-                String parsedId;
-                if((parsedId = getParsedIp(line)) != null) {
-                    pingNetEntity.setParsedIp(parsedId);
-                }
                 if ((time = getTime(line)) != null) {
                     pingNetEntity.setPingTime(time);
                 }
@@ -85,7 +85,6 @@ public class PingNetUtil {
         String[] lines = line.split("\n");
         String time = null;
         for (String l : lines) {
-            Log.i("bright","getTime#l：" + l);
             if (!l.contains("time="))
                 continue;
             int index = l.indexOf("time=");
@@ -98,8 +97,12 @@ public class PingNetUtil {
     private static String getParsedIp(String line) {
         String parsedIp = null;
         String[] lines = line.split("\n");
-
-        Log.i("bright", "l.contains(host)#l：" + lines[0]);
+        if(lines[0] != null) {
+            String[] lineElements = lines[0].split(" ");
+            if(lineElements != null && lineElements[2] != null && lineElements.length > 2)
+            parsedIp = lineElements[2].substring(1,lineElements[2].length()-1);  //包含beginIndex,不包含endIndex
+            Log.i("bright", "getParsedIp#parsedIp：" + parsedIp);
+        }
         return parsedIp;
     }
 }
