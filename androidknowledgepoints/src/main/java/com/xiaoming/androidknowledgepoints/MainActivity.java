@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.xiaoming.androidknowledgepoints.broadcast.LocalBroadcastActivity;
+import com.xiaoming.androidknowledgepoints.broadcast.LocalBroadcastReceiverActivity;
 import com.xiaoming.androidknowledgepoints.innerclass.InnerClassAndVariableActivity;
 import com.xiaoming.androidknowledgepoints.jnidemo.JniActivity;
 import com.xiaoming.androidknowledgepoints.jnidemo2.Jni2Activity;
@@ -47,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
                     case 3:
                         startActivity(new Intent(MainActivity.this, JsonActivity.class));
                         break;
+                    case 4:
+                        startActivity(new Intent(MainActivity.this, LocalBroadcastReceiverActivity.class));
+                        break;
                 }
             }
         });
@@ -61,5 +66,6 @@ public class MainActivity extends AppCompatActivity {
         demoDataList.add("jni:hello world");
         demoDataList.add("java内部类访问局部变量时局部变量必须声明为final");
         demoDataList.add("Json");
+        demoDataList.add("LocalBroadcast");
     }
 }
