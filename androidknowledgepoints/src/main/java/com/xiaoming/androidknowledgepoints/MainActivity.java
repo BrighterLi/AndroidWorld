@@ -8,10 +8,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-
-import com.xiaoming.androidknowledgepoints.a01widgets.video.VideoActivity;
+import com.xiaoming.androidknowledgepoints.innerclass.InnerClassAndVariableActivity;
 import com.xiaoming.androidknowledgepoints.jnidemo.JniActivity;
 import com.xiaoming.androidknowledgepoints.jnidemo2.Jni2Activity;
+import com.xiaoming.androidknowledgepoints.json.JsonActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, InnerClassAndVariableActivity.class));
                         break;
                     case 3:
-                        startActivity(new Intent(MainActivity.this, VideoActivity.class));
+                        startActivity(new Intent(MainActivity.this, JsonActivity.class));
                         break;
                 }
             }
@@ -60,6 +60,6 @@ public class MainActivity extends AppCompatActivity {
         demoDataList.add("jni：加减法");
         demoDataList.add("jni:hello world");
         demoDataList.add("java内部类访问局部变量时局部变量必须声明为final");
-        demoDataList.add("Video视频");
+        demoDataList.add("Json");
     }
 }

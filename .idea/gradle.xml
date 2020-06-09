@@ -3,9 +3,6 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <compositeConfiguration>
-          <compositeBuild compositeDefinitionSource="SCRIPT" />
-        </compositeConfiguration>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
@@ -34,6 +31,7 @@
             <option value="$PROJECT_DIR$/004performanceapm" />
             <option value="$PROJECT_DIR$/004performanceblock" />
             <option value="$PROJECT_DIR$/004performancetoolbreakpad" />
+            <option value="$PROJECT_DIR$/005algorithm" />
             <option value="$PROJECT_DIR$/005algorithmopencv2" />
             <option value="$PROJECT_DIR$/005algorithmopenvc" />
             <option value="$PROJECT_DIR$/acrossendflutter" />
@@ -52,11 +50,13 @@
             <option value="$PROJECT_DIR$/framearouter" />
             <option value="$PROJECT_DIR$/framebutterknife" />
             <option value="$PROJECT_DIR$/frameglide" />
+            <option value="$PROJECT_DIR$/framelifecycle" />
             <option value="$PROJECT_DIR$/framemvc" />
             <option value="$PROJECT_DIR$/framemvp" />
             <option value="$PROJECT_DIR$/frameokhttp" />
             <option value="$PROJECT_DIR$/frameretrofit" />
             <option value="$PROJECT_DIR$/framerxjava" />
+            <option value="$PROJECT_DIR$/framethirdparty" />
             <option value="$PROJECT_DIR$/frametinker" />
             <option value="$PROJECT_DIR$/fuctionchoosephotoandcrop" />
             <option value="$PROJECT_DIR$/fuctionmodule" />
@@ -97,7 +97,6 @@
             <option value="$PROJECT_DIR$/widgetlistview" />
             <option value="$PROJECT_DIR$/widgetloading" />
             <option value="$PROJECT_DIR$/widgetpopupwindow" />
-            <option value="$PROJECT_DIR$/widgetpulltorefresh" />
             <option value="$PROJECT_DIR$/widgetrecyclerview" />
             <option value="$PROJECT_DIR$/widgetreddot" />
             <option value="$PROJECT_DIR$/widgettensorflow" />
@@ -107,7 +106,7 @@
             <option value="$PROJECT_DIR$/widgetviewpager" />
             <option value="$PROJECT_DIR$/widgetwheelview" />
             <option value="$PROJECT_DIR$/widigetimageview" />
-            <option value="E:/flutter_mix/.android/Flutter" />
+            <option value="$PROJECT_DIR$/../flutter_mix/.android/Flutter" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
