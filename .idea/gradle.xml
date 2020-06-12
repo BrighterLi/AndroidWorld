@@ -3,15 +3,11 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <compositeConfiguration>
-          <compositeBuild compositeDefinitionSource="SCRIPT" />
-        </compositeConfiguration>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/000algorithm" />
             <option value="$PROJECT_DIR$/000datastructure" />
             <option value="$PROJECT_DIR$/001customview" />
             <option value="$PROJECT_DIR$/001view" />
@@ -109,7 +105,7 @@
             <option value="$PROJECT_DIR$/widgetviewpager" />
             <option value="$PROJECT_DIR$/widgetwheelview" />
             <option value="$PROJECT_DIR$/widigetimageview" />
-            <option value="E:/flutter_mix/.android/Flutter" />
+            <option value="$PROJECT_DIR$/../flutter_mix/.android/Flutter" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
