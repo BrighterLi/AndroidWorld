@@ -5,6 +5,10 @@ import android.os.Bundle;
 
 import com.xiaoming.androidknowledgepoints.R;
 
+//JSON数据就是一个map
+// 为什么JSON可以用来不同语言的通信呢?是因为在不同的语言当中，都可以将JSON数据转换成JSON对象
+
+
 public class JsonActivity extends AppCompatActivity {
 
     @Override
@@ -12,6 +16,7 @@ public class JsonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_json);
 
+        //生成json
         ToJsonUtil.stringToJson();
         ToJsonUtil.toJson();
         ToJsonUtil.toJson2();
@@ -21,7 +26,10 @@ public class JsonActivity extends AppCompatActivity {
         ToJsonUtil.listToJson();
         ToJsonUtil.multiToJson2();
 
-
         ToJsonUtil.arrayJson();
+
+        //json解析
+        FromJsonUtil.stringFromJson();
+        FromJsonUtil.listFromJson();
     }
 }

@@ -21,7 +21,7 @@ mvc;mvp;
 重构；
 7 工具
 Debug;
-jekens；gradle
+jekens；gradle;maven
 8 组件
 列表选择器；
 9 设计模式
@@ -88,6 +88,8 @@ Java之阻塞和非阻塞以及同步和异步的区别：https://blog.csdn.net/
 30 json
  JSONObject
  只是一种数据结构，可以理解为JSON格式的数据结构（key-value 结构），可以使用put方法给json对象添加元素。JSONObject可以很方便的转换成字符串，也可以很方便的把其他对象转换成JSONObject对象。
+ {} 双括号表示对象
+ JSON的三种解析方式：https://www.cnblogs.com/zhujiabin/p/5498272.html
 31 ASM插桩无埋点性能监控
 
 三 相关Demo
