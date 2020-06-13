@@ -12,6 +12,16 @@ public class JsonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_json);
 
-        JsonUtil.toJson();
+        ToJsonUtil.stringToJson();
+        ToJsonUtil.toJson();
+        ToJsonUtil.toJson2();
+        ToJsonUtil.doHashMapToJson();
+        ToJsonUtil.arrayToJson();
+        ToJsonUtil.multiToJson();
+        ToJsonUtil.listToJson();
+        ToJsonUtil.multiToJson2();
+
+
+        ToJsonUtil.arrayJson();
     }
 }
