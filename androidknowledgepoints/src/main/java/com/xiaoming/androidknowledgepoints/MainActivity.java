@@ -8,13 +8,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.xiaoming.androidknowledgepoints.broadcast.LocalBroadcastActivity;
 import com.xiaoming.androidknowledgepoints.broadcast.LocalBroadcastReceiverActivity;
 import com.xiaoming.androidknowledgepoints.innerclass.InnerClassAndVariableActivity;
 import com.xiaoming.androidknowledgepoints.jnidemo.JniActivity;
 import com.xiaoming.androidknowledgepoints.jnidemo2.Jni2Activity;
 import com.xiaoming.androidknowledgepoints.json.JsonActivity;
 import com.xiaoming.androidknowledgepoints.reflect.ReflectActivity;
+import com.xiaoming.androidknowledgepoints.serialization.GoToActivity;
+import com.xiaoming.androidknowledgepoints.serialization.parcelable.SerializationActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
                     case 5:
                         startActivity(new Intent(MainActivity.this, ReflectActivity.class));
                         break;
+                    case 6:
+                        startActivity(new Intent(MainActivity.this, GoToActivity.class));
+                        break;
                 }
             }
         });
@@ -72,5 +76,6 @@ public class MainActivity extends AppCompatActivity {
         demoDataList.add("Json");
         demoDataList.add("LocalBroadcast");
         demoDataList.add("反射");
+        demoDataList.add("序列化");
     }
 }

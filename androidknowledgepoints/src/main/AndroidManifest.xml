@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".reflect.ReflectActivity"></activity>
+        <activity android:name=".serialization.GoToActivity"></activity>
+        <activity android:name=".serialization.serializable.SerializableActivity" />
+        <activity android:name=".serialization.parcelable.UnSerializationActivity" />
+        <activity android:name=".serialization.parcelable.SerializationActivity" />
+        <activity android:name=".reflect.ReflectActivity" />
         <activity android:name=".broadcast.LocalBroadcastReceiverActivity" />
         <activity android:name=".broadcast.LocalBroadcastActivity" />
         <activity android:name=".innerclass.InnerClassAndVariableActivity" />
