@@ -43,21 +43,24 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, JniActivity.class));
                         break;
                     case 1:
+                    startActivity(new Intent(MainActivity.this, JniActivity.class));
+                    break;
+                    case 2:
                         startActivity(new Intent(MainActivity.this, Jni2Activity.class));
                         break;
-                    case 2:
+                    case 3:
                         startActivity(new Intent(MainActivity.this, InnerClassAndVariableActivity.class));
                         break;
-                    case 3:
+                    case 4:
                         startActivity(new Intent(MainActivity.this, JsonActivity.class));
                         break;
-                    case 4:
+                    case 5:
                         startActivity(new Intent(MainActivity.this, LocalBroadcastReceiverActivity.class));
                         break;
-                    case 5:
+                    case 6:
                         startActivity(new Intent(MainActivity.this, ReflectActivity.class));
                         break;
-                    case 6:
+                    case 7:
                         startActivity(new Intent(MainActivity.this, GoToActivity.class));
                         break;
                 }
@@ -70,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initDemoData() {
         demoDataList = new ArrayList<>();
+        demoDataList.add("Util");
         demoDataList.add("jni：加减法");
         demoDataList.add("jni:hello world");
         demoDataList.add("java内部类访问局部变量时局部变量必须声明为final");
@@ -77,5 +81,6 @@ public class MainActivity extends AppCompatActivity {
         demoDataList.add("LocalBroadcast");
         demoDataList.add("反射");
         demoDataList.add("序列化");
+
     }
 }

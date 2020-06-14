@@ -92,6 +92,8 @@ Java之阻塞和非阻塞以及同步和异步的区别：https://blog.csdn.net/
  JSON的三种解析方式：https://www.cnblogs.com/zhujiabin/p/5498272.html
 31 ASM插桩无埋点性能监控
 32 静默安装
+33 闪屏(图片、gif、视频)
+Android启动页面（闪屏页面）的实现：https://blog.csdn.net/PlainWaterh/article/details/78184847
 
 三 相关Demo
 1 一款Android图文精选app，通过抓取网页获得图文列表。目前包含猫弄（MONO）早午茶、站酷（Zcool）精选、国家地理（National Geographic）每日一图、知乎日报、豆瓣一刻（Moment）。
