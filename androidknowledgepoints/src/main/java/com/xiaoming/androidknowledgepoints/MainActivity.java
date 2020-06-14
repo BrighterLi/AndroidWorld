@@ -14,6 +14,7 @@ import com.xiaoming.androidknowledgepoints.innerclass.InnerClassAndVariableActiv
 import com.xiaoming.androidknowledgepoints.jnidemo.JniActivity;
 import com.xiaoming.androidknowledgepoints.jnidemo2.Jni2Activity;
 import com.xiaoming.androidknowledgepoints.json.JsonActivity;
+import com.xiaoming.androidknowledgepoints.reflect.ReflectActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
                     case 4:
                         startActivity(new Intent(MainActivity.this, LocalBroadcastReceiverActivity.class));
                         break;
+                    case 5:
+                        startActivity(new Intent(MainActivity.this, ReflectActivity.class));
+                        break;
                 }
             }
         });
@@ -67,5 +71,6 @@ public class MainActivity extends AppCompatActivity {
         demoDataList.add("java内部类访问局部变量时局部变量必须声明为final");
         demoDataList.add("Json");
         demoDataList.add("LocalBroadcast");
+        demoDataList.add("反射");
     }
 }

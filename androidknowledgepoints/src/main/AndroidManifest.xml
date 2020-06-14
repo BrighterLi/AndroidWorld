@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".broadcast.LocalBroadcastReceiverActivity"></activity>
+        <activity android:name=".reflect.ReflectActivity"></activity>
+        <activity android:name=".broadcast.LocalBroadcastReceiverActivity" />
         <activity android:name=".broadcast.LocalBroadcastActivity" />
         <activity android:name=".innerclass.InnerClassAndVariableActivity" />
         <activity android:name=".MainActivity">
