@@ -16,6 +16,7 @@ import java.util.LinkedList;
 //https://blog.csdn.net/xiaxl/article/details/93487303?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase
 public class DnsUtil {
 
+    //Android 获取DNS:https://blog.csdn.net/xiaxl/article/details/93487303
     //wifi情况下,获取到是内网Dns
     public static String getDns(Context context) {
         /**
@@ -37,6 +38,22 @@ public class DnsUtil {
         }
         //
         return sb.toString();
+    }
+
+    //wifi情况下,获取到是内网Dns,取第一个
+    public static String getDns2(Context context) {
+        String dns = null;
+        /**
+         * 获取dns
+         */
+        String[] dnsServers = getDnsFromCommand();
+        if (dnsServers == null || dnsServers.length == 0) {
+            dnsServers = getDnsFromConnectionManager(context);
+        }
+        if(dnsServers != null && dnsServers.length > 0) {
+            dns = dnsServers[0];
+        }
+        return dns;
     }
 
 

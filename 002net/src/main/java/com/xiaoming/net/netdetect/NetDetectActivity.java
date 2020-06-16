@@ -32,6 +32,9 @@ import java.util.Enumeration;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static com.xiaoming.net.netdetect.DnsUtil.getDnsFromCommand;
+import static com.xiaoming.net.netdetect.DnsUtil.getDnsFromConnectionManager;
+
 
 //网络检测
 public class NetDetectActivity extends AppCompatActivity {
@@ -66,12 +69,14 @@ public class NetDetectActivity extends AppCompatActivity {
                 String dnsAddress = getDnsAddress();
                 Log.d(TAG, "bright#dns地址：" + dnsAddress);
                 netInfoStrBuilder.append("dns地址：" + dnsAddress);
-
+                //dns2
+                String dns2 = DnsUtil.getDns2(NetDetectActivity.this);
+                netInfoStrBuilder.append("\n dns地址2：" + dns2);
                 //以太网IP地址
                 String localIpAddress = getLocalIpAddress();
                 netInfoStrBuilder.append("\n以太网地址：" + localIpAddress);
 
-                String dns[] = DnsUtil.getDnsFromCommand();
+                String dns[] = getDnsFromCommand();
                 for(int i=0; i<dns.length;i++) {
                     netInfoStrBuilder.append("\ndns"  + i + "：" + dns[i]);
                 }
@@ -122,7 +127,7 @@ public class NetDetectActivity extends AppCompatActivity {
         });
     }
 
-    //wifi情况下,获取到是内网Dns
+    //wifi情况下,获取到是内网Dns;Android8无法获取到dns
     //https://www.cnblogs.com/alex-zhao/p/5254624.html
     private String getDnsAddress() {
         Process cmdProcess = null;
