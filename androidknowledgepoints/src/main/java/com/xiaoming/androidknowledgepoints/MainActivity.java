@@ -14,6 +14,7 @@ import com.xiaoming.androidknowledgepoints.jnidemo.JniActivity;
 import com.xiaoming.androidknowledgepoints.jnidemo2.Jni2Activity;
 import com.xiaoming.androidknowledgepoints.json.JsonActivity;
 import com.xiaoming.androidknowledgepoints.reflect.ReflectActivity;
+import com.xiaoming.androidknowledgepoints.regularexpression.RegularExpressionActivity;
 import com.xiaoming.androidknowledgepoints.serialization.GoToActivity;
 import com.xiaoming.androidknowledgepoints.serialization.parcelable.SerializationActivity;
 
@@ -63,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
                     case 7:
                         startActivity(new Intent(MainActivity.this, GoToActivity.class));
                         break;
+                    case 8:
+                        startActivity(new Intent(MainActivity.this, RegularExpressionActivity.class));
+                        break;
                 }
             }
         });
@@ -81,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         demoDataList.add("LocalBroadcast");
         demoDataList.add("反射");
         demoDataList.add("序列化");
+        demoDataList.add("正则");
 
     }
 }
