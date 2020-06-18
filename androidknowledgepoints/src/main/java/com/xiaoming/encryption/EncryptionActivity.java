@@ -7,6 +7,10 @@ import com.xiaoming.androidknowledgepoints.R;
 
 import java.security.InvalidAlgorithmParameterException;
 
+//对称加密：AES
+//非对称加密
+//可逆加密
+
 public class EncryptionActivity extends AppCompatActivity {
 
     @Override
@@ -15,13 +19,13 @@ public class EncryptionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_encryption);
 
         try {
-            encodeAnddecode();
+            aESEncodeAnddecode();
         } catch (InvalidAlgorithmParameterException e) {
             e.printStackTrace();
         }
     }
 
-    private void encodeAnddecode() throws InvalidAlgorithmParameterException {
+    private void aESEncodeAnddecode() throws InvalidAlgorithmParameterException {
         String encodeRules="thisisencoderule";
         System.out.println("bright#加密规则为：" + encodeRules);
         String content = "一头小菜鸡的账号和密码";
