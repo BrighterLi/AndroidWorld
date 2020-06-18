@@ -17,6 +17,7 @@ import com.xiaoming.androidknowledgepoints.reflect.ReflectActivity;
 import com.xiaoming.androidknowledgepoints.regularexpression.RegularExpressionActivity;
 import com.xiaoming.androidknowledgepoints.serialization.GoToActivity;
 import com.xiaoming.androidknowledgepoints.serialization.parcelable.SerializationActivity;
+import com.xiaoming.encryption.EncryptionActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
                     case 8:
                         startActivity(new Intent(MainActivity.this, RegularExpressionActivity.class));
                         break;
+                    case 9:
+                        startActivity(new Intent(MainActivity.this, EncryptionActivity.class));
+                        break;
                 }
             }
         });
@@ -86,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
         demoDataList.add("反射");
         demoDataList.add("序列化");
         demoDataList.add("正则");
+        demoDataList.add("加密解密");
 
     }
 }
