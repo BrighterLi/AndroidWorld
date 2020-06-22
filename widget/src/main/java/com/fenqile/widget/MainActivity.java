@@ -1,5 +1,6 @@
 package com.fenqile.widget;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.fenqile.widget.keyboard.KeyboardEntranceActivity;
 import com.fenqile.widget.video.VideoActivity;
 
 import java.util.ArrayList;
@@ -29,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
     private void initDemoData() {
         mDataList = new ArrayList<>();
         mDataList.add("视频");
-    }
+        mDataList.add("输入键盘");
+}
 
     private void initView() {
         mLvMain = findViewById(R.id.lv_main);
@@ -41,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
                 switch (i) {
                     case 0:
                         startActivity(new Intent(MainActivity.this, VideoActivity.class));
+                        break;
+                    case 1:
+                        startActivity(new Intent(MainActivity.this, KeyboardEntranceActivity.class));
                         break;
                 }
             }
