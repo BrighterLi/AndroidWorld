@@ -1,27 +1,41 @@
 package com.fenqile.widget.pullrefresh;
 
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+import java.util.List;
 
 public class ListViewAdapter extends BaseAdapter {
+    private List<String> list;
+    private Context context;
+
+    public ListViewAdapter(List<String> list, Context context) {
+        this.list = list;
+        this.context = context;
+    }
+
     @Override
     public int getCount() {
-        return 0;
+        return list.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return list.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        return null;
+        TextView tv = new TextView(context.getApplicationContext());
+        tv.setText(list.get(position));
+        return tv;
     }
 }

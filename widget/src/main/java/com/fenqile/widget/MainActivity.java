@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.fenqile.widget.keyboard.KeyboardEntranceActivity;
+import com.fenqile.widget.pullrefresh.PullRefreshActivity;
 import com.fenqile.widget.video.VideoActivity;
 
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList = new ArrayList<>();
         mDataList.add("视频");
         mDataList.add("输入键盘");
+        mDataList.add("下拉刷新");
 }
 
     private void initView() {
@@ -47,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 1:
                         startActivity(new Intent(MainActivity.this, KeyboardEntranceActivity.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(MainActivity.this, PullRefreshActivity.class));
                         break;
                 }
             }
