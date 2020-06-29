@@ -16,6 +16,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:layout_marginLeft="3dp"
         android:background="#004AF1"
         android:textColor="#ffffffff"
         android:text="开始检测"/>
@@ -25,9 +26,29 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:layout_marginLeft="3dp"
         android:background="#004AF1"
         android:textColor="#ffffffff"
         android:text="暂止检测"/>
+       <Button
+           android:id="@+id/btn_start_record"
+           android:layout_width="100dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:layout_marginLeft="3dp"
+           android:background="#004AF1"
+           android:textColor="#ffffffff"
+           android:text="开始录屏"/>
+       <Button
+           android:id="@+id/btn_start_video_play"
+           android:layout_width="100dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:layout_marginLeft="3dp"
+           android:layout_marginRight="3dp"
+           android:background="#004AF1"
+           android:textColor="#ffffffff"
+           android:text="视频播放"/>
    </LinearLayout>
 
     <RelativeLayout
