@@ -57,6 +57,7 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
     private String mVideoPath; //视频保存路径
     private boolean mStartedRecordFlg = false; //是否正在录像
     private MediaPlayer mMediaPlayer; //视频播放功能类
+    private boolean mIsPlay; //是否播放中
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -137,6 +138,7 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
 
     //视频播放
     private void startVideoPlay() {
+        mIsPlay = true;
         Log.d(TAG, "bright9#startVideoPlay");
         if(mMediaPlayer == null) {
             mMediaPlayer = new MediaPlayer();
@@ -158,13 +160,25 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
 
     //开始录屏或结束录屏
     private void startRecord() {
-        Log.d(TAG, "bright9#startRecord");
+        //如果正在播放视频
+        if(mIsPlay) {
+            if(mMediaPlayer != null) {
+                mIsPlay = false;
+                //停止录制视频
+                mMediaPlayer.stop();
+                mMediaPlayer.reset();
+                mMediaPlayer.release();
+                mMediaPlayer = null;
+            }
+        }
+
         if(mMediaRecorder == null) {
             mMediaRecorder = new MediaRecorder();
         }
 
         //如果不是正在录制视频，则开始录制
         if(!mStartedRecordFlg) {
+            Log.d(TAG, "bright9#startRecord#start");
             //mCamera.setPreviewCallback(DetectionActivity.this);
             //打开摄像头
             mCamera = Camera.open(Camera.CameraInfo.CAMERA_FACING_FRONT); //前置摄像头
@@ -217,13 +231,22 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
                     e.printStackTrace();
                 }
         } else {
+            Log.d(TAG, "bright9#startRecord#stop");
             //如果正在录制视频,则停止录制
             if(mStartedRecordFlg) {
-                mMediaRecorder.stop();
-                mMediaRecorder.reset();
-                mMediaRecorder.release();
-                mMediaRecorder = null;
-                mBtnStartRecord.setText("Start");
+                try {
+                    mMediaRecorder.stop();
+                    mMediaRecorder.reset();
+                    mMediaRecorder.release();
+                    mMediaRecorder = null;
+                    mBtnStartRecord.setText("Start");
+                    if(mCamera != null) {
+                        mCamera.release();
+                        mCamera = null;
+                    }
+                } catch (Exception e) {
+                    Log.d(TAG, "bright9#e：" + e);
+                }
             }
             mStartedRecordFlg = false;
         }
