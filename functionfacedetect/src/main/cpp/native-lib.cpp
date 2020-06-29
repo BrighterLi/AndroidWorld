@@ -9,7 +9,7 @@
 extern "C" {
 JNIEXPORT jint JNICALL
 //JNIEXPORT jintArray JNICALL
-Java_com_fenqile_functionvideorecordingandfacerecognition_vivodetection_VivoDetection_detect(JNIEnv *env, jobject obj, jbyteArray yuv,
+Java_com_xiaoming_functionvideorecordingandfacerecognition_vivodetection_VivoDetection_detect(JNIEnv *env, jobject obj, jbyteArray yuv,
                                                          jint height, jint width, jlong handle) {
     jbyte *pBuf = (jbyte *) env->GetByteArrayElements(yuv, 0);
 
@@ -57,7 +57,7 @@ std::string jstring2str(JNIEnv *env, jstring jstr) {
 }
 
 JNIEXPORT jlong JNICALL
-Java_com_fenqile_functionvideorecordingandfacerecognition_vivodetection_VivoDetection_init(JNIEnv *env, jobject obj, jstring folder) {
+Java_com_xiaoming_functionvideorecordingandfacerecognition_vivodetection_VivoDetection_init(JNIEnv *env, jobject obj, jstring folder) {
     std::string detector_path = jstring2str(env, folder);
     AliveDetector *aliveDetector = new AliveDetector(detector_path);
     return (jlong) aliveDetector;
@@ -67,7 +67,7 @@ Java_com_fenqile_functionvideorecordingandfacerecognition_vivodetection_VivoDete
 }
 
 JNIEXPORT void JNICALL
-Java_com_fenqile_functionvideorecordingandfacerecognition_vivodetection_VivoDetection_release(JNIEnv *env, jobject obj, jlong handle) {
+Java_com_xiaoming_functionvideorecordingandfacerecognition_vivodetection_VivoDetection_release(JNIEnv *env, jobject obj, jlong handle) {
     AliveDetector *PR = (AliveDetector *) handle;
     delete PR;
 }
