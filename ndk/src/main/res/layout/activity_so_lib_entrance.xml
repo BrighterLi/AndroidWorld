@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".solib.SoLibEntranceActivity">
 
     <Button
-        android:id="@+id/bt_so_lib"
+        android:id="@+id/bt_show_so_lib"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="so库自定义与调用"/>
+        android:text="显示调用so库方法的结果"/>
 
     <TextView
-        android:id="@+id/tv_show"
+        android:id="@+id/tv_show_so_lib"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

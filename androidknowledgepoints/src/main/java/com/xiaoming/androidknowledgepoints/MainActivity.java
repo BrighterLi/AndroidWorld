@@ -17,6 +17,7 @@ import com.xiaoming.androidknowledgepoints.reflect.ReflectActivity;
 import com.xiaoming.androidknowledgepoints.regularexpression.RegularExpressionActivity;
 import com.xiaoming.androidknowledgepoints.serialization.GoToActivity;
 import com.xiaoming.androidknowledgepoints.serialization.parcelable.SerializationActivity;
+import com.xiaoming.androidknowledgepoints.solib.SoLibEntranceActivity;
 import com.xiaoming.encryption.EncryptionActivity;
 
 import java.util.ArrayList;
@@ -71,6 +72,9 @@ public class MainActivity extends AppCompatActivity {
                     case 9:
                         startActivity(new Intent(MainActivity.this, EncryptionActivity.class));
                         break;
+                    case 10:
+                        startActivity(new Intent(MainActivity.this, SoLibEntranceActivity.class));
+                        break;
                 }
             }
         });
@@ -91,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
         demoDataList.add("序列化");
         demoDataList.add("正则");
         demoDataList.add("加密解密");
+        demoDataList.add("调用so库的方法");
 
     }
 }

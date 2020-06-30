@@ -4,17 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/bt_so_lib"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="so库自定义与调用"/>
+    tools:context="com.xiaoming.androidknowledgepoints.solib.SoLibEntranceActivity">
 
     <TextView
-        android:id="@+id/tv_show"
+        android:id="@+id/tv_show_so_lib"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

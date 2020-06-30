@@ -8,6 +8,9 @@ cmake_minimum_required(VERSION 3.4.1) #cmake 最低版本要求，低于2.6 构�
 include_directories(
         ${CMAKE_SOURCE_DIR}/src/main/cpp/include #h文件目录
 )
+# 设置生成的so动态库最后输出的路径
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI})
+
 add_library(
         # Sets the name of the library.  设置生成so文件名
         HelloNDK
