@@ -1,6 +1,8 @@
 人脸检测、人脸追踪、人脸识别、年龄识别、性别识别
 Android集成虹软人脸、人证对比，活体检测:https://www.jianshu.com/p/8dee89ec4a24
-1 录制视频
+1 录制视频Camera
+Android Camera详解:https://www.cnblogs.com/dongweiq/p/6346857.html
+自定义Camera系列之：SurfaceView + Camera:https://blog.csdn.net/afei__/article/details/85255809
 (1) 功能点
 ui
 录制功能，开始、结束，视频压缩上传到服务器，时间限制，前置摄像头，
