@@ -26,7 +26,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.xiaoming.functionvideorecordingandfacerecognition.R;
-import com.xiaoming.functionvideorecordingandfacerecognition.videorecord.RecordActivity;
 
 import java.io.File;
 import java.io.IOException;
@@ -100,6 +99,9 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
         mBtnStartDetect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(mCamera == null) {
+                    mCamera = Camera.open(1);
+                }
                 mCamera.setPreviewCallback(DetectionActivity.this);
             }
         });
@@ -130,9 +132,9 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
 
         //SurfaceView添加回调
         //mSurfaceViewDetect.getHolder().addCallback(this);
-        SurfaceHolder holder = mSurfaceViewDetect.getHolder();
-        holder.addCallback(this);
-        //setType必须设置，要不出错
+        SurfaceHolder holder = mSurfaceViewDetect.getHolder(); // 绑定SurfaceView，取得SurfaceHolder对象
+        holder.addCallback(this); // SurfaceHolder加入回调接口
+        //设置显示器类型，setType必须设置，要不出错
         holder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
     }
 
@@ -160,6 +162,7 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
 
     //开始录屏或结束录屏
     private void startRecord() {
+        //mCamera.setPreviewCallback(DetectionActivity.this); //可以录屏前开始检测人脸，也就是onPreviewFrame接口帧回调
         //如果正在播放视频
         if(mIsPlay) {
             if(mMediaPlayer != null) {
@@ -181,9 +184,9 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
             Log.d(TAG, "bright9#startRecord#start");
             //mCamera.setPreviewCallback(DetectionActivity.this);
             //打开摄像头
-            mCamera = Camera.open(Camera.CameraInfo.CAMERA_FACING_FRONT); //前置摄像头
+            //mCamera = Camera.open(Camera.CameraInfo.CAMERA_FACING_FRONT); //前置摄像头
             if(mCamera != null) {
-                mCamera.setDisplayOrientation(90);//摄像头角度
+                //mCamera.setDisplayOrientation(90);//摄像头角度
                 mCamera.unlock(); //必须加上，不然crash
                 mMediaRecorder.setCamera(mCamera);
             }
@@ -202,7 +205,7 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
                     //mMediaRecorder.setVideoSize(640, 480); //?
                     //mMediaRecorder.setVideoFrameRate(30);
                     mMediaRecorder.setVideoEncodingBitRate(3 * 1024 * 1024);
-                    //mMediaRecorder.setOrientationHint(90);
+                    mMediaRecorder.setOrientationHint(270);
 
                     //设置记录会话的最大持续时间(毫秒)
                     //mMediaRecorder.setMaxDuration(60 * 1000);
@@ -234,6 +237,7 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
             Log.d(TAG, "bright9#startRecord#stop");
             //如果正在录制视频,则停止录制
             if(mStartedRecordFlg) {
+                mCamera.setPreviewCallback(null); //可以停止录屏前先停止检测人脸，也就是onPreviewFrame接口帧回调
                 try {
                     mMediaRecorder.stop();
                     mMediaRecorder.reset();
@@ -288,6 +292,7 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
     }
 
 
+    //SurfaceHolder的Callback接口回调
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
@@ -296,32 +301,35 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
         callCamera(mSurfaceViewDetect.getHolder());
     }
 
+    //SurfaceHolder的Callback接口回调
     @Override
     public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i1, int i2) {
         if(surfaceHolder.getSurface() == null) {
             return;
         }
-
-        mCamera.stopPreview();
+        Log.d(TAG, "bright9#surfaceChanged");
+        mCamera.stopPreview(); //关闭预览画面
 
         try {
-            mCamera.setPreviewCallback(this);
-            mCamera.setPreviewDisplay(surfaceHolder);
-            mCamera.startPreview();
+            mCamera.setPreviewCallback(this); //设置setPreviewCallback实现onPreviewFrame接口，实时截取每一帧视频流数据
+            mCamera.setPreviewDisplay(surfaceHolder); //给应用程序指定SurfaceView的预览布局。要使用与连接预览相同的对象。
+            mCamera.startPreview();  // 打开预览画面
         } catch (IOException e) {
             e.printStackTrace();
             Log.d(TAG, "bright9#Error starting camera preview: " + e.getMessage());
         }
     }
 
+    //SurfaceHolder的Callback接口回调
     @Override
     public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
-
+        Log.d(TAG, "bright9#surfaceDestroyed");
     }
 
     //Camera.PreviewCallback回调
     @Override
     public void onPreviewFrame(byte[] bytes, Camera camera) {
+        Log.d(TAG, "bright#onPreviewFrame");
         long currentTime = System.currentTimeMillis();
         final Camera.Size previewSize = mCamera.getParameters().getPreviewSize();
 
@@ -390,17 +398,21 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
     //初始化Camera
     private void initCamera(SurfaceHolder surfaceHolder) {
         Log.d(TAG, "bright9#initCamera");
-        mCamera = Camera.open(1);
+        mCamera = Camera.open(1); //打开前置摄像头
         //获取窗口的管理器
         WindowManager windowManager = ((WindowManager) getSystemService(Context.WINDOW_SERVICE));
-        Display display = windowManager.getDefaultDisplay();
+        Display display = windowManager.getDefaultDisplay(); //
+        //获取相机的参数
         mCameraParas = mCamera.getParameters();
+        //获取预览的各种分辨率（一般是预设的推荐分辨率）
         List<Camera.Size> sizeList = mCameraParas.getSupportedPreviewSizes();
+        //没用到？
         Camera.Size size = getOptimalPreviewSize(sizeList, display.getWidth(), display.getHeight());
         if(sizeList.size() > 1) {
             Iterator<Camera.Size> iterator = sizeList.iterator();
             while (iterator.hasNext()) {
                 Camera.Size cur = iterator.next();
+                Log.d(TAG, "bright9#initCamera#Camea.Size#height：" + cur.height + "   width：" + cur.toString());
                 if(cur.height <= 360) {
                     mCameraHeight = cur.height;
                     mCameraWidth = cur.width;
@@ -409,12 +421,12 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
             }
         }
 
-        mCameraParas.setPreviewFpsRange(30000, 30000);
+        mCameraParas.setPreviewFpsRange(30000, 30000); //设置最小和最大帧设置预览
         mCameraParas.setVideoStabilization(true);
 
-        mCameraParas.setPreviewSize(mCameraWidth, mCameraHeight);
+        mCameraParas.setPreviewSize(mCameraWidth, mCameraHeight); // 设置预浏尺寸，注意要在摄像头支持的范围内选择
         try {
-            //把摄像头获得画面显示在SurfaceView控件里面
+            //把摄像头获得画面显示在SurfaceView控件里面，通过SurfaceView显示预览
             mCamera.setPreviewDisplay(mSurfaceViewDetect.getHolder());
         } catch (IOException e) {
             e.printStackTrace();
@@ -426,9 +438,9 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
             mCameraParas.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
         }
 
-        mCamera.setParameters(mCameraParas);
+        mCamera.setParameters(mCameraParas); //设置相机参数
         mCamera.setDisplayOrientation(90);
-        mCamera.startPreview();
+        mCamera.startPreview();  // 打开预览画面
     }
 
     //?
