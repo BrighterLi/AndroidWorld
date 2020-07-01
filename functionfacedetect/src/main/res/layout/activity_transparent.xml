@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.xiaoming.functionvideorecordingandfacerecognition.TransparentActivity">
 
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="111111111111111111"/>
+
 </LinearLayout>

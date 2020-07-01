@@ -47,3 +47,5 @@ Android集成虹软人脸、人证对比，活体检测:https://www.jianshu.com/
 
 4 openvc
 opencvandroid配置:https://www.csdn.net/gather_27/MtjaAgzsMTgzMC1ibG9n.html
+
+5 1 一个Activity覆盖另一个Activity的一部分？

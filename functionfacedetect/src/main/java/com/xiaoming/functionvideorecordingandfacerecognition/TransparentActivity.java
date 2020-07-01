@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+//Android设置Activity背景为透明style的方法:https://www.jianshu.com/p/9b38dc864354
 public class TransparentActivity extends Activity {
 
     @Override
