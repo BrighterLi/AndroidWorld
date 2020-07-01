@@ -48,4 +48,16 @@ Android集成虹软人脸、人证对比，活体检测:https://www.jianshu.com/
 4 openvc
 opencvandroid配置:https://www.csdn.net/gather_27/MtjaAgzsMTgzMC1ibG9n.html
 
-5 1 一个Activity覆盖另一个Activity的一部分？
+5 一个Activity覆盖另一个Activity的一部分
+ 透明来设置
+
+6 绘制圆环
+
+7 上下扫描动画
+方案一：自定义View
+Android使用动画实现微信扫描线效果:https://blog.csdn.net/mp624183768/article/details/79223690?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2
+Android自定义View（五）——带扫描线的View：https://blog.csdn.net/yankebin/article/details/49801797?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase
+精通Android自定义View(二十)自定义仿微信扫一扫效果：https://blog.csdn.net/zl18603543572/article/details/90579106?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-15.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-15.nonecase
+扫脸动画：https://blog.csdn.net/xueshanhaizi/article/details/78281695
+方案二：使用背景图
+Android 实现人脸识别检测时的扫描动画效果（二维码扫描动画效果同理）:https://blog.csdn.net/u010231454/article/details/84986161?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-1

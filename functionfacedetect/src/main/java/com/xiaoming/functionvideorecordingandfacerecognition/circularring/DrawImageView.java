@@ -42,6 +42,7 @@ public class DrawImageView extends View {
         // 第一种方法绘制圆环
         //绘制内圆
         this.paint.setARGB(255, 138, 43, 226);
+        //this.paint.setColor(0x407AFFFF);
         this.paint.setStrokeWidth(2);
         canvas.drawCircle(center, center, innerCircle, this.paint);
 

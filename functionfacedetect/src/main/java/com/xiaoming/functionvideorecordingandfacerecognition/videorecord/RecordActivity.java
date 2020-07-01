@@ -13,6 +13,8 @@ import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.View;
 import android.view.Window;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -38,6 +40,8 @@ public class RecordActivity extends Activity implements SurfaceHolder.Callback{
     private String mPath;
     private int mText = 0;
     private MediaPlayer mMediaPlayer; //视频播放功能类
+
+    private ImageView mIvScanLine;
 
 
     @Override
@@ -68,6 +72,9 @@ public class RecordActivity extends Activity implements SurfaceHolder.Callback{
         mBtnPlay = findViewById(R.id.btn_play_video);
         mTextView = findViewById(R.id.textView);
 
+        mIvScanLine = findViewById(R.id.iv_scan_line);
+
+
         // 视频开启和停止
         mBtnStartStop.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +92,7 @@ public class RecordActivity extends Activity implements SurfaceHolder.Callback{
                 }
                 //如果不是正在录制视频，则开始录制
                 if(!mStartedFlg) {
+                    scanLineAnim();
                     handler.postDelayed(runnable, 1000); //开始计时
                     mImageView.setVisibility(View.GONE);
                     if(mMediaRecorder == null) {
@@ -273,5 +281,13 @@ public class RecordActivity extends Activity implements SurfaceHolder.Callback{
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
 
+    }
+
+    private void scanLineAnim() {
+        Animation lineAnim =  new TranslateAnimation(10,10, -500, 50);
+        lineAnim.setDuration(1500);
+        lineAnim.setRepeatCount(Animation.INFINITE);
+        mIvScanLine.setAnimation(lineAnim);
+        lineAnim.startNow();
     }
 }

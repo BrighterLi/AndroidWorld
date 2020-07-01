@@ -55,7 +55,6 @@ public class CustomSurfaceView extends SurfaceView {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         //获取总宽度,是包含padding值
         mWidthSize = MeasureSpec.getSize(widthMeasureSpec);
-        Log.v(TAG, "bright#onMeasure#mWidthSize: " + mWidthSize);
         //获取屏幕长宽比例，这样设置不会发生畸变，千万不要根据一个手机设定一个数
         //那样换一个手机就可能会出现显示的比例问题
         int screenWidth = ScreenUtil.getScreenWidth(getContext());
@@ -66,7 +65,7 @@ public class CustomSurfaceView extends SurfaceView {
         //是最合适的比例
         double screenWidht2 = 0.65 * screenWidth; //可以通过改变0.65这个数字来改变圆形框大小
         double screenHeight2 = 0.65 * screenHeight;
-        Log.v(TAG, "bright#onMeasure#widthMeasureSpec=" + screenWidth + " heightMeasureSpec= " + screenHeight);
+        Log.v(TAG, "bright9#onMeasure#widthMeasureSpec=" + screenWidth + " heightMeasureSpec= " + screenHeight);
         //绘制的输入参数必须是整数型，做浮点型运算后为float型数据，故需要做取整操作
         //存储测量得到的宽度和高度
     }
@@ -93,18 +92,19 @@ public class CustomSurfaceView extends SurfaceView {
         //paint.setColor(0xFFFFFFFF);
         int center = getWidth()/2;
         Log.d(TAG, "bright9#getWidth()：" + getWidth());
-        int innerCircle = dip2px(mContext, 160); //内圆半径
+        int innerCircle = dip2px(mContext, 93); //内圆半径
         int ringWidth = dip2px(mContext, 8);   //圆环宽度
 
         // 第一种方法绘制圆环
        //绘制内圆
         paint.setARGB(255, 138, 43, 226);
+        //paint.setColor(0x407AFF);
         paint.setStrokeWidth(2);
         canvas.drawCircle(center, center, innerCircle, paint);
 
         //绘制圆环
         paint.setARGB(255, 138, 43, 226);
-        //paint.setColor(0x407AFFFF);
+        //paint.setColor(0x407AFF);
         //paint.setColor(0xFFFFFFFF);
         paint.setStrokeWidth(ringWidth);
         canvas.drawCircle(center, center, innerCircle + 1 +ringWidth/2, paint);
@@ -112,6 +112,7 @@ public class CustomSurfaceView extends SurfaceView {
         //绘制外圆
         paint.setARGB(255, 138, 43, 226);
         //paint.setColor(0xFFFFFFFF);
+        //paint.setColor(0x407AFF);
         paint.setStrokeWidth(2);
         canvas.drawCircle(center, center, innerCircle + ringWidth, paint);
         super.onDraw(canvas);
