@@ -3,8 +3,10 @@ package com.xiaoming.functionvideorecordingandfacerecognition.videorecord.view;
 import android.content.Context;
 import android.graphics.Camera;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.Rect;
 import android.graphics.Region;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -24,18 +26,22 @@ public class CustomSurfaceView extends SurfaceView {
     private Camera mCamera;
     private int mHeight;
     private static String TAG = "CustomSurfaceView";
+    private Context mContext;
 
     public CustomSurfaceView(Context context) {
         super(context);
+        mContext = context;
         initView();
     }
 
     public CustomSurfaceView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        mContext = context;
     }
 
     public CustomSurfaceView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        mContext = context;
     }
 
     private void initView() {
@@ -73,6 +79,7 @@ public class CustomSurfaceView extends SurfaceView {
         Path path = new Path();
         //设置裁剪的圆心、半径
         path.addCircle(mWidthSize / 2, mWidthSize / 2, mWidthSize / 2, Path.Direction.CCW);
+        Log.d(TAG, "bright9#draw#mWidthSize：" + mWidthSize);
         //裁剪画布，并设置其填充方式
         canvas.clipPath(path, Region.Op.REPLACE);
         super.draw(canvas);
@@ -80,6 +87,33 @@ public class CustomSurfaceView extends SurfaceView {
 
     @Override
     protected void onDraw(Canvas canvas) {
+        Paint paint = new Paint();
+        paint.setAntiAlias(true); //消除锯齿
+        paint.setStyle(Paint.Style.STROKE);  //绘制空心圆或 空心矩形
+        //paint.setColor(0xFFFFFFFF);
+        int center = getWidth()/2;
+        Log.d(TAG, "bright9#getWidth()：" + getWidth());
+        int innerCircle = dip2px(mContext, 160); //内圆半径
+        int ringWidth = dip2px(mContext, 8);   //圆环宽度
+
+        // 第一种方法绘制圆环
+       //绘制内圆
+        paint.setARGB(255, 138, 43, 226);
+        paint.setStrokeWidth(2);
+        canvas.drawCircle(center, center, innerCircle, paint);
+
+        //绘制圆环
+        paint.setARGB(255, 138, 43, 226);
+        //paint.setColor(0x407AFFFF);
+        //paint.setColor(0xFFFFFFFF);
+        paint.setStrokeWidth(ringWidth);
+        canvas.drawCircle(center, center, innerCircle + 1 +ringWidth/2, paint);
+
+        //绘制外圆
+        paint.setARGB(255, 138, 43, 226);
+        //paint.setColor(0xFFFFFFFF);
+        paint.setStrokeWidth(2);
+        canvas.drawCircle(center, center, innerCircle + ringWidth, paint);
         super.onDraw(canvas);
     }
 
@@ -92,5 +126,11 @@ public class CustomSurfaceView extends SurfaceView {
         w = screenWidth;
         h = screenHeight;
         super.onSizeChanged(w, h, oldw, oldh);
+    }
+
+    /* 根据手机的分辨率从 dp 的单位 转成为 px(像素) */
+    public static int dip2px(Context context, float dpValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
     }
 }

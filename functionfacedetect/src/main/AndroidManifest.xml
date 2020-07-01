@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xiaoming.functionvideorecordingandfacerecognition">
+
     <!-- 硬件支持 -->
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -16,8 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TransparentActivity"
-            android:theme="@style/MyTransparent"></activity>
+        <activity
+            android:name=".transparent.TransparentActivity"
+            android:theme="@style/MyTransparent" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,11 +28,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".arcface.ArcFaceActivity" />
-        <activity android:name=".videorecord.RecordActivity" />
+        <activity
+            android:name=".videorecord.RecordActivity"
+            android:theme="@style/MyTransparent" />
         <activity android:name=".videorecord2.RecordActivity2" />
         <activity android:name=".arcface.VivoDetectionActivity" />
         <activity android:name=".vivodetection.VivoDetectActivity" />
         <activity android:name=".vivodetection.DetectionActivity" />
+        <activity android:name=".circularring.CircularRingActivity"></activity>
     </application>
 
 </manifest>

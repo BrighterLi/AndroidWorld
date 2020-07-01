@@ -1,5 +1,6 @@
 package com.xiaoming.functionvideorecordingandfacerecognition.videorecord;
 
+import android.app.Activity;
 import android.hardware.Camera;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -22,7 +23,7 @@ import com.xiaoming.functionvideorecordingandfacerecognition.R;
 import com.xiaoming.functionvideorecordingandfacerecognition.videorecord.view.CustomSurfaceView;
 
 //https://blog.csdn.net/woshizisezise/article/details/51878566
-public class RecordActivity extends AppCompatActivity implements SurfaceHolder.Callback{
+public class RecordActivity extends Activity implements SurfaceHolder.Callback{
     private static final String TAG = "RecordActivity";
     private CustomSurfaceView mSurfaceView;
     private Button mBtnStartStop;

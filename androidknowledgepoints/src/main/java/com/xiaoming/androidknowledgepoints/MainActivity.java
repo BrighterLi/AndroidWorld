@@ -18,6 +18,7 @@ import com.xiaoming.androidknowledgepoints.regularexpression.RegularExpressionAc
 import com.xiaoming.androidknowledgepoints.serialization.GoToActivity;
 import com.xiaoming.androidknowledgepoints.serialization.parcelable.SerializationActivity;
 import com.xiaoming.androidknowledgepoints.solib.SoLibEntranceActivity;
+import com.xiaoming.androidknowledgepoints.utils.UtilActivity;
 import com.xiaoming.encryption.EncryptionActivity;
 
 import java.util.ArrayList;
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i) {
                     case 0:
-                        startActivity(new Intent(MainActivity.this, JniActivity.class));
+                        startActivity(new Intent(MainActivity.this, UtilActivity.class));
                         break;
                     case 1:
                     startActivity(new Intent(MainActivity.this, JniActivity.class));
