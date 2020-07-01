@@ -26,7 +26,7 @@ public class DrawImageView extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        int height = getMeasuredHeight();
+        int height = getMeasuredHeight(); //单位是px
         Log.d("DrawImageView", "bright9#onMeasure#getMeasuredHeight：" + getMeasuredHeight());
     }
 
@@ -34,7 +34,7 @@ public class DrawImageView extends View {
     protected void onDraw(Canvas canvas) {
         //getMeasuredWidth():视图绘制的measure阶段，获取的是View原始的大小，也就是这个View在XML文件中配置或者是代码中设置的大小
         //getWidth:layout阶段获取的是这个View最终显示的大小，这个大小有可能等于原始的大小，也有可能不相等
-        int center = getWidth()/2;
+        int center = getWidth()/2; //单位是px
         Log.d("DrawImageView", "bright9#onDraw#getWidth：" + getWidth());
         int innerCircle = dip2px(context, 83); //内圆半径
         int ringWidth = dip2px(context, 10);   //圆环宽度
