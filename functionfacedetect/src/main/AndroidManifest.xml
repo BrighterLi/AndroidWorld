@@ -35,9 +35,12 @@
         <activity android:name=".arcface.VivoDetectionActivity" />
         <activity android:name=".vivodetection.VivoDetectActivity" />
         <activity android:name=".vivodetection.DetectionActivity" />
-        <activity android:name=".circularring.CircularRingActivity"></activity>
+        <activity android:name=".circularring.CircularRingActivity" />
 
-        <service android:name=".videorecordservice.BackgroundVideoRecorder"/>
+        <service android:name=".videorecordservice.BackgroundVideoRecorder" />
+
+        <activity android:name=".facedetectui.FaceDetectUiActivity"
+            android:theme="@style/MyTransparent"></activity>
     </application>
 
 </manifest>

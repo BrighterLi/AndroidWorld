@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.xiaoming.functionvideorecordingandfacerecognition.circularring.CircularRingActivity;
+import com.xiaoming.functionvideorecordingandfacerecognition.facedetectui.FaceDetectUiActivity;
 import com.xiaoming.functionvideorecordingandfacerecognition.transparent.TransparentActivity;
 import com.xiaoming.functionvideorecordingandfacerecognition.videorecord.RecordActivity;
 import com.xiaoming.functionvideorecordingandfacerecognition.videorecordservice.BackgroundVideoRecorder;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtTransparentActivity;
     private Button mBtCircularRing;
     private Button mBtBackgroundVideoRecord;
+    private Button mBtFaceDetectUi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +36,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtTransparentActivity = findViewById(R.id.btn_transparent_activity);
         mBtCircularRing = findViewById(R.id.btn_circular_ring);
         mBtBackgroundVideoRecord = findViewById(R.id.btn_background_video_record);
+        mBtFaceDetectUi = findViewById(R.id.btn_face_detect_ui);
 
         mBtnRecordVideo.setOnClickListener(this);
         mBtnVivoDetect.setOnClickListener(this);
         mBtTransparentActivity.setOnClickListener(this);
         mBtCircularRing.setOnClickListener(this);
         mBtBackgroundVideoRecord.setOnClickListener(this);
+        mBtFaceDetectUi.setOnClickListener(this);
     }
 
     @Override
@@ -59,6 +63,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_background_video_record:
                 startService(new Intent(MainActivity.this, BackgroundVideoRecorder.class ));
+                break;
+            case R.id.btn_face_detect_ui:
+                startActivity(new Intent(MainActivity.this, FaceDetectUiActivity.class ));
                 break;
         }
     }

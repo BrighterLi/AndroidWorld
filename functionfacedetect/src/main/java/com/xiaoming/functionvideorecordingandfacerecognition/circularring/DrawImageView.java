@@ -3,6 +3,7 @@ package com.xiaoming.functionvideorecordingandfacerecognition.circularring;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -41,25 +42,27 @@ public class DrawImageView extends View {
 
         // 第一种方法绘制圆环
         //绘制内圆
-        this.paint.setARGB(255, 138, 43, 226);
+        //this.paint.setARGB(255, 138, 43, 226);
         //this.paint.setColor(0x407AFFFF);
+        this.paint.setColor(Color.RED);
         this.paint.setStrokeWidth(2);
         canvas.drawCircle(center, center, innerCircle, this.paint);
 
         //绘制圆环
-        this.paint.setARGB(255, 138, 43, 226);
+        //this.paint.setARGB(255, 138, 43, 226);
+        //this.paint.setColor(0x407AFFFF);
+        this.paint.setColor(Color.RED);
         this.paint.setStrokeWidth(ringWidth);
         canvas.drawCircle(center, center, innerCircle + 1 +ringWidth/2, this.paint);
 
         //绘制外圆
-        this.paint.setARGB(255, 138, 43, 226);
+        //this.paint.setARGB(255, 138, 43, 226);
+        //this.paint.setColor(0x407AFFFF);
+        this.paint.setColor(Color.RED);
         this.paint.setStrokeWidth(2);
         canvas.drawCircle(center, center, innerCircle + ringWidth, this.paint);
 
         super.onDraw(canvas);
-
-
-
     }
 
 
