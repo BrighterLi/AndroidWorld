@@ -36,6 +36,8 @@
         <activity android:name=".vivodetection.VivoDetectActivity" />
         <activity android:name=".vivodetection.DetectionActivity" />
         <activity android:name=".circularring.CircularRingActivity"></activity>
+
+        <service android:name=".videorecordservice.BackgroundVideoRecorder"/>
     </application>
 
 </manifest>
