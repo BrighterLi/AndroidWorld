@@ -1,4 +1,4 @@
-package com.xiaoming.androidkindsdemo.flutter;
+package com.xiaoming.androidkindsdemo.acrossend.flutter;
 
 import com.xiaoming.androidkindsdemo.base.IBaseFragment;
 

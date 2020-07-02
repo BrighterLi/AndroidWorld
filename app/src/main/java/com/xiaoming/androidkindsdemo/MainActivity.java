@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.xiaoming.acrossslibrary.Add;
-import com.xiaoming.androidkindsdemo.flutter.CustomFlutterActivity;
+import com.xiaoming.androidkindsdemo.acrossend.flutter.CustomFlutterActivity;
 
 public class MainActivity extends AppCompatActivity implements View.
         OnClickListener{

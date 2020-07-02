@@ -1,6 +1,5 @@
-package com.xiaoming.androidkindsdemo.weex;
+package com.xiaoming.androidkindsdemo.acrossend.weex;
 
-import com.xiaoming.androidkindsdemo.R;
 import com.xiaoming.androidkindsdemo.base.BaseFragment;
 
 public class WeexFragment extends BaseFragment {

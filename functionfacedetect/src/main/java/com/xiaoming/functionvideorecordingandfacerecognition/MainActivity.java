@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.xiaoming.functionvideorecordingandfacerecognition.circularring.CircularRingActivity;
 import com.xiaoming.functionvideorecordingandfacerecognition.transparent.TransparentActivity;
 import com.xiaoming.functionvideorecordingandfacerecognition.videorecord.RecordActivity;
+import com.xiaoming.functionvideorecordingandfacerecognition.videorecordservice.BackgroundVideoRecorder;
 import com.xiaoming.functionvideorecordingandfacerecognition.vivodetection.VivoDetectActivity;
 
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnVivoDetect;
     private Button mBtTransparentActivity;
     private Button mBtCircularRing;
+    private Button mBtBackgroundVideoRecord;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +33,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnVivoDetect = findViewById(R.id.btn_vivo_detect);
         mBtTransparentActivity = findViewById(R.id.btn_transparent_activity);
         mBtCircularRing = findViewById(R.id.btn_circular_ring);
+        mBtBackgroundVideoRecord = findViewById(R.id.btn_background_video_record);
 
         mBtnRecordVideo.setOnClickListener(this);
         mBtnVivoDetect.setOnClickListener(this);
         mBtTransparentActivity.setOnClickListener(this);
         mBtCircularRing.setOnClickListener(this);
+        mBtBackgroundVideoRecord.setOnClickListener(this);
     }
 
     @Override
@@ -52,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_circular_ring:
                 startActivity(new Intent(MainActivity.this, CircularRingActivity.class));
+                break;
+            case R.id.btn_background_video_record:
+                startService(new Intent(MainActivity.this, BackgroundVideoRecorder.class ));
                 break;
         }
     }

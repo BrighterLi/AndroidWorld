@@ -1,6 +1,5 @@
-package com.xiaoming.androidkindsdemo.weex;
+package com.xiaoming.androidkindsdemo.acrossend.weex;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.xiaoming.androidkindsdemo.R;

@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".weex.WeexPageActivity"></activity>
-        <activity android:name=".web.WebViewActivity" />
-        <activity android:name=".flutter.CustomFlutterActivity" />
+        <activity android:name=".acrossend.weex.WeexPageActivity"></activity>
+        <activity android:name=".acrossend.web.WebViewActivity" />
+        <activity android:name=".acrossend.flutter.CustomFlutterActivity" />
         <activity android:name=".base.BaseActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

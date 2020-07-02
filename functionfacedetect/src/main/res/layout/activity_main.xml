@@ -30,4 +30,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="绘制圆环"/>
+
+    <Button
+        android:id="@+id/btn_background_video_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="后台录制视频"/>
 </LinearLayout>

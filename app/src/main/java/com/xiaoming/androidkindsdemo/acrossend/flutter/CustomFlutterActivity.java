@@ -1,4 +1,4 @@
-package com.xiaoming.androidkindsdemo.flutter;
+package com.xiaoming.androidkindsdemo.acrossend.flutter;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;

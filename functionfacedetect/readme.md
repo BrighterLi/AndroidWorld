@@ -3,6 +3,7 @@ Android集成虹软人脸、人证对比，活体检测:https://www.jianshu.com/
 1 录制视频Camera
 Android Camera详解:https://www.cnblogs.com/dongweiq/p/6346857.html
 自定义Camera系列之：SurfaceView + Camera:https://blog.csdn.net/afei__/article/details/85255809
+Android 纯原生视频录制 MediaRecorder+SurfaceView 采坑记录：https://blog.csdn.net/qq_39731011/article/details/89916909?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-6
 (1) 功能点
 ui
 录制功能，开始、结束，视频压缩上传到服务器，时间限制，前置摄像头，
@@ -61,3 +62,9 @@ Android自定义View（五）——带扫描线的View：https://blog.csdn.net/y
 扫脸动画：https://blog.csdn.net/xueshanhaizi/article/details/78281695
 方案二：使用背景图
 Android 实现人脸识别检测时的扫描动画效果（二维码扫描动画效果同理）:https://blog.csdn.net/u010231454/article/details/84986161?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-1
+
+8 后台录制视频
+android 后台service 实现无预览页面录像功能：https://blog.csdn.net/fengchen118/article/details/52232499?utm_source=blogxgwz3
+9 上传视频
+
+10 h5调用原生进行人脸检测

@@ -39,8 +39,10 @@ public class MainActivity extends AppCompatActivity {
                 switch (position) {
                     case 0:
                       startActivity(new Intent(MainActivity.this, OpenH5Activity.class));
+                      break;
                     case 1:
                         startActivity(new Intent(MainActivity.this, WebViewAndJSActivity.class));
+                        break;
                 }
             }
         });
