@@ -70,3 +70,9 @@ android 后台service 实现无预览页面录像功能：https://blog.csdn.net/
 10 h5调用原生进行人脸检测
 
 11 毛玻璃效果
+方案一：
+叠加毛玻璃背景图片
+方案二：
+自定义View
+方案三：
+ImageView设置模糊值

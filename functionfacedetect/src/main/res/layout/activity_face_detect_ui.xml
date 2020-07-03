@@ -35,6 +35,14 @@
                 android:layout_marginLeft="88dp"
                 android:layout_marginTop="100dp"
                 android:src="@drawable/face_scan_line"/>
+            <ImageView
+                android:id="@+id/iv_ground_grass"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="88dp"
+                android:layout_marginTop="90dp"
+                android:src="@drawable/groundglass"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
