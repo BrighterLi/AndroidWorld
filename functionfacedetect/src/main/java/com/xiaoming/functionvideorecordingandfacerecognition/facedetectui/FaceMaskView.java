@@ -25,35 +25,35 @@ public class FaceMaskView extends View {
         //paint.setColor(0xFFFFFFFF);
         int center = getWidth()/2;
         Log.d("FaceMaskView", "bright9#onDraw#getWidth()：" + getWidth());
-        int innerCircle = dip2px(mContext, 86); //内圆半径
-        int ringWidth = dip2px(mContext, 8);   //圆环宽度
+        int innerCircle = dip2px(mContext, 89); //内圆半径
+        int ringWidth = dip2px(mContext, 4);   //圆环宽度
 
         // 第一种方法绘制圆环
         //绘制内圆
         //paint.setARGB(255, 138, 43, 226);
-        //paint.setColor(0x407AFF);
-        paint.setARGB(64, 122, 255, 1); //#407AFF转换
+        paint.setColor(0x407AFFFF);
+        //paint.setARGB(64, 122, 255, 1); //#407AFF转换
         //paint.setColor(0xDC143C); //red
         paint.setStrokeWidth(2);
-        canvas.drawCircle(center, center, innerCircle, paint);
+        canvas.drawCircle(center, center-28, innerCircle, paint);
 
         //绘制圆环
         //paint.setARGB(255, 138, 43, 226);
-        //paint.setColor(0x407AFF);
-        paint.setARGB(64, 122, 255, 1); //#407AFF转换
+        paint.setColor(0x407AFFFF);
+        //paint.setARGB(64, 122, 255, 1); //#407AFF转换
         //paint.setColor(0xFFFFFFFF);
         //paint.setColor(0xDC143C);
         paint.setStrokeWidth(ringWidth);
-        canvas.drawCircle(center, center, innerCircle + 1 +ringWidth/2, paint);
+        canvas.drawCircle(center, center-28, innerCircle + 1 +ringWidth/2, paint);
 
         //绘制外圆
         //paint.setARGB(255, 138, 43, 226);
         //paint.setColor(0xFFFFFFFF);
-        //paint.setColor(0x407AFF);
-        paint.setARGB(64, 122, 255, 1); //#407AFF转换
+        paint.setColor(0x407AFFFF);
+        //paint.setARGB(64, 122, 255, 1); //#407AFF转换
         //paint.setColor(0xDC143C); //red
         paint.setStrokeWidth(2);
-        canvas.drawCircle(center, center, innerCircle + ringWidth, paint);
+        canvas.drawCircle(center, center-28, innerCircle + ringWidth, paint);
         super.onDraw(canvas);
     }
 
