@@ -6,19 +6,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.xiaoming.functionvideorecordingandfacerecognition.facedetectui.FaceDetectUiActivity">
+    <Button
+        android:id="@+id/bt_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="111111111111111"
+        android:visibility="gone"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp">
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="44dp"
             android:layout_marginBottom="60dp">
-
 
             <SurfaceView
                 android:id="@+id/surface_view_detect"
@@ -32,12 +35,21 @@
                 android:layout_marginLeft="88dp"
                 android:layout_marginTop="100dp"
                 android:src="@drawable/face_scan_line"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="105dp"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="未检测到人脸" />
 
             <com.xiaoming.functionvideorecordingandfacerecognition.facedetectui.FaceMaskView
+                android:id="@+id/face_mask_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/face_preview560"/>
-
+                android:background="@drawable/face_preview540"/>
         </RelativeLayout>
 
     </LinearLayout>
