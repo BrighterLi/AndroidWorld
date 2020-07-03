@@ -39,8 +39,10 @@
 
         <service android:name=".videorecordservice.BackgroundVideoRecorder" />
 
-        <activity android:name=".facedetectui.FaceDetectUiActivity"
-            android:theme="@style/MyTransparent"></activity>
+        <activity
+            android:name=".facedetectui.FaceDetectUiActivity"
+            android:theme="@style/MyTransparent" />
+        <activity android:name=".facedetectbysolib.FaceDetectBySoLibActivity"></activity>
     </application>
 
 </manifest>
