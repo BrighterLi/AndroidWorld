@@ -76,6 +76,29 @@ public class MainActivity extends AppCompatActivity {
                     case 10:
                         startActivity(new Intent(MainActivity.this, SoLibEntranceActivity.class));
                         break;
+
+
+                    case 11:
+                        startActivity(new Intent(MainActivity.this, IsRootActivity.class));
+                        break;
+                    case 12:
+                        startActivity(new Intent(MainActivity.this, IsVoLteEnabledActivity.class));
+                        break;
+                    case 13:
+                        startActivity(new Intent(MainActivity.this, StatusBarActivity.class));
+                        break;
+                    case 14:
+                        startActivity(new Intent(MainActivity.this, PhoneOperatorActivity.class));
+                        break;
+                    case 15:
+                        startActivity(new Intent(MainActivity.this, NetworkStrengthActivity.class));
+                        break;
+                    case 16:
+                        startActivity(new Intent(MainActivity.this, FastClickActivity.class));
+                        break;
+                    case 17:
+                        startActivity(new Intent(MainActivity.this, DialogShowActivity.class));
+                        break;
                 }
             }
         });
@@ -97,6 +120,13 @@ public class MainActivity extends AppCompatActivity {
         demoDataList.add("正则");
         demoDataList.add("加密解密");
         demoDataList.add("调用so库的方法");
+        demoDataList.add("判断安卓设备是否root");
+        demoDataList.add("获取VoLte开关开关状态");
+        demoDataList.add("获取状态栏高度，改变状态栏颜色");
+        demoDataList.add("获取手机运营商");
+        demoDataList.add("获取信号强度");
+        demoDataList.add("防止快速重复点击");
+        demoDataList.add("Dialog只能在主线程里执行");
 
     }
 }

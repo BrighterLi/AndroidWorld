@@ -3,6 +3,7 @@
     package="com.xiaoming.androidknowledgepoints">
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -33,6 +34,13 @@
         <activity android:name=".json.JsonActivity" />
         <activity android:name=".regularexpression.RegularExpressionActivity" />
         <activity android:name=".solib.SoLibEntranceActivity"></activity>
+        <activity android:name=".FastClickActivity"/>
+        <activity android:name=".NetworkStrengthActivity"/>
+        <activity android:name=".PhoneOperatorActivity"/>
+        <activity android:name=".StatusBarActivity"/>
+        <activity android:name=".IsVoLteEnabledActivity"/>
+        <activity android:name=".IsRootActivity"/>
+        <activity android:name=".DialogShowActivity"/>
     </application>
 
 </manifest>

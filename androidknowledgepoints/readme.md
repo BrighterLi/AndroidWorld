@@ -94,10 +94,40 @@ Java之阻塞和非阻塞以及同步和异步的区别：https://blog.csdn.net/
 32 静默安装
 33 闪屏(图片、gif、视频)
 Android启动页面（闪屏页面）的实现：https://blog.csdn.net/PlainWaterh/article/details/78184847
+34 android设备是否root
+35 获取volte开关状态 0
+36 反射 0
+37 安卓获取状态栏
+  改变状态栏颜色
+     https://blog.csdn.net/maosidiaoxian/article/details/51734895
+38 拍照0
+39 截屏0
+40  改变图片的颜色，将图片置灰0
+41 Android 监听APP进入后台或切换到前台
+ Android 监听APP进入后台或切换到前台方案对比:
+  https://www.cnblogs.com/zhujiabin/p/9336663.html
+  https://www.jianshu.com/p/80b6041f4409
+  方案一：自己定义一个MyApplication继承Application
+    在Application类中，提供了一个应用生命周期回调的注册方法，用来对应用的生命周期进行集中管理，这个接口叫registerActivityLifecycleCallbacks，可以通过它注册自己的ActivityLifeCycleCallback，每一个Activity的生命周期都会回调到这里的对应方法。
+  方案二：直接在具体的某个 Activity中写一个判断是否在前台还是后台的方法，然后在 该Activity的 onStart()、onStop()中判断
+    ActivityManager.RunningAppProcessInfo
+    ActivityManager通过.getRunningAppProcesses()获取当前运行列表这个方法，在5.0以后已经被deprecated掉了
+  方案三：监听Home键点击
+42 防止按钮快速重复点击
+ https://www.cnblogs.com/dingxiansen/p/10442255.html
+43 Android实现电话录音与上传的功能(云服务器)/面对面录音；图片压缩；?
+44 超时0
+45 Toast、Dialog不能在子线程里弹出。
+ 否则会crash崩溃
+ 解决方式：先调用Looper.prepare();再调用Toast.makeText().show();最后再调用Looper.loop();
+46 onKeyDown ?
+47 ThreadLocal ?
+
+
+
 
 三 相关Demo
 1 一款Android图文精选app，通过抓取网页获得图文列表。目前包含猫弄（MONO）早午茶、站酷（Zcool）精选、国家地理（National Geographic）每日一图、知乎日报、豆瓣一刻（Moment）。
 https://github.com/XunMengWinter/Now
 2 天气预报
 天气预报API接口：http://tianqiapi.com/
-
