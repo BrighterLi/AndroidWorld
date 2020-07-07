@@ -53,7 +53,7 @@ public class FaceMaskView extends View {
         //paint.setColor(0xFFFFFFFF);
         //paint.setColor(0xDC143C);
         paint.setStrokeWidth(ringWidth);
-        canvas.drawCircle(center, center-2, innerCircle + 1 + ringWidth/2, paint);
+        canvas.drawCircle(center, center-8, innerCircle + 1 + ringWidth/2, paint);
 
         //绘制外圆
         //paint.setARGB(255, 138, 43, 226);
