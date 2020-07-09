@@ -398,6 +398,7 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
     //初始化Camera
     private void initCamera(SurfaceHolder surfaceHolder) {
         Log.d(TAG, "bright9#initCamera");
+
         mCamera = Camera.open(1); //打开前置摄像头
         //获取窗口的管理器
         WindowManager windowManager = ((WindowManager) getSystemService(Context.WINDOW_SERVICE));
