@@ -230,7 +230,7 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
                     mBtnStartRecord.setText("Stop");
                 }
                 } catch (Exception e) {
-                    Log.d(TAG, "bright9#e：" + e);
+                    Log.d(TAG, "bright99#e：" + e);
                     e.printStackTrace();
                 }
         } else {

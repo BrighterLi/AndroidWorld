@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.xiaoming.functionvideorecordingandfacerecognition.addview.AddViewActivity;
 import com.xiaoming.functionvideorecordingandfacerecognition.circularring.CircularRingActivity;
 import com.xiaoming.functionvideorecordingandfacerecognition.facedetectui.FaceDetectUiActivity;
 import com.xiaoming.functionvideorecordingandfacerecognition.transparent.TransparentActivity;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtCircularRing;
     private Button mBtBackgroundVideoRecord;
     private Button mBtFaceDetectUi;
+    private Button mBtAddView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtCircularRing = findViewById(R.id.btn_circular_ring);
         mBtBackgroundVideoRecord = findViewById(R.id.btn_background_video_record);
         mBtFaceDetectUi = findViewById(R.id.btn_face_detect_ui);
+        mBtAddView = findViewById(R.id.btn_add_view);
 
         mBtnRecordVideo.setOnClickListener(this);
         mBtnVivoDetect.setOnClickListener(this);
@@ -44,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtCircularRing.setOnClickListener(this);
         mBtBackgroundVideoRecord.setOnClickListener(this);
         mBtFaceDetectUi.setOnClickListener(this);
+        mBtAddView.setOnClickListener(this);
     }
 
     @Override
@@ -66,6 +70,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_face_detect_ui:
                 startActivity(new Intent(MainActivity.this, FaceDetectUiActivity.class ));
+                break;
+            case R.id.btn_add_view:
+                startActivity(new Intent(MainActivity.this, AddViewActivity.class ));
                 break;
         }
     }

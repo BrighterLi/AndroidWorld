@@ -42,4 +42,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="人脸检测UI"/>
+
+    <Button
+        android:id="@+id/btn_add_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ContentView的添加和隐藏以及移除"/>
 </LinearLayout>
