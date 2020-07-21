@@ -1,4 +1,4 @@
-package com.xiaoming.encryption;
+package com.xiaoming.androidknowledgepoints.encryption;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

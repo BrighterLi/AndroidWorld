@@ -16,10 +16,9 @@ import com.xiaoming.androidknowledgepoints.json.JsonActivity;
 import com.xiaoming.androidknowledgepoints.reflect.ReflectActivity;
 import com.xiaoming.androidknowledgepoints.regularexpression.RegularExpressionActivity;
 import com.xiaoming.androidknowledgepoints.serialization.GoToActivity;
-import com.xiaoming.androidknowledgepoints.serialization.parcelable.SerializationActivity;
 import com.xiaoming.androidknowledgepoints.solib.SoLibEntranceActivity;
 import com.xiaoming.androidknowledgepoints.utils.UtilActivity;
-import com.xiaoming.encryption.EncryptionActivity;
+import com.xiaoming.androidknowledgepoints.encryption.EncryptionActivity;
 
 import java.util.ArrayList;
 import java.util.List;
