@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xiaoming.androidknowledgepoints.datastorage.File.FileActivity">
+
+    <Button
+        android:id="@+id/bt_new_folder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="新建文件夹"/>
+
+    <Button
+        android:id="@+id/bt_new_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="新建文件"/>
+
+    <Button
+        android:id="@+id/bt_write_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="写数据到文件中"/>
+
+    <Button
+        android:id="@+id/bt_continue_write_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="续写数据到文件中"/>
+
+    <Button
+        android:id="@+id/bt_read_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="从文件中读数据"/>
+
+</LinearLayout>
