@@ -10,6 +10,7 @@ import android.media.MediaRecorder;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
@@ -57,6 +58,8 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
     private boolean mStartedRecordFlg = false; //是否正在录像
     private MediaPlayer mMediaPlayer; //视频播放功能类
     private boolean mIsPlay; //是否播放中
+    private long mOnPreviewTime;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -203,7 +206,7 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
                     mMediaRecorder.setVideoEncoder(MediaRecorder.VideoEncoder.MPEG_4_SP);
 
                     //mMediaRecorder.setVideoSize(640, 480); //?
-                    //mMediaRecorder.setVideoFrameRate(30);
+                    //mMediaRecorder.setVideoFrameRate(27);
                     mMediaRecorder.setVideoEncodingBitRate(3 * 1024 * 1024);
                     mMediaRecorder.setOrientationHint(270);
 
@@ -329,36 +332,41 @@ public class DetectionActivity extends AppCompatActivity implements SurfaceHolde
     //Camera.PreviewCallback回调
     @Override
     public void onPreviewFrame(byte[] bytes, Camera camera) {
-        Log.d(TAG, "bright#onPreviewFrame");
         long currentTime = System.currentTimeMillis();
-        final Camera.Size previewSize = mCamera.getParameters().getPreviewSize();
+        if(currentTime - mOnPreviewTime > 1000) {
+            Log.d("bright", "onPreviewFrame");
+            mOnPreviewTime = currentTime;
 
-        //获取活体检测的结果
-        int state = mVivoDetection.aliveDetection(bytes, previewSize.height, previewSize.width);
-        long diff = System.currentTimeMillis() - currentTime;
-        mTvDetectTime.setText("检测时间:" + String.valueOf(diff));
-        if(state % 10 == 0) {
-            mTvVivoState.setText("活体状态：假脸");
-        } else {
-            mTvVivoState.setText("活体状态：真脸");
+            final Camera.Size previewSize = mCamera.getParameters().getPreviewSize();
+
+            //获取活体检测的结果
+            int state = mVivoDetection.aliveDetection(bytes, previewSize.height, previewSize.width);
+            long diff = System.currentTimeMillis() - currentTime;
+            mTvDetectTime.setText("检测时间:" + String.valueOf(diff));
+            if(state % 10 == 0) {
+                mTvVivoState.setText("活体状态：假脸");
+            } else {
+                mTvVivoState.setText("活体状态：真脸");
+            }
+
+            if(state / 10 == 6) {
+                mTvActionState.setText("动作状态：不能检测到人脸");
+            } else if (state / 10 == 0) {
+                mTvActionState.setText("动作状态：正常");
+            } else if (state / 10 == 1) {
+                mTvActionState.setText("动作状态：摇头");
+            } else if (state / 10 == 2) {
+                mTvActionState.setText("动作状态：抬头");
+            } else if (state / 10 == 3) {
+                mTvActionState.setText("动作状态：低头");
+            } else if (state / 10 == 4) {
+                mTvActionState.setText("动作状态：闭眼");
+            } else if (state / 10 == 5) {
+                mTvActionState.setText("动作状态：张嘴");
+            }
+            Log.d(TAG, "bright#state:" + state);
         }
 
-        if(state / 10 == 6) {
-            mTvActionState.setText("动作状态：不能检测到人脸");
-        } else if (state / 10 == 0) {
-            mTvActionState.setText("动作状态：正常");
-        } else if (state / 10 == 1) {
-            mTvActionState.setText("动作状态：摇头");
-        } else if (state / 10 == 2) {
-            mTvActionState.setText("动作状态：抬头");
-        } else if (state / 10 == 3) {
-            mTvActionState.setText("动作状态：低头");
-        } else if (state / 10 == 4) {
-            mTvActionState.setText("动作状态：闭眼");
-        } else if (state / 10 == 5) {
-            mTvActionState.setText("动作状态：张嘴");
-        }
-        Log.d(TAG, "bright#state:" + state);
     }
 
     //判断权限是否开启
