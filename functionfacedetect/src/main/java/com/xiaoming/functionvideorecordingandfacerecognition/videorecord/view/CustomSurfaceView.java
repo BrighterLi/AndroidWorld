@@ -75,12 +75,12 @@ public class CustomSurfaceView extends SurfaceView {
     //这个绘制在16:9的手机上显示很好，但是在更长的手机上（大于16/9）会偏上，
     @Override
     public void draw(Canvas canvas) {
-        Path path = new Path();
+        /*Path path = new Path();
         //设置裁剪的圆心、半径
         path.addCircle(mWidthSize / 2, mWidthSize / 2, mWidthSize / 2, Path.Direction.CCW);
         Log.d(TAG, "bright9#draw#mWidthSize：" + mWidthSize);
         //裁剪画布，并设置其填充方式
-        canvas.clipPath(path, Region.Op.REPLACE);
+        canvas.clipPath(path, Region.Op.REPLACE);*/
         super.draw(canvas);
     }
 
