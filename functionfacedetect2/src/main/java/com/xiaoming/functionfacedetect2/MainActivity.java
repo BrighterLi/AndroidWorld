@@ -39,6 +39,7 @@ public class MainActivity extends Activity implements EasyPermissions.Permission
     private String mVideoPath; //视频保存路径
     private boolean mStartedRecordFlg = false; //是否正在录像
     private SurfaceHolder mSurfaceHolder; //作用就像一个关于Surface的监听器，提供访问和控制SurfaceView背后的Surface 相关的方法
+    private long mOnPreviewTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,6 +114,11 @@ public class MainActivity extends Activity implements EasyPermissions.Permission
     @Override
     public void onPreviewFrame(byte[] bytes, Camera camera) {
         Log.d("MainActivity", "bright9#onPreviewFrame");
+        long currentTime = System.currentTimeMillis();
+        if(currentTime - mOnPreviewTime > 2 * 1000) {
+            mOnPreviewTime = currentTime;
+            Log.d("MainActivity", "bright9#onPreviewFrame2");
+        }
     }
 
     @Override
@@ -180,7 +186,7 @@ public class MainActivity extends Activity implements EasyPermissions.Permission
         mCamera.setParameters(parameters);
         mCamera.setDisplayOrientation(90);
         mCamera.setPreviewCallback(this);
-        mCamera.startPreview();
+        mCamera.startPreview(); //开始预览
     }
 
     private void startVideoRecord() {
