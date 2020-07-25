@@ -119,13 +119,13 @@ public class RecordActivity extends Activity implements SurfaceHolder.Callback{
                         mMediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
                         mMediaRecorder.setVideoEncoder(MediaRecorder.VideoEncoder.MPEG_4_SP);
 
-                        mMediaRecorder.setVideoSize(640, 480); //?
+                        //mMediaRecorder.setVideoSize(640, 480); //华为手机需要屏蔽掉,不然报start failed
                         mMediaRecorder.setVideoFrameRate(30);
-                        mMediaRecorder.setVideoEncodingBitRate(3 * 1024 * 1024);
+                        //mMediaRecorder.setVideoEncodingBitRate(3 * 1024 * 1024); //华为手机需要屏蔽掉,不然报start failed
                         mMediaRecorder.setOrientationHint(90);
 
                         //设置记录会话的最大持续时间(毫秒)
-                        mMediaRecorder.setMaxDuration(60 * 1000);
+                        //mMediaRecorder.setMaxDuration(60 * 1000); //华为手机需要屏蔽掉,不然拍出来的视频播放不了
                         mMediaRecorder.setPreviewDisplay(mSurfaceHolder.getSurface());
 
                         //视频存储的路径
@@ -150,6 +150,7 @@ public class RecordActivity extends Activity implements SurfaceHolder.Callback{
 
 
                     } catch (Exception e) {
+                        Log.d("RecordActivity", "bright9#视频开启#e：" + e);
                         e.printStackTrace();
                     }
                 } else {
@@ -167,6 +168,7 @@ public class RecordActivity extends Activity implements SurfaceHolder.Callback{
                                 mCamera = null;
                             }
                         } catch (Exception e) {
+                            Log.d("RecordActivity", "bright9#停止#e：" + e);
                             e.printStackTrace();
                         }
                     }
@@ -192,11 +194,12 @@ public class RecordActivity extends Activity implements SurfaceHolder.Callback{
 
                 try {
                     mMediaPlayer.prepare();
+                    mMediaPlayer.start();
                 } catch (Exception e) {
+                    Log.d("RecordActivity", "bright9#视频播放#e：" + e);
                     e.printStackTrace();
                 }
                 //视频播放
-                mMediaPlayer.start();
             }
         });
 

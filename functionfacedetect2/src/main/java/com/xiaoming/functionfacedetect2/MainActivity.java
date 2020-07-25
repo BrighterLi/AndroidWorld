@@ -112,7 +112,7 @@ public class MainActivity extends Activity implements EasyPermissions.Permission
 
     @Override
     public void onPreviewFrame(byte[] bytes, Camera camera) {
-
+        Log.d("MainActivity", "bright9#onPreviewFrame");
     }
 
     @Override
@@ -170,7 +170,7 @@ public class MainActivity extends Activity implements EasyPermissions.Permission
 
         mCamera.setParameters(parameters);
         mCamera.setDisplayOrientation(90);
-        //mCamera.setPreviewCallback(this);
+        mCamera.setPreviewCallback(this);
         mCamera.startPreview();
     }
 
@@ -207,15 +207,15 @@ public class MainActivity extends Activity implements EasyPermissions.Permission
                 mMediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB); //音频编码
                 mMediaRecorder.setVideoEncoder(MediaRecorder.VideoEncoder.MPEG_4_SP); //图像编码
 
-                //mMediaRecorder.setVideoSize(640, 480); //?
-                //mMediaRecorder.setVideoFrameRate(); //帧率
+                //mMediaRecorder.setVideoSize(640, 480);//华为手机需要屏蔽掉,不然报start failed
+                //mMediaRecorder.setVideoFrameRate(30); //帧率
                 //设置码率 越高清数越大
 
-                mMediaRecorder.setVideoEncodingBitRate(3 * 1024 * 1024);
+                //mMediaRecorder.setVideoEncodingBitRate(3 * 1024 * 1024); //华为手机需要屏蔽掉,不然报start failed
                 mMediaRecorder.setOrientationHint(270);
 
                 //设置记录会话的最大持续时间(毫秒)
-                mMediaRecorder.setMaxDuration(60 * 1000);
+                //mMediaRecorder.setMaxDuration(60 * 1000); //华为手机需要屏蔽掉,不然拍出来的视频播放不了
                 mMediaRecorder.setPreviewDisplay(mSurfaceHolder.getSurface());
                 //视频存储的路径
                 mVideoPath = getSDPath();
