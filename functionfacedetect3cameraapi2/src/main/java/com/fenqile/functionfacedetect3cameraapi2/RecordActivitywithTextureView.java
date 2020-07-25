@@ -26,7 +26,6 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.Size;
 import android.view.Surface;
-import android.view.SurfaceView;
 import android.view.TextureView;
 import android.view.View;
 import android.widget.Button;
@@ -39,6 +38,7 @@ import java.util.List;
 
 import pub.devrel.easypermissions.EasyPermissions;
 
+//Android开发 MediaRecorder使用Camera2配合录制视频:https://www.cnblogs.com/guanxinjing/p/11009192.html
 public class RecordActivitywithTextureView extends Activity implements EasyPermissions.PermissionCallbacks{
     private static final String TAG = "MainActivity";
     private static int RC_READ_EXTERNAL_STORAGE = 2;

@@ -7,6 +7,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
 
+//Camera2录制视频:https://www.jianshu.com/p/645e048cb491
 public class RecordActivityWithSurfaceView extends Activity {
     private Button mBtStartRecord;
     private Button mBtStopRecord;
