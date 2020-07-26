@@ -1,4 +1,4 @@
-package com.xiaoming.rxlifecycle;
+package com.xiaoming.function;
 
 import org.junit.Test;
 

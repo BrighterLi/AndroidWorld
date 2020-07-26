@@ -1,4 +1,4 @@
-package com.xiaoming.rxlifecycle;
+package com.xiaoming.function;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.xiaoming.rxlifecycle", appContext.getPackageName());
+        assertEquals("com.xiaoming.function", appContext.getPackageName());
     }
 }
