@@ -8,13 +8,13 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/bt_record_textureview"
+        android:id="@+id/bt_record_surfaceview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="录屏使用SurfaceView"/>
 
     <Button
-        android:id="@+id/bt_record_surfaceview"
+        android:id="@+id/bt_record_textureview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="录屏使用SurfaceView"/>
