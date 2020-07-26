@@ -31,6 +31,7 @@ public class UtilActivity extends Activity {
     private void initData() {
         demoDataList = new ArrayList<>();
         demoDataList.add("获取屏幕宽高");
+        demoDataList.add("获取ROM类型");
     }
 
     private void initView() {
@@ -42,6 +43,10 @@ public class UtilActivity extends Activity {
                    case 0:
                        Point point = ScreenUtil.getScreenSize(getApplicationContext());
                        Toast.makeText(UtilActivity.this, "weight：" + point.x + "  height:：" + point.y, Toast.LENGTH_SHORT).show();
+                       break;
+                   case 1:
+                       boolean isHuaWei = RomUtil.isEmui();
+                       Toast.makeText(UtilActivity.this, "是否华为：" + isHuaWei, Toast.LENGTH_SHORT).show();
                        break;
                }
             }
