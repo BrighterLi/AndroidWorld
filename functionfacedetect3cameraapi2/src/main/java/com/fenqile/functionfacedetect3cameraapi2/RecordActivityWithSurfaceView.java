@@ -3,6 +3,7 @@ package com.fenqile.functionfacedetect3cameraapi2;
 import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
+import android.graphics.ImageFormat;
 import android.graphics.PixelFormat;
 import android.graphics.SurfaceTexture;
 import android.hardware.camera2.CameraAccessException;
@@ -35,6 +36,8 @@ import java.util.Comparator;
 import java.util.List;
 
 //Camera2 API 采集视频并SurfaceView、TextureView 预览:https://www.jianshu.com/p/e01c11b96829
+//Android Camera2 获取预览帧的回调数据（带demo）:https://blog.csdn.net/afei__/article/details/92102775
+
 //Camera2录制视频:https://www.jianshu.com/p/645e048cb491
 public class RecordActivityWithSurfaceView extends Activity {
     private static final String TAG = "RecordActivity";
@@ -51,6 +54,8 @@ public class RecordActivityWithSurfaceView extends Activity {
     private CaptureRequest mCaptureRequest;
     private CameraCaptureSession mCameraCaptureSession;
     private SurfaceHolder mSurfaceHolder;
+
+    private ImageReader mPreviewImageReader;
 
 
     @Override
@@ -139,9 +144,12 @@ public class RecordActivityWithSurfaceView extends Activity {
                 assert map != null;
                 mPreviewSize = getOptimalSize(map.getOutputSizes(SurfaceTexture.class),width,height);
                 //mPreviewSize = map.getOutputSizes(SurfaceTexture.class)[0];
+                initImageReader();
+                setImageAvailableListener();
                 mCameraId = cameraId;
             }
         } catch (CameraAccessException e) {
+            Log.d(TAG,"bright9#setupCamera#setupCamera#CameraAccessException:"+ e);
             e.printStackTrace();
         }
     }
@@ -183,6 +191,7 @@ public class RecordActivityWithSurfaceView extends Activity {
             Log.d(TAG,"mCameraId === " + mCameraId);
             cameraManager.openCamera(mCameraId,mCameraDeviceStateCallback,mCameraHandler);
         } catch (CameraAccessException e) {
+            Log.d(TAG,"bright9#openCamera#CameraAccessException:" + e);
             e.printStackTrace();
         }
     }
@@ -225,6 +234,8 @@ public class RecordActivityWithSurfaceView extends Activity {
             Surface surface = mSurfaceHolder.getSurface();
 
             mCaptureRequestBuilder = mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
+            mCaptureRequestBuilder.addTarget(surface); // 设置预览输出的 Surface
+            mCaptureRequestBuilder.addTarget(mPreviewImageReader.getSurface()); // 设置预览回调的 Surface
             if (surface!=null){
                 Log.d(TAG,"bright9#startPreView#SURFACE不为空");
                 mCaptureRequestBuilder.addTarget(surface);
@@ -232,7 +243,7 @@ public class RecordActivityWithSurfaceView extends Activity {
                 Log.d(TAG,"bright9#startPreView#SURFACE为空");
             }
 
-            mCameraDevice.createCaptureSession(Arrays.asList(surface), new CameraCaptureSession.StateCallback() {
+            mCameraDevice.createCaptureSession(Arrays.asList(surface, mPreviewImageReader.getSurface()), new CameraCaptureSession.StateCallback() {
                 @Override
                 public void onConfigured(@NonNull CameraCaptureSession session) {
                     Log.d(TAG,"bright9#startPreView#onConfigured");
@@ -253,6 +264,7 @@ public class RecordActivityWithSurfaceView extends Activity {
                 }
             },mCameraHandler);
         } catch (CameraAccessException e) {
+            Log.d(TAG,"bright9#startPreView#mCameraDevice.createCaptureSession#CameraAccessException:" + e);
             e.printStackTrace();
         }
     }
@@ -271,5 +283,29 @@ public class RecordActivityWithSurfaceView extends Activity {
             mCameraDevice.close();
             mCameraDevice = null;
         }
+
+        if (mPreviewImageReader != null) {
+            mPreviewImageReader.close();
+            mPreviewImageReader = null;
+        }
+    }
+
+   private void initImageReader() {
+       mPreviewImageReader = ImageReader.newInstance(
+               mPreviewSize.getWidth(), // 宽度
+               mPreviewSize.getHeight(), // 高度
+               ImageFormat.YUV_420_888, // 图像格式
+               2); // 用户能同时得到的最大图
+   }
+
+    private void setImageAvailableListener() {
+        Log.d(TAG,"bright9#setImageAvailableListener");
+        mPreviewImageReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() {
+            @Override
+            public void onImageAvailable(ImageReader reader) {
+                // 回调得到并非我们之前所熟悉的 byte[] 数组，而是一个 ImageReader 对象，我们可以通过这个 ImageReader 对象来得到以往所熟悉的 byte[] 数组
+                Log.d(TAG,"bright9#setImageAvailableListener#onImageAvailable");
+            }
+        }, null);
     }
 }
