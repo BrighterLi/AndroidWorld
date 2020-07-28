@@ -87,9 +87,9 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
     //创建View，这个view就是weex页面
     @Override
     public void onViewCreated(WXSDKInstance wxsdkInstance, View view) {
-        //setContentView(view);
+        //setContentView(view);  //整个根布局设置成weex这个view
         if(mWeexContainer != null) {
-            mWeexContainer.addView(view);
+            mWeexContainer.addView(view); //Activity布局的一部分加进weex这个view
             //不起作用
             //view.setBackgroundColor(0xffff6830);
         }
