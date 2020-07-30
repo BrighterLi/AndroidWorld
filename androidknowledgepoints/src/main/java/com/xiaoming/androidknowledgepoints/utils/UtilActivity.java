@@ -47,6 +47,8 @@ public class UtilActivity extends Activity {
                    case 1:
                        boolean isHuaWei = RomUtil.isEmui();
                        Toast.makeText(UtilActivity.this, "是否华为：" + isHuaWei, Toast.LENGTH_SHORT).show();
+                       boolean isSamsung = RomUtil.isSamsung();
+                       Toast.makeText(UtilActivity.this, "是否三星：" + isSamsung, Toast.LENGTH_SHORT).show();
                        break;
                }
             }

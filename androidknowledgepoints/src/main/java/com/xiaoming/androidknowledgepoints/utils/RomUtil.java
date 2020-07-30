@@ -120,4 +120,12 @@ public class RomUtil {
         }
         return line;
     }
+
+    public static boolean isSamsung() {
+        return getManufacturer().toLowerCase().indexOf("samsung") != -1;
+    }
+
+    public static String getManufacturer() {
+        return Build.MANUFACTURER;
+    }
 }
