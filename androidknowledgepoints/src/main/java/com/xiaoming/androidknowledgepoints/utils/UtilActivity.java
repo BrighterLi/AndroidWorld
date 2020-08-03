@@ -32,6 +32,7 @@ public class UtilActivity extends Activity {
         demoDataList = new ArrayList<>();
         demoDataList.add("获取屏幕宽高");
         demoDataList.add("获取ROM类型");
+        demoDataList.add("系统工具类");
     }
 
     private void initView() {
@@ -46,7 +47,12 @@ public class UtilActivity extends Activity {
                        break;
                    case 1:
                        boolean isHuaWei = RomUtil.isEmui();
-                       Toast.makeText(UtilActivity.this, "是否华为：" + isHuaWei, Toast.LENGTH_SHORT).show();
+                       Toast.makeText(UtilActivity.this, "是否华为：" + isHuaWei, Toast.LENGTH_LONG).show();
+                       break;
+                   case 2:
+                       String phoneBrand = SystemUtil.getDeviceBrand(); //手机厂商
+                       String phoneModel = SystemUtil.getSystemModel(); //手机型号
+                       Toast.makeText(UtilActivity.this, "手机厂商：" + phoneBrand + "\n手机型号：" + phoneModel, Toast.LENGTH_LONG).show();
                        break;
                }
             }

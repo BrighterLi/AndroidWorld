@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.xiaoming.functionvideorecordingandfacerecognition.addview.AddViewActivity;
 import com.xiaoming.functionvideorecordingandfacerecognition.circularring.CircularRingActivity;
 import com.xiaoming.functionvideorecordingandfacerecognition.facedetectui.FaceDetectUiActivity;
+import com.xiaoming.functionvideorecordingandfacerecognition.facedetectui2.FaceDetectUi2Activity;
 import com.xiaoming.functionvideorecordingandfacerecognition.transparent.TransparentActivity;
 import com.xiaoming.functionvideorecordingandfacerecognition.videorecord.RecordActivity;
 import com.xiaoming.functionvideorecordingandfacerecognition.videorecordservice.BackgroundVideoRecorder;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtCircularRing;
     private Button mBtBackgroundVideoRecord;
     private Button mBtFaceDetectUi;
+    private Button mBtFaceDetectUi2;
     private Button mBtAddView;
 
     @Override
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtCircularRing = findViewById(R.id.btn_circular_ring);
         mBtBackgroundVideoRecord = findViewById(R.id.btn_background_video_record);
         mBtFaceDetectUi = findViewById(R.id.btn_face_detect_ui);
+        mBtFaceDetectUi2 = findViewById(R.id.btn_face_detect_ui2);
         mBtAddView = findViewById(R.id.btn_add_view);
 
         mBtnRecordVideo.setOnClickListener(this);
@@ -47,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtCircularRing.setOnClickListener(this);
         mBtBackgroundVideoRecord.setOnClickListener(this);
         mBtFaceDetectUi.setOnClickListener(this);
+        mBtFaceDetectUi2.setOnClickListener(this);
         mBtAddView.setOnClickListener(this);
     }
 
@@ -70,6 +74,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_face_detect_ui:
                 startActivity(new Intent(MainActivity.this, FaceDetectUiActivity.class ));
+                break;
+            case R.id.btn_face_detect_ui2:
+                startActivity(new Intent(MainActivity.this, FaceDetectUi2Activity.class ));
                 break;
             case R.id.btn_add_view:
                 startActivity(new Intent(MainActivity.this, AddViewActivity.class ));

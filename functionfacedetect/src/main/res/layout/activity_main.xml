@@ -11,41 +11,47 @@
         android:id="@+id/btn_record_video"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="视频录制"/>
+        android:text="视频录制" />
 
     <Button
         android:id="@+id/btn_vivo_detect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="活体检测"/>
+        android:text="活体检测" />
 
     <Button
         android:id="@+id/btn_transparent_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="透明的Activity"/>
+        android:text="透明的Activity" />
 
     <Button
         android:id="@+id/btn_circular_ring"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="绘制圆环"/>
+        android:text="绘制圆环" />
 
     <Button
         android:id="@+id/btn_background_video_record"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="后台录制视频"/>
+        android:text="后台录制视频" />
 
     <Button
         android:id="@+id/btn_face_detect_ui"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="人脸检测UI"/>
+        android:text="人脸检测UI" />
+
+    <Button
+        android:id="@+id/btn_face_detect_ui2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="人脸检测UI2" />
 
     <Button
         android:id="@+id/btn_add_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ContentView的添加和隐藏以及移除"/>
+        android:text="ContentView的添加和隐藏以及移除" />
 </LinearLayout>
