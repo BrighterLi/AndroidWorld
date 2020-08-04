@@ -51,7 +51,7 @@
         android:layout_height="308dp"
         android:background="#ffffffff" />
 
-    <com.xiaoming.functionvideorecordingandfacerecognition.facedetectui2.FaceDetectView2
+    <com.xiaoming.functionvideorecordingandfacerecognition.facedetectui2.FaceMaskView2
         android:id="@+id/face_mask_view2"
         android:layout_width="220dp"
         android:layout_height="220dp"
@@ -73,13 +73,12 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/face_mask_view2"
         android:background="#ffffffff" />
+
     <TextView
         android:id="@+id/tv_face_detect_tip_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="88dp"
-        android:layout_marginRight="88dp"
-        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:layout_below="@id/face_mask_view2"
         android:text="请将你的脸放在相框内"
