@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="80dp"
+    android:layout_marginBottom="80dp"
+    android:background="#00ffffff">
+
+    <SurfaceView
+        android:id="@+id/surface_view_detect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <ImageView
+        android:id="@+id/iv_scan_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/face_scan_line" />
+
+    <ImageView
+        android:id="@+id/iv_ground_grass"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="105dp"
+        android:src="@drawable/ground_glass" />
+
+    <TextView
+        android:id="@+id/tv_detect_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="138dp"
+        android:layout_marginTop="115dp"
+        android:text="未检测到人脸"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/iv_up_background"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="#ffffffff" />
+
+    <ImageView
+        android:id="@+id/iv_left_background"
+        android:layout_width="88dp"
+        android:layout_height="308dp"
+        android:background="#ffffffff" />
+
+    <com.xiaoming.functionvideorecordingandfacerecognition.facedetectui2.FaceMaskView2
+        android:id="@+id/face_mask_view2"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_below="@+id/iv_up_background"
+        android:layout_toRightOf="@+id/iv_left_background"
+        android:background="@drawable/face_preview" />
+
+    <ImageView
+        android:id="@+id/iv_right_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="88dp"
+        android:layout_toRightOf="@+id/face_mask_view2"
+        android:background="#ffffffff" />
+
+    <ImageView
+        android:id="@+id/iv_below_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/face_mask_view2"
+        android:background="#ffffffff" />
+
+    <TextView
+        android:id="@+id/tv_face_detect_tip_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/face_mask_view2"
+        android:text="请将你的脸放在相框内"
+        android:textColor="#FF050C1C"
+        android:maxLines="5"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</RelativeLayout>
+
