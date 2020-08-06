@@ -47,7 +47,7 @@
 
     <ImageView
         android:id="@+id/iv_left_background"
-        android:layout_width="88dp"
+        android:layout_width="68dp"
         android:layout_height="308dp"
         android:background="#ffffffff" />
 
@@ -78,7 +78,9 @@
         android:id="@+id/tv_face_detect_tip_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="88dp"
+        android:layout_marginRight="88dp"
+        android:layout_gravity="center"
         android:layout_marginTop="40dp"
         android:layout_below="@id/face_mask_view2"
         android:text="请将你的脸放在相框内"
