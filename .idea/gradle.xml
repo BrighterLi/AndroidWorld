@@ -3,9 +3,6 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <compositeConfiguration>
-          <compositeBuild compositeDefinitionSource="SCRIPT" />
-        </compositeConfiguration>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
@@ -58,6 +55,7 @@
             <option value="$PROJECT_DIR$/frametinker" />
             <option value="$PROJECT_DIR$/fuctionchoosephotoandcrop" />
             <option value="$PROJECT_DIR$/fuctionmodule" />
+            <option value="$PROJECT_DIR$/function" />
             <option value="$PROJECT_DIR$/functionbaidumaker" />
             <option value="$PROJECT_DIR$/functionfacedetect" />
             <option value="$PROJECT_DIR$/functionfacedetect2" />
@@ -74,7 +72,6 @@
             <option value="$PROJECT_DIR$/ointent" />
             <option value="$PROJECT_DIR$/olayoutinflater" />
             <option value="$PROJECT_DIR$/openCVLibrary342" />
-            <option value="$PROJECT_DIR$/rxlifecycle" />
             <option value="$PROJECT_DIR$/thirdpartyinterfaces" />
             <option value="$PROJECT_DIR$/tools" />
             <option value="$PROJECT_DIR$/toolsgradle" />
@@ -103,7 +100,7 @@
             <option value="$PROJECT_DIR$/widgetviewpager" />
             <option value="$PROJECT_DIR$/widgetwheelview" />
             <option value="$PROJECT_DIR$/widigetimageview" />
-            <option value="E:/flutter_mix/.android/Flutter" />
+            <option value="$PROJECT_DIR$/../flutter_mix/.android/Flutter" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //setTheme(R.style.AppThemeSplash);
+        setTheme(R.style.AppTheme); //设置的自定义的主题显示后显示自带的主题，之前的主题消失
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
