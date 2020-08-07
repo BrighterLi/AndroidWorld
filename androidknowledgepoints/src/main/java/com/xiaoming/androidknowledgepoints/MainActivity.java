@@ -1,5 +1,6 @@
 package com.xiaoming.androidknowledgepoints;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,13 +25,12 @@ import com.xiaoming.androidknowledgepoints.encryption.EncryptionActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     private ListView mLvMain;
     private List<String> demoDataList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.AppTheme); //设置的自定义的主题显示后显示自带的主题，之前的主题消失
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

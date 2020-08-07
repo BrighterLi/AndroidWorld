@@ -21,4 +21,15 @@
         <item name="colorAccent">@color/theme_color</item>
     </style>
 
+    <style name="AppThemeSplash2" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="colorAccent">@color/theme_color</item>
+    </style>
+
+    <style name="AppThemeSplashHuawei" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_huawei</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="colorAccent">@color/theme_color</item>
+    </style>
+
 </resources>
