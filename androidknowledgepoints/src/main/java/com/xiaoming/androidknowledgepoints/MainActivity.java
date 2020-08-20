@@ -17,6 +17,7 @@ import com.xiaoming.androidknowledgepoints.jnidemo2.Jni2Activity;
 import com.xiaoming.androidknowledgepoints.json.JsonActivity;
 import com.xiaoming.androidknowledgepoints.reflect.ReflectActivity;
 import com.xiaoming.androidknowledgepoints.regularexpression.RegularExpressionActivity;
+import com.xiaoming.androidknowledgepoints.scheme.SchemeActivity;
 import com.xiaoming.androidknowledgepoints.serialization.GoToActivity;
 import com.xiaoming.androidknowledgepoints.solib.SoLibEntranceActivity;
 import com.xiaoming.androidknowledgepoints.utils.UtilActivity;
@@ -103,6 +104,9 @@ public class MainActivity extends Activity {
                     case 18:
                         startActivity(new Intent(MainActivity.this, DataStorageActivity.class));
                         break;
+                    case 19:
+                        startActivity(new Intent(MainActivity.this, SchemeActivity.class));
+                        break;
                 }
             }
         });
@@ -132,6 +136,6 @@ public class MainActivity extends Activity {
         demoDataList.add("防止快速重复点击");
         demoDataList.add("Dialog只能在主线程里执行");
         demoDataList.add("数据存储");
-
+        demoDataList.add("通过Scheme跳转");
     }
 }
