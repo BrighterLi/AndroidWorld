@@ -13,7 +13,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
-        <activity android:name=".Theme.SetThemeActivity"></activity>
+        <activity android:name=".scheme.SchemeActivity"></activity>
+        <activity android:name=".Theme.SetThemeActivity" />
         <activity android:name=".datastorage.DataStorageActivity" />
         <activity android:name=".datastorage.File.FileActivity" />
         <activity android:name=".encryption.EncryptionActivity" />
@@ -27,6 +28,7 @@
         <activity android:name=".broadcast.LocalBroadcastActivity" />
         <activity android:name=".innerclass.InnerClassAndVariableActivity" />
         <activity android:name=".MainActivity">
+
             <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,13 +51,15 @@
         <activity android:name=".IsVoLteEnabledActivity" />
         <activity android:name=".IsRootActivity" />
         <activity android:name=".DialogShowActivity" />
-        <activity android:name=".WelcomeActivity"
+        <activity
+            android:name=".WelcomeActivity"
             android:alwaysRetainTaskState="true"
             android:configChanges="keyboardHidden|orientation|screenSize|fontScale|locale"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeSplash2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
