@@ -47,7 +47,7 @@ public class SchemeActivity extends Activity {
         startActivity(intent);
     }
 
-    //跳到第三方APP的页面
+    //跳到第三方APP的页面,第三方APP必须已经安装
     private void switchActivityByScheme2() {
         Uri uri=Uri.parse("app2://test2");   //   app://test 相当于 http://www.baidu.com
         Intent intent=new Intent(Intent.ACTION_VIEW,uri);
