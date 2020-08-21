@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.xiaoming.androidknowledgepoints.deeplink.DeepLinkActivity">
+    tools:context="com.xiaoming.androidknowledgepoints.deeplink.ToDeepLinkActivity">
 
-    <WebView
-        android:id="@+id/webview"
+    <TextView
+        android:id="@+id/tv_show"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </WebView>
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

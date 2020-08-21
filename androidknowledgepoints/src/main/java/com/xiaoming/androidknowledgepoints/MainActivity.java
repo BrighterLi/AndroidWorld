@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.xiaoming.androidknowledgepoints.broadcast.LocalBroadcastReceiverActivity;
 import com.xiaoming.androidknowledgepoints.datastorage.DataStorageActivity;
+import com.xiaoming.androidknowledgepoints.deeplink.DeepLinkActivity;
 import com.xiaoming.androidknowledgepoints.innerclass.InnerClassAndVariableActivity;
 import com.xiaoming.androidknowledgepoints.jnidemo.JniActivity;
 import com.xiaoming.androidknowledgepoints.jnidemo2.Jni2Activity;
@@ -107,6 +108,9 @@ public class MainActivity extends Activity {
                     case 19:
                         startActivity(new Intent(MainActivity.this, SchemeActivity.class));
                         break;
+                    case 20:
+                        startActivity(new Intent(MainActivity.this, DeepLinkActivity.class));
+                        break;
                 }
             }
         });
@@ -137,5 +141,6 @@ public class MainActivity extends Activity {
         demoDataList.add("Dialog只能在主线程里执行");
         demoDataList.add("数据存储");
         demoDataList.add("通过Scheme跳转");
+        demoDataList.add("通过DeepLink跳转");
     }
 }

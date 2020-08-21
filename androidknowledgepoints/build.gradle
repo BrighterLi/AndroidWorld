@@ -42,6 +42,7 @@ android {
             jni.srcDirs = []
             //jni.srcDirs = ['src/main/jni']  //需要编译的xx.c文件的地址
             jniLibs.srcDirs = ['libs'] //引用的xx.so文件的地址
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
         }
     }
 
