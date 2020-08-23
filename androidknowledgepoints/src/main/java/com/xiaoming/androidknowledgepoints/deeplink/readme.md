@@ -1,3 +1,4 @@
+1 DeepLink
 基本概念
 Deep Link，又叫deep linking，中文翻译作深层链接。
 简单地从用户体验来讲，Deep Link，就是可以让你在手机的浏览器/Google Search上点击搜索的结果，
@@ -23,3 +24,5 @@ Android系统级应用，有一些已经定义了URL Schemes，比如短信是 s
 URL：http://images.google.com/images?q=关键字
 URL Schemes：weixin://dl/moments（打开微信朋友圈）
 
+2 微信禁用掉了 scheme跳转?
+微信浏览器禁止下载的处理方法-跳转浏览器打开:https://blog.csdn.net/weixin_44414499/article/details/85866272
