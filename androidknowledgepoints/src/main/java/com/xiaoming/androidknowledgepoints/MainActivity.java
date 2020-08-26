@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.xiaoming.androidknowledgepoints.ajavaknowledge.JavaKnowledgeActivity;
 import com.xiaoming.androidknowledgepoints.broadcast.LocalBroadcastReceiverActivity;
 import com.xiaoming.androidknowledgepoints.datastorage.DataStorageActivity;
 import com.xiaoming.androidknowledgepoints.deeplink.DeepLinkActivity;
@@ -50,7 +51,7 @@ public class MainActivity extends Activity {
                         startActivity(new Intent(MainActivity.this, UtilActivity.class));
                         break;
                     case 1:
-                    startActivity(new Intent(MainActivity.this, JniActivity.class));
+                    startActivity(new Intent(MainActivity.this, JavaKnowledgeActivity.class));
                     break;
                     case 2:
                         startActivity(new Intent(MainActivity.this, Jni2Activity.class));
@@ -111,6 +112,9 @@ public class MainActivity extends Activity {
                     case 20:
                         startActivity(new Intent(MainActivity.this, DeepLinkActivity.class));
                         break;
+                    case 21:
+                        startActivity(new Intent(MainActivity.this, JniActivity.class));
+                        break;
                 }
             }
         });
@@ -122,7 +126,7 @@ public class MainActivity extends Activity {
     private void initDemoData() {
         demoDataList = new ArrayList<>();
         demoDataList.add("Util");
-        demoDataList.add("jni：加减法");
+        demoDataList.add("java知识点");
         demoDataList.add("jni:hello world");
         demoDataList.add("java内部类访问局部变量时局部变量必须声明为final");
         demoDataList.add("Json");
@@ -142,5 +146,6 @@ public class MainActivity extends Activity {
         demoDataList.add("数据存储");
         demoDataList.add("通过Scheme跳转");
         demoDataList.add("通过DeepLink跳转");
+        demoDataList.add("jni：加减法");
     }
 }

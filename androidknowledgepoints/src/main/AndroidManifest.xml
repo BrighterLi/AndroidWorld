@@ -78,6 +78,7 @@
         <activity android:name=".deeplink.ToDeepLinkActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
@@ -85,8 +86,8 @@
                     android:host="share"
                     android:scheme="will" />
             </intent-filter>
-
         </activity>
+        <activity android:name=".ajavaknowledge.JavaKnowledgeActivity"></activity>
     </application>
 
 </manifest>
