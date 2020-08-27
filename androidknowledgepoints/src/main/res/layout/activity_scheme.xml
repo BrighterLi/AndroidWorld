@@ -18,4 +18,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Scheme跳转到第三方APP页面"/>
+
+    <Button
+        android:id="@+id/bt_switch3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scheme跳转到第三方分期乐页面"/>
 </LinearLayout>

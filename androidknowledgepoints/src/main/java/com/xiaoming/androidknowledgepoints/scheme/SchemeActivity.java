@@ -12,6 +12,7 @@ import com.xiaoming.androidknowledgepoints.R;
 public class SchemeActivity extends Activity {
     private Button mSwitchBtn;
     private Button mSwitchBtn2;
+    private Button mSwitchBtn3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class SchemeActivity extends Activity {
     private void initView() {
         mSwitchBtn = (Button) findViewById(R.id.bt_switch);
         mSwitchBtn2 = (Button) findViewById(R.id.bt_switch2);
+        mSwitchBtn3 = (Button) findViewById(R.id.bt_switch3);
 
         mSwitchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +40,13 @@ public class SchemeActivity extends Activity {
                 switchActivityByScheme2();
             }
         });
+
+        mSwitchBtn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switchActivityBySchemeToFenqile();
+            }
+        });
     }
 
     //跳到APP内的某个页面，隐式跳转
@@ -50,6 +59,13 @@ public class SchemeActivity extends Activity {
     //跳到第三方APP的页面,第三方APP必须已经安装
     private void switchActivityByScheme2() {
         Uri uri=Uri.parse("app2://test2");   //   app://test 相当于 http://www.baidu.com
+        Intent intent=new Intent(Intent.ACTION_VIEW,uri);
+        startActivity(intent);
+    }
+
+    //跳到分期乐APP的页面,第三方APP必须已经安装
+    private void switchActivityBySchemeToFenqile() {
+        Uri uri=Uri.parse("fenqile://app");   //   app://test 相当于 http://www.baidu.com
         Intent intent=new Intent(Intent.ACTION_VIEW,uri);
         startActivity(intent);
     }

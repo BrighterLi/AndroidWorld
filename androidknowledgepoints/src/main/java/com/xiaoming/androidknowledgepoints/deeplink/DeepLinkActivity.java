@@ -22,6 +22,7 @@ public class DeepLinkActivity extends Activity {
         initView();
     }
 
+    //必须先安装分期乐
     private void initView() {
         mWebView = findViewById(R.id.webview);
         mWebView.loadUrl("file:///android_asset/h5.html");
@@ -30,9 +31,9 @@ public class DeepLinkActivity extends Activity {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
 
-                if (url.startsWith("will://")) {
+                if (url.startsWith("fenqile://")) {
                     Uri uri = Uri.parse(url);
-                    Log.i("---------scheme: ", uri.getScheme() + "host: " + uri.getHost() + "Id: " + uri.getPathSegments().get(0));
+                    //Log.i("---------scheme: ", uri.getScheme() + "host: " + uri.getHost() + "Id: " + uri.getPathSegments().get(0));
                     Intent intent = new Intent();
                     intent.setAction("android.intent.action.VIEW");
                     intent.setData(uri);
