@@ -4,11 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.xiaoming.androidknowledgepoints.ajavaknowledge.JavaKnowledgeActivity">
-
-    <ListView
-        android:id="@+id/lv_java_knowledge"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
+    tools:context="com.xiaoming.androidknowledgepoints.ajavaknowledge.valuetransition.ValueTransitionActivity">
 
 </LinearLayout>
