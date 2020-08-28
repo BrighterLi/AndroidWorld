@@ -4,6 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.xiaoming.androidknowledgepoints.ajavaknowledge.valuetransition.ValueTransitionActivity">
 
+    <Button
+        android:id="@+id/bt_value_transition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="基本类型值传递"/>
+
+    <Button
+        android:id="@+id/bt_value_transition2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="引用类型值传递"/>
 </LinearLayout>

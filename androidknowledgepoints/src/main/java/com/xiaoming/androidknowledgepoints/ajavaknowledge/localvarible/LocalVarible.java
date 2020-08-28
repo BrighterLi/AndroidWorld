@@ -1,14 +1,17 @@
 package com.xiaoming.androidknowledgepoints.ajavaknowledge.localvarible;
 
 public class LocalVarible {
-    String str;
 
-    public void main() {
-        str = "abcd";
+    //改变局部变量的值
+    public static void main() {
+        String str = "abcd";
+        System.out.println("bright#改变局部变量值前#str=" + str);
         changeValue(str);
+        System.out.println("bright#改变局部变量值后#str=" + str);
     }
 
-    private  void changeValue(String str) {
+    private static void changeValue(String str) {
         str = "efgh";
+        System.out.println("bright#改变局部变量值时#str=" + str);
     }
 }
