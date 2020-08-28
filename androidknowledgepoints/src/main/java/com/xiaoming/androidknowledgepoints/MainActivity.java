@@ -125,8 +125,8 @@ public class MainActivity extends Activity {
 
     private void initDemoData() {
         demoDataList = new ArrayList<>();
-        demoDataList.add("Util");
-        demoDataList.add("java知识点");
+        demoDataList.add("000Util");
+        demoDataList.add("000java知识点");
         demoDataList.add("jni:hello world");
         demoDataList.add("java内部类访问局部变量时局部变量必须声明为final");
         demoDataList.add("Json");

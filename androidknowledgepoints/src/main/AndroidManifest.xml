@@ -14,7 +14,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
-        <activity android:name=".ajavaknowledge.localvarible.LocalVaribleActivity"></activity>
+        <activity android:name=".ajavaknowledge.multithreads.MultiThreadsActivity"></activity>
+        <activity android:name=".ajavaknowledge.localvarible.LocalVaribleActivity" />
         <activity android:name=".ajavaknowledge.valuetransition.ValueTransitionActivity" />
         <activity android:name=".deeplink.DeepLinkActivity" />
         <activity android:name=".scheme.SchemeActivity" />

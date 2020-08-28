@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 
 import com.xiaoming.androidknowledgepoints.R;
 import com.xiaoming.androidknowledgepoints.ajavaknowledge.localvarible.LocalVaribleActivity;
+import com.xiaoming.androidknowledgepoints.ajavaknowledge.multithreads.MultiThreadsActivity;
 import com.xiaoming.androidknowledgepoints.ajavaknowledge.valuetransition.ValueTransitionActivity;
 
 import java.util.ArrayList;
@@ -48,8 +49,8 @@ public class JavaKnowledgeActivity extends Activity {
                     case 1:
                         startActivity(new Intent(JavaKnowledgeActivity.this, LocalVaribleActivity.class));
                         break;
-                    case 3:
-                        startActivity(new Intent(JavaKnowledgeActivity.this, LocalVaribleActivity.class));
+                    case 2:
+                        startActivity(new Intent(JavaKnowledgeActivity.this, MultiThreadsActivity.class));
                         break;
 
                 }
