@@ -44,7 +44,7 @@ public class SchemeActivity extends Activity {
         mSwitchBtn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switchActivityBySchemeToFenqile();
+                switchActivityBySchemeToPinduoduo();
             }
         });
     }
@@ -71,9 +71,11 @@ public class SchemeActivity extends Activity {
     }
 
     //第三方拼多多
+    //Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://mobile.yangkeduo.com/app.html?use_reload=1&launch_url=duo_coupon_landing.html%3Fgoods_id%3D133002461085%26pid%3D10320141_139864283%26cpsSign%3DCC_200817_10320141_139864283_27a9689746404f915b1c98f2c20cc05d%26duoduo_type%3D2&campaign=ddjb&cid=launch_dl_force_
     //pinduoduo://com.xunmeng.pinduoduo/duo_coupon_landing.html?goods_id=133002461085&pid=10320141_139864283&cpsSign=CC_200817_10320141_139864283_27a9689746404f915b1c98f2c20cc05d&duoduo_type=2&_p_launch_id=10784_1605014712130_8ec2kgjbsc
-    private void switchActivityBySchemeToPinduoduo() {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("pinduoduo://com.xunmeng.pinduoduo/duo_coupon_landing.html?goods_id=133002461085&pid=10320141_139864283&cpsSign=CC_200817_10320141_139864283_27a9689746404f915b1c98f2c20cc05d&duoduo_type=2&_p_launch_id=10784_1605014712130_8ec2kgjbsc"));
+private void switchActivityBySchemeToPinduoduo() {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://mobile.yangkeduo.com/app.html?use_reload=1&launch_url=duo_coupon_landing.html%3Fgoods_id%3D133002461085%26pid%3D10320141_139864283%26cpsSign%3DCC_200817_10320141_139864283_27a9689746404f915b1c98f2c20cc05d%26duoduo_type%3D2&campaign=ddjb&cid=launch_dl_force_"));
+        //Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("pinduoduo://com.xunmeng.pinduoduo/duo_coupon_landing.html?goods_id=133002461085&pid=10320141_139864283&cpsSign=CC_200817_10320141_139864283_27a9689746404f915b1c98f2c20cc05d&duoduo_type=2&_p_launch_id=10784_1605014712130_8ec2kgjbsc"));
         startActivity(intent);
-    }
-}
+        }
+        }
