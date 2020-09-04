@@ -69,4 +69,11 @@ public class SchemeActivity extends Activity {
         Intent intent=new Intent(Intent.ACTION_VIEW,uri);
         startActivity(intent);
     }
+
+    //第三方拼多多
+    //pinduoduo://com.xunmeng.pinduoduo/duo_coupon_landing.html?goods_id=133002461085&pid=10320141_139864283&cpsSign=CC_200817_10320141_139864283_27a9689746404f915b1c98f2c20cc05d&duoduo_type=2&_p_launch_id=10784_1605014712130_8ec2kgjbsc
+    private void switchActivityBySchemeToPinduoduo() {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("pinduoduo://com.xunmeng.pinduoduo/duo_coupon_landing.html?goods_id=133002461085&pid=10320141_139864283&cpsSign=CC_200817_10320141_139864283_27a9689746404f915b1c98f2c20cc05d&duoduo_type=2&_p_launch_id=10784_1605014712130_8ec2kgjbsc"));
+        startActivity(intent);
+    }
 }
