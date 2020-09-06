@@ -24,6 +24,12 @@
             android:text="Search" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/bt_load_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="load url" />
+
     <WebView
         android:id="@+id/myWebView"
         android:layout_width="match_parent"

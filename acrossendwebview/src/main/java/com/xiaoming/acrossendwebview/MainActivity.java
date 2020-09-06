@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.xiaoming.acrossendwebview.openh5.OpenH5Activity;
+import com.xiaoming.acrossendwebview.openh5.WebViewActivity;
 import com.xiaoming.acrossendwebview.webviewandjs.WebViewAndJSActivity;
 
 import java.util.ArrayList;
@@ -41,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
                       startActivity(new Intent(MainActivity.this, OpenH5Activity.class));
                       break;
                     case 1:
+                        startActivity(new Intent(MainActivity.this, WebViewActivity.class));
+                        break;
+                    case 2:
                         startActivity(new Intent(MainActivity.this, WebViewAndJSActivity.class));
                         break;
                 }
@@ -50,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initDemoList() {
         demoNameList.add("打开H5页面");
+        demoNameList.add("WebView");
         demoNameList.add("Android与js交互");
     }
 }
