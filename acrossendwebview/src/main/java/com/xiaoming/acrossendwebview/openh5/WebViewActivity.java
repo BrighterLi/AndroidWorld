@@ -43,6 +43,11 @@ public class WebViewActivity extends Activity {
                 return true;
             }
 
+            //当webview页面有资源请求的时候通知宿主应用，允许应用自己返回数据给webview。
+            // 如果返回值是null，就正常加载返回的数据，否则就加载应用自己return的response给webview
+            //这个方法回调在子线程而不是UI线程
+            //这个方法是用来监控所有的页面请求的，可以用它来监控黑名单以防止页面劫持，
+            // 当怀疑域名被劫持时，可以通过本地http请求代理，然后将结果返回给webview
             @Override
             public WebResourceResponse shouldInterceptRequest(WebView view , WebResourceRequest request) {
                 String result = "<html>\n" +
