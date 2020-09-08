@@ -2,7 +2,6 @@ package com.xiaoming.androidknowledgepoints;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -13,6 +12,7 @@ import com.xiaoming.androidknowledgepoints.ajavaknowledge.JavaKnowledgeActivity;
 import com.xiaoming.androidknowledgepoints.broadcast.LocalBroadcastReceiverActivity;
 import com.xiaoming.androidknowledgepoints.datastorage.DataStorageActivity;
 import com.xiaoming.androidknowledgepoints.deeplink.DeepLinkActivity;
+import com.xiaoming.androidknowledgepoints.floating.floating.FloatingActivity;
 import com.xiaoming.androidknowledgepoints.innerclass.InnerClassAndVariableActivity;
 import com.xiaoming.androidknowledgepoints.jnidemo.JniActivity;
 import com.xiaoming.androidknowledgepoints.jnidemo2.Jni2Activity;
@@ -115,6 +115,9 @@ public class MainActivity extends Activity {
                     case 21:
                         startActivity(new Intent(MainActivity.this, JniActivity.class));
                         break;
+                    case 22:
+                        startActivity(new Intent(MainActivity.this, FloatingActivity.class));
+                        break;
                 }
             }
         });
@@ -147,5 +150,6 @@ public class MainActivity extends Activity {
         demoDataList.add("通过Scheme跳转");
         demoDataList.add("通过DeepLink跳转");
         demoDataList.add("jni：加减法");
+        demoDataList.add("floating悬浮窗");
     }
 }
