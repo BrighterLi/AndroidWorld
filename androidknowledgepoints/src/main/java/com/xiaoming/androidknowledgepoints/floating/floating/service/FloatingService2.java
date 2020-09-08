@@ -7,6 +7,8 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 
 
+import com.xiaoming.androidknowledgepoints.floating.floating.manager.FloatingWindowManager;
+import com.xiaoming.androidknowledgepoints.floating.floating.util.TaskUtil;
 
 import java.util.Timer;
 import java.util.TimerTask;
