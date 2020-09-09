@@ -11,6 +11,7 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
+//自定义View：自绘方式
 public class CircleImageView extends View {
     private Paint mPaint;  //画笔
     private Bitmap imageBitmap;
