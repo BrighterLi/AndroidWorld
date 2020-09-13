@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 
 import com.xiaoming.a001viewcustom.imagetextbutton.ImageTextButton;
 import com.xiaoming.a001viewcustom.imagetextbutton.ImageTextButtonActivity;
+import com.xiaoming.a001viewcustom.input.InputActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
                     case 1:
                         startActivity(new Intent(MainActivity.this, ImageTextButtonActivity.class));
                         break;
+                    case 2:
+                        startActivity(new Intent(MainActivity.this, InputActivity.class));
+                        break;
 
                 }
             }
@@ -48,5 +52,6 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
         demoListData.add("自定义View：将图片变成圆形");
         demoListData.add("自定义View：图片和文字混合按钮");
+        demoListData.add("自定义View：输入");
 }
 }
