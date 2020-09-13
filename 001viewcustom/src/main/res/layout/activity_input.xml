@@ -7,17 +7,25 @@
     android:orientation="vertical"
     tools:context=".input.InputActivity">
 
-    <com.xiaoming.a001viewcustom.input.custominput.CustomInputLayout
-        android:layout_marginTop="100dp"
+   <!-- <com.xiaoming.a001viewcustom.input.custominput.CustomInputLayout
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
     </com.xiaoming.a001viewcustom.input.custominput.CustomInputLayout>
 
     <com.xiaoming.a001viewcustom.input.custominput2.CustomInputLayout2
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
-    </com.xiaoming.a001viewcustom.input.custominput2.CustomInputLayout2>
+    </com.xiaoming.a001viewcustom.input.custominput2.CustomInputLayout2>-->
+
+    <com.xiaoming.a001viewcustom.input.numinputview.NumInputView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:box_count="6"
+        android:layout_gravity="center"/>
+
 
 </LinearLayout>
