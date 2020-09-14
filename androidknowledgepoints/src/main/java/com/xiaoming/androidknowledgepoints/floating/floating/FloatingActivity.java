@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.xiaoming.androidknowledgepoints.R;
+import com.xiaoming.androidknowledgepoints.floating.floating.manager.FloatingWindowManager;
 import com.xiaoming.androidknowledgepoints.floating.floating.service.FloatingService;
 import com.xiaoming.androidknowledgepoints.floating.floating.service.FloatingService2;
 
@@ -18,6 +19,7 @@ public class FloatingActivity extends Activity {
     private Button mBtCloseFloatingService;
     private Button mBtOPenFloatingService2;
     private Button mBtCloseFloatingService2;
+    private Button mBtOpenFloating;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class FloatingActivity extends Activity {
         mBtCloseFloatingService = findViewById(R.id.bt_close_floating_service);
         mBtOPenFloatingService2 = findViewById(R.id.bt_open_floating_service2);
         mBtCloseFloatingService2 = findViewById(R.id.bt_close_floating_service2);
+        mBtOpenFloating = findViewById(R.id.bt_open_floating);
 
         mBtOPenFloatingService.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +63,13 @@ public class FloatingActivity extends Activity {
             public void onClick(View v) {
                 Intent close = new Intent(FloatingActivity.this, FloatingService2.class);
                 stopService(close);
+            }
+        });
+
+        mBtOpenFloating.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FloatingWindowManager.createFloatWindow(FloatingActivity.this);
             }
         });
     }

@@ -31,4 +31,11 @@
         android:layout_height="wrap_content"
         android:text="悬浮窗：关闭悬浮窗"/>
 
+    <Button
+        android:id="@+id/bt_open_floating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="悬浮窗：打开"/>
+
+
 </LinearLayout>
