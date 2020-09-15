@@ -8,9 +8,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.xiaoming.androidknowledgepoints.R;
-import com.xiaoming.androidknowledgepoints.floating.floating.manager.FloatingWindowManager;
 import com.xiaoming.androidknowledgepoints.floating.floating.service.FloatingService;
 import com.xiaoming.androidknowledgepoints.floating.floating.service.FloatingService2;
+import com.xiaoming.androidknowledgepoints.floating.timerfloating.manager.TimeFloatingWindowManager;
+
+import java.util.TimerTask;
 
 //Android实现悬浮窗:https://www.open-open.com/lib/view/open1450668450620.html
 //https://github.com/zimoguo/FloatWindo
@@ -19,7 +21,8 @@ public class FloatingActivity extends Activity {
     private Button mBtCloseFloatingService;
     private Button mBtOPenFloatingService2;
     private Button mBtCloseFloatingService2;
-    private Button mBtOpenFloating;
+    private Button mBtOpenTimeFloating;
+    private Button mBtCloseTimeFloating;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +37,8 @@ public class FloatingActivity extends Activity {
         mBtCloseFloatingService = findViewById(R.id.bt_close_floating_service);
         mBtOPenFloatingService2 = findViewById(R.id.bt_open_floating_service2);
         mBtCloseFloatingService2 = findViewById(R.id.bt_close_floating_service2);
-        mBtOpenFloating = findViewById(R.id.bt_open_floating);
+        mBtOpenTimeFloating = findViewById(R.id.bt_open_time_floating);
+        mBtCloseTimeFloating = findViewById(R.id.bt_close_time_floating);
 
         mBtOPenFloatingService.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,10 +70,17 @@ public class FloatingActivity extends Activity {
             }
         });
 
-        mBtOpenFloating.setOnClickListener(new View.OnClickListener() {
+        mBtOpenTimeFloating.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FloatingWindowManager.createFloatWindow(FloatingActivity.this);
+                TimeFloatingWindowManager.createFloatWindow(getApplicationContext());
+            }
+        });
+
+        mBtCloseTimeFloating.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TimeFloatingWindowManager.removeFloatWindow(getApplicationContext());
             }
         });
     }

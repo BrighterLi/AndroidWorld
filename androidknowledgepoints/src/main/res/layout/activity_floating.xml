@@ -32,10 +32,16 @@
         android:text="悬浮窗：关闭悬浮窗"/>
 
     <Button
-        android:id="@+id/bt_open_floating"
+        android:id="@+id/bt_open_time_floating"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="悬浮窗：打开"/>
+        android:text="倒计时悬浮窗：打开"/>
+
+    <Button
+        android:id="@+id/bt_close_time_floating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="倒计时悬浮窗：关闭"/>
 
 
 </LinearLayout>
