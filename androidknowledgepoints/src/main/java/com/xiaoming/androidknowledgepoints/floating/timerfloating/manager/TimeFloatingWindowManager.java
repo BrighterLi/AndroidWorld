@@ -61,7 +61,7 @@ public class TimeFloatingWindowManager {
     }
 
     public static void startTime() {
-        mTimer.schedule(mTask, 1000);
+        mTimer.schedule(mTask, 1000,1000);
     }
 
     static TimerTask mTask = new TimerTask() {

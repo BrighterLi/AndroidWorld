@@ -59,7 +59,7 @@ public class TimeFloatingView extends LinearLayout {
     public void updateTime() {
         if(mCountTime > 0) {
             mTvTime.setText(--mCountTime + "");
-            mTvTime.postInvalidate();
+            mTvTime.postInvalidate(); //刷新
         }
 
     }
