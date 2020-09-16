@@ -17,6 +17,8 @@ import com.xiaoming.androidknowledgepoints.utils.ScreenUtil;
 /**
  * Created by brightli on 2020/9/8
  */
+
+//Android悬浮窗的实现--可以置顶，可以设置优先级的view:https://blog.csdn.net/zy_style/article/details/54973934
 public class TimeFloatingView extends LinearLayout {
     private WindowManager mWindowManager;
     private LinearLayout mTimeFloatingLayout;
