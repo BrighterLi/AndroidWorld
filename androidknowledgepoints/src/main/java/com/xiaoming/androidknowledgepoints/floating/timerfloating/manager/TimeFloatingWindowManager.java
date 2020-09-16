@@ -21,7 +21,7 @@ public class TimeFloatingWindowManager {
     private static WindowManager.LayoutParams mParams;
     private static WindowManager mWindowManager;
     private static Handler mHandler = new Handler();
-    private static Timer mTimer = new Timer();
+    private static Timer mTimer = new Timer(); //定时器
 
     private static WindowManager getWindowManager(Context context) {
         if(mWindowManager == null) {
@@ -61,7 +61,7 @@ public class TimeFloatingWindowManager {
     }
 
     public static void startTime() {
-        mTimer.schedule(mTask, 1000, 1000);
+        mTimer.schedule(mTask, 1000);
     }
 
     static TimerTask mTask = new TimerTask() {

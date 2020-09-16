@@ -48,7 +48,7 @@ public class TimeFloatingView extends LinearLayout {
         mTimeFloatingLayout = findViewById(R.id.time_floating_layout);
         sViewWidth = mTimeFloatingLayout.getLayoutParams().width;
         sViewHeight = mTimeFloatingLayout.getLayoutParams().height;
-        mTvTime = findViewById(R.id.tv_time);
+        mTvTime = findViewById(R.id.tv_time_count);
         sStatusBarHeight = TimeFloatingUtil.getStatusBarHeight(context);
     }
 
