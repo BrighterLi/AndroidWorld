@@ -12,4 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RecyclerView"/>
+    <Button
+        android:id="@+id/bt_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ScrollView"/>
+    <Button
+        android:id="@+id/bt_scrollview_tablayout_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ScrollView+TabLayout_ViewPager_RecyclerView"/>
 </LinearLayout>
