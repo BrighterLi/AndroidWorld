@@ -22,6 +22,7 @@ import com.xiaoming.androidknowledgepoints.regularexpression.RegularExpressionAc
 import com.xiaoming.androidknowledgepoints.scheme.SchemeActivity;
 import com.xiaoming.androidknowledgepoints.serialization.GoToActivity;
 import com.xiaoming.androidknowledgepoints.solib.SoLibEntranceActivity;
+import com.xiaoming.androidknowledgepoints.uiframe.EnterUiFrameActivity;
 import com.xiaoming.androidknowledgepoints.utils.UtilActivity;
 import com.xiaoming.androidknowledgepoints.encryption.EncryptionActivity;
 
@@ -118,6 +119,9 @@ public class MainActivity extends Activity {
                     case 22:
                         startActivity(new Intent(MainActivity.this, FloatingActivity.class));
                         break;
+                    case 23:
+                        startActivity(new Intent(MainActivity.this, EnterUiFrameActivity.class));
+                        break;
                 }
             }
         });
@@ -151,5 +155,6 @@ public class MainActivity extends Activity {
         demoDataList.add("通过DeepLink跳转");
         demoDataList.add("jni：加减法");
         demoDataList.add("floating悬浮窗");
+        demoDataList.add("ui框架");
     }
 }

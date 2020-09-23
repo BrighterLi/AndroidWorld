@@ -16,6 +16,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
+        <activity android:name=".uiframe.ScrollView1TabLayout1ViewPager1RecyclerView.UiFrame3Activity"></activity>
+        <activity android:name=".uiframe.ScrollView.UiFrame2Activity" />
+        <activity android:name=".uiframe.EnterUiFrameActivity" />
+        <activity android:name=".uiframe.recycleview.UiFrame1Activity" />
+
         <service
             android:name=".floating.floating.service.FloatingService2"
             android:enabled="true"
@@ -110,7 +115,7 @@
         <service
             android:name=".floating.timerfloating.service.TimeFloatingService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
     </application>
 
 </manifest>
