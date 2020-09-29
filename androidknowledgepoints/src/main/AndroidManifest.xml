@@ -16,9 +16,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
+        <activity android:name=".uiframe.waterfall.WaterFallActivity"
+            android:theme="@style/AppTheme" ></activity>
         <activity
             android:name=".uiframe.ScrollView1TabLayout1ViewPager1RecyclerView.UiFrame3Activity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity android:name=".uiframe.ScrollView.UiFrame2Activity" />
         <activity android:name=".uiframe.EnterUiFrameActivity" />
         <activity android:name=".uiframe.recycleview.UiFrame1Activity" />

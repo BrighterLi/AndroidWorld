@@ -10,11 +10,13 @@ import com.xiaoming.androidknowledgepoints.R;
 import com.xiaoming.androidknowledgepoints.uiframe.ScrollView.UiFrame2Activity;
 import com.xiaoming.androidknowledgepoints.uiframe.ScrollView1TabLayout1ViewPager1RecyclerView.UiFrame3Activity;
 import com.xiaoming.androidknowledgepoints.uiframe.recycleview.UiFrame1Activity;
+import com.xiaoming.androidknowledgepoints.uiframe.waterfall.WaterFallActivity;
 
 public class EnterUiFrameActivity extends Activity implements View.OnClickListener{
     private Button mBtRecyclerview;
     private Button mScrollview;
     private Button mScrollviewTablayoutFragment;
+    private Button mBtWaterFall;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +30,12 @@ public class EnterUiFrameActivity extends Activity implements View.OnClickListen
         mBtRecyclerview = findViewById(R.id.bt_recyclerview);
         mScrollview = findViewById(R.id.bt_scrollview);
         mScrollviewTablayoutFragment = findViewById(R.id.bt_scrollview_tablayout_fragment);
+        mBtWaterFall = findViewById(R.id.bt_water_fall);
 
         mBtRecyclerview.setOnClickListener(this);
         mScrollview.setOnClickListener(this);
         mScrollviewTablayoutFragment.setOnClickListener(this);
+        mBtWaterFall.setOnClickListener(this);
     }
 
     @Override
@@ -45,6 +49,9 @@ public class EnterUiFrameActivity extends Activity implements View.OnClickListen
                 break;
             case R.id.bt_scrollview_tablayout_fragment:
                 startActivity(new Intent(EnterUiFrameActivity.this, UiFrame3Activity.class));
+                break;
+            case R.id.bt_water_fall:
+                startActivity(new Intent(EnterUiFrameActivity.this, WaterFallActivity.class));
                 break;
         }
     }
