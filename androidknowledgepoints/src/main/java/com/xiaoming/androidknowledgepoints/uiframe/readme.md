@@ -18,7 +18,8 @@ https://blog.csdn.net/hq942845204/article/details/88844272
 Android 滑动定位+吸附悬停效果实现：https://www.cnblogs.com/taixiang/p/9426874.html
 
 
-
-1要求：上滑的时候先滑headerView，headerView滑出屏幕时，tableView吸顶且开始滑动。下滑时先滑tableView，滑到顶部第一个cell出现，则开始滑headerView。 这是一个最简单的scrollView嵌套需求，后面还会有进阶的需求。
-2 进阶的需求
+1 Android实践之ScrollView中滑动冲突处理
+  https://www.jianshu.com/p/87a41b8c0dd0
+2要求：上滑的时候先滑headerView，headerView滑出屏幕时，tableView吸顶且开始滑动。下滑时先滑tableView，滑到顶部第一个cell出现，则开始滑headerView。 这是一个最简单的scrollView嵌套需求，后面还会有进阶的需求。
+进阶的需求
   上下滑的同时，还要求左右滑:
