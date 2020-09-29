@@ -19,6 +19,7 @@ Android 滑动定位+吸附悬停效果实现：https://www.cnblogs.com/taixiang
 
 6 瀑布流
 Android 瀑布流Demo：https://blog.csdn.net/u012440207/article/details/24002603?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.channel_param&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.channel_param
+ANDROID 瀑布流（图片浏览）:https://www.cnblogs.com/prescheng/p/4937298.html  ScrollView实现
 
 1 Android实践之ScrollView中滑动冲突处理
   https://www.jianshu.com/p/87a41b8c0dd0

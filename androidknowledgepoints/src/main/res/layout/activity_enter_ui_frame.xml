@@ -27,4 +27,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="瀑布流"/>
+
+    <Button
+        android:id="@+id/bt_water_fall2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="瀑布流2:ScrollView实现"/>
 </LinearLayout>
