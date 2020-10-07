@@ -12,6 +12,7 @@ import com.xiaoming.androidknowledgepoints.ajavaknowledge.JavaKnowledgeActivity;
 import com.xiaoming.androidknowledgepoints.broadcast.LocalBroadcastReceiverActivity;
 import com.xiaoming.androidknowledgepoints.datastorage.DataStorageActivity;
 import com.xiaoming.androidknowledgepoints.deeplink.DeepLinkActivity;
+import com.xiaoming.androidknowledgepoints.dialog.DialogTestActivity;
 import com.xiaoming.androidknowledgepoints.floating.floating.FloatingActivity;
 import com.xiaoming.androidknowledgepoints.innerclass.InnerClassAndVariableActivity;
 import com.xiaoming.androidknowledgepoints.jnidemo.JniActivity;
@@ -122,6 +123,9 @@ public class MainActivity extends Activity {
                     case 23:
                         startActivity(new Intent(MainActivity.this, EnterUiFrameActivity.class));
                         break;
+                    case 24:
+                        startActivity(new Intent(MainActivity.this, DialogTestActivity.class));
+                        break;
                 }
             }
         });
@@ -156,5 +160,6 @@ public class MainActivity extends Activity {
         demoDataList.add("jni：加减法");
         demoDataList.add("floating悬浮窗");
         demoDataList.add("ui框架");
+        demoDataList.add("dialog");
     }
 }

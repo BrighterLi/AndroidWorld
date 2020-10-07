@@ -82,6 +82,7 @@
         <activity android:name=".IsVoLteEnabledActivity" />
         <activity android:name=".IsRootActivity" />
         <activity android:name=".DialogShowActivity" />
+        <activity android:name=".dialog.DialogTestActivity"/>
         <activity
             android:name=".WelcomeActivity"
             android:alwaysRetainTaskState="true"

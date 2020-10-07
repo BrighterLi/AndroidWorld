@@ -32,4 +32,17 @@
         <item name="colorAccent">@color/theme_color</item>
     </style>
 
+    <style name="MyDialogStyle">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- 进入和退出的动画 -->
+        <item name="android:windowAnimationStyle">@style/MyDialogAnimation</item>
+    </style>
+    <style name="MyDialogAnimation">
+        <!--进入 -->
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_bottom_to_up</item>
+        <!--退出-->
+        <item name="android:windowExitAnimation">@anim/dialog_exit_up_to_bottom</item>
+    </style>
+
 </resources>

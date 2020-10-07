@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    </LinearLayout>
+    <!-- 该部分显示在底部  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:background="@drawable/shape_dialog_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/content_top"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_content_top"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:gravity="center"
+                android:textColor="#FF84888F"
+                android:text="标题" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFF7F8FA"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/content_button1"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+        <TextView
+            android:id="@+id/tv_content1"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:gravity="center"
+            android:textColor="#FF050C1C"
+            android:textStyle="bold"
+            android:text="按钮1" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFF7F8FA"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/content_button2"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_content2"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#FF050C1C"
+                android:text="按钮2" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFF7F8FA"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/content_button3"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_content3"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#FF050C1C"
+                android:text="按钮3" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFF7F8FA"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/content_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="#FFF7F8FA"/>
+        <TextView
+            android:id="@+id/tv_content_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:gravity="center"
+            android:textColor="#FF84888F"
+            android:text="底部按钮" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
