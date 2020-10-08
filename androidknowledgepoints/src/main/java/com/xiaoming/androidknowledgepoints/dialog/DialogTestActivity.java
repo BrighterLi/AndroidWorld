@@ -29,7 +29,6 @@ public class DialogTestActivity extends Activity {
 
 
     private void showFullScreenDialog() {
-        //DialogUtil.showDialog(this);
         FullScreenDialog fullScreenDialog = new FullScreenDialog(this);
         fullScreenDialog.showDialog();
         fullScreenDialog.mTvContentTop.setText("更新标题");

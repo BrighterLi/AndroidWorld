@@ -23,7 +23,8 @@
             android:id="@+id/content_top"
             android:layout_width="match_parent"
             android:layout_height="52dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
             <TextView
                 android:id="@+id/tv_content_top"
                 android:layout_width="match_parent"
@@ -61,7 +62,8 @@
             android:id="@+id/content_button2"
             android:layout_width="match_parent"
             android:layout_height="52dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
             <TextView
                 android:id="@+id/tv_content2"
                 android:layout_width="match_parent"
@@ -80,7 +82,8 @@
             android:id="@+id/content_button3"
             android:layout_width="match_parent"
             android:layout_height="52dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
             <TextView
                 android:id="@+id/tv_content3"
                 android:layout_width="match_parent"
@@ -99,7 +102,8 @@
             android:id="@+id/content_bottom"
             android:layout_width="match_parent"
             android:layout_height="63dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
         <View
             android:layout_width="match_parent"
             android:layout_height="12dp"

@@ -21,6 +21,12 @@ Android 滑动定位+吸附悬停效果实现：https://www.cnblogs.com/taixiang
 Android 瀑布流Demo：https://blog.csdn.net/u012440207/article/details/24002603?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.channel_param&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.channel_param
 ANDROID 瀑布流（图片浏览）:https://www.cnblogs.com/prescheng/p/4937298.html  ScrollView实现
 
+7 TabLayout
+TabLayout设置下划线(Indicator)宽度:https://www.cnblogs.com/Android-FJH/p/9198453.html
+
+8 NestedScrollView
+即支持嵌套滑动的ScrollView
+
 1 Android实践之ScrollView中滑动冲突处理
   https://www.jianshu.com/p/87a41b8c0dd0
 2要求：上滑的时候先滑headerView，headerView滑出屏幕时，tableView吸顶且开始滑动。下滑时先滑tableView，滑到顶部第一个cell出现，则开始滑headerView。 这是一个最简单的scrollView嵌套需求，后面还会有进阶的需求。

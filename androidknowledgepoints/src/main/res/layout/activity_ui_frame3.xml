@@ -55,7 +55,8 @@
                 android:layout_height="50dp"
                 android:background="@android:color/white"
                 app:tabMode="fixed"
-                app:tabSelectedTextColor="@android:color/black" />
+                app:tabSelectedTextColor="@android:color/black"
+                app:tabIndicatorFullWidth="false"/>
 
             <com.xiaoming.androidknowledgepoints.uiframe.ScrollView1TabLayout1ViewPager1RecyclerView.AutofitViewPager
                 android:id="@+id/viewPager"
