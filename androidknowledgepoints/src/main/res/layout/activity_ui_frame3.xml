@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     tools:context="com.xiaoming.androidknowledgepoints.uiframe.ScrollView1TabLayout1ViewPager1RecyclerView.UiFrame3Activity">
 
-    <LinearLayout
+    <!--  <LinearLayout
         android:id="@+id/container_top"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="vertical">
 
-    </LinearLayout>
+    </LinearLayout>-->
 
     <!-- 悬浮在屏幕上方的顶部空布局-->
     <com.xiaoming.androidknowledgepoints.uiframe.ScrollView1TabLayout1ViewPager1RecyclerView.InterceptScrollView
@@ -67,4 +67,11 @@
         </LinearLayout>
     </com.xiaoming.androidknowledgepoints.uiframe.ScrollView1TabLayout1ViewPager1RecyclerView.InterceptScrollView>
 
+    <LinearLayout
+        android:id="@+id/container_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical">
+
+    </LinearLayout>
 </RelativeLayout>
