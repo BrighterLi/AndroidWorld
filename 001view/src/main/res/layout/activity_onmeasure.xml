@@ -8,15 +8,9 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/mBtTouchDemo"
+        android:id="@+id/bt_touch_demo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Touch Demo"/>
-
-    <Button
-        android:id="@+id/mBtOnmeasure"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="onMeasure"/>
 
 </LinearLayout>

@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".touch.TouchActivity"></activity>
         <activity android:name=".ViewActivity" />
+        <activity android:name=".onmeasure.OnMeasureActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
