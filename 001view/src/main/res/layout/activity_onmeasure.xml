@@ -7,10 +7,12 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/bt_touch_demo"
+    <com.example.customviewdemo.View.MyView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Touch Demo"/>
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="#ff0000"/>
+
 
 </LinearLayout>

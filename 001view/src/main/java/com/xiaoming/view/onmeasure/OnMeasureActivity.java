@@ -9,28 +9,16 @@ import android.widget.Button;
 import com.xiaoming.view.R;
 import com.xiaoming.view.touch.TouchActivity;
 
-public class OnMeasureActivity extends Activity implements View.OnClickListener{
-    private Button mBtTouchDemo;
+public class OnMeasureActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_onmesure);
+        setContentView(R.layout.activity_onmeasure);
 
-        initView();
     }
 
     private void initView() {
-        mBtTouchDemo = findViewById(R.id.bt_touch_demo);
-        mBtTouchDemo.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.bt_touch_demo:
-            startActivity(new Intent(OnMeasureActivity.this, TouchActivity.class));
-            break;
-        }
-    }
 }
