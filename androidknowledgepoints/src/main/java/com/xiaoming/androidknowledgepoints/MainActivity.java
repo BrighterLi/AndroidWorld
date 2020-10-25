@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.xiaoming.androidknowledgepoints.activity.ActivityTestActivity;
 import com.xiaoming.androidknowledgepoints.ajavaknowledge.JavaKnowledgeActivity;
 import com.xiaoming.androidknowledgepoints.broadcast.LocalBroadcastReceiverActivity;
 import com.xiaoming.androidknowledgepoints.datastorage.DataStorageActivity;
@@ -126,6 +127,9 @@ public class MainActivity extends Activity {
                     case 24:
                         startActivity(new Intent(MainActivity.this, DialogTestActivity.class));
                         break;
+                    case 25:
+                        startActivity(new Intent(MainActivity.this, ActivityTestActivity.class));
+                        break;
                 }
             }
         });
@@ -161,5 +165,6 @@ public class MainActivity extends Activity {
         demoDataList.add("floating悬浮窗");
         demoDataList.add("ui框架");
         demoDataList.add("dialog");
+        demoDataList.add("Activity");
     }
 }

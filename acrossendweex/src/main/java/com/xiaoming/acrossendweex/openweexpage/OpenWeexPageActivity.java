@@ -31,7 +31,7 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
         //mContentView = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.activity_open_weex_page,null, false);
         setContentView(R.layout.activity_open_weex_page);
 
-        //Weex作为Activity布局的一部分，在Activity的xml进行显示
+        //Weex作为Activity布局的一部分，在Activity的xml进行显示。weex以view的形式出现。
         mWeexContainer = findViewById(R.id.weex_container);
 
         //WXSDKInstance
