@@ -2,12 +2,13 @@ package com.xiaoming.view;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.xiaoming.view.onmeasure.OnMeasureActivity;
+import com.xiaoming.view.onmeasure.OnMeasureGroupView2Activity;
+import com.xiaoming.view.onmeasure.OnMeasureGroupViewActivity;
+import com.xiaoming.view.onmeasure.OnMeasureViewActivity;
 import com.xiaoming.view.touch.TouchActivity;
 
 import butterknife.BindView;
@@ -19,6 +20,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
     Button mBtTouchDemo;
     @BindView(R.id.mBtOnmeasure)
     Button mBtOnmeasure;
+    @BindView(R.id.mBtOnmeasureViewGroup)
+    Button mBtOnmeasureViewGroup;
+    @BindView(R.id.mBtOnmeasureViewGroup2)
+    Button mBtOnmeasureViewGroup2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
     private void initView() {
         mBtTouchDemo.setOnClickListener(this);
         mBtOnmeasure.setOnClickListener(this);
+        mBtOnmeasureViewGroup.setOnClickListener(this);
+        mBtOnmeasureViewGroup2.setOnClickListener(this);
     }
 
     @Override
@@ -40,7 +47,13 @@ public class MainActivity extends Activity implements View.OnClickListener{
             startActivity(new Intent(MainActivity.this, TouchActivity.class));
             break;
             case R.id.mBtOnmeasure:
-                startActivity(new Intent(MainActivity.this, OnMeasureActivity.class));
+                startActivity(new Intent(MainActivity.this, OnMeasureViewActivity.class));
+                break;
+            case R.id.mBtOnmeasureViewGroup:
+                startActivity(new Intent(MainActivity.this, OnMeasureGroupViewActivity.class));
+                break;
+            case R.id.mBtOnmeasureViewGroup2:
+                startActivity(new Intent(MainActivity.this, OnMeasureGroupView2Activity.class));
                 break;
         }
     }

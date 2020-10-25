@@ -9,7 +9,7 @@ import android.widget.Button;
 import com.xiaoming.view.R;
 import com.xiaoming.view.touch.TouchActivity;
 
-public class OnMeasureActivity extends Activity {
+public class OnMeasureViewActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

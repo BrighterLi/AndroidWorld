@@ -51,6 +51,12 @@ WXRenderStatement 具体就是操作 WXComponent。
  instance 一一对应一个 WXDomStatement。WXDomStatement 具体就是操作 WXDomObject。所有的 Dom 操作
  （包括CSSLayout的计算）都在 Dom 线程中，完成后会通知UI线程处理对应的Native Component View。
 
+ Weex中的线程：
+ JSBridgeThread：用来java jni层和v8 engine之间进行通信，包括初始化js framework、callJS、callNative等。
+ DomThread：用来进行Dom操作，包括Dom解析、设置Dom样式、CSS Layout操作、生成Component Tree等操作。图中可知 DomThread 中的操作都是v8 engine调用上来的，也就是说是js runtime生成dom的各种操作，一旦js bundle过大，会是一个瓶颈。
+ UIThread：用来真正的视图渲染，包括设置View Layout、设置View Padding、绑定数据、Add/Remove View等操作。
+
+
  4 关键类
  WXSDKManager
  WXBridgeManager  jsBrigdge
@@ -61,11 +67,14 @@ WXRenderStatement 具体就是操作 WXComponent。
  WXManager
 
  5 源码分析之界面渲染
+ Weex Android SDK源码分析:https://blog.csdn.net/nupt123456789/article/details/53691292?utm_medium=distribute.pc_relevant.none-task-blog-title-5&spm=1001.2101.3001.4242
  Weex Android SDK源码分析之界面渲染：https://blog.csdn.net/walid1992/article/details/51705371
+ https://blog.csdn.net/walid1992/article/details/51759588?utm_medium=distribute.pc_relevant.none-task-blog-title-2&spm=1001.2101.3001.4242
 
 6 native与weex通讯
 (1)native—>weex
-1)fireGlobalEventCallback
+1)fireGlobalEventCallback 全局事件
+weex和Android的交互：https://blog.csdn.net/hellenicguo/article/details/59058065
 Map<String,Object> params=new HashMap<>();
 params.put("data",stringBuffer);
 mWXSDKInstance.fireGlobalEventCallback("phoneBookLocation",params);

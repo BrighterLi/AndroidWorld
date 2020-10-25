@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".touch.TouchActivity"></activity>
+        <activity android:name=".onmeasure.OnMeasureGroupViewActivity"></activity>
+        <activity android:name=".touch.TouchActivity" />
         <activity android:name=".ViewActivity" />
-        <activity android:name=".onmeasure.OnMeasureActivity"/>
+        <activity android:name=".onmeasure.OnMeasureViewActivity" />
+        <activity android:name=".onmeasure.OnMeasureGroupView2Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

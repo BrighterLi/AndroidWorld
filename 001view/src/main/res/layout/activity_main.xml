@@ -18,5 +18,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="onMeasure"/>
+    <Button
+        android:id="@+id/mBtOnmeasureViewGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="onMeasure"/>
+    <Button
+        android:id="@+id/mBtOnmeasureViewGroup2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="onMeasure"/>
+
 
 </LinearLayout>

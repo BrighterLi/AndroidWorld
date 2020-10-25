@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".onmeasure.OnMeasureGroupView2Activity">
+
+    <com.xiaoming.view.onmeasure.MyViewGroup2
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:background="#ff6830">
+
+        <com.xiaoming.view.onmeasure.MyView
+        android:layout_margin="10dp"
+        android:layout_width="100dp"
+        android:background="#ff0000"
+        android:layout_height="50dp" />
+
+        <com.xiaoming.view.onmeasure.MyView
+            android:layout_margin="10dp"
+            android:layout_width="100dp"
+            android:background="#ff0000"
+            android:layout_height="50dp" />
+
+        <com.xiaoming.view.onmeasure.MyView
+            android:layout_margin="10dp"
+            android:layout_width="100dp"
+            android:background="#ff0000"
+            android:layout_height="50dp" />
+    </com.xiaoming.view.onmeasure.MyViewGroup2>
+
+</LinearLayout>

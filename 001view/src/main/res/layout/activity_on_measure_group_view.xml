@@ -4,15 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".onmeasure.OnMeasureGroupViewActivity">
 
-    <com.xiaoming.view.onmeasure.MyView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        android:background="#ff0000"/>
-
+    <com.xiaoming.view.onmeasure.MyViewGroup
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:background="#ff0000">
+    </com.xiaoming.view.onmeasure.MyViewGroup>
 
 </LinearLayout>

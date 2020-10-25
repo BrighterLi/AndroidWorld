@@ -1,0 +1,6 @@
+1 Fragment中onActivityResult
+在android中，当一个FragmentActivity中有许多个Fragment时，假设这些Fragment为a，b，c，
+当在b中做一些操作之后需要跳转到Activity D，当D操作完成之后需要返回值到b，这个时候我们可能就一脸懵逼
+了，因为b是一个碎片，Activity怎么直接将值返回给碎片呢？
+此时，我们需要做的就是，在b所在的Activity中的onActivityResult里面进行操作了
+
