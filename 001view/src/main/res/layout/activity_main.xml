@@ -17,17 +17,17 @@
         android:id="@+id/mBtOnmeasure"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="onMeasure"/>
+        android:text="view:onMeasure"/>
     <Button
         android:id="@+id/mBtOnmeasureViewGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="onMeasure"/>
+        android:text="ViewGroup:onMeasure"/>
     <Button
         android:id="@+id/mBtOnmeasureViewGroup2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="onMeasure"/>
+        android:text="ViewGroup2:onMeasure"/>
 
 
 </LinearLayout>
