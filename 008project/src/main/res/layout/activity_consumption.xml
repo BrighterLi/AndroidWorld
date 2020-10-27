@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".consumption.ConsumptionActivity">
 
-    <com.xiaoming.a008project.consumption.InterceptScrollView
+    <com.xiaoming.a008project.consumption.view.InterceptScrollView
         android:id="@+id/interceptScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -48,14 +48,14 @@
                 android:layout_height="50dp"
                 android:visibility="gone" />
 
-            <com.xiaoming.a008project.consumption.AutofitViewPager
+            <com.xiaoming.a008project.consumption.view.AutofitViewPager
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
 
         </LinearLayout>
-    </com.xiaoming.a008project.consumption.InterceptScrollView>
+    </com.xiaoming.a008project.consumption.view.InterceptScrollView>
 
     <!-- 悬浮在屏幕上方的顶部空布局-->
     <LinearLayout

@@ -1,4 +1,4 @@
-package com.xiaoming.a008project.consumption;
+package com.xiaoming.a008project.consumption.view;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

@@ -12,6 +12,12 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.xiaoming.a008project.R;
+import com.xiaoming.a008project.consumption.fragment.OneFragment;
+import com.xiaoming.a008project.consumption.fragment.ThreeFragment;
+import com.xiaoming.a008project.consumption.fragment.TwoFragment;
+import com.xiaoming.a008project.consumption.utils.DpUtils;
+import com.xiaoming.a008project.consumption.utils.TabLayoutUtil;
+import com.xiaoming.a008project.consumption.view.InterceptScrollView;
 
 import java.util.ArrayList;
 
@@ -48,6 +54,8 @@ public class ConsumptionActivity extends AppCompatActivity {
         container_top = findViewById(R.id.container_top);
         container_normal = findViewById(R.id.container_normal);
         viewPlace=findViewById(R.id.view_place);
+        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        TabLayoutUtil.reflex(tabLayout);
 
         titleList.clear();
         titleList.add("标签一");

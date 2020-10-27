@@ -1,4 +1,4 @@
-package com.xiaoming.a008project.consumption;
+package com.xiaoming.a008project.consumption.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,12 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
 import com.xiaoming.a008project.R;
+import com.xiaoming.a008project.consumption.view.RecyclerViewAdapter;
 
 import java.util.ArrayList;
 
-public class OneFragment extends Fragment {
+public class TwoFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -25,7 +25,7 @@ public class OneFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mainView = inflater.inflate(R.layout.fragment_one, container, false);
+        mainView = inflater.inflate(R.layout.fragment_two, container, false);
         initView();
         return mainView;
     }
@@ -34,12 +34,11 @@ public class OneFragment extends Fragment {
         mRecyclerView = mainView.findViewById(R.id.recyclerview);
         mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         ArrayList<String> data = new ArrayList<>();
-        for (int i = 0; i < 40; i++) {
+        for (int i = 0; i < 15; i++) {
             data.add("列表项" + i);
         }
         mAdapter = new RecyclerViewAdapter(getActivity(), data);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
-        mRecyclerView.setNestedScrollingEnabled(false);
     }
 }

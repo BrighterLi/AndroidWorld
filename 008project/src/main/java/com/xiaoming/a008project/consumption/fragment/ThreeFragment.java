@@ -1,4 +1,4 @@
-package com.xiaoming.a008project.consumption;
+package com.xiaoming.a008project.consumption.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.xiaoming.a008project.R;
+import com.xiaoming.a008project.consumption.view.RecyclerViewAdapter;
 
 import java.util.ArrayList;
 
