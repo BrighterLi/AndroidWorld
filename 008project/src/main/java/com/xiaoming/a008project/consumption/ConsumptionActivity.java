@@ -66,7 +66,8 @@ public class ConsumptionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_consumption);
 
         initView();
-        refreshTabLayout(titleList);
+        //initTabLayout();
+        //refreshTabLayout(titleList);
     }
 
     private void initView() {
@@ -83,6 +84,7 @@ public class ConsumptionActivity extends AppCompatActivity {
         titleList.add("标签一");
         titleList.add("标签二");
         titleList.add("标签三");
+        refreshTabLayout(titleList);
 
         fragmentList.clear();
         fragmentList.add(new OneFragment());
@@ -201,7 +203,7 @@ public class ConsumptionActivity extends AppCompatActivity {
         tabLayout.setIndicatorCorner(ScreenUtil.dip2pxInt(this, 3));
         tabLayout.setIndicatorBottomMargin(ScreenUtil.dip2pxInt(this, 2));
 
-        tabLayout.setDividerColor(0xFFE4E5E7);
+        //tabLayout.setDividerColor(0xFFE4E5E7);
         tabLayout.setDividerWidth(ScreenUtil.dip2pxInt(this, 1));
         tabLayout.setDividerPadding(ScreenUtil.dip2pxInt(this, 15));
 
