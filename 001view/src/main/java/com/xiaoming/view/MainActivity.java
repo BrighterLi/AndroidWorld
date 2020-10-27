@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.xiaoming.view.onmeasure.OnMeasureGroupView2Activity;
 import com.xiaoming.view.onmeasure.OnMeasureGroupViewActivity;
 import com.xiaoming.view.onmeasure.OnMeasureViewActivity;
+import com.xiaoming.view.relativelayout.TestRelativeLayoutActivity;
 import com.xiaoming.view.touch.TouchActivity;
 
 import butterknife.BindView;
@@ -24,6 +25,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
     Button mBtOnmeasureViewGroup;
     @BindView(R.id.mBtOnmeasureViewGroup2)
     Button mBtOnmeasureViewGroup2;
+    @BindView(R.id.mBtRelativeLayout)
+    Button mBtRelativeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         mBtOnmeasure.setOnClickListener(this);
         mBtOnmeasureViewGroup.setOnClickListener(this);
         mBtOnmeasureViewGroup2.setOnClickListener(this);
+        mBtRelativeLayout.setOnClickListener(this);
     }
 
     @Override
@@ -54,6 +58,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.mBtOnmeasureViewGroup2:
                 startActivity(new Intent(MainActivity.this, OnMeasureGroupView2Activity.class));
+                break;
+            case R.id.mBtRelativeLayout:
+                startActivity(new Intent(MainActivity.this, TestRelativeLayoutActivity.class));
                 break;
         }
     }

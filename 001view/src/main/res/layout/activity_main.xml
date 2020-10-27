@@ -28,6 +28,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ViewGroup2:onMeasure"/>
+    <Button
+        android:id="@+id/mBtRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RelativeLayout"/>
 
 
 </LinearLayout>

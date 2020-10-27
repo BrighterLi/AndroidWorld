@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.widget.horizontalscrollview.TabStripActivity;
 import com.widget.keyboard.KeyboardEntranceActivity;
 import com.widget.pullrefresh.PullRefreshActivity;
 import com.widget.scrollview.ScrollviewActivity;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("输入键盘");
         mDataList.add("下拉刷新");
         mDataList.add("ScrollView");
+        mDataList.add("HorizontalScrollView");
 }
 
     private void initView() {
@@ -56,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 3:
                         startActivity(new Intent(MainActivity.this, ScrollviewActivity.class));
+                        break;
+                    case 4:
+                        startActivity(new Intent(MainActivity.this, TabStripActivity.class));
                         break;
                 }
             }
