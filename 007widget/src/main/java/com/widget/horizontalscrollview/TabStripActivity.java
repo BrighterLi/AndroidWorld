@@ -14,6 +14,7 @@ import com.widget.R;
 import java.util.ArrayList;
 import java.util.Collections;
 
+//https://blog.csdn.net/weixin_41101173/article/details/80158169
 public class TabStripActivity extends AppCompatActivity {
     private HorizontalScrollView horizontalScrollView;
     private LinearLayout container;
@@ -31,8 +32,7 @@ public class TabStripActivity extends AppCompatActivity {
         bindHZSWData();
     }
 
-    //将集合中的数据绑定到HorizontalScrollView上
-
+    //将集合中的数据绑定到HorizontalScrollView上。LinearLayout里面动态放入一个个TextView
     private void bindHZSWData() {    //为布局中textview设置好相关属性
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         layoutParams.gravity = Gravity.CENTER;
@@ -48,26 +48,16 @@ public class TabStripActivity extends AppCompatActivity {
 
     }
 
-
     //初始化布局中的控件
-
     private void setUIRef() {
-
         horizontalScrollView = (HorizontalScrollView) findViewById(R.id.horizontalScrollView);
-
         container = (LinearLayout) findViewById(R.id.horizontalScrollViewItemContainer);
-
         testTextView = (TextView) findViewById(R.id.testTextView);
-
     }
 
     //将字符串数组与集合绑定起来
-
     private void bindData() {
-
         //add all cities to our ArrayList
-
         Collections.addAll(data, cities);
-
     }
 }

@@ -32,6 +32,7 @@ import com.xiaoming.a008project.R;
 import java.util.Locale;
 
 
+//自定义TabLayout
 public class MyTabStrip extends HorizontalScrollView {
 
     private TabClickListener mTabClickListener;
