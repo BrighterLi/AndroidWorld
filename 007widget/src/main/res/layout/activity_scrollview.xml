@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".scrollview.ScrollviewActivity">
+    tools:context=".scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivity">
 
-    <com.widget.scrollview.InterceptScrollView
+    <com.widget.scroll.doublescroll.scrollviewrecyclerview.InterceptScrollView
         android:id="@+id/interceptScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -48,14 +48,14 @@
                 android:layout_height="50dp"
                 android:visibility="gone" />
 
-            <com.widget.scrollview.AutofitViewPager
+            <com.widget.scroll.doublescroll.scrollviewrecyclerview.AutofitViewPager
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
 
         </LinearLayout>
-    </com.widget.scrollview.InterceptScrollView>
+    </com.widget.scroll.doublescroll.scrollviewrecyclerview.InterceptScrollView>
 
     <!-- 悬浮在屏幕上方的顶部空布局-->
     <LinearLayout

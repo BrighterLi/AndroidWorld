@@ -38,7 +38,9 @@ public class OneFragment extends Fragment {
         for (int i = 0; i < 40; i++) {
             data.add("列表项" + i);
         }
+        //context;data
         mAdapter = new RecyclerViewAdapter(getActivity(), data);
+        //view-layoutmanager
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setNestedScrollingEnabled(false);

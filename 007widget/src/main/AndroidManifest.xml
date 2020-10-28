@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".horizontalscrollview.TabStripActivity"></activity>
-        <activity android:name=".scrollview.ScrollviewActivity" />
+        <activity android:name=".scroll.scrollconflict.ScrollConflictActivity"></activity>
+        <activity android:name=".scroll.doublescroll.recyclerviewrecyclerview.ScrollViewActivity" />
+        <activity android:name=".horizontalscrollview.TabStripActivity" />
+        <activity android:name=".scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivity" />
         <activity android:name=".keyboard.KeyboardEntranceActivity" />
         <activity android:name=".pullrefresh.PullRefreshActivity" />
         <activity android:name=".MainActivity">

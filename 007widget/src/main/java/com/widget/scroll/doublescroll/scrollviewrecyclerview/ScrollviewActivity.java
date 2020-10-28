@@ -1,4 +1,4 @@
-package com.widget.scrollview;
+package com.widget.scroll.doublescroll.scrollviewrecyclerview;
 
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 import com.widget.R;
 
-
+//嵌套滑动：ScrollView+RecyclerView
 public class ScrollviewActivity extends AppCompatActivity {
 
     private InterceptScrollView mScrollView;

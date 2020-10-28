@@ -1,4 +1,4 @@
-package com.widget.scrollview;
+package com.widget.scroll.doublescroll.scrollviewrecyclerview;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -14,7 +14,8 @@ import com.widget.R;
 
 import java.util.ArrayList;
 
-public class ThreeFragment extends Fragment {
+public class TwoFragment extends Fragment {
+
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
     private RecyclerViewAdapter mAdapter;
@@ -23,19 +24,19 @@ public class ThreeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mainView=inflater.inflate(R.layout.fragment_three,container,false);
+        mainView = inflater.inflate(R.layout.fragment_two, container, false);
         initView();
         return mainView;
     }
 
-    private void initView(){
-        mRecyclerView=mainView.findViewById(R.id.recyclerview);
-        mLayoutManager=new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
-        ArrayList<String> data=new ArrayList<>();
-        for(int i=0;i<20;i++){
-            data.add("列表项"+i);
+    private void initView() {
+        mRecyclerView = mainView.findViewById(R.id.recyclerview);
+        mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+        ArrayList<String> data = new ArrayList<>();
+        for (int i = 0; i < 15; i++) {
+            data.add("列表项" + i);
         }
-        mAdapter=new RecyclerViewAdapter(getActivity(),data);
+        mAdapter = new RecyclerViewAdapter(getActivity(), data);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
     }

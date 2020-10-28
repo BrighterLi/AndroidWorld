@@ -1,4 +1,4 @@
-package com.widget.scrollview;
+package com.widget.scroll.doublescroll.scrollviewrecyclerview;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

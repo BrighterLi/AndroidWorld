@@ -11,7 +11,7 @@ import android.widget.ListView;
 import com.widget.horizontalscrollview.TabStripActivity;
 import com.widget.keyboard.KeyboardEntranceActivity;
 import com.widget.pullrefresh.PullRefreshActivity;
-import com.widget.scrollview.ScrollviewActivity;
+import com.widget.scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivity;
 import com.widget.video.VideoActivity;
 
 import java.util.ArrayList;
