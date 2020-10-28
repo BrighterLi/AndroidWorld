@@ -81,9 +81,9 @@ public class ConsumptionActivity extends AppCompatActivity {
         initTabLayout();
 
         titleList.clear();
-        titleList.add("标签一");
-        titleList.add("标签二");
-        titleList.add("标签三");
+        titleList.add("服务");
+        titleList.add("动态");
+        titleList.add("商品");
         refreshTabLayout(titleList);
 
         fragmentList.clear();
@@ -179,8 +179,11 @@ public class ConsumptionActivity extends AppCompatActivity {
     }
 
     private void initTabLayout() {
-        int defaultColor = 0xFF84888F;
+        int defaultColor = 0xFF000000;
+        //int defaultColor = 0xFF84888F;
         int selectedColor = 0xFF050C1C;
+        //int selectedColor = 0xFF84888F;
+        //为什么defaultColor和selectedColor一样，则tab字体粗细不会变化？
         int lineColor = 0xFFE0E0E0;
 
         mWindowWidth = ScreenUtil.getWindowWidth(this);
@@ -216,7 +219,7 @@ public class ConsumptionActivity extends AppCompatActivity {
         tabLayout.setTabPaddingLeftRight(mTabPadding, false);
         tabLayout.setEdgeLeftRight(mEdgePadding, false);
         mNavHeight = ScreenUtil.dip2pxInt(ConsumptionActivity.this, 50);
-        //tabLayout.setBackgroundColor(Color.YELLOW);
+        tabLayout.setBackgroundColor(Color.WHITE);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, mNavHeight);
         params.leftMargin = mEdgePadding;
         tabLayout.setLayoutParams(params);
@@ -307,5 +310,6 @@ public class ConsumptionActivity extends AppCompatActivity {
             tabLayout.setEdgeLeft((int) padding - mEdgePadding, false);
             tabLayout.setEdgeRight((int) padding, false);
         }
+        //tabLayout.notifyDataSetChanged();
     }
 }
