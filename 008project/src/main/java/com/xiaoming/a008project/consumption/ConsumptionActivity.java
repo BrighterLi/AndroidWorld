@@ -188,20 +188,21 @@ public class ConsumptionActivity extends AppCompatActivity {
         mEdgePadding = ScreenUtil.dip2pxInt(this, 0);
         mTabPadding = ScreenUtil.dip2pxInt(this, 10);
         mTabMinPadding = ScreenUtil.dip2pxInt(this, 5);
-        mTabDefaultTxtSize = ScreenUtil.sp2px(this, 16);
-        mTabSelectedTxtSize = ScreenUtil.sp2px(this, 16);
+        mTabDefaultTxtSize = ScreenUtil.sp2px(this, 15);
+        mTabSelectedTxtSize = ScreenUtil.sp2px(this, 15);
         //tabLayout = new MyTabStrip(this);
         //tabLayout = findViewById(R.id.tabLayout);
-        tabLayout.setBackgroundColor(DEFAULT_BG_COLOR);
+        tabLayout.setBackgroundColor(0xFFFFFFF);
         // tabLayout.setTabBackgroundRes(R.drawable.selector_background_ripple);
         tabLayout.setUnderlineHeight(0);
         tabLayout.setUnderlineColor(lineColor);
 
         //tabLayout.setIndicatorColor(GrayManager.getInstance().grayColor(0xFFFF3D77));
-        tabLayout.setIndicatorLength(ScreenUtil.dip2pxInt(this, 20));
-        tabLayout.setIndicatorHeight(ScreenUtil.dip2pxInt(this, 6));
-        tabLayout.setIndicatorCorner(ScreenUtil.dip2pxInt(this, 3));
-        tabLayout.setIndicatorBottomMargin(ScreenUtil.dip2pxInt(this, 2));
+        tabLayout.setIndicatorLength(ScreenUtil.dip2pxInt(this, 14));
+        tabLayout.setIndicatorHeight(ScreenUtil.dip2pxInt(this, 3));
+        tabLayout.setIndicatorCorner(ScreenUtil.dip2pxInt(this, 2));
+        tabLayout.setIndicatorBottomMargin(ScreenUtil.dip2pxInt(this, 6));
+        tabLayout.setIndicatorColor(0xFFFF3D77);
 
         //tabLayout.setDividerColor(0xFFE4E5E7);
         tabLayout.setDividerWidth(ScreenUtil.dip2pxInt(this, 1));
@@ -215,7 +216,7 @@ public class ConsumptionActivity extends AppCompatActivity {
         tabLayout.setTabPaddingLeftRight(mTabPadding, false);
         tabLayout.setEdgeLeftRight(mEdgePadding, false);
         mNavHeight = ScreenUtil.dip2pxInt(ConsumptionActivity.this, 50);
-        tabLayout.setBackgroundColor(Color.YELLOW);
+        //tabLayout.setBackgroundColor(Color.YELLOW);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, mNavHeight);
         params.leftMargin = mEdgePadding;
         tabLayout.setLayoutParams(params);
