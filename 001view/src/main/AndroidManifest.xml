@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".relativelayout.TestRelativeLayoutActivity"></activity>
+        <activity android:name=".touchevnet2.TouchEvent2Activity"></activity>
+        <activity android:name=".relativelayout.TestRelativeLayoutActivity" />
         <activity android:name=".onmeasure.OnMeasureGroupViewActivity" />
-        <activity android:name=".touch.TouchActivity" />
+        <activity android:name=".touchevent.TouchActivity" />
         <activity android:name=".ViewActivity" />
         <activity android:name=".onmeasure.OnMeasureViewActivity" />
         <activity android:name=".onmeasure.OnMeasureGroupView2Activity" />

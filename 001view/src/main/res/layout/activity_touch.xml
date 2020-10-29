@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.xiaoming.view.touch.MyLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.xiaoming.view.touchevent.MyLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.xiaoming.view.touch.MyView
+    <com.xiaoming.view.touchevent.MyView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="hello">
-    </com.xiaoming.view.touch.MyView>
+    </com.xiaoming.view.touchevent.MyView>
 
-</com.xiaoming.view.touch.MyLayout>
+</com.xiaoming.view.touchevent.MyLayout>

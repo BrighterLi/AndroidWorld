@@ -1,4 +1,4 @@
-package com.xiaoming.view.touch;
+package com.xiaoming.view.touchevent;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -23,6 +23,7 @@ public class MyView extends Button {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        //View不消费的话即不返回true,则会抛给父view的onTouchEvent
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 Log.d(TouchActivity.TAG,"MyView#onTouchEvent#ACTION_DOWN");
@@ -39,8 +40,13 @@ public class MyView extends Button {
         }
         Log.d(TouchActivity.TAG,"MyView#onTouchEvent#super.onTouchEvent(event):"
                 + super.onTouchEvent(event));
-        //return super.onTouchEvent(event);
-        return false;
+        return super.onTouchEvent(event); //默认返回的是true,即默认进行消费
+        //return false;
     }
 
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        Log.d(TouchActivity.TAG,"MyView#dispatchTouchEvent#event:" + event.toString());
+        return super.dispatchTouchEvent(event);
+    }
 }

@@ -11,7 +11,7 @@
         android:id="@+id/mBtTouchDemo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Touch Demo"/>
+        android:text="Touch事件分发"/>
 
     <Button
         android:id="@+id/mBtOnmeasure"
@@ -33,6 +33,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RelativeLayout"/>
+    <Button
+        android:id="@+id/mBtTouchEvent2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Touch事件分发"/>
 
 
 </LinearLayout>

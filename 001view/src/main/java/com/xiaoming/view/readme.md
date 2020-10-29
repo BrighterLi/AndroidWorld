@@ -1,6 +1,37 @@
-1 onInterceptTouchEvent与onTouchEvent
+1 onInterceptTouchEvent与onTouchEvent与dispatchTouchEvent
+Android中的dispatchTouchEvent()、onInterceptTouchEvent()和onTouchEvent()：
+https://blog.csdn.net/xyz_lmn/article/details/12517911
 Android中onInterceptTouchEvent与onTouchEvent:https://blog.csdn.net/top_code/article/details/8585777
 Android Touch事件分析:https://blog.51cto.com/mikewang/1204944
+super.dispatchTouchEvent(event)使用:https://blog.csdn.net/Liu_yunzhao/article/details/80247498
+
+在ViewGroup中，事件分为dispatchTouchEvent（事件的分发），onInterceptTouchEvent（事件的拦截），onTouchEvent（事件的处理）。
+在View中，事件分为dispatchTouchEvent（事件的分发），onTouchEvent（事件的处理）。
+
+View里，有两个回调函数:
+public boolean dispatchTouchEvent(MotionEvent ev)；  
+public boolean onTouchEvent(MotionEvent ev);
+ViewGroup里，有三个回调函数 ：
+public boolean dispatchTouchEvent(MotionEvent ev)；  
+public boolean onInterceptTouchEvent(MotionEvent ev);(只有ViewGroup可进行拦截)
+public boolean onTouchEvent(MotionEvent ev);
+在Activity里，有两个回调函数 ：
+public boolean dispatchTouchEvent(MotionEvent ev)；  
+public boolean onTouchEvent(MotionEvent ev);
+
+onInterceptTouchEvent默认返回值是false
+ViewGroup里的onTouchEvent默认返回值是false, View里的onTouchEvent默认返回值是true
+
+***
+疑问？
+(1)ViewGroup都不拦截也不消费，即super默认值；最后的View也super默认值，View的onTouchEvent方法
+默认返回true,是否就说明会消费事件？还是只是消费DOWN事件，接下来怎么走？
+解答：默认返回true，说明可以消费事件。
+(2) ViewGroup都不拦截也不消费，即super默认值；最后的View人为返回false，View的onTouchEvent方法
+不会消费事件，那么事件就会向上传？
+解答：返回false,则只会消费DOWN事件，上层的onTouchEvent会去消费其他事件。
+(3) dispatchTouchEvent方法逻辑与返回?
+(4) super.dispatchTouchEvent(event)的返回值取决于子View或当前View的onTouchEvent对应事件的返回值?
 
 2 onMeasure
 android中对View的onMeasure()方法的理解:https://blog.csdn.net/lovexieyuan520/article/details/50614670

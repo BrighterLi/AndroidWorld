@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".touchevnet2.TouchEvent2Activity">
+
+    <com.xiaoming.view.touchevnet2.MyViewGroupA
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center"
+        android:background="#ffD81B60"
+        android:text="MyViewGroupA">
+        <com.xiaoming.view.touchevnet2.MyViewGroupB
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:textAlignment="center"
+            android:background="#ff008577"
+            android:text="MyViewGroupB">
+
+            <com.xiaoming.view.touchevnet2.MyView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:textAlignment="center"
+                android:background="#ffff6830"
+                android:text="MyView"/>
+        </com.xiaoming.view.touchevnet2.MyViewGroupB>
+    </com.xiaoming.view.touchevnet2.MyViewGroupA>
+
+
+
+
+
+</LinearLayout>
