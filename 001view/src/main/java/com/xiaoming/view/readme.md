@@ -4,6 +4,9 @@ https://blog.csdn.net/xyz_lmn/article/details/12517911
 Android中onInterceptTouchEvent与onTouchEvent:https://blog.csdn.net/top_code/article/details/8585777
 Android Touch事件分析:https://blog.51cto.com/mikewang/1204944
 super.dispatchTouchEvent(event)使用:https://blog.csdn.net/Liu_yunzhao/article/details/80247498
+dispatchTouchEvent:
+谈谈对dispatchTouchEvent、onInterceptTouchEvent和onTouchEvent的理解:
+https://blog.csdn.net/aaa466412913/article/details/50585891?utm_medium=distribute.pc_relevant.none-task-blog-title-8&spm=1001.2101.3001.4242
 
 在ViewGroup中，事件分为dispatchTouchEvent（事件的分发），onInterceptTouchEvent（事件的拦截），onTouchEvent（事件的处理）。
 在View中，事件分为dispatchTouchEvent（事件的分发），onTouchEvent（事件的处理）。
@@ -30,6 +33,18 @@ super.dispatchTouchEvent(event)的返回值取决于子View或当前View的onTou
 
 onInterceptTouchEvent中
 无论在什么时候拦截，接下来的事件都将传递给当前View的onTouchEvent来处理
+
+dispatchTouchEvent:
+ 触摸事件是一连串ACTION_DOWN，ACTION_MOVE..MOVE…MOVE、最后ACTION_UP，触摸事件还有ACTION_CANCEL事件。事件都是从ACTION_DOWN开始的，Activity的dispatchTouchEvent()首先接收到ACTION_DOWN，执行super.dispatchTouchEvent(ev)，事件向下分发。
+    dispatchTouchEvent()返回true，后续事件（ACTION_MOVE、ACTION_UP）会再传递，如果返回false，dispatchTouchEvent()就接收不到ACTION_UP、ACTION_MOVE。
+
+dispatchTouchEvent:
+https://blog.csdn.net/aaa466412913/article/details/50585891?utm_medium=distribute.pc_relevant.none-task-blog-title-8&spm=1001.2101.3001.4242
+    负责事件分发。必然有人会有疑问，啥是个事件分发？ 说白了，可以理解为每个控件(包括Activity)对于事件监听的第一步通知，当然，它自己也可以消耗这个事件，事件被消耗了，就不会引起下边子节点的dispatchTouchEvent了。注意，它一般不会被重写，主要即返回值基本上是为  super.dispatchTouchEvent(ev)
+     返回值：
+          true -> 自己消耗，子节点将不会继续传递事件，注意，是直接消耗掉，即不会有其他事件的介入。
+          false -> 若非根节点，则会进入其父节点的Touch事件，否则只会执行根节点的dispatchTouchEvent
+          super.dispatchTouchEvent(ev) -> 这样对于ViewGroup来说才能进onInterceptTouchEvent来选择是否拦截对于子节点事件的传递。
 
 ***
 疑问？
