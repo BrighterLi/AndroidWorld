@@ -22,6 +22,15 @@ public boolean onTouchEvent(MotionEvent ev);
 onInterceptTouchEvent默认返回值是false
 ViewGroup里的onTouchEvent默认返回值是false, View里的onTouchEvent默认返回值是true
 
+dispatchTouchEvent、onTouchEvent中
+ACTION_DOWN：返回true，说明当前View来处理事件，后续事件也要处理，事件不再向下传递；返回false，说明当前View不处理事件，后续事件直接由上一级View处理，当前View也不会再接收到后续事件
+ACTION_MOVE、ACTION_UP：返回true，说明其子View已经接收了DOWN事件，这里返回true只会导致该部分事件不再继续向下传递（但也不会传递当前View的onTouchEvent处理），对于没有返回true的事件还按正常流程传递
+注意
+super.dispatchTouchEvent(event)的返回值取决于子View或当前View的onTouchEvent对应事件的返回值
+
+onInterceptTouchEvent中
+无论在什么时候拦截，接下来的事件都将传递给当前View的onTouchEvent来处理
+
 ***
 疑问？
 (1)ViewGroup都不拦截也不消费，即super默认值；最后的View也super默认值，View的onTouchEvent方法
