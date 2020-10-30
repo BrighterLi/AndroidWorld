@@ -1,4 +1,9 @@
 1 onInterceptTouchEvent与onTouchEvent与dispatchTouchEvent
+视频资源：
+https://v.qq.com/x/page/f0934o47gph.html
+https://www.56.com/u95/v_MTQ4MTExMjEy.html
+https://www.imooc.com/learn/1155/
+文字资源：
 Android中的dispatchTouchEvent()、onInterceptTouchEvent()和onTouchEvent()：
 https://blog.csdn.net/xyz_lmn/article/details/12517911
 Android中onInterceptTouchEvent与onTouchEvent:https://blog.csdn.net/top_code/article/details/8585777
@@ -40,7 +45,9 @@ dispatchTouchEvent:
 
 dispatchTouchEvent:
 https://blog.csdn.net/aaa466412913/article/details/50585891?utm_medium=distribute.pc_relevant.none-task-blog-title-8&spm=1001.2101.3001.4242
-    负责事件分发。必然有人会有疑问，啥是个事件分发？ 说白了，可以理解为每个控件(包括Activity)对于事件监听的第一步通知，当然，它自己也可以消耗这个事件，事件被消耗了，就不会引起下边子节点的dispatchTouchEvent了。注意，它一般不会被重写，主要即返回值基本上是为  super.dispatchTouchEvent(ev)
+    负责事件分发。必然有人会有疑问，啥是个事件分发？ 说白了，可以理解为每个控件(包括Activity)对于事件监听的
+    第一步通知，当然，它自己也可以消耗这个事件，事件被消耗了，就不会引起下边子节点的dispatchTouchEvent了。
+    注意，它一般不会被重写，主要即返回值基本上是为  super.dispatchTouchEvent(ev)
      返回值：
           true -> 自己消耗，子节点将不会继续传递事件，注意，是直接消耗掉，即不会有其他事件的介入。
           false -> 若非根节点，则会进入其父节点的Touch事件，否则只会执行根节点的dispatchTouchEvent
@@ -56,6 +63,7 @@ https://blog.csdn.net/aaa466412913/article/details/50585891?utm_medium=distribut
 解答：返回false,则只会消费DOWN事件，上层的onTouchEvent会去消费其他事件。
 (3) dispatchTouchEvent方法逻辑与返回?
 (4) super.dispatchTouchEvent(event)的返回值取决于子View或当前View的onTouchEvent对应事件的返回值?
+(5) 事件序列，DOWN事件对后续事件的影响？
 
 2 onMeasure
 android中对View的onMeasure()方法的理解:https://blog.csdn.net/lovexieyuan520/article/details/50614670
