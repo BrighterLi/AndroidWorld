@@ -1,6 +1,7 @@
 package com.widget;
 
 import android.content.Intent;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,7 @@ import com.widget.scroll.scrollconflict.demo2.ScrollConflict2Activity;
 import com.widget.scroll.scrollconflict.demo3.ScrollConflict3Activity;
 import com.widget.video.VideoActivity;
 import com.widget.listview.pagingrequest.PagingRequestActivity;
+import com.widget.viewpager.ViewPagerActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("滑动冲突：ViewPager+ListView;  外部左右+内部上下;外部拦截法+内部拦截法");
         mDataList.add("滑动冲突：SwipeRefreshLayout+ScrollView+ViewPager+ListView；上下滑动+左右滑动；内部拦截法");
         mDataList.add("ListView:分页请求");
+        mDataList.add("ViewPager");
     }
 
     private void initView() {
@@ -83,6 +86,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 8:
                         startActivity(new Intent(MainActivity.this, PagingRequestActivity.class));
+                        break;
+                    case 9:
+                        startActivity(new Intent(MainActivity.this, ViewPagerActivity.class));
                         break;
                 }
             }

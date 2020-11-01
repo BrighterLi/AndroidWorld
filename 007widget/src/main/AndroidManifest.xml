@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".listview.pagingrequest.PagingRequestActivity"></activity>
+        <activity android:name=".viewpager.ViewPagerActivity"></activity>
+        <activity android:name=".listview.pagingrequest.PagingRequestActivity" />
         <activity android:name=".scroll.scrollconflict.demo3.ScrollConflict3Activity" />
         <activity android:name=".scroll.scrollconflict.demo2.ScrollConflict2Activity" />
         <activity android:name=".scroll.scrollconflict.demo1.ScrollConflictActivity" />
