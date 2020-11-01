@@ -20,6 +20,7 @@ import com.widget.video.VideoActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class MainActivity extends AppCompatActivity {
     private ListView mLvMain;
     private List<String> mDataList;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("通過HorizontalScrollView自定义TabLayout");
         mDataList.add("滑动冲突:ScrollView+ListView;同向，内部拦截法");
         mDataList.add("滑动冲突：ViewPager+ListView;  外部左右+内部上下;外部拦截法+内部拦截法");
-        mDataList.add("滑动冲突：ScrollView+SwipeRefreshLayout+ViewPager+ListView；上下滑动+左右滑动；内部拦截法");
+        mDataList.add("滑动冲突：SwipeRefreshLayout+ScrollView+ViewPager+ListView；上下滑动+左右滑动；内部拦截法");
 }
 
     private void initView() {

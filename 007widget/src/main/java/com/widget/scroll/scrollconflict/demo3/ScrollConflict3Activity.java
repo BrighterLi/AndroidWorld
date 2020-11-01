@@ -17,6 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 //https://www.jianshu.com/p/87a41b8c0dd0
+//SwipeRefreshLayout+ScrollView+ViewPager+ListView
+// 上下滑动+左右滑动；内部拦截法
 
 public class ScrollConflict3Activity extends AppCompatActivity {
 
