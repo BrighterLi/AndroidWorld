@@ -14,6 +14,7 @@ import com.widget.pullrefresh.PullRefreshActivity;
 import com.widget.scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivity;
 import com.widget.scroll.scrollconflict.demo1.ScrollConflictActivity;
 import com.widget.scroll.scrollconflict.demo2.ScrollConflict2Activity;
+import com.widget.scroll.scrollconflict.demo3.ScrollConflict3Activity;
 import com.widget.video.VideoActivity;
 
 import java.util.ArrayList;
@@ -40,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("ScrollView");
         mDataList.add("通過HorizontalScrollView自定义TabLayout");
         mDataList.add("滑动冲突:ScrollView+ListView;同向，内部拦截法");
-        mDataList.add("滑动冲突：ViewPager+ListView;外部左右+内部上下;外部拦截法+内部拦截法");
+        mDataList.add("滑动冲突：ViewPager+ListView;  外部左右+内部上下;外部拦截法+内部拦截法");
+        mDataList.add("滑动冲突：ScrollView+SwipeRefreshLayout+ViewPager+ListView；上下滑动+左右滑动；内部拦截法");
 }
 
     private void initView() {
@@ -72,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
                     case 6:
                         startActivity(new Intent(MainActivity.this, ScrollConflict2Activity.class));
                         break;
+                    case 7:
+                    startActivity(new Intent(MainActivity.this, ScrollConflict3Activity.class));
+                    break;
                 }
             }
         });

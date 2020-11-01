@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Widget</string>
+    <string name="tv_text">This is a TextView</string>
 </resources>

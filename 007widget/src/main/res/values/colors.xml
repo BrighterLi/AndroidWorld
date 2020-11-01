@@ -7,4 +7,6 @@
     <color name="color1">#1F39C9</color>
     <color name="color2">#FF5722</color>
     <color name="color3">#673AB7</color>
+    <color name="bg_tv">#3F51B5</color>
+    <color name="text_color_white">#ffffff</color>
 </resources>
