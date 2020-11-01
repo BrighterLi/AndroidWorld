@@ -29,4 +29,26 @@ https://www.jianshu.com/p/a5100ac471ae
 返回值为true时不拦截,返回值为false时为拦截)交给父容器处理
 
 
-8 ListView的addHeaderView方法或者addFooterView方法
+8 ListView
+(1)addHeaderView方法，addFooterView方法
+(2)分页加载
+Android ListView分页加载（服务端+android端）Demo:https://blog.csdn.net/u012440207/article/details/36424843?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.channel_param
+(3)平常的一个列表页面的生成需要以下文件：
+一个Activity文件，有时候可能还会忘记注册
+一个包含上下拉刷新控件以及无数据时提示的布局文件
+一个Listview的item的布局文件
+一个Adapter适配器文件
+一个需要被解析的Bean文件
+当然在Activity中还需要处理以下功能：
+数据解析
+分页加载
+数据缓存
+网络请求
+
+9 RecyclerView
+(1)addHeaderView方法，addFooterView方法
+
+10 页面管理
+(1) 加载中、空页面、错误页面
+
+11 ViewPager

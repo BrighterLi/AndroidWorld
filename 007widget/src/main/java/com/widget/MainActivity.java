@@ -16,10 +16,12 @@ import com.widget.scroll.scrollconflict.demo1.ScrollConflictActivity;
 import com.widget.scroll.scrollconflict.demo2.ScrollConflict2Activity;
 import com.widget.scroll.scrollconflict.demo3.ScrollConflict3Activity;
 import com.widget.video.VideoActivity;
+import com.widget.listview.pagingrequest.PagingRequestActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
+//https://www.cnblogs.com/androidez/archive/2013/02/09/2909665.html
 
 public class MainActivity extends AppCompatActivity {
     private ListView mLvMain;
@@ -44,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("滑动冲突:ScrollView+ListView;同向，内部拦截法");
         mDataList.add("滑动冲突：ViewPager+ListView;  外部左右+内部上下;外部拦截法+内部拦截法");
         mDataList.add("滑动冲突：SwipeRefreshLayout+ScrollView+ViewPager+ListView；上下滑动+左右滑动；内部拦截法");
-}
+        mDataList.add("ListView:分页请求");
+    }
 
     private void initView() {
         mLvMain = findViewById(R.id.lv_main);
@@ -76,8 +79,11 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, ScrollConflict2Activity.class));
                         break;
                     case 7:
-                    startActivity(new Intent(MainActivity.this, ScrollConflict3Activity.class));
-                    break;
+                        startActivity(new Intent(MainActivity.this, ScrollConflict3Activity.class));
+                        break;
+                    case 8:
+                        startActivity(new Intent(MainActivity.this, PagingRequestActivity.class));
+                        break;
                 }
             }
         });
