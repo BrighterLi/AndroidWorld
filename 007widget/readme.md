@@ -17,3 +17,16 @@ Android中RecyclerView嵌套RecyclerView或嵌套ListView:https://blog.csdn.net/
 Android 仿京东,淘宝RecyclerView嵌套ViewPager嵌套RecyclerView商品展示:
 https://www.jianshu.com/p/a5100ac471ae
 (3)NestedScrollView+RecyclerView
+
+7 滑动冲突
+(1) 外部拦截法(由父容器决定事件的传递)：让事件都经过父容器的拦截处理
+1)首先down事件父容器必须返回false ，因为若是返回true，也就是拦截了down事件，那么后续的move和up事件
+就都会传递给父容器(onTouchEvent)，子元素就没有机会处理事件了。
+2)其次是up事件也返回了false，一是因为up事件对父容器没什么意义，其次是因为若事件是子元素处理的，
+却没有收到up事件会让子元素的onClick事件无法触发。
+(2)内部拦截法(自己决定事件的传递)：父容器不拦截任何事件，将所有事件传递给子元素
+如果子元素需要则消耗掉，如果不需要则通过requestDisallowInterceptTouchEvent方法(请求父类不要拦截,
+返回值为true时不拦截,返回值为false时为拦截)交给父容器处理
+
+
+8 ListView的addHeaderView方法或者addFooterView方法

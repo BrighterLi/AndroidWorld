@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".scroll.scrollconflict.ScrollConflictActivity"></activity>
+        <activity android:name=".scroll.scrollconflict.demo3.ScrollConflict3Activity"></activity>
+        <activity android:name=".scroll.scrollconflict.demo2.ScrollConflict2Activity" />
+        <activity android:name=".scroll.scrollconflict.demo1.ScrollConflictActivity" />
         <activity android:name=".scroll.doublescroll.recyclerviewrecyclerview.ScrollViewActivity" />
         <activity android:name=".horizontalscrollview.TabStripActivity" />
         <activity android:name=".scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivity" />

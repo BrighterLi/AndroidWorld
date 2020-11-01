@@ -28,7 +28,7 @@ public boolean dispatchTouchEvent(MotionEvent ev)；
 public boolean onTouchEvent(MotionEvent ev);
 
 onInterceptTouchEvent默认返回值是false
-ViewGroup里的onTouchEvent默认返回值是false, View里的onTouchEvent默认返回值是true
+ViewGroup里的onTouchEvent默认返回值是false, View里的onTouchEvent默认返回值是false
 
 dispatchTouchEvent、onTouchEvent中
 ACTION_DOWN：返回true，说明当前View来处理事件，后续事件也要处理，事件不再向下传递；返回false，说明当前View不处理事件，后续事件直接由上一级View处理，当前View也不会再接收到后续事件
@@ -68,3 +68,10 @@ https://blog.csdn.net/aaa466412913/article/details/50585891?utm_medium=distribut
 2 onMeasure
 android中对View的onMeasure()方法的理解:https://blog.csdn.net/lovexieyuan520/article/details/50614670
 自定义view，viewgroup的onMeasure 方法：https://blog.csdn.net/wanghao200906/article/details/50906799
+
+
+3 源码分析
+(1) ViewGroup：dispatchTouchEvent主要做了3件事
+1)去判断是否需要拦截事件
+2)在当前ViewGroup中找到用户真正点击的View
+3)分发事件到View上

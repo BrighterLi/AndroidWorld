@@ -12,6 +12,8 @@ import com.widget.horizontalscrollview.TabStripActivity;
 import com.widget.keyboard.KeyboardEntranceActivity;
 import com.widget.pullrefresh.PullRefreshActivity;
 import com.widget.scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivity;
+import com.widget.scroll.scrollconflict.demo1.ScrollConflictActivity;
+import com.widget.scroll.scrollconflict.demo2.ScrollConflict2Activity;
 import com.widget.video.VideoActivity;
 
 import java.util.ArrayList;
@@ -36,7 +38,9 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("输入键盘");
         mDataList.add("下拉刷新");
         mDataList.add("ScrollView");
-        mDataList.add("HorizontalScrollView");
+        mDataList.add("通過HorizontalScrollView自定义TabLayout");
+        mDataList.add("滑动冲突:ScrollView+ListView;同向，内部拦截法");
+        mDataList.add("滑动冲突：ViewPager+ListView;外部左右+内部上下;外部拦截法+内部拦截法");
 }
 
     private void initView() {
@@ -61,6 +65,12 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 4:
                         startActivity(new Intent(MainActivity.this, TabStripActivity.class));
+                        break;
+                    case 5:
+                        startActivity(new Intent(MainActivity.this, ScrollConflictActivity.class));
+                        break;
+                    case 6:
+                        startActivity(new Intent(MainActivity.this, ScrollConflict2Activity.class));
                         break;
                 }
             }
