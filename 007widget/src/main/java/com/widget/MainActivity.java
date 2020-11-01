@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.widget.horizontalscrollview.TabStripActivity;
 import com.widget.keyboard.KeyboardEntranceActivity;
+import com.widget.listview.backtotop.BackToTopActivity;
 import com.widget.pullrefresh.PullRefreshActivity;
 import com.widget.scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivity;
 import com.widget.scroll.scrollconflict.demo1.ScrollConflictActivity;
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("滑动冲突：SwipeRefreshLayout+ScrollView+ViewPager+ListView；上下滑动+左右滑动；内部拦截法");
         mDataList.add("ListView:分页请求");
         mDataList.add("ViewPager");
+        mDataList.add("ListView:点击悬浮按钮回到顶部");
     }
 
     private void initView() {
@@ -89,6 +91,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 9:
                         startActivity(new Intent(MainActivity.this, ViewPagerActivity.class));
+                        break;
+                    case 10:
+                        startActivity(new Intent(MainActivity.this, BackToTopActivity.class));
                         break;
                 }
             }
