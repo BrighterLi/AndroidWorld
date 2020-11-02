@@ -13,4 +13,10 @@ android tablayout选中的字体颜色及大小改变:https://www.jianshu.com/p/
 (1)下拉刷新
 (2)列表；瀑布流
 (3)图片，视频
+这是一篇Android RecyclerView使用介绍哦:https://www.jianshu.com/p/12ec590f6c76
+(4)自动加载更多 
+这是一篇Android RecyclerView使用介绍哦:https://www.jianshu.com/p/12ec590f6c76
+要想实现滑动到列表某处时自动加载下一页（比如剩最后两个item时），可以通过对RecyclerView设置滑
+动监听，获取当前显示的最后一个item在适配器中的位置，如果该item的位置小于或等于适配器item总个数
+减2，就加载下一页数据
 
