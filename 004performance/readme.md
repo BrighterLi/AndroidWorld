@@ -55,11 +55,59 @@ native size再8.0之后，对Bitmap的观测有帮助。
 内存溢出是程序申请的内存，超出系统所能分配的范围，从而发生内存溢出。
 
 (2)内存泄漏
-Android studio profile查看内存泄漏:https://blog.csdn.net/u010513497/article/details/103064655
+Android studio profile查看内存泄漏:https://blog.csdn.net/u010513497/article/details/103064655AndroidStudio 
 内存泄漏是程序在运行过程中，无法释放不再使用的内存空间的情况，简单的说，本应该回收的内存,不能被回收。一次内存泄漏的危害可以忽略，
 但要是不断堆积就会使程序内存吃紧，不断地申请新内存，不断GC（垃圾回收），使程序变得缓慢，卡顿等。
-Android中常见内存泄漏：
-1）静态引用引用了该释放的对象
-2）非静态内部类
-3）Webview
-4）资源未释放
+内存泄漏产生的原因在Android中大致分为以下几种：
+https://www.cnblogs.com/kelina2mark/p/6140658.html
+1.static变量引起的内存泄漏 
+因为static变量的生命周期是在类加载时开始 类卸载时结束，也就是说static变量是在程序进程死亡时才释放，如果在static变量中 引用了Activity 
+那么 这个Activity由于被引用，便会随static变量的生命周期一样，一直无法被释放，造成内存泄漏。
+解决办法： 
+在Activity被静态变量引用时，使用 getApplicationContext 因为Application生命周期从程序开始到结束，和static变量的一样。
+2.线程造成的内存泄漏 
+类似于上述例子中的情况，线程执行时间很长，及时Activity跳出还会执行，因为线程或者Runnable是Acticvity内部类，因此握有Activity的实例
+(因为创建内部类必须依靠外部类)，因此造成Activity无法释放。 
+AsyncTask 有线程池，问题更严重
+解决办法： 
+1.合理安排线程执行的时间，控制线程在Activity结束前结束。 
+2.将内部类改为静态内部类，并使用弱引用WeakReference来保存Activity实例 因为弱引用 只要GC发现了 就会回收它 ，因此可尽快回收
+3.BitMap占用过多内存 
+bitmap的解析需要占用内存，但是内存只提供8M的空间给BitMap，如果图片过多，并且没有及时 recycle bitmap 那么就会造成内存溢出。
+解决办法： 
+及时recycle 压缩图片之后加载图片
+4.资源未被及时关闭造成的内存泄漏 
+比如一些Cursor 没有及时close 会保存有Activity的引用，导致内存泄漏
+解决办法： 
+在onDestory方法中及时 close即可
+5.Handler的使用造成的内存泄漏 
+由于在Handler的使用中，handler会发送message对象到 MessageQueue中 然后 Looper会轮询MessageQueue 然后取出Message执行，但是如果一个
+Message长时间没被取出执行，那么由于 Message中有 Handler的引用，而 Handler 一般来说也是内部类对象，Message引用 Handler ，Handler引用 Activity 这样 使得 Activity无法回收。
+解决办法： 
+依旧使用 静态内部类+弱引用的方式 可解决
+6.带参数的单例
+如果我们在在调用Singleton的getInstance()方法时传入了Activity。那么当instance没有释放时，这个Activity会一直存在。因此造成内存泄露。
+解决方法：
+可以将new Singleton(context)改为new Singleton(context.getApplicationContext())即可，这样便和传入的Activity没关系了。
+
+
+3 阿里课程
+Android内存优化实战（一）：https://www.bilibili.com/video/BV1Jg4y1B7v3/?spm_id_from=333.788.videocard.11
+Android内存优化实战（二）：https://www.bilibili.com/video/BV12T4y1g7zn/?spm_id_from=333.788.videocard.15
+Android内存优化（三）常见问题及总结：https://www.bilibili.com/video/BV1Bt4y1y7zo/?spm_id_from=333.788.videocard.16
+Android内存优化实战（完整版）:https://www.bilibili.com/video/BV1yT4y1u7Fm/?spm_id_from=333.788.videocard.9
+
+内存抖动；短时间内有大量的对象创建销毁导致的，伴随着频繁的GC
+eg:字符串的拼接造成内存抖动(每拼接一次都会创建StringBuilder)
+影响：1)频繁的GC会导致卡顿，stop the world,工作线程被挂起，无法响应用户操作(表现为卡顿) 
+      2) OOM(内存碎片，没有连续的满足要求空间大小的内存)
+注意：1)尽量避免在循环与频繁调用的方法中创建对象 2)合理利用对象池(eg：Message.obtain)
+
+内存泄漏：
+原因：长生命周期对象持有短生命周期对象强引用，从而导致短生命周期对象无法被回收。
+可达性
+
+软引用：定义一些还有用但非必须的对象。软引用关联的对象，GC不会直接回收，而是在系统将要内存溢出之前才会触发GC进行回收。
+弱引用：非必须对象。被弱引用关联的对象，GC执行时就会被直接回收。
+
+工具：profile;Mat
