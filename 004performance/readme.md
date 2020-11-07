@@ -49,6 +49,13 @@ native size再8.0之后，对Bitmap的观测有帮助。
 4,最后推荐一款leakcanary工具使用（具体可看：https://github.com/square/leakcanary）
 当然如果时间允许的话，以上每个步骤都需要进行详细测试。
 
+(2)MAT
+MAT(Memory Analyzer Tool)：细看，强引用，导致内存泄漏的引用
+从众多的对象中进行分析，快速的计算出在内存中对象的占用大小，看看是谁阻止了垃圾收集器的回收工作，并可以通过报表直观的查看到可能造成这种结果的对象
+下载：https://www.eclipse.org/mat/downloads.php
+把dump下载的文件memory-20190828T162317.hprof拖进platform-tools文件夹
+敲入cmd命令hprof-conv [-z] memory-20190828T162317.hprof 1.hprof转成可被MAT识别的1.hprof文件 (两个文件要带上完整路径)
+使用MAT打开1.hprof
 
 2 内存优化方面
 (1)内存溢出
@@ -113,5 +120,13 @@ eg:字符串的拼接造成内存抖动(每拼接一次都会创建StringBuilder
 工具：
 profile：粗看
 MAT(Memory Analyzer Tool)：细看，强引用，导致内存泄漏的引用
-从众多的对象中进行分析，快速的计算出在内存中对象的占用大小，看看是谁阻止了垃圾收集器的回收工作，并可以通过报表直观的查看到可能造成这种结果的对象
-下载：https://www.eclipse.org/mat/downloads.php
+
+4 相关问题
+(1)Android的 java程序为什么容易出现OOM
+这个是因为Android系统对dalvik的vm heapsize作了硬性限制，当java进程申请的java空间超过阈值时，就会抛出OOM异常（这个阈值可以是48M、24M、16M等，视机型而定），可以通过adb shell getprop | grep dalvik.vm.heapgrowthlimit查看此值。
+
+也就是说，程序发生OMM并不表示RAM不足，而是因为程序申请的java heap对象超过了dalvik vm heapgrowthlimit。也就是说，在RAM充足的情况下，也可能发生OOM。
+
+这样的设计似乎有些不合理，但是Google为什么这样做呢？这样设计的目的是为了让Android系统能同时让比较多的进程常驻内存，这样程序启动时就不用每次都重新加载到内存
+，能够给用户更快的响应。迫使每个应用程序使用较小的内存，移动设备非常有限的RAM就能使比较多的app常驻其中。但是有一些大型应用程序是无法
+忍受vm heapgrowthlimit的限制的，后面会介绍如何让自己的程序跳出vm heapgrowthlimit的限制。

@@ -59,3 +59,9 @@ https://www.cnblogs.com/androiddream/p/9318684.html
 
 12 吸顶
 https://www.jianshu.com/p/26b0911f396f
+
+13 TabLayout
+使用Android原生的Tablayout也可以借助第三方框架实现。原生的tablayou局限很多，比如不能设置指示条宽度、
+不能定义tab的字体大小、不能设置选中tab字体加粗。不过也有一些通过反射来修改属性的解决方案，都不能完全解决问题。
+第三方框架：
+XTablayout；FlycoTablayout
