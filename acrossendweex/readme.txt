@@ -1,3 +1,6 @@
+资料：
+(1)Weex-初次见到你：https://developer.aliyun.com/article/59341
+
 1 weex 提供了扩展机制，可以根据自己的业务进行定制自己的功能。
 主要分为三类扩展：
 Module 扩展 非 UI 的特定功能。例如 sendHttp、openURL 等。
@@ -83,3 +86,8 @@ callback.invoke回调给native
 (2)weex—>native
 1)继承WXModule
 @JSMethod(uiThread=true);callback.invoke回调给native
+
+7 weex内存
+(1) list内存
+跨越适配&性能那道坎，企鹅电竞Android weex优化 ：https://www.cnblogs.com/wetest/p/10324926.html
+Weex-iOS内存分析：https://www.jianshu.com/p/5624f766bf1b

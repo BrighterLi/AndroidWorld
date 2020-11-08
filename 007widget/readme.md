@@ -65,3 +65,13 @@ https://www.jianshu.com/p/26b0911f396f
 不能定义tab的字体大小、不能设置选中tab字体加粗。不过也有一些通过反射来修改属性的解决方案，都不能完全解决问题。
 第三方框架：
 XTablayout；FlycoTablayout
+
+14 带气泡在某个位置弹出
+自定义：Android：DropPopMenu — 显示位置跟随操作按钮显示的带箭头的弹出菜单：https://blog.csdn.net/hmyang314/article/details/70920295
+已有组件：Android-气泡对话框（根据被点击View位置显示、可定制）：https://www.jianshu.com/p/0f09c21c5f7f
+
+15 头部布局及变化
+(1) 高度固定+内容不变 + 吸顶
+(2) 高度固定+内容变化 + 吸顶
+(3) 高度变化(滑动一定距离瞬间变化)+内容变化 + 吸顶
+(4) 高度变化(跟随滑动慢慢变化)+内容变化 + 吸顶

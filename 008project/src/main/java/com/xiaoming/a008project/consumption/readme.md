@@ -20,3 +20,6 @@ android tablayout选中的字体颜色及大小改变:https://www.jianshu.com/p/
 动监听，获取当前显示的最后一个item在适配器中的位置，如果该item的位置小于或等于适配器item总个数
 减2，就加载下一页数据
 
+5 网上数据来源
+https://www.jianshu.com/p/12ec590f6c76
+API：https://gank.io/api
