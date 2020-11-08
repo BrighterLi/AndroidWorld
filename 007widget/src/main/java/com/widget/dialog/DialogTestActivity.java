@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.widget.R;
 
+//Android中动态添加View的两种方法:https://www.cnblogs.com/joeleedreamer/p/4662503.html
 public class DialogTestActivity extends AppCompatActivity {
     private Button mBtFullScreenDialog;
     private Button mBtFullScreenDialogDynamic;
