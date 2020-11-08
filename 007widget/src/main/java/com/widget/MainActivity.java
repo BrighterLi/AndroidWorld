@@ -9,6 +9,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.widget.dialog.DialogTestActivity;
+import com.widget.dialog.FullScreenDialog;
 import com.widget.horizontalscrollview.TabStripActivity;
 import com.widget.keyboard.KeyboardEntranceActivity;
 import com.widget.listview.backtotop.BackToTopActivity;
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("ListView:分页请求");
         mDataList.add("ViewPager");
         mDataList.add("ListView:点击悬浮按钮回到顶部");
+        mDataList.add("Dialog:全屏dialog");
     }
 
     private void initView() {
@@ -94,6 +97,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 10:
                         startActivity(new Intent(MainActivity.this, BackToTopActivity.class));
+                        break;
+                    case 11:
+                        startActivity(new Intent(MainActivity.this, DialogTestActivity.class));
                         break;
                 }
             }

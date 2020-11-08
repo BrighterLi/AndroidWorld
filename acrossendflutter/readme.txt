@@ -1,1 +1,5 @@
-Android与Flutter交互
+1、Android 混合Flutter之源码集成方式
+Android 混合Flutter之源码集成方式：https://blog.csdn.net/qq_33453910/article/details/94982726
+FlutterActivity—>FlutterActivityDelegate—FlutterMain—FlutterView—FlutterNativeView
+FlutterActivity的生命周期各个方法实际由FlutterActivityDelegate代理执行，并且知道FlutterActivity通过委托代理的方式解决来生命周期的回调，
+插件管理和FlutterView的创建，是Android原生调Flutter页面的中间桥梁。

@@ -138,8 +138,20 @@ unicode;UTF-8,UTF-9,UTF-32;ASCII;GB2312,GBK;Base64
 (3)GB2312
 GB2312 是对 ASCII 的中文扩展。结果扩展之后的编码方案被称为 GBK 标准，GBK包括了GB2312 的所有内容，同时又增加了近20000个新的汉字（包括繁体字）和符号。 后来少数民族也要用电脑了，
 于是我们再扩展，又加了几千个新的少数民族的字，GBK扩成了 GB18030。
-
-
+49 从数据到后台到前端
+(1)后台用django写的，数据是python爬
+50 try{}catch{}finally{}
+try{}catch{}finally{}中，如果finally{}中的返回值＋1，返回的是多少，会改变返回结果吗?
+java中关于try、catch、finally中的细节分析:https://blog.csdn.net/mxd446814583/article/details/80355572
+总结:
+1)try、catch、finally语句中，如果只有try语句有return返回值，此后在catch、finally中对变量做任何的修改，都不影响try中return的返回值。
+2)try、catch中有返回值，而try中抛出的异常恰好与catch中的异常匹配，则返回catch中的return值。
+3)如果finally块中有return 语句，则try或catch中的返回语句忽略。
+4)如果finally块中抛出异常，则整个try、catch、finally块中抛出异常.并且没有返回值。
+所以在使用try、catch、finally语句块时需要注意以下几点：
+1)尽量在try或者catch中使用return语句。通过finally块中达到对try或者catch返回值修改是不可行的。
+2)finally块中避免使用return语句，因为finally块中如果使用return语句，会显示的忽略掉try、catch块中的异常信息，屏蔽了错误的发生。
+3)finally块中避免再次抛出异常，否则整个包含try语句块的方法回抛出异常，并且会忽略掉try、catch块中的异常。
 
 三 相关Demo
 1 一款Android图文精选app，通过抓取网页获得图文列表。目前包含猫弄（MONO）早午茶、站酷（Zcool）精选、国家地理（National Geographic）每日一图、知乎日报、豆瓣一刻（Moment）。

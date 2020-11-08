@@ -22,6 +22,7 @@ public class FullScreenDialog extends Dialog {
     public LinearLayout mContentTop;
     public TextView mTvContentTop;
     public LinearLayout mContentButton1;
+    public LinearLayout mContentButtonContainer;
     public TextView mTvContent1;
     public LinearLayout mContentButton2;
     public TextView mTvContent2;
@@ -56,7 +57,7 @@ public class FullScreenDialog extends Dialog {
             WindowManager.LayoutParams layoutParams = window.getAttributes();
             layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
             //layoutParams.height = WindowManager.LayoutParams.MATCH_PARENT;
-            layoutParams.height = mDialogHeight;
+            layoutParams.height = mDialogHeight; //使用这个高度的话状态栏就不会变黑色，即ContentView的高度减去状态栏的高度
             window.setAttributes(layoutParams);
             window.setWindowAnimations(R.style.Animation_Design_BottomSheetDialog);
             window.setBackgroundDrawableResource(android.R.color.transparent);
@@ -64,6 +65,7 @@ public class FullScreenDialog extends Dialog {
         mDialogBlank = contentView.findViewById(R.id.dialog_blank);
         mContentTop = contentView.findViewById(R.id.content_top);
         mTvContentTop =  contentView.findViewById(R.id.tv_content_top);
+        mContentButtonContainer = contentView.findViewById(R.id.content_button_container);
         mContentButton1 =  contentView.findViewById(R.id.content_button1);
         mTvContent1 =  contentView.findViewById(R.id.tv_content1);
         mContentButton2 =  contentView.findViewById(R.id.content_button2);

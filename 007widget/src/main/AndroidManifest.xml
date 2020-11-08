@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".listview.backtotop.BackToTopActivity"></activity>
+        <activity android:name=".dialog.DialogTestActivity"></activity>
+        <activity android:name=".listview.backtotop.BackToTopActivity" />
         <activity android:name=".recyclerview.RecyclerViewActivity" />
         <activity android:name=".viewpager.ViewPagerActivity" />
         <activity android:name=".listview.pagingrequest.PagingRequestActivity" />
