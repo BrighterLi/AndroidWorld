@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import com.xiaoming.view.R;
 
+//RelativeLayout布局：存在覆盖的后面的子布局会在前面的子布局上面
 public class TestRelativeLayoutActivity extends Activity {
 
     @Override
