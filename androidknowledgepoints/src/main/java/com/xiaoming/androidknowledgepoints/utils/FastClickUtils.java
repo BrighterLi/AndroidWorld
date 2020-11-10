@@ -1,4 +1,4 @@
-package com.xiaoming.androidknowledgepoints;
+package com.xiaoming.androidknowledgepoints.utils;
 
 //防止快速点击，全局
 public class FastClickUtils {

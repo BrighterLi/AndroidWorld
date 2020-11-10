@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.xiaoming.androidknowledgepoints.utils.FastClickUtils;
+
 //防止快速点击
 public class FastClickActivity extends AppCompatActivity {
     private final static String TAG = "FastClickActivity";
