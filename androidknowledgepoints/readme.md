@@ -86,10 +86,27 @@ Java之阻塞和非阻塞以及同步和异步的区别：https://blog.csdn.net/
    Lottie- 让Android动画实现更简单:https://www.jianshu.com/p/cae606f45c0b
 29 hook lancet
 30 json
- JSONObject
+ (1)JSON (JavaScript Object Notation) 一种简单的数据格式，是一种比较轻量级的数据存储格式；
  只是一种数据结构，可以理解为JSON格式的数据结构（key-value 结构），可以使用put方法给json对象添加元素。JSONObject可以很方便的转换成字符串，也可以很方便的把其他对象转换成JSONObject对象。
  {} 双括号表示对象
  JSON的三种解析方式：https://www.cnblogs.com/zhujiabin/p/5498272.html
+ (2)Gson
+ (3) json的存在意义（json和String的区别）
+ String字符串:
+ var str1 = '{ "name": "cxh", "sex": "man" }'; 
+ JSON对象:
+ var str2 = { "name": "cxh", "sex": "man" };
+ 那明明一种形式能用String表示，干嘛非得费劲地整成json格式呢？-----那是因为json在获取内容方面比String更方便
+ 如果你在前台使用，那么Json对象可以通过xx.name来调用获取；如果是字符串，那就只能是字符串，你就只能各种切割各种分组获得name，数据一多看不切割死你，烦不胜烦... ...
+ (4)Json对象和Json字符串的区别
+  https://www.cnblogs.com/wxh0929/p/11132073.html
+  Json对象:最显著的特征：对象的值可以用 “对象.属性” 进行访问
+  var person={"name":"shily","sex":"女","age":"23"}//json对象
+  Json字符串:（所谓字符串：单引号或者双引号引起来）
+  var personStr='{"name":"shily","sex":"女","age":"23"}';//json字符串
+  Json字符串转化为Json对象:
+  var  strToObj = JSON.parse(personStr);
+  
 31 ASM插桩无埋点性能监控
 32 静默安装
 33 闪屏(图片、gif、视频)
