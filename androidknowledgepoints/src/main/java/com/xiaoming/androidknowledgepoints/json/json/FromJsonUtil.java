@@ -1,4 +1,4 @@
-package com.xiaoming.androidknowledgepoints.json;
+package com.xiaoming.androidknowledgepoints.json.json;
 
 import org.json.JSONArray;
 import org.json.JSONException;
