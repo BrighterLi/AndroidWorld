@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".statusbar.ImmerseStatusBarActivity">
+    <LinearLayout
+        android:fitsSystemWindows="true"
+        android:clipToPadding="true"
+        android:background="@color/color2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginBottom="48dp"
+            android:text="用户：直男Geek"
+            android:textColor="@color/colorAccent"
+            android:textSize="25dp" />
+
+        <TextView
+            android:textColor="@color/colorAccent"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="120dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个性签名:没有直男，这个世界将会充满爱" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="#ffffff"
+        android:id="@+id/gj_recruit3"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="7dip">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/red_leaf"/>
+        <TextView
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我发布的口红"/>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="#ffffff"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="7dip">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/red_leaf"/>
+        <TextView
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我收藏的口红"/>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="#ffffff"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="7dip">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/red_leaf"/>
+        <TextView
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="浏览记录"/>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="#ffffff"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="7dip">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/red_leaf"/>
+        <TextView
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最新回复"/>
+    </LinearLayout>
+
+</LinearLayout>

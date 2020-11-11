@@ -20,6 +20,7 @@ import com.widget.scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivity;
 import com.widget.scroll.scrollconflict.demo1.ScrollConflictActivity;
 import com.widget.scroll.scrollconflict.demo2.ScrollConflict2Activity;
 import com.widget.scroll.scrollconflict.demo3.ScrollConflict3Activity;
+import com.widget.statusbar.StatusBarTestActivity;
 import com.widget.video.VideoActivity;
 import com.widget.listview.pagingrequest.PagingRequestActivity;
 import com.widget.viewpager.ViewPagerActivity;
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("ListView:点击悬浮按钮回到顶部");
         mDataList.add("Dialog:全屏dialog");
         mDataList.add("Image");
+        mDataList.add("状态栏");
     }
 
     private void initView() {
@@ -105,6 +107,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 12:
                         startActivity(new Intent(MainActivity.this, ImageTestActivity.class));
+                        break;
+                    case 13:
+                        startActivity(new Intent(MainActivity.this, StatusBarTestActivity.class));
                         break;
                 }
             }

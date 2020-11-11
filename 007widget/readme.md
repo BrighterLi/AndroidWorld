@@ -75,3 +75,12 @@ XTablayout；FlycoTablayout
 (2) 高度固定+内容变化 + 吸顶
 (3) 高度变化(滑动一定距离瞬间变化)+内容变化 + 吸顶
 (4) 高度变化(跟随滑动慢慢变化)+内容变化 + 吸顶
+
+16 状态栏
+(1) 沉浸式状态栏
+Android 沉浸式状态栏实践: https://www.jianshu.com/p/fc5854895a10
+Android关于沉浸式状态栏的一些总结:https://www.jianshu.com/p/752f4551e134
+轮子StatusBarUtil：https://github.com/laobie/StatusBarUtil
+Android沉浸式状态栏(透明状态栏)最佳实现:https://blog.csdn.net/zephyr_g/article/details/53489320
+沉浸式状态栏:
+实际的效果其实就是透明的状态栏，然后在状态栏的位置显示我们自定义的颜色，通常为应用的actionbar的颜色，或者是将应用的整体的一张图片也占据到状态栏中
