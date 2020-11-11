@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".image.ImageTestActivity"></activity>
+        <activity android:name=".statusbar.StatusBarTestActivity"></activity>
+        <activity android:name=".image.ImageTestActivity" />
         <activity android:name=".dialog.DialogTestActivity" />
         <activity android:name=".listview.backtotop.BackToTopActivity" />
         <activity android:name=".recyclerview.RecyclerViewActivity" />
