@@ -84,3 +84,31 @@ Android关于沉浸式状态栏的一些总结:https://www.jianshu.com/p/752f455
 Android沉浸式状态栏(透明状态栏)最佳实现:https://blog.csdn.net/zephyr_g/article/details/53489320
 沉浸式状态栏:
 实际的效果其实就是透明的状态栏，然后在状态栏的位置显示我们自定义的颜色，通常为应用的actionbar的颜色，或者是将应用的整体的一张图片也占据到状态栏中
+
+17 Activity
+* requestCode 请求码，即调用startActivityForResult() 传递过去的值
+* resultCode 结果码，结果码用于标识返回数据来自哪个新Activity
+请求码的作用:
+使用startActivityForResult(Intent intent, int requestCode)方法打开新的Activity，我们需要为startActivityForResult()方法传入一个请求码(第二个参数)。请求码的值是根据业务需要由自已设定，用于标识请求来源。例如：一个Activity有两个按钮，点击这两个按钮都会打开同一个Activity，不管是那个按钮打开新Activity，当这个新Activity关闭后，系统都会调用前面Activity的onActivityResult(int requestCode, int resultCode, Intent data)方法。在onActivityResult()方法如果需要知道新Activity是由那个按钮打开的，并且要做出相应的业务处理
+结果码的作用:
+在一个Activity中，可能会使用startActivityForResult()方法打开多个不同的Activity处理不同的业务，当这些新Activity关闭后，系统都会调用前面Activity的onActivityResult(int requestCode, int resultCode, Intent data)方法。为了知道返回的数据来自于哪个新Activity,在onActivityResult()方法中可以这样做(ResultActivity和NewActivity为要打开的新Activity)：
+public class ResultActivity extends Activity {
+           .....
+           ResultActivity.this.setResult(1, intent);
+           ResultActivity.this.finish();
+    }
+    public class NewActivity extends Activity {
+           ......
+            NewActivity.this.setResult(2, intent);
+            NewActivity.this.finish();
+    }
+    public class MainActivity extends Activity { // 在该Activity会打开ResultActivity和NewActivity
+           @Override protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+                   switch(resultCode){
+                       case 1:
+                       // ResultActivity的返回数据
+                       case 2:
+                        // NewActivity的返回数据
+                    }
+              }
+    }
