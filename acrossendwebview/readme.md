@@ -69,3 +69,6 @@ WebViewClient:在影响View的事件到来时，会通过WebViewClient中的方�
 WebViewClient帮助WebView处理各种通知、请求事件的
 WebChromeClient：当影响浏览器的事件到来时，就会通过WebChromeClient中的方法回调通知用法。
 WebChromeClient是辅助WebView处理Javascript的对话框，网站图标，网站title，加载进度等
+
+7 webkit 子资源加载流程
+一个网页由主文档和子资源组成。主文档描述网页的框架，布局。子资源是组成网页的子元素，包括图片、CSS、JS等。为了显示网页，先要把资源加载到内存。加载就是指把需要的资源加载到内存这一过程。Webkit用到很多缓存机制，加载可能是从网络加载，也可能是从本地缓存加载。Webkit的加载分为两条线，一条是主文档的加载，一条是子资源的加载。
