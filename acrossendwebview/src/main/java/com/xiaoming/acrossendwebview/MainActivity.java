@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.xiaoming.acrossendwebview.openh5.OpenH5Activity;
+import com.xiaoming.acrossendwebview.openh5.ShowHtmlActivity;
 import com.xiaoming.acrossendwebview.openh5.WebViewActivity;
 import com.xiaoming.acrossendwebview.webviewandjs.WebViewAndJSActivity;
 
@@ -47,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
                     case 2:
                         startActivity(new Intent(MainActivity.this, WebViewAndJSActivity.class));
                         break;
+                    case 3:
+                        startActivity(new Intent(MainActivity.this, ShowHtmlActivity.class));
+                        break;
                 }
             }
         });
@@ -56,5 +60,6 @@ public class MainActivity extends AppCompatActivity {
         demoNameList.add("打开H5页面");
         demoNameList.add("WebView");
         demoNameList.add("Android与js交互");
+        demoNameList.add("通过WebView获取解析html内容");
     }
 }
