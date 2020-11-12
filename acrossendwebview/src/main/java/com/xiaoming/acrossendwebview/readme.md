@@ -7,3 +7,14 @@ WebView 调用 loadUrl 后，会首先根据传入的URL获取响应，然后再
 那么 WebView 就会使用你的响应数据。其中 WebResourceRequet 封装了请求，WebResourceResponse 封装了响应。
 
 2 shouldoverrideurlloading和shouldinterceptrequest之间的区别？
+
+
+3 
+//覆盖WebView默认使用第三方或系统默认浏览器打开网页的行为，使网页用WebView打开  
+        webView.setWebViewClient(new WebViewClient(){
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                view.loadUrl(url);
+                return true;
+            }
+        });
