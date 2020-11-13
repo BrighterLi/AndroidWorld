@@ -91,7 +91,10 @@ WebChromeClient：当影响浏览器的事件到来时，就会通过WebChromeCl
 WebChromeClient是辅助WebView处理Javascript的对话框，网站图标，网站title，加载进度等
 
 7 Webview解析html源码
-(1)Webview解析主资源
+Android WebKit消息处理：https://blog.csdn.net/feiyinzilgd/article/details/19019413
+(1)Android WebKit HTML主资源加载过程
+https://blog.csdn.net/feiyinzilgd/article/details/20015281?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param
+在浏览器里面输入网址，最终浏览器会调用WebView的loadUrl()，然后就开始加载整个网页。整个加载过程中，最重要的一步就是HTML主资源的加载。WebKit将网页的资源分为主资源(MainResource)和子资源(SubResource)。
 (2)webkit 子资源加载流程
 一个网页由主文档和子资源组成。主文档描述网页的框架，布局。子资源是组成网页的子元素，
 包括图片、CSS、JS等。为了显示网页，先要把资源加载到内存。加载就是指把需要的资源加载到内存这一过程。
@@ -103,4 +106,27 @@ view.loadUrl("javascript:window.local_obj.showSource('<html>'+document.getElemen
 final class InJavaScriptLocalObj {
         @JavascriptInterface
         public void showSource(String html) {}}
+
+9 WebView性能优化
+手把手教你构建 Android WebView 的缓存机制 & 资源预加载方案:
+https://blog.csdn.net/carson_ho/article/details/71402764
+(1)渲染速度慢
+1) 渲染速度慢
+前端H5页面渲染的速度取决于 两个方面：
+Js 解析效率
+Js 本身的解析过程复杂、解析速度不快 & 前端页面涉及较多 JS 代码文件，所以叠加起来会导致 Js 解析效率非常低
+手机硬件设备的性能
+由于Android机型碎片化，这导致手机硬件设备的性能不可控，而大多数的Android手机硬件设备无法达到很好很好的硬件性能
+总结：上述两个原因 导致 H5页面的渲染速度慢。
+2)  页面资源加载缓慢
+H5 页面从服务器获得，并存储在 Android手机内存里：
+H5页面一般会比较多
+每加载一个 H5页面，都会产生较多网络请求：
+HTML 主 URL 自身的请求；
+HTML外部引用的JS、CSS、字体文件，图片也是一个独立的 HTTP 请求
+每一个请求都串行的，这么多请求串起来，这导致 H5页面资源加载缓慢
+总结：H5页面加载速度慢的原因：渲染速度慢 & 页面资源加载缓慢 导致。
+
+
+
 
