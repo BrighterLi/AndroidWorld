@@ -16,11 +16,31 @@ WebView 调用 loadUrl 后，会首先根据传入的URL获取响应，然后再
 那么 WebView 就会使用你的响应数据。其中 WebResourceRequet 封装了请求，WebResourceResponse 封装了响应。
 
 3 shouldoverrideurlloading和shouldinterceptrequest之间的区别？
+WebView拦截url: https://www.jianshu.com/p/55fd544246c2
+WebView加载原理从 WebView设置url开始，然后请求响应实体，最后将结果显示到ui屏幕上。
+知道了大致原理，然后在拦截的时候，可以从两个方面着手：
+第一个是在设置url时修改url
+第二个是在响应实体替换实体
+这样就可以达到拦截webview加载的功能了。要在url加载期拦截，则可以重写WebViewClient的shouldOverrideUrlLoading方法。如果要在响应实体阶段拦截，可以重写WebViewClient的shouldInterceptRequest方法。
+shouldOverrideUrlLoading拦截的是url加载阶段;shouldInterceptRequest加载的是响应主体阶段
+shouldOverrideUrlLoading主要拦截url;shouldInterceptRequest可拦截url,js，css等
+也就是说整体而言shouldInterceptRequest拦截的范围比shouldOverrideUrlLoading广。
+但是shouldOverrideUrlLoading能响应本地html文件加载，如assets文件夹下的html加载，而shouldInterceptRequest只能响应url之类的，而不响应本地文件加载。
+还有一个需要注意的是，shouldOverrideUrlLoading的拦截处在shouldInterceptRequest上游(由webView加载原理决定)，
+所以在shouldInterceptRequest拦截的时候，我们一般不重写shouldOverrideUrlLoading，这是为了保证shouldOverrideUrlLoading方法返回为false，
+若shouldOverrideUrlLoading方法返回为true，则表示"上游"已经拦截了，那这时再在shouldInterceptRequest进行拦截已经不起作用了。
 
+shouldoverrideurlloading:
+shouldOverrideUrlLoading是在webView加载url阶段执行拦截的。
+shouldinterceptrequest:
+shouldInterceptRequest是在响应实体阶段拦截webview加载的实例。
+其拦截原理是在响应阶段拦截下html数据，然后用本地Html或网络获取的html进行替换，重新加载。
 
 4 shouldOverrideUrlLoading
-当加载的网页需要重定向的时候就会回调这个函数告知我们应用程序是否需要接管控制网页加载，如果应用程序接管，
-并且return true意味着主程序接管网页加载，如果返回false让webview自己处理。
+当加载的网页需要重定向的时候就会回调这个函数告知我们应用程序是否需要接管控制网页加载，如果应用程序接管:
+?默认返回：return super.shouldOverrideUrlLoading(view, url); 这个返回的方法会调用父类方法，也就是跳转至手机浏览器
+return true意味着主程序接管网页加载
+如果返回false让webview自己处理,是在webview内部执行
 //覆盖WebView默认使用第三方或系统默认浏览器打开网页的行为，使网页用WebView打开
         webView.setWebViewClient(new WebViewClient(){
             @Override
