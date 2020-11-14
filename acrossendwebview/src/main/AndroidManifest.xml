@@ -12,8 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".openh5.intercept.ShouldInterceptRequestActivity"></activity>
-        <activity android:name=".openh5.intercept.ShouldInterceptRequest2Activity"></activity>
+        <activity android:name=".openh5.AutomaticallyJumpActivity"></activity>
+        <activity android:name=".openh5.intercept.ShouldInterceptRequestActivity" />
+        <activity android:name=".openh5.intercept.ShouldInterceptRequest2Activity" />
         <activity android:name=".openh5.intercept.ShouldOverrideUrlLoadingActivity" />
         <activity android:name=".openh5.ShowHtmlActivity" />
         <activity android:name=".openh5.WebViewActivity" />

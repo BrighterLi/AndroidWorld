@@ -1,6 +1,7 @@
 webview课程视频：https://v.youku.com/v_show/id_XMTU3NTcyMjEzMg%3D%3D.html
 
 那些年在WebView上踩过的坑：https://blog.csdn.net/u012124438/article/details/53401663?utm_medium=distribute.pc_relevant_bbs_down.none-task--2~all~sobaiduend~default-1.nonecase&depth_1-utm_source=distribute.pc_relevant_bbs_down.none-task--2~all~sobaiduend~default-1.nonecase
+Android的WebView简单使用实例(附Demo):https://blog.csdn.net/qq_36243942/article/details/82252289?utm_medium=distribute.pc_relevant.none-task-blog-title-2&spm=1001.2101.3001.4242
 
 1 webview
 webview是SDK中封装的一款基于webkit内核(后面开始基于Chromium内核)的浏览器组件，通过它我们可以实现网页的展示，

@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.xiaoming.acrossendwebview.openh5.AutomaticallyJumpActivity;
 import com.xiaoming.acrossendwebview.openh5.OpenH5Activity;
 import com.xiaoming.acrossendwebview.openh5.ShowHtmlActivity;
 import com.xiaoming.acrossendwebview.openh5.WebViewActivity;
@@ -63,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
                     case 6:
                         startActivity(new Intent(MainActivity.this, ShouldInterceptRequest2Activity.class));
                         break;
+                    case 7:
+                        startActivity(new Intent(MainActivity.this, AutomaticallyJumpActivity.class));
+                        break;
                 }
             }
         });
@@ -76,5 +80,6 @@ public class MainActivity extends AppCompatActivity {
         demoNameList.add("拦截之shouldOverrideUrlLoading");
         demoNameList.add("拦截之shouldInterceptRequest：用代码的html");
         demoNameList.add("拦截之shouldInterceptRequest：用网络的html");
+        demoNameList.add("打开的html页面自动跳转到指定的网址");
     }
 }
