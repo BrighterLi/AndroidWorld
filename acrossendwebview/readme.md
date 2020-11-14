@@ -143,6 +143,12 @@ this.location.href="/url" 当前页面打开URL页面
 parent.location.href="/url" 在父页面打开新页面
 top.location.href="/url" 在顶层页面打开新页面
 
+11 html原生跳转
+(1)html自动跳转到指定的url
+三种简单的html网页自动跳转方法：https://blog.csdn.net/aflyeaglenku/article/details/51699242?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param
+(2)html跳转到原生页面
+通过Uri跳转Activity(当然对于WebView中的网页同样适用): https://blog.csdn.net/vaechr/article/details/77802555
+
 
 
 
