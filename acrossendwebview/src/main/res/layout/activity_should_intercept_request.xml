@@ -7,7 +7,7 @@
     tools:context=".openh5.intercept.ShouldInterceptRequestActivity">
 
     <WebView
-        android:id="@+id/web_View"
+        android:id="@+id/web_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </WebView>

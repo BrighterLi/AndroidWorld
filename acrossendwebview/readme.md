@@ -127,6 +127,21 @@ HTML外部引用的JS、CSS、字体文件，图片也是一个独立的 HTTP �
 每一个请求都串行的，这么多请求串起来，这导致 H5页面资源加载缓慢
 总结：H5页面加载速度慢的原因：渲染速度慢 & 页面资源加载缓慢 导致。
 
+10 html
+(1)h5
+1) <p> 标签  标签定义段落
+<p>This is some text in a very short paragraph</p>
+
+(2)javascript
+1)window.location.href
+avascript中的location.href有很多种用法，主要如下：
+self.location.href="/url" 当前页面打开URL页面
+location.href="/url" 当前页面打开URL页面
+windows.location.href="/url" 当前页面打开URL页面，前面三个用法相同。
+this.location.href="/url" 当前页面打开URL页面
+parent.location.href="/url" 在父页面打开新页面
+top.location.href="/url" 在顶层页面打开新页面
+
 
 
 

@@ -11,6 +11,9 @@ import android.widget.ListView;
 import com.xiaoming.acrossendwebview.openh5.OpenH5Activity;
 import com.xiaoming.acrossendwebview.openh5.ShowHtmlActivity;
 import com.xiaoming.acrossendwebview.openh5.WebViewActivity;
+import com.xiaoming.acrossendwebview.openh5.intercept.ShouldInterceptRequest2Activity;
+import com.xiaoming.acrossendwebview.openh5.intercept.ShouldInterceptRequestActivity;
+import com.xiaoming.acrossendwebview.openh5.intercept.ShouldOverrideUrlLoadingActivity;
 import com.xiaoming.acrossendwebview.webviewandjs.WebViewAndJSActivity;
 
 import java.util.ArrayList;
@@ -51,6 +54,15 @@ public class MainActivity extends AppCompatActivity {
                     case 3:
                         startActivity(new Intent(MainActivity.this, ShowHtmlActivity.class));
                         break;
+                    case 4:
+                        startActivity(new Intent(MainActivity.this, ShouldOverrideUrlLoadingActivity.class));
+                        break;
+                    case 5:
+                        startActivity(new Intent(MainActivity.this, ShouldInterceptRequestActivity.class));
+                        break;
+                    case 6:
+                        startActivity(new Intent(MainActivity.this, ShouldInterceptRequest2Activity.class));
+                        break;
                 }
             }
         });
@@ -61,5 +73,8 @@ public class MainActivity extends AppCompatActivity {
         demoNameList.add("WebView");
         demoNameList.add("Android与js交互");
         demoNameList.add("通过WebView获取解析html内容");
+        demoNameList.add("拦截之shouldOverrideUrlLoading");
+        demoNameList.add("拦截之shouldInterceptRequest：用代码的html");
+        demoNameList.add("拦截之shouldInterceptRequest：用网络的html");
     }
 }

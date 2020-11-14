@@ -1,18 +1,22 @@
 package com.xiaoming.acrossendwebview.openh5.intercept;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebView;
 import android.widget.Toast;
 
 import com.xiaoming.acrossendwebview.MainActivity;
 import com.xiaoming.acrossendwebview.R;
 
+import java.io.InputStream;
+
 //WebView拦截url:https://www.jianshu.com/p/55fd544246c2
+//其拦截原理是在响应阶段拦截下html数据，然后用本地Html或网络获取的html进行替换，重新加载。
 public class ShouldInterceptRequestActivity extends Activity {
 
     private WebView mWebView;
@@ -25,7 +29,6 @@ public class ShouldInterceptRequestActivity extends Activity {
 
         initView();
         initData();
-        setListener();
     }
 
     private void initView() {
@@ -33,46 +36,57 @@ public class ShouldInterceptRequestActivity extends Activity {
     }
 
     private void initData() {
+        Log.d("bright8","=========开始加载接收打击========");
+
         mWebViewClientInterceptor = new WebViewClientInterceptor();
         //webview基础设置
-        mWebViewClientInterceptor.setWebViewConfig(mWebView, ShouldOverrideUrlLoadingActivity.this);
+        mWebViewClientInterceptor.setWebViewConfig(mWebView, ShouldInterceptRequestActivity.this);
 
-
-        mWebViewClientInterceptor.setOnOverrideUrlListener(new WebViewClientInterceptor.OnOverrideUrlListener() {
+        mWebViewClientInterceptor.setOnInterceptorListener(new WebViewClientInterceptor.OnInterceptorListener() {
             @Override
-            public boolean shouldOverrideUrlLoading(WebView webView, WebResourceRequest request) {
-                Toast.makeText(ShouldInterceptRequestActivity.this, "这是拦截url的操作,原url="+webView.getUrl(), Toast.LENGTH_LONG).show();
-                return true;
+            public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
+                Log.d("bright8","shouldInterceptRequest1#request.getUrl()：" + request.getUrl());
+                //用本地Html或网络获取的html进行替换
+                String htmlPage = "<html>\n" +
+                        "<title>千度</title>\n" +
+                        "<body>\n" +
+                        "<a href=\"www.taobao.com\">千度</a>,比百度知道的多10倍\n" +
+                        "</body>\n" +
+                        "<html>";
+                InputStream inputStream = mWebViewClientInterceptor.getLocalHtmlPageStream(htmlPage, null);
+                WebResourceResponse response = mWebViewClientInterceptor.getWebResourceResponse(inputStream, WebViewClientInterceptor.UTF_8);
+                return response;
             }
 
             @Override
-            public boolean shouldOverrideUrlLoading(WebView webView, String url) {
-                Toast.makeText(ShouldInterceptRequestActivity.this, "这是拦截url的操作,原url="+webView.getUrl(), Toast.LENGTH_LONG).show();
-                return true;
+            public WebResourceResponse shouldInterceptRequest(WebView view, String url) {
+                String htmlPage = "<html>\n" +
+                        "<title>千度</title>\n" +
+                        "<body>\n" +
+                        "<a href=\"www.taobao.com\">千度</a>,比百度知道的多10倍\n" +
+                        "</body>\n" +
+                        "<html>";
+                InputStream inputStream = mWebViewClientInterceptor.getLocalHtmlPageStream(htmlPage, null);
+                WebResourceResponse response = mWebViewClientInterceptor.getWebResourceResponse(inputStream, WebViewClientInterceptor.UTF_8);
+
+                return response;
             }
         });
+
 
         //设置WebViewClient向一个网页发送请求，可以返回文本，文件等
         mWebView.setWebViewClient(mWebViewClientInterceptor);
         //设置可让界面弹出alert等提示框
         mWebView.setWebChromeClient(new WebChromeClient());
 
-        mWebView.loadUrl("file:///android_asset/test.html");
+        mWebView.loadUrl("https://www.baidu.com/");
     }
 
-    private void setListener() {
-        mBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-    }
 
     @Override
     protected void onDestroy() {
         //清理webview相关配置
-        mWebViewClientInterceptor.destoryWebViewConfig(mWebView, MainActivity.this);
+        mWebViewClientInterceptor.destoryWebViewConfig(mWebView, ShouldInterceptRequestActivity.this);
         super.onDestroy();
     }
 }
