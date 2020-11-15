@@ -111,7 +111,7 @@ final class InJavaScriptLocalObj {
 9 WebView性能优化
 手把手教你构建 Android WebView 的缓存机制 & 资源预加载方案:
 https://blog.csdn.net/carson_ho/article/details/71402764
-(1)渲染速度慢
+(1)H5页面加载速度慢
 1) 渲染速度慢
 前端H5页面渲染的速度取决于 两个方面：
 Js 解析效率
@@ -127,6 +127,10 @@ HTML 主 URL 自身的请求；
 HTML外部引用的JS、CSS、字体文件，图片也是一个独立的 HTTP 请求
 每一个请求都串行的，这么多请求串起来，这导致 H5页面资源加载缓慢
 总结：H5页面加载速度慢的原因：渲染速度慢 & 页面资源加载缓慢 导致。
+(2)耗费流量
+每次使用 H5页面时，用户都需要重新加载 Android WebView的H5 页面
+每加载一个 H5页面，都会产生较多网络请求（上面提到）
+每一个请求都串行的，这么多请求串起来，这导致消耗的流量也会越多
 
 10 html
 (1)h5
