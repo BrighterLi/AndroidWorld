@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".pingnet2.PingNetActivity2"></activity>
+        <activity android:name=".cookie.CookieTestActivity"></activity>
+        <activity android:name=".pingnet2.PingNetActivity2" />
         <activity android:name=".pingnet.PingNetActivity" />
         <activity android:name=".netdetect.NetDetectActivity" />
         <activity android:name=".MainActivity">
