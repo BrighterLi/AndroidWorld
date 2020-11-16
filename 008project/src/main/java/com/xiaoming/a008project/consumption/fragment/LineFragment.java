@@ -47,7 +47,7 @@ public class LineFragment extends Fragment {
     private ItemTouchHelper itemTouchHelper;
     private int lastVisibleItem;
     private int screenwidth;
-    private SwipeRefreshLayout swipeRefreshLayout;
+    //private SwipeRefreshLayout swipeRefreshLayout;
 
     @Nullable
     @Override
@@ -56,28 +56,30 @@ public class LineFragment extends Fragment {
         initView();
         setListener();
         new GetData().execute("http://gank.io/api/data/福利/10/1");
+        ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 2000);
+        mainView.setLayoutParams(params);
         return mainView;
     }
 
     private void initView() {
         mRecyclerView = (RecyclerView) mainView.findViewById(R.id.recyclerview);
-        mLayoutManager = new LinearLayoutManager(getActivity());
+        mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         mRecyclerView.setAdapter(mAdapter = new MyAdapter());
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        swipeRefreshLayout = (SwipeRefreshLayout) mainView.findViewById(R.id.line_swipe_refresh);
-        swipeRefreshLayout.setColorSchemeResources(R.color.colorPrimary, R.color.colorPrimaryDark, R.color.colorAccent);
-        swipeRefreshLayout.setProgressViewOffset(false, 0, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24, getResources().getDisplayMetrics()));
+        //swipeRefreshLayout = (SwipeRefreshLayout) mainView.findViewById(R.id.line_swipe_refresh);
+        //swipeRefreshLayout.setColorSchemeResources(R.color.colorPrimary, R.color.colorPrimaryDark, R.color.colorAccent);
+        //swipeRefreshLayout.setProgressViewOffset(false, 0, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24, getResources().getDisplayMetrics()));
     }
 
     private void setListener() {
-        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+        /*swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 page = 1;
                 new GetData().execute("http://gank.io/api/data/福利/10/1");
             }
-        });
+        });*/
 
         itemTouchHelper = new ItemTouchHelper(new ItemTouchHelper.Callback() {
             @Override
@@ -161,7 +163,7 @@ public class LineFragment extends Fragment {
         protected void onPreExecute() {
             super.onPreExecute();
 
-            swipeRefreshLayout.setRefreshing(true);
+            //swipeRefreshLayout.setRefreshing(true);
         }
 
         @Override
@@ -212,7 +214,7 @@ public class LineFragment extends Fragment {
                     mAdapter.notifyDataSetChanged();
                 }
             }
-            swipeRefreshLayout.setRefreshing(false);
+            //swipeRefreshLayout.setRefreshing(false);
         }
     }
 
@@ -244,8 +246,9 @@ public class LineFragment extends Fragment {
         public int getItemCount() {
             if(meizis != null) {
                 return meizis.size();
+            } else {
+                return 0;
             }
-            return 0;
         }
 
 

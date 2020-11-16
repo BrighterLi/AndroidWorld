@@ -86,8 +86,8 @@ public class ConsumptionActivity extends AppCompatActivity {
         refreshTabLayout(titleList);
 
         fragmentList.clear();
-        fragmentList.add(new OneFragment());
         fragmentList.add(new LineFragment());
+        fragmentList.add(new OneFragment());
         fragmentList.add(new ThreeFragment());
 
         for (int i = 0; i < titleList.size(); i++) {
