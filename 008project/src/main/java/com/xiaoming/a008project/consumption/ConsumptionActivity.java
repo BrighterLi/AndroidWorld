@@ -13,12 +13,11 @@ import android.util.ArrayMap;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 import com.xiaoming.a008project.R;
 import com.xiaoming.a008project.consumption.fragment.OneFragment;
 import com.xiaoming.a008project.consumption.fragment.ThreeFragment;
-import com.xiaoming.a008project.consumption.fragment.TwoFragment;
+import com.xiaoming.a008project.consumption.fragment.LineFragment;
 import com.xiaoming.a008project.consumption.utils.DpUtils;
 import com.xiaoming.a008project.consumption.utils.ScreenUtil;
 import com.xiaoming.a008project.consumption.view.InterceptScrollView;
@@ -88,7 +87,7 @@ public class ConsumptionActivity extends AppCompatActivity {
 
         fragmentList.clear();
         fragmentList.add(new OneFragment());
-        fragmentList.add(new TwoFragment());
+        fragmentList.add(new LineFragment());
         fragmentList.add(new ThreeFragment());
 
         for (int i = 0; i < titleList.size(); i++) {
