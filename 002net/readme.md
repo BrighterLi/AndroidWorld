@@ -260,6 +260,11 @@ Hyper Text Transfer Protocol over Secure Socket Layer，安全的超文本传输
 HTTPS中的S表示SSL或者TLS，就是在原HTTP的基础上加上一层用于数据加密、解密、身份认证的安全层，即
 HTTP + 加密 + 认证 + 完整性保护 = HTTPS
 (3)SSL协议加密方式
+因为它在HTTP的之下加入了SSL (Secure Socket Layer)，安全的基础就靠这个SSL了。SSL位于TCP/IP和HTTP协议之间，那么它到底能干呢？
+它能够：
+认证用户和服务器，确保数据发送到正确的客户机和服务器；(验证证书)
+加密数据以防止数据中途被窃取；（加密）
+维护数据的完整性，确保数据在传输过程中不被改变。（摘要算法）
 SSL协议即用到了对称加密也用到了非对称加密(公钥加密)，在建立传输链路时，SSL首先对对称加密的密钥使用公钥进行非对称加密，链路建立好之后，SSL对传输内容使用对称加密。
 对称加密：
 速度高，可加密内容较大，用来加密会话过程中的消息
@@ -313,6 +318,7 @@ SSL-pinning有两种方式： 证书锁定（Certificate Pinning） 和公钥锁
 所以可以避免证书有效期问题，一般推荐这种做法。
 
 (11) tcp三次握手，四次挥手 vs SSL协议
+SSL位于TCP/IP和HTTP协议之间
 
 10 Cookie
 Android下对Cookie的读写操作（附Demo）:https://blog.csdn.net/lishuai05251986/article/details/84804199
