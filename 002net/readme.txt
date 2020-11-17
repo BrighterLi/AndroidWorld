@@ -315,6 +315,7 @@ SSL-pinning有两种方式： 证书锁定（Certificate Pinning） 和公钥锁
 (11) tcp三次握手，四次挥手 vs SSL协议
 
 10 Cookie
+Android下对Cookie的读写操作（附Demo）:https://blog.csdn.net/lishuai05251986/article/details/84804199
 Android的cookie的接收和发送:https://yeyupiaoling.blog.csdn.net/article/details/71789740?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param
 Android入门——OkHttp3之Cookies管理及持久化:https://blog.csdn.net/Coding_Beginner/article/details/87289245?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-10.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-10.channel_param
 PersistentCookieJar开源库: https://github.com/franmontiel/PersistentCookieJar
@@ -329,3 +330,28 @@ SharedPreferences
 请求时带上cookie:
 .addHeader("cookie", Utils.getCookiePreference(this));
 2)GET/POST
+
+11 Session
+Cookie与Session的简单使用：https://blog.csdn.net/weixin_42808295/article/details/81290306?utm_medium=distribute.pc_relevant.none-task-blog-title-7&spm=1001.2101.3001.4242
+(1)cookie技术可以将信息存储在不同的浏览器中，并且可以实现多次请求下的数据共享。但是如果传输的信息比较多的情况下，使用cookie技术会增加服务器端程序处理的难度，这时我们就可以采用session技术。
+session是一种将会话数据保存到服务器端的技术。
+对Tomcat而言，Session是一块在服务器开辟的内存空间，其存储结构为ConcurrentHashMap；
+session是一种建立在cookie之上的通信状态保留机制，可以实现在服务端存储某个用户的一些信息。
+(2)Session操作
+1)GET
+HttpSession session = request.getSession();
+(3)Session的工作原理
+服务器创建session后，将session的id以cookie的形式返回给浏览器(?)，只要浏览器不关，再去访问服务器时，就会携带着session的id，服务器发现浏览器带session的id过来，就会使用内存中与之对应的session为之服务。
+(4)Session和Cookie的主要区别
+Cookie是把用户的数据写给用户的浏览器，而Session技术把用户的数据写到用户自己的session中。
+Session是一个对象，其属性也可以是任何类型（cookie只能设置字符串）。
+Session对象由服务器创建，开发人员可以调用request对象的getSession方法得到Session对象。
+(5)Session存在的问题
+安全性，session劫持。
+增加服务器压力，因为session是直接存储在服务器的内存中的。
+session同步问题，现在一般的应用都会用到多台tomcat服务器，通过负载均衡，同一个会话有可能会被分配到不同的tomcat服务器，因此很可能出现session不一致问题。
+(6)session劫持防范
+其中一个解决方案就是sessionID的值只允许cookie设置，而不是通过URL重置方式设置，同时设置cookie的httponly为true,这个属性是设置是否可通过客户端脚本访问这个设置的cookie，
+第一这个可以防止这个cookie被XSS读取从而引起session劫持，第二cookie设置不会像URL重置方式那么容易获取sessionID。
+第二步就是在每个请求里面加上token，实现类似前面章节里面讲的防止form重复递交类似的功能，我们在每个请求里面加上一个隐藏的token，然后每次验证这个token，从而保证用户的请求都是唯一性。
+还有一个解决方案就是，我们给session额外设置一个创建时间的值，一旦过了一定的时间，我们销毁这个sessionID，重新生成新的session，这样可以一定程度上防止session劫持的问题。
