@@ -5,26 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="com.a006designmode.behaviormode.observermode.ObserverActivity">
 
     <TextView
+        android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="行为模式:"/>
-    <LinearLayout
+        android:text="显示ObserverActivity监听到的内容"/>
+    <Button
+        android:id="@+id/btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/bt_observer"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@color/yellow"/>
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginRight="10dp"/>
-    </LinearLayout>
-
+        android:text="跳转到SecondActivity"/>
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.fenqile.a006designmode.creationmode.buidermode2;
+package com.a006designmode.creationmode.buidermode2;
 
 //计算机抽象类，即Product角色
 public abstract class Computer {

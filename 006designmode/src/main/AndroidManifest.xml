@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.fenqile.a006designmode">
+    package="com.a006designmode">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".creationmode.buidermode2.CreationBuilder2Activity"></activity>
+        <activity android:name=".behaviormode.observermode.ThirdActivity"></activity>
+        <activity android:name=".behaviormode.observermode.SecondActivity" />
+        <activity android:name=".behaviormode.observermode.ObserverActivity" />
+        <activity android:name=".creationmode.buidermode2.CreationBuilder2Activity" />
         <activity android:name=".creationmode.buildermode.BuilderActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

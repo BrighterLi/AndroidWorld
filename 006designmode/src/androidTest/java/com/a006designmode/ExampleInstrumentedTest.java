@@ -1,4 +1,4 @@
-package com.fenqile.a006designmode;
+package com.a006designmode;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.fenqile.a006designmode", appContext.getPackageName());
+        assertEquals("com.a006designmode", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package com.fenqile.a006designmode.creationmode.buidermode2;
+package com.a006designmode.creationmode.buidermode2;
 
 //MabBookBuilder
 public class MabBookBuilder extends  Builder{

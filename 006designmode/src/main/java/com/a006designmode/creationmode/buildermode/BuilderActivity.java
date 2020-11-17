@@ -1,9 +1,9 @@
-package com.fenqile.a006designmode.creationmode.buildermode;
+package com.a006designmode.creationmode.buildermode;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.fenqile.a006designmode.R;
+import com.a006designmode.R;
 
 public class BuilderActivity extends AppCompatActivity {
 

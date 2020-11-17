@@ -1,10 +1,10 @@
-package com.fenqile.a006designmode.creationmode.buidermode2;
+package com.a006designmode.creationmode.buidermode2;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.fenqile.a006designmode.R;
+import com.a006designmode.R;
 
 //《Android源码设计模式》之Builder模式:https://blog.csdn.net/qq_16240393/article/details/77602880
 

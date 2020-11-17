@@ -1,4 +1,4 @@
-package com.fenqile.a006designmode;
+package com.a006designmode;
 
 import org.junit.Test;
 

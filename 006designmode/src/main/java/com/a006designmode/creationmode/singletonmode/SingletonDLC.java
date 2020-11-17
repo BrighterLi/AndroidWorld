@@ -1,4 +1,4 @@
-package com.fenqile.a006designmode.creationmode.singletonmode;
+package com.a006designmode.creationmode.singletonmode;
 //Android 单例模式:https://www.jianshu.com/p/9c32aea34b6d
 
 //DCL式(Double Check Lock)

@@ -1,4 +1,4 @@
-package com.fenqile.a006designmode.creationmode.buildermode;
+package com.a006designmode.creationmode.buildermode;
 
 
 //Android模式- Builder模式:https://blog.csdn.net/wuxidemo/article/details/53886014

@@ -1,4 +1,4 @@
-package com.fenqile.a006designmode.creationmode.buidermode2;
+package com.a006designmode.creationmode.buidermode2;
 
 //抽象Builder类
 public abstract class Builder {

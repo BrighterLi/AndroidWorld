@@ -1,4 +1,4 @@
-package com.fenqile.a006designmode.creationmode.singletonmode;
+package com.a006designmode.creationmode.singletonmode;
 
 //懒汉式
 
