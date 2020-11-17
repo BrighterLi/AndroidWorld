@@ -21,9 +21,11 @@
             android:layout_height="50dp"
             android:background="@color/yellow"/>
         <Button
+            android:id="@+id/bt_observer2"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:background="@color/yellow"/>
     </LinearLayout>
 
 
