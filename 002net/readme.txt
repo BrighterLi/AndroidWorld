@@ -313,3 +313,19 @@ SSL-pinning有两种方式： 证书锁定（Certificate Pinning） 和公钥锁
 所以可以避免证书有效期问题，一般推荐这种做法。
 
 (11) tcp三次握手，四次挥手 vs SSL协议
+
+10 Cookie
+Android的cookie的接收和发送:https://yeyupiaoling.blog.csdn.net/article/details/71789740?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param
+Android入门——OkHttp3之Cookies管理及持久化:https://blog.csdn.net/Coding_Beginner/article/details/87289245?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-10.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-10.channel_param
+PersistentCookieJar开源库: https://github.com/franmontiel/PersistentCookieJar
+(1)在web端的cookie是可以通过服务器端设置保存的，默认是关闭浏览器就清除cookie的，但是可以在服务器端设置cookie的有效期，浏览器就会自动保存cookie，而在Android上是不会自动保存cookie
+没有保存和重发cookie给服务器的话，是不会自动登录的
+(2)cookie操作
+1)Okhttp3
+获取cookie:
+String cookie = response.header("Set-Cookie");
+保存cookie:
+SharedPreferences
+请求时带上cookie:
+.addHeader("cookie", Utils.getCookiePreference(this));
+2)GET/POST
