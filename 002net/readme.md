@@ -325,6 +325,29 @@ SSL-pinning有两种方式： 证书锁定（Certificate Pinning） 和公钥锁
 (11) tcp三次握手，四次挥手 vs SSL协议
 SSL位于TCP/IP和HTTP协议之间
 
+(12) HostnameVerifier接口
+关于HostnameVerifier接口的解读:https://www.cnblogs.com/yufecheng/p/10968045.html
+接口是用于主机名验证，准确说是验证服务器ca证书中的host是否和请求地址host一致，为什么要进行主机名验证呢？其实目的是加强一层安全防护，防止恶意程序利用中间人攻击。
+什么是中间人攻击?
+假设有一个攻击者处于“浏览器”和“网站服务器”的通讯线路之间（比如公共WIFI），它的攻击过程如下：
+服务器向客户端发送公钥。
+攻击者截获公钥，保留在自己手上。
+然后攻击者自己生成一个【伪造的】公钥，发给客户端。
+客户端收到伪造的公钥后，生成加密hash值发给服务器。
+攻击者获得加密hash值，用自己的私钥解密获得真秘钥。
+同时生成假的加密hash值，发给服务器。
+服务器用私钥解密获得假秘钥。
+FIddler就是通过这种方式截获HTTPS信息。
+上面问题的根源是因为“缺乏身份认证机制”，需要验证【伪造的】公钥是否是网站服务器的，我们客户端httpClient可以通过验证公钥中的host，防止被中间人攻击。
+
+(13) SSL/TSL过程
+SSL/TLS协议运行机制的概述：http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html
+
+(14)单向认证
+Android实现HTTPS单向认证：https://www.jianshu.com/p/e41dda0d01c6
+Android中Https通信实现_客户端单向认证校验防止中间人攻击：https://blog.csdn.net/u010982507/article/details/85266096
+最简单的解决方案就是在客户端内置服务器的证书，我们在校验服务端证书的时候只比对和App内置的证书是否完全相同，如果不同则断开连接。那么此时再遭遇中间人攻击劫持我们的请求时由于黑客服务器没有相应的证书，此时HTTPS请求校验不通过，则无法与黑客的服务器建立起连接。
+
 10 Cookie
 Android下对Cookie的读写操作（附Demo）:https://blog.csdn.net/lishuai05251986/article/details/84804199
 Android的cookie的接收和发送:https://yeyupiaoling.blog.csdn.net/article/details/71789740?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param
