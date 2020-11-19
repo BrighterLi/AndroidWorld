@@ -348,6 +348,10 @@ Android实现HTTPS单向认证：https://www.jianshu.com/p/e41dda0d01c6
 Android中Https通信实现_客户端单向认证校验防止中间人攻击：https://blog.csdn.net/u010982507/article/details/85266096
 最简单的解决方案就是在客户端内置服务器的证书，我们在校验服务端证书的时候只比对和App内置的证书是否完全相同，如果不同则断开连接。那么此时再遭遇中间人攻击劫持我们的请求时由于黑客服务器没有相应的证书，此时HTTPS请求校验不通过，则无法与黑客的服务器建立起连接。
 
+(15) Demo
+单向认证：Android Https相关完全解析 当OkHttp遇到Https: https://blog.csdn.net/lmj623565791/article/details/48129405
+X.509证书的读取与解释: https://blog.csdn.net/dickdick111/article/details/84931413
+
 10 Cookie
 Android下对Cookie的读写操作（附Demo）:https://blog.csdn.net/lishuai05251986/article/details/84804199
 Android的cookie的接收和发送:https://yeyupiaoling.blog.csdn.net/article/details/71789740?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param
