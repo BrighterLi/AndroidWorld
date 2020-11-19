@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 
 import com.xiaoming.a002netcache.cache.HttpCacheActivity;
 import com.xiaoming.a002netcache.cache.mapcache.MapCacheTestActivity;
+import com.xiaoming.a002netcache.cache.threelevelcache.ThreeLevelCache;
+import com.xiaoming.a002netcache.cache.threelevelcache.ThreeLevelCacheActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
                     case 1:
                         startActivity(new Intent(MainActivity.this, MapCacheTestActivity.class));
                         break;
+                    case 2:
+                        startActivity(new Intent(MainActivity.this, ThreeLevelCacheActivity.class));
+                        break;
                 }
             }
         });
@@ -50,5 +55,7 @@ public class MainActivity extends AppCompatActivity {
         demoListData = new ArrayList<>();
         demoListData.add("Http下载图片进行缓存");
         demoListData.add("Map内存进行缓存");
+        demoListData.add("三级缓存");
     }
+
 }
