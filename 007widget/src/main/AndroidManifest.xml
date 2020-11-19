@@ -25,6 +25,12 @@
         <activity android:name=".scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivity" />
         <activity android:name=".keyboard.KeyboardEntranceActivity" />
         <activity android:name=".pullrefresh.PullRefreshActivity" />
+        <activity android:name=".recyclerview.twoitemsrecyclerview.TwoItemsRecyclerViewActivity"></activity>
+        <activity android:name=".recyclerview.nestrecyclerview.NestRecyclerViewActivity" />
+        <activity android:name=".recyclerview.waterfallrecyclerview.WaterfallRecyclerViewActivity" />
+        <activity android:name=".recyclerview.gridrecyclerview.GridRecyclerViewActivity" />
+        <activity android:name=".recyclerview.horilinearrecyclerview.HoriLinearRecyclerViewActivity" />
+        <activity android:name=".recyclerview.linearrecyclerview.LinearRecyclerViewActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -16,6 +16,7 @@ import com.widget.image.ImageTestActivity;
 import com.widget.keyboard.KeyboardEntranceActivity;
 import com.widget.listview.backtotop.BackToTopActivity;
 import com.widget.pullrefresh.PullRefreshActivity;
+import com.widget.recyclerview.RecyclerViewActivity;
 import com.widget.scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivity;
 import com.widget.scroll.scrollconflict.demo1.ScrollConflictActivity;
 import com.widget.scroll.scrollconflict.demo2.ScrollConflict2Activity;
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("Dialog:全屏dialog");
         mDataList.add("Image");
         mDataList.add("状态栏");
+        mDataList.add("RecyclerView");
     }
 
     private void initView() {
@@ -110,6 +112,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 13:
                         startActivity(new Intent(MainActivity.this, StatusBarTestActivity.class));
+                        break;
+                    case 14:
+                        startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
                         break;
                 }
             }
