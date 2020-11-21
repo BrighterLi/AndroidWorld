@@ -13,6 +13,7 @@ import com.widget.R;
 import com.widget.recyclerview.ItemDecoration.ItemDecorationTestActivity;
 import com.widget.recyclerview.gridrecyclerview.GridRecyclerViewActivity;
 import com.widget.recyclerview.horilinearrecyclerview.HoriLinearRecyclerViewActivity;
+import com.widget.recyclerview.itemdecoration2.ItemDecorationTest2Activity;
 import com.widget.recyclerview.linearrecyclerview.LinearRecyclerViewActivity;
 import com.widget.recyclerview.nestrecyclerview.NestRecyclerViewActivity;
 import com.widget.recyclerview.twoitemsrecyclerview.TwoItemsRecyclerViewActivity;
@@ -59,6 +60,9 @@ public class RecyclerViewActivity extends AppCompatActivity {
                     case 6:
                         startActivity(new Intent(RecyclerViewActivity.this, ItemDecorationTestActivity.class));
                         break;
+                    case 7:
+                        startActivity(new Intent(RecyclerViewActivity.this, ItemDecorationTest2Activity.class));
+                        break;
                 }
             }
         });
@@ -75,6 +79,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         demoListData.add("瀑布流视图的RecyclerView");
         demoListData.add("RecyclerView嵌套：横向+垂直");
         demoListData.add("RecyclerView根据不同的ViewHolder实现不同的Item");
+        demoListData.add("RcyclerView的间距设置ItemDecoration");
         demoListData.add("RcyclerView的间距设置ItemDecoration");
     }
 }
