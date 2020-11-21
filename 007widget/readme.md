@@ -47,6 +47,7 @@ Android ListView分页加载（服务端+android端）Demo:https://blog.csdn.net
 
 9 RecyclerView
 (1)addHeaderView方法，addFooterView方法
+(2) ExtendedLinearLayoutManager,GridLayoutManager,StaggeredGridLayoutManager
 
 10 页面管理
 (1) 加载中、空页面、错误页面
