@@ -91,3 +91,17 @@ callback.invoke回调给native
 (1) list内存
 跨越适配&性能那道坎，企鹅电竞Android weex优化 ：https://www.cnblogs.com/wetest/p/10324926.html
 Weex-iOS内存分析：https://www.jianshu.com/p/5624f766bf1b
+
+8 Weex预加载
+记录weex接入过程：https://blog.csdn.net/zhuweideng/article/details/53995737
+Weex实践：https://blog.csdn.net/sinat_17775997/article/details/78771805
+加载的js bundle 虽然也不大，duration也很短。但是为了让速度更进一步，还是做预加载方案。
+url：js链接，可以是本地的存储地址/sdcard/com.showjoy.shop/weex/order.js，也可以是线上链接 https://xxxxx/0.4.3/order.js
+
+9 Weex机制
+Weex实践：https://blog.csdn.net/sinat_17775997/article/details/78771805
+说到底，最后的渲染结果都是返回一个View，理论上根据业务需求，可以将view放置在页面的任何地方。
+跳转规则：
+Native 渲染weex页面的时候，需要传入构建出来的js bundle，即一个js文件。但是，不管是Native的日常写法还是前端的惯常用法，都不会直接跳转到一个js文件。
+所以，考虑到符合前端的日常写法，跳转时，统一跳转到url。
+不管是weex，native，webview里的跳转都是url，然后再根据一定的规则进行match，根据match结果来决定是用weex、native还是webview来打开。
