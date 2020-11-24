@@ -393,3 +393,7 @@ session同步问题，现在一般的应用都会用到多台tomcat服务器，�
 第一这个可以防止这个cookie被XSS读取从而引起session劫持，第二cookie设置不会像URL重置方式那么容易获取sessionID。
 第二步就是在每个请求里面加上token，实现类似前面章节里面讲的防止form重复递交类似的功能，我们在每个请求里面加上一个隐藏的token，然后每次验证这个token，从而保证用户的请求都是唯一性。
 还有一个解决方案就是，我们给session额外设置一个创建时间的值，一旦过了一定的时间，我们销毁这个sessionID，重新生成新的session，这样可以一定程度上防止session劫持的问题。
+
+12 下载
+Android okHttp文件下载并带进度条的demo（简单工具类）：https://blog.csdn.net/lplj717/article/details/78250883
+android 文件下载和保存：https://blog.csdn.net/li_yu_csdn/article/details/79313837

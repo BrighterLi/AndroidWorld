@@ -35,7 +35,7 @@ public class LocalCache {
         return null;
     }
 
-    //?异常
+    //todo list ?异常
     //java.io.FileNotFoundException: /storage/emulated/0/LocalCache/com.song.a3gcacheutils/data/bb1e11b4462dd5a5a44dca03f045edde: open failed: ENOENT (No such file or directory)
     public void setBitmapCacheFromLocal(String url, Bitmap bitmap) {
 

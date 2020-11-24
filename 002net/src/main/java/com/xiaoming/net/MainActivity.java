@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.widget.ArrayAdapter;
 
 import com.xiaoming.net.cache.CacheTestActivity;
+import com.xiaoming.net.download.DownloadTestActivity;
 import com.xiaoming.net.netdetect.NetDetectActivity;
 import com.xiaoming.net.packegenet.PackegeNetDetectActivity;
 import com.xiaoming.net.pingnet.PingNetActivity;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         mDemoDataList.add("ping网络");
         mDemoDataList.add("ping网络2");
         mDemoDataList.add("缓存");
+        mDemoDataList.add("下载");
     }
 
     private void initView() {
@@ -63,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 4:
                         startActivity(new Intent(MainActivity.this, CacheTestActivity.class));
+                        break;
+                    case 5:
+                        startActivity(new Intent(MainActivity.this, DownloadTestActivity.class));
                         break;
                 }
             }

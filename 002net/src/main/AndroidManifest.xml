@@ -17,12 +17,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".cache.CacheTestActivity"></activity>
+        <activity android:name=".download.httpdownload.HttpDownloadActivity"></activity>
+        <activity android:name=".download.DownloadTestActivity" />
+        <activity android:name=".cache.CacheTestActivity" />
         <activity android:name=".cookie.CookieTestActivity" />
         <activity android:name=".pingnet2.PingNetActivity2" />
         <activity android:name=".pingnet.PingNetActivity" />
         <activity android:name=".netdetect.NetDetectActivity" />
-        <activity android:name=".cache.threelevelcache.SecondActivity"></activity>
+        <activity android:name=".cache.threelevelcache.SecondActivity" />
         <activity android:name=".cache.threelevelcache.ThreeLevelCacheActivity" />
         <activity android:name=".cache.mapcache.MapCacheTestActivity" />
         <activity android:name=".cache.HttpCacheActivity" />
