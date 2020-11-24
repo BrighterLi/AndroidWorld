@@ -169,6 +169,8 @@ java中关于try、catch、finally中的细节分析:https://blog.csdn.net/mxd44
 1)尽量在try或者catch中使用return语句。通过finally块中达到对try或者catch返回值修改是不可行的。
 2)finally块中避免使用return语句，因为finally块中如果使用return语句，会显示的忽略掉try、catch块中的异常信息，屏蔽了错误的发生。
 3)finally块中避免再次抛出异常，否则整个包含try语句块的方法回抛出异常，并且会忽略掉try、catch块中的异常。
+51 floating
+Android FloatingActionButton（FAB） 悬浮按钮 :https://www.cnblogs.com/feng-ye/p/5627871.html
 
 三 相关Demo
 1 一款Android图文精选app，通过抓取网页获得图文列表。目前包含猫弄（MONO）早午茶、站酷（Zcool）精选、国家地理（National Geographic）每日一图、知乎日报、豆瓣一刻（Moment）。
