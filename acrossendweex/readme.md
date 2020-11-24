@@ -95,6 +95,9 @@ Weex-iOS内存分析：https://www.jianshu.com/p/5624f766bf1b
 8 Weex预加载
 记录weex接入过程：https://blog.csdn.net/zhuweideng/article/details/53995737
 Weex实践：https://blog.csdn.net/sinat_17775997/article/details/78771805
+预加载解决了 1 个问题：
+用户访问页面（H5/Weex）之前，将页面静态资源（HTML/JS/CSS/IMG...）打包提前下载到客户端；用户访问页面时，将网络 IO 拦截并替换为本地文件IO；从而实现加载性能的大幅度提升。
+
 加载的js bundle 虽然也不大，duration也很短。但是为了让速度更进一步，还是做预加载方案。
 url：js链接，可以是本地的存储地址/sdcard/com.showjoy.shop/weex/order.js，也可以是线上链接 https://xxxxx/0.4.3/order.js
 

@@ -397,3 +397,5 @@ session同步问题，现在一般的应用都会用到多台tomcat服务器，�
 12 下载
 Android okHttp文件下载并带进度条的demo（简单工具类）：https://blog.csdn.net/lplj717/article/details/78250883
 android 文件下载和保存：https://blog.csdn.net/li_yu_csdn/article/details/79313837
+OKHttp3源码分析与实践（同步与异步、普通下载与带进度条下载、以及封装；深入分析原理）：https://blog.csdn.net/qq_17678217/article/details/86595809?utm_medium=distribute.pc_relevant.none-task-blog-title-11&spm=1001.2101.3001.4242
+使用okhttp异步下载图片，保存到本地，并在系统相册中显示：https://blog.csdn.net/lumin1914/article/details/50498942?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3.control
