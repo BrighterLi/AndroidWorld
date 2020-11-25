@@ -1,4 +1,5 @@
 资料：
+sdk:https://weex.apache.org/download/download.html#_0-28-0
 (1)Weex-初次见到你：https://developer.aliyun.com/article/59341
 
 1 weex 提供了扩展机制，可以根据自己的业务进行定制自己的功能。

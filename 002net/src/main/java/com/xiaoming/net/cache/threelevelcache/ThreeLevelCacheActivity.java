@@ -16,6 +16,7 @@ public class ThreeLevelCacheActivity extends AppCompatActivity {
     private Button mBtJump;
     private ImageView mIv;
     private String url = "http://e.hiphotos.baidu.com/image/pic/item/2fdda3cc7cd98d10b510fdea233fb80e7aec9021.jpg";
+    //https://img.alicdn.com/tps/TB15vyaLpXXXXXXXFXXXXXXXXXX-198-46.png
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
