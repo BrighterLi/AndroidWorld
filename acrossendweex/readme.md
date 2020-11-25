@@ -123,3 +123,11 @@ Native 渲染weex页面的时候，需要传入构建出来的js bundle，即一
 10 Weex调试
 (1) 
 WEEX系列 我的第一个WEEX DEMO:https://blog.csdn.net/weixin_33757911/article/details/88950786
+(2)weex-inspector
+
+11图片加载
+(1)IWXImgLoaderAdapter
+Weex使用Image控件加载图片,但是并不能直接显示出来图片,主要还是要Native端实现图片加载
+
+12文字加载
+Weex初体验之加载文字库：https://blog.csdn.net/q957789074/article/details/80729591
