@@ -93,11 +93,21 @@ callback.invoke回调给native
 Weex-iOS内存分析：https://www.jianshu.com/p/5624f766bf1b
 
 8 Weex预加载
+(1)
 记录weex接入过程：https://blog.csdn.net/zhuweideng/article/details/53995737
 Weex实践：https://blog.csdn.net/sinat_17775997/article/details/78771805
+懒加载和预加载最简单demo演示: https://www.cnblogs.com/smileyqp/p/12675286.html
+(2)
 预加载解决了 1 个问题：
 用户访问页面（H5/Weex）之前，将页面静态资源（HTML/JS/CSS/IMG...）打包提前下载到客户端；用户访问页面时，将网络 IO 拦截并替换为本地文件IO；从而实现加载性能的大幅度提升。
-
+懒加载：即按非必要资源延后加载；是指在资源需要的时候才去用js加载资源;一般不是首屏要看到的；非核心功能的懒加载，按需加载
+   懒加载时机：首屏内容过大，一次加载完太耗时，想让用户尽快的看到页面；用户后续使用的某个功能需要用到大量的资源(比如图片，聊天)
+预加载：是指在加载完成之后才对用户进行显示
+   原理是先利用遮罩遮住页面，js加载资源，判断加载完成去掉遮罩
+   预加载应用场景：需要流畅体验的应用
+一个页面花了哪些时间：Html页面请求，页面资源请求，页面绘制
+页面加载流程：Html文件下载，Head要求资源解析完毕，资源加载，Dom树渲染
+资源加载细节：下载html，解析资源需要给资源排队，按照队列,依次发出请求(但不用等上个请求回来)
 加载的js bundle 虽然也不大，duration也很短。但是为了让速度更进一步，还是做预加载方案。
 url：js链接，可以是本地的存储地址/sdcard/com.showjoy.shop/weex/order.js，也可以是线上链接 https://xxxxx/0.4.3/order.js
 
@@ -108,3 +118,7 @@ Weex实践：https://blog.csdn.net/sinat_17775997/article/details/78771805
 Native 渲染weex页面的时候，需要传入构建出来的js bundle，即一个js文件。但是，不管是Native的日常写法还是前端的惯常用法，都不会直接跳转到一个js文件。
 所以，考虑到符合前端的日常写法，跳转时，统一跳转到url。
 不管是weex，native，webview里的跳转都是url，然后再根据一定的规则进行match，根据match结果来决定是用weex、native还是webview来打开。
+
+10 Weex调试
+(1) 
+WEEX系列 我的第一个WEEX DEMO:https://blog.csdn.net/weixin_33757911/article/details/88950786
