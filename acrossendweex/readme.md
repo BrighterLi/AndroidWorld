@@ -41,16 +41,16 @@ Bundle验证签名
 https://www.bookstack.cn/read/weex/guide-extend-android.md
 
 3 weex框架
-整个运行框架包括三大部分：JS Bridge、Render、Dom，这三大部分都包含在 WXSDKManager 中。
+(1) 整个运行框架包括三大部分：JS Bridge、Render、Dom，这三大部分都包含在 WXSDKManager 中。
 WXBridgeManager、WXRenderManager、WXDomManager 都可以通过WXSDKManager 获取。
-(1)JS Bridge：主要用来和 JS Engine（V8）进行双向通信，运行在JSBridge线程中。Weex 的初始化，
+1)JS Bridge：主要用来和 JS Engine（V8）进行双向通信，运行在JSBridge线程中。Weex 的初始化，
 Component、Module、DomObject的注册与调用，JSBridge 线程管理最终都会由JS Bridge 的管理类
 WXBridgeManager 完成。所有和 Dom 相关的操作都会通知到 Dom 线程，交由 WXDomModule 处理。
-(2)Render：主要用来操作具体的Native View，包括管理Native View的各种操作（添加／删除Component，
+2)Render：主要用来操作具体的Native View，包括管理Native View的各种操作（添加／删除Component，
 构造Component Tree等）、Native View的布局等，运行在UI线程中。由 WXRenderManager 统一管理，
 具体操作由 WXRenderStatement 管理，每一个weex instance 一一对应一个 WXRenderStatement。
 WXRenderStatement 具体就是操作 WXComponent。
-(3)Dom：主要用来操作Dom结构，包括生成对应的Dom Tree，添加／删除Dom 节点（WXDomObject）等操作，
+3)Dom：主要用来操作Dom结构，包括生成对应的Dom Tree，添加／删除Dom 节点（WXDomObject）等操作，
 运行在独立的 Dom 线程中。由 WXDomManager 统一管理，具体操作由 WXDomStatement 管理，每一个weex
  instance 一一对应一个 WXDomStatement。WXDomStatement 具体就是操作 WXDomObject。所有的 Dom 操作
  （包括CSSLayout的计算）都在 Dom 线程中，完成后会通知UI线程处理对应的Native Component View。
@@ -60,6 +60,36 @@ WXRenderStatement 具体就是操作 WXComponent。
  DomThread：用来进行Dom操作，包括Dom解析、设置Dom样式、CSS Layout操作、生成Component Tree等操作。图中可知 DomThread 中的操作都是v8 engine调用上来的，也就是说是js runtime生成dom的各种操作，一旦js bundle过大，会是一个瓶颈。
  UIThread：用来真正的视图渲染，包括设置View Layout、设置View Padding、绑定数据、Add/Remove View等操作。
 
+(2) 框架
+Weex之Android端的浅析(一)：https://blog.csdn.net/xuguoli_beyondboy/article/details/53064155
+IWXUserTrackAdapter:用来处理日志信息接口，常常拿来做一些用户埋点统计．
+IWXImgLoaderAdapter:用来处理View加载图片接口，可以实现其控制如何加载远程和本地图片．
+IWXHttpAdapter:用来处理网络请求的接口，常常处理请求一系列过程，默认实现DefaultWXHttpAdapter.
+IActivityNavBarSetter:用来处理页面跳转接口，可以实现其接口来控制页面的跳转．
+IWXStorageAdapter:用来处理存储接口，例如SQLite存储,默认实现DefaultWXStorage.
+IWXDebugAdapter:用来处理调试接口，通常实现其接口来在Chrom上做一些页面的调试．
+
+WXDomManager:专门用来管理Dom节点一些操作，如创建节点对应对象，但真正操作是委托给其他的对象
+WXBridgeManager:用来处理Js和Android端的通信，例如Js端调用Android端Native层的方法
+WXRenderManager:用来处理一些渲染操作，例如通过WXRenderStatement将Js层标签转到native层的View组件
+
+WXSDKManager
+
+一个weex页面在Android端渲染，分了三大模块，Dom节点操作管理模块，跨端通信模块，渲染模块
+weex的绘制流程；weex的组件；weex的module扩展
+(3) weex的绘制流程
+在没有WebView的情况下，Native层又如何去解析Js代码呢？js和java之间的通信桥梁：
+js代码——V8引擎——C++——JNI机制——java
+Js如果要与java通信，那么可以通过google v8引擎先与c++通信，然后在通过jni机制来实现与java的通信，从解决了Js页面与Native的通信了
+(4) weex的组件
+demo:https://blog.csdn.net/xuguoli_beyondboy/article/details/53064155
+(5)weex的module扩展
+(6)weex 工作原理
+阿里的weex框架到底是什么:https://www.cnblogs.com/lvyongbo/archive/2004/01/13/5922448.html
+weex 主要就是做了三件事
+在服务端用 Transformer 工具把 Vue 代码转换成 Js Bundle。
+在客户端运行Js Framework 的 JavaScript 引擎，解释执行Js Bundle生成Virtual DOM。
+在客户端设计一套 JS Bridge，能使IOS端（或者Android端）的Object-C语言（或Java语言）与Javascript语言相互调用，把Virtual Dom转换为DOM，渲染到页面。H5端直接和Js Framework 通讯，不需要Js Bridge。
 
  4 关键类
  WXSDKManager
@@ -123,11 +153,18 @@ Native 渲染weex页面的时候，需要传入构建出来的js bundle，即一
 10 Weex调试
 (1) 
 WEEX系列 我的第一个WEEX DEMO:https://blog.csdn.net/weixin_33757911/article/details/88950786
-(2)weex-inspector
+(2)weex-inspector/Weex debug
+Weex入门教程之5，debug调试，集成 Devtools 到 Android: https://blog.csdn.net/u013474104/article/details/55051018
+集成Devtool到Android: https://weex.apache.org/zh/guide/debug/integrate-devtool-to-android.html#android接入指南
+weexteam /android-devtools-for-Apache-Weex : https://github.com/weexteam/android-devtools-for-Apache-Weex/tree/master/inspector?spm=a2c7j.-zh-guide-debug-integrate-devtool-to-android.0.0.2ce15ef7XonDRW
+(3) Weex debug
+[Weex 学习]Weex Debug模式:https://blog.csdn.net/Lebron_xia/article/details/85145978
+命令：weex debug ...vue
 
-11图片加载
-(1)IWXImgLoaderAdapter
+11
+(1)图片加载 IWXImgLoaderAdapter
 Weex使用Image控件加载图片,但是并不能直接显示出来图片,主要还是要Native端实现图片加载
+(2) IWXHttpAdapter
 
 12文字加载
 Weex初体验之加载文字库：https://blog.csdn.net/q957789074/article/details/80729591
