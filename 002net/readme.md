@@ -399,3 +399,16 @@ Android okHttp文件下载并带进度条的demo（简单工具类）：https://
 android 文件下载和保存：https://blog.csdn.net/li_yu_csdn/article/details/79313837
 OKHttp3源码分析与实践（同步与异步、普通下载与带进度条下载、以及封装；深入分析原理）：https://blog.csdn.net/qq_17678217/article/details/86595809?utm_medium=distribute.pc_relevant.none-task-blog-title-11&spm=1001.2101.3001.4242
 使用okhttp异步下载图片，保存到本地，并在系统相册中显示：https://blog.csdn.net/lumin1914/article/details/50498942?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3.control
+
+13 图片下载
+图片加载框架挺多，如Volley、Glide、Picasso、Fresco、
+(1) Glide
+1)缓存
+Glide 系列（四） Glide缓存机制: https://www.jianshu.com/p/17644406396b
+因为Glide加载图片会将图片缓存到本地，如果url不变则直接读取缓存不会再网络加载。
+解决方法有两个：
+1.每次加载都清理缓存。这是个很垃圾的解决方法，相当于舍弃了缓存这个非常重要的功能。
+2.图片地址采用：url+?随机数。当图片更换的时候，后台改变随机数就可以，这样你本地就会重新加载网络图片。如果后台没有这样做那你可以自己加随机数，在url后面添加“？”和随机的key+随机数，通过Math.random（）返回一个0到1之间的double值。
+Glide.with(getContext()).load(url + "?key=" + Math.random()).centerCrop().into(imageUser);
+(2) ImageLoader
+(3) RxJava
