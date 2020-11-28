@@ -401,7 +401,7 @@ OKHttp3源码分析与实践（同步与异步、普通下载与带进度条下�
 使用okhttp异步下载图片，保存到本地，并在系统相册中显示：https://blog.csdn.net/lumin1914/article/details/50498942?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3.control
 
 13 图片下载
-图片加载框架挺多，如Volley、Glide、Picasso、Fresco、
+图片加载框架挺多，如Volley、Glide、Picasso、Fresco、ImageLoader
 (1) Glide
 1)缓存
 Glide 系列（四） Glide缓存机制: https://www.jianshu.com/p/17644406396b
@@ -411,4 +411,4 @@ Glide 系列（四） Glide缓存机制: https://www.jianshu.com/p/17644406396b
 2.图片地址采用：url+?随机数。当图片更换的时候，后台改变随机数就可以，这样你本地就会重新加载网络图片。如果后台没有这样做那你可以自己加随机数，在url后面添加“？”和随机的key+随机数，通过Math.random（）返回一个0到1之间的double值。
 Glide.with(getContext()).load(url + "?key=" + Math.random()).centerCrop().into(imageUser);
 (2) ImageLoader
-(3) RxJava
+(3) RxJava?

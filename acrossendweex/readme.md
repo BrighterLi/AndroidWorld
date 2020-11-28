@@ -159,7 +159,7 @@ Weex入门教程之5，debug调试，集成 Devtools 到 Android: https://blog.c
 weexteam /android-devtools-for-Apache-Weex : https://github.com/weexteam/android-devtools-for-Apache-Weex/tree/master/inspector?spm=a2c7j.-zh-guide-debug-integrate-devtool-to-android.0.0.2ce15ef7XonDRW
 [Weex 学习]Weex Debug模式:https://blog.csdn.net/Lebron_xia/article/details/85145978
 Weex调试神器——Weex Devtools使用手册: https://blog.csdn.net/Taobaojishu/article/details/99829673
-使用 Devtools 调试 Weex 页面: https://www.cnblogs.com/hehey/articles/6231379.html
+使用 Devtools 调试 Weex 页面: htps://www.cnblogs.com/hehey/articles/6231379.html
 命令：weex debug ...vue
 
 11
