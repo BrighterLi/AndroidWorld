@@ -401,7 +401,14 @@ OKHttp3源码分析与实践（同步与异步、普通下载与带进度条下�
 使用okhttp异步下载图片，保存到本地，并在系统相册中显示：https://blog.csdn.net/lumin1914/article/details/50498942?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3.control
 
 13 图片下载
-图片加载框架挺多，如Volley、Glide、Picasso、Fresco、ImageLoader
+图片加载框架挺多，
+如Volley、
+Glide、
+Picasso(无法加载Gif图片)、
+Fresco（Fresco是一个非常优秀的库，但是配置稍显麻烦，同时代码风格读起来有些生疏）、
+ImageLoader（ImageLoader已没人维护了）
+Bitmap和Drawable的关系、区别：
+Drawable 只是一个抽象概念, 表示"something that can be drawn".而 Bitmap 是其存在的实体之一.
 (1) Glide
 1)缓存
 Glide 系列（四） Glide缓存机制: https://www.jianshu.com/p/17644406396b
@@ -410,5 +417,8 @@ Glide 系列（四） Glide缓存机制: https://www.jianshu.com/p/17644406396b
 1.每次加载都清理缓存。这是个很垃圾的解决方法，相当于舍弃了缓存这个非常重要的功能。
 2.图片地址采用：url+?随机数。当图片更换的时候，后台改变随机数就可以，这样你本地就会重新加载网络图片。如果后台没有这样做那你可以自己加随机数，在url后面添加“？”和随机的key+随机数，通过Math.random（）返回一个0到1之间的double值。
 Glide.with(getContext()).load(url + "?key=" + Math.random()).centerCrop().into(imageUser);
+2）缓存机制
 (2) ImageLoader
 (3) RxJava?
+
+14 

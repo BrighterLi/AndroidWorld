@@ -1,12 +1,15 @@
 package com.xiaoming.net.glide;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Button;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.xiaoming.net.R;
 
 import java.net.URL;
@@ -28,7 +31,7 @@ public class GlideImgActivity extends Activity {
         mBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startLoadImage();
+                startLoadImage2();
             }
         });
         mBtBack.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +46,22 @@ public class GlideImgActivity extends Activity {
     private void startLoadImage() {
         Glide.with(this)
                 .load(URL)
+                .diskCacheStrategy( DiskCacheStrategy.ALL ) //image的所有版本都会缓存
                 .into(mIv);
+    }
+
+    private void startLoadImage2() {
+        ImageUtil.getBitmap(this, URL, new ImageUtil.OnBitmapLoad() {
+            @Override
+            public void onBitmapReady(Bitmap bitmap) {
+                Log.d("GlideImgActivity", "bright8#onBitmapReady");
+                mIv.setImageBitmap(bitmap);
+            }
+
+            @Override
+            public void onLoadFailed() {
+                Log.d("GlideImgActivity", "bright8#onLoadFailed");
+            }
+        });
     }
 }
