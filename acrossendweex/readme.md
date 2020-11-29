@@ -169,3 +169,7 @@ Weex使用Image控件加载图片,但是并不能直接显示出来图片,主要
 
 12文字加载
 Weex初体验之加载文字库：https://blog.csdn.net/q957789074/article/details/80729591
+
+13 weex
+命令：
+cd进入home.we的所在文件夹内部->将.we文件转成.js文件：weex compile home.we home.js

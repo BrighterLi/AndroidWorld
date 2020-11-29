@@ -418,6 +418,8 @@ Glide 系列（四） Glide缓存机制: https://www.jianshu.com/p/17644406396b
 2.图片地址采用：url+?随机数。当图片更换的时候，后台改变随机数就可以，这样你本地就会重新加载网络图片。如果后台没有这样做那你可以自己加随机数，在url后面添加“？”和随机的key+随机数，通过Math.random（）返回一个0到1之间的double值。
 Glide.with(getContext()).load(url + "?key=" + Math.random()).centerCrop().into(imageUser);
 2）缓存机制
+Android Glide图片缓存原理及手写实现：
+https://blog.csdn.net/hongxue8888/article/details/104166145?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-2.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-2.control
 (2) ImageLoader
 (3) RxJava?
 

@@ -40,7 +40,7 @@ dependencies {
     //weex_sdk
     implementation 'com.taobao.android:weex_sdk:0.9.5@aar'
     //glide
-    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
     //?用在哪里了
     implementation 'com.android.support:recyclerview-v7:24.2.1'
 
