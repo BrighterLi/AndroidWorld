@@ -100,11 +100,12 @@ weex 主要就是做了三件事
  WXSDKInstance:renderByUrl
  WXManager
 
- 5 源码分析之界面渲染
+ 5 源码分析
+ (1)源码分析之界面渲染
  Weex Android SDK源码分析:https://blog.csdn.net/nupt123456789/article/details/53691292?utm_medium=distribute.pc_relevant.none-task-blog-title-5&spm=1001.2101.3001.4242
  Weex Android SDK源码分析之界面渲染：https://blog.csdn.net/walid1992/article/details/51705371
  https://blog.csdn.net/walid1992/article/details/51759588?utm_medium=distribute.pc_relevant.none-task-blog-title-2&spm=1001.2101.3001.4242
-
+详解 Weex 页面的渲染过程: https://segmentfault.com/a/1190000010415641
 6 native与weex通讯
 (1)native—>weex
 1)fireGlobalEventCallback 全局事件
@@ -173,3 +174,12 @@ Weex初体验之加载文字库：https://blog.csdn.net/q957789074/article/detai
 13 weex
 命令：
 cd进入home.we的所在文件夹内部->将.we文件转成.js文件：weex compile home.we home.js
+
+14 工具
+Playground : Playground在线，直接在线编写代码并预览效果：
+http://dotwe.org/vue
+android weex module扩展 component扩展 学习，调试工具：https://blog.csdn.net/ligaozeng/article/details/88896578
+IWeex: https://liuxinyea.github.io/IWeex/
+
+15 资料
+全球的weex资源都在这里：https://blog.csdn.net/weixin_33913377/article/details/88586939

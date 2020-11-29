@@ -8,7 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import com.xiaoming.acrossendweex.openweexpage.OpenWeexPageActivity;
-import com.xiaoming.acrossendweex.weexcustomcomponent.WeexComponentActivity;
+import com.xiaoming.acrossendweex.weexcustomcomponent.mapview.WeexComponentActivity;
 
 import java.util.ArrayList;
 import java.util.List;

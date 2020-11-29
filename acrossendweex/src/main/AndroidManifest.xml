@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".weexcustomcomponent.WeexComponentActivity"></activity>
+        <activity android:name=".weexcustomcomponent.mapview.WeexComponentActivity"></activity>
         <activity android:name=".adapter.ImgLoaderAdapterActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

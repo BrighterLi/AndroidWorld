@@ -1,4 +1,4 @@
-package com.xiaoming.acrossendweex.weexcustomcomponent;
+package com.xiaoming.acrossendweex.weexcustomcomponent.mapview;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
