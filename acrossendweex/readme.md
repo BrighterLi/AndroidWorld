@@ -173,7 +173,7 @@ Weex初体验之加载文字库：https://blog.csdn.net/q957789074/article/detai
 
 13 weex
 命令：
-cd进入home.we的所在文件夹内部->将.we文件转成.js文件：weex compile home.we home.js
+cd进入home.we的所在文件夹内部->将.we/.vue文件转成.js文件：weex compile home.we home.js
 
 14 工具
 Playground : Playground在线，直接在线编写代码并预览效果：
