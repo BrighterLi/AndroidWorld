@@ -106,6 +106,10 @@ weex 主要就是做了三件事
  Weex Android SDK源码分析之界面渲染：https://blog.csdn.net/walid1992/article/details/51705371
  https://blog.csdn.net/walid1992/article/details/51759588?utm_medium=distribute.pc_relevant.none-task-blog-title-2&spm=1001.2101.3001.4242
 详解 Weex 页面的渲染过程: https://segmentfault.com/a/1190000010415641
+一文让你懂weex：https://blog.csdn.net/zzp_szu/article/details/100752701
+(2) Weex框架与整体流程
+关于weex:  https://segmentfault.com/a/1190000007560611?from=singlemessage
+
 6 native与weex通讯
 (1)native—>weex
 1)fireGlobalEventCallback 全局事件
@@ -183,3 +187,5 @@ IWeex: https://liuxinyea.github.io/IWeex/
 
 15 资料
 全球的weex资源都在这里：https://blog.csdn.net/weixin_33913377/article/details/88586939
+Weex内置组件的使用：https://blog.csdn.net/weitao_666/article/details/90450607
+weex 数据绑定，动态控制组件的显示内容及样式：https://blog.csdn.net/weixin_30527143/article/details/97772754
