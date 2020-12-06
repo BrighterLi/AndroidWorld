@@ -1,8 +1,16 @@
 apply plugin: 'com.android.application'
+//apply from: 'https://raw.githubusercontent.com/apache/incubator-weex/release/0.28/android/sdk/buildSrc/download_jsc.gradle'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
+
+    packagingOptions {
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+    }
 
 
     defaultConfig {
@@ -13,6 +21,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi","armeabi-v7a", "arm64-v8a", "x86"
+        }
 
     }
 
@@ -39,6 +50,7 @@ dependencies {
     implementation 'com.alibaba:fastjson:1.1.45'
     //weex_sdk
     implementation 'com.taobao.android:weex_sdk:0.9.5@aar'
+    //api 'org.apache.weex:sdk_legacy:0.28.0@aar'
     //glide
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     //?用在哪里了

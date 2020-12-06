@@ -44,7 +44,7 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
         //mContentView.setBackgroundResource(R.drawable.activity_background);
 
         ////不起作用
-        getWindow().getDecorView().setBackgroundResource(R.drawable.activity_background);
+        //getWindow().getDecorView().setBackgroundResource(R.drawable.activity_background);
 
         //不起作用
        /* View decorView = getWindow().getDecorView();
@@ -57,7 +57,7 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
 
     private void loadPage() {
         //WXSDKEngine初始化
-        if(!WXSDKEngine.isInitialized()) {
+        if (!WXSDKEngine.isInitialized()) {
             //WXSDKEngine未初始化，延时500ms执行
             mHandler.postDelayed(new Runnable() {
                 @Override
@@ -82,14 +82,14 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
          */
         //加载本地weex页面。渲染页面，home.js就是weex打包好后给你的js文件
         mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("weex/component/fql_richtext.js", this), null, null, -1,-1, WXRenderStrategy.APPEND_ASYNC);
-        //mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("weex/component/index.js", this), null, null, -1,-1, WXRenderStrategy.APPEND_ASYNC);
+        //mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("home.js", OpenWeexPageActivity.this), null, null, -1, -1, WXRenderStrategy.APPEND_ASYNC);
     }
 
     //创建View，这个view就是weex页面
     @Override
     public void onViewCreated(WXSDKInstance wxsdkInstance, View view) {
         //setContentView(view);  //整个根布局设置成weex这个view
-        if(mWeexContainer != null) {
+        if (mWeexContainer != null) {
             mWeexContainer.addView(view); //Activity布局的一部分加进weex这个view
             //不起作用
             //view.setBackgroundColor(0xffff6830);
@@ -120,7 +120,7 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
     @Override
     protected void onResume() {
         super.onResume();
-        if(mWXSDKInstance != null) {
+        if (mWXSDKInstance != null) {
             mWXSDKInstance.onActivityResume();
         }
     }
@@ -128,7 +128,7 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
     @Override
     protected void onPause() {
         super.onPause();
-        if(mWXSDKInstance != null) {
+        if (mWXSDKInstance != null) {
             mWXSDKInstance.onActivityPause();
         }
     }
@@ -136,7 +136,7 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
     @Override
     protected void onStop() {
         super.onStop();
-        if(mWXSDKInstance != null) {
+        if (mWXSDKInstance != null) {
             mWXSDKInstance.onActivityStop();
         }
     }
@@ -144,7 +144,7 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(mWXSDKInstance != null) {
+        if (mWXSDKInstance != null) {
             mWXSDKInstance.onActivityDestroy();
         }
     }

@@ -183,3 +183,6 @@ IWeex: https://liuxinyea.github.io/IWeex/
 
 15 资料
 全球的weex资源都在这里：https://blog.csdn.net/weixin_33913377/article/details/88586939
+
+16 Demo
+renderByUrl Demo：https://www.mobibrw.com/2019/21684
