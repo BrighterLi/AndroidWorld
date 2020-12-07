@@ -109,6 +109,7 @@ weex 主要就是做了三件事
 一文让你懂weex：https://blog.csdn.net/zzp_szu/article/details/100752701
 (2) Weex框架与整体流程
 关于weex:  https://segmentfault.com/a/1190000007560611?from=singlemessage
+Weex是如何在Android客户端上跑起来的: https://www.jianshu.com/p/5c6b029d72c3
 
 6 native与weex通讯
 (1)native—>weex
@@ -192,3 +193,7 @@ weex 数据绑定，动态控制组件的显示内容及样式：https://blog.cs
 
 16 Demo
 renderByUrl Demo：https://www.mobibrw.com/2019/21684
+
+17 版本升级
+(1)0.28.0
+Android Studio 3.5.2最小化接入weex 0.28.0实践: https://www.mobibrw.com/2019/21684
