@@ -1,22 +1,36 @@
 package com.xiaoming.androidknowledgepoints.encryption;
 
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
+//Java数据加密(MD5,sha1,sha256)：https://blog.csdn.net/chain_fei/article/details/77822830
 public class MD5Util {
 
-    public static void md5Encryp(String[] args) throws NoSuchAlgorithmException {
-        String plainText = "this is plain text";
+    /**
+     * MD5加密 生成32位md5码
+     */
+    public static String string2MD5(String inStr){
+        MessageDigest md5 = null;
+        try{
+            md5 = MessageDigest.getInstance("MD5");
+        }catch (Exception e){
+            System.out.println(e.toString());
+            e.printStackTrace();
+            return "";
+        }
+        char[] charArray = inStr.toCharArray();
+        byte[] byteArray = new byte[charArray.length];
 
-        // 通过调用MessageDigest（数据摘要类）的getInstance()静态方法，传入加密算法的名称，获取数据摘要对象。
-        //MessageDigest MessageDigest.getInstance(algorithm);
-        MessageDigest messageDigest = MessageDigest.getInstance("MD5");
-
-        // 获取摘要（加密），结果是字节数组
-        // byte[] java.security.MessageDigest.digest(byte[] input)
-        byte[] ciphertext = messageDigest.digest(plainText.getBytes());
-
-        // 利用apache的commons-codec，将字节数组转换为十六进制。
-        //System.out.println(Hex.encodeHexString(ciphertext));
+        for (int i = 0; i < charArray.length; i++)
+            byteArray[i] = (byte) charArray[i];
+        byte[] md5Bytes = md5.digest(byteArray);
+        StringBuffer hexValue = new StringBuffer();
+        for (int i = 0; i < md5Bytes.length; i++){
+            int val = ((int) md5Bytes[i]) & 0xff;
+            if (val < 16)
+                hexValue.append("0");
+            hexValue.append(Integer.toHexString(val));
+        }
+        return hexValue.toString().toUpperCase();
     }
+
 }

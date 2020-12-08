@@ -1,4 +1,7 @@
 1 各种算法
+数据加密，是一门历史悠久的技术，指通过 加密算法和加密 密钥将明文转变为密文，而解密则是通过解密算法和解密密钥将密文恢复为明文。
+它的核心是密码学。数据加密目前仍是 计算机系统对信息进行保护的一种最可靠的办法。它利用 密码技术对信息进行加密，实现 信息隐蔽，
+从而起到保护信息的安全的作用。
 (1)MD5  摘要算法
 1)md5是一种信息摘要算法,还有另外一种叫法：指纹。
 它可以从一个字符串或一个文件中按照一定的规则生成一个特殊的字符串（这个特殊的字符串就被称之为摘要，
@@ -27,3 +30,15 @@ https://www.cnblogs.com/-beyond/p/10575078.html
 使用jdk内置的方法实现实现md5加密
 使用bc方式实现md5加密
 使用Cc方式实现md5加密
+
+2 Demo
+java 实现各种加密（MD5 ，SHA-1,SHA-256）: https://blog.csdn.net/qq_33113141/article/details/51858629?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control
+Java数据加密(MD5,sha1,sha256)：https://blog.csdn.net/chain_fei/article/details/77822830
+java各种加密方法实现:https://blog.csdn.net/Q563573095/article/details/79625836?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-5.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-5.control
+
+3 各种概念
+(1)对称加密非对称加密
+
+4 相关需求
+(1) 金融备案整改
+之前是一整个密钥存在so库，然后so加固，密钥要改成分段存储，MD5改成sha256,分段加密。
