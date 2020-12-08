@@ -31,6 +31,10 @@ https://www.cnblogs.com/-beyond/p/10575078.html
 使用bc方式实现md5加密
 使用Cc方式实现md5加密
 
+(4) DES
+des对称加密，是一种比较传统的加密方式，其加密运算、解密运算使用的是同样的密钥，信息的发送者和信息的接收者在进行信息的传输与处理时，必须共同持有该密码（称为对称密码）
+DES采用了64位的分组长度和56位的密钥长度
+
 2 Demo
 java 实现各种加密（MD5 ，SHA-1,SHA-256）: https://blog.csdn.net/qq_33113141/article/details/51858629?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control
 Java数据加密(MD5,sha1,sha256)：https://blog.csdn.net/chain_fei/article/details/77822830
