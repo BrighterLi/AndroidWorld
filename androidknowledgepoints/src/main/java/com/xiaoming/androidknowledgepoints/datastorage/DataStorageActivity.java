@@ -1,5 +1,6 @@
 package com.xiaoming.androidknowledgepoints.datastorage;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +10,7 @@ import android.widget.Button;
 import com.xiaoming.androidknowledgepoints.R;
 import com.xiaoming.androidknowledgepoints.datastorage.File.FileActivity;
 
-public class DataStorageActivity extends AppCompatActivity implements View.OnClickListener{
+public class DataStorageActivity extends Activity implements View.OnClickListener{
     private Button mBtFile;
 
     @Override

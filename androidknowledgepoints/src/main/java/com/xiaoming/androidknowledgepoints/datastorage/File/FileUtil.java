@@ -129,4 +129,18 @@ public class FileUtil {
 
         return null;
     }
+
+   //外部存储：getExternalCacheDir().getAbsolutePath()
+   //内部存储: getFilesDir().getAbsolutePath()
+    public static String getFilePath(Activity activity) {
+        //外部存储
+        String str = activity.getExternalCacheDir().getAbsolutePath();
+        //内部存储
+        String str2 = activity.getFilesDir().getAbsolutePath();
+        Log.i("bright8", "外部存储str:" + str);
+        Log.i("bright8", "内部存储str2:" + str2);
+        return str;
+        //str: /storage/emulated/0/Android/data/com.fenqile.androidknowledgepoints/cache
+        //str2: /data/user/0/com.fenqile.androidknowledgepoints/files
+    }
 }

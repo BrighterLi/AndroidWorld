@@ -1,5 +1,6 @@
 package com.xiaoming.androidknowledgepoints.datastorage.File;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,7 +8,7 @@ import android.widget.Button;
 
 import com.xiaoming.androidknowledgepoints.R;
 
-public class FileActivity extends AppCompatActivity implements View.OnClickListener{
+public class FileActivity extends Activity implements View.OnClickListener{
     private Button mBtNewFolder;
     private Button mBtNewFile;
     private Button mBtWriteData;
@@ -22,6 +23,7 @@ public class FileActivity extends AppCompatActivity implements View.OnClickListe
         FileUtil.verifyStoragePermission(this);
 
         initView();
+        FileUtil.getFilePath(FileActivity.this);
     }
 
     private void initView() {

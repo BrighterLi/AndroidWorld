@@ -12,6 +12,7 @@ import com.xiaoming.androidknowledgepoints.activity.ActivityTestActivity;
 import com.xiaoming.androidknowledgepoints.ajavaknowledge.JavaKnowledgeActivity;
 import com.xiaoming.androidknowledgepoints.broadcast.LocalBroadcastReceiverActivity;
 import com.xiaoming.androidknowledgepoints.datastorage.DataStorageActivity;
+import com.xiaoming.androidknowledgepoints.datastorage.File.FileActivity;
 import com.xiaoming.androidknowledgepoints.deeplink.DeepLinkActivity;
 import com.xiaoming.androidknowledgepoints.dialog.DialogTestActivity;
 import com.xiaoming.androidknowledgepoints.floating.floating.FloatingActivity;
@@ -129,6 +130,9 @@ public class MainActivity extends Activity {
                         break;
                     case 25:
                         startActivity(new Intent(MainActivity.this, ActivityTestActivity.class));
+                        break;
+                    case 26:
+                        startActivity(new Intent(MainActivity.this, FileActivity.class));
                         break;
                 }
             }

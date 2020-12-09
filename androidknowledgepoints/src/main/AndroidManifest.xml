@@ -16,7 +16,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
-        <activity android:name=".activity.onactivityresult.CActivity"></activity>
+        <activity android:name=".file.FileTestActivity"></activity>
+        <activity android:name=".activity.onactivityresult.CActivity" />
         <activity android:name=".activity.onactivityresult.BActivity" />
         <activity android:name=".activity.onactivityresult.AActivity" />
         <activity android:name=".activity.ActivityTestActivity" />
