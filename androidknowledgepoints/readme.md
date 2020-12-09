@@ -116,6 +116,8 @@ Java之阻塞和非阻塞以及同步和异步的区别：https://blog.csdn.net/
   var  strToObj = JSON.parse(personStr);
   
 31 ASM插桩无埋点性能监控
+字节码插桩--你也可以轻松掌握：https://www.jianshu.com/p/13d18c631549
+插桩就是将一段代码通过某种策略插入到另一段代码，或替换另一段代码。这里的代码可以分为源码和字节码，而我们所说的插桩一般指字节码插桩。
 32 静默安装
 33 闪屏(图片、gif、视频)
 Android启动页面（闪屏页面）的实现：https://blog.csdn.net/PlainWaterh/article/details/78184847

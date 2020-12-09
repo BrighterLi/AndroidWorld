@@ -3,3 +3,7 @@ Android 混合Flutter之源码集成方式：https://blog.csdn.net/qq_33453910/a
 FlutterActivity—>FlutterActivityDelegate—FlutterMain—FlutterView—FlutterNativeView
 FlutterActivity的生命周期各个方法实际由FlutterActivityDelegate代理执行，并且知道FlutterActivity通过委托代理的方式解决来生命周期的回调，
 插件管理和FlutterView的创建，是Android原生调Flutter页面的中间桥梁。
+
+2 脚本
+采用了调试模式使用源码的方式，打包的时候使用aar的方式，这样做的好处是，既能够保留开发期间的可调试行，也能保障构建环境不依赖Flutter环境。
+为此，我们团队双端各写了一个脚本，来切换接入模式，且自动将Flutter产物提提取并推送到原生工程以便打包。
