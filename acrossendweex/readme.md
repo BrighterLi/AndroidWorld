@@ -110,6 +110,7 @@ weex 主要就是做了三件事
 (2) Weex框架与整体流程
 关于weex:  https://segmentfault.com/a/1190000007560611?from=singlemessage
 Weex是如何在Android客户端上跑起来的: https://www.jianshu.com/p/5c6b029d72c3
+Weex源码分析: https://blog.csdn.net/qq_26984087/article/details/89406158
 
 6 native与weex通讯
 (1)native—>weex
@@ -156,7 +157,7 @@ Native 渲染weex页面的时候，需要传入构建出来的js bundle，即一
 所以，考虑到符合前端的日常写法，跳转时，统一跳转到url。
 不管是weex，native，webview里的跳转都是url，然后再根据一定的规则进行match，根据match结果来决定是用weex、native还是webview来打开。
 
-10 Weex调试
+10 Weex调试/debug
 (1) 
 WEEX系列 我的第一个WEEX DEMO:https://blog.csdn.net/weixin_33757911/article/details/88950786
 (2)weex-inspector/Weex debug
