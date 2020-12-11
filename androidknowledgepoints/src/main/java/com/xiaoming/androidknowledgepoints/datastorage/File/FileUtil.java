@@ -135,9 +135,12 @@ public class FileUtil {
     public static String getFilePath(Activity activity) {
         //外部存储
         String str = activity.getExternalCacheDir().getAbsolutePath();
+        String str12 = Environment.getExternalStorageDirectory().getAbsolutePath();
+        Log.i("bright8", "外部存储str:" + str);
+        Log.i("bright8", "外部存储str12:" + str12);
+
         //内部存储
         String str2 = activity.getFilesDir().getAbsolutePath();
-        Log.i("bright8", "外部存储str:" + str);
         Log.i("bright8", "内部存储str2:" + str2);
         return str;
         //str: /storage/emulated/0/Android/data/com.fenqile.androidknowledgepoints/cache

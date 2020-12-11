@@ -1,3 +1,5 @@
+UTF-8
+
 1 各种算法
 数据加密，是一门历史悠久的技术，指通过 加密算法和加密 密钥将明文转变为密文，而解密则是通过解密算法和解密密钥将密文恢复为明文。
 它的核心是密码学。数据加密目前仍是 计算机系统对信息进行保护的一种最可靠的办法。它利用 密码技术对信息进行加密，实现 信息隐蔽，
@@ -34,6 +36,34 @@ https://www.cnblogs.com/-beyond/p/10575078.html
 (4) DES
 des对称加密，是一种比较传统的加密方式，其加密运算、解密运算使用的是同样的密钥，信息的发送者和信息的接收者在进行信息的传输与处理时，必须共同持有该密码（称为对称密码）
 DES采用了64位的分组长度和56位的密钥长度
+
+(5)Base64
+1)是什么
+Base64是网络上最常见的用于传输8Bit字节码的编码方式之一，Base64就是一种基于64个可打印字符来表示二进制数据的方法。
+Base64编码是从二进制到字符的过程，可用于在HTTP环境下传递较长的标识信息。采用Base64编码具有不可读性，需要解码后才能阅读。
+2)为什么用
+Base64编码是从二进制值到某些特定字符的编码，这些特定字符一共64个，所以称作Base64。
+为什么不直接传输二进制呢？比如图片，或者字符，既然实际传输时它们都是二进制字节流。而且即使Base64编码过的字符串最终也是二进制（通常是UTF-8编码，兼容ASCII编码）在网络上传输的，那么用4/3倍带宽传输数据的Base64究竟有什么意义？
+真正的原因是二进制不兼容。某些二进制值，在一些硬件上，比如在不同的路由器，老电脑上，表示的意义不一样，做的处理也不一样。同样，一些老的软件，网络协议也有类似的问题。
+但是万幸，Base64使用的64个字符，经ASCII/UTF-8编码后在大多数机器，软件上的行为是一样的。
+
+用记事本打开exe、jpg、pdf这些文件时，我们都会看到一大堆乱码，因为二进制文件包含很多无法显示和打印的字符，所以，如果要让记事本这样的文本处理软件能处理二进制数据，就需要一个二进制到字符串的转换方法。Base64是一种最常见的二进制编码方法。
+有些情况下传输不可见字符不方便。比如一个纯文本协议，二进制中可能会出现被当做控制字符处理的部分。这样引起传输失败。
+
+3)应用场景
+Base64编码可用于在HTTP环境下传递较长的标识信息。
+一个xml当中包含另一个xml数据，此时如果将xml数据直接写入显然不合适，将xml进行适当编码存入较为方便，事实上xml当中的字符一般都是可见字符（0-127之间），但是由于中文的存在，可能存在不可见字符，直接将字符打印在外层xml的数据中显然不合理，那么怎么办呢？
+可以使用base64进行编码，然后存入xml，解码反之
+其实还有个办法，将byte的值写在xml当中，空格或者，分开，这样也可以将byte数据传入，不过这样更浪费空间，并且不易保存.
+
+4)java中使用
+import java.util.Base64;
+  对于标准的Base64：
+  加密为字符串使用Base64.getEncoder().encodeToString();
+  加密为字节数组使用Base64.getEncoder().encode();
+  解密使用Base64.getDecoder().decode();
+  对于URL安全或MIME的Base64，只需将上述getEncoder()getDecoder()更换为getUrlEncoder()getUrlDecoder()
+  或getMimeEncoder()和getMimeDecoder()即可。
 
 2 Demo
 java 实现各种加密（MD5 ，SHA-1,SHA-256）: https://blog.csdn.net/qq_33113141/article/details/51858629?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control
