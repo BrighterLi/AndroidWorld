@@ -25,20 +25,21 @@ public class AESUtil {
      */
     private static final String IV_STRING = "16-Bytes--String"; //这里限制了加密规则只能使16个字符长的字符串
 
-    public  static String aESEncode(String encodeRules,String content) throws InvalidAlgorithmParameterException {
+    public static String aESEncode(String encodeRules, String content) throws InvalidAlgorithmParameterException {
         try {
 
             byte[] keyFormat = encodeRules.getBytes("UTF-8");
             byte[] contentFormat = content.getBytes("UTF-8");
-            SecretKeySpec secretKeySpec = new SecretKeySpec(keyFormat,"AES");
+            SecretKeySpec secretKeySpec = new SecretKeySpec(keyFormat, "AES");
             byte[] initParam = IV_STRING.getBytes("UTF-8");
             IvParameterSpec ivParameterSpec = new IvParameterSpec(initParam);
-
-            Cipher cipher=Cipher.getInstance("AES/CBC/PKCS5Padding");
+            //新建Cipher对象时需要传入一个参数"AES/CBC/PKCS5Padding"
+            //实际上Cipher类实现了多种加密算法，在创建Cipher对象时，传入不同的参数就可以进行不同的加密算法。而这些算法不同的地方只是创建密匙的方法不同而已。
+            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
             //初始化密码器
-            cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec,ivParameterSpec);
+            cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, ivParameterSpec);
 
-            byte [] byte_AES=cipher.doFinal(contentFormat);
+            byte[] byte_AES = cipher.doFinal(contentFormat);
 
             return parseByte2HexStr(byte_AES);
         } catch (NoSuchAlgorithmException e) {
@@ -57,22 +58,23 @@ public class AESUtil {
         //如果有错就大胆抛空
         return null;
     }
+
     /*
      * 解密
      * 过程和加密基本类似
      */
-    public static String aESDncode(String encodeRules,String content) throws InvalidAlgorithmParameterException {
+    public static String aESDncode(String encodeRules, String content) throws InvalidAlgorithmParameterException {
         try {
             byte[] keyFormat = encodeRules.getBytes("UTF-8");
             byte[] contentFormat = parseHexStr2Byte(content);
-            SecretKeySpec secretKeySpec = new SecretKeySpec(keyFormat,"AES");
+            SecretKeySpec secretKeySpec = new SecretKeySpec(keyFormat, "AES");
             byte[] initParam = IV_STRING.getBytes("UTF-8");
             IvParameterSpec ivParameterSpec = new IvParameterSpec(initParam);
 
-            Cipher cipher=Cipher.getInstance("AES/CBC/PKCS5Padding");
+            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
             //初始化密码器
-            cipher.init(Cipher.DECRYPT_MODE, secretKeySpec,ivParameterSpec);
-            byte [] byte_AES=cipher.doFinal(contentFormat);
+            cipher.init(Cipher.DECRYPT_MODE, secretKeySpec, ivParameterSpec);
+            byte[] byte_AES = cipher.doFinal(contentFormat);
             return new String(byte_AES);
 
         } catch (NoSuchAlgorithmException e) {
@@ -96,13 +98,14 @@ public class AESUtil {
 
     /**
      * 将二进制转换成16进制
-     * @method parseByte2HexStr
+     *
      * @param buf
      * @return
+     * @method parseByte2HexStr
      */
-    public static String parseByte2HexStr(byte buf[]){
+    public static String parseByte2HexStr(byte buf[]) {
         StringBuffer sb = new StringBuffer();
-        for(int i = 0; i < buf.length; i++){
+        for (int i = 0; i < buf.length; i++) {
             String hex = Integer.toHexString(buf[i] & 0xFF);
             if (hex.length() == 1) {
                 hex = '0' + hex;
@@ -114,17 +117,18 @@ public class AESUtil {
 
     /**
      * 将16进制转换为二进制
-     * @method parseHexStr2Byte
+     *
      * @param hexStr
      * @return
+     * @method parseHexStr2Byte
      */
-    public static byte[] parseHexStr2Byte(String hexStr){
-        if(hexStr.length() < 1)
+    public static byte[] parseHexStr2Byte(String hexStr) {
+        if (hexStr.length() < 1)
             return null;
-        byte[] result = new byte[hexStr.length()/2];
-        for (int i = 0;i< hexStr.length()/2; i++) {
-            int high = Integer.parseInt(hexStr.substring(i*2, i*2+1), 16);
-            int low = Integer.parseInt(hexStr.substring(i*2+1, i*2+2), 16);
+        byte[] result = new byte[hexStr.length() / 2];
+        for (int i = 0; i < hexStr.length() / 2; i++) {
+            int high = Integer.parseInt(hexStr.substring(i * 2, i * 2 + 1), 16);
+            int low = Integer.parseInt(hexStr.substring(i * 2 + 1, i * 2 + 2), 16);
             result[i] = (byte) (high * 16 + low);
         }
         return result;

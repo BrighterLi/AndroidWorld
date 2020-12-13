@@ -28,7 +28,7 @@ public class EncryptionActivity extends Activity {
 
     //AES加解密
     private void aESEncodeAnddecode() throws InvalidAlgorithmParameterException {
-        String encodeRules="thisisencoderule";
+        String encodeRules="thisisencoderule"; //加密规则
         System.out.println("bright#加密规则为：" + encodeRules);
         String content = "一头小菜鸡的账号和密码";
         System.out.println("bright#加密的内容为:"+content);

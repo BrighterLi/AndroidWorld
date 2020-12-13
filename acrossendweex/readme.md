@@ -110,6 +110,7 @@ weex 主要就是做了三件事
 (2) Weex框架与整体流程
 关于weex:  https://segmentfault.com/a/1190000007560611?from=singlemessage
 Weex是如何在Android客户端上跑起来的: https://www.jianshu.com/p/5c6b029d72c3
+Weex Android SDK源码分析: https://blog.csdn.net/nupt123456789/article/details/53691292?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control
 Weex源码分析: https://blog.csdn.net/qq_26984087/article/details/89406158
 
 6 native与weex通讯

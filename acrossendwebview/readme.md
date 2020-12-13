@@ -153,6 +153,16 @@ top.location.href="/url" 在顶层页面打开新页面
 (2)html跳转到原生页面
 通过Uri跳转Activity(当然对于WebView中的网页同样适用): https://blog.csdn.net/vaechr/article/details/77802555
 
+12 JSBridge
+Hybrid开发中JSBridge的实现: https://zhuanlan.zhihu.com/p/32899522
+JS引擎工作原理: https://www.jianshu.com/p/c89ec6802d1f
+(1)什么是JSBridge
+主要是给 JavaScript 提供调用 Native 功能的接口，让混合开发中的前端部分可以方便地使用 Native 的功能（例如：地址位置、摄像头）。
+而且 JSBridge 的功能不止调用 Native 功能这么简单宽泛。实际上，JSBridge 就像其名称中的Bridge的意义一样，是 Native 和非 Native 之间的桥梁，
+它的核心是构建 Native 和非 Native 间消息通信的通道，而且这个通信的通道是双向的。
+(2)
+
+
 
 
 
