@@ -155,6 +155,7 @@ public class FileUtil {
     //从assets下面的文件读取文件内容
     public static String getStrFromAssetsFile(Activity activity) {
         try {
+            //InputStreamReader类是从字节流到字符流的桥接器：它使用指定的字符集读取字节并将它们解码为字符
             InputStreamReader inputStreamReader = new InputStreamReader(activity.getAssets().open("test.txt"));
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             String line = "";
@@ -163,8 +164,8 @@ public class FileUtil {
                 result += line;
             }
             Log.d("bright8", "getStrFromAssetsFile#result:" + result);
+            bufferedReader.close();
             return result;
-
         } catch (IOException e) {
             Log.d("bright8", "getStrFromAssetsFile#e:" + e.toString());
             e.printStackTrace();

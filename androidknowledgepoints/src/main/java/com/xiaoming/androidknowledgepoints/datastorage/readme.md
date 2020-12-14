@@ -35,3 +35,15 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 2、Environment.getExternalStoragePublicDirectory(“”).getAbsolutePath()
 3、getExternalFilesDir(“”).getAbsolutePath()
 4、getExternalCacheDir().getAbsolutePath()
+
+2 存储方式
+(1) File
+
+
+3 相关知识
+(1)流
+1)读：InputStream  FileInputStream BufferInputStream  InputStreamreader ByteArrayInputStream
+从硬盘往内存里Input东西就是读取数据
+BufferInputStream：
+2)写：OutputStream
+

@@ -1,0 +1,10 @@
+1 相关知识
+(1)SpannableStringBuilder
+SpannableStringBuilder 和 StringBuilder类似，都可以存储字符串，不同的是SpannableStringBuilder有一个setSpan()函数，可以给存储的String添加不同的样式。如加下划线、背景色、字体颜色、字体大小等。
+另外需要注意的是，当SpannableStringBuilder中存储了一个有样式的String，当把spannableStringBuilder展示在TextView、EditTextView中时，能显示这些样式；当展示在canvas上时，因为Canvas不支持SpannableStringBuilder的额外信息，所以会退化成一个普通的String,不显示样式信息。
+
+2 RichText实现
+干货！！！Android富文本实现图文混排: https://www.jianshu.com/p/050ffa5b762c
+android提供了这两个类SpannableString和SpannableStringBuilder实现图文混排
+SpannableString其实和String一样，都是一种字符串类型，SpannableString可以直接作为TextView的显示文本，不同的是SpannableString可以通过使用其方法setSpan方法实现字符串各种形式风格的显示,重要的是可以指定设置的区间，也就是为字符串指定下标区间内的子字符串设置格式。
+SpannableStringBuilder应该开发的小伙伴知道StringBuilder，可以使用append()方法实现字符串拼接，非常方便。同样，SpannableString中也有SpannableStringBuilder，顾名思义，就是实现对，SpannableString的一个拼接效果，同样是append()方法，可以实现各种风格效果的SpannableString拼接，非常实用。
