@@ -41,6 +41,16 @@ Bundle验证签名
 https://www.bookstack.cn/read/weex/guide-extend-android.md
 
 3 weex框架
+整体架构
+Weex 表面上是一个客户端技术，但实际上它串联起了从本地开发环境到云端部署和分发的整个链路。
+开发者首先可以在本地像撰写 web 页面一样撰写一个 app 的页面，然后编译成一段 JavaScript 代码，
+形成 Weex 的一个 JS bundle；在云端，开发者可以把生成的 JS bundle 部署上去，然后通过网络请求
+或预下发的方式传递到用户的移动应用客户端；在移动应用客户端里，WeexSDK 会准备好一个 JavaScript 引擎，
+并且在用户打开一个 Weex 页面时执行相应的 JS bundle，并在执行过程中产生各种命令发送到 native 端进行
+的界面渲染或数据存储、网络通信、调用设备功能、用户交互响应等移动应用的场景实践；同时，如果用户没有
+安装移动应用，他仍然可以在浏览器里打开一个相同的 web 页面，这个页面是使用相同的页面源代码，通过浏览器里的
+ JavaScript 引擎运行起来的。
+
 (1) 整个运行框架包括三大部分：JS Bridge、Render、Dom，这三大部分都包含在 WXSDKManager 中。
 WXBridgeManager、WXRenderManager、WXDomManager 都可以通过WXSDKManager 获取。
 1)JS Bridge：主要用来和 JS Engine（V8）进行双向通信，运行在JSBridge线程中。Weex 的初始化，
@@ -170,13 +180,25 @@ Weex调试神器——Weex Devtools使用手册: https://blog.csdn.net/Taobaojis
 使用 Devtools 调试 Weex 页面: htps://www.cnblogs.com/hehey/articles/6231379.html
 命令：weex debug ...vue
 
-11
+11 Adapter
 (1)图片加载 IWXImgLoaderAdapter
 Weex使用Image控件加载图片,但是并不能直接显示出来图片,主要还是要Native端实现图片加载
 (2) IWXHttpAdapter
 
-12文字加载
+12 weex预加载
+(1)js资源预加载：lx文件
+方式：统跳配置对应的key，进入app查询统跳对应的这些key，加载这些key对应的weex页面lx文件
+(2)图片预加载
+方式：用glide下载，因为glide有缓存机制
+(3)视频预加载
+weex video组件：https://weex.apache.org/zh/docs/components/video.html
+(4)文字加载
+Weex 提供 DOM.addRule 以加载自定义字体: https://weex.apache.org/zh/docs/modules/dom.html#addrule
 Weex初体验之加载文字库：https://blog.csdn.net/q957789074/article/details/80729591
+weex引入iconfont字体:https://blog.csdn.net/qq_42972187/article/details/98059426?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.control
+Android在XML、代码中使用第三方字体: https://blog.csdn.net/qq_20523943/article/details/98488452
+【Android系统源码修改】如何内置字体，添加字体文件到system/fonts: https://blog.csdn.net/huil0925/article/details/95668320
+Android 设置字体的三种方法（TypeFace）:https://blog.csdn.net/forebe/article/details/79408968?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.control
 
 13 weex
 命令：
@@ -199,3 +221,25 @@ renderByUrl Demo：https://www.mobibrw.com/2019/21684
 17 版本升级
 (1)0.28.0
 Android Studio 3.5.2最小化接入weex 0.28.0实践: https://www.mobibrw.com/2019/21684
+
+18 weex优缺点
+优点：
+js 能写业务，跨平台，热更新
+Weex 能用 Vue 的 framework，贴近我们的技术栈
+Weex 比 RN 更轻量，可以分包，每个页面一个实例性能更好
+Weex 解决了 RN 已经存在的一些问题，在 RN 的基础上进行开发
+有良好的扩展性，比较好扩展新的 Component 和 Module
+缺点：
+文档不全，资料少，社区几乎等于没有，issue 堆积，后台 issue 的方式改到了 JIRA 上，很多开发者都不了解
+bug 多，不稳定，遇到多次断崖式更新
+Component 和 Module 不足以覆盖功能
+
+19 相关概念
+(1)js bundle
+解读webpack的bundle.js: https://www.cnblogs.com/venoral/p/6102976.html
+
+20 weex优化
+UC-Weex的优化实践之路: https://www.sohu.com/a/195196725_657921
+
+21 市场使用
+基于weex的有赞无线开发框架：https://www.ucloud.cn/yun/14498.html
