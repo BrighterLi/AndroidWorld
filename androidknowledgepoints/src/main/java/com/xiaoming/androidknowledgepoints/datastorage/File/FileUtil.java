@@ -2,13 +2,18 @@ package com.xiaoming.androidknowledgepoints.datastorage.File;
 
 import android.app.Activity;
 import android.content.pm.PackageManager;
+import android.content.res.AssetManager;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.RandomAccessFile;
 
 
@@ -145,5 +150,25 @@ public class FileUtil {
         return str;
         //str: /storage/emulated/0/Android/data/com.fenqile.androidknowledgepoints/cache
         //str2: /data/user/0/com.fenqile.androidknowledgepoints/files
+    }
+
+    //从assets下面的文件读取文件内容
+    public static String getStrFromAssetsFile(Activity activity) {
+        try {
+            InputStreamReader inputStreamReader = new InputStreamReader(activity.getAssets().open("test.txt"));
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            String line = "";
+            String result = "";
+            while ((line = bufferedReader.readLine()) != null ){
+                result += line;
+            }
+            Log.d("bright8", "getStrFromAssetsFile#result:" + result);
+            return result;
+
+        } catch (IOException e) {
+            Log.d("bright8", "getStrFromAssetsFile#e:" + e.toString());
+            e.printStackTrace();
+            return null;
+        }
     }
 }
