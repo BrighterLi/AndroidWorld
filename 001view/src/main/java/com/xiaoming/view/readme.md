@@ -1,3 +1,5 @@
+View相关知识点
+
 1 onInterceptTouchEvent与onTouchEvent与dispatchTouchEvent
 视频资源：
 https://v.qq.com/x/page/f0934o47gph.html
