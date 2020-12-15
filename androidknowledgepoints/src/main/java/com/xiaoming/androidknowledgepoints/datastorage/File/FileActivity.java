@@ -57,7 +57,8 @@ public class FileActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.bt_read_data:
                 //FileUtil.readFile("world5555");
-                FileUtil.getStrFromAssetsFile(this);
+                //FileUtil.getStrFromAssetsFile(this);
+                FileUtil.getStrFromAssetsFile2(this);
                 break;
         }
     }

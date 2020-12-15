@@ -124,14 +124,16 @@ Weex Android SDK源码分析: https://blog.csdn.net/nupt123456789/article/detail
 Weex源码分析: https://blog.csdn.net/qq_26984087/article/details/89406158
 
 6 native与weex通讯
+Weex初体验-weex-android数据交互:https://blog.csdn.net/q957789074/article/details/80731600
 (1)native—>weex
 1)fireGlobalEventCallback 全局事件
 weex和Android的交互：https://blog.csdn.net/hellenicguo/article/details/59058065
 Map<String,Object> params=new HashMap<>();
 params.put("data",stringBuffer);
 mWXSDKInstance.fireGlobalEventCallback("phoneBookLocation",params);
-2)继承WXModule
+2)继承WXModule模块
 callback.invoke回调给native
+3)渲染界面时是通过options传递参数给Weex
 (2)weex—>native
 1)继承WXModule
 @JSMethod(uiThread=true);callback.invoke回调给native
@@ -180,10 +182,15 @@ Weex调试神器——Weex Devtools使用手册: https://blog.csdn.net/Taobaojis
 使用 Devtools 调试 Weex 页面: htps://www.cnblogs.com/hehey/articles/6231379.html
 命令：weex debug ...vue
 
-11 Adapter
+11 weex Adapter组件
+深入Weex系列（七）之Adapter组件源码解析：https://blog.csdn.net/weixin_34054866/article/details/87954246
+Adapter的定位：基础功能实现了统一的接口，具体的交互交给Module或Component来做，然后Module或Component来调用我们实现的Adapter。
+Adapter 扩展 Weex 对一些基础功能实现了统一的接口，可实现这些接口来定制自己的业务。例如：图片下载等。
 (1)图片加载 IWXImgLoaderAdapter
+Weex初体验之图片适配器: https://blog.csdn.net/q957789074/article/details/80729244
 Weex使用Image控件加载图片,但是并不能直接显示出来图片,主要还是要Native端实现图片加载
 (2) IWXHttpAdapter
+(3)
 
 12 weex预加载
 (1)js资源预加载：lx文件

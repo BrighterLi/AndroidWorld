@@ -152,7 +152,7 @@ public class FileUtil {
         //str2: /data/user/0/com.fenqile.androidknowledgepoints/files
     }
 
-    //从assets下面的文件读取文件内容
+    //从assets下面的文件读取文件内容,BufferedReader
     public static String getStrFromAssetsFile(Activity activity) {
         try {
             //InputStreamReader类是从字节流到字符流的桥接器：它使用指定的字符集读取字节并将它们解码为字符
@@ -170,6 +170,24 @@ public class FileUtil {
             Log.d("bright8", "getStrFromAssetsFile#e:" + e.toString());
             e.printStackTrace();
             return null;
+        }
+    }
+
+    //从assets下面的文件读取文件内容,InputStreamReader
+    public static void getStrFromAssetsFile2(Activity activity) {
+        try {
+            InputStreamReader inputStreamReader = new InputStreamReader(activity.getAssets().open("test.txt"));
+            int c;
+            //inputStreamReader.read()读取的是单个字符
+            while ((c = inputStreamReader.read()) != '\n') {
+                System.out.print((char) c);
+                Log.d("bright8", "getStrFromAssetsFile#c:" + (char)c);
+            }
+
+            inputStreamReader.close();
+        } catch (IOException e) {
+            Log.d("bright8", "getStrFromAssetsFile#e:" + e.toString());
+            e.printStackTrace();
         }
     }
 }
