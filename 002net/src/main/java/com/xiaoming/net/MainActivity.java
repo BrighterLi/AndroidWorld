@@ -1,6 +1,5 @@
 package com.xiaoming.net;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +10,7 @@ import android.widget.ArrayAdapter;
 
 import com.xiaoming.net.cache.CacheTestActivity;
 import com.xiaoming.net.download.DownloadTestActivity;
-import com.xiaoming.net.glide.GlideTestEntranceActivity;
+import com.xiaoming.net.frame.FrameTestActivity;
 import com.xiaoming.net.netdetect.NetDetectActivity;
 import com.xiaoming.net.packegenet.PackegeNetDetectActivity;
 import com.xiaoming.net.pingnet.PingNetActivity;
@@ -40,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         mDemoDataList.add("ping网络2");
         mDemoDataList.add("缓存");
         mDemoDataList.add("下载");
-        mDemoDataList.add("Glide框架");
+        mDemoDataList.add("网络框架");
     }
 
     private void initView() {
@@ -72,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, DownloadTestActivity.class));
                         break;
                     case 6:
-                        startActivity(new Intent(MainActivity.this, GlideTestEntranceActivity.class));
+                        startActivity(new Intent(MainActivity.this, FrameTestActivity.class));
                         break;
                 }
             }

@@ -147,9 +147,22 @@ public class FileUtil {
         //内部存储
         String str2 = activity.getFilesDir().getAbsolutePath();
         Log.i("bright8", "内部存储str2:" + str2);
+        String str3 = activity.getCacheDir().getAbsolutePath();
+        Log.i("bright8", "str3:" + str3);
+        String str4 = Environment.getDataDirectory().getAbsolutePath();
+        Log.i("bright8", "str4:" + str4);
+        String str5 = activity.getFileStreamPath("").getAbsolutePath();
+        Log.i("bright8", "str5:" + str5);
+        String str6 = activity.getFileStreamPath("test").getAbsolutePath();
+        Log.i("bright8", "str6:" + str6);
         return str;
         //str: /storage/emulated/0/Android/data/com.fenqile.androidknowledgepoints/cache
+
         //str2: /data/user/0/com.fenqile.androidknowledgepoints/files
+        //str3: /data/user/0/com.fenqile.androidknowledgepoints/cache
+        //str4: /data/user/0/com.fenqile.androidknowledgepoints/cache
+        //str5: /data/user/0/com.fenqile.androidknowledgepoints/cache
+        //str6: /data/user/0/com.fenqile.androidknowledgepoints/cache
     }
 
     //从assets下面的文件读取文件内容,BufferedReader

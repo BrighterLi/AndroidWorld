@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.
         }
     }
 
-    //跨Module，调用其它Library的接口
+    //跨Module，调用其它Library的接口/组件化
     private void doAcrossLibrary() {
         Add add = new Add();
         int c = add.add(500, 20);

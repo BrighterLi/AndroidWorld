@@ -67,6 +67,7 @@ public class HttpDownloader {
         return 0;
     }
 
+    //网络请求
     public InputStream getInputStreamFromUrl(String urlStr) throws IOException {
         //创建一个URL对象
         URL url = new URL(urlStr);

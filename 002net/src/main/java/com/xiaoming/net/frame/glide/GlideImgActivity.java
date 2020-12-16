@@ -1,4 +1,4 @@
-package com.xiaoming.net.glide;
+package com.xiaoming.net.frame.glide;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -11,8 +11,6 @@ import android.widget.Button;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.xiaoming.net.R;
-
-import java.net.URL;
 
 public class GlideImgActivity extends Activity {
     private ImageView mIv;

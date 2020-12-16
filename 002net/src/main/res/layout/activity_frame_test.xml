@@ -5,12 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".frame.glide.GlideTestEntranceActivity">
+    tools:context=".frame.FrameTestActivity">
 
     <Button
-        android:id="@+id/bt_img"
+        android:id="@+id/bt_rxjava"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="使用glide图片下载"/>
+        android:text="rxjava框架"/>
+    <Button
+        android:id="@+id/bt_glide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="glide框架"/>
 
 </LinearLayout>

@@ -17,8 +17,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".glide.GlideTestEntranceActivity"></activity>
-        <activity android:name=".glide.GlideImgActivity" />
+        <activity android:name=".frame.rxjava.download.DownloadActivity"></activity>
+        <activity android:name=".frame.rxjava.RxjavaTestActivity" />
+        <activity android:name=".frame.FrameTestActivity" />
+        <activity android:name=".frame.glide.GlideTestEntranceActivity" />
+        <activity android:name=".frame.glide.GlideImgActivity" />
         <activity android:name=".download.httpdownload.HttpDownloadActivity" />
         <activity android:name=".download.DownloadTestActivity" />
         <activity android:name=".cache.CacheTestActivity" />
@@ -30,6 +33,8 @@
         <activity android:name=".cache.threelevelcache.ThreeLevelCacheActivity" />
         <activity android:name=".cache.mapcache.MapCacheTestActivity" />
         <activity android:name=".cache.HttpCacheActivity" />
+        <activity android:name=".frame.rxjava.RxJavaDemoActivity"/>
+        <activity android:name=".frame.rxjava.RxJavaDemo2Activity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

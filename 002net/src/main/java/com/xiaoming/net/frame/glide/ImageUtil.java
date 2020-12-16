@@ -1,4 +1,4 @@
-package com.xiaoming.net.glide;
+package com.xiaoming.net.frame.glide;
 
 import android.app.Activity;
 import android.content.Context;

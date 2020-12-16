@@ -1,10 +1,12 @@
-package com.xiaoming.framerxjava;
+package com.xiaoming.net.frame.rxjava;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.xiaoming.net.R;
 
 import rx.Observable;
 import rx.Subscriber;
