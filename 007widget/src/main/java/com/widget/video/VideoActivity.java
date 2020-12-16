@@ -55,4 +55,6 @@ public class VideoActivity extends AppCompatActivity {
         mVideoView.requestFocus();
         mVideoView.start();
     }
+
+
 }

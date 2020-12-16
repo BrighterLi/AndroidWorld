@@ -81,7 +81,8 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
          * height =-1 默认全屏，可以自己定制。
          */
         //加载本地weex页面。渲染页面，home.js就是weex打包好后给你的js文件
-        mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("weex/component/fql_richtext.js", this), null, null, -1,-1, WXRenderStrategy.APPEND_ASYNC);
+        mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("weex/component/video/video_test.js", this), null, null, -1,-1, WXRenderStrategy.APPEND_ASYNC);
+        //mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("weex/component/fql_richtext.js", this), null, null, -1,-1, WXRenderStrategy.APPEND_ASYNC);
         //mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("home.js", OpenWeexPageActivity.this), null, null, -1, -1, WXRenderStrategy.APPEND_ASYNC);
     }
 

@@ -197,8 +197,10 @@ Weex使用Image控件加载图片,但是并不能直接显示出来图片,主要
 方式：统跳配置对应的key，进入app查询统跳对应的这些key，加载这些key对应的weex页面lx文件
 (2)图片预加载
 方式：用glide下载，因为glide有缓存机制
+IWXImgLoaderAdapter
 (3)视频预加载
 weex video组件：https://weex.apache.org/zh/docs/components/video.html
+DefaultUriAdapter ——> URIAdapter
 (4)文字加载
 Weex 提供 DOM.addRule 以加载自定义字体: https://weex.apache.org/zh/docs/modules/dom.html#addrule
 Weex初体验之加载文字库：https://blog.csdn.net/q957789074/article/details/80729591
@@ -206,6 +208,9 @@ weex引入iconfont字体:https://blog.csdn.net/qq_42972187/article/details/98059
 Android在XML、代码中使用第三方字体: https://blog.csdn.net/qq_20523943/article/details/98488452
 【Android系统源码修改】如何内置字体，添加字体文件到system/fonts: https://blog.csdn.net/huil0925/article/details/95668320
 Android 设置字体的三种方法（TypeFace）:https://blog.csdn.net/forebe/article/details/79408968?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.control
+weex demo: http://dotwe.org/vue/355114dce8018cb80d0bb60e4d5fcef9
+
+DefaultUriAdapter ——> URIAdapter
 
 13 weex
 命令：
