@@ -11,18 +11,18 @@
     android:id="@+id/bt_rxjava1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="rxjava1"/>
+    android:text="Rxjava:观察者和被观察者分开写"/>
 
     <Button
         android:id="@+id/bt_rxjava2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="rxjava2"/>
+        android:text="Rxjava:观察者和被观察者不分开写，链式调用"/>
 
     <Button
         android:id="@+id/bt_rxjava3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="rxjava3"/>
+        android:text="下载图片"/>
 
 </LinearLayout>
