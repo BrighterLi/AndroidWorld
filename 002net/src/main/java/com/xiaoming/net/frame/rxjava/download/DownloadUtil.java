@@ -21,8 +21,8 @@ import rx.schedulers.Schedulers;
 public class DownloadUtil {
 
 
-    //Rxjava+HttpURLConnection
     //Rxjava+HttpURLConnection下载图片
+    //这是用RxJava实现的一个简单demo:https://blog.csdn.net/GRY_YJ/article/details/53089963
     public static void downLoadImage(View view) {
         //Observable是被观察者；大家记住OnSubscribe<Bitmap>里面的bitmap;
         Observable.create(new Observable.OnSubscribe<Bitmap>() {
