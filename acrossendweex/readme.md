@@ -196,11 +196,12 @@ Weex使用Image控件加载图片,但是并不能直接显示出来图片,主要
 (1)js资源预加载：lx文件
 方式：统跳配置对应的key，进入app查询统跳对应的这些key，加载这些key对应的weex页面lx文件
 (2)图片预加载
-方式：用glide下载，因为glide有缓存机制
-IWXImgLoaderAdapter
+方式一：用glide下载，因为glide有缓存机制，而自己实现IWXImgLoaderAdapter的ImgLoaderAdapter使用的glide加载图片的，而glide本身就有缓存机制
+方法二：IWXImgLoaderAdapter，在自己实现的ImgLoaderAdapter的类里进行拦截，本地有则使用本地uri
 (3)视频预加载
 weex video组件：https://weex.apache.org/zh/docs/components/video.html
-DefaultUriAdapter ——> URIAdapter
+方法一：对于内置组件video，使用继承重写DefaultUriAdapter ——> URIAdapter进行拦截，本地有则使用本地uri
+方法二：对于自定义组件fql_video,则可以先下载视频，然后在自定义组件来进行判断，本地有则使用本地uri
 (4)文字加载
 Weex 提供 DOM.addRule 以加载自定义字体: https://weex.apache.org/zh/docs/modules/dom.html#addrule
 Weex初体验之加载文字库：https://blog.csdn.net/q957789074/article/details/80729591
@@ -210,7 +211,10 @@ Android在XML、代码中使用第三方字体: https://blog.csdn.net/qq_2052394
 Android 设置字体的三种方法（TypeFace）:https://blog.csdn.net/forebe/article/details/79408968?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.control
 weex demo: http://dotwe.org/vue/355114dce8018cb80d0bb60e4d5fcef9
 
-DefaultUriAdapter ——> URIAdapter
+1)方法一：DefaultUriAdapter ——> URIAdapter，进行拦截，判断本地有则用本地
+2)weex sdk加载字体时有响应缓存策略，会将字体资源进行内部存储。
+可以在真正使用之前前端先提前使用一下，自动会缓存；或者使用jsapi原生下载下来放在本地
+ActionAddRule-TypefaceUtil-FontDO
 
 13 weex
 命令：
