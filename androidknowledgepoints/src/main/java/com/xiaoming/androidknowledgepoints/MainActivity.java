@@ -154,6 +154,7 @@ public class MainActivity extends Activity {
         demoDataList.add("序列化");
         demoDataList.add("正则");
         demoDataList.add("加密解密");
+
         demoDataList.add("调用so库的方法");
         demoDataList.add("判断安卓设备是否root");
         demoDataList.add("获取VoLte开关开关状态");
@@ -164,6 +165,7 @@ public class MainActivity extends Activity {
         demoDataList.add("Dialog只能在主线程里执行");
         demoDataList.add("数据存储");
         demoDataList.add("通过Scheme跳转");
+
         demoDataList.add("通过DeepLink跳转");
         demoDataList.add("jni：加减法");
         demoDataList.add("floating悬浮窗");

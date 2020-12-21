@@ -49,6 +49,7 @@ public class SchemeActivity extends Activity {
             @Override
             public void onClick(View v) {
                 switchActivityBySchemeToFenqile();
+                //switchActivityBySchemeToLehuaka();
             }
         });
 
@@ -83,7 +84,17 @@ public class SchemeActivity extends Activity {
 
     //跳到分期乐APP的页面,第三方APP必须已经安装
     private void switchActivityBySchemeToFenqile() {
-        Uri uri = Uri.parse("fenqile://app");   //   app://test 相当于 http://www.baidu.com
+        //Uri uri = Uri.parse("fenqile://app");
+        //Uri uri = Uri.parse("fenqile://app/webview?url=http://sale.fenqile.com/2016010802/index.html");   //   app://test 相当于 http://www.baidu.com
+        Uri uri = Uri.parse("fenqile://app/webview?url=http://www.baidu.com");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+    //跳到乐花卡的页面,第三方APP必须已经安装
+    private void switchActivityBySchemeToLehuaka() {
+        //Uri uri = Uri.parse("lehuaka://app");
+        //可以在app内部实现跳转到指定页面http://sale.fenqile.com/2016010802/index.html
+        Uri uri = Uri.parse("lehuaka://app/webview?url=http://sale.fenqile.com/2016010802/index.html");   //   app://test 相当于 http://www.baidu.com
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
