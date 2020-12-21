@@ -87,4 +87,25 @@ public class DownloadUtil {
         }
         return null;
     }
+
+    public static void downloadFileByHttpURL() {
+        String url1 = "http://e.hiphotos.baidu.com/image/pic/item/2fdda3cc7cd98d10b510fdea233fb80e7aec9021.jpg";
+        String url2 = "https://vod.300hu.com/4c1f7a6atransbjngwcloud1oss/2314db4a128153678103769089/v.f30.mp4";
+
+        try {
+            URL url = new URL(url2);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            int responseCode = conn.getResponseCode();
+            Log.d("bright8", "DownloadUtil#getBitMap#responseCode:" + responseCode);
+            if (responseCode == 200) {
+                //下载的资源
+                InputStream inputStream = conn.getInputStream();
+
+            }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

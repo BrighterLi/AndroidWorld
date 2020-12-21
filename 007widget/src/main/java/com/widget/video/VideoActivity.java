@@ -49,7 +49,10 @@ public class VideoActivity extends AppCompatActivity {
         mMdController = new MediaController(this);
         //视频资源存放在res资源包raw文件夹下面
         String uri = "android.resource://" + getPackageName() + "/" + R.raw.test;
-        mVideoView.setVideoURI(Uri.parse(uri));
+        //mVideoView.setVideoURI(Uri.parse(uri));
+        //使用网络上的视频资源
+        String url = "https://vod.300hu.com/4c1f7a6atransbjngwcloud1oss/2314db4a128153678103769089/v.f30.mp4";
+        mVideoView.setVideoURI(Uri.parse(url));
         mVideoView.setMediaController(mMdController);
         mMdController.setMediaPlayer(mVideoView);
         mVideoView.requestFocus();

@@ -1,7 +1,9 @@
+Rxjava;:RxJava+Retrofit+MVP+Dagger2（
 1 Rxjava,RxAndroid
 ***经典案例：RxAndroid从零开始学习之一(RxJava的简单Demo):https://cloud.tencent.com/developer/article/1383095
 (1)RxAndroid其实只是RxJava的一个扩展，它在RxJava的基础上添加了一些针对Android系统的新API。
 RxJava是用来解决异步工作问题的，在Android中特别恼火的多线程开发问题上游刃有余
+Rxjava是对网络连接处理和图片加载处理非常好用的异步操作方法，类似于Android中的AysncTask、Handler
 (2)Observable,Subscribers
 开发的人都知道监听者模式，订阅模式这些概念。而Observable和Subscribers的英文意思就是如此。我们大概也知道差不多和监听者模式差不多。
 Observable事件源，被观察者。
