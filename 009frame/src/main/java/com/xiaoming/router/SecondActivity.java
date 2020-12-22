@@ -1,4 +1,4 @@
-package com.xiaoming.framearouter;
+package com.xiaoming.router;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.xiaoming.framearouter.R;
 
 //在支持路由的页面上添加注解
 @Route(path = MyRouter.SecondActivity)

@@ -3,13 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".FirstActivity">
 
     <Button
-        android:id="@+id/bt_router"
-        android:layout_width="match_parent"
+        android:id="@+id/bt_arouter"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="路由框架"/>
+        android:text="通过路由进行界面跳转"/>
 
 </LinearLayout>
