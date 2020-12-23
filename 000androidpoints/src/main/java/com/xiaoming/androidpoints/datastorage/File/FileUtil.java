@@ -155,12 +155,13 @@ public class FileUtil {
         Log.i("bright8", "str6:" + str6);
         return str;
         //str: /storage/emulated/0/Android/data/com.fenqile.androidknowledgepoints/cache
+        //str12:
 
         //str2: /data/user/0/com.fenqile.androidknowledgepoints/files
         //str3: /data/user/0/com.fenqile.androidknowledgepoints/cache
-        //str4: /data/user/0/com.fenqile.androidknowledgepoints/cache
-        //str5: /data/user/0/com.fenqile.androidknowledgepoints/cache
-        //str6: /data/user/0/com.fenqile.androidknowledgepoints/cache
+        //str4:
+        //str5:
+        //str6:
     }
 
     //从assets下面的文件读取文件内容,BufferedReader
