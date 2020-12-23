@@ -1,4 +1,4 @@
-package com.xiaoming.androidpoints.aaajavaknowledge.multithreads;
+package com.xiaoming.a003thread.multithreads;
 
 public class MyRunnable implements Runnable {
     private int num = 5;

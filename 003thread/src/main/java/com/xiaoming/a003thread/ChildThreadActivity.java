@@ -44,7 +44,7 @@ public class ChildThreadActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int result = startChildThreadReturn(); //开启的子线程虽然有返回值，但与testE()不按顺序执行
                 Log.v(TAG, "bright#startChildThreadReturn-testE#result：" + result);
-                testE(); //tescC()虽然是耗时操作，但是还是主线程，所以会等testC()执行完再执行
+                testE(); //
             }
         });
     }
