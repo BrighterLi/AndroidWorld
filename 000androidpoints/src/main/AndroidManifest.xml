@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xiaoming.androidpoints">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name="com.xiaoming.androidpoints.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true">
+        <activity android:name="com.xiaoming.androidpoints.aaajavaknowledge.initialize.InitializeActivity"></activity>
+        <activity android:name=".file.FileTestActivity" />
+        <activity android:name="com.xiaoming.androidpoints.activity.onactivityresult.CActivity" />
+        <activity android:name="com.xiaoming.androidpoints.activity.onactivityresult.BActivity" />
+        <activity android:name="com.xiaoming.androidpoints.activity.onactivityresult.AActivity" />
+        <activity android:name="com.xiaoming.androidpoints.activity.ActivityTestActivity" />
+        <activity android:name="com.xiaoming.androidpoints.uiframe.waterfall2.Waterfall2Activity" />
+        <activity
+            android:name="com.xiaoming.androidpoints.uiframe.waterfall.WaterFallActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.xiaoming.androidpoints.uiframe.ScrollView1TabLayout1ViewPager1RecyclerView.UiFrame3Activity"
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.xiaoming.androidpoints.uiframe.ScrollView.UiFrame2Activity" />
+        <activity android:name="com.xiaoming.androidpoints.uiframe.EnterUiFrameActivity" />
+        <activity android:name="com.xiaoming.androidpoints.uiframe.recycleview.UiFrame1Activity" />
+
+        <service
+            android:name="com.xiaoming.androidpoints.floating.floating.service.FloatingService2"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name="com.xiaoming.androidpoints.floating.SecondActivity" />
+
+        <service
+            android:name="com.xiaoming.androidpoints.floating.floating.service.FloatingService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name="com.xiaoming.androidpoints.floating.floating.FloatingActivity" />
+        <activity android:name="com.xiaoming.androidpoints.aaajavaknowledge.multithreads.MultiThreadsActivity" />
+        <activity android:name="com.xiaoming.androidpoints.aaajavaknowledge.localvarible.LocalVaribleActivity" />
+        <activity android:name="com.xiaoming.androidpoints.aaajavaknowledge.valuetransition.ValueTransitionActivity" />
+        <activity android:name="com.xiaoming.androidpoints.deeplink.DeepLinkActivity" />
+        <activity android:name="com.xiaoming.androidpoints.scheme.SchemeActivity" />
+        <activity android:name="com.xiaoming.androidpoints.Theme.SetThemeActivity" />
+        <activity android:name="com.xiaoming.androidpoints.datastorage.DataStorageActivity" />
+        <activity android:name="com.xiaoming.androidpoints.datastorage.File.FileActivity" />
+        <activity android:name="com.xiaoming.androidpoints.encryption.EncryptionActivity" />
+        <activity android:name="com.xiaoming.androidpoints.aaautils.UtilActivity" />
+        <activity android:name="com.xiaoming.androidpoints.serialization.GoToActivity" />
+        <activity android:name="com.xiaoming.androidpoints.serialization.serializable.SerializableActivity" />
+        <activity android:name="com.xiaoming.androidpoints.serialization.parcelable.UnSerializationActivity" />
+        <activity android:name="com.xiaoming.androidpoints.serialization.parcelable.SerializationActivity" />
+        <activity android:name="com.xiaoming.androidpoints.reflect.ReflectActivity" />
+        <activity android:name="com.xiaoming.androidpoints.broadcast.LocalBroadcastReceiverActivity" />
+        <activity android:name="com.xiaoming.androidpoints.broadcast.LocalBroadcastActivity" />
+        <activity android:name="com.xiaoming.androidpoints.innerclass.InnerClassAndVariableActivity" />
+        <activity android:name="com.xiaoming.androidpoints.MainActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".jnidemo1.JNITools$JniActivity" />
+        <activity android:name="com.xiaoming.androidpoints.jnidemo2.Jni2Activity" />
+        <activity android:name="com.xiaoming.androidpoints.jnidemo.JniActivity" />
+        <activity android:name=".a01widgets.video.VideoActivity" />
+        <activity android:name="com.xiaoming.androidpoints.json.JsonActivity" />
+        <activity android:name="com.xiaoming.androidpoints.regularexpression.RegularExpressionActivity" />
+        <activity android:name="com.xiaoming.androidpoints.solib.SoLibEntranceActivity" />
+        <activity android:name="com.xiaoming.androidpoints.FastClickActivity" />
+        <activity android:name="com.xiaoming.androidpoints.NetworkStrengthActivity" />
+        <activity android:name="com.xiaoming.androidpoints.PhoneOperatorActivity" />
+        <activity android:name="com.xiaoming.androidpoints.StatusBarActivity" />
+        <activity android:name="com.xiaoming.androidpoints.IsVoLteEnabledActivity" />
+        <activity android:name="com.xiaoming.androidpoints.IsRootActivity" />
+        <activity android:name="com.xiaoming.androidpoints.DialogShowActivity" />
+        <activity android:name="com.xiaoming.androidpoints.dialog.DialogTestActivity" />
+        <activity
+            android:name="com.xiaoming.androidpoints.WelcomeActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="keyboardHidden|orientation|screenSize|fontScale|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSplash2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="test"
+                    android:scheme="app" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.xiaoming.androidpoints.deeplink.ToDeepLinkActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="share"
+                    android:scheme="will" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.xiaoming.androidpoints.aaajavaknowledge.JavaKnowledgeActivity" />
+
+        <service
+            android:name="com.xiaoming.androidpoints.floating.timerfloating.service.TimeFloatingService"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>
