@@ -19,13 +19,33 @@
             android:id="@+id/bt_observer"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@color/yellow"/>
+            android:background="@color/yellow"
+            android:text="观察者模式"/>
         <Button
             android:id="@+id/bt_observer2"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginRight="10dp"
-            android:background="@color/yellow"/>
+            android:background="@color/yellow"
+            android:text="观察者模式2"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="其他模式:"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/bt_product_consume"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/yellow"
+            android:text="消费者生产者模式"/>
     </LinearLayout>
 
 
