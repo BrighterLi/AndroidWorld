@@ -181,6 +181,9 @@ java中关于try、catch、finally中的细节分析:https://blog.csdn.net/mxd44
 3)finally块中避免再次抛出异常，否则整个包含try语句块的方法回抛出异常，并且会忽略掉try、catch块中的异常。
 51 floating
 Android FloatingActionButton（FAB） 悬浮按钮 :https://www.cnblogs.com/feng-ye/p/5627871.html
+52 AndroidStudio添加依赖方式
+Android Studio添加依赖方式：https://blog.csdn.net/android_lover2014/article/details/85400395
+AS中添加依赖方式有：库依赖（Library dependency）、Jar依赖（Jar dependency）、Module依赖（Module dependency）以及文件依赖（File dependency）
 
 三 相关Demo
 1 一款Android图文精选app，通过抓取网页获得图文列表。目前包含猫弄（MONO）早午茶、站酷（Zcool）精选、国家地理（National Geographic）每日一图、知乎日报、豆瓣一刻（Moment）。
