@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.xiaoming.acrossendwebview.longclicktosavepic.WebViewActivity2;
 import com.xiaoming.acrossendwebview.openh5.AutomaticallyJumpActivity;
 import com.xiaoming.acrossendwebview.openh5.OpenH5Activity;
 import com.xiaoming.acrossendwebview.openh5.ShowHtmlActivity;
@@ -67,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
                     case 7:
                         startActivity(new Intent(MainActivity.this, AutomaticallyJumpActivity.class));
                         break;
+                    case 8:
+                        startActivity(new Intent(MainActivity.this, WebViewActivity2.class));
+                        break;
                 }
             }
         });
@@ -81,5 +85,6 @@ public class MainActivity extends AppCompatActivity {
         demoNameList.add("拦截之shouldInterceptRequest：用代码的html");
         demoNameList.add("拦截之shouldInterceptRequest：用网络的html");
         demoNameList.add("打开的html页面自动跳转到指定的网址");
+        demoNameList.add("长按h5页面的图片保存图片");
     }
 }

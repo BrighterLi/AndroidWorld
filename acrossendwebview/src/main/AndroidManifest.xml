@@ -3,6 +3,8 @@
     package="com.xiaoming.acrossendwebview">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -12,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".openh5.AutomaticallyJumpActivity"></activity>
+        <activity android:name=".longclicktosavepic.WebViewActivity2"></activity>
+        <activity android:name=".openh5.AutomaticallyJumpActivity" />
         <activity android:name=".openh5.intercept.ShouldInterceptRequestActivity" />
         <activity android:name=".openh5.intercept.ShouldInterceptRequest2Activity" />
         <activity android:name=".openh5.intercept.ShouldOverrideUrlLoadingActivity" />
