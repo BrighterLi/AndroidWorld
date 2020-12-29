@@ -8,7 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 
-import com.xiaoming.a005algorithm.perceptron.PerceptronActivity;
+import com.xiaoming.a005algorithm.ai.perceptron.PerceptronActivity;
 
 import java.util.ArrayList;
 import java.util.List;

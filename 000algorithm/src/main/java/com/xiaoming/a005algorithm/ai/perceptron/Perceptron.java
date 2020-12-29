@@ -1,4 +1,4 @@
-package com.xiaoming.a005algorithm.perceptron;
+package com.xiaoming.a005algorithm.ai.perceptron;
 
 //感知器
 public class Perceptron {

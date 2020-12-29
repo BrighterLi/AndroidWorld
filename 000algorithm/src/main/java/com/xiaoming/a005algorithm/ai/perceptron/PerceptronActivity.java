@@ -1,4 +1,4 @@
-package com.xiaoming.a005algorithm.perceptron;
+package com.xiaoming.a005algorithm.ai.perceptron;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

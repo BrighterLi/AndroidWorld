@@ -1,4 +1,4 @@
-package com.xiaoming.a005algorithm.perceptron;
+package com.xiaoming.a005algorithm.ai.perceptron;
 
 public class DataSource {
     //生成训练数据
