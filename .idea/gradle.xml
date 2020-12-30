@@ -4,15 +4,14 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="testRunner" value="PLATFORM" />
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT" />
+        </compositeConfiguration>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/000algorithm" />
-            <option value="$PROJECT_DIR$/000androidpoints" />
-            <option value="$PROJECT_DIR$/000designmode" />
             <option value="$PROJECT_DIR$/001view" />
             <option value="$PROJECT_DIR$/001viewcustom" />
             <option value="$PROJECT_DIR$/001viewgif" />
@@ -26,20 +25,24 @@
             <option value="$PROJECT_DIR$/002netrxjavaandokhttpandretrofit" />
             <option value="$PROJECT_DIR$/002rxjavaandretrofit" />
             <option value="$PROJECT_DIR$/003thread" />
+            <option value="$PROJECT_DIR$/003threadpool" />
+            <option value="$PROJECT_DIR$/003threadsafe" />
             <option value="$PROJECT_DIR$/004performance" />
             <option value="$PROJECT_DIR$/004performanceapm" />
             <option value="$PROJECT_DIR$/004performanceblock" />
             <option value="$PROJECT_DIR$/004performancetoolbreakpad" />
+            <option value="$PROJECT_DIR$/005algorithm" />
             <option value="$PROJECT_DIR$/005algorithmopencv2" />
             <option value="$PROJECT_DIR$/005algorithmopenvc" />
+            <option value="$PROJECT_DIR$/006designmode" />
             <option value="$PROJECT_DIR$/007widget" />
             <option value="$PROJECT_DIR$/008project" />
-            <option value="$PROJECT_DIR$/009frame" />
             <option value="$PROJECT_DIR$/acrossendflutter" />
             <option value="$PROJECT_DIR$/acrossendwebview" />
             <option value="$PROJECT_DIR$/acrossendweex" />
             <option value="$PROJECT_DIR$/acrosslibrary" />
             <option value="$PROJECT_DIR$/algorithmopenvc" />
+            <option value="$PROJECT_DIR$/androidknowledgepoints" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/backendserver" />
             <option value="$PROJECT_DIR$/frameapp" />
@@ -96,7 +99,7 @@
             <option value="$PROJECT_DIR$/widgetviewpager" />
             <option value="$PROJECT_DIR$/widgetwheelview" />
             <option value="$PROJECT_DIR$/widigetimageview" />
-            <option value="$PROJECT_DIR$/../flutter_mix/.android/Flutter" />
+            <option value="E:/flutter_mix/.android/Flutter" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

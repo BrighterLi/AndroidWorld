@@ -35,4 +35,4 @@ Jni中图片传递的3种方式（转）：https://www.cnblogs.com/zl1991/p/7778
 7 生成so库供使用
 android cmakelist链接自定义动态库 studio：https://www.csdn.net/gather_21/MtTakg4sNTk1NC1ibG9n.html
 Android 中对so库简单的调用封装流程：https://www.jianshu.com/p/ac2a32c64231
-*生成so库：Build/Make Project
+生成so库：Build/Make Project
