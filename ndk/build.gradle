@@ -14,11 +14,12 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        //生成的so库名称与架构类型，还是支持的ABI架构类型？
         ndk{
             moduleName "HelloNDK"// 构建so库名称，记得修改
-            abiFilters "armeabi" //?
-            //abiFilters "arm64-v8a","armeabi-v7a","x86","x86_64", "armeabi"
+            //这个控制生成的so库类型，也是支持的ABI架构类型；没有的话默认生成 "armeabi-v7a", "x86", "x86_64", "arm64-v8a"
+            //生成路径：build/intermediates/cmake/
+            //abiFilters "armeabi"
+            abiFilters "armeabi-v7a","arm64-v8a","x86","x86_64", "armeabi"
         }
 
         //配置cmake build参数
@@ -27,7 +28,9 @@ android {
                 // 向变量传递参数：arguments "-D变量名=参数"
                 // 向变量传递多个参数（参数之间使用空格隔开）：arguments "-D变量名=参数1 参数2"
                 arguments "-DANDROID_TOOLCHAIN=clang"
-                abiFilters "armeabi" //?
+                //这个控制生成的so库类型，也是支持的ABI架构类型；没有的话默认生成 "armeabi-v7a", "x86", "x86_64", "arm64-v8a"
+                //生成路径：build/intermediates/cmake/
+                //abiFilters "armeabi"
                 //abiFilters "armeabi-v7a", "armeabi", "x86", "arm64-v8a" //平台支持，java是跨平台语言，C语言不是，这里添加的是支持的平台
             }
         }
