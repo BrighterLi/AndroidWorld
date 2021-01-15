@@ -29,7 +29,7 @@ public class BaseAlgorithmActivity extends Activity {
                 int size = 5;
                 int value = 4;
                 int[] a = {1, 2, 4, 4, 5};
-                BinarySearch.doBinarySearch(size, value, a);
+                BinarySearch.doBinarySearch11(size, value, a);
             }
         });
     }
