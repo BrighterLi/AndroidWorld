@@ -18,9 +18,11 @@ import com.xiaoming.androidpoints.deeplink.DeepLinkActivity;
 import com.xiaoming.androidpoints.dialog.DialogTestActivity;
 import com.xiaoming.androidpoints.floating.floating.FloatingActivity;
 import com.xiaoming.androidpoints.innerclass.InnerClassAndVariableActivity;
+import com.xiaoming.androidpoints.intent.IntentActivity;
 import com.xiaoming.androidpoints.jnidemo.JniActivity;
 import com.xiaoming.androidpoints.jnidemo2.Jni2Activity;
 import com.xiaoming.androidpoints.json.JsonActivity;
+import com.xiaoming.androidpoints.permission.PermissionActivity;
 import com.xiaoming.androidpoints.reflect.ReflectActivity;
 import com.xiaoming.androidpoints.regularexpression.RegularExpressionActivity;
 import com.xiaoming.androidpoints.scheme.SchemeActivity;
@@ -139,6 +141,12 @@ public class MainActivity extends Activity {
                     case 27:
                         startActivity(new Intent(MainActivity.this, SetBackgroundActivity.class));
                         break;
+                    case 28:
+                        startActivity(new Intent(MainActivity.this, PermissionActivity.class));
+                        break;
+                    case 29:
+                        startActivity(new Intent(MainActivity.this, IntentActivity.class));
+                        break;
                 }
             }
         });
@@ -179,5 +187,7 @@ public class MainActivity extends Activity {
         demoDataList.add("Activity");
         demoDataList.add("File操作");
         demoDataList.add("设置背景Background");
+        demoDataList.add("权限申请");
+        demoDataList.add("Intent");
     }
 }

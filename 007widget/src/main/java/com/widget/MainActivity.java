@@ -46,21 +46,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void initDemoData() {
         mDataList = new ArrayList<>();
-        mDataList.add("视频");
-        mDataList.add("输入键盘");
-        mDataList.add("下拉刷新");
-        mDataList.add("ScrollView");
-        mDataList.add("通過HorizontalScrollView自定义TabLayout");
-        mDataList.add("滑动冲突:ScrollView+ListView;同向，内部拦截法");
-        mDataList.add("滑动冲突：ViewPager+ListView;  外部左右+内部上下;外部拦截法+内部拦截法");
-        mDataList.add("滑动冲突：SwipeRefreshLayout+ScrollView+ViewPager+ListView；上下滑动+左右滑动；内部拦截法");
-        mDataList.add("ListView:分页请求");
-        mDataList.add("ViewPager");
-        mDataList.add("ListView:点击悬浮按钮回到顶部");
-        mDataList.add("Dialog:全屏dialog");
-        mDataList.add("Image");
-        mDataList.add("状态栏");
-        mDataList.add("RecyclerView");
+        mDataList.add("视频"); //0
+        mDataList.add("输入键盘"); //1
+        mDataList.add("下拉刷新"); //2
+        mDataList.add("ScrollView"); //3
+        mDataList.add("通過HorizontalScrollView自定义TabLayout"); //4
+        mDataList.add("滑动冲突:ScrollView+ListView;同向，内部拦截法"); //5
+        mDataList.add("滑动冲突：ViewPager+ListView;  外部左右+内部上下;外部拦截法+内部拦截法"); //6
+        mDataList.add("滑动冲突：SwipeRefreshLayout+ScrollView+ViewPager+ListView；上下滑动+左右滑动；内部拦截法"); //7
+        mDataList.add("ListView:分页请求"); //8
+        mDataList.add("ViewPager"); //9
+        mDataList.add("ListView:点击悬浮按钮回到顶部"); //10
+        mDataList.add("Dialog:全屏dialog"); //11
+        mDataList.add("Image"); //12
+        mDataList.add("状态栏"); //13
+        mDataList.add("RecyclerView"); //14
     }
 
     private void initView() {
