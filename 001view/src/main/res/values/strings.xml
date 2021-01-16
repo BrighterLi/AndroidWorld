@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">View</string>
+
+    <declare-styleable name="NumInputView">
+        <attr name="box_count" format="integer" />
+        <attr name="box_color" format="color" />
+        <attr name="text_color" format="color" />
+    </declare-styleable>
 </resources>

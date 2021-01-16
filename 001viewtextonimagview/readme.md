@@ -1,5 +1,0 @@
-图片某位置显示变化文本或者数字
-使用RelativeLayout
-使用FrameLayout
-使用LayoutParams
-做成自定义View形式

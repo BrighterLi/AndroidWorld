@@ -11,7 +11,6 @@ import android.widget.ArrayAdapter;
 import com.xiaoming.androidpoints.R;
 import com.xiaoming.androidpoints.aaajavaknowledge.initialize.InitializeActivity;
 import com.xiaoming.androidpoints.aaajavaknowledge.localvarible.LocalVaribleActivity;
-import com.xiaoming.androidpoints.aaajavaknowledge.multithreads.MultiThreadsActivity;
 import com.xiaoming.androidpoints.aaajavaknowledge.valuetransition.ValueTransitionActivity;
 
 import java.util.ArrayList;
@@ -34,7 +33,7 @@ public class JavaKnowledgeActivity extends Activity {
         mDemoListData =  new ArrayList<>();
         mDemoListData.add("值传递");
         mDemoListData.add("局部变量");
-        mDemoListData.add("多线程");
+        //mDemoListData.add("多线程");
         mDemoListData.add("初始化");
     }
 
@@ -52,7 +51,7 @@ public class JavaKnowledgeActivity extends Activity {
                         startActivity(new Intent(JavaKnowledgeActivity.this, LocalVaribleActivity.class));
                         break;
                     case 2:
-                        startActivity(new Intent(JavaKnowledgeActivity.this, MultiThreadsActivity.class));
+                        //startActivity(new Intent(JavaKnowledgeActivity.this, MultiThreadsActivity.class));
                         break;
                     case 3:
                         startActivity(new Intent(JavaKnowledgeActivity.this, InitializeActivity.class));

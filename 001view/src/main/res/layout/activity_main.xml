@@ -39,5 +39,11 @@
         android:layout_height="wrap_content"
         android:text="Touch事件分发"/>
 
+    <Button
+        android:id="@+id/mBtCustomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自定义View"/>
+
 
 </LinearLayout>

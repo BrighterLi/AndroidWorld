@@ -89,6 +89,7 @@
         <activity android:name="com.xiaoming.androidpoints.IsRootActivity" />
         <activity android:name="com.xiaoming.androidpoints.DialogShowActivity" />
         <activity android:name="com.xiaoming.androidpoints.dialog.DialogTestActivity" />
+        <activity android:name=".background.SetBackgroundActivity"/>
         <activity
             android:name="com.xiaoming.androidpoints.WelcomeActivity"
             android:alwaysRetainTaskState="true"

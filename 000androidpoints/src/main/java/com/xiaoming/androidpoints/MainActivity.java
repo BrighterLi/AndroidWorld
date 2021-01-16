@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 import com.xiaoming.androidpoints.activity.ActivityTestActivity;
 import com.xiaoming.androidpoints.aaajavaknowledge.JavaKnowledgeActivity;
+import com.xiaoming.androidpoints.background.SetBackgroundActivity;
 import com.xiaoming.androidpoints.broadcast.LocalBroadcastReceiverActivity;
 import com.xiaoming.androidpoints.datastorage.DataStorageActivity;
 import com.xiaoming.androidpoints.datastorage.File.FileActivity;
@@ -116,6 +117,7 @@ public class MainActivity extends Activity {
                     case 20:
                         startActivity(new Intent(MainActivity.this, DeepLinkActivity.class));
                         break;
+
                     case 21:
                         startActivity(new Intent(MainActivity.this, JniActivity.class));
                         break;
@@ -133,6 +135,9 @@ public class MainActivity extends Activity {
                         break;
                     case 26:
                         startActivity(new Intent(MainActivity.this, FileActivity.class));
+                        break;
+                    case 27:
+                        startActivity(new Intent(MainActivity.this, SetBackgroundActivity.class));
                         break;
                 }
             }
@@ -172,5 +177,7 @@ public class MainActivity extends Activity {
         demoDataList.add("ui框架");
         demoDataList.add("dialog");
         demoDataList.add("Activity");
+        demoDataList.add("File操作");
+        demoDataList.add("设置背景Background");
     }
 }

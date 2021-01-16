@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".touchevent3.TouchEvent3Activity"></activity>
+        <activity android:name=".customview.clock.ClockActivity"></activity>
+        <activity android:name=".customview.CustomViewActivity" />
+        <activity android:name=".touchevent3.TouchEvent3Activity" />
         <activity android:name=".touchevnet2.TouchEvent2Activity" />
         <activity android:name=".relativelayout.TestRelativeLayoutActivity" />
         <activity android:name=".onmeasure.OnMeasureGroupViewActivity" />
@@ -17,6 +19,9 @@
         <activity android:name=".ViewActivity" />
         <activity android:name=".onmeasure.OnMeasureViewActivity" />
         <activity android:name=".onmeasure.OnMeasureGroupView2Activity" />
+        <activity android:name=".customview.imagetextbutton.ImageTextButtonActivity" />
+        <activity android:name=".customview.input.InputActivity" />
+        <activity android:name=".customview.circleview.CircleImageViewActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

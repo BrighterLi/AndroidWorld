@@ -3,4 +3,9 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="default_login_btn_press">#FF1C8AF4</color>
+    <color name="default_login_btn_unEnable">#78BAFF</color>
+    <color name="white">#ffffff</color>
+    <color name="theme_color">#6AB3FF</color>
 </resources>
