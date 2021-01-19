@@ -1,6 +1,6 @@
 package com.xiaoming.a005algorithm.datastructure.linkedlist;
 
-public class LinkedList {
+public class ReverseLinkedList {
 
     //反转链表，输出链表后的头部
     public ListNode reverseList(ListNode head) {
