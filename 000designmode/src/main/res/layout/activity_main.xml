@@ -27,6 +27,25 @@
             android:layout_height="50dp"
             android:background="@color/yellow"
             android:text="建造者模式"/>
+
+        <Button
+            android:id="@+id/bt_easy_factory_mode"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/yellow"
+            android:text="简单工厂模式"/>
+        <Button
+            android:id="@+id/bt_factory_method_mode"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/yellow"
+            android:text="工厂方法模式"/>
+        <Button
+            android:id="@+id/bt_abstract_factory_mode"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/yellow"
+            android:text="抽象工厂模式"/>
     </LinearLayout>
 
 

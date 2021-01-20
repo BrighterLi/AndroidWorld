@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mBtSingletonMode.setOnClickListener(new View.OnClickListener() {
+        mBtBuilderMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //创造者模式
