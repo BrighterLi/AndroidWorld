@@ -15,3 +15,10 @@ ArrayAdapter
 a．ListVeiw 用来展示列表的View。
 b．适配器 用来把数据映射到ListView上的中介。
 c．数据    具体的将被映射的字符串，图片，或者基本组件。
+
+3 LinearLayout实现ListView列表
+轻松理解Android Adapter：https://www.jianshu.com/p/b06efaf20742
+
+4 Android中的适配器模式
+Android源码之ListView的适配器模式:http://www.2cto.com/kf/201502/378700.html
+适配器模式也分两种，即类适配器模式、对象适配器模式
