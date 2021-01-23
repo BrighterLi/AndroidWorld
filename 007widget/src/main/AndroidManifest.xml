@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.widget">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -13,7 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".textview.TextViewTestActivity"></activity>
+        <activity android:name=".dialog.AlertDialogActivity"></activity>
+        <activity android:name=".loading.ProgressBarActivity" />
+        <activity android:name=".loading.LinearDialogUpdateActivity" />
+        <activity android:name=".loading.LinearDialogActivity" />
+        <activity android:name=".loading.NormalDialogActivity" />
+        <activity android:name=".loading.LoadingDemoActivity" />
+        <activity android:name=".listview.listviewdemo.demo3.ListView3Activity" />
+        <activity android:name=".listview.listviewdemo.demo2.ListView2Activity" />
+        <activity android:name=".listview.listviewdemo.demo1.ListView1Activity" />
+        <activity android:name=".textview.TextViewTestActivity" />
         <activity android:name=".recyclerview.itemdecoration2.ItemDecorationTest2Activity" />
         <activity android:name=".recyclerview.ItemDecoration.ItemDecorationTestActivity" />
         <activity android:name=".statusbar.ImmerseStatusBarActivity" />

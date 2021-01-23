@@ -20,5 +20,5 @@ c．数据    具体的将被映射的字符串，图片，或者基本组件。
 轻松理解Android Adapter：https://www.jianshu.com/p/b06efaf20742
 
 4 Android中的适配器模式
-Android源码之ListView的适配器模式:http://www.2cto.com/kf/201502/378700.html
+Android源码之ListView的适配器模式：https://blog.csdn.net/bboyfeiyu/article/details/43950185
 适配器模式也分两种，即类适配器模式、对象适配器模式

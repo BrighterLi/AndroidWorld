@@ -1,13 +1,12 @@
 package com.xiaoming.a005algorithm.basealgorithm;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import com.xiaoming.a005algorithm.R;
-import com.xiaoming.a005algorithm.basealgorithm.search.BinarySearch;
+import com.xiaoming.a005algorithm.basealgorithm.search.binarysearch.BinarySearch;
 
 public class BaseAlgorithmActivity extends Activity {
     private Button mBtBinarySearch;

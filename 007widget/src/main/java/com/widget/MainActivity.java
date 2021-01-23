@@ -15,6 +15,10 @@ import com.widget.horizontalscrollview.TabStripActivity;
 import com.widget.image.ImageTestActivity;
 import com.widget.keyboard.KeyboardEntranceActivity;
 import com.widget.listview.backtotop.BackToTopActivity;
+import com.widget.listview.listviewdemo.demo1.ListView1Activity;
+import com.widget.listview.listviewdemo.demo2.ListView2Activity;
+import com.widget.listview.listviewdemo.demo3.ListView3Activity;
+import com.widget.loading.LoadingDemoActivity;
 import com.widget.pullrefresh.PullRefreshActivity;
 import com.widget.recyclerview.RecyclerViewActivity;
 import com.widget.scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivity;
@@ -61,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("Image"); //12
         mDataList.add("状态栏"); //13
         mDataList.add("RecyclerView"); //14
+        mDataList.add("ListView 基本用法"); //15
+        mDataList.add("ListView 自定义Item"); //16
+        mDataList.add("ListView 优化"); //17
+        mDataList.add("loading"); //18
     }
 
     private void initView() {
@@ -115,6 +123,18 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 14:
                         startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
+                        break;
+                        case 15:
+                        startActivity(new Intent(MainActivity.this, ListView1Activity.class));
+                        break;
+                    case 16:
+                        startActivity(new Intent(MainActivity.this, ListView2Activity.class));
+                        break;
+                    case 17:
+                        startActivity(new Intent(MainActivity.this, ListView3Activity.class));
+                        break;
+                    case 18:
+                        startActivity(new Intent(MainActivity.this, LoadingDemoActivity.class));
                         break;
                 }
             }
