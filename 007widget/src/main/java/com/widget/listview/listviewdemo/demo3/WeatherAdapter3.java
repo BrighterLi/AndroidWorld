@@ -41,7 +41,7 @@ public class WeatherAdapter3 extends ArrayAdapter<Weather3> {
         if(convertView == null) {
             view = LayoutInflater.from(getContext()).inflate(resourceId, parent,false);
             viewHolder = new ViewHolder();
-            //通过ViewHolder获取实例
+            //通过ViewHolder获取控件实例
             viewHolder.weatherImage = view.findViewById(R.id.image_weather);
             viewHolder.weatherName = view.findViewById(R.id.tv_weather_name);
             //将ViewHolder存储在view中
@@ -52,19 +52,22 @@ public class WeatherAdapter3 extends ArrayAdapter<Weather3> {
             //重新获取ViewHolder（利用View的getTag()方法，把ViewHolder重新取出)
             viewHolder = (ViewHolder) view.getTag();
         }
-        //获取实例
+       /* //获取控件实例
         ImageView imageView = view.findViewById(R.id.image_weather);
         TextView name = view.findViewById(R.id.tv_weather_name);
 
         //设置图片和文字
         imageView.setImageResource(weather.getImageId());
-        name.setText(weather.getName());
-        //return super.getView(position, convertView, parent);
+        name.setText(weather.getName());*/
+
+        //ViewHolder优化，对控件实例进行了缓存
+        viewHolder.weatherImage.setImageResource(weather.getImageId());
+        viewHolder.weatherName.setText(weather.getName());
         return view;
     }
 
     //定义ViewHolder内部类，用于对控件实例进行缓存
-    class ViewHolder{
+    static class ViewHolder{
         ImageView weatherImage;
         TextView weatherName;
     }

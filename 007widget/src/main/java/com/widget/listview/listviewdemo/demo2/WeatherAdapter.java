@@ -36,7 +36,7 @@ public class WeatherAdapter extends ArrayAdapter<Weather> {
         //LayoutInflater的inflate()方法接收3个参数：需要实例化布局资源的id、ViewGroup类型视图组对象、false
         //false表示只让父布局中声明的layout属性生效，但不会为这个view添加父布局
         View view = LayoutInflater.from(getContext()).inflate(resourceId, parent,false);
-        //获取实例
+        //获取控件实例
         ImageView imageView = view.findViewById(R.id.image_weather);
         TextView name = view.findViewById(R.id.tv_weather_name);
         //设置图片和文字
