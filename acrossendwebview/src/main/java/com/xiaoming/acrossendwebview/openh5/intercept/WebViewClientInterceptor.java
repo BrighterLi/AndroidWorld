@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Build;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
+import android.util.Log;
 import android.webkit.CookieSyncManager;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
@@ -24,6 +25,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.Charset;
 
+//WebViewClient
 public class WebViewClientInterceptor extends WebViewClient {
     public static final String UTF_8 = "UTF-8";
     public static final String GBK = "GBK";
@@ -52,6 +54,8 @@ public class WebViewClientInterceptor extends WebViewClient {
 
     @Override
     public boolean shouldOverrideUrlLoading(WebView webView, String url) {
+        Log.d("WebViewClient", "bright8#shouldOverrideUrlLoading#url: " + url);
+        Log.d("WebViewClient", "bright8#shouldOverrideUrlLoading#webView.getUrl(): " +  webView.getUrl());
         //返回true表示拦截url加载，false表示默认加载url
         if (mOnOverrideUrlListener != null) {
             return mOnOverrideUrlListener.shouldOverrideUrlLoading(webView, url);
@@ -62,6 +66,9 @@ public class WebViewClientInterceptor extends WebViewClient {
     @Nullable
     @Override
     public WebResourceResponse shouldInterceptRequest(WebView webView, WebResourceRequest request) {
+        //Log.d("WebViewClient", "bright8#shouldInterceptRequest#request.getUrl(): " + request.getUrl());
+        //Log.d("WebViewClient", "bright8#shouldInterceptRequest#webView.getUrl(): " +  webView.getUrl());
+
         //返回null表示加载默认请求，否则加载拦截后改变的实体
         if (mOnInterceptorListener != null) {
             return mOnInterceptorListener.shouldInterceptRequest(webView, request);
@@ -79,7 +86,7 @@ public class WebViewClientInterceptor extends WebViewClient {
         return super.shouldInterceptRequest(webView, url);
     }
 
-    //拦截rul加载的监听
+    //拦截url加载的监听
     public interface OnOverrideUrlListener {
         //boolean shouldOverrideUrlLoading(WebView webView, WebResourceRequest request);
 

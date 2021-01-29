@@ -2,12 +2,15 @@ package com.xiaoming.acrossendwebview.openh5.intercept;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.widget.Toast;
 
 import com.xiaoming.acrossendwebview.R;
+
+//ShouldOverrideUrlLoading拦截
 
 //WebView拦截url:https://www.jianshu.com/p/55fd544246c2
 //shouldOverrideUrlLoading是在webView加载url阶段执行拦截的
@@ -41,9 +44,12 @@ public class ShouldOverrideUrlLoadingActivity extends Activity {
                 return true;
             }*/
 
+           //拦截的是h5页面的网络请求？
             @Override
             public boolean shouldOverrideUrlLoading(WebView webView, String url) {
-                Toast.makeText(ShouldOverrideUrlLoadingActivity.this, "这是拦截url的操作2,\nurl="+"url: " + url + "\nwebView.getUrl()：" + webView.getUrl(), Toast.LENGTH_LONG).show();
+                //Toast.makeText(ShouldOverrideUrlLoadingActivity.this, "这是拦截url的操作2,\nurl="+"url: " + url + "\nwebView.getUrl()：" + webView.getUrl(), Toast.LENGTH_LONG).show();
+                Log.d("ShouldOverrideUrlL", "bright8#url: " + url);
+                Log.d("ShouldOverrideUrlL", "bright8#webView.getUrl()：" + webView.getUrl());
                 return true;
             }
         });
@@ -53,7 +59,8 @@ public class ShouldOverrideUrlLoadingActivity extends Activity {
         //设置可让界面弹出alert等提示框
         mWebView.setWebChromeClient(new WebChromeClient());
 
-        mWebView.loadUrl("file:///android_asset/should_override_url_loading_h5.html");
+        //mWebView.loadUrl("file:///android_asset/should_override_url_loading_h5.html");
+        mWebView.loadUrl("https://www.baidu.com/");
     }
 
     @Override

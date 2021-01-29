@@ -13,6 +13,11 @@ import android.webkit.WebViewClient;
 
 import com.xiaoming.acrossendwebview.R;
 
+//通过WebView获取解析html内容
+//ShouldOverrideUrlLoading拦截
+//shouldInterceptRequest拦截：用网络的html
+//js调用Android方法 + Android调用js方法
+
 public class ShowHtmlActivity extends Activity {
     private WebView mWebView;
 

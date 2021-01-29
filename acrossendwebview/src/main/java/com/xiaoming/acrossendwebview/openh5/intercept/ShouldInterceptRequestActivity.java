@@ -15,6 +15,8 @@ import com.xiaoming.acrossendwebview.R;
 
 import java.io.InputStream;
 
+//shouldInterceptRequest拦截：用代码的html
+
 //WebView拦截url:https://www.jianshu.com/p/55fd544246c2
 //其拦截原理是在响应阶段拦截下html数据，然后用本地Html或网络获取的html进行替换，重新加载。
 public class ShouldInterceptRequestActivity extends Activity {

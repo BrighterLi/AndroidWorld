@@ -101,8 +101,11 @@ https://blog.csdn.net/feiyinzilgd/article/details/20015281?utm_medium=distribute
 在浏览器里面输入网址，最终浏览器会调用WebView的loadUrl()，然后就开始加载整个网页。整个加载过程中，最重要的一步就是HTML主资源的加载。WebKit将网页的资源分为主资源(MainResource)和子资源(SubResource)。
 (2)webkit 子资源加载流程
 一个网页由主文档和子资源组成。主文档描述网页的框架，布局。子资源是组成网页的子元素，
-包括图片、CSS、JS等。为了显示网页，先要把资源加载到内存。加载就是指把需要的资源加载到内存这一过程。
+包括图片、CSS、JS等。为了显示网页，先要把资源加载到内存。 加载就是指把需要的资源加载到内存这一过程。
 Webkit用到很多缓存机制，加载可能是从网络加载，也可能是从本地缓存加载。Webkit的加载分为两条线，一条是主文档的加载，一条是子资源的加载。
+(3)WebKit资源分类
+主资源：HTML文件。
+子资源：CSS, JS, JPG等等，除了HTML文件之外的所有资源都称之为子资源
 
 8 WebView中获取网页资源
 http://www.360doc.com/content/12/0101/21/2631212_176555498.shtml
