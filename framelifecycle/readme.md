@@ -1,1 +1,0 @@
-Android Lifecycle结合RxJava&Retrofit实现安全的网络回调:https://cloud.tencent.com/developer/article/1327880
