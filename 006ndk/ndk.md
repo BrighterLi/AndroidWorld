@@ -38,6 +38,11 @@ Android 中对so库简单的调用封装流程：https://www.jianshu.com/p/ac2a3
 方法1：
 生成so库：Build——>Make Project
 将生成好的so文件copy到我们的jniLibs文件夹中即可
+方法2：
+生成.h头文件
+E:\lexin\LxGitCode\fenqile\fenqile_app\fenqile_app_git\app\src\main\java>javah -jni com.fenqile.jni.JNIUtils
+生成so库
+E:\lexin\LxGitCode\fenqile\fenqile_app\fenqile_app_git\app\src\main\java>ndk-build
 
 8 cmake编译方式
 Android Studio 2.2 NDK cMake 方式:https://www.jianshu.com/p/e03028f826d7
