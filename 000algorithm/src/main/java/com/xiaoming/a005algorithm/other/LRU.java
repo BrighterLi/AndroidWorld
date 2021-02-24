@@ -102,5 +102,5 @@ public class LRU {
         }
     }
 
-    //方法3：自己设计数据结构
+    //方法3：自己设计数据结构，不使用LinkedHashMap
 }
