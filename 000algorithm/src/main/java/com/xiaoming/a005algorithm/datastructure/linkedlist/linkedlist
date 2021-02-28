@@ -1,7 +1,15 @@
 1 相关题目
-1、输入一个链表，反转链表后，输出新链表的表头
+1、反转链表
+输入一个链表，反转链表后，输出新链表的表头
 https://www.nowcoder.com/questionTerminal/75e878df47f24fdc9dc3e400ec6058ca
 
-2、判断给定的链表中是否有环。如果有环则返回true，否则返回false。
+2、判断链表中是否有环
+  判断给定的链表中是否有环。如果有环则返回true，否则返回false。
   你能给出空间复杂度的解法么？
   https://www.nowcoder.com/practice/650474f313294468a4ded3ce0f7898b9?tpId=194&&tqId=35772&rp=1&ru=/activity/oj&qru=/ta/job-code-high-client/question-ranking
+
+3、链表中环的入口节点
+ 对于一个给定的链表，返回环的入口节点，如果没有环，返回null
+  拓展：
+  你能给出不利用额外空间的解法么？
+  https://www.nowcoder.com/practice/6e630519bf86480296d0f1c868d425ad?tpId=194&tqId=35771&rp=1&ru=%2Factivity%2Foj&qru=%2Fta%2Fjob-code-high-client%2Fquestion-ranking&tab=answerKey
