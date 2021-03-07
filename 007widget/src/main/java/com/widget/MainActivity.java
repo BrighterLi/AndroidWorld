@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.widget.banner.BannerTestActivity;
 import com.widget.dialog.DialogTestActivity;
 import com.widget.dialog.FullScreenDialog;
 import com.widget.horizontalscrollview.TabStripActivity;
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("ListView:分页请求"); //8
         mDataList.add("ViewPager"); //9
         mDataList.add("ListView:点击悬浮按钮回到顶部"); //10
+
         mDataList.add("Dialog:全屏dialog"); //11
         mDataList.add("Image"); //12
         mDataList.add("状态栏"); //13
@@ -69,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("ListView 自定义Item"); //16
         mDataList.add("ListView 优化"); //17
         mDataList.add("loading"); //18
+        mDataList.add("Banner"); //19
     }
 
     private void initView() {
@@ -112,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
                     case 10:
                         startActivity(new Intent(MainActivity.this, BackToTopActivity.class));
                         break;
+
                     case 11:
                         startActivity(new Intent(MainActivity.this, DialogTestActivity.class));
                         break;
@@ -135,6 +139,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 18:
                         startActivity(new Intent(MainActivity.this, LoadingDemoActivity.class));
+                        break;
+                    case 19:  //Banner
+                        startActivity(new Intent(MainActivity.this, BannerTestActivity.class));
                         break;
                 }
             }

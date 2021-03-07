@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <!--  merge主要是进行UI布局的优化的,删除多余的层级,优化UI。
+<merge/>多用于替换frameLayout或者当一个布局包含另一个布局的时候,
+<merge/>标签用于消除师徒层次结构中多余的视图组。例如你的主布局文件是垂直的，
+    此时如果你引入一个垂直布局的<include>.
+这时如果include布局使用的LinearLayout就没意义了，
+使用的话反而减慢你的UI表现。这时可以使用<merge/>标签优化。
+<merge>标签也就是排除一个布局插入另一个布局产生的多余的viewgroup.-->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_image_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--自定义Indicator-->
+    <LinearLayout
+        android:id="@+id/ll_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="192dp"
+        android:gravity="center"
+        android:orientation="horizontal"></LinearLayout>
+</merge>

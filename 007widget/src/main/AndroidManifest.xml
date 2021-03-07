@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".dialog.AlertDialogActivity"></activity>
+        <activity android:name=".banner.Banner.BannerActivity"></activity>
+        <activity android:name=".banner.BannerTestActivity" />
+        <activity android:name=".dialog.AlertDialogActivity" />
         <activity android:name=".loading.ProgressBarActivity" />
         <activity android:name=".loading.LinearDialogUpdateActivity" />
         <activity android:name=".loading.LinearDialogActivity" />

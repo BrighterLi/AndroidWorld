@@ -10,6 +10,7 @@ import com.widget.R;
 
 import java.util.List;
 
+//适配器
 public class MyPagerAdapter extends PagerAdapter {
     private Context mContext;
     private List<String> mData;
@@ -28,7 +29,9 @@ public class MyPagerAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         View view = View.inflate(mContext, R.layout.item_base,null);
         TextView tv = (TextView) view.findViewById(R.id.tv);
+        TextView tv2 = view.findViewById(R.id.tv2);
         tv.setText(mData.get(position));
+        tv2.setText(mData.get(position));
         container.addView(view);
         return view;
     }

@@ -2,16 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/tv"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="100dp"
         android:background="#FAE8DA"
         android:gravity="center"
         android:text="Hello"
+        android:textSize="22sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv2"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#FAE8DA"
+        android:gravity="center"
+        android:text="Hello2"
         android:textSize="22sp">
     </TextView>
 </LinearLayout>
