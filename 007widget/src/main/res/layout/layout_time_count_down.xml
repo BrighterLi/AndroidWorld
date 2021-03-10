@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/mCountDownHour"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:background="@drawable/shape_round_pink"
+        android:gravity="center"
+        android:textColor="@color/text_color_white"
+        android:textSize="9sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="8dp"
+        android:layout_height="16dp"
+        android:gravity="center"
+        android:layout_marginTop="-3dp"
+        android:text=":"
+        android:textColor="#FFFF3D77"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/mCountDownMin"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:background="@drawable/shape_round_pink"
+        android:gravity="center"
+        android:textColor="@color/text_color_white"
+        android:textSize="9sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="8dp"
+        android:layout_height="16dp"
+        android:gravity="center"
+        android:layout_marginTop="-3dp"
+        android:text=":"
+        android:textColor="#FFFF3D77"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/mCountDownSecond"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:background="@drawable/shape_round_pink"
+        android:gravity="center"
+        android:textColor="@color/text_color_white"
+        android:textSize="9sp"
+        android:textStyle="bold"/>
+
+
+</LinearLayout>
