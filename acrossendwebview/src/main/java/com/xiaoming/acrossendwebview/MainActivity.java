@@ -16,6 +16,7 @@ import com.xiaoming.acrossendwebview.openh5.WebViewActivity;
 import com.xiaoming.acrossendwebview.openh5.intercept.ShouldInterceptRequest2Activity;
 import com.xiaoming.acrossendwebview.openh5.intercept.ShouldInterceptRequestActivity;
 import com.xiaoming.acrossendwebview.openh5.intercept.ShouldOverrideUrlLoadingActivity;
+import com.xiaoming.acrossendwebview.viewpagerswiperconflict.ViewpagerSwiperConflitActivity;
 import com.xiaoming.acrossendwebview.webviewandjs.WebViewAndJSActivity;
 
 import java.util.ArrayList;
@@ -71,6 +72,9 @@ public class MainActivity extends AppCompatActivity {
                     case 8:
                         startActivity(new Intent(MainActivity.this, WebViewActivity2.class));
                         break;
+                    case 9:
+                        startActivity(new Intent(MainActivity.this, ViewpagerSwiperConflitActivity.class));
+                        break;
                 }
             }
         });
@@ -86,5 +90,6 @@ public class MainActivity extends AppCompatActivity {
         demoNameList.add("拦截之shouldInterceptRequest：用网络的html");
         demoNameList.add("打开的html页面自动跳转到指定的网址");
         demoNameList.add("长按h5页面的图片保存图片");
+        demoNameList.add("安卓viewpager嵌套webview的滑动冲突解决");
     }
 }

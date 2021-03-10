@@ -1,0 +1,20 @@
+1 安卓viewpager嵌套webview的滑动冲
+webview轮播图与Android滑动冲突的解决办法：https://blog.csdn.net/qq_42172829/article/details/84171724
+从事件原理彻底解决WebView与ViewPager(水平),ScrolloView(纵向)滑动冲突：https://www.jianshu.com/p/818d566c4c5a
+安卓viewpager嵌套webview的滑动冲突解决:https://blog.csdn.net/qq_40281800/article/details/86619870
+Android_fragment加载webView与ViewPager所带来的滑动冲突问题解决方法:https://blog.csdn.net/qq_43643062/article/details/84035196
+方法1
+将屏幕分为左中右三个区域，当滑动中间部分的时候禁掉外层viewpager的滑动，具体操作是在webview的ontouchevent中，通过判断触摸区域调用requestDisallowInterceptTouchEvent(true)，当为true的时候，触摸事件就被webview拦截，不会传向父控件，viewpager自然不会滑动了，当然这么做，用户使用起来的话会非常蛋疼，而且现在很多手机都有全面屏幕手势操作，翻个页还不小心退出应用了，这不是搞笑的嘛，这种方法极其不推荐使用，还不如不滑动翻页，直接点tab了。
+
+方法2
+第二种方法是通过js和android之间通信，js获取html网页中可滑动控件的位置，然后传给android，安卓还是在webview的ontouchevent事件中判断触摸的位置，如果触摸在滑动控件上，就通过requestDisallowInterceptTouchEvent(true)拦截事件，viewpager就不能滑动了，听上去效果是比上个方法好了一点，至少不用点着viewpager的边缘才能滑动了，但是实际使用中还会有一些问题，比如页面刚加载出来的1s之内，可能坐标位置还没返回，这时滑动html中的viewpager还是会整屏滑动的，而且工作量也有点太大了，还好最后没采用这种办法。
+
+方法3
+上面两个方法说的都比较简略，之前在网上搜索到的大部分是那两种方法，第三种方法要详细介绍一下了
+
+首先明确我们的目的，我们是希望滑动html中的可滑动控件的时候不让外层viewpager滚动，所以所有办法的目的都在于明确viewpager的滑动禁用时机
+那我们可不可以换个思路，一开始就禁用viewpager的滑动，转而考虑viewpager的滑动启用时机呢？
+能想到这里就离成功不远了，可以这样，当点击到webview的时候，就直接禁用外层viewpager的滑动，这时滑动html中的可滑动控件时，就可以滑动了，而且外层viewpager也不会切换，因为已经被禁用了嘛。
+如果这是这样写，怎么切换到其他网页呢？也就是什么时候，怎样启用外层viewpager的滑动呢？当然是在内层webview划不动的时候了～
+没错，就是webview，有一个方法叫
+protected void onOverScrolled 当我们滚动屏幕内容到达内容边界时，如果再滚动就会有一个发光效果，这些效果是如何实现的呢？没错，就和这个方法有关系了。重写webview的这个方法，在里面启用viewpager的滚动就可以了，webview划不动的时候，就是webview可以滚动的时候，这么说是不是更清晰。
