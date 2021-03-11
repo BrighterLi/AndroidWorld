@@ -1,7 +1,6 @@
 package com.widget;
 
 import android.content.Intent;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +10,6 @@ import android.widget.ListView;
 
 import com.widget.banner.BannerTestActivity;
 import com.widget.dialog.DialogTestActivity;
-import com.widget.dialog.FullScreenDialog;
 import com.widget.horizontalscrollview.TabStripActivity;
 import com.widget.image.ImageTestActivity;
 import com.widget.keyboard.KeyboardEntranceActivity;
@@ -27,6 +25,7 @@ import com.widget.scroll.scrollconflict.demo1.ScrollConflictActivity;
 import com.widget.scroll.scrollconflict.demo2.ScrollConflict2Activity;
 import com.widget.scroll.scrollconflict.demo3.ScrollConflict3Activity;
 import com.widget.statusbar.StatusBarTestActivity;
+import com.widget.animation.AnimationTestActivity;
 import com.widget.video.VideoActivity;
 import com.widget.listview.pagingrequest.PagingRequestActivity;
 import com.widget.viewpager.ViewPagerActivity;
@@ -72,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("ListView 优化"); //17
         mDataList.add("loading"); //18
         mDataList.add("Banner"); //19
+        mDataList.add("动画"); //20
     }
 
     private void initView() {
@@ -142,6 +142,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 19:  //Banner
                         startActivity(new Intent(MainActivity.this, BannerTestActivity.class));
+                        break;
+                    case 20:  //动画
+                        startActivity(new Intent(MainActivity.this, AnimationTestActivity.class));
                         break;
                 }
             }
