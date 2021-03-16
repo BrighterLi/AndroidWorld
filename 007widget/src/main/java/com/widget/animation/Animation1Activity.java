@@ -1,16 +1,22 @@
 package com.widget.animation;
 
+import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
+import android.view.animation.CycleInterpolator;
+import android.view.animation.OvershootInterpolator;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 
 import com.widget.R;
 
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -69,11 +75,13 @@ public class Animation1Activity extends AppCompatActivity {
     //动画组合
     private void createAnimationSet() {
         animationSet = new AnimationSet(true);
-        ScaleAnimation animation = new ScaleAnimation(0,1.0f,0,1.0f,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
+        //ScaleAnimation animation = new ScaleAnimation(0,1.0f,0,1.0f,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
                 //ScaleAnimation animation = new ScaleAnimation(0, 1, 0, 1, Animation.RELATIVE_TO_SELF, 0.5f,1, 0.5f);
         AlphaAnimation animation2 = new AlphaAnimation(0.0f, 1.0f);
-        animationSet.addAnimation(animation);
+        //animationSet.addAnimation(animation);
+        animation2.setInterpolator(new OvershootInterpolator()); //插值器
         animationSet.addAnimation(animation2);
         animationSet.setDuration(500);
     }
+
 }
