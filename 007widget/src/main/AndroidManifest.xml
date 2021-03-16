@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".animation.textview.TextViewActivity"></activity>
+        <activity android:name=".textview.TextView1Activity"></activity>
+        <activity android:name=".animation.textview.TextViewActivity" />
         <activity android:name=".animation.lottie.LottieNetworkAnimActivity" />
         <activity android:name=".animation.lottie.LottieAnimationActivity2" />
         <activity android:name=".animation.lottie.LottieAnimationActivity" />
