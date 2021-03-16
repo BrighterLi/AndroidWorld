@@ -1,9 +1,9 @@
-package com.xiaoming.widgetanimation.lottie;
+package com.widget.animation.lottie;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.xiaoming.widgetanimation.R;
+import com.widget.R;
 
 //直接在xml里设置
 public class LottieAnimationActivity extends AppCompatActivity {
@@ -12,6 +12,6 @@ public class LottieAnimationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lottie_animation);
-
     }
 }
+

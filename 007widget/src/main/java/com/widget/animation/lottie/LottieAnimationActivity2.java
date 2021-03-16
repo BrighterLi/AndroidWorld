@@ -1,4 +1,4 @@
-package com.xiaoming.widgetanimation.lottie;
+package com.widget.animation.lottie;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
@@ -12,7 +12,8 @@ import android.widget.TextView;
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.LottieComposition;
 import com.airbnb.lottie.OnCompositionLoadedListener;
-import com.xiaoming.widgetanimation.R;
+import com.widget.R;
+
 
 public class LottieAnimationActivity2 extends AppCompatActivity implements View.OnClickListener{
     private Button mBtStart, mBtStop;
@@ -22,7 +23,7 @@ public class LottieAnimationActivity2 extends AppCompatActivity implements View.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lottie_anim2);
+        setContentView(R.layout.activity_lottie_animation2);
 
         initView();
     }
