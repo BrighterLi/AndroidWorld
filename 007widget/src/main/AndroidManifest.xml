@@ -13,7 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".animation.AnimationTestActivity"></activity>
+        <activity android:name=".textview.TextView1Activity"></activity>
+        <activity android:name=".animation.textview.TextViewActivity" />
+        <activity android:name=".animation.lottie.LottieNetworkAnimActivity" />
+        <activity android:name=".animation.lottie.LottieAnimationActivity2" />
+        <activity android:name=".animation.lottie.LottieAnimationActivity" />
+        <activity android:name=".animation.lottie.LottieActivity" />
+        <activity android:name=".animation.AnimationTestActivity" />
         <activity android:name=".animation.Animation1Activity" />
         <activity android:name=".banner.Banner.BannerActivity" />
         <activity android:name=".banner.BannerTestActivity" />

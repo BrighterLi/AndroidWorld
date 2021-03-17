@@ -5,18 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".animation.lottie.LottieActivity">
 
     <Button
-        android:id="@+id/bt_textview_anim"
+        android:id="@+id/bt_lottie_anim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView动画"/>
+        android:text="xml设置动画"/>
 
     <Button
-        android:id="@+id/bt_lottie"
+        android:id="@+id/bt_lottie_anim2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lottie"/>
+        android:text="代码里设置"/>
 
+    <Button
+        android:id="@+id/bt_lottie_anim3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加载网络的Lottie动画"/>
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.xiaoming.widgetanimation.lottie;
+package com.widget.animation.lottie;
 
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +9,7 @@ import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.LottieComposition;
 import com.airbnb.lottie.LottieOnCompositionLoadedListener;
 import com.airbnb.lottie.OnCompositionLoadedListener;
-import com.xiaoming.widgetanimation.R;
+import com.widget.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;

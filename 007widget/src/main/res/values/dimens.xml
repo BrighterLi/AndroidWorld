@@ -9,4 +9,6 @@
     <dimen name="lv_divider_height">1dp</dimen>
 
     <dimen name="list_item_height">55dp</dimen>
+
+    <dimen name="spacing_medium">8dp</dimen>
 </resources>

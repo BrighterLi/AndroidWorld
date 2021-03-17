@@ -1,4 +1,4 @@
-package com.xiaoming.widgetanimation.textview;
+package com.widget.animation.textview;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -18,7 +18,8 @@ import android.view.animation.OvershootInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.TextView;
 
-import com.xiaoming.widgetanimation.R;
+import com.widget.R;
+
 
 public class TextViewActivity extends AppCompatActivity {
     private TextView tvShow;
@@ -85,12 +86,12 @@ public class TextViewActivity extends AppCompatActivity {
     //属性动画 上下颤抖
     //https://blog.csdn.net/zhangcanyan/article/details/54896456?utm_source=blogxgwz4
     //https://github.com/lzyzsd/AndroidSeekAttention
-   private void showShake3() {
-       ObjectAnimator animator = tada(tvShow);
-       //animator.setRepeatCount(ValueAnimator.INFINITE);
-       animator.setRepeatCount(0);
-       animator.start();
-   }
+    private void showShake3() {
+        ObjectAnimator animator = tada(tvShow);
+        //animator.setRepeatCount(ValueAnimator.INFINITE);
+        animator.setRepeatCount(0);
+        animator.start();
+    }
 
     //属性动画 左右颤抖
     private void showShake4() {

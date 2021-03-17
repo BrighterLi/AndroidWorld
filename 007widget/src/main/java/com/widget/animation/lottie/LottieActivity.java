@@ -1,4 +1,4 @@
-package com.xiaoming.widgetanimation.lottie;
+package com.widget.animation.lottie;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.xiaoming.widgetanimation.R;
+import com.widget.R;
+
 
 public class LottieActivity extends AppCompatActivity implements View.OnClickListener{
     private Button mBtLottieAnim1;

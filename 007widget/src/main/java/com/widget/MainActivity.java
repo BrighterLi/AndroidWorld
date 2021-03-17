@@ -26,6 +26,7 @@ import com.widget.scroll.scrollconflict.demo2.ScrollConflict2Activity;
 import com.widget.scroll.scrollconflict.demo3.ScrollConflict3Activity;
 import com.widget.statusbar.StatusBarTestActivity;
 import com.widget.animation.AnimationTestActivity;
+import com.widget.textview.TextViewTestActivity;
 import com.widget.video.VideoActivity;
 import com.widget.listview.pagingrequest.PagingRequestActivity;
 import com.widget.viewpager.ViewPagerActivity;
@@ -72,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("loading"); //18
         mDataList.add("Banner"); //19
         mDataList.add("动画"); //20
+
+        mDataList.add("TextView"); //21
     }
 
     private void initView() {
@@ -145,6 +148,10 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 20:  //动画
                         startActivity(new Intent(MainActivity.this, AnimationTestActivity.class));
+                        break;
+
+                    case 21:  //TextView
+                        startActivity(new Intent(MainActivity.this, TextViewTestActivity.class));
                         break;
                 }
             }
