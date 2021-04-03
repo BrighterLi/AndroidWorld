@@ -1,9 +1,10 @@
 package com.xiaoming.a008project.consumption.view;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.view.ViewPager;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.viewpager.widget.ViewPager;
+
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -15,7 +16,7 @@ public class AutofitViewPager extends ViewPager {
 
     public AutofitViewPager(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        addOnPageChangeListener(new OnPageChangeListener() {
+        addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
             }
@@ -38,14 +39,14 @@ public class AutofitViewPager extends ViewPager {
         for (int i = 0; i < getChildCount(); i++) {
             View child = getChildAt(i);
             child.measure(widthMeasureSpec,
-                    MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));
+                    View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
             int h = child.getMeasuredHeight();
             if(i==getCurrentItem()){
                 height=h;
             }
         }
-        heightMeasureSpec = MeasureSpec.makeMeasureSpec(height,
-                MeasureSpec.EXACTLY);
+        heightMeasureSpec = View.MeasureSpec.makeMeasureSpec(height,
+                View.MeasureSpec.EXACTLY);
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 

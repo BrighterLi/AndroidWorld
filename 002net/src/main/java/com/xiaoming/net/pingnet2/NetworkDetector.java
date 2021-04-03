@@ -1,7 +1,7 @@
 package com.xiaoming.net.pingnet2;
 
 import android.os.Build;
-import android.support.v4.util.ArrayMap;
+import androidx.core.util.ArrayMap;
 import android.util.Log;
 
 import com.xiaoming.net.pingnet2.bean.PingNetworkBean;

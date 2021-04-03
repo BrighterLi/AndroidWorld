@@ -1,10 +1,7 @@
 package com.xiaoming.functionbaidumaker.custommapview;
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -30,7 +27,6 @@ import com.baidu.mapapi.map.PolylineOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.model.LatLngBounds;
 import com.xiaoming.functionbaidumaker.R;
-import com.xiaoming.functionbaidumaker.marker.MarkerActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;

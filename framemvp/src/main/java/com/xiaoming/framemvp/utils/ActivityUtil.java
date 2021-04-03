@@ -1,8 +1,8 @@
 package com.xiaoming.framemvp.utils;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
+import androidx.core.app.Fragment;
+import androidx.core.app.FragmentManager;
+import androidx.core.app.FragmentTransaction;
 
 public class ActivityUtil {
     public static void addFragmentToActivity(FragmentManager fragmentManager, Fragment fragment, int frameId) {

@@ -1,7 +1,7 @@
 package com.xiaoming.a008project.consumption.utils;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 public class DpUtils {
     public static int dp2px(@NonNull final Context context, final float dpValue) {

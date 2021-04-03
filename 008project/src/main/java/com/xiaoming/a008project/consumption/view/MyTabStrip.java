@@ -9,9 +9,9 @@ import android.graphics.Paint.Style;
 import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.os.Build;
-import android.support.annotation.ColorInt;
-import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
+import androidx.annotation.ColorInt;
+import androidx.viewpager.widget.ViewPager;
+
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
@@ -52,7 +52,7 @@ public class MyTabStrip extends HorizontalScrollView {
     private LinearLayout.LayoutParams expandedTabLayoutParams;
 
     private final PageListener pageListener = new PageListener();
-    public OnPageChangeListener delegatePageListener;
+    public ViewPager.OnPageChangeListener delegatePageListener;
 
     private LinearLayout tabsContainer;
     private ViewPager pager;
@@ -173,7 +173,7 @@ public class MyTabStrip extends HorizontalScrollView {
         notifyDataSetChanged();
     }
 
-    public void setOnPageChangeListener(OnPageChangeListener listener) {
+    public void setOnPageChangeListener(ViewPager.OnPageChangeListener listener) {
         this.delegatePageListener = listener;
     }
 
@@ -431,7 +431,7 @@ public class MyTabStrip extends HorizontalScrollView {
         }
     }
 
-    private class PageListener implements OnPageChangeListener {
+    private class PageListener implements ViewPager.OnPageChangeListener {
 
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

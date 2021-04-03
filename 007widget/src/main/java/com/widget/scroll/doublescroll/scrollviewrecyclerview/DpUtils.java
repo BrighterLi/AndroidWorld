@@ -1,7 +1,7 @@
 package com.widget.scroll.doublescroll.scrollviewrecyclerview;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Created By HuangQing on 2018/8/2 16:28

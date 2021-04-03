@@ -1,14 +1,13 @@
 package com.a006designmode;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import com.a006designmode.behaviormode.observermode.ObserverActivity;
 import com.a006designmode.behaviormode.observermode2.Observer2Activity;
-import com.a006designmode.creationmode.buidermode2.CreationBuilder2Activity;
 import com.a006designmode.creationmode.buildermode.BuilderActivity;
 import com.a006designmode.othermode.productandconsume.ProducterAndConsumer;
 import com.a006designmode.structuralmode.adaptermode.AdapterModeTest;

@@ -1,9 +1,8 @@
 package com.xiaoming.widgettimer;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 //第三种延时方法：Thread方法
 public class DelayedMethod3Activity extends AppCompatActivity {

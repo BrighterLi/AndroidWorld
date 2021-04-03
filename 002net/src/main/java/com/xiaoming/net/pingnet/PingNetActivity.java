@@ -1,13 +1,10 @@
 package com.xiaoming.net.pingnet;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.xiaoming.net.R;
-
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 
 //https://blog.csdn.net/li13650639161/article/details/78465850?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-4
 public class PingNetActivity extends AppCompatActivity {

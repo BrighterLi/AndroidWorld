@@ -1,7 +1,6 @@
 package com.xiaoming.acrossendwebview.openh5;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
