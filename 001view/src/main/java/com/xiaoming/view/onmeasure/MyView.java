@@ -6,6 +6,8 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
 
+import java.util.Arrays;
+
 //https://blog.csdn.net/lovexieyuan520/article/details/50614670
 
 //在android:layout_width和android:layout_height都为match_parent的时候，MyView填满全屏，

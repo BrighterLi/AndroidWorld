@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 
 
 import com.xiaoming.a008project.consumption.ConsumptionActivity;
+import com.xiaoming.a008project.im.TencentImManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private void initDemoData() {
         mDataList = new ArrayList<>();
         mDataList.add("消费号");
+        mDataList.add("即时聊天");
     }
 
     private void initView() {
@@ -43,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
                 switch (position) {
                     case 0:
                         startActivity(new Intent(MainActivity.this, ConsumptionActivity.class));
+                        break;
+                    case 1:
+                       /* TencentImManager.initSDK(getApplication());
+                        TencentImManager.login();*/
                         break;
                 }
             }
