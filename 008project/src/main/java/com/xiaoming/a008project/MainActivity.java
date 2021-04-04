@@ -10,6 +10,9 @@ import android.widget.ArrayAdapter;
 
 
 import com.xiaoming.a008project.consumption.ConsumptionActivity;
+import com.xiaoming.a008project.im.ChatActivity;
+import com.xiaoming.a008project.im.ImTestActivity;
+import com.xiaoming.a008project.im.TencentImManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,8 +49,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, ConsumptionActivity.class));
                         break;
                     case 1:
-                       /* TencentImManager.initSDK(getApplication());
-                        TencentImManager.login();*/
+                        startActivity(new Intent(MainActivity.this, ImTestActivity.class));
                         break;
                 }
             }

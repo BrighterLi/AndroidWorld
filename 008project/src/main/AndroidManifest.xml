@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".smallproject.desktopnewsreddot.TestActivity"></activity>
+        <activity android:name=".im.ImTestActivity"></activity>
+        <activity android:name=".im.ChatActivity" />
+        <activity android:name=".smallproject.desktopnewsreddot.TestActivity" />
         <activity android:name=".consumption.ConsumptionActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
