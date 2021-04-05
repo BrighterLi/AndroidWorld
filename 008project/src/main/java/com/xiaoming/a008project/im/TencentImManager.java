@@ -12,6 +12,7 @@ import com.tencent.qcloud.tim.uikit.TUIKit;
 import com.tencent.qcloud.tim.uikit.config.CustomFaceConfig;
 import com.tencent.qcloud.tim.uikit.config.GeneralConfig;
 import com.tencent.qcloud.tim.uikit.config.TUIKitConfigs;
+import com.xiaoming.a008project.im.signature.GenerateTestUserSig;
 
 public class TencentImManager {
 
@@ -49,7 +50,8 @@ public class TencentImManager {
 
 
     public static void login(String userId) {
-        V2TIMManager.getInstance().login(userId, TencentImConfig.USER_SIG, new V2TIMCallback() {
+        String userSig = GenerateTestUserSig.genTestUserSig(userId);
+        V2TIMManager.getInstance().login(userId, userSig, new V2TIMCallback() {
 
             @Override
             public void onError(int code, String desc) {
