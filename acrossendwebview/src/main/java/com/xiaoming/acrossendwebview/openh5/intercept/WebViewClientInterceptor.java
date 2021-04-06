@@ -2,7 +2,7 @@ package com.xiaoming.acrossendwebview.openh5.intercept;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Log;
 import android.webkit.CookieSyncManager;
@@ -17,10 +17,9 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.CookieHandler;
+
 import android.webkit.CookieManager;
 
-import java.net.CookieStore;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.Charset;

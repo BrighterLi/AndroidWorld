@@ -1,10 +1,9 @@
 package com.xiaoming.a002netretrofit.get3;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 import android.widget.Button;
 import android.widget.TextView;
 

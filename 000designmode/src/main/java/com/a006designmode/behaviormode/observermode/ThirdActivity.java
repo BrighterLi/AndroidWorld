@@ -1,7 +1,6 @@
 package com.a006designmode.behaviormode.observermode;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;

@@ -1,7 +1,6 @@
 package com.xiaoming.functionvideorecordingandfacerecognition.transparent;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.xiaoming.functionvideorecordingandfacerecognition.R;

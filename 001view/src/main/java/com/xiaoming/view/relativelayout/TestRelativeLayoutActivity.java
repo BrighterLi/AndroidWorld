@@ -1,7 +1,6 @@
 package com.xiaoming.view.relativelayout;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.xiaoming.view.R;

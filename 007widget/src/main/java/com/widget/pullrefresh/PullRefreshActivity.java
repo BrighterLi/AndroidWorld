@@ -1,7 +1,7 @@
 package com.widget.pullrefresh;
 
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.widget.R;

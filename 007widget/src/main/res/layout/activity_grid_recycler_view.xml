@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".recyclerview.gridrecyclerview.GridRecyclerViewActivity">
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/grid_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#ff9900">
-    </android.support.v7.widget.RecyclerView>
+    </androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>

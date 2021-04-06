@@ -1,9 +1,6 @@
 package com.xiaoming.net.netdetect;
 
-import android.content.Context;
-import android.net.wifi.WifiInfo;
-import android.net.wifi.WifiManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -13,8 +10,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.xiaoming.net.R;
-
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,7 +28,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static com.xiaoming.net.netdetect.DnsUtil.getDnsFromCommand;
-import static com.xiaoming.net.netdetect.DnsUtil.getDnsFromConnectionManager;
 
 
 //网络检测

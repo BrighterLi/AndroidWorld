@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.xiaoming.androidpoints.uiframe.waterfall.WaterFallActivity">
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.appcompat.widget.RecyclerView
         android:id="@+id/rv_pu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/yellow"></android.support.v7.widget.RecyclerView>
+        android:background="@color/yellow"></androidx.appcompat.widget.RecyclerView>
 
 </LinearLayout>

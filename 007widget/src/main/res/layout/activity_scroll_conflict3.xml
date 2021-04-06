@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".scroll.scrollconflict.demo3.ScrollConflict3Activity">
 
-    <android.support.v4.widget.SwipeRefreshLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/main_refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -18,12 +18,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-                <android.support.v4.view.ViewPager
+                <androidx.viewpager.widget.ViewPager
                     android:id="@+id/main_viewpager"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/vp_height">
 
-                </android.support.v4.view.ViewPager>
+                </androidx.viewpager.widget.ViewPager>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/tv_height"
@@ -40,6 +40,6 @@
                 </ListView>
             </LinearLayout>
         </com.widget.scroll.scrollconflict.demo3.view.BottomScrollView>
-    </android.support.v4.widget.SwipeRefreshLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </LinearLayout>

@@ -1,7 +1,7 @@
 package com.xiaoming.a008project;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.view.View;
@@ -10,6 +10,9 @@ import android.widget.ArrayAdapter;
 
 
 import com.xiaoming.a008project.consumption.ConsumptionActivity;
+import com.xiaoming.a008project.im.ChatActivity;
+import com.xiaoming.a008project.im.ImTestActivity;
+import com.xiaoming.a008project.im.TencentImManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private void initDemoData() {
         mDataList = new ArrayList<>();
         mDataList.add("消费号");
+        mDataList.add("即时聊天");
     }
 
     private void initView() {
@@ -43,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
                 switch (position) {
                     case 0:
                         startActivity(new Intent(MainActivity.this, ConsumptionActivity.class));
+                        break;
+                    case 1:
+                        startActivity(new Intent(MainActivity.this, ImTestActivity.class));
                         break;
                 }
             }

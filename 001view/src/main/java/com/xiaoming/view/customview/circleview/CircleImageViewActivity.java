@@ -1,7 +1,7 @@
 package com.xiaoming.view.customview.circleview;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.xiaoming.view.R;
 import com.xiaoming.view.customview.clock.LEDClockView;
