@@ -19,7 +19,7 @@ android {
             //这个控制生成的so库类型，也是支持的ABI架构类型；没有的话默认生成 "armeabi-v7a", "x86", "x86_64", "arm64-v8a"
             //生成路径：build/intermediates/cmake/
             //abiFilters "armeabi"
-            abiFilters "armeabi-v7a","arm64-v8a","x86","x86_64", "armeabi"
+            abiFilters "armeabi-v7a","arm64-v8a","x86","x86_64"
         }
 
         //配置cmake build参数

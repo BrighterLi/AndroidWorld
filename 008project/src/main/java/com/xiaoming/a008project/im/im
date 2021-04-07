@@ -1,5 +1,14 @@
 1 腾讯云即时聊天sdk
 腾讯云官网：https://cloud.tencent.com/document/product/269/37062
+常见即时通讯：网易IM 、腾讯IM、环信IM、融云IM、leancloud IM介绍:https://blog.csdn.net/yelin042/article/details/104743502
+腾讯云im接入实现c2c聊天:https://www.jianshu.com/p/5032843b7e25
+Android自定义IM聊天界面:https://blog.csdn.net/qq_28931623/article/details/84793242
+android IM即时通信之聊天界面UI框架:https://blog.csdn.net/u010688729/article/details/53813396
+(1)LiteAVSDK_Professional_4.7.4395：腾讯云直播
+(2) com.tencent.imsdk:tuikit:xxx版本: 腾讯云即时聊天，包含ui库
+TUIKit 组件在 4.8.50 版本之后基于 TRTC 实现了单聊和群组的视频通话和语音通话功能
+(3) com.tencent.imsdk:imsdk:版本号: 腾讯云即时聊天，不包含ui库
+
 
 2 sdk原理
 (1) 接口
@@ -11,10 +20,13 @@
 3）发起聊天
 4）发送聊天
 5）接收聊天
-6)聊天记录
+6)
 7）已读
 8）个人消息
+基本消息类型： MessageInfo.java
 腾讯云IM 聊天发送自定义消息：https://www.jianshu.com/p/80871f1ba387
+历史消息：
+腾讯云的历史记录只保留7天，7天之前的历史记录需要后台提供接口返回给前端
 9）头像
 V2TIMConversation.V2TIM_GROUP:群聊；V2TIMConversation.V2TIM_C2C:单聊
 10）聊天列表+聊天数据
@@ -24,6 +36,9 @@ V2TIMConversation.V2TIM_GROUP:群聊；V2TIMConversation.V2TIM_C2C:单聊
 (3)前端交互接口
 1)前端聊天入口
 原生页面Url统跳配置
-字段：腾讯云用户userId；来源：商户端，用户端；title/昵称；
+字段：腾讯云用户userId(uid, cpId)；来源：商户端，用户端；title/昵称；
+商户端：商店名称，主页
+2)举报
 (4)UI
 1）聊天页面
+2) 进入聊天界面浮窗
