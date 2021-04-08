@@ -1,5 +1,6 @@
 1 腾讯云即时聊天sdk
 腾讯云官网：https://cloud.tencent.com/document/product/269/37062
+com.tencent.imsdk:imsdk:版本号: 腾讯云即时聊天，不包含ui库
 常见即时通讯：网易IM 、腾讯IM、环信IM、融云IM、leancloud IM介绍:https://blog.csdn.net/yelin042/article/details/104743502
 腾讯云im接入实现c2c聊天:https://www.jianshu.com/p/5032843b7e25
 Android自定义IM聊天界面:https://blog.csdn.net/qq_28931623/article/details/84793242
@@ -7,13 +8,40 @@ android IM即时通信之聊天界面UI框架:https://blog.csdn.net/u010688729/a
 (1)LiteAVSDK_Professional_4.7.4395：腾讯云直播
 (2) com.tencent.imsdk:tuikit:xxx版本: 腾讯云即时聊天，包含ui库
 TUIKit 组件在 4.8.50 版本之后基于 TRTC 实现了单聊和群组的视频通话和语音通话功能
-(3) com.tencent.imsdk:imsdk:版本号: 腾讯云即时聊天，不包含ui库
 
 
 2 sdk原理
-(1) 接口
+(1)框架
+(2)长链接的建立
+
+3 方案选择
+(1)方案1 flutter
+【即时聊天】预研
+今天原生集成和flutter集成方面看了文档和实际集成了一下,相关区别如下：
+1)原生的文档说明比较详细，Flutter几乎没有什么文档仅仅是接口的一个简单说明，而原生从集成到每个关键的节点以及UI都有相关说明
+2)原生有封装好的ui库，聊天界面不需要自己完全写
+3)原生有精简版和标准版sdk，flutter只有精简版
+4)原生的github上，start以及互动比较多，flutter可能使用的人比较少，两位数的start,个位数的互动
+5)实际集成：flutter从上午到下午集成中出现了比较多的问题，集成比较麻烦，有些问题网上资料比较少；原生集成起来10分钟基本可以搞定
+总结：聊天功能原生比较成熟，使用的人也比较多，文档说明也比较详细，相关的ui库也有封装；flutter的版本还处于初期建设中，包括官方给的demo看起来也比较粗糙。
+          整个开发可能flutter使用的时间人力并不会比原生少。
+(2)方案2 imsdk+ui库tuikit
+1)产品要求要保存永久聊天记录，但是腾讯云免费只保存7天，收费最多保存一年，而tuikit的sdk封装无法替换自己的请求接口
+2)改写tuikit的sdk加载历史记录的接口，改动较大，其中错中复杂，很可能带来其他问题，并给后面的升级带来麻烦
+(3)方案3 imsdk+自定义聊天ui
 
 3 设计
+TAPD:https://www.tapd.cn/20061201/prong/stories/view/1120061201001218552
+个人小店IM实时聊天技术方案：https://www.processon.com/view/link/606c19f7f346fb0aa988f28f
+Task:
+1)接入腾讯云sdk,引入长连接能力
+2)聊天ui开发：聊天页面头部+聊天滑动列表+聊天消息(4种模板)+聊天输入等控件
+3)聊天ui与腾讯云sdk交互能力开发(消息发送、消息监听等)
+4)消息发送检测敏感词汇提示(敏感词汇、卖家超过一定时间无法发送消息) 输入是否可以拦截？
+5)进入聊天页面时提醒通知卡片开发
+6)订单浮层开发
+7)获取聊天页面头部信息接口+聊天历史信息接口+本店订单接口开发
+8)其他：消息举报；
 (1) 腾讯云交互
 1)初始化
 2）登录
@@ -36,8 +64,8 @@ V2TIMConversation.V2TIM_GROUP:群聊；V2TIMConversation.V2TIM_C2C:单聊
 (3)前端交互接口
 1)前端聊天入口
 原生页面Url统跳配置
-字段：腾讯云用户userId(uid, cpId)；来源：商户端，用户端；title/昵称；
-商户端：商店名称，主页
+字段：腾讯云用户userId(uid-个人, cpId-消费号端, skuId-商户端)；来源：电商商户端，用户端；title/昵称；
+商户端-商店名称，主页
 2)举报
 (4)UI
 1）聊天页面
