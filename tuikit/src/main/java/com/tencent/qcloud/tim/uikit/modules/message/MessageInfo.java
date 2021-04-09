@@ -145,6 +145,16 @@ public class MessageInfo {
     private int imgHeight;
     private boolean peerRead;
 
+    public int getChatGroupId() {
+        return chatGroupId;
+    }
+
+    public void setChatGroupId(int chatGroupId) {
+        this.chatGroupId = chatGroupId;
+    }
+
+    private int chatGroupId; //群聊id
+
     private V2TIMMessage timMessage;
 
     /**
