@@ -11,6 +11,10 @@ import com.tencent.qcloud.tim.uikit.base.ITitleBarLayout;
 import com.tencent.qcloud.tim.uikit.component.TitleBarLayout;
 import com.tencent.qcloud.tim.uikit.modules.chat.ChatLayout;
 import com.tencent.qcloud.tim.uikit.modules.chat.base.ChatInfo;
+import com.tencent.qcloud.tim.uikit.modules.chat.layout.input.InputLayout;
+import com.tencent.qcloud.tim.uikit.modules.chat.layout.message.MessageLayout;
+import com.tencent.qcloud.tim.uikit.modules.message.MessageInfo;
+import com.tencent.qcloud.tim.uikit.modules.message.MessageInfoUtil;
 import com.xiaoming.a008project.R;
 
 public class ChatActivity extends AppCompatActivity {
@@ -43,4 +47,21 @@ public class ChatActivity extends AppCompatActivity {
         //获取单聊面板的标题栏
         mTitleBar = mChatLayout.getTitleBar();
     }
+
+    private void buildCustomMessage() {
+        //String data = "{\"text\": \"欢迎加入即时通信 IM 大家庭！查看详情>>\",\"url\": \"https://cloud.tencent.com/product/im"}" ;
+        //MessageInfo info = MessageInfoUtil.buildCustomMessage(data);
+        String data = "{\"text\": \"欢迎加入即时通信 IM 大家庭！查看详情\"}" ;
+        MessageInfo info = MessageInfoUtil.buildCustomMessage(data);
+    }
+
+    private void input(){
+        InputLayout inputLayout = mChatLayout.getInputLayout();
+    }
+
+    private void messageLayout(){
+        MessageLayout messageLayout = mChatLayout.getMessageLayout();
+    }
+
+
 }
