@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.tencent2.qcloud.tim.uikit.modules.contact.FriendProfileLayout
+    <com.tencent.qcloud.tim.uikit.modules.contact.FriendProfileLayout
         android:id="@+id/friend_profile"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

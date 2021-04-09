@@ -9,7 +9,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.TUIKit;
 
 import androidx.core.app.ActivityCompat;

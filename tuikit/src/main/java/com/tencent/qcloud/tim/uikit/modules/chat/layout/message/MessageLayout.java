@@ -6,7 +6,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.component.PopupList;
 import com.tencent.qcloud.tim.uikit.component.action.PopActionClickListener;
 import com.tencent.qcloud.tim.uikit.component.action.PopMenuAction;

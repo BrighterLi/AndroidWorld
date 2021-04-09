@@ -1,4 +1,4 @@
-package com.tencent.tuikit;
+package com.tencent.tecentim;
 
 import android.content.Context;
 

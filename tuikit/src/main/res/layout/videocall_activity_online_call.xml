@@ -19,7 +19,7 @@
         android:visibility="gone"
         app:constraint_referenced_ids="img_sponsor_avatar,tv_sponsor_user_name,tv_sponsor_video_tag,shade_sponsor" />
 
-    <com.tencent2.liteav.trtcvideocalldemo.ui.videolayout.TRTCVideoLayoutManager
+    <com.tencent.liteav.trtcvideocalldemo.ui.videolayout.TRTCVideoLayoutManager
         android:id="@+id/trtc_layout_manager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

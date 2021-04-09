@@ -8,7 +8,7 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.utils.ScreenUtil;
 
 import androidx.appcompat.widget.AppCompatTextView;

@@ -5,7 +5,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.modules.message.MessageInfo;
 
 import java.util.List;

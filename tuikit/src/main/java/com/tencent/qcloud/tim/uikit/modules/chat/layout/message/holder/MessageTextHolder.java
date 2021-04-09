@@ -3,7 +3,7 @@ package com.tencent.qcloud.tim.uikit.modules.chat.layout.message.holder;
 import android.view.View;
 import android.widget.TextView;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.component.face.FaceManager;
 import com.tencent.qcloud.tim.uikit.modules.message.MessageInfo;
 

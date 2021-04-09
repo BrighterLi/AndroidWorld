@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.TUIKit;
 import com.tencent.qcloud.tim.uikit.component.video.CameraInterface;
 import com.tencent.qcloud.tim.uikit.component.video.JCameraView;

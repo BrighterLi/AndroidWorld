@@ -23,7 +23,7 @@
             android:layout_gravity="center"
             android:orientation="vertical">
 
-            <com.tencent2.liteav.trtcvideocalldemo.ui.videolayout.SquareImageView
+            <com.tencent.liteav.trtcvideocalldemo.ui.videolayout.SquareImageView
                 android:id="@+id/img_avatar"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"

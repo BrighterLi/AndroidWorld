@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.utils.TUIKitConstants;
 import com.tencent.qcloud.tim.uikit.utils.ToastUtil;
 

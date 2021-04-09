@@ -15,7 +15,7 @@ import com.tencent.imsdk.v2.V2TIMOfflinePushInfo;
 import com.tencent.imsdk.v2.V2TIMSendCallback;
 import com.tencent.imsdk.v2.V2TIMSignalingListener;
 import com.tencent.liteav.beauty.TXBeautyManager;
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.TUIKit;
 import com.tencent.qcloud.tim.uikit.config.TUIKitConfigs;
 import com.tencent.qcloud.tim.uikit.modules.chat.base.OfflineMessageBean;

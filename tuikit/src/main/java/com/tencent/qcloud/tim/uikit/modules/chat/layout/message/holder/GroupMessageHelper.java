@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.tencent.imsdk.v2.V2TIMCustomElem;
 import com.tencent.imsdk.v2.V2TIMMessage;
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.TUIKit;
 import com.tencent.qcloud.tim.uikit.modules.message.LiveMessageInfo;
 import com.tencent.qcloud.tim.uikit.modules.message.MessageInfo;

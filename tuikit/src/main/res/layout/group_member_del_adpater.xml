@@ -14,7 +14,7 @@
         android:layout_marginLeft="10dp"
         android:button="@drawable/checkbox_selector" />
 
-    <com.tencent2.qcloud.tim.uikit.component.gatherimage.ShadeImageView
+    <com.tencent.qcloud.tim.uikit.component.gatherimage.ShadeImageView
         android:id="@+id/group_member_icon"
         android:layout_width="40dp"
         android:layout_height="40dp"

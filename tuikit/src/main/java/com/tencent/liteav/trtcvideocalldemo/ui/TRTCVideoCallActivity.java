@@ -26,7 +26,7 @@ import com.tencent.liteav.model.TRTCAVCallImpl;
 import com.tencent.liteav.model.TRTCAVCallListener;
 import com.tencent.liteav.trtcvideocalldemo.ui.videolayout.TRTCVideoLayout;
 import com.tencent.liteav.trtcvideocalldemo.ui.videolayout.TRTCVideoLayoutManager;
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.component.picture.imageEngine.impl.GlideEngine;
 import com.tencent.qcloud.tim.uikit.utils.PermissionUtils;
 import com.tencent.qcloud.tim.uikit.utils.TUIKitLog;

@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.component.video.proxy.IPlayer;
 import com.tencent.qcloud.tim.uikit.utils.ImageUtil;
 import com.tencent.qcloud.tim.uikit.utils.ScreenUtil;

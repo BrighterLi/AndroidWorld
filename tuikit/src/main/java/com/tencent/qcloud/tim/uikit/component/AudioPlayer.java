@@ -6,7 +6,7 @@ import android.media.MediaRecorder;
 import android.os.Handler;
 import android.text.TextUtils;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.TUIKit;
 import com.tencent.qcloud.tim.uikit.utils.TUIKitConstants;
 import com.tencent.qcloud.tim.uikit.utils.TUIKitLog;

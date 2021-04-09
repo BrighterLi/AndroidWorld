@@ -7,7 +7,7 @@ import android.text.TextUtils;
 import android.view.View;
 
 import com.tencent.imsdk.v2.V2TIMGroupAtInfo;
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.component.TitleBarLayout;
 import com.tencent.qcloud.tim.uikit.modules.contact.ContactItemBean;
 import com.tencent.qcloud.tim.uikit.modules.contact.ContactListView;

@@ -14,7 +14,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.modules.chat.base.BaseInputFragment;
 import com.tencent.qcloud.tim.uikit.utils.ScreenUtil;
 import com.tencent.qcloud.tim.uikit.utils.SoftKeyBoardUtil;

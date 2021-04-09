@@ -22,7 +22,7 @@ import com.tencent.imsdk.v2.V2TIMTextElem;
 import com.tencent.imsdk.v2.V2TIMVideoElem;
 import com.tencent.liteav.model.CallModel;
 import com.tencent.liteav.model.LiveModel;
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.TUIKit;
 import com.tencent.qcloud.tim.uikit.utils.DateTimeUtil;
 import com.tencent.qcloud.tim.uikit.utils.FileUtil;

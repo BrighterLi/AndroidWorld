@@ -9,7 +9,7 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.wang.avi.AVLoadingIndicatorView;
 
 

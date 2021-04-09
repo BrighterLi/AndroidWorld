@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 
 
 public class FaceGroupIcon extends RelativeLayout {

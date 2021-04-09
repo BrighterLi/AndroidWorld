@@ -13,7 +13,7 @@ import android.util.LruCache;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.TUIKit;
 import com.tencent.qcloud.tim.uikit.config.CustomFaceConfig;
 import com.tencent.qcloud.tim.uikit.utils.ScreenUtil;

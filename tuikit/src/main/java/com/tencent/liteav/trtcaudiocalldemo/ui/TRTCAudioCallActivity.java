@@ -30,7 +30,7 @@ import com.tencent.liteav.model.TRTCAVCallImpl;
 import com.tencent.liteav.model.TRTCAVCallListener;
 import com.tencent.liteav.trtcaudiocalldemo.ui.audiolayout.TRTCAudioLayout;
 import com.tencent.liteav.trtcaudiocalldemo.ui.audiolayout.TRTCAudioLayoutManager;
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.component.picture.imageEngine.impl.GlideEngine;
 import com.tencent.qcloud.tim.uikit.utils.PermissionUtils;
 import com.tencent.qcloud.tim.uikit.utils.TUIKitLog;

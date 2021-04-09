@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
 
-    <com.tencent2.qcloud.tim.uikit.modules.group.member.GroupMemberInviteLayout
+    <com.tencent.qcloud.tim.uikit.modules.group.member.GroupMemberInviteLayout
         android:id="@+id/group_member_invite_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

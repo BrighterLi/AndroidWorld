@@ -9,7 +9,7 @@ import android.graphics.Rect;
 import android.text.TextUtils;
 import android.widget.ImageView;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.component.picture.imageEngine.impl.GlideEngine;
 import com.tencent.qcloud.tim.uikit.modules.conversation.ConversationManagerKit;
 import com.tencent.qcloud.tim.uikit.utils.ImageUtil;

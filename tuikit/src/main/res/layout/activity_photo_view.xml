@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.tencent2.qcloud.tim.uikit.component.photoview.PhotoView
+        <com.tencent.qcloud.tim.uikit.component.photoview.PhotoView
             android:id="@+id/photo_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

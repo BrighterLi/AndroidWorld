@@ -12,7 +12,7 @@ import com.tencent.imsdk.v2.V2TIMGroupMemberFullInfo;
 import com.tencent.imsdk.v2.V2TIMGroupMemberInfoResult;
 import com.tencent.imsdk.v2.V2TIMManager;
 import com.tencent.imsdk.v2.V2TIMValueCallback;
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.component.CustomLinearLayoutManager;
 import com.tencent.qcloud.tim.uikit.component.indexlib.IndexBar.widget.IndexBar;
 import com.tencent.qcloud.tim.uikit.component.indexlib.suspension.SuspensionDecoration;

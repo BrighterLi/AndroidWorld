@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
 
-    <com.tencent2.qcloud.tim.uikit.component.TitleBarLayout
+    <com.tencent.qcloud.tim.uikit.component.TitleBarLayout
         android:id="@+id/group_apply_title_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/page_title_height" />

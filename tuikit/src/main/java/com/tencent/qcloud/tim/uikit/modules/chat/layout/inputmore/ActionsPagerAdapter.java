@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 
 import java.util.ArrayList;
 

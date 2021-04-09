@@ -2,7 +2,7 @@ package com.tencent.qcloud.tim.uikit.modules.group.info;
 
 import android.os.Bundle;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;

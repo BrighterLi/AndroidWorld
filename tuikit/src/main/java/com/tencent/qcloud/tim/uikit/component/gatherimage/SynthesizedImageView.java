@@ -5,7 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.util.AttributeSet;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 
 import java.util.List;
 

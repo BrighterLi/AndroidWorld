@@ -10,7 +10,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.tencent.imsdk.v2.V2TIMMessage;
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.component.gatherimage.UserIconView;
 import com.tencent.qcloud.tim.uikit.config.TUIKitConfigs;
 import com.tencent.qcloud.tim.uikit.modules.message.MessageInfo;

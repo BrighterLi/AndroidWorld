@@ -2,7 +2,7 @@ package com.tencent.qcloud.tim.uikit.utils;
 
 import android.content.Context;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.TUIKit;
 
 import java.util.Calendar;

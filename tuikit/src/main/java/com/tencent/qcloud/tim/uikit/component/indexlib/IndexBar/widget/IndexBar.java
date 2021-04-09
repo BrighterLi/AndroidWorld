@@ -13,7 +13,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.component.CustomLinearLayoutManager;
 import com.tencent.qcloud.tim.uikit.component.indexlib.IndexBar.bean.BaseIndexPinyinBean;
 import com.tencent.qcloud.tim.uikit.component.indexlib.IndexBar.helper.IIndexBarDataHelper;

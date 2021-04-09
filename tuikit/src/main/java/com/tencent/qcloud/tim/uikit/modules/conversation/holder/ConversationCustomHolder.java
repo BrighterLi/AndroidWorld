@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.modules.conversation.base.ConversationIconView;
 import com.tencent.qcloud.tim.uikit.modules.conversation.base.ConversationInfo;
 

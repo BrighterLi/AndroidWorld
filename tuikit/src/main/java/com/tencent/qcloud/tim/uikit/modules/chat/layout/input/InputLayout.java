@@ -25,7 +25,7 @@ import com.tencent.liteav.model.ITRTCAVCall;
 import com.tencent.liteav.trtcaudiocalldemo.ui.TRTCAudioCallActivity;
 import com.tencent.liteav.trtcvideocalldemo.ui.TRTCVideoCallActivity;
 import com.tencent.qcloud.tim.uikit.component.video.view.CameraActivity;
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.TUIKit;
 import com.tencent.qcloud.tim.uikit.base.IUIKitCallBack;
 import com.tencent.qcloud.tim.uikit.component.AudioPlayer;

@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 
 import androidx.appcompat.view.ContextThemeWrapper;
 

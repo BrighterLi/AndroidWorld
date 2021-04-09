@@ -39,13 +39,13 @@
     </LinearLayout>
 
 
-    <com.tencent2.qcloud.tim.uikit.component.video.CaptureLayout
+    <com.tencent.qcloud.tim.uikit.component.video.CaptureLayout
         android:id="@+id/capture_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom" />
 
-    <com.tencent2.qcloud.tim.uikit.component.video.FoucsView
+    <com.tencent.qcloud.tim.uikit.component.video.FoucsView
         android:id="@+id/fouce_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

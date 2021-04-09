@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 
 import java.util.List;
 

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/chat_background_color">
 
-    <com.tencent2.qcloud.tim.uikit.component.TitleBarLayout
+    <com.tencent.qcloud.tim.uikit.component.TitleBarLayout
         android:id="@+id/chat_title_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/page_title_height" />
@@ -16,14 +16,14 @@
         android:layout_height="0.3dp"
         android:background="@color/chat_title_line_color" />
 
-    <com.tencent2.qcloud.tim.uikit.component.NoticeLayout
+    <com.tencent.qcloud.tim.uikit.component.NoticeLayout
         android:id="@+id/chat_group_apply_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_line"
         android:visibility="gone" />
 
-    <com.tencent2.qcloud.tim.uikit.component.NoticeLayout
+    <com.tencent.qcloud.tim.uikit.component.NoticeLayout
         android:id="@+id/chat_notice_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
         android:layout_marginTop="1dp"
         android:visibility="gone" />
 
-    <com.tencent2.qcloud.tim.uikit.modules.chat.layout.message.MessageLayout
+    <com.tencent.qcloud.tim.uikit.modules.chat.layout.message.MessageLayout
         android:id="@+id/chat_message_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
         android:layout_marginEnd="@dimen/btn_margin_right"/>
 
 
-    <com.tencent2.qcloud.tim.uikit.modules.chat.layout.input.InputLayout
+    <com.tencent.qcloud.tim.uikit.modules.chat.layout.input.InputLayout
         android:id="@+id/chat_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -2,7 +2,7 @@ package com.tencent.qcloud.tim.uikit.component.video.util;
 
 import android.os.Build;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.TUIKit;
 
 public class DeviceUtil {

@@ -4,7 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.tencent.tuikit.R;
+import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.TUIKit;
 import com.tencent.qcloud.tim.uikit.modules.chat.layout.message.MessageLayout;
 import com.tencent.qcloud.tim.uikit.modules.chat.layout.message.MessageLayoutUI;

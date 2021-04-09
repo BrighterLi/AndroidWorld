@@ -34,7 +34,7 @@ import com.tencent.qcloud.tim.uikit.modules.message.MessageRevokedManager;
 import com.tencent.qcloud.tim.uikit.utils.BackgroundTasks;
 import com.tencent.qcloud.tim.uikit.utils.FileUtil;
 import com.tencent.qcloud.tim.uikit.utils.TUIKitLog;
-import com.tencent.tuikit.BuildConfig;
+import com.tencent.tecentim.BuildConfig;
 
 import java.io.File;
 import java.lang.reflect.Field;
