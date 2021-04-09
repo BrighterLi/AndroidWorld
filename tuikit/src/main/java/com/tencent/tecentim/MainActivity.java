@@ -7,43 +7,34 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import com.tencent.tecentim.callback.LoginCallBack;
+import com.tencent.tecentim.view.card.TranslucentActivity;
 
-public class MainActivity extends AppCompatActivity {
-    private EditText mEtUserId;
-    private EditText mEtOtherUserId;
-    private Button mBtTalking;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+   private Button mBtIm;
+   private Button mBtTranslucent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TencentImManager.initSDK(getApplication());
         setContentView(R.layout.activity_main);
 
-        mEtUserId = findViewById(R.id.et_user_id);
-        mEtOtherUserId = findViewById(R.id.et_other_user_id);
-        mBtTalking = findViewById(R.id.bt_talking);
-        mBtTalking.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //自己的UserId
-                String userId = mEtUserId.getText().toString();
-                Log.i("ChatActivity", "bright8#自己的userId:" + userId);
-                TencentImManager.login(userId, new LoginCallBack() {
-                    @Override
-                    public void onSuccess() {
-                        Intent intent =  new Intent();
-                        //聊天对象的UserId
-                        String userOtherId = mEtOtherUserId.getText().toString();
-                        intent.putExtra("userId", userOtherId);
-                        intent.setClass(MainActivity.this, ChatActivity.class);
-                        startActivity(intent);
-                    }
-                });
+        mBtIm = findViewById(R.id.bt_im);
+        mBtTranslucent = findViewById(R.id.bt_translucent_activity);
+        mBtIm.setOnClickListener(this);
+        mBtTranslucent.setOnClickListener(this);
+    }
 
-            }
-        });
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.bt_im:
+                startActivity(new Intent(MainActivity.this, ImTestActivity.class));
+                break;
+            case R.id.bt_translucent_activity:
+                startActivity(new Intent(MainActivity.this, TranslucentActivity.class));
+                break;
+        }
     }
 }
