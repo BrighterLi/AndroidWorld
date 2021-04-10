@@ -26,7 +26,7 @@
     </com.tencent.tecentim.view.card.RoundLinearLayout>
 
     <include
-        android:id="@+id/include_im_card"
+        android:id="@+id/im_card"
         layout="@layout/im_card"
         android:layout_marginTop="14dp"
         android:layout_marginLeft="12dp"

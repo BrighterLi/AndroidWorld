@@ -41,7 +41,7 @@
                     android:textColor="#FF050C1C"
                     android:text="SWAOVSKI施华洛世奇含蓄羽毛链坠项链女锁骨链"/>
                 <ImageView
-                    android:id="@+id/iv_close"
+                    android:id="@+id/iv_card_close"
                     android:layout_width="14dp"
                     android:layout_height="14dp"
                     android:layout_marginTop="5dp"
@@ -84,7 +84,7 @@
                         android:textSize="10sp"
                         android:text="￥"/>
                     <TextView
-                        android:id="@+id/tv_sale_really_price"
+                        android:id="@+id/tv_card_price"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#FFFF3D77"
@@ -137,6 +137,7 @@
                 </LinearLayout>
                 
                 <com.tencent.tecentim.view.card.RoundTextView
+                    android:id="@+id/card_send_message"
                     android:layout_width="75dp"
                     android:layout_height="30dp"
                     android:textSize="12sp"

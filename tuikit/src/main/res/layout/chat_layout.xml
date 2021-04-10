@@ -16,18 +16,22 @@
         android:layout_height="0.3dp"
         android:background="@color/chat_title_line_color" />
 
-    <View
-        android:id="@+id/view_space"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
+    <include
+        android:id="@+id/im_card"
+        layout="@layout/im_card"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="13dp"
         android:layout_below="@+id/view_line"
-        android:background="@color/green"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 
     <com.tencent.qcloud.tim.uikit.component.NoticeLayout
         android:id="@+id/chat_group_apply_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/view_space"
+        android:layout_below="@+id/im_card"
         android:visibility="gone" />
 
     <com.tencent.qcloud.tim.uikit.component.NoticeLayout

@@ -1,6 +1,8 @@
 package com.tencent.qcloud.tim.uikit.modules.chat.interfaces;
 
+import android.view.View;
 import android.widget.TextView;
+import android.widget.ImageView;
 
 import com.tencent.qcloud.tim.uikit.base.ILayout;
 import com.tencent.qcloud.tim.uikit.component.NoticeLayout;
@@ -10,6 +12,7 @@ import com.tencent.qcloud.tim.uikit.modules.chat.base.ChatInfo;
 import com.tencent.qcloud.tim.uikit.modules.chat.layout.input.InputLayout;
 import com.tencent.qcloud.tim.uikit.modules.chat.layout.message.MessageLayout;
 import com.tencent.qcloud.tim.uikit.modules.message.MessageInfo;
+import com.tencent.tecentim.view.card.RoundTextView;
 
 /**
  * 聊天窗口 {@link ChatLayout} 提供了消息的展示与发送等功能，界面布局从上到下分为四个部分: <br>
@@ -77,5 +80,13 @@ public interface IChatLayout extends ILayout {
      */
     void sendMessage(MessageInfo msg, boolean retry);
 
+    View getCardView();
+
     TextView getAtInfoLayout();
+
+    TextView getCardPriceTv(); //卡片上商品售价
+
+    ImageView getCardCloseIv(); //卡片关闭
+
+    RoundTextView getCardSendMessageBt(); //卡片发送消息
 }

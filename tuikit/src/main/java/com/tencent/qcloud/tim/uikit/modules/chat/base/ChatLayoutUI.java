@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.LinearLayout;
 
 import com.tencent.tecentim.R;
 import com.tencent.qcloud.tim.uikit.component.NoticeLayout;
@@ -14,6 +15,7 @@ import com.tencent.qcloud.tim.uikit.modules.chat.interfaces.IChatLayout;
 import com.tencent.qcloud.tim.uikit.modules.chat.layout.input.InputLayout;
 import com.tencent.qcloud.tim.uikit.modules.chat.layout.message.MessageLayout;
 import com.tencent.qcloud.tim.uikit.modules.message.MessageInfo;
+import com.tencent.tecentim.view.card.RoundTextView;
 
 import androidx.annotation.Nullable;
 
@@ -29,6 +31,13 @@ public abstract class ChatLayoutUI extends LinearLayout implements IChatLayout {
     private NoticeLayout mNoticeLayout;
     private ChatInfo mChatInfo;
     private TextView mChatAtInfoLayout;
+
+    private View mCardView;
+    private TextView mCardPriceTv;
+    private ImageView mCardCloseIv;
+    private RoundTextView mCardSendMessageBt;
+
+
 
     public ChatLayoutUI(Context context) {
         super(context);
@@ -58,6 +67,11 @@ public abstract class ChatLayoutUI extends LinearLayout implements IChatLayout {
         mGroupApplyLayout = findViewById(R.id.chat_group_apply_layout);
         mNoticeLayout = findViewById(R.id.chat_notice_layout);
         mChatAtInfoLayout = findViewById(R.id.chat_at_text_view);
+
+        mCardView = findViewById(R.id.im_card);
+        mCardPriceTv = findViewById(R.id.im_card).findViewById(R.id.tv_card_price);
+        mCardCloseIv = findViewById(R.id.im_card).findViewById(R.id.iv_card_close);
+        mCardSendMessageBt = findViewById(R.id.im_card).findViewById(R.id.card_send_message);
 
         init();
     }
@@ -90,6 +104,8 @@ public abstract class ChatLayoutUI extends LinearLayout implements IChatLayout {
     public TextView getAtInfoLayout() {
         return mChatAtInfoLayout;
     }
+
+
 
     @Override
     public void setChatInfo(ChatInfo chatInfo) {
@@ -125,6 +141,25 @@ public abstract class ChatLayoutUI extends LinearLayout implements IChatLayout {
     @Override
     public TitleBarLayout getTitleBar() {
         return mTitleBar;
+    }
+
+    @Override
+    public View getCardView() {
+        return mCardView;
+    }
+
+    @Override
+    public TextView getCardPriceTv() {
+        return  mCardPriceTv;
+    }
+
+    public ImageView getCardCloseIv() {
+        return mCardCloseIv;
+    }
+
+    @Override
+    public RoundTextView getCardSendMessageBt() {
+        return mCardSendMessageBt;
     }
 
     @Override

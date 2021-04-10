@@ -1,6 +1,5 @@
 package com.tencent.tecentim.messagehelper;
 
-import android.app.Application;
 import android.content.Context;
 import android.util.Log;
 import android.view.View;
@@ -8,19 +7,20 @@ import android.view.View;
 import com.google.gson.Gson;
 import com.tencent.imsdk.v2.V2TIMCustomElem;
 import com.tencent.imsdk.v2.V2TIMMessage;
-import com.tencent.liteav.login.ProfileManager;
 import com.tencent.qcloud.tim.uikit.modules.chat.ChatLayout;
 import com.tencent.qcloud.tim.uikit.modules.chat.layout.input.InputLayout;
 import com.tencent.qcloud.tim.uikit.modules.chat.layout.inputmore.InputMoreActionUnit;
 import com.tencent.qcloud.tim.uikit.modules.chat.layout.message.MessageLayout;
 import com.tencent.qcloud.tim.uikit.modules.chat.layout.message.holder.ICustomMessageViewGroup;
-import com.tencent.qcloud.tim.uikit.modules.chat.layout.message.holder.IGroupMessageClickListener;
 import com.tencent.qcloud.tim.uikit.modules.chat.layout.message.holder.IOnCustomMessageDrawListener;
-import com.tencent.qcloud.tim.uikit.modules.message.LiveMessageInfo;
 import com.tencent.qcloud.tim.uikit.modules.message.MessageInfo;
 import com.tencent.qcloud.tim.uikit.modules.message.MessageInfoUtil;
 import com.tencent.qcloud.tim.uikit.utils.TUIKitConstants;
 import com.tencent.tecentim.R;
+import com.tencent.tecentim.messagehelper.custommessage.CustomCardMessage;
+import com.tencent.tecentim.messagehelper.custommessage.CustomCardMessageTIMUIController;
+import com.tencent.tecentim.messagehelper.custommessage.CustomHelloMessage;
+import com.tencent.tecentim.messagehelper.custommessage.CustomHelloMessageTIMUIController;
 
 public class ChatLayoutHelper {
 
@@ -52,7 +52,7 @@ public class ChatLayoutHelper {
             @Override
             public void onClick(View v) {
                 Gson gson = new Gson();
-                CustomCardMessage customHelloMessage = new CustomCardMessage();
+                CustomHelloMessage customHelloMessage = new CustomHelloMessage();
                 customHelloMessage.version = TUIKitConstants.version;
                 customHelloMessage.text = MyApplication.instance().getString(R.string.welcome_tip);
                 customHelloMessage.link = "https://cloud.tencent.com/document/product/269/3794";
@@ -82,19 +82,27 @@ public class ChatLayoutHelper {
             }
             V2TIMCustomElem elem = info.getTimMessage().getCustomElem();
             // 自定义的json数据，需要解析成bean实例
+            //CustomHelloMessage data = null;
             CustomCardMessage data = null;
             try {
+                //data = new Gson().fromJson(new String(elem.getData()), CustomHelloMessage.class);
                 data = new Gson().fromJson(new String(elem.getData()), CustomCardMessage.class);
             } catch (Exception e) {
                 Log.w(TAG, "bright8#invalid json: " + new String(elem.getData()) + " " + e.getMessage());
             }
-            if (data == null) {
+            /*if (data == null) {
                 Log.e(TAG, "bright8#No Custom Data: " + new String(elem.getData()));
             } else if (data.version == TUIKitConstants.JSON_VERSION_1
                     || (data.version == TUIKitConstants.JSON_VERSION_4 && data.businessID.equals("text_link"))) {
-                CustomCardMessageTIMUIController.onDraw(parent, data);
+                CustomHelloMessageTIMUIController.onDraw(parent, data);
             } else {
                 Log.w(TAG, "bright8#unsupported version: " + data);
+            }*/
+
+            if(data == null) {
+                Log.e(TAG, "bright8#No Custom Data: " + new String(elem.getData()));
+            } else {
+                CustomCardMessageTIMUIController.onDraw(parent, data);
             }
         }
     }

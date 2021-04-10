@@ -1,6 +1,5 @@
-package com.tencent.tecentim.messagehelper;
+package com.tencent.tecentim.messagehelper.custommessage;
 
-import android.app.Application;
 import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
@@ -11,12 +10,13 @@ import android.widget.TextView;
 import com.tencent.qcloud.tim.uikit.modules.chat.layout.message.holder.ICustomMessageViewGroup;
 import com.tencent.qcloud.tim.uikit.utils.ToastUtil;
 import com.tencent.tecentim.R;
+import com.tencent.tecentim.messagehelper.MyApplication;
 
-public class CustomCardMessageTIMUIController {
+public class CustomHelloMessageTIMUIController {
 
-    private static final String TAG = CustomCardMessageTIMUIController.class.getSimpleName();
+    private static final String TAG = CustomHelloMessageTIMUIController.class.getSimpleName();
 
-    public static void onDraw(ICustomMessageViewGroup parent, final CustomCardMessage data) {
+    public static void onDraw(ICustomMessageViewGroup parent, final CustomHelloMessage data) {
 
         // 把自定义消息view添加到TUIKit内部的父容器里
         View view = LayoutInflater.from(MyApplication.instance()).inflate(R.layout.test_custom_message_layout1, null, false);

@@ -20,7 +20,9 @@ public class IncludeTestActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_include_test);
 
-       textView = findViewById(R.id.include_im_card).findViewById(R.id.tv_sale_really_price);
-       textView.setText("500");
+        View cardView = findViewById(R.id.im_card);
+        //cardView.setVisibility(View.GONE);
+        textView = findViewById(R.id.im_card).findViewById(R.id.tv_card_price);
+        textView.setText("500");
     }
 }
