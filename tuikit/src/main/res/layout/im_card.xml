@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/include_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.tencent.tecentim.view.card.RoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:orientation="horizontal"
+        app:rv_cornerRadius="6dp"
+        app:rv_backgroundColor="#FFFFFFFF">
+        
+        <ImageView
+            android:id="@+id/iv_product"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="11dp"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/im_card_product"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp">
+
+            <RelativeLayout
+                android:id="@+id/card_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_product_title"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:textSize="14sp"
+                    android:textColor="#FF050C1C"
+                    android:text="SWAOVSKI施华洛世奇含蓄羽毛链坠项链女锁骨链"/>
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv_product_title"
+                    android:src="@drawable/im_card_close"/>
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/card_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/card_top">
+
+                <LinearLayout
+                    android:id="@+id/ll_sale_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_sale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF84888F"
+                        android:textSize="10sp"
+                        android:maxLines="1"
+                        android:text="售价:"/>
+                    <TextView
+                        android:id="@+id/tv_money_symbol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFF3D77"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        android:textSize="10sp"
+                        android:text="￥"/>
+                    <TextView
+                        android:id="@+id/tv_sale_really_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFF3D77"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        android:textSize="14sp"
+                        android:text="499"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_month_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/ll_sale_price">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF84888F"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="20dp"
+                        android:maxLines="1"
+                        android:textSize="9sp"
+                        android:text="月供:"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFF3D77"
+                        android:layout_marginTop="20dp"
+                        android:maxLines="1"
+                        android:textSize="10sp"
+                        android:text="￥"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFF3D77"
+                        android:layout_marginTop="20dp"
+                        android:maxLines="1"
+                        android:textSize="9sp"
+                        android:text="27.39"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF84888F"
+                        android:layout_marginTop="20dp"
+                        android:maxLines="1"
+                        android:textSize="9sp"
+                        android:text="起"/>
+                </LinearLayout>
+                
+                <com.tencent.tecentim.view.card.RoundTextView
+                    android:layout_width="75dp"
+                    android:layout_height="30dp"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="#FFFFFFFF"
+                    app:rv_cornerRadius="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginBottom="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    app:rv_backgroundColor="#FFFF3D77"
+                    android:text="发给商家"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.tencent.tecentim.view.card.RoundLinearLayout>
+
+
+</LinearLayout>

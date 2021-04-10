@@ -459,7 +459,11 @@ public class FaceDetectView extends RelativeLayout implements SurfaceHolder.Call
         mMediaPlayer.reset();
         Uri uri = Uri.parse(mVideoPath); //通过文件的路径String转化成Uri
         mMediaPlayer = MediaPlayer.create(getContext(), uri);
-        mMediaPlayer.setDataSource(mVideoPath);
+        try {
+            mMediaPlayer.setDataSource(mVideoPath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
         mMediaPlayer.setDisplay(mSurfaceHolder); //视频播放？
         try {

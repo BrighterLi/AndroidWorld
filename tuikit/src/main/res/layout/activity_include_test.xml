@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF0F0F0"
+    android:orientation="vertical"
+    tools:context="com.tencent.tecentim.view.card.IncludeTestActivity">
+
+    <com.tencent.tecentim.view.card.RoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="13dp"
+        app:rv_backgroundColor="@color/green"
+        app:rv_cornerRadius="6dp">
+
+        <TextView
+            android:id="@+id/include_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="include test"/>
+
+    </com.tencent.tecentim.view.card.RoundLinearLayout>
+
+    <include
+        android:id="@+id/include_im_card"
+        layout="@layout/im_card"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+   <!-- <include
+        android:id="@+id/include_content"
+        layout="@layout/include_test"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />-->
+
+</LinearLayout>
