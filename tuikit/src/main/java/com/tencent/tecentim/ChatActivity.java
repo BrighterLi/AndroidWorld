@@ -11,6 +11,9 @@ import com.tencent.imsdk.v2.V2TIMConversation;
 import com.tencent.qcloud.tim.uikit.component.TitleBarLayout;
 import com.tencent.qcloud.tim.uikit.modules.chat.ChatLayout;
 import com.tencent.qcloud.tim.uikit.modules.chat.base.ChatInfo;
+import com.tencent.qcloud.tim.uikit.modules.message.MessageInfo;
+import com.tencent.qcloud.tim.uikit.modules.message.MessageInfoUtil;
+import com.tencent.tecentim.messagehelper.ChatLayoutHelper;
 
 public class ChatActivity extends AppCompatActivity {
     private ChatLayout mChatLayout;
@@ -27,6 +30,9 @@ public class ChatActivity extends AppCompatActivity {
         userId = intent.getStringExtra("userId");
         Log.i("ChatActivity", "bright8#聊天对象userId:" + userId);
         initView();
+
+        ChatLayoutHelper helper = new ChatLayoutHelper(this);
+        helper.customizeChatLayout(mChatLayout);
     }
 
     private void initView() {
@@ -43,4 +49,9 @@ public class ChatActivity extends AppCompatActivity {
     }
 
 
+    private void buildCustomMessage() {
+        String str = "{\"text\": \"欢迎加入即时通信 IM 大家庭！查看详情>>\",\"url\": \"https://cloud.tencent.com/product/im\"}";
+        MessageInfo info = MessageInfoUtil.buildCustomMessage(str);
+        mChatLayout.sendMessage(info, false);
+    }
 }
