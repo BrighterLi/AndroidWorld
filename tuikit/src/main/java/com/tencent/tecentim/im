@@ -1,0 +1,7 @@
+1 实现点
+(1) 聊天页面
+(2) 订单悬浮页
+1）透明Activity
+2）分页请求
+RecyclerView分页加载:https://blog.csdn.net/chenyingjie_android/article/details/101485353
+3）TabLayout+ViewPager+Fragment+RecyclerView
