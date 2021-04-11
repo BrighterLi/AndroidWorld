@@ -88,7 +88,9 @@ public class ChatActivity extends AppCompatActivity {
                     customCardMessage.salePrice = "700";
                     String data = gson.toJson(customCardMessage);
                     MessageInfo info = MessageInfoUtil.buildCustomMessage(data);
-                    //mChatLayout.getMessageLayout().setRightBubble(new ColorDrawable(0xFFFFFFFF));
+                    if(info.getMsgType() == MessageInfo.MSG_TYPE_CUSTOM_FACE) {
+                        mChatLayout.getMessageLayout().setRightBubble(new ColorDrawable(0xFFFFFFFF));
+                    }
                     mChatLayout.sendMessage(info, false);
                     mCardView.setVisibility(View.GONE);
                 }

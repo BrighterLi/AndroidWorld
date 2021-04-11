@@ -107,4 +107,55 @@
         <attr name="rv_cornerRadius_BR"/>
         <attr name="rv_isRippleEnable"/>
     </declare-styleable>
+
+    <!--XTabLayout-->
+    <declare-styleable name="XTabLayout">
+        <attr name="x_tabIndicatorRoundRect" format="boolean"/>
+        <attr name="x_tabIndicatorAnimation" format="boolean"/>
+        <attr name="x_tabIndicatorColor" format="color"/>
+        <attr name="x_tabIndicatorHeight" format="dimension"/>
+        <attr name="x_tabIndicatorWidth" format="dimension"/>
+        <attr name="x_tabContentStart" format="dimension"/>
+        <attr name="x_tabBackground" format="reference"/>
+        <attr name="x_tabMode">
+            <enum name="scrollable" value="0"/>
+            <enum name="fixed" value="1"/>
+        </attr>
+        <attr name="x_tabGravity">
+            <enum name="fill" value="0"/>
+            <enum name="center" value="1"/>
+        </attr>
+        <attr name="x_tabMinWidth" format="dimension"/>
+        <attr name="x_tabMaxWidth" format="dimension"/>
+        <attr name="x_tabTextAppearance" format="reference"/>
+        <attr name="x_tabTextColor" format="color"/>
+        <attr name="x_tabSelectedTextColor" format="color"/>
+        <attr name="x_tabPaddingStart" format="dimension"/>
+        <attr name="x_tabPaddingTop" format="dimension"/>
+        <attr name="x_tabPaddingEnd" format="dimension"/>
+        <attr name="x_tabPaddingBottom" format="dimension"/>
+        <attr name="x_tabPadding" format="dimension"/>
+        <attr name="x_indicatorMarginTop" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="XTabItem">
+        <attr name="android:text"/>
+        <attr name="android:icon"/>
+        <attr name="android:layout"/>
+    </declare-styleable>
+
+    <declare-styleable name="MaxRecyclerView">
+        <attr name="maxHeightRate" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircularProgressView">
+        <attr name="f_bgWidth" format="dimension" />    <!--背景圆环宽度-->
+        <attr name="f_progressWidth" format="dimension" />    <!--进度圆环宽度-->
+        <attr name="f_bgColor" format="color" />        <!--背景圆环颜色-->
+        <attr name="f_progressColor" format="color" />        <!--进度圆环颜色-->
+        <attr name="f_progressStartColor" format="color" />   <!--进度圆环开始颜色-->
+        <attr name="f_progressFirstColor" format="color" />   <!--进度圆环结束颜色-->
+        <attr name="f_progress" format="integer" />       <!--圆环进度-->
+        <attr name="f_progressPadding" format="dimension" />  <!--进度条内边距-->
+    </declare-styleable>
 </resources>

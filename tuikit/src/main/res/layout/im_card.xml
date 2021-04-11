@@ -51,8 +51,6 @@
                     android:src="@drawable/im_card_close"/>
             </RelativeLayout>
 
-
-
             <RelativeLayout
                 android:id="@+id/card_bottom"
                 android:layout_width="match_parent"

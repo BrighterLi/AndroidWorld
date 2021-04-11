@@ -1,6 +1,7 @@
 package com.tencent.tecentim.messagehelper;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 
@@ -14,13 +15,10 @@ import com.tencent.qcloud.tim.uikit.modules.chat.layout.message.MessageLayout;
 import com.tencent.qcloud.tim.uikit.modules.chat.layout.message.holder.ICustomMessageViewGroup;
 import com.tencent.qcloud.tim.uikit.modules.chat.layout.message.holder.IOnCustomMessageDrawListener;
 import com.tencent.qcloud.tim.uikit.modules.message.MessageInfo;
-import com.tencent.qcloud.tim.uikit.modules.message.MessageInfoUtil;
-import com.tencent.qcloud.tim.uikit.utils.TUIKitConstants;
 import com.tencent.tecentim.R;
 import com.tencent.tecentim.messagehelper.custommessage.CustomCardMessage;
 import com.tencent.tecentim.messagehelper.custommessage.CustomCardMessageTIMUIController;
-import com.tencent.tecentim.messagehelper.custommessage.CustomHelloMessage;
-import com.tencent.tecentim.messagehelper.custommessage.CustomHelloMessageTIMUIController;
+import com.tencent.tecentim.order.ProductOrderActivity;
 
 public class ChatLayoutHelper {
 
@@ -51,7 +49,7 @@ public class ChatLayoutHelper {
         unit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Gson gson = new Gson();
+                /*Gson gson = new Gson();
                 CustomHelloMessage customHelloMessage = new CustomHelloMessage();
                 customHelloMessage.version = TUIKitConstants.version;
                 customHelloMessage.text = MyApplication.instance().getString(R.string.welcome_tip);
@@ -59,7 +57,10 @@ public class ChatLayoutHelper {
 
                 String data = gson.toJson(customHelloMessage);
                 MessageInfo info = MessageInfoUtil.buildCustomMessage(data);
-                layout.sendMessage(info, false);
+                layout.sendMessage(info, false);*/
+
+                mContext.startActivity(new Intent(mContext, ProductOrderActivity.class));
+
             }
         });
         inputLayout.addAction(unit);
