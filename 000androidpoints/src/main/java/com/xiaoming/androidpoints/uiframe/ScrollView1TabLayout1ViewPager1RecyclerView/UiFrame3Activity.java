@@ -2,11 +2,13 @@ package com.xiaoming.androidpoints.uiframe.ScrollView1TabLayout1ViewPager1Recycl
 
 import androidx.annotation.Nullable;
 import com.google.android.material.tabs.TabLayout;
-import androidx.core.app.Fragment;
-import androidx.core.app.FragmentPagerAdapter;
-import androidx.core.view.ViewPager;
+
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
 import android.util.ArrayMap;
 import android.view.View;
 import android.widget.LinearLayout;

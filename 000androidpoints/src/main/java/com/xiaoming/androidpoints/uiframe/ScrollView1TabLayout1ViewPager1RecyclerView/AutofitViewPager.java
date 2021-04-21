@@ -3,7 +3,7 @@ package com.xiaoming.androidpoints.uiframe.ScrollView1TabLayout1ViewPager1Recycl
 import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.view.ViewPager;
+import androidx.viewpager.widget.ViewPager;
 import android.util.AttributeSet;
 import android.view.View;
 

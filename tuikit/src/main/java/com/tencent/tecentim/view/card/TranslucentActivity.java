@@ -2,10 +2,17 @@ package com.tencent.tecentim.view.card;
 
 
 import android.app.Activity;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
 
 
 import com.tencent.tecentim.R;
+
+import androidx.annotation.RequiresApi;
+import androidx.fragment.app.FragmentActivity;
 
 //聊天入口进去后显示的卡片实现方案：
 //方案1：透明的Activity；要求：不能遮挡住之前界面ActionBar和底部输入ui,而且还可以和这两部分进行操作
@@ -14,11 +21,17 @@ import com.tencent.tecentim.R;
 //方案2：把这个View放在ChatLayout的里面，这样要改封装好的ChatLayout的布局
 
 //Android设置Activity背景为透明style的方法:https://www.jianshu.com/p/9b38dc864354
-public class TranslucentActivity extends Activity {
+public class TranslucentActivity extends FragmentActivity {
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Window window = getWindow();
+        window.getDecorView().setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+        window.setStatusBarColor(Color.TRANSPARENT);
         setContentView(R.layout.activity_translucent);
 
     }

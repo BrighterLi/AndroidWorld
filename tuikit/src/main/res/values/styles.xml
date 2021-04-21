@@ -42,6 +42,13 @@
         <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item> <!-- 窗口样式Dialog -->
     </style>
 
+    <style name="MyTransparent2" parent="@style/AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
     <style name="XTabLayout_Default_Style" parent="Base.Widget.Design.TabLayout">
         <item name="x_tabMaxWidth">264dp</item>
         <item name="x_tabIndicatorColor">?attr/colorAccent</item>

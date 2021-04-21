@@ -22,7 +22,7 @@
         <activity android:name=".view.card.IncludeTestActivity" />
         <activity
             android:name=".view.card.TranslucentActivity"
-            android:theme="@style/MyTransparent" />
+            android:theme="@style/MyTransparent2" />
         <activity android:name=".ImTestActivity" />
         <activity android:name=".ChatActivity" />
         <activity android:name=".MainActivity">
