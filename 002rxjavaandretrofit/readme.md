@@ -1,1 +1,0 @@
-Android RxJava+Retrofit实现：https://www.jianshu.com/p/e67d8ec9e44d
