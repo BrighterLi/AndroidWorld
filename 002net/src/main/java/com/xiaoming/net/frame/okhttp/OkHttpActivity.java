@@ -1,4 +1,4 @@
-package com.xiaoming.frameokhttp;
+package com.xiaoming.net.frame.okhttp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,10 +15,11 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
+import com.xiaoming.net.R;
+
+
 //https://blog.csdn.net/Song74110/article/details/53998052
-
-
-public class MainActivity extends AppCompatActivity {
+public class OkHttpActivity extends AppCompatActivity {
     private Button btGet;
     private Button btPost;
     private TextView tvShow;
@@ -26,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_ok_http);
+
         initView();
     }
-
     private void initView() {
         btGet = findViewById(R.id.bt_get);
         btPost = findViewById(R.id.bt_post);
