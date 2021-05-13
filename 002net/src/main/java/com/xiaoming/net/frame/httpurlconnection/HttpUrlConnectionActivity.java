@@ -1,10 +1,14 @@
-package com.xiaoming.a002nethttpurlconnection;
+package com.xiaoming.net.frame.httpurlconnection;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.xiaoming.net.MainActivity;
+import com.xiaoming.net.R;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
@@ -18,7 +22,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class MainActivity extends AppCompatActivity {
+public class HttpUrlConnectionActivity extends AppCompatActivity {
     private Button btnGet;
     private Button btnPost;
     private TextView tvShow;
@@ -27,11 +31,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_http_url_connection);
 
         initView();
     }
-
     private void initView() {
         btnGet = findViewById(R.id.btn_get);
         btnPost = findViewById(R.id.btn_post);
@@ -44,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         resultStr = httpGet("http://www.baidu.com");
-                        MainActivity.this.runOnUiThread(new Runnable() {
+                        HttpUrlConnectionActivity.this.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
                                 tvShow.setText(resultStr);
@@ -59,16 +62,16 @@ public class MainActivity extends AppCompatActivity {
         btnPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                httpPost();
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            httpPost();
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
-                    }).start();
+                    }
+                }).start();
             }
         });
     }
@@ -207,3 +210,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+
