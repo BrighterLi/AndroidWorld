@@ -1,6 +1,6 @@
 Rxjava;:RxJava+Retrofit+MVP+Dagger2（
 1 Rxjava,RxAndroid
-***经典案例：RxAndroid从零开始学习之一(RxJava的简单Demo):https://cloud.tencent.com/developer/article/1383095
+经典案例：RxAndroid从零开始学习之一(RxJava的简单Demo):https://cloud.tencent.com/developer/article/1383095
 (1)RxAndroid其实只是RxJava的一个扩展，它在RxJava的基础上添加了一些针对Android系统的新API。
 RxJava是用来解决异步工作问题的，在Android中特别恼火的多线程开发问题上游刃有余
 Rxjava是对网络连接处理和图片加载处理非常好用的异步操作方法，类似于Android中的AysncTask、Handler

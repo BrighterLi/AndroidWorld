@@ -17,8 +17,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".frame.httpurlconnection.HttpUrlConnectionActivity"></activity>
+        <activity android:name=".frame.retrofit.RetrofitActivity"></activity>
+        <activity android:name=".frame.httpurlconnection.HttpUrlConnectionActivity" />
         <activity android:name=".frame.okhttp.OkHttpActivity" />
+        <activity android:name=".frame.retrofit.asyncget2.AsyncGet2Activity" />
+
+        <activity android:name=".frame.retrofit.synget.SynGetActivity"/>
+        <activity android:name=".frame.retrofit.asynget.GetActivity"/>
+        <activity android:name=".frame.retrofit.cache.CacheActivity"/>
+        <activity android:name=".frame.retrofit.download.DownloadActivity"/>
+        <activity android:name=".frame.retrofit.get3.Get3Activity"/>
+        <activity android:name=".frame.retrofit.Interceptor.InterceptorActivity"/>
+        <activity android:name=".frame.retrofit.post.PostActivity"/>
+        <activity android:name=".frame.retrofit.post2.Post2Activity"/>
+        <activity android:name=".frame.retrofit.upload.UploadActivity"/>
+
+
         <activity android:name=".frame.rxjava.download.DownloadActivity" />
         <activity android:name=".frame.rxjava.RxjavaTestActivity" />
         <activity android:name=".frame.FrameTestActivity" />
