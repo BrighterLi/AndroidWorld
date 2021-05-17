@@ -35,4 +35,35 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+
+    // 依赖RxAndroid 2X 的依赖库
+    // 增加RxJava 2X 的依赖库
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.7'
+
+    // OkHttp相关
+    implementation 'com.facebook.stetho:stetho:1.4.2'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.4.2'
+
+    // 网络请求相关
+    implementation "com.squareup.retrofit2:retrofit:2.4.0"
+    implementation "com.squareup.retrofit2:retrofit-mock:2.4.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.4.0"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.5.0'
+    implementation "com.squareup.retrofit2:converter-scalars:2.4.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.4.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.4.0"
+
+    implementation "com.google.code.gson:gson:2.8.2"
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.1.1' // 操作功能防抖
+
+    // 让其有生命周期相关的依赖支持
+    implementation 'com.trello.rxlifecycle2:rxlifecycle:2.2.1'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-android:2.2.1'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.1'
+
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 }
