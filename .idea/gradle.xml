@@ -4,9 +4,7 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <compositeConfiguration>
-          <compositeBuild compositeDefinitionSource="SCRIPT" />
-        </compositeConfiguration>
+        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
@@ -15,12 +13,9 @@
             <option value="$PROJECT_DIR$/000algorithm" />
             <option value="$PROJECT_DIR$/000androidpoints" />
             <option value="$PROJECT_DIR$/000designmode" />
+            <option value="$PROJECT_DIR$/000keeplearning" />
             <option value="$PROJECT_DIR$/001view" />
             <option value="$PROJECT_DIR$/002net" />
-            <option value="$PROJECT_DIR$/002nethttpurlconnection" />
-            <option value="$PROJECT_DIR$/002netretrofit" />
-            <option value="$PROJECT_DIR$/002netrxjavaandokhttpandretrofit" />
-            <option value="$PROJECT_DIR$/002rxjavaandretrofit" />
             <option value="$PROJECT_DIR$/003thread" />
             <option value="$PROJECT_DIR$/004performance" />
             <option value="$PROJECT_DIR$/004performanceapm" />
@@ -44,8 +39,6 @@
             <option value="$PROJECT_DIR$/framelifecycle" />
             <option value="$PROJECT_DIR$/framemvc" />
             <option value="$PROJECT_DIR$/framemvp" />
-            <option value="$PROJECT_DIR$/frameokhttp" />
-            <option value="$PROJECT_DIR$/frameretrofit" />
             <option value="$PROJECT_DIR$/fuctionchoosephotoandcrop" />
             <option value="$PROJECT_DIR$/function" />
             <option value="$PROJECT_DIR$/functionbaidumaker" />
@@ -65,7 +58,7 @@
             <option value="$PROJECT_DIR$/widgetreddot" />
             <option value="$PROJECT_DIR$/widgettimer" />
             <option value="$PROJECT_DIR$/widgetwheelview" />
-            <option value="E:/flutter_mix/.android/Flutter" />
+            <option value="$PROJECT_DIR$/../flutter_mix/.android/Flutter" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

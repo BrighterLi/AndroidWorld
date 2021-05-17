@@ -11,6 +11,8 @@ import com.a006designmode.behaviormode.observermode2.Observer2Activity;
 import com.a006designmode.creationmode.buildermode.BuilderActivity;
 import com.a006designmode.othermode.productandconsume.ProducterAndConsumer;
 import com.a006designmode.structuralmode.adaptermode.AdapterModeTest;
+import com.a006designmode.structuralmode.proxymode.ProxyTest;
+import com.a006designmode.structuralmode.proxymode.staticmode.Proxy;
 
 public class MainActivity extends AppCompatActivity {
     //创建型
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtBuilderMode;
     //结构型
     private Button mBtAdapterMode;
+    private Button mBtStaticProxyMode;
     //行为型
     private Button mBtObserver;
     private Button mBtObserver2;
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         mBtBuilderMode = findViewById(R.id.bt_builder_mode);
         //结构型模式
         mBtAdapterMode = findViewById(R.id.bt_adapter_mode);
+        mBtStaticProxyMode = findViewById(R.id.bt_static_proxy_mode);
         //行为型模式
         mBtObserver = findViewById(R.id.bt_observer); //观察者模式
         mBtObserver2 = findViewById(R.id.bt_observer2); //观察者模式
@@ -70,6 +74,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 AdapterModeTest.test();
+            }
+        });
+        mBtStaticProxyMode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ProxyTest.staticProxyTest();
             }
         });
 

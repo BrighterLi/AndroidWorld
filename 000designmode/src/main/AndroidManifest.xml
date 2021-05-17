@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".behaviormode.observermode2.Observer2Activity"></activity>
+        <activity android:name=".structuralmode.proxymode.ProxyActivity"></activity>
+        <activity android:name=".behaviormode.observermode2.Observer2Activity" />
         <activity android:name=".behaviormode.observermode.ThirdActivity" />
         <activity android:name=".behaviormode.observermode.SecondActivity" />
         <activity android:name=".behaviormode.observermode.ObserverActivity" />

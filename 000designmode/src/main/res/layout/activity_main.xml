@@ -61,8 +61,14 @@
             android:id="@+id/bt_adapter_mode"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@color/yellow"
+            android:background="@color/colorPrimary"
             android:text="适配器模式"/>
+        <Button
+            android:id="@+id/bt_static_proxy_mode"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/yellow"
+            android:text="静态代理模式"/>
     </LinearLayout>
 
 
