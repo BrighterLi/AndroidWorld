@@ -12,7 +12,6 @@ import com.a006designmode.creationmode.buildermode.BuilderActivity;
 import com.a006designmode.othermode.productandconsume.ProducterAndConsumer;
 import com.a006designmode.structuralmode.adaptermode.AdapterModeTest;
 import com.a006designmode.structuralmode.proxymode.ProxyTest;
-import com.a006designmode.structuralmode.proxymode.staticmode.Proxy;
 
 public class MainActivity extends AppCompatActivity {
     //创建型
@@ -79,7 +78,9 @@ public class MainActivity extends AppCompatActivity {
         mBtStaticProxyMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ProxyTest.staticProxyTest();
+                //ProxyTest.staticProxyTest();
+                //ProxyTest.dynamicProxyTest();
+                ProxyTest.dynamicProxyTest2();
             }
         });
 

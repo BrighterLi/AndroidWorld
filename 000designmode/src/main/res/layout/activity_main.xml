@@ -68,7 +68,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@color/yellow"
-            android:text="静态代理模式"/>
+            android:text="静态、动态代理模式"/>
     </LinearLayout>
 
 
