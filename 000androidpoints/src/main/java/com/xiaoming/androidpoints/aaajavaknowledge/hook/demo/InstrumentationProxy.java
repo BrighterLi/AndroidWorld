@@ -1,4 +1,4 @@
-package com.xiaoming.androidpoints.aaajavaknowledge.hook;
+package com.xiaoming.androidpoints.aaajavaknowledge.hook.demo;
 
 import android.app.Activity;
 import android.app.Instrumentation;

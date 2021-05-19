@@ -8,7 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.xiaoming.androidpoints.aaajavaknowledge.hook.HookActivity;
+import com.xiaoming.androidpoints.aaajavaknowledge.hook.demo2.HookActivity2;
 import com.xiaoming.androidpoints.activity.ActivityTestActivity;
 import com.xiaoming.androidpoints.aaajavaknowledge.JavaKnowledgeActivity;
 import com.xiaoming.androidpoints.background.SetBackgroundActivity;
@@ -149,7 +149,7 @@ public class MainActivity extends Activity {
                         startActivity(new Intent(MainActivity.this, IntentActivity.class));
                         break;
                     case 30:
-                        startActivity(new Intent(MainActivity.this, HookActivity.class));
+                        startActivity(new Intent(MainActivity.this, HookActivity2.class));
                         break;
                 }
             }

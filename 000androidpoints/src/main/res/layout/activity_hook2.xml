@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".aaajavaknowledge.hook.demo.HookActivity">
+    tools:context="com.xiaoming.androidpoints.aaajavaknowledge.hook.demo2.HookActivity2">
 
     <TextView
-        android:id="@+id/start"
+        android:id="@+id/sample_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="start"></TextView>
+        android:textColor="@color/colorPrimary"/>
 
 </LinearLayout>
