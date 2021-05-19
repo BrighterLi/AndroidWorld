@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xiaoming.a000keeplearning">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".java.rxjava.source.SourceActivity4"></activity>
+        <activity android:name=".java.rxjava.source.SourceActivity3" />
+        <activity android:name=".java.rxjava.source.SourceActivity2" />
+        <activity android:name=".java.rxjava.source.SourceActivity1" />
+        <activity android:name=".java.rxjava.observer_mode.ObserverModeActivity" />
+        <activity android:name=".java.rxjava.retrofit_okhttp_rxjava.RequestActivity" />
+        <activity android:name=".java.rxjava.download.DownloadActivity" />
+        <activity android:name=".java.rxjava.UseActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

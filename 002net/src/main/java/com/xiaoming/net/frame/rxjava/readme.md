@@ -11,6 +11,9 @@ Subcriblers 观察者，事件订阅者
 Observer 同Subcribler差不多
 subscribe() 方法，绑定Observable与Subcribler或者Observabler
 很显然，Observable对象发生动静，然后通信Subcribers，然后Subcribers实现自己的业务逻辑。
+(3) Subscription
+
+
 
 2 Demo
 Android 使用Rxjava和OkHttp3封装文件下载器: https://blog.csdn.net/shuaizhigen/article/details/88829887?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-8.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-8.control
