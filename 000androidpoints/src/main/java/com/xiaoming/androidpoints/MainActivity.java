@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.xiaoming.androidpoints.aaajavaknowledge.hook.HookActivity;
 import com.xiaoming.androidpoints.activity.ActivityTestActivity;
 import com.xiaoming.androidpoints.aaajavaknowledge.JavaKnowledgeActivity;
 import com.xiaoming.androidpoints.background.SetBackgroundActivity;
@@ -147,6 +148,9 @@ public class MainActivity extends Activity {
                     case 29:
                         startActivity(new Intent(MainActivity.this, IntentActivity.class));
                         break;
+                    case 30:
+                        startActivity(new Intent(MainActivity.this, HookActivity.class));
+                        break;
                 }
             }
         });
@@ -189,5 +193,6 @@ public class MainActivity extends Activity {
         demoDataList.add("设置背景Background");
         demoDataList.add("权限申请");
         demoDataList.add("Intent");
+        demoDataList.add("Hook");
     }
 }

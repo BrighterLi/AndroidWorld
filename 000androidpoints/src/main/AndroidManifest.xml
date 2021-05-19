@@ -2,17 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xiaoming.androidpoints">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -21,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".intent.IntentActivity"></activity>
+        <activity android:name=".aaajavaknowledge.hook.SecondActivity"></activity>
+        <activity android:name=".aaajavaknowledge.hook.HookActivity" />
+        <activity android:name=".intent.IntentActivity" />
         <activity android:name=".permission.MultiPermissionActivity" />
         <activity android:name=".permission.NotificationPermissionActivity" />
         <activity android:name=".permission.PermissionActivity" />
@@ -42,19 +33,7 @@
         <activity android:name=".uiframe.ScrollView.UiFrame2Activity" />
         <activity android:name=".uiframe.EnterUiFrameActivity" />
         <activity android:name=".uiframe.recycleview.UiFrame1Activity" />
-
-        <service
-            android:name=".floating.floating.service.FloatingService2"
-            android:enabled="true"
-            android:exported="true" />
-
         <activity android:name=".floating.SecondActivity" />
-
-        <service
-            android:name=".floating.floating.service.FloatingService"
-            android:enabled="true"
-            android:exported="true" />
-
         <activity android:name=".floating.floating.FloatingActivity" />
         <activity android:name=".aaajavaknowledge.multithreads.MultiThreadsActivity" />
         <activity android:name=".aaajavaknowledge.localvarible.LocalVaribleActivity" />
@@ -137,9 +116,28 @@
         <activity android:name=".aaajavaknowledge.JavaKnowledgeActivity" />
 
         <service
+            android:name=".floating.floating.service.FloatingService2"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".floating.floating.service.FloatingService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
             android:name=".floating.timerfloating.service.TimeFloatingService"
             android:enabled="true"
             android:exported="true" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
 </manifest>
