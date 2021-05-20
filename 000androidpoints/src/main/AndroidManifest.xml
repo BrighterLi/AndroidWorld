@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xiaoming.androidpoints">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".MyApplication"
@@ -10,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".aaajavaknowledge.hook.demo2.HookActivity2"></activity>
+        <activity android:name=".plugin.demo.TempActivity"></activity>
+        <activity android:name=".plugin.demo.PluginActivity" />
+        <activity android:name=".aaajavaknowledge.hook.demo2.HookActivity2" />
         <activity android:name=".aaajavaknowledge.hook.demo.SecondActivity" />
         <activity android:name=".aaajavaknowledge.hook.demo.HookActivity" />
         <activity android:name=".intent.IntentActivity" />

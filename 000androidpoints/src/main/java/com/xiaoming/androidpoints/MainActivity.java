@@ -24,6 +24,7 @@ import com.xiaoming.androidpoints.jnidemo.JniActivity;
 import com.xiaoming.androidpoints.jnidemo2.Jni2Activity;
 import com.xiaoming.androidpoints.json.JsonActivity;
 import com.xiaoming.androidpoints.permission.PermissionActivity;
+import com.xiaoming.androidpoints.plugin.demo.PluginActivity;
 import com.xiaoming.androidpoints.reflect.ReflectActivity;
 import com.xiaoming.androidpoints.regularexpression.RegularExpressionActivity;
 import com.xiaoming.androidpoints.scheme.SchemeActivity;
@@ -151,6 +152,10 @@ public class MainActivity extends Activity {
                     case 30:
                         startActivity(new Intent(MainActivity.this, HookActivity2.class));
                         break;
+
+                    case 31:
+                        startActivity(new Intent(MainActivity.this, PluginActivity.class));
+                        break;
                 }
             }
         });
@@ -193,6 +198,8 @@ public class MainActivity extends Activity {
         demoDataList.add("设置背景Background");
         demoDataList.add("权限申请");
         demoDataList.add("Intent");
+
         demoDataList.add("Hook");
+        demoDataList.add("插件化");
     }
 }
