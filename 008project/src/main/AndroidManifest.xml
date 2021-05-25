@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.xiaoming.a008project">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".im.ImTestActivity"></activity>
+        <activity android:name=".webviewlinked.ScrollviewActivity"></activity>
+        <activity android:name=".im.ImTestActivity" />
         <activity android:name=".im.ChatActivity" />
         <activity android:name=".smallproject.desktopnewsreddot.TestActivity" />
         <activity android:name=".consumption.ConsumptionActivity" />
@@ -24,5 +23,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
