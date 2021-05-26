@@ -1,11 +1,20 @@
-package com.xiaoming.acrossendweex.openweexpage;
+package com.xiaoming.acrossendweex.weexandwebview;
 
-import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.graphics.Bitmap;
+import android.net.http.SslError;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
+import android.view.ViewGroup;
+import android.webkit.SslErrorHandler;
+import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
+import android.widget.ScrollView;
 
 import com.taobao.weex.IWXRenderListener;
 import com.taobao.weex.WXSDKEngine;
@@ -14,22 +23,28 @@ import com.taobao.weex.common.WXRenderStrategy;
 import com.taobao.weex.utils.WXFileUtils;
 import com.xiaoming.acrossendweex.R;
 
-//Native -> Weex,Android打开本地Weex页面
-//https://blog.csdn.net/weixin_33742618/article/details/91380769
-//https://blog.csdn.net/nyb521/article/details/82656791
-public class OpenWeexPageActivity extends AppCompatActivity implements IWXRenderListener {
+
+public class ScrollViewActivity extends AppCompatActivity implements IWXRenderListener {
+    private MyWebView mWebView;
+    private ScrollView mScrollView;
     WXSDKInstance mWXSDKInstance;
     private Handler mHandler = new Handler();
     private FrameLayout mWeexContainer;
-    private LinearLayout mContentView;
+
+    String url = "http://www.baidu.com";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_scroll_view);
 
-        //mContentView = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.activity_open_weex_page,null, false);
-        setContentView(R.layout.activity_open_weex_page);
+        initView();
+        initWeb();
+    }
 
+    private void initView() {
+        mWebView = findViewById(R.id.webview);
+        mScrollView = findViewById(R.id.scrollview);
         //Weex作为Activity布局的一部分，在Activity的xml进行显示。weex以view的形式出现。
         mWeexContainer = findViewById(R.id.weex_container);
 
@@ -39,19 +54,78 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
         mWXSDKInstance.registerRenderListener(this);
 
         loadPage();
-        //不起作用,因为都被weex页面给遮挡住了
-        //mContentView.setBackgroundResource(R.drawable.activity_background);
+    }
 
-        ////不起作用
-        //getWindow().getDecorView().setBackgroundResource(R.drawable.activity_background);
+    private void initWeb() {
+        mWebView.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                return super.shouldOverrideUrlLoading(view, request);
+            }
 
-        //不起作用
-       /* View decorView = getWindow().getDecorView();
-        if (decorView instanceof FrameLayout) {
-            LinearLayout ll = (LinearLayout) ((FrameLayout) decorView).getChildAt(0);
-            FrameLayout content = (FrameLayout) ll.getChildAt(1);
-            content.getChildAt(0).setBackgroundResource(R.drawable.activity_background);
-        }*/
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+
+            }
+
+            @Override
+            public void onLoadResource(WebView view, String url) {
+            }
+
+            @Override
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                super.onReceivedError(view, errorCode, description, failingUrl);
+            }
+
+            @Override
+            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+                super.onReceivedSslError(view, handler, error);
+                handler.proceed();
+            }
+        });
+
+        mWebView.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public void onReceivedTitle(WebView view, String title) {
+                super.onReceivedTitle(view, title);
+            }
+
+            @Override
+            public void onProgressChanged(WebView view, int newProgress) {
+                super.onProgressChanged(view, newProgress);
+            }
+        });
+
+
+        mWebView.post(new Runnable() {
+            @Override
+            public void run() {
+                if (mWebView != null) {
+                    // WebView设置固定高度，避免各种嵌套问题
+                    ViewGroup.LayoutParams lp = mWebView.getLayoutParams();
+                    lp.height = mScrollView.getHeight();
+                    mWebView.setLayoutParams(lp);
+                }
+            }
+        });
+        mWebView.loadUrl(url);
+
+    }
+
+   /* @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mWebView.onDestroy();
+    }*/
+
+    @Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
+        mWebView.onTrimMemory(level);
     }
 
     private void loadPage() {
@@ -81,8 +155,8 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
          */
         //加载本地weex页面。渲染页面，home.js就是weex打包好后给你的js文件
         //mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("weex/component/video/video_test.js", this), null, null, -1,-1, WXRenderStrategy.APPEND_ASYNC);
-        mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("weex/component/fql_richtext.js", this), null, null, -1,-1, WXRenderStrategy.APPEND_ASYNC);
-        //mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("home.js", OpenWeexPageActivity.this), null, null, -1, -1, WXRenderStrategy.APPEND_ASYNC);
+        //mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("weex/component/fql_richtext.js", this), null, null, -1,-1, WXRenderStrategy.APPEND_ASYNC);
+        mWXSDKInstance.render("WXSample", WXFileUtils.loadAsset("home.js", ScrollViewActivity.this), null, null, -1, -1, WXRenderStrategy.APPEND_ASYNC);
     }
 
     //创建View，这个view就是weex页面
@@ -148,4 +222,5 @@ public class OpenWeexPageActivity extends AppCompatActivity implements IWXRender
             mWXSDKInstance.onActivityDestroy();
         }
     }
+
 }

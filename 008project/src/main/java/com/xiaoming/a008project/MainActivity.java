@@ -16,6 +16,7 @@ import com.xiaoming.a008project.im.ImTestActivity;
 import com.xiaoming.a008project.webviewlinked.demo.ScrollViewActivity;
 import com.xiaoming.a008project.webviewlinked.demo2.ScrollViewActivity2;
 import com.xiaoming.a008project.webviewlinked.demo3.ScrollViewActivity3;
+import com.xiaoming.a008project.webviewlinked.demo4.ScrollViewActivity4;
 import com.xiaoming.a008project.webviewlinked.recyclerview.RecyclerViewActivity;
 
 import java.util.ArrayList;
@@ -41,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("WebView联动+ScrollView");
         mDataList.add("WebView+ScrollView联动2");
         mDataList.add("WebView+ScrollView联动3");
-        mDataList.add("WebView+RecyclerView联动3");
+        mDataList.add("WebView+ScrollView联动4");
+        mDataList.add("WebView+RecyclerView联动");
     }
 
     private void initView() {
@@ -69,6 +71,10 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, ScrollViewActivity3.class));
                         break;
                     case 5:
+                        startActivity(new Intent(MainActivity.this,
+                                ScrollViewActivity4.class));
+                        break;
+                    case 6:
                         startActivity(new Intent(MainActivity.this,
                                 RecyclerViewActivity.class));
                         break;

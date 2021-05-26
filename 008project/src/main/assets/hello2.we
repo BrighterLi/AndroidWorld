@@ -1,0 +1,7 @@
+<template>
+  <text class="message">
+  Weex app.
+  1111
+  1111
+  </text>
+</template>

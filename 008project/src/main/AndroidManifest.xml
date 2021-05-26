@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.xiaoming.a008project">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".webviewlinked.recyclerview.RecyclerViewActivity"></activity>
+        <activity android:name=".webviewlinked.demo4.ScrollViewActivity4"></activity>
+        <activity android:name=".webviewlinked.recyclerview.RecyclerViewActivity" />
         <activity android:name=".webviewlinked.demo3.ScrollViewActivity3" />
         <activity android:name=".webviewlinked.demo2.ScrollViewActivity2" />
         <activity android:name=".webviewlinked.demo.ScrollViewActivity" />
@@ -28,5 +27,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
