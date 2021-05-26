@@ -5,11 +5,16 @@ import android.content.ComponentCallbacks2;
 import android.content.Context;
 import android.os.Build;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
+import com.xiaoming.a008project.webviewlinked.DpUtil;
+
 public class MyWebView3 extends WebView {
+    private int mScrollY;
+    private int mScrollHeadHeight = 300;
 
 
     public MyWebView3(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -33,6 +38,22 @@ public class MyWebView3 extends WebView {
         int mExpandSpec = MeasureSpec.makeMeasureSpec(Integer.MAX_VALUE >> 2, MeasureSpec.AT_MOST);
         super.onMeasure(widthMeasureSpec, mExpandSpec);
     }*/
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if(mScrollY > 0 && mScrollY < DpUtil.dip2px(getContext(), mScrollHeadHeight)) {
+            requestDisallowInterceptTouchEvent(false);
+        } else {
+            requestDisallowInterceptTouchEvent(true);
+        }
+        return super.onTouchEvent(event);
+    }
+
+    @Override
+    protected void onOverScrolled(int scrollX, int scrollY, boolean clampedX, boolean clampedY) {
+        super.onOverScrolled(scrollX, scrollY, clampedX, clampedY);
+        mScrollY = scrollY;
+    }
 
     @SuppressLint("SetJavaScriptEnabled")
     private void initWebSettings(Context context) {
