@@ -85,7 +85,7 @@ public class ScrollViewActivity3 extends AppCompatActivity {
         });
 
 
-      /*  mWebView.post(new Runnable() {
+        mWebView.post(new Runnable() {
             @Override
             public void run() {
                 if (mWebView != null) {
@@ -95,7 +95,7 @@ public class ScrollViewActivity3 extends AppCompatActivity {
                     mWebView.setLayoutParams(lp);
                 }
             }
-        });*/
+        });
         mWebView.loadUrl(url);
 
     }
