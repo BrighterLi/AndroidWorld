@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.xiaoming.a008project.webviewlinked.demo.MyScrollView1 xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".webviewlinked.ScrollviewActivity">
+    android:id="@+id/scrollview"
+    tools:context=".webviewlinked.demo.ScrollViewActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,11 +17,11 @@
             android:layout_height="300dp"
             android:background="@color/btn_negative_hover"/>
 
-        <com.xiaoming.a008project.webviewlinked.MyWebView
+        <com.xiaoming.a008project.webviewlinked.demo.MyWebView1
             android:id="@+id/webview"
             android:background="@color/design_default_color_primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-</ScrollView>
+</com.xiaoming.a008project.webviewlinked.demo.MyScrollView1>

@@ -7,14 +7,13 @@ import android.widget.ListView;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ScrollView;
 
 
 import com.xiaoming.a008project.consumption.ConsumptionActivity;
-import com.xiaoming.a008project.im.ChatActivity;
 import com.xiaoming.a008project.im.ImTestActivity;
-import com.xiaoming.a008project.im.TencentImManager;
-import com.xiaoming.a008project.webviewlinked.ScrollviewActivity;
+import com.xiaoming.a008project.webviewlinked.demo.ScrollViewActivity;
+import com.xiaoming.a008project.webviewlinked.demo2.ScrollViewActivity2;
+import com.xiaoming.a008project.webviewlinked.demo3.ScrollViewActivity3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("消费号");
         mDataList.add("即时聊天");
         mDataList.add("WebView联动");
+        mDataList.add("WebView联动2");
+        mDataList.add("WebView联动3");
     }
 
     private void initView() {
@@ -55,7 +56,13 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, ImTestActivity.class));
                         break;
                     case 2:
-                        startActivity(new Intent(MainActivity.this, ScrollviewActivity.class));
+                        startActivity(new Intent(MainActivity.this, ScrollViewActivity.class));
+                        break;
+                    case 3:
+                        startActivity(new Intent(MainActivity.this, ScrollViewActivity2.class));
+                        break;
+                    case 4:
+                        startActivity(new Intent(MainActivity.this, ScrollViewActivity3.class));
                         break;
                 }
             }
