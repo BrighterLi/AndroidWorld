@@ -21,3 +21,6 @@ ANDROID-什么时候用SCROLLVIEW: https://www.cnblogs.com/android-deli/p/100958
 (2) RecyclerView
 其官方定义是：A flexible view for providing a limited window into a large data set
 能够灵活的实现大数据集的展示，视图的复用管理比ListView更好，能够显示列表，网格，瀑布流等形式，且不同的ViewHolder能够实现item多元化的功能
+
+4 自定义WebView
+weex解决scrollView嵌套webview高度问题，安卓自定义weex组件webview: https://blog.csdn.net/m0_38058826/article/details/95211513 
