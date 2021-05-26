@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".webviewlinked.demo3.ScrollViewActivity3"></activity>
+        <activity android:name=".webviewlinked.recyclerview.RecyclerViewActivity"></activity>
+        <activity android:name=".webviewlinked.demo3.ScrollViewActivity3" />
         <activity android:name=".webviewlinked.demo2.ScrollViewActivity2" />
         <activity android:name=".webviewlinked.demo.ScrollViewActivity" />
         <activity android:name=".im.ImTestActivity" />

@@ -96,7 +96,7 @@ public class ScrollViewActivity3 extends AppCompatActivity {
                 }
             }
         });*/
-        mWebView.loadUrl(url2);
+        mWebView.loadUrl(url);
 
     }
 

@@ -10,3 +10,14 @@ Android中ScrollView嵌套WebView: https://blog.csdn.net/pangzaifei/article/deta
 
 
 2 WebView与外层RecyclerView滑动冲突
+RecyclerView里面套用webview 显示不全: https://blog.csdn.net/u013200864/article/details/51766931
+RecyclerView 顶部嵌套WebView 导致显示不完全: https://www.jianshu.com/p/4cb72e854cb2
+
+
+3 ScrollView vs RecyclerView
+(1) 什么时候使用ScrollView
+ANDROID-什么时候用SCROLLVIEW: https://www.cnblogs.com/android-deli/p/10095876.html
+摆放无顺序，无规律，并会超出屏幕的高度，就可以用ScrollView
+(2) RecyclerView
+其官方定义是：A flexible view for providing a limited window into a large data set
+能够灵活的实现大数据集的展示，视图的复用管理比ListView更好，能够显示列表，网格，瀑布流等形式，且不同的ViewHolder能够实现item多元化的功能
