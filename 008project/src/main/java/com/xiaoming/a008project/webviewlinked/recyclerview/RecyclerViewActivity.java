@@ -16,6 +16,7 @@ import com.xiaoming.a008project.R;
 //RecyclerView里面套用webview 显示不全: https://blog.csdn.net/u013200864/article/details/51766931
 public class RecyclerViewActivity extends AppCompatActivity {
     RecyclerView rv;
+    String url = "http://www.baidu.com";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +89,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
 //                });
 
                 mWebView.loadData(html,"text/html","utf-8");
+                //mWebView.loadUrl(url);
             }
         }
     }

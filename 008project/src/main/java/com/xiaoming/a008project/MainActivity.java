@@ -2,6 +2,8 @@ package com.xiaoming.a008project;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.os.Bundle;
 import android.widget.ListView;
 import android.view.View;
@@ -14,6 +16,7 @@ import com.xiaoming.a008project.im.ImTestActivity;
 import com.xiaoming.a008project.webviewlinked.demo.ScrollViewActivity;
 import com.xiaoming.a008project.webviewlinked.demo2.ScrollViewActivity2;
 import com.xiaoming.a008project.webviewlinked.demo3.ScrollViewActivity3;
+import com.xiaoming.a008project.webviewlinked.recyclerview.RecyclerViewActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,9 +38,10 @@ public class MainActivity extends AppCompatActivity {
         mDataList = new ArrayList<>();
         mDataList.add("消费号");
         mDataList.add("即时聊天");
-        mDataList.add("WebView联动");
-        mDataList.add("WebView联动2");
-        mDataList.add("WebView联动3");
+        mDataList.add("WebView联动+ScrollView");
+        mDataList.add("WebView+ScrollView联动2");
+        mDataList.add("WebView+ScrollView联动3");
+        mDataList.add("WebView+RecyclerView联动3");
     }
 
     private void initView() {
@@ -63,6 +67,10 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 4:
                         startActivity(new Intent(MainActivity.this, ScrollViewActivity3.class));
+                        break;
+                    case 5:
+                        startActivity(new Intent(MainActivity.this,
+                                RecyclerViewActivity.class));
                         break;
                 }
             }
