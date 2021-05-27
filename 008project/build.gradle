@@ -41,6 +41,13 @@ dependencies {
 
     implementation 'com.tencent.imsdk:tuikit:5.1.56'
 
+    //fastjson
+    implementation 'com.alibaba:fastjson:1.1.45'
     //weex_sdk
     implementation 'com.taobao.android:weex_sdk:0.9.5@aar'
+    //api 'org.apache.weex:sdk_legacy:0.28.0@aar'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    //?用在哪里了
+    implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
 }

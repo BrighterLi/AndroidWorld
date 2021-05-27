@@ -19,7 +19,8 @@
         <FrameLayout
             android:id="@+id/weex_container"
             android:layout_width="match_parent"
-            android:layout_height="300dp"></FrameLayout>
+            android:layout_height="300dp"
+            android:background="@color/read_dot_bg"></FrameLayout>
 
         <com.xiaoming.a008project.webviewlinked.demo4.MyWebView4
             android:id="@+id/webview"
