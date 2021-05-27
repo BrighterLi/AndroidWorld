@@ -23,6 +23,8 @@ import com.xiaoming.a008project.R;
 
 //ScrollView嵌套WebView与原生控件组合的一些问题:https://blog.csdn.net/ysy950803/article/details/86657790
 public class ScrollViewActivity2 extends AppCompatActivity {
+    String url = "http://www.baidu.com";
+    String url2 = "https://pm.m.fenqile.com/entry/logic_layer/flow_webview/index.html?webViewHeight=1000&tabKey=recommendWeex";
     private EditText mTitleText;
     private FrameLayout mScrollContainer;
     private MyScrollView2 mScrollView;
@@ -127,7 +129,8 @@ public class ScrollViewActivity2 extends AppCompatActivity {
             }
         });
 
-        mWebView.loadUrl("www.mi.com");
+        //mWebView.loadUrl("www.mi.com");
+        mWebView.loadUrl(url);
     }
 
     @Override

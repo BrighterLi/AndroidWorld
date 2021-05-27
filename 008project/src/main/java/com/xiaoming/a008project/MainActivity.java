@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("WebView联动+ScrollView");
         mDataList.add("WebView+ScrollView联动2");
         mDataList.add("WebView+ScrollView联动3");
-        mDataList.add("WebView+ScrollView联动4");
+        mDataList.add("WebView+Weex+ScrollView联动4");
         mDataList.add("WebView+RecyclerView联动");
     }
 
