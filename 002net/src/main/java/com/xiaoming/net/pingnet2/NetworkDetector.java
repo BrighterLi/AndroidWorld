@@ -1,7 +1,7 @@
 package com.xiaoming.net.pingnet2;
 
 import android.os.Build;
-import androidx.core.util.ArrayMap;
+
 import android.util.Log;
 
 import com.xiaoming.net.pingnet2.bean.PingNetworkBean;
@@ -15,6 +15,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import androidx.collection.ArrayMap;
 
 public class NetworkDetector {
     private static final String TAG = "NetworkDetector";
