@@ -10,13 +10,13 @@ public class ExtendActivity extends LayoutBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_extend);
+        //setContentView(R.layout.activity_extend);
 
     }
 
     @Override
     public void init() {
-        setTitleAndContentLayoutId("首页", R.layout.activity_main);
+        setTitleAndContentLayoutId("首页", R.layout.activity_extend);
     }
 
     @Override
