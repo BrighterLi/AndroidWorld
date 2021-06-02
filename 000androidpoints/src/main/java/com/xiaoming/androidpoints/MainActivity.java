@@ -23,6 +23,8 @@ import com.xiaoming.androidpoints.intent.IntentActivity;
 import com.xiaoming.androidpoints.jnidemo.JniActivity;
 import com.xiaoming.androidpoints.jnidemo2.Jni2Activity;
 import com.xiaoming.androidpoints.json.JsonActivity;
+import com.xiaoming.androidpoints.layout_extend.ExtendActivity;
+import com.xiaoming.androidpoints.layout_extend.LayoutBaseActivity;
 import com.xiaoming.androidpoints.permission.PermissionActivity;
 import com.xiaoming.androidpoints.plugin.demo.PluginActivity;
 import com.xiaoming.androidpoints.reflect.ReflectActivity;
@@ -156,6 +158,11 @@ public class MainActivity extends Activity {
                     case 31:
                         startActivity(new Intent(MainActivity.this, PluginActivity.class));
                         break;
+
+                    case 32:
+                        //startActivity(new Intent(MainActivity.this, LayoutBaseActivity.class));
+                        startActivity(new Intent(MainActivity.this, ExtendActivity.class));
+                        break;
                 }
             }
         });
@@ -201,5 +208,6 @@ public class MainActivity extends Activity {
 
         demoDataList.add("Hook");
         demoDataList.add("插件化");
+        demoDataList.add("BaseActivity布局继承");
     }
 }
