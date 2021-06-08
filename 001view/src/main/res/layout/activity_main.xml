@@ -44,6 +44,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="自定义View"/>
+    <Button
+        android:id="@+id/mBtCommHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="公共头部布局"/>
 
 
 </LinearLayout>

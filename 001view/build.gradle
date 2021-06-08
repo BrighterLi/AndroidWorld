@@ -39,6 +39,4 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.2.1'
 
 
-
-
 }

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.xiaoming.view.customview.CustomViewActivity;
+import com.xiaoming.view.customview.commheader.CommHeaderActivity;
 import com.xiaoming.view.onmeasure.OnMeasureGroupView2Activity;
 import com.xiaoming.view.onmeasure.OnMeasureGroupViewActivity;
 import com.xiaoming.view.onmeasure.OnMeasureViewActivity;
@@ -33,6 +34,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
     Button mBtTouchEvent2;
     @BindView(R.id.mBtCustomView)
     Button mBtCustomView;
+    @BindView(R.id.mBtCommHeader)
+    Button mBtCommHeader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +53,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         mBtRelativeLayout.setOnClickListener(this);
         mBtTouchEvent2.setOnClickListener(this);
         mBtCustomView.setOnClickListener(this);
+        mBtCommHeader.setOnClickListener(this);
     }
 
     @Override
@@ -75,6 +79,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.mBtCustomView:
                 startActivity(new Intent(MainActivity.this, CustomViewActivity.class));
+                break;
+            case R.id.mBtCommHeader:
+                startActivity(new Intent(MainActivity.this, CommHeaderActivity.class));
                 break;
         }
     }
