@@ -21,6 +21,7 @@ import com.widget.listview.listviewdemo.demo3.ListView3Activity;
 import com.widget.loading.LoadingDemoActivity;
 import com.widget.pullrefresh.PullRefreshActivity;
 import com.widget.recyclerview.RecyclerViewActivity;
+import com.widget.recyclerview.ceiling.CeilingActivity;
 import com.widget.scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivity;
 import com.widget.scroll.scrollconflict.demo1.ScrollConflictActivity;
 import com.widget.scroll.scrollconflict.demo2.ScrollConflict2Activity;
@@ -77,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("动画"); //20
 
         mDataList.add("TextView"); //21
+        mDataList.add("RecyclerView吸顶"); //21
     }
 
     private void initView() {
@@ -157,6 +159,9 @@ public class MainActivity extends AppCompatActivity {
 
                     case 22:  //TextView
                         startActivity(new Intent(MainActivity.this, TextViewTestActivity.class));
+                        break;
+                    case 22:  //TextView
+                        startActivity(new Intent(MainActivity.this, CeilingActivity.class));
                         break;
                 }
             }
