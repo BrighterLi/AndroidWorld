@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".im.ChatActivity"></activity>
+        <activity android:name=".aaaview.custom_view.fish.FishActivity"></activity>
+        <activity android:name=".aaaview.ViewKownledgePointsActivity" />
+        <activity android:name=".im.ChatActivity" />
         <activity android:name=".textview.TextView1Activity" />
         <activity android:name=".animation.textview.TextViewActivity" />
         <activity android:name=".animation.lottie.LottieNetworkAnimActivity" />

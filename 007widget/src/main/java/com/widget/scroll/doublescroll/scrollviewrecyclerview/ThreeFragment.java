@@ -1,9 +1,10 @@
 package com.widget.scroll.doublescroll.scrollviewrecyclerview;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.app.Fragment;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -28,6 +29,7 @@ public class ThreeFragment extends Fragment {
         return mainView;
     }
 
+    @SuppressLint("WrongConstant")
     private void initView(){
         mRecyclerView=mainView.findViewById(R.id.recyclerview);
         mLayoutManager=new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);

@@ -2,10 +2,11 @@ package com.widget.scroll.doublescroll.scrollviewrecyclerview;
 
 import androidx.annotation.Nullable;
 import com.google.android.material.tabs.TabLayout;
-import androidx.core.app.Fragment;
-import androidx.core.app.FragmentPagerAdapter;
-import androidx.core.view.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
 import android.os.Bundle;
 import android.view.View;
 import android.util.ArrayMap;

@@ -4,8 +4,6 @@ import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.content.Context;
 import android.os.Handler;
-import androidx.core.view.PagerAdapter;
-import androidx.core.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.SparseBooleanArray;
@@ -22,6 +20,9 @@ import com.widget.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 public class ImageSlideshow extends FrameLayout {
 

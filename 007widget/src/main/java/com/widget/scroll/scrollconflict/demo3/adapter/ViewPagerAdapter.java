@@ -1,7 +1,6 @@
 package com.widget.scroll.scrollconflict.demo3.adapter;
 
 import android.content.Context;
-import androidx.core.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,8 @@ import android.widget.TextView;
 import com.widget.R;
 
 import java.util.List;
+
+import androidx.viewpager.widget.PagerAdapter;
 
 public class ViewPagerAdapter extends PagerAdapter {
 

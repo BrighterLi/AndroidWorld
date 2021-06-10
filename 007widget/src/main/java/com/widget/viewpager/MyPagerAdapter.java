@@ -1,7 +1,6 @@
 package com.widget.viewpager;
 
 import android.content.Context;
-import androidx.core.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -9,6 +8,8 @@ import android.widget.TextView;
 import com.widget.R;
 
 import java.util.List;
+
+import androidx.viewpager.widget.PagerAdapter;
 
 //适配器
 public class MyPagerAdapter extends PagerAdapter {

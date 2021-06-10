@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.widget.aaaview.ViewKownledgePointsActivity;
 import com.widget.banner.BannerTestActivity;
 import com.widget.dialog.DialogTestActivity;
 import com.widget.horizontalscrollview.TabStripActivity;
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initDemoData() {
         mDataList = new ArrayList<>();
+        mDataList.add("View知识点");
         mDataList.add("视频"); //0
         mDataList.add("输入键盘"); //1
         mDataList.add("下拉刷新"); //2
@@ -86,71 +88,74 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i) {
                     case 0:
-                        startActivity(new Intent(MainActivity.this, VideoActivity.class));
+                        startActivity(new Intent(MainActivity.this, ViewKownledgePointsActivity.class));
                         break;
                     case 1:
-                        startActivity(new Intent(MainActivity.this, KeyboardEntranceActivity.class));
+                        startActivity(new Intent(MainActivity.this, VideoActivity.class));
                         break;
                     case 2:
-                        startActivity(new Intent(MainActivity.this, PullRefreshActivity.class));
+                        startActivity(new Intent(MainActivity.this, KeyboardEntranceActivity.class));
                         break;
                     case 3:
-                        startActivity(new Intent(MainActivity.this, ScrollviewActivity.class));
+                        startActivity(new Intent(MainActivity.this, PullRefreshActivity.class));
                         break;
                     case 4:
-                        startActivity(new Intent(MainActivity.this, TabStripActivity.class));
+                        startActivity(new Intent(MainActivity.this, ScrollviewActivity.class));
                         break;
                     case 5:
-                        startActivity(new Intent(MainActivity.this, ScrollConflictActivity.class));
+                        startActivity(new Intent(MainActivity.this, TabStripActivity.class));
                         break;
                     case 6:
-                        startActivity(new Intent(MainActivity.this, ScrollConflict2Activity.class));
+                        startActivity(new Intent(MainActivity.this, ScrollConflictActivity.class));
                         break;
                     case 7:
-                        startActivity(new Intent(MainActivity.this, ScrollConflict3Activity.class));
+                        startActivity(new Intent(MainActivity.this, ScrollConflict2Activity.class));
                         break;
                     case 8:
-                        startActivity(new Intent(MainActivity.this, PagingRequestActivity.class));
+                        startActivity(new Intent(MainActivity.this, ScrollConflict3Activity.class));
                         break;
                     case 9:
-                        startActivity(new Intent(MainActivity.this, ViewPagerActivity.class));
+                        startActivity(new Intent(MainActivity.this, PagingRequestActivity.class));
                         break;
                     case 10:
+                        startActivity(new Intent(MainActivity.this, ViewPagerActivity.class));
+                        break;
+                    case 11:
                         startActivity(new Intent(MainActivity.this, BackToTopActivity.class));
                         break;
 
-                    case 11:
+                    case 12:
                         startActivity(new Intent(MainActivity.this, DialogTestActivity.class));
                         break;
-                    case 12:
+                    case 13:
                         startActivity(new Intent(MainActivity.this, ImageTestActivity.class));
                         break;
-                    case 13:
+                    case 14:
                         startActivity(new Intent(MainActivity.this, StatusBarTestActivity.class));
                         break;
-                    case 14:
+                    case 15:
                         startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
                         break;
-                        case 15:
+                        case 16:
                         startActivity(new Intent(MainActivity.this, ListView1Activity.class));
                         break;
-                    case 16:
+                    case 17:
                         startActivity(new Intent(MainActivity.this, ListView2Activity.class));
                         break;
-                    case 17:
+                    case 18:
                         startActivity(new Intent(MainActivity.this, ListView3Activity.class));
                         break;
-                    case 18:
+                    case 19:
                         startActivity(new Intent(MainActivity.this, LoadingDemoActivity.class));
                         break;
-                    case 19:  //Banner
+                    case 20:  //Banner
                         startActivity(new Intent(MainActivity.this, BannerTestActivity.class));
                         break;
-                    case 20:  //动画
+                    case 21:  //动画
                         startActivity(new Intent(MainActivity.this, AnimationTestActivity.class));
                         break;
 
-                    case 21:  //TextView
+                    case 22:  //TextView
                         startActivity(new Intent(MainActivity.this, TextViewTestActivity.class));
                         break;
                 }

@@ -1,8 +1,9 @@
 package com.widget.scroll.scrollconflict.demo3;
 
-import androidx.core.view.ViewPager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;

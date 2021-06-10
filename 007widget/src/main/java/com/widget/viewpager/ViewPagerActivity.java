@@ -1,7 +1,8 @@
 package com.widget.viewpager;
 
-import androidx.core.view.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
 import android.os.Bundle;
 
 import com.widget.R;
