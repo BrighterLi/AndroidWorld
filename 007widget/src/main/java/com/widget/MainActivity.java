@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("动画"); //20
 
         mDataList.add("TextView"); //21
-        mDataList.add("RecyclerView吸顶"); //21
+
     }
 
     private void initView() {
@@ -160,9 +160,7 @@ public class MainActivity extends AppCompatActivity {
                     case 22:  //TextView
                         startActivity(new Intent(MainActivity.this, TextViewTestActivity.class));
                         break;
-                    case 23:  //TextView
-                        startActivity(new Intent(MainActivity.this, CeilingActivity.class));
-                        break;
+
                 }
             }
         });

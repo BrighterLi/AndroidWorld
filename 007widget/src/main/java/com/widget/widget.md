@@ -25,6 +25,9 @@
 自己动手写一个简单的Android下拉刷新：https://blog.csdn.net/a62321780/article/details/79916845
 Android 简易上下拉刷新：https://www.cnblogs.com/liangstudyhome/p/4448600.html
 Android--简单的自定义ListView下拉刷新 ：https://www.cnblogs.com/ityizhainan/p/6273919.html
+Android下拉刷新完全解析，教你如何一分钟实现下拉刷新功能：https://blog.csdn.net/guolin_blog/article/details/9255575
+开源框架：PtrFrameLayout  in.srain.cube:ultra-ptr
+google官方： SwipeRefreshLayout
 4 加载更多
 5 HorizontalScrollView
 横向滑动视图HorizontalScrollView精炼详解: https://blog.csdn.net/weixin_41101173/article/details/80158169

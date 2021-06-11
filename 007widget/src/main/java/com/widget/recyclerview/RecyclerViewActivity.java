@@ -8,13 +8,16 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.widget.MainActivity;
 import com.widget.R;
 import com.widget.recyclerview.ItemDecoration.ItemDecorationTestActivity;
+import com.widget.recyclerview.ceiling.CeilingActivity;
 import com.widget.recyclerview.gridrecyclerview.GridRecyclerViewActivity;
 import com.widget.recyclerview.horilinearrecyclerview.HoriLinearRecyclerViewActivity;
 import com.widget.recyclerview.itemdecoration2.ItemDecorationTest2Activity;
 import com.widget.recyclerview.linearrecyclerview.LinearRecyclerViewActivity;
 import com.widget.recyclerview.nestrecyclerview.NestRecyclerViewActivity;
+import com.widget.recyclerview.recycle.RecyclerActivity;
 import com.widget.recyclerview.twoitemsrecyclerview.TwoItemsRecyclerViewActivity;
 import com.widget.recyclerview.waterfallrecyclerview.WaterfallRecyclerViewActivity;
 
@@ -62,6 +65,12 @@ public class RecyclerViewActivity extends AppCompatActivity {
                     case 7:
                         startActivity(new Intent(RecyclerViewActivity.this, ItemDecorationTest2Activity.class));
                         break;
+                    case 8:  //TextView
+                        startActivity(new Intent(RecyclerViewActivity.this, CeilingActivity.class));
+                        break;
+                    case 9:
+                        startActivity(new Intent(RecyclerViewActivity.this, RecyclerActivity.class));
+                        break;
                 }
             }
         });
@@ -80,5 +89,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         demoListData.add("RecyclerView根据不同的ViewHolder实现不同的Item");
         demoListData.add("RcyclerView的间距设置ItemDecoration");
         demoListData.add("RcyclerView的间距设置ItemDecoration");
+        demoListData.add("RecyclerView吸顶");
+        demoListData.add("RcyclerView缓存复用");
     }
 }
