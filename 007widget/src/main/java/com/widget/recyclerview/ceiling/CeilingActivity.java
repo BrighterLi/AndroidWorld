@@ -1,8 +1,15 @@
 package com.widget.recyclerview.ceiling;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+
+import com.widget.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CeilingActivity extends AppCompatActivity {
     private List<Star> starList;

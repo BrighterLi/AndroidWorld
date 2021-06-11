@@ -1,6 +1,7 @@
 package com.xiaoming.a000keeplearning.java.rxjava.source;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
@@ -24,7 +25,7 @@ public class SourceActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_source2);
         // 结论： new ObservableCreate() {source == 自定义source}
         // 2：Observable创建过程 源码分析
-        Observable.create(
+       /* Observable.create(
                 // 自定义source
                 new ObservableOnSubscribe<String>() {
                     @Override
@@ -61,7 +62,7 @@ public class SourceActivity2 extends AppCompatActivity {
                             public void onComplete() {
 
                             }
-                        });
+                        });*/
     }
 }
 

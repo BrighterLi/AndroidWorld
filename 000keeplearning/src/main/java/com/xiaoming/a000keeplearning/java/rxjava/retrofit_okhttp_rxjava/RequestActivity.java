@@ -75,7 +75,7 @@ public class RequestActivity extends AppCompatActivity {
     public void request(View view) {
         // 1.请求服务器注册操作
         // 2.注册完成之后，更新注册UI
-        MyRetrofit.createRetrofit().create(IReqeustNetwor.class)
+        /*MyRetrofit.createRetrofit().create(IReqeustNetwor.class)
                 .registerAction(new RegisterRequest())
                 .compose(DownloadActivity.rxud())
                 .subscribe(new Consumer<RegisterResponse>() {
@@ -84,13 +84,13 @@ public class RequestActivity extends AppCompatActivity {
                         // 更新注册相关的所有UI
                         // .....
                     }
-                });
+                });*/
 
         // 分开写
 
         // 3.马上去登录服务器操作
         // 4.登录完成之后，更新登录的UI
-        MyRetrofit.createRetrofit().create(IReqeustNetwor.class)
+       /* MyRetrofit.createRetrofit().create(IReqeustNetwor.class)
                 .loginAction(new LoginReqeust())
                 .compose(DownloadActivity.rxud())
                 .subscribe(new Consumer<LoginResponse>() {
@@ -99,7 +99,7 @@ public class RequestActivity extends AppCompatActivity {
                         // 更新登录相关的所有UI
                         // .....
                     }
-                });
+                });*/
     }
 
 
@@ -125,24 +125,24 @@ public class RequestActivity extends AppCompatActivity {
                 .registerAction(new RegisterRequest()) // todo 1.请求服务器注册操作   // todo 2
                 .subscribeOn(Schedulers.io()) // 给上面 异步
                 .observeOn(AndroidSchedulers.mainThread()) // 给下面分配主线程
-                .doOnNext(new Consumer<RegisterResponse>() { // todo 3
+                /*.doOnNext(new Consumer<RegisterResponse>() { // todo 3
                     @Override
                     public void accept(RegisterResponse registerResponse) throws Exception {
                         // todo 2.注册完成之后，更新注册UI
                     }
-                })
+                })*/
                 // todo 3.马上去登录服务器操作
                 .observeOn(Schedulers.io()) // 给下面分配了异步线程
-                .flatMap(new Function<RegisterResponse, ObservableSource<LoginResponse>>() { // todo 4
+               /* .flatMap(new Function<RegisterResponse, ObservableSource<LoginResponse>>() { // todo 4
                     @Override
                     public ObservableSource<LoginResponse> apply(RegisterResponse registerResponse) throws Exception {
                         Observable<LoginResponse> loginResponseObservable = MyRetrofit.createRetrofit().create(IReqeustNetwor.class)
                                 .loginAction(new LoginReqeust());
                         return loginResponseObservable;
                     }
-                })
-                .observeOn(AndroidSchedulers.mainThread()) // 给下面 执行主线程
-                .subscribe(new Observer<LoginResponse>() {
+                })*/
+                .observeOn(AndroidSchedulers.mainThread()) ;// 给下面 执行主线程
+               /* .subscribe(new Observer<LoginResponse>() {
 
                     // 一定是主线程，为什么，因为 subscribe 马上调用onSubscribe
                     @Override
@@ -174,8 +174,7 @@ public class RequestActivity extends AppCompatActivity {
                             progressDialog.dismiss();
                         }
                     }
-                });
-
+                });*/
     }
 
     @Override

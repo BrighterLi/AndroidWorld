@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
                     case 22:  //TextView
                         startActivity(new Intent(MainActivity.this, TextViewTestActivity.class));
                         break;
-                    case 22:  //TextView
+                    case 23:  //TextView
                         startActivity(new Intent(MainActivity.this, CeilingActivity.class));
                         break;
                 }

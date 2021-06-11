@@ -127,7 +127,7 @@ public class DownloadActivity extends AppCompatActivity {
     }
 
     public void rxJavaDownloadImageAction(View view) {
-        // 起点
+        /*// 起点
         Observable.just(PATH)  // 内部会分发  PATH Stirng  // TODO 第二步
 
                 // TODO 第三步
@@ -146,7 +146,7 @@ public class DownloadActivity extends AppCompatActivity {
                         return null;
                     }
                 })
-                /*.map(new Function<Bitmap, Bitmap>() {
+                *//*.map(new Function<Bitmap, Bitmap>() {
                     @Override
                     public Bitmap apply(Bitmap bitmap) throws Exception {
                         Paint paint = new Paint();
@@ -154,7 +154,7 @@ public class DownloadActivity extends AppCompatActivity {
                         paint.setColor(Color.RED);
                         return drawTextToBitmap(bitmap, "同学们大家好",paint, 88 , 88);
                     }
-                })*/
+                })*//*
 
                 // 日志记录
                 .map(new Function<Bitmap, Bitmap>() {
@@ -208,7 +208,7 @@ public class DownloadActivity extends AppCompatActivity {
                                 if (progressDialog != null)
                                     progressDialog.dismiss();
                             }
-                        });
+                        });*/
 
     }
 

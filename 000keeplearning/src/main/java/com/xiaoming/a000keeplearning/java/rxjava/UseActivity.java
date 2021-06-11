@@ -106,7 +106,7 @@ public class UseActivity extends AppCompatActivity {
         Button bt_anti_shake = findViewById(R.id.bt_anti_shake);
 
         RxView.clicks(bt_anti_shake).throttleFirst(2000, TimeUnit.MILLISECONDS);
-        RxView.clicks(bt_anti_shake).subscribe(new Consumer<Object>() {
+        /*RxView.clicks(bt_anti_shake).subscribe(new Consumer<Object>() {
             @Override
             public void accept(Object o) throws Exception {
                 api.getProject() // 查询主数据
@@ -128,7 +128,7 @@ public class UseActivity extends AppCompatActivity {
                             }
                         });
             }
-        });// 2秒钟之内 响应你一次
+        });// 2秒钟之内 响应你一次*/
     }
 
     /**
