@@ -12,6 +12,7 @@ import android.widget.ListView;
 import com.widget.MainActivity;
 import com.widget.R;
 import com.widget.aaaview.ViewKownledgePointsActivity;
+import com.widget.material_design.toolbar.ToolbarActivity;
 import com.widget.material_design.viewpager2.ViewPager2Activity;
 
 import java.util.ArrayList;
@@ -33,6 +34,7 @@ public class MaterialDesignActivity extends AppCompatActivity {
     private void initDemoData() {
         mDataList = new ArrayList<>();
         mDataList.add("ViewPager2");
+        mDataList.add("Toolbar");
     }
 
 
@@ -46,6 +48,9 @@ public class MaterialDesignActivity extends AppCompatActivity {
                 switch (i) {
                     case 0:
                         startActivity(new Intent(MaterialDesignActivity.this, ViewPager2Activity.class));
+                        break;
+                    case 1:
+                        startActivity(new Intent(MaterialDesignActivity.this, ToolbarActivity.class));
                         break;
                 }
             }
