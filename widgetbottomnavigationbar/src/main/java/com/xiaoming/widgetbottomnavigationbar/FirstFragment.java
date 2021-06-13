@@ -2,11 +2,12 @@ package com.xiaoming.widgetbottomnavigationbar;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import androidx.core.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 
 @SuppressLint("ValidFragment")

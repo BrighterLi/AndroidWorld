@@ -2,10 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.widget">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".material_design.toolbar.ToolbarActivity"></activity>
+        <activity android:name=".aaaview.layout.viewstub.ViewStubActivity"></activity>
+        <activity android:name=".material_design.toolbar.ToolbarActivity" />
         <activity android:name=".material_design.MaterialDesignActivity" />
         <activity
             android:name=".material_design.viewpager2.ViewPager2Activity"
@@ -76,5 +73,9 @@
         </activity>
         <activity android:name=".video.VideoActivity" />
     </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

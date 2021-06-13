@@ -2,6 +2,7 @@
 Android Studio 3.0 Memory Profiler使用:https://www.jianshu.com/p/e75680772375
 Android Studio调试内存问题：https://www.cnblogs.com/onelikeone/p/7115259.html
 1 内存优化工具
+ps:华为手机无法使用profile工具，会闪退
 (1)profile
 1)关于顶部的几种内存类型介绍：
 Java : java代码分配的内存
