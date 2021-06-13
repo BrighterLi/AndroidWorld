@@ -13,7 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".recyclerview.recycle.RecyclerActivity"></activity>
+        <activity android:name=".material_design.toolbar.ToolbarActivity"></activity>
+        <activity android:name=".material_design.MaterialDesignActivity" />
+        <activity
+            android:name=".material_design.viewpager2.ViewPager2Activity"
+            android:theme="@style/MaterialAppTheme" />
+        <activity android:name=".recyclerview.recycle.RecyclerActivity" />
         <activity android:name=".recyclerview.ceiling.CeilingActivity" />
         <activity android:name=".aaaview.custom_view.fish.FishActivity" />
         <activity android:name=".aaaview.ViewKownledgePointsActivity" />

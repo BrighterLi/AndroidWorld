@@ -19,6 +19,7 @@ import com.widget.listview.listviewdemo.demo1.ListView1Activity;
 import com.widget.listview.listviewdemo.demo2.ListView2Activity;
 import com.widget.listview.listviewdemo.demo3.ListView3Activity;
 import com.widget.loading.LoadingDemoActivity;
+import com.widget.material_design.MaterialDesignActivity;
 import com.widget.pullrefresh.PullRefreshActivity;
 import com.widget.recyclerview.RecyclerViewActivity;
 import com.widget.recyclerview.ceiling.CeilingActivity;
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("动画"); //20
 
         mDataList.add("TextView"); //21
+        mDataList.add("Material Design"); //21
 
     }
 
@@ -159,6 +161,9 @@ public class MainActivity extends AppCompatActivity {
 
                     case 22:  //TextView
                         startActivity(new Intent(MainActivity.this, TextViewTestActivity.class));
+                        break;
+                    case 23:  //TextView
+                        startActivity(new Intent(MainActivity.this, MaterialDesignActivity.class));
                         break;
 
                 }
