@@ -2,7 +2,7 @@
 Android Studio 3.0 Memory Profiler使用:https://www.jianshu.com/p/e75680772375
 Android Studio调试内存问题：https://www.cnblogs.com/onelikeone/p/7115259.html
 1 内存优化工具
-ps:华为手机无法使用profile工具，会闪退
+ps:华为、oppo手机无法使用profile工具，会闪退
 (1)profile
 1)关于顶部的几种内存类型介绍：
 Java : java代码分配的内存
@@ -25,13 +25,47 @@ Retained Size：为此类的所有实例而保留的内存总大小（以字节�
 native size：8.0之后的手机会显示，主要反应Bitmap所使用的像素内存（8.0之后，转移到了native）
 
 2)相关操作
-GC:
+1>GC按钮/Force garbage collection:
 你怀疑A页面发生了内存泄漏的话，可以在打开A页面之前，观察记录此时的内存的使用情况;
 然后打开A页面进行操作，操作结束后，进行GC，GC后再观察此时的total和Java的内存使用情况，看看内存是否存在只增不减的情况，来判断你的页面是否发生了内存泄漏
-Dump Java Heap:
+2>Dump Java Heap按钮:
+捕获一个heap dump
 一个时间点的内存情况。够通过它观察出哪些对象占用了巨量内存，并且能够找出它们被什么对象把持住，导致无法释放。点击Dump Java Heap后，APP会Freeze住。然后就是等待，这个时候最好别做其他事情，否则可能失败。大概几十秒后，就会进入读取hprof文件的界面了。
  Instance View;References
-Allocation:
+ 使用介绍：
+ 当点击app heap下拉列表会出现3个选项
+ Default heap: 这个我也不太明白是什么意思
+ App heap: app中的堆分配
+ Image heap: 图像的堆分配
+ Zygote heap: 这个按照官方的解释是来自安卓系统fork进程的地方产生的写数据备份
+ 
+ 当点击Arrange by class下拉列表会出现3个选项
+ Arrange by class:根据类名进行分组
+ Arrange by package:根据包名进行分组
+ Arrange by callstack:根据调用栈进行分配(这个目前也不是太理解)
+ 
+ Heap Dum 内存信息 :
+ ① Allocations : 对象个数 , 一般情况下一个对象只有一个 , 如果出现多个 , 就要考虑是否有内存泄漏问题 ; 
+ ② Shallow Size : 对象占用内存大小 ; 
+ ③ Retained Set : 对象引用组的内存 ;
+ 
+ 当我们点击其中一个类的时候会弹出一个新的Instance View面板
+ 每列中包括以下：
+ Depth: GC root到达该实例的最短跳数.
+ Native Size: c/c++层中内存的大小(bytes)
+ Shallow Size:java层内存大小(bytes)
+ Retained Size:这个类中所引用到的对象的总大小(bytes)
+ 另外补充一下，heap dump是看不到调用栈信息的.也就是上图中的Call Stack面板.
+ 
+ 分析你的heap,按照一下步骤.
+ 1,浏览Class Name列表,看看有没有大量对象存在，并且这些对象你认为是不应该存在的，可能存在内存泄漏的情况. 点击类名可以看到详细的对象信息.
+ 2,在这个Instance View面板中，点击一个实例References面板就会显示出来，里面都是使用该Instance的Reference，点击剪头可以看到引用它的所有区域。点击鼠标右键可以选择go to instance去看到引用该引用的引用，或者jump to source去看调用的源代码.
+ 另外heap dump也是可以保存成为HPROF文件的,点击如下按钮即可保存起来，用于以后分析，或用作其它工具分析
+ 
+ 自动检测 Activity / Fragment 的内存泄漏 : 选中 Activity / Fragment Leaks 复选框 , 该工具会自动分析 Activity / Fragment 的内存泄漏问题 ;
+ 
+ 
+3>Allocation/Record按钮-Record memory allocations:
 记录一段区间内各个线程各个方法的内存分配情况
 
 3)如何看Profiler的Memory图
@@ -57,6 +91,12 @@ MAT(Memory Analyzer Tool)：细看，强引用，导致内存泄漏的引用
 把dump下载的文件memory-20190828T162317.hprof拖进platform-tools文件夹
 敲入cmd命令hprof-conv [-z] memory-20190828T162317.hprof 1.hprof转成可被MAT识别的1.hprof文件 (两个文件要带上完整路径)
 使用MAT打开1.hprof
+
+Dalvik Debug Monitor Server (DDMS) 是 ADT插件的一部分，其中有两项功能可用于内存检查 : 
+·heap  查看堆的分配情况 
+·allocation tracker跟踪内存分配情况 
+DDMS 这两项功能有助于找到内存泄漏的操作行为。 
+Eclipse Memory Analysis Tools (MAT) 是一个分析 Java堆数据的专业工具，用它可以定位内存泄漏的原因。
 
 2 内存优化方面
 (1)内存溢出
