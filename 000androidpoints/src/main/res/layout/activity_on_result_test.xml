@@ -12,5 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="onActivityResult"/>
+    <Button
+        android:id="@+id/bt_activity_fuzzification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activity页面模糊"/>
 
 </LinearLayout>
