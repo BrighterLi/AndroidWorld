@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.widget.R;
 import com.widget.aaaview.custom_view.fish.FishActivity;
+import com.widget.aaaview.get_tag.ViewGetTagActivity;
 
 
 import java.util.ArrayList;
@@ -31,6 +32,7 @@ public class ViewKownledgePointsActivity extends AppCompatActivity {
     private void initDemoData() {
         mDataList = new ArrayList<>();
         mDataList.add("自定义View");
+        mDataList.add("View getTag");
 
     }
 
@@ -44,6 +46,9 @@ public class ViewKownledgePointsActivity extends AppCompatActivity {
                 switch (i) {
                     case 0:
                         startActivity(new Intent(ViewKownledgePointsActivity.this, FishActivity.class));
+                        break;
+                    case 1:
+                        startActivity(new Intent(ViewKownledgePointsActivity.this, ViewGetTagActivity.class));
                         break;
                 }
             }
