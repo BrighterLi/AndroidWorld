@@ -12,6 +12,7 @@ import android.widget.ListView;
 import com.widget.R;
 import com.widget.material_design.NestedScrollView.demo1.NestedScrollDemoActivity;
 import com.widget.material_design.NestedScrollView.demo2.NestedScrollDemo2Activity;
+import com.widget.material_design.NestedScrollView.demo2.ScrollViewDemoActivity;
 import com.widget.material_design.toolbar.ToolbarActivity;
 import com.widget.material_design.viewpager2.ViewPager2Activity;
 
@@ -37,6 +38,7 @@ public class MaterialDesignActivity extends AppCompatActivity {
         mDataList.add("Toolbar");
         mDataList.add("NestedScrollView");
         mDataList.add("NestedScrollView2");
+        mDataList.add("ScrollVie 对比NestedScrollView");
     }
 
 
@@ -59,6 +61,9 @@ public class MaterialDesignActivity extends AppCompatActivity {
                         break;
                     case 3:
                         startActivity(new Intent(MaterialDesignActivity.this, NestedScrollDemo2Activity.class));
+                        break;
+                    case 4:
+                        startActivity(new Intent(MaterialDesignActivity.this, ScrollViewDemoActivity.class));
                         break;
                 }
             }

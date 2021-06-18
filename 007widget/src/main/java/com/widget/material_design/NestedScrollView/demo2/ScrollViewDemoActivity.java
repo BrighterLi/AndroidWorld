@@ -13,36 +13,30 @@ import android.widget.TextView;
 
 import com.widget.R;
 
-
-//NestedScrollview使用---优雅的代替ScrollView内嵌ListView或者RecyclerView: https://blog.csdn.net/Jeff169/article/details/80231257
-public class NestedScrollDemo2Activity extends AppCompatActivity {
-
-
-
+public class ScrollViewDemoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nested_scroll_demo2);
-
+        setContentView(R.layout.activity_scroll_view_demo);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         LinearLayoutManager manager = new LinearLayoutManager(this);
         manager.setOrientation(RecyclerView.VERTICAL);
         recyclerView.setLayoutManager(manager);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, 1));
-        recyclerView.setAdapter(new MyAdapter());
+        recyclerView.setAdapter(new ScrollViewDemoActivity.MyAdapter());
 
         recyclerView.setNestedScrollingEnabled(false);//解决卡顿
     }
 
-    class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
+    class MyAdapter extends RecyclerView.Adapter<ScrollViewDemoActivity.MyViewHolder> {
         @Override
-        public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            return new MyViewHolder(LayoutInflater.from(NestedScrollDemo2Activity.this).inflate(R.layout.item_restedscrollview_recyclerview, null));
+        public ScrollViewDemoActivity.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            return new ScrollViewDemoActivity.MyViewHolder(LayoutInflater.from(ScrollViewDemoActivity.this).inflate(R.layout.item_restedscrollview_recyclerview, null));
         }
 
         @Override
-        public void onBindViewHolder(MyViewHolder holder, int position) {
+        public void onBindViewHolder(ScrollViewDemoActivity.MyViewHolder holder, int position) {
             holder.text.setText("position=" + position);
         }
 
@@ -60,8 +54,4 @@ public class NestedScrollDemo2Activity extends AppCompatActivity {
             text = itemView.findViewById(R.id.text);
         }
     }
-
-
-
-
 }
