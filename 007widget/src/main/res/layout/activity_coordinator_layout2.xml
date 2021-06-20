@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".material_design.coordinatorlayout.coordinatorlayout2.CoordinatorLayout2Activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="Behavior的嵌套滑动展示"
+        android:textColor="#fff"
+        app:layout_behavior="com.widget.material_design.coordinatorlayout.coordinatorlayout2.SampleHeaderBehavior"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.widget.material_design.coordinatorlayout.coordinatorlayout2.ScrollerBehavior"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

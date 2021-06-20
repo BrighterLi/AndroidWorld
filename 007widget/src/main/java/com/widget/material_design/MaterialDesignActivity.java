@@ -14,6 +14,7 @@ import com.widget.material_design.NestedScrollView.demo1.NestedScrollDemoActivit
 import com.widget.material_design.NestedScrollView.demo2.NestedScrollDemo2Activity;
 import com.widget.material_design.NestedScrollView.demo2.ScrollViewDemoActivity;
 import com.widget.material_design.coordinatorlayout.CoordinatorLayoutActivity;
+import com.widget.material_design.coordinatorlayout.coordinatorlayout2.CoordinatorLayout2Activity;
 import com.widget.material_design.toolbar.ToolbarActivity;
 import com.widget.material_design.viewpager2.ViewPager2Activity;
 
@@ -41,6 +42,7 @@ public class MaterialDesignActivity extends AppCompatActivity {
         mDataList.add("NestedScrollView2");
         mDataList.add("ScrollVie 对比NestedScrollView");
         mDataList.add("Coordinator");
+        mDataList.add("Coordinator2");
     }
 
 
@@ -69,6 +71,9 @@ public class MaterialDesignActivity extends AppCompatActivity {
                         break;
                     case 5:
                         startActivity(new Intent(MaterialDesignActivity.this, CoordinatorLayoutActivity.class));
+                        break;
+                    case 6:
+                        startActivity(new Intent(MaterialDesignActivity.this, CoordinatorLayout2Activity.class));
                         break;
                 }
             }

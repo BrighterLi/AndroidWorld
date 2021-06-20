@@ -13,8 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".material_design.coordinatorlayout.CoordinatorLayoutActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".material_design.coordinatorlayout.coordinatorlayout2.CoordinatorLayout2Activity"></activity>
+        <activity
+            android:name=".material_design.coordinatorlayout.CoordinatorLayoutActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".material_design.NestedScrollView.demo2.ScrollViewDemoActivity" />
         <activity android:name=".material_design.NestedScrollView.demo2.NestedScrollDemo2Activity" />
         <activity android:name=".material_design.NestedScrollView.demo1.NestedScrollDemoActivity" />
