@@ -1,0 +1,33 @@
+1 CoordinatorLayout协调者布局
+(1）CoordinatorLayout有什么作用
+Android之使用CoordinatorLayout相关布局实现标题栏的滑动折叠效果: https://blog.csdn.net/yuncaidaishu/article/details/89192265
+CoordinatorLayout作为“super-powered FrameLayout”基本实现两个功能：
+1、作为顶层布局
+2、调度协调子布局
+CoordinatorLayout把整个页面分成了两个部分，上半部分固定设置为AppBarLayout布局，上半部分的作用就是可以进行折叠；下半部分可以为两种布局 RecyclerView 和 NestedScrollView 的其中一种，
+下半部分的作用是可以进行滑动，对上部分进行折叠操作
+
+CoordinatorLayout:
+CoordinatorLayout又叫协调者布局，它是顶级的父布局，继承自FrameLayout，其他所有的布局或控件都是定义在它内部的。定义在CoordinatorLayout布局内的子布局或控件能够相互影响。
+它是support.design包中的控件，所以使用的时候要导入compile ‘com.android.support:design:xxx’包（xxx代表版本号）。
+
+AppBarLayout：
+AppBarLayout布局继承自LinearLayout，所以它的默认布局方向是垂直的。它的作用就是：当CoordinatorLayout布局内的某个可滑动子View（实现了NestedScrollView机制的View，
+比如RecyclerView和NestedScrollView等，ListView不行）发生滑动事件时，定义在AppBarLayout布局内的子View能够实现某种动作（比如滑动，折叠，隐藏等等）。
+方法就是在子View的属性中添加一句：app：layout_scrollFlags="xxx"。xxx代表滑动的方式，有5个选项（用RecyclerLayout做滚动子View，标题栏ToorBar做AppBarLayout内的子View举例说明）
+
+CollapsingToolbarLayout:
+该布局继承自FrameLayout，作用是对标题栏（Toorbar）进行再次包装，可以实现折叠效果，CollapsingToolbarLayout布局内的子视图不仅仅可以是标题栏，还可以添加一张图片（ImageView控件）。
+注：当标题栏被CollapsingToolbarLayout布局封装过后，想要更改标题栏的title需要通过调用CollapsingToolbarLayout的setTitle（）方法。同时app：layout_scrollFlags="xxx"这个属性被设置在
+CollapsingToolbarLayout的属性上。
+
+NestedScrollView:
+该控件是ScrollView的升级版，它们都能实现滑动效果，区别在于NestedScrollView支持嵌套滑动（在NestedScrollView内嵌套一个RecyclerView控件）。该控件就是我们Demo中要用到的滑动子View，
+当NestedScrollView产生滑动效果时，AppBarLayout内的子View就会做出相应动作。注：NestedScrollView可以用RecyclerLayout代替，不能用ListView（RecyclerLayout相当于ListView的升级版）。
+
+FloatingActionButton:
+FloatingActionButton就是一个按钮控件，其本质是一个ImageVeiw。有一点要注意，Meterial Design引入了Z轴的概念，就是所有的view都有了高度，他们一层一层贴在手机屏幕上，
+而FloatingActionButton的Z轴高度最高，它贴在所有view的最上面，没有view能覆盖它。
+
+TabLayout:
+TabLayout又称表格布局，主要用于页面的顶部导航栏，此处不进行过多说明，知道它是干嘛的就行。
