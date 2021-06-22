@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".aaaview.share_a_view.ShareAViewActivity">
 
     <TextView
@@ -13,5 +14,11 @@
         android:background="@color/Amber300"
         android:text="share view"/>
 
+
+  <Button
+      android:id="@+id/bt_jump_to"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="跳转"/>
 
 </LinearLayout>
