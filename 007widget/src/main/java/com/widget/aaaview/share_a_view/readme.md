@@ -1,0 +1,1 @@
+Android在多个Activity之间共享一个View: https://blog.csdn.net/yelbosh/article/details/7908639

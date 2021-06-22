@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".material_design.coordinatorlayout.coordinatorlayout2.CoordinatorLayout2Activity"></activity>
+        <activity android:name=".aaaview.share_a_view.ShareAView2Activity"></activity>
+        <activity android:name=".aaaview.share_a_view.ShareAViewActivity" />
+        <activity android:name=".material_design.coordinatorlayout.coordinatorlayout2.CoordinatorLayout2Activity" />
         <activity
             android:name=".material_design.coordinatorlayout.CoordinatorLayoutActivity"
             android:theme="@style/AppTheme.NoActionBar" />
