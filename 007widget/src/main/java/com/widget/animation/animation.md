@@ -37,3 +37,36 @@ Android Lottie动画初探:https://www.jianshu.com/p/0a5cf2261b4b?utm_campaign=m
 (3)编码加图片辅助。这种方式繁琐并且不易维护，稍作修改就要推倒重新来过。
 (5)Android 5.x 之后提供了对 SVG 的支持，通过 VectorDrawable、AnimatedVectorDrawable 的结合可以实现一些稍微复杂的动画，但是问题和前2个类似。
 那么，现在有一个方案，不使用大量图片，甚至零图片，不占空间，不占内存，不需要适配，且易于维护，简单而且方便。
+
+
+3 Activity加入动画
+相关方法：
+(1) 在onCreate加
+overridePendingTransition(R.anim.enter, R.anim.exit):
+Activity的切换动画指的是从一个activity跳转到另外一个activity时的动画。
+它包括两个部分：
+一部分是第一个activity退出时的动画；
+另外一部分时第二个activity进入时的动画；
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    requestWindowFeature(Window.FEATURE_NO_TITLE);//去标题
+    overridePendingTransition(R.anim.enter, R.anim.exit);
+    setContentView(R.layout.activity_functions);
+}
+(2) 在Activity的theme加入动画
+动画不生效原因：
+用的Activity在Manifest中设置了SingleInstance属性，所以Activity处于已经实例化的状态，不会再被实例化，于是Activity动画不会播放，只有Window动画会播放。把这个属性改成SingleTop就好了。
+(3) 在startActivity后面加
+overridePendingTransition(R.anim.enter , R.anim.exit);
+
+相关问题：
+(1)不起作用的原因
+大概是以下几个方面的原因：
+android系统版本2.0以下，这个没办法，想其他办法解决切换动画吧。
+在ActivityGroup等的嵌入式Activity中，这个比较容易解决，用如下方法就可以了：this.getParent().overridePendingTransition 就可以解决。
+在一个Activity的内部类中，或者匿名类中，这时候只好用handler来解决了。
+手机的显示动画效果被人为或者其他方式给关闭了 现在打开即可 设置->显示->显示动画效果
+(2)Activity动画跳转黑屏
+Activity设置切换动画时黑屏问题的解决:https://blog.csdn.net/tndroid/article/details/47446423

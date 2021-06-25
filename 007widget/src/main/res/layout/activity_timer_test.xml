@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".animation.AnimationTestActivity">
 
     <Button
@@ -11,5 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="view动画：由小到大"/>
+    <Button
+        android:id="@+id/bt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activity进出动画"/>
 
 </LinearLayout>
