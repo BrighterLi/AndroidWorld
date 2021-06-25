@@ -17,7 +17,7 @@ public class Activity1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_1);
-        overridePendingTransition(R.anim.popwindow_no_anim, R.anim.popwindow_out);
+        overridePendingTransition(R.anim.popwindow_no_anim, R.anim.popwindow_out_from_bottom_to_top);
         mBt = findViewById(R.id.bt_jump);
         mBt.setOnClickListener(new View.OnClickListener() {
             @Override
