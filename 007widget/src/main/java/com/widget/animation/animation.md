@@ -60,6 +60,13 @@ protected void onCreate(Bundle savedInstanceState) {
 用的Activity在Manifest中设置了SingleInstance属性，所以Activity处于已经实例化的状态，不会再被实例化，于是Activity动画不会播放，只有Window动画会播放。把这个属性改成SingleTop就好了。
 (3) 在startActivity后面加
 overridePendingTransition(R.anim.enter , R.anim.exit);
+(4) 在finish里面加
+overridePendingTransition()使用方法
+Activity的切换动画从业务层面上来说可以分为两种，一种是Activity启动时的动画，一种是从Activity返回时的动画，它们都可以通过overridePendingTransition()来设置，
+要设置启动时的动画需要在执行startActivity()或startActivityForResult()之后调用overridePendingTransition()，要设置返回时的动画需要在finish()之后调用overridePendingTransition()。
+启动动画和返回动画是相互独立的，设置启动动画不会对返回动画产生影响，如果只在startActivity()或startActivityForResult()之后调用了overridePendingTransition()，没有在finish()的时候调用，
+则Activity返回的时候仍然是默认的动画效果，也可以在finish()的时候使用和启动时不同的动画效果。
+
 
 相关问题：
 (1)不起作用的原因
