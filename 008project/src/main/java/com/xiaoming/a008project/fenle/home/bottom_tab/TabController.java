@@ -7,7 +7,6 @@ import android.widget.TextView;
 import android.widget.ImageView;
 
 import com.xiaoming.a008project.R;
-import com.xiaoming.a008project.consumption.utils.ScreenUtil;
 import com.xiaoming.a008project.fenle.RouterKey;
 import com.xiaoming.a008project.fenle.home.HomeActivity;
 

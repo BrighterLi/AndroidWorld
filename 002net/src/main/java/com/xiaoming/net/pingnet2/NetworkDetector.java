@@ -39,7 +39,7 @@ public class NetworkDetector {
                 //Dns,wifi情况下会是局域网IP
                 String dns = NetworkIpUtil.getDnsAddress();
                 infoMap.put("dns", dns);
-                Log.i(TAG, "\n" + "uid：" + "111" + "\n" +
+                Log.i(TAG, "\n" + "uid：" + "item_push_header_layout" + "\n" +
                         "version：" + "7.0.0" + "\n" +
                         "os：" + Build.VERSION.RELEASE + "\n" +
                         "ip：" + outIp + "\n" +

@@ -21,15 +21,33 @@
         android:layout_above="@id/mVHomeTabs"
         android:background="#e0e0e0"/>
 
-    <RelativeLayout
+    <in.srain.cube.views.wt.PtrFrameLayout
+        android:id="@+id/mPtrRootFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/mVTabDivider">
+        android:layout_above="@id/mVTabDivider"
+        app:ptr_content="@+id/mPtrRlContent"
+        app:ptr_header="@+id/mPtrFloorHeader">
 
-        <include
-            android:id="@+id/mCommHeader"
-            layout="@layout/layout_home_header"/>
+        <com.xiaoming.a008project.fenle.home.pull_refresh.PtrClassicHeader
+            android:id="@+id/mPtrFloorHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.xiaoming.a008project.fenle.home.pull_refresh.PtrClassicHeader>
 
-    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/mPtrRlContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/mCommHeader"
+                layout="@layout/layout_home_header"/>
+
+        </RelativeLayout>
+
+    </in.srain.cube.views.wt.PtrFrameLayout>
+
+
 
 </RelativeLayout>
