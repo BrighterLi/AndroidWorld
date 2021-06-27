@@ -40,9 +40,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <FrameLayout
+                android:id="@+id/mFlHomeContentShopping"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/read_dot_bg"
+                android:clickable="false"/>
+
             <include
                 android:id="@+id/mCommHeader"
                 layout="@layout/layout_home_header"/>
+
+            <FrameLayout
+                android:id="@+id/mFlHomeContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                android:layout_below="@id/mCommHeader"
+                android:clickable="false"/>
 
         </RelativeLayout>
 

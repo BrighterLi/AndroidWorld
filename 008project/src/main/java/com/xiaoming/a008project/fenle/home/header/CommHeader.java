@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.xiaoming.a008project.R;
+import com.xiaoming.a008project.consumption.view.MyTabStrip;
 import com.xiaoming.a008project.fenle.home.HomeActivity;
 import com.xiaoming.a008project.fenle.tool.SystemBarUtil;
 
@@ -41,4 +42,5 @@ public class CommHeader extends  LinearLayout{
                     SystemBarUtil.getStatusBarHeight(getContext())));
         }*/
     }
+
 }

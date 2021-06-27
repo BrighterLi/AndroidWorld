@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import com.xiaoming.a008project.R;
 import com.xiaoming.a008project.fenle.RouterKey;
 import com.xiaoming.a008project.fenle.home.HomeActivity;
+import com.xiaoming.a008project.fenle.home.header.CommHeader;
 
 import java.util.HashMap;
 
@@ -17,6 +18,7 @@ public class TabController {
     private HomeActivity mHomeActivity;
     private LinearLayout mVHomeTabs;
     private HashMap<String, Integer> mNormalIconMap = new HashMap<>(4);
+    private TabClickListener mTabClickListener;
 
     public TabController(HomeActivity homeActivity, LinearLayout homeTabs) {
         this.mHomeActivity = homeActivity;
@@ -35,9 +37,28 @@ public class TabController {
             View itemView = LayoutInflater.from(mHomeActivity).inflate(R.layout.item_home_activity_bottom_tab, mVHomeTabs, false);
             ImageView mIvHomeTabImg = itemView.findViewById(R.id.mIvHomeTabImg);
             TextView mTvHomeTabTitle = itemView.findViewById(R.id.mTvHomeTabTitle);
+            final int finalI = i;
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(mTabClickListener != null) {
+                        mTabClickListener.onTabClick(finalI, v);
+                    }
+                }
+
+            });
             mVHomeTabs.addView(itemView);
         }
 
 
+    }
+
+
+    public void setTabClickListener(TabClickListener tabClickListener) {
+        mTabClickListener = tabClickListener;
+    }
+
+    public interface TabClickListener {
+        void onTabClick(int index, View v);
     }
 }
