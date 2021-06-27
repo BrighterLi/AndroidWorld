@@ -67,7 +67,7 @@ public class PtrFrameLayout extends ViewGroup {
 
     private int mLoadingMinTime = 500;
     private long mLoadingStartTime = 0;
-    private PtrIndicator mPtrIndicator;
+    protected PtrIndicator mPtrIndicator;
     private boolean mHasSendCancelEvent = false;
     private Runnable mPerformRefreshCompleteDelay = new Runnable() {
         @Override
@@ -376,6 +376,15 @@ public class PtrFrameLayout extends ViewGroup {
                 }
         }
         return dispatchTouchEventSupper(e);
+    }
+
+    protected void startByEvent(MotionEvent e) {
+        mHasSendCancelEvent = false;
+        mPtrIndicator.onPressDown(e.getX(), e.getY());
+
+        mScrollChecker.abortIfWorking();
+
+        mPreventForHorizontal = false;
     }
 
     /**

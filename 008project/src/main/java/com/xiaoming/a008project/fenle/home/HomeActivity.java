@@ -12,12 +12,14 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.xiaoming.a008project.R;
 import com.xiaoming.a008project.fenle.RouterKey;
 import com.xiaoming.a008project.fenle.home.bottom_tab.TabController;
 import com.xiaoming.a008project.fenle.home.fragment.FirstFragment;
+import com.xiaoming.a008project.fenle.home.fragment.home_fragment_2.HomeFragment2;
 import com.xiaoming.a008project.fenle.home.header.CommHeader;
 import com.xiaoming.a008project.fenle.home.pull_refresh.PtrClassicHeader;
 
@@ -28,8 +30,12 @@ public class HomeActivity extends FragmentActivity implements TabController.TabC
     private PtrFrameLayout mPtrRootFrame;
     private PtrClassicHeader mPtrFloorHeader;
 
+    private FrameLayout mFlHomeContent; //有CommHeader
+    private FrameLayout mFlHomeContentShopping; //无CommHeader
+
     private FragmentManager fragmentManager;
-    private FirstFragment f1, f2, f3, f4;
+    private HomeFragment2 f1;
+    private FirstFragment  f2, f3, f4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +47,8 @@ public class HomeActivity extends FragmentActivity implements TabController.TabC
     private void bindViewFromXml() {
         mVHomeTabs = (LinearLayout) findViewById(R.id.mVHomeTabs);
         mCommHeader = (CommHeader) findViewById(R.id.mCommHeader);
+        mFlHomeContent = (FrameLayout) findViewById(R.id.mFlHomeContent);
+        mFlHomeContentShopping = (FrameLayout) findViewById(R.id.mFlHomeContentShopping);
         mCommHeader.bind(this);
         mTabController = new TabController(this, mVHomeTabs);
         mPtrRootFrame = (PtrFrameLayout) findViewById(R.id.mPtrRootFrame);
@@ -48,6 +56,7 @@ public class HomeActivity extends FragmentActivity implements TabController.TabC
 
         initBottomTab();
         initPullToRefresh();
+        showFragment(0);
     }
 
     private void initBottomTab() {
@@ -92,7 +101,7 @@ public class HomeActivity extends FragmentActivity implements TabController.TabC
         switch (index) {
             case 0:
                 if(f1 == null) {
-                    f1 = new FirstFragment("第一个Fragment");
+                    f1 = new HomeFragment2();
                     //将对应的Fragment添加到fragment_container布局中
                     transaction.add(R.id.mFlHomeContent,f1);
                 } else {

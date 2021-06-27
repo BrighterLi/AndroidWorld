@@ -5,4 +5,13 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="theme_color">#3180FF</color>
+
+    <color name="progress_1">#0DDBFF</color>
+    <color name="progress_2">#1FFFF5</color>
+
+    <integer-array name="gradient_arc_color">
+        <item>@color/progress_1</item>
+        <item>@color/progress_2</item>
+        <item>@color/progress_1</item>
+    </integer-array>
 </resources>

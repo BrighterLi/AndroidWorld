@@ -15,6 +15,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+//在HomeActivity上的下拉刷新UI
 public class PtrClassicHeader extends FrameLayout implements PtrUIHandler { //实现接口
     private ImageView mPush;
     private TextView mTitleTextView;

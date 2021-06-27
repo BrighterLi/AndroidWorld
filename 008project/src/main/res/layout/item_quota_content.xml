@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="#FF0491FA">
+
+    <com.xiaoming.a008project.fenle.home.fragment.home_fragment_2.header.CircleProgress
+        android:id="@+id/circleProgressView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="12dp"
+        app:arcColors="@array/gradient_arc_color"
+        app:arcWidth="38dp"
+        app:bgArcColor="#40ABF9"
+        app:bgArcWidth="38dp"
+        app:dialColor="#DFE7F1"
+        app:dialHeight="10dp"
+        app:dialWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:percent="0"
+        app:startAngle="165"
+        app:sweepAngle="210" />
+
+    <TextView
+        android:id="@+id/textRaise"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/shape_round_stroke_white_12"
+        android:drawableEnd="@drawable/ic_input_more_normal"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:maxLength="5"
+        android:maxLines="1"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/space"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="去提额提额提额提额提额" />
+
+    <TextView
+        android:id="@+id/textAvailableQuota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/textRaise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textUnit"
+        tools:text="50000.00" />
+
+    <TextView
+        android:id="@+id/textUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/textAvailableQuota"
+        app:layout_constraintEnd_toStartOf="@id/textAvailableQuota"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text="¥"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="6dp"
+        />
+
+    <TextView
+        android:id="@+id/textAvailableQuotaTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/textAvailableQuota"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="可用额度"
+        />
+
+    <ImageView
+        android:id="@+id/imgTmpQuota"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/textAvailableQuotaTip"
+        app:layout_constraintBottom_toBottomOf="@id/textAvailableQuotaTip"
+        android:src="@drawable/ico_default_user_img"
+        app:layout_constraintTop_toTopOf="@id/textAvailableQuotaTip"
+        android:layout_marginStart="4dp"
+        android:visibility="gone"
+        />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="@id/circleProgressView" />
+
+    <FrameLayout
+        android:id="@+id/frameContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="26dp"
+        app:layout_constraintTop_toBottomOf="@id/space">
+
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,4 +13,32 @@
         <attr name="pstsShouldExpand" format="boolean"/>
         <attr name="pstsTextAllCaps" format="boolean"/>
     </declare-styleable>
+
+    <!-- 圆形进度条 -->
+    <declare-styleable name="CircleProgress">
+        <!-- 圆弧起始角度，3点钟方向为0，顺时针递增，小于0或大于360进行取余 -->
+        <attr name="startAngle" format="float" />
+        <!-- 圆弧度数 -->
+        <attr name="sweepAngle" format="float" />
+        <!-- 当前进度 -->
+        <attr name="percent" format="float" />
+        <!-- 设置动画时间 -->
+        <attr name="animTime" format="integer" />
+
+        <!-- 背景圆弧颜色，默认白色 -->
+        <attr name="bgArcColor" format="color|reference" />
+        <!-- 圆弧宽度 -->
+        <attr name="arcWidth" format="dimension" />
+        <!-- 圆弧颜色， -->
+        <attr name="arcColors" format="color|reference" />
+        <!-- 背景圆弧宽度 -->
+        <attr name="bgArcWidth" format="dimension" />
+        <!-- 刻度线颜色 -->
+        <attr name="dialColor" format="color|reference" />
+        <!-- 刻度的宽度 -->
+        <attr name="dialWidth" format="dimension|reference" />
+        <attr name="dialHeight" format="dimension|reference" />
+    </declare-styleable>
+
+
 </resources>
