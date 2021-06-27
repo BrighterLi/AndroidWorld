@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ptr:ptr_duration_to_close_either：头部和底部回弹时间
+    ptr:ptr_keep_header_when_refresh：刷新过程中是否保留头部
+    ptr:ptr_pull_to_fresh：下拉刷新/释放刷新，默认是释放刷新
+    ptr:ptr_ratio_of_header_height_to_refresh：触发刷新时移动的位置比例，指的是与头部的比例
+    ptr:ptr_resistance：阻尼系数，越大下拉越吃力
+-->
+<in.srain.cube.views.ptr.PtrClassicFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ptr_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    ptr:ptr_duration_to_close_either="1000"
+    ptr:ptr_keep_header_when_refresh="true"
+    ptr:ptr_pull_to_fresh="false"
+    ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+    ptr:ptr_resistance="1.7">
+
+    <ListView
+        android:id="@+id/id_main_lv_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</in.srain.cube.views.ptr.PtrClassicFrameLayout>

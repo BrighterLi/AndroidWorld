@@ -21,6 +21,7 @@ import com.widget.listview.listviewdemo.demo3.ListView3Activity;
 import com.widget.loading.LoadingDemoActivity;
 import com.widget.material_design.MaterialDesignActivity;
 import com.widget.pullrefresh.PullRefreshActivity;
+import com.widget.pullrefresh.pull_to_refresh.PullToRefreshDemoActivity;
 import com.widget.recyclerview.RecyclerViewActivity;
 import com.widget.recyclerview.ceiling.CeilingActivity;
 import com.widget.scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivity;
@@ -79,7 +80,8 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("动画"); //20
 
         mDataList.add("TextView"); //21
-        mDataList.add("Material Design"); //21
+        mDataList.add("Material Design"); //22
+        mDataList.add("上拉刷新下拉加载框架Ultra-Pull-To-Refresh"); //23
 
     }
 
@@ -162,8 +164,12 @@ public class MainActivity extends AppCompatActivity {
                     case 22:  //TextView
                         startActivity(new Intent(MainActivity.this, TextViewTestActivity.class));
                         break;
-                    case 23:  //TextView
+                    case 23:  //MaterialDesign
                         startActivity(new Intent(MainActivity.this, MaterialDesignActivity.class));
+                        break;
+
+                    case 24:  //刷新加载框架Ultra-Pull-To-Refresh
+                        startActivity(new Intent(MainActivity.this, PullToRefreshDemoActivity.class));
                         break;
 
                 }

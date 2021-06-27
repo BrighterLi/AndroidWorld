@@ -47,4 +47,6 @@ dependencies {
     implementation 'androidx.viewpager2:viewpager2:1.1.0-alpha01'
     implementation 'com.jakewharton:butterknife:8.2.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.2.1'
+
+    implementation 'in.srain.cube:ptr-load-more:1.0.6'
 }

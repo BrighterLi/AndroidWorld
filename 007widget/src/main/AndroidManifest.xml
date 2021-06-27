@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".animation.activity.Activity2"></activity>
+        <activity android:name=".pullrefresh.pull_to_refresh.PullToRefreshDemoActivity"></activity>
+        <activity android:name=".animation.activity.Activity2" />
         <activity android:name=".animation.activity.Activity1" />
         <activity android:name=".aaaview.share_a_view.ShareAView2Activity" />
         <activity android:name=".aaaview.share_a_view.ShareAViewActivity" />

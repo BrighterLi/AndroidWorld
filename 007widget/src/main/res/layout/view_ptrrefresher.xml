@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70.0dip"
+    android:background="#DDDDDD"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="20.0dip">
+
+    <ImageView
+        android:id="@+id/id_header_iv_img"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:background="@mipmap/ic_launcher"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/id_header_tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:text="Loading......"
+        android:textColor="#FF000000"
+        android:textSize="16.0sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
