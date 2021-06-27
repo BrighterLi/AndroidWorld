@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fenle.HomeActivity"></activity>
+        <activity android:name=".fenle.BaseActivity"></activity>
+        <activity android:name="com.xiaoming.a008project.fenle.home.HomeActivity"
+            android:alwaysRetainTaskState="true"/>
         <activity android:name=".webviewlinked.demo4.ScrollViewActivity4" />
         <activity android:name=".webviewlinked.recyclerview.RecyclerViewActivity" />
         <activity android:name=".webviewlinked.demo3.ScrollViewActivity3" />

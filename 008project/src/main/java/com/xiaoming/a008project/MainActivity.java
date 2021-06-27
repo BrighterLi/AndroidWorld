@@ -2,7 +2,6 @@ package com.xiaoming.a008project;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.ListView;
@@ -12,6 +11,8 @@ import android.widget.ArrayAdapter;
 
 
 import com.xiaoming.a008project.consumption.ConsumptionActivity;
+
+import com.xiaoming.a008project.fenle.home.HomeActivity;
 import com.xiaoming.a008project.im.ImTestActivity;
 import com.xiaoming.a008project.webviewlinked.demo.ScrollViewActivity;
 import com.xiaoming.a008project.webviewlinked.demo2.ScrollViewActivity2;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("WebView+ScrollView联动3");
         mDataList.add("WebView+Weex+ScrollView联动4");
         mDataList.add("WebView+RecyclerView联动");
+        mDataList.add("fenle项目框架");
     }
 
     private void initView() {
@@ -71,12 +73,13 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, ScrollViewActivity3.class));
                         break;
                     case 5:
-                        startActivity(new Intent(MainActivity.this,
-                                ScrollViewActivity4.class));
+                        startActivity(new Intent(MainActivity.this, ScrollViewActivity4.class));
                         break;
                     case 6:
-                        startActivity(new Intent(MainActivity.this,
-                                RecyclerViewActivity.class));
+                        startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
+                        break;
+                    case 7:
+                        startActivity(new Intent(MainActivity.this, HomeActivity.class));
                         break;
                 }
             }

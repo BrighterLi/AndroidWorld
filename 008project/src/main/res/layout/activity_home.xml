@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fenle.HomeActivity">
+    tools:context=".fenle.home.HomeActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/mVHomeTabs"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/font_blue"
+        android:orientation="horizontal"/>
+
+    <View
+        android:id="@+id/mVTabDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/mVHomeTabs"
+        android:background="#e0e0e0"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/mVTabDivider">
+
+        <include
+            android:id="@+id/mCommHeader"
+            layout="@layout/layout_home_header"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
