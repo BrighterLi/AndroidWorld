@@ -54,4 +54,5 @@ dependencies {
 
     //下拉刷新的Module组件
     implementation project(':ultraptr_wt')
+    implementation 'com.jakewharton:butterknife:8.4.0'
 }

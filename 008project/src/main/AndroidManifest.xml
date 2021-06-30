@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.xiaoming.a008project">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,9 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fenle.BaseActivity"></activity>
-        <activity android:name="com.xiaoming.a008project.fenle.home.HomeActivity"
-            android:alwaysRetainTaskState="true"/>
+        <activity android:name=".fenle.test.recyclerview.RecyclerViewDemoActivity"></activity>
+        <activity android:name=".fenle.BaseActivity" />
+        <activity
+            android:name=".fenle.home.HomeActivity"
+            android:alwaysRetainTaskState="true" />
         <activity android:name=".webviewlinked.demo4.ScrollViewActivity4" />
         <activity android:name=".webviewlinked.recyclerview.RecyclerViewActivity" />
         <activity android:name=".webviewlinked.demo3.ScrollViewActivity3" />
@@ -32,5 +32,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
