@@ -1,0 +1,4 @@
+1 RecyclerView
+header; 单列双列设置；前面单列后面双列；单列和双列的item不一样；联动
+单列双列：
+RecyclerView的多条目和单列双列的实现：https://blog.csdn.net/tuke0814/article/details/77849494
