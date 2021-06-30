@@ -1,0 +1,4 @@
+1 RecyclerView
+(1) GridLayoutManager单列双列同时存在
+GridLayoutManager的 setSpanSizeLookup方法使用：https://blog.csdn.net/xiaolaohuqwer/article/details/87868838
+RecyclerView的多条目和单列双列的实现: https://blog.csdn.net/Tuke0814/article/details/77849494

@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import com.xiaoming.a008project.consumption.ConsumptionActivity;
 
 import com.xiaoming.a008project.fenle.home.HomeActivity;
+import com.xiaoming.a008project.fenle.test.recyclerview.RecyclerViewDemoActivity;
 import com.xiaoming.a008project.im.ImTestActivity;
 import com.xiaoming.a008project.webviewlinked.demo.ScrollViewActivity;
 import com.xiaoming.a008project.webviewlinked.demo2.ScrollViewActivity2;
@@ -79,7 +80,8 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
                         break;
                     case 7:
-                        startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                        //startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                        startActivity(new Intent(MainActivity.this, RecyclerViewDemoActivity.class));
                         break;
                 }
             }
