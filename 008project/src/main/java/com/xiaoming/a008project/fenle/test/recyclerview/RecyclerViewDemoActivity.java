@@ -19,6 +19,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+//GridLayoutManager的 setSpanSizeLookup方法使用:https://blog.csdn.net/xiaolaohuqwer/article/details/87868838
 public class RecyclerViewDemoActivity extends AppCompatActivity {
     //@BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
@@ -37,6 +38,21 @@ public class RecyclerViewDemoActivity extends AppCompatActivity {
 
     private void initView() {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 4);
+        gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(int position) {
+                // 显示的列数 = spanCount / spanSize ;
+
+
+                if (position% 5 == 4){
+                    //SpanSize 返回4 代表该行只显示1列    列数 = 4/4 =1
+                    return 4;
+                }else{
+                    //SpanSize 返回1代表该行显示4列    列数 = 4/1 =4
+                    return 1;
+                }
+            }
+        });
         mRecyclerView.setLayoutManager(gridLayoutManager);
 
         for (int i = 0; i < 100; i++) {
