@@ -19,6 +19,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+//GridLayout来控制同时一行显示多列和1列
 //GridLayoutManager的 setSpanSizeLookup方法使用:https://blog.csdn.net/xiaolaohuqwer/article/details/87868838
 public class RecyclerViewDemoActivity extends AppCompatActivity {
     //@BindView(R.id.recyclerView)

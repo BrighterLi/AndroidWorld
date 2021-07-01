@@ -1,4 +1,19 @@
 1 RecyclerView
+RecyclerView，列表样式、网格样式和瀑布流样式在某种程度上是可以转换的。
+
+网格样式的布局管理器的spanCount设置为1，就是列表样式
+瀑布流样式如果Item的布局文件是等高，竖直方向，就是竖直方向的网格样式；如果Item是等宽，水平方向，那就是水平方向的网络样式
+如果瀑布流样式的布局管理器spanCount设置为1，竖直方向，是竖直方向的列表；水平方向，就是水平方向的列表
+
 (1) GridLayoutManager单列双列同时存在
 GridLayoutManager的 setSpanSizeLookup方法使用：https://blog.csdn.net/xiaolaohuqwer/article/details/87868838
+RecyclerView中GridLayoutManager控制每一行的不同的列数:https://blog.csdn.net/qq873044564/article/details/107825382
+
+(2)瀑布流和列表的切换
+RecyclerView的动态切换布局模式(宫格<-->列表):https://www.jianshu.com/p/f773ffb3d7e4
+
+(3)StaggeredGridLayoutManager
+StaggeredGridLayoutManager实现GridLayoutManager的Span效果？https://blog.csdn.net/u011208377/article/details/105353079
+
+(4)LinearLayoutManager多布局
 RecyclerView的多条目和单列双列的实现: https://blog.csdn.net/Tuke0814/article/details/77849494
