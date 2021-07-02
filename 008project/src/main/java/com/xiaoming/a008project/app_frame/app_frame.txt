@@ -1,0 +1,11 @@
+app框架
+1 顶部导航+底部导航+外层滑动+tab悬浮+viewpager+内层列表
+方案1：
+使用RecyclerView做下方的列表，tab使用TabLayout.至于悬浮折叠则使用CoordinatorLayout+AppBarLayout+CollapsingToolbarLayout
+Android滚动多TAB悬浮头效果：https://blog.csdn.net/javy_codercoder/article/details/88691097
+Android 滑动悬浮置顶效果的新实现: https://blog.csdn.net/wolfking0608/article/details/79526539
+
+方案2：采用的是两个 tablayout。
+一个用于占位，位于原始位置，scrollview内部，随scrollview滚动；另一个则是在滑动过程中，不断滑动，滑动到顶部时吸附在屏幕顶部，用户实际操作的也是这个tablayout。
+Android 滑动定位+吸附悬停效果实现:https://www.cnblogs.com/taixiang/p/9426874.html
+轻松实现app中的导航Tab栏悬浮功能:https://www.jianshu.com/p/9634e928db94
