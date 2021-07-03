@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.xiaoming.androidpoints.aaabug.BugTestActivity;
 import com.xiaoming.androidpoints.aaajavaknowledge.hook.demo2.HookActivity2;
 import com.xiaoming.androidpoints.activity.ActivityTestActivity;
 import com.xiaoming.androidpoints.aaajavaknowledge.JavaKnowledgeActivity;
@@ -163,6 +164,10 @@ public class MainActivity extends Activity {
                         //startActivity(new Intent(MainActivity.this, LayoutBaseActivity.class));
                         startActivity(new Intent(MainActivity.this, ExtendActivity.class));
                         break;
+                    case 33:
+                        //startActivity(new Intent(MainActivity.this, LayoutBaseActivity.class));
+                        startActivity(new Intent(MainActivity.this, BugTestActivity.class));
+                        break;
                 }
             }
         });
@@ -173,7 +178,7 @@ public class MainActivity extends Activity {
 
     private void initDemoData() {
         demoDataList = new ArrayList<>();
-        demoDataList.add("000java知识点");
+        demoDataList.add("000java知识点"); //0
         demoDataList.add("000Util");
         demoDataList.add("jni:hello world");
         demoDataList.add("java内部类访问局部变量时局部变量必须声明为final");
@@ -184,7 +189,7 @@ public class MainActivity extends Activity {
         demoDataList.add("正则");
         demoDataList.add("加密解密");
 
-        demoDataList.add("调用so库的方法");
+        demoDataList.add("调用so库的方法"); //10
         demoDataList.add("判断安卓设备是否root");
         demoDataList.add("获取VoLte开关开关状态");
         demoDataList.add("获取状态栏高度，改变状态栏颜色");
@@ -195,7 +200,7 @@ public class MainActivity extends Activity {
         demoDataList.add("数据存储");
         demoDataList.add("通过Scheme跳转");
 
-        demoDataList.add("通过DeepLink跳转");
+        demoDataList.add("通过DeepLink跳转"); //20
         demoDataList.add("jni：加减法");
         demoDataList.add("floating悬浮窗");
         demoDataList.add("ui框架");
@@ -206,8 +211,9 @@ public class MainActivity extends Activity {
         demoDataList.add("权限申请");
         demoDataList.add("Intent");
 
-        demoDataList.add("Hook");
+        demoDataList.add("Hook"); //30
         demoDataList.add("插件化");
         demoDataList.add("BaseActivity布局继承");
+        demoDataList.add("bug");
     }
 }
