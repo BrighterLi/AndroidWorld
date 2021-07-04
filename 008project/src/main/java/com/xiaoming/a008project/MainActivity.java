@@ -80,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
                         break;
                     case 7:
-                        //startActivity(new Intent(MainActivity.this, HomeActivity.class));
-                        startActivity(new Intent(MainActivity.this, RecyclerViewDemoActivity.class));
+                        startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                        //startActivity(new Intent(MainActivity.this, RecyclerViewDemoActivity.class));
                         break;
                 }
             }

@@ -10,13 +10,16 @@ CoordinatorLayout把整个页面分成了两个部分，上半部分固定设置
 CoordinatorLayout:
 CoordinatorLayout又叫协调者布局，它是顶级的父布局，继承自FrameLayout，其他所有的布局或控件都是定义在它内部的。定义在CoordinatorLayout布局内的子布局或控件能够相互影响。
 它是support.design包中的控件，所以使用的时候要导入compile ‘com.android.support:design:xxx’包（xxx代表版本号）。
+协调(Coordinate)其他组件, 实现联动的布局。只有最外层是这个布局，一些滚动行为的参数才能使用。
 
 AppBarLayout：
+AppBarLayout会将它内部的所有控件组合成一个toolbar，它继承自LinearLayout，布局方向为垂直方向。它可以设置当某个可滚动View的滚动手势发生变化时，其内部的子View如何动作。
 AppBarLayout布局继承自LinearLayout，所以它的默认布局方向是垂直的。它的作用就是：当CoordinatorLayout布局内的某个可滑动子View（实现了NestedScrollView机制的View，
 比如RecyclerView和NestedScrollView等，ListView不行）发生滑动事件时，定义在AppBarLayout布局内的子View能够实现某种动作（比如滑动，折叠，隐藏等等）。
 方法就是在子View的属性中添加一句：app：layout_scrollFlags="xxx"。xxx代表滑动的方式，有5个选项（用RecyclerLayout做滚动子View，标题栏ToorBar做AppBarLayout内的子View举例说明）
 
 CollapsingToolbarLayout:
+实现可折叠toolbar的布局。通过设置一些属性实现可折叠的toolbar。
 该布局继承自FrameLayout，作用是对标题栏（Toorbar）进行再次包装，可以实现折叠效果，CollapsingToolbarLayout布局内的子视图不仅仅可以是标题栏，还可以添加一张图片（ImageView控件）。
 注：当标题栏被CollapsingToolbarLayout布局封装过后，想要更改标题栏的title需要通过调用CollapsingToolbarLayout的setTitle（）方法。同时app：layout_scrollFlags="xxx"这个属性被设置在
 CollapsingToolbarLayout的属性上。
