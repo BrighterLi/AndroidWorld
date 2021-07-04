@@ -7,7 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.android.material.appbar.AppBarLayout;
 import com.xiaoming.a008project.R;
+import com.xiaoming.a008project.fenle.home.fragment.home_fragment_2.header.CollapsibleHeader;
+import com.xiaoming.a008project.fenle.home.fragment.home_fragment_2.pull_refresh.PtrAppbarFrameLayout;
+import com.xiaoming.a008project.fenle.home.fragment.home_fragment_2.pull_refresh.PtrCommonHeader;
 import com.xiaoming.a008project.fenle.test.recyclerview.RecyclerViewDemoActivity;
 
 import java.util.ArrayList;
@@ -17,11 +21,20 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import in.srain.cube.views.wt.PtrFrameLayout;
+import in.srain.cube.views.wt.PtrHandler;
 
 
 public class HomeFragment2 extends Fragment {
     RecyclerView mRecyclerView;
     private List<String> datas = new ArrayList<>();
+
+    private View mRootView;
+    private PtrAppbarFrameLayout mPtrRootFrame;
+    private PtrCommonHeader mPtrCommonHeader;
+    private AppBarLayout mAppBarLayout;
+    private CollapsibleHeader collapsibleHeader;
+
 
     public HomeFragment2() {
         // Required empty public constructor
@@ -39,10 +52,9 @@ public class HomeFragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_home_2, container, false);
-        mRecyclerView = view.findViewById(R.id.recyclerView);
+        mRootView = inflater.inflate(R.layout.fragment_home_2, container, false);
         initView();
-        return view;
+        return mRootView;
 
     }
 
@@ -59,6 +71,12 @@ public class HomeFragment2 extends Fragment {
     }
 
     private void initView() {
+        mPtrRootFrame = mRootView.findViewById(R.id.mPtrRootFrame);
+        mPtrCommonHeader = mRootView.findViewById(R.id.mPtrFloorHeader);
+        mAppBarLayout = mRootView.findViewById(R.id.appBarLayout);
+        mRecyclerView = mRootView.findViewById(R.id.recyclerView);
+        initPullToRefresh();
+
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 4);
         gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
@@ -131,6 +149,46 @@ public class HomeFragment2 extends Fragment {
                 mTvContent.setText(title);
             }
         }
+    }
+
+    private void initPullToRefresh() {
+        mPtrRootFrame.setResistance(2.0f); //设置下拉的阻尼系数，值越大感觉越难下拉
+        int offset = mPtrCommonHeader.getRefreshOffset();
+        mPtrRootFrame.setOffsetToRefresh(offset);
+//        mPtrRootFrame.setMaxPullDownY(offset + ScreenUtil.dip2pxInt(getContext(), 10));
+        mPtrRootFrame.setOffsetToKeepHeaderWhileLoading(offset);
+        mPtrRootFrame.setDurationToClose(300); //设置下拉回弹的时间
+        mPtrRootFrame.setDurationToCloseHeader(500); //设置刷新完成，头部回弹时间，注意和前一个进行区别
+        mPtrRootFrame.setPullToRefresh(false); //设置下拉过程中执行刷新，我们一般设置为false
+        mPtrRootFrame.setKeepHeaderWhenRefresh(true); //设置刷新的时候是否保持头部
+        mPtrRootFrame.disableWhenHorizontalMove(true);
+        mPtrRootFrame.addPtrUIHandler(mPtrCommonHeader);
+        mPtrCommonHeader.setScrollThreshold(430);
+        mPtrRootFrame.setPtrHandler(new PtrHandler() {
+            @Override
+            public boolean checkCanDoRefresh(PtrFrameLayout frame, View content, View header) {
+                return true;
+
+            }
+
+            @Override
+            public void onRefreshBegin(final PtrFrameLayout frame) {
+                //将显示banner的粘性消息清除
+                //pullDownRefreshing();
+                //刷新头
+                //collapsibleHeader.requestData(true, HerderDataListener.TAG_REFRESH);
+                frame.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        frame.refreshComplete();
+                    }
+                }, 1000);
+
+            }
+        });
+        mPtrRootFrame.setOffsetToGoDown(0);
+        mPtrRootFrame.setEnabled(false);
+        mPtrCommonHeader.bindData();
     }
 
 }
