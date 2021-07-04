@@ -44,6 +44,12 @@ public class ImageSlideshow extends FrameLayout {
     private int dotSize = 12;
     private int dotSpace = 12;
     private int delay = 1000;
+    private int autoPlayTimes = 0;
+    private int autoPlayMaxTimes = -1; //轮播次数
+
+    public void setAutoPlayMaxTimes(int autoPlayMaxTimes) {
+        this.autoPlayMaxTimes = autoPlayMaxTimes;
+    }
 
     public ImageSlideshow(Context context) {
         this(context, null);
@@ -179,16 +185,34 @@ public class ImageSlideshow extends FrameLayout {
     private Runnable task = new Runnable() {
         @Override
         public void run() {
-            if (isAutoPlay) {
-                // 位置循环
-                currentItem = currentItem % (count + 1) + 1;
-                // 正常每隔3秒播放一张图片
-                vpImageTitle.setCurrentItem(currentItem);
-                handler.postDelayed(task, delay);
+            if(autoPlayMaxTimes == -1) {
+                if (isAutoPlay) {
+                    // 位置循环
+                    currentItem = currentItem % (count + 1) + 1;
+                    // 正常每隔3秒播放一张图片
+                    vpImageTitle.setCurrentItem(currentItem);
+                    handler.postDelayed(task, delay);
+                } else {
+                    // 如果处于拖拽状态停止自动播放，会每隔5秒检查一次是否可以正常自动播放。
+                    handler.postDelayed(task, 5000);
+                }
             } else {
-                // 如果处于拖拽状态停止自动播放，会每隔5秒检查一次是否可以正常自动播放。
-                handler.postDelayed(task, 5000);
+                if(autoPlayTimes < autoPlayMaxTimes) {
+                    autoPlayTimes++;
+                    if (isAutoPlay) {
+                        // 位置循环
+                        currentItem = currentItem % (count + 1) + 1;
+                        // 正常每隔3秒播放一张图片
+                        vpImageTitle.setCurrentItem(currentItem);
+                        handler.postDelayed(task, delay);
+                    } else {
+                        // 如果处于拖拽状态停止自动播放，会每隔5秒检查一次是否可以正常自动播放。
+                        handler.postDelayed(task, 5000);
+                    }
+                }
             }
+
+
         }
     };
 
