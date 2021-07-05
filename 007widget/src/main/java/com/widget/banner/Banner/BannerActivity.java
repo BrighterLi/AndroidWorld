@@ -34,6 +34,7 @@ public class BannerActivity extends AppCompatActivity {
         imageSlideshow.setDotSpace(12);
         imageSlideshow.setDotSize(12);
         imageSlideshow.setDelay(3000); //设置轮播时间
+        imageSlideshow.setAutoPlayMaxTimes(5); //设置轮播次数,不设置就一致轮播
         imageSlideshow.setOnItemClickListener(new ImageSlideshow.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
@@ -48,11 +49,13 @@ public class BannerActivity extends AppCompatActivity {
      */
     private void initData() {
         int[] imageIds = new int[]{
-                R.drawable.dian1,
+                R.drawable.banner_gif,
+                R.drawable.banner_gif2
+               /* R.drawable.dian1,
                 R.drawable.dian2,
                 R.drawable.dian3,
                 R.drawable.dian4,
-                R.drawable.dian3
+                R.drawable.dian3*/
 
         };
         String[] imageUrls = {"http://pic3.zhimg.com/b5c5fc8e9141cb785ca3b0a1d037a9a2.jpg",
@@ -65,7 +68,7 @@ public class BannerActivity extends AppCompatActivity {
                 "  ",
                 "  ",
                 "  "};
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 2; i++) {
             imageSlideshow.addImageTitle(imageUrls[i], titles[i],imageIds[i]);
         }
     }

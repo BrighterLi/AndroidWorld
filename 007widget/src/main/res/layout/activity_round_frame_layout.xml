@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".aaaview.custom_view.round_view.RoundFrameLayoutActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <com.widget.aaaview.custom_view.round_view.RoundFrameLayout
+            android:layout_width="12dp"
+            android:layout_height="3dp"
+            app:rv_backgroundColor="#FF3D77"
+            app:rv_cornerRadius="6dp"
+            app:rv_isRippleEnable="false" />
+
+        <com.widget.aaaview.custom_view.round_view.RoundFrameLayout
+            android:layout_width="4dp"
+            android:layout_height="3dp"
+            android:layout_marginLeft="2dp"
+            app:rv_backgroundColor="#E5E5E6"
+            app:rv_cornerRadius="6dp"
+            app:rv_isRippleEnable="false"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

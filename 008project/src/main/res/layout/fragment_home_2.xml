@@ -94,26 +94,23 @@
 
             </com.google.android.material.appbar.AppBarLayout>
 
-            <com.xiaoming.a008project.fenle.home.fragment.home_fragment_2.scrollview.AppbarNestedScrollView
+         <!--   <com.xiaoming.a008project.fenle.home.fragment.home_fragment_2.scrollview.AppbarNestedScrollView
                 android:id="@+id/nestedScrollView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fillViewport="true"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        </com.xiaoming.a008project.fenle.home.fragment.home_fragment_2.scrollview.AppbarNestedScrollView>-->
 
-                <FrameLayout
-                    android:id="@+id/frameWeex"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    >
-                    <!--<com.weex.popupwindow.WxView
-                        android:id="@+id/mWxView"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>-->
+                    android:overScrollMode="never"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                </androidx.recyclerview.widget.RecyclerView>
 
-                </FrameLayout>
 
-            </com.xiaoming.a008project.fenle.home.fragment.home_fragment_2.scrollview.AppbarNestedScrollView>
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     </com.xiaoming.a008project.fenle.home.fragment.home_fragment_2.pull_refresh.PtrAppbarFrameLayout>

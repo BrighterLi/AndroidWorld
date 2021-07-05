@@ -1,3 +1,7 @@
 01 View
-1 贝塞尔曲线实现填充不规则图形
+1 弧形背景
+贝塞尔曲线实现填充不规则图形
 android 实现绘制不规则图形,Android贝塞尔曲线实现填充不规则图形并随手指运动: https://blog.csdn.net/weixin_33245447/article/details/117683120
+
+android实现顶部弧形背景: https://blog.csdn.net/jnitjy/article/details/82181077
+【Android】自定义Drawable文件，简单实现顶部弧形背景：向上凹 和 向下凸: https://blog.csdn.net/qq_38950819/article/details/85235763
