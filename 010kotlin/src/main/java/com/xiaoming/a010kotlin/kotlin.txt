@@ -14,5 +14,7 @@ Kotlin是一门运行在JVM之上的语言。它由Jetbrains创建，而Jetbrain
 （4）Null安全：Java最大的一个问题就是null。如果没有对变量或是参数进行null判断，那么程序当中就有可能抛出大量的 NullPointerException，
 然而在编码时这些又是难以检测到的。Kotlin使用了显式的null，这会强制我们在必要时进行null检查。
 
+比于Java，Kotlin的语法确实简洁了不少，更像是一种脚本语言，对于那些习惯JavaScript和Python的开发者应该更容易上手。
+
 3 使用Kotlin
 Android Studio编写Kotlin程序: https://blog.csdn.net/chichengjunma/article/details/72520662
