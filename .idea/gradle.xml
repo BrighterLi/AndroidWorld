@@ -4,9 +4,6 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <compositeConfiguration>
-          <compositeBuild compositeDefinitionSource="SCRIPT" />
-        </compositeConfiguration>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
@@ -27,6 +24,7 @@
             <option value="$PROJECT_DIR$/007widget" />
             <option value="$PROJECT_DIR$/008project" />
             <option value="$PROJECT_DIR$/009frame" />
+            <option value="$PROJECT_DIR$/010kotlin" />
             <option value="$PROJECT_DIR$/acrossendflutter" />
             <option value="$PROJECT_DIR$/acrossendwebview" />
             <option value="$PROJECT_DIR$/acrossendweex" />

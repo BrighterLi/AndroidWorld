@@ -1,0 +1,18 @@
+1 Kotin环境配置
+android studio 配置Kotlin环境: https://blog.csdn.net/vaechr/article/details/85622725
+
+2 Kotlin
+Kotlin官网地址：https://kotlinlang.org/
+Kotlin github 地址：https://github.com/JetBrains/kotlin
+
+Kotlin是一门运行在JVM之上的语言。它由Jetbrains创建，而Jetbrains则是诸多强大的工具（如知名的Java IDE IntelliJ IDEA）背后的公司。Kotlin是一门非常简单的语言，
+其主要目标之一就是提供强大语言的同时又保持简单且精简的语法。其主要特性如下所示：
+（1）轻量级：这一点对于Android来说非常重要。项目所需要的库应该尽可能的小。Android对于方法数量有严格的限制，Kotlin只额外增加了大约6000个方法。
+（2）互操作：Kotlin可与Java语言无缝通信。这意味着我们可以在Kotlin代码中使用任何已有的Java库；因此，即便这门语言还很年轻，但却已经可以使用成百上千的库了。
+除此之外，Kotlin代码还可以为Java代码所用，这意味着我们可以使用这两种语言来构建软件。你可以使用 Kotlin开发新特性，同时使用Java实现代码的其他部分。
+（3）强类型：我们很少需要在代码中指定类型，因为编译器可以在绝大多数情况下推断出变量或是函数返回值的类型。这样就能获得两个好处：简洁与安全。
+（4）Null安全：Java最大的一个问题就是null。如果没有对变量或是参数进行null判断，那么程序当中就有可能抛出大量的 NullPointerException，
+然而在编码时这些又是难以检测到的。Kotlin使用了显式的null，这会强制我们在必要时进行null检查。
+
+3 使用Kotlin
+Android Studio编写Kotlin程序: https://blog.csdn.net/chichengjunma/article/details/72520662
