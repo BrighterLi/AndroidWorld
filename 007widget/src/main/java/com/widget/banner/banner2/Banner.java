@@ -33,6 +33,17 @@ public class Banner extends CustomViewPager {
     //记录手指最后抬起的时间，用于判断是自动滑动还是手动滑动
     private long mLastOnTouchUpTime = -1;
     private Field mScrollerField;
+    public int repeatSwitchTimes = -1;
+    private int mAlreadySwitchTimes = 0;
+
+    public int getRepeatSwitchTimes() {
+        return repeatSwitchTimes;
+    }
+
+    public void setRepeatSwitchTimes(int repeatSwitchTimes) {
+        this.repeatSwitchTimes = repeatSwitchTimes;
+    }
+
     Scroller mDefaultScroller = new Scroller(getContext(),
             new Interpolator() {
                 @Override
@@ -428,7 +439,18 @@ public class Banner extends CustomViewPager {
                     isStop = false;
                 }
 
-                doSwitch(true);
+                //doSwitch(true);
+                if(repeatSwitchTimes == -1) {
+                    Log.i("Banner", "bright8#repeatSwitchTimes11111");
+                    doSwitch(true);
+                } else if(mAlreadySwitchTimes < repeatSwitchTimes) {
+                    Log.i("Banner", "bright8#repeatSwitchTimes222222");
+                    mAlreadySwitchTimes++;
+                    doSwitch(true);
+                } else {
+                    Log.i("Banner", "bright8#repeatSwitchTimes33333");
+                    removeCallbacks(runnable);
+                }
             }
         };
 

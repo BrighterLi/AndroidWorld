@@ -6,6 +6,7 @@ git config --global --add core.compression -1
 
 增大缓存大小 524288000表示增至500兆，1048576000表示增至1G
 git config --global http.postBuffer 524288000
+
 3 各种报错
 (1) OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054
 方法一：用压缩的方式进行下载

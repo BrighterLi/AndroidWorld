@@ -87,7 +87,7 @@ HTTPDNS使用HTTP协议进行域名解析，代替现有基于UDP的DNS协议，
 
 7 APP与服务器通信时采用单向认证
 (1)需求：xxxAPP与服务器通信时采用单向认证同时通过限制客户端中间代理抓包，预埋证书提升安全性
-分期乐App Https验证以及CA更新维护记录:http://wiki.fenqile.com/pages/viewpage.action?pageId=47154531
+分期乐App Https验证以及CA更新维护记录:http://wiki.fen???le.com/pages/viewpage.action?pageId=47154531
 1)当前xxxApp在进行金融备案改造，而资检方对于xxxApp提出一项改造：
 客户端应用软件未校验服务器证书，存在中间人攻击的风险
 对于这个改造，其实就是需要分期乐App满足不能中间攻击或者通过抓包工具抓包查看数据的需求。

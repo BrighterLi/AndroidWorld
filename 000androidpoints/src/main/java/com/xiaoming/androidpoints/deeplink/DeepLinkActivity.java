@@ -30,7 +30,7 @@ public class DeepLinkActivity extends Activity {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
 
-                if (url.startsWith("fenqile://")) {
+                if (url.startsWith("fen???le://")) {
                     Uri uri = Uri.parse(url);
                     //Log.i("---------scheme: ", uri.getScheme() + "host: " + uri.getHost() + "Id: " + uri.getPathSegments().get(0));
                     Intent intent = new Intent();

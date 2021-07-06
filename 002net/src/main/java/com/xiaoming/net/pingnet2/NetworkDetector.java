@@ -22,8 +22,7 @@ public class NetworkDetector {
     private static final String TAG = "NetworkDetector";
     private static Map<String, Object> infoMap = new HashMap<String, Object>();
     private static List<Map> infoList = new ArrayList<>();
-    private static List<String> sPingHostList = new ArrayList<String>(Arrays.asList("www.baidu.com", "cloud.tencent.com", "aliyun.com", "fm.fenqile.com", "m.fenqile.com",
-            "pay.m.fenqile.com", "repay.m.fenqile.com", "loan.m.fenqile.com", "cc.m.fenqile.com", "auth.fenqile.com", "cres.fenqile.com"));
+    private static List<String> sPingHostList = new ArrayList<String>(Arrays.asList("www.baidu.com", "cloud.tencent.com", "aliyun.com"));
 
     public static void startDetectAndReport() {
         new Thread(new Runnable() {

@@ -27,7 +27,7 @@ public class AppFaultDiagnosisUtils {
     private static String sPingDelayTime = "-1";
     private static Map<String, Object> sNetInfoMap = new HashMap<String, Object>();
     private static List<String> sPingDnList = new ArrayList<String>(Arrays.asList("www.baidu.com","cloud.tencent.com","aliyun.com"));
-    private static List<String> sDnResolveList = new ArrayList<String>(Arrays.asList("fm.fenqile.com", "m.fenqile.com", "pay.m.fenqile.com", "repay.m.fenqile.com", "loan.m.fenqile.com", "cc.m.fenqile.com", "auth.fenqile.com", "cres.fenqile.com"));
+    private static List<String> sDnResolveList = new ArrayList<String>(Arrays.asList( "cres.fenle.com"));
 
 
     public static Map getNetInfos() {

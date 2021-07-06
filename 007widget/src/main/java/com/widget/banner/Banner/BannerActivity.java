@@ -34,7 +34,7 @@ public class BannerActivity extends AppCompatActivity {
         imageSlideshow.setDotSpace(12);
         imageSlideshow.setDotSize(12);
         imageSlideshow.setDelay(3000); //设置轮播时间
-        imageSlideshow.setAutoPlayMaxTimes(5); //设置轮播次数,不设置就一致轮播
+        imageSlideshow.setAutoPlayMaxTimes(1); //设置轮播次数,不设置就一致轮播
         imageSlideshow.setOnItemClickListener(new ImageSlideshow.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {

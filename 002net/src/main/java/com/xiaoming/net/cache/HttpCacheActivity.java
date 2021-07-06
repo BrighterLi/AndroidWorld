@@ -112,7 +112,7 @@ public class HttpCacheActivity extends AppCompatActivity implements View.OnClick
         protected String doInBackground(Integer... integers) {
             try {
                 //URL url = new URL("http://pic31.nipic.com/20130724/5252423_104848296000_2.jpg");
-                URL url = new URL("https://cimg1.fenqile.com/ibanner2/M00/33/12/jqgHAFxKhA-AbVJPAAAJlDpoEak013.png");
+                URL url = new URL("https://cimg1.fen???le.com/ibanner2/M00/33/12/jqgHAFxKhA-AbVJPAAAJlDpoEak013.png");
 
                 try {
                     //连接
