@@ -18,4 +18,6 @@ Glide4.0只播放一次Gif以及监听播放完成的实现方法: https://www.j
 Android 中 GIF 动图的播放控制与监听: https://www.jianshu.com/p/210bd8c161a9
 Android-Glide 4.0+ 加载GIF并控制播放次数: https://www.jianshu.com/p/21bf60bfbb48
 (2) 播放gif图片方法
-glide;android-gif-drawable;自定义控件
+glide;android-gif-drawable;自定义控件；AnimationDrawable
+Android 播放Gif 动画：https://www.cnblogs.com/android-blogs/p/6496620.html
+(3)播放时长

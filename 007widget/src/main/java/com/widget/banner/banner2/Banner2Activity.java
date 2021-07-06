@@ -22,10 +22,6 @@ public class Banner2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_banner2);
 
-        /*mBanner = findViewById(R.id.mBanner);
-        mBannerDataList.add("https://cimg1.fenqile.com/product200/M00/ex/20210702195209-4677c0ef-5d41-4fdf-a6d2-87643ae3013f.gif");
-        mBannerDataList.add("https://cimg1.fenqile.com/product200/M00/ex/20210702195222-f5c3fc26-135b-42e7-9969-123d67ce4e1d.gif");
-        setBannerData();*/
     }
 
     private void initBanner() {
