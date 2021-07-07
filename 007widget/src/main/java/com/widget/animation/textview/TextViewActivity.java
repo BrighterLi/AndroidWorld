@@ -27,7 +27,7 @@ public class TextViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_text_view);
 
         tvShow = findViewById(R.id.tv_show);
-        //showBlowUpAnimation();
+        showBlowUpAnimation();
         //showShake();
         //showShake2();
         //showShake3();
@@ -43,7 +43,7 @@ public class TextViewActivity extends AppCompatActivity {
         }, 1000);*/
 
         //multiAnimation();
-        showShake3();
+        //showShake3();
         //showShake4();
     }
 
