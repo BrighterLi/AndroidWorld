@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".banner.banner2.Banner2Activity"></activity>
+        <activity android:name=".aaaview.custom_view.gif.GifDemoActivity"></activity>
+        <activity android:name=".banner.banner2.Banner2Activity" />
         <activity android:name=".aaaview.shape.ViewShapeActivity" />
         <activity android:name=".aaaview.custom_view.round_view.RoundFrameLayoutActivity" />
         <activity android:name=".pullrefresh.pull_to_refresh.PullToRefreshDemoActivity" />

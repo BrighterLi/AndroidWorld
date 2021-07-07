@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.widget.R;
 import com.widget.aaaview.custom_view.fish.FishActivity;
+import com.widget.aaaview.custom_view.gif.GifDemoActivity;
 import com.widget.aaaview.custom_view.round_view.RoundFrameLayout;
 import com.widget.aaaview.custom_view.round_view.RoundFrameLayoutActivity;
 import com.widget.aaaview.get_tag.ViewGetTagActivity;
@@ -40,6 +41,7 @@ public class ViewKownledgePointsActivity extends AppCompatActivity {
         mDataList.add("两个Activity公用一个View");
         mDataList.add("自定义View: 圆角矩形框背景RoundFrameLayout");
         mDataList.add("View加上shape，圆角");
+        mDataList.add("View: Gif");
 
     }
 
@@ -65,6 +67,9 @@ public class ViewKownledgePointsActivity extends AppCompatActivity {
                         break;
                     case 4:
                         startActivity(new Intent(ViewKownledgePointsActivity.this, ViewShapeActivity.class));
+                        break;
+                    case 5:
+                        startActivity(new Intent(ViewKownledgePointsActivity.this, GifDemoActivity.class));
                         break;
                 }
             }

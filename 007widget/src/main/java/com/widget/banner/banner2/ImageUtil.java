@@ -1,17 +1,23 @@
 package com.widget.banner.banner2;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.load.resource.gif.GifDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.Target;
+import com.bumptech.glide.request.transition.Transition;
+
+import java.io.File;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
@@ -81,5 +87,66 @@ public class ImageUtil {
             }
         }
     }
+
+
+    public static void getBitmap(Context context, String url, final OnBitmapLoad onBitmapLoad) {
+        Glide.with(context).asBitmap().load(url)
+                .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL))
+                .into(new SimpleTarget<Bitmap>() {
+                    @Override
+                    public void onResourceReady(Bitmap resource, Transition<? super Bitmap> transition) {
+                        if (resource != null && !resource.isRecycled()) {
+                            onBitmapLoad.onBitmapReady(resource);
+                        }
+                    }
+
+                    @Override
+                    public void onLoadFailed(@Nullable Drawable errorDrawable) {
+                        onBitmapLoad.onLoadFailed();
+                    }
+                });
+    }
+
+
+    public static abstract class OnBitmapLoad {
+        public abstract void onBitmapReady(Bitmap bitmap);
+
+        public void onLoadFailed() {
+        }
+    }
+
+
+    public static void getFile(Context context, String url, final OnFileLoad onFileLoad) {
+        Glide.with(context)
+                .downloadOnly()
+                .load(url)
+                .into(new SimpleTarget<File>() {
+                    @Override
+                    public void onResourceReady(File resource, Transition<? super File> transition) {
+                        if (resource != null && resource.isFile() && resource.exists()) {
+                            onFileLoad.onFileReady(resource);
+                        } else {
+                            onFileLoad.onFileLoadFail();
+                        }
+                    }
+
+                    @Override
+                    public void onLoadFailed(@Nullable Drawable errorDrawable) {
+                        onFileLoad.onFileLoadFail();
+                    }
+                });
+    }
+
+    public static void loadImage(String url, final ImageView imageView) {
+        loadImage(url, imageView, false);
+    }
+
+
+    public interface OnFileLoad {
+        void onFileReady(File file);
+
+        void onFileLoadFail();
+    }
+
 
 }

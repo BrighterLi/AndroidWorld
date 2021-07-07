@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.widget.R;
 import com.widget.animation.activity.Activity1;
+import com.widget.animation.textview.TextViewActivity;
 
 public class AnimationTestActivity extends AppCompatActivity implements View.OnClickListener{
     private Button btl;
@@ -28,7 +29,8 @@ public class AnimationTestActivity extends AppCompatActivity implements View.OnC
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bt1:
-                startActivity(new Intent(AnimationTestActivity.this, Animation1Activity.class));
+                //startActivity(new Intent(AnimationTestActivity.this, Animation1Activity.class));
+                startActivity(new Intent(AnimationTestActivity.this, TextViewActivity.class));
                 break;
             case R.id.bt2:
                 startActivity(new Intent(AnimationTestActivity.this, Activity1.class));

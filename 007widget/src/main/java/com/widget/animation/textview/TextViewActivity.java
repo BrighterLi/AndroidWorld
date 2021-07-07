@@ -42,7 +42,9 @@ public class TextViewActivity extends AppCompatActivity {
             }
         }, 1000);*/
 
-        multiAnimation();
+        //multiAnimation();
+        showShake3();
+        //showShake4();
     }
 
     //补间动画从小变大
