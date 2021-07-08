@@ -9,12 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.gif.GifDrawable;
 import com.widget.R;
 import com.widget.banner.banner2.ImageUtil;
 
 public class GifDemoActivity extends AppCompatActivity {
     private Button btStart;
+    private Button btPause;
     private Button btClose;
     private ImageView gifView;
     private String bannerGifUrl = "https://cimg1.fenqile.com/product200/M00/ex/20210702195209-4677c0ef-5d41-4fdf-a6d2-87643ae3013f.gif";
@@ -26,6 +28,7 @@ public class GifDemoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_gif_demo);
 
         btStart = findViewById(R.id.bt_start_gif);
+        btPause = findViewById(R.id.bt_pause_gif);
         btClose = findViewById(R.id.bt_close_gif);
         gifView = findViewById(R.id.gif_view);
 
@@ -36,9 +39,25 @@ public class GifDemoActivity extends AppCompatActivity {
             }
         });
 
+        btPause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GifDrawable drawable = ((GifDrawable) gifView.getDrawable());
+                if(drawable.isRunning()) {
+                    drawable.stop();
+                } else {
+                    drawable.start();
+                }
+                //gifView.setVisibility(View.GONE);
+            }
+        });
+
         btClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Glide.with(GifDemoActivity.this).clear(gifView);
+                Drawable drawable = null;
+                Glide.with(GifDemoActivity.this).load(drawable).into(gifView);
                 gifView.setVisibility(View.GONE);
             }
         });
