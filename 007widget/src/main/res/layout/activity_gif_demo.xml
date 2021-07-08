@@ -7,7 +7,8 @@
     android:orientation="vertical"
     tools:context=".aaaview.custom_view.gif.GifDemoActivity">
     
-    <com.widget.aaaview.custom_view.gif.CustomGifImageView
+    <ImageView
+        android:id="@+id/gif_view"
         android:layout_width="match_parent"
         android:layout_height="161dp"
         android:layout_marginLeft="8dp"
