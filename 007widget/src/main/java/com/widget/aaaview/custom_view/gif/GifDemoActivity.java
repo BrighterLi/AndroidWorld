@@ -1,8 +1,5 @@
 package com.widget.aaaview.custom_view.gif;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +10,10 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.gif.GifDrawable;
 import com.widget.R;
 import com.widget.banner.banner2.ImageUtil;
+
+import java.lang.ref.WeakReference;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class GifDemoActivity extends AppCompatActivity {
     private Button btStart;
@@ -48,16 +49,14 @@ public class GifDemoActivity extends AppCompatActivity {
                 } else {
                     drawable.start();
                 }
-                //gifView.setVisibility(View.GONE);
             }
         });
 
         btClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Glide.with(GifDemoActivity.this).clear(gifView);
-                Drawable drawable = null;
-                Glide.with(GifDemoActivity.this).load(drawable).into(gifView);
+                //取消加载
+                //Glide.with(GifDemoActivity.this).clear(gifView);
                 gifView.setVisibility(View.GONE);
             }
         });
@@ -65,12 +64,19 @@ public class GifDemoActivity extends AppCompatActivity {
 
 
     private void createGifView() {
+        Log.i("AppScroll", "bright8#Banner#createGifView#gifView:" + gifView);
+        //final WeakReference<ImageView> weakReference = new WeakReference<>(gifView);
+        //weakReference.get().setVisibility(View.VISIBLE);
         gifView.setVisibility(View.VISIBLE);
         ImageUtil.loadOneTimeGif(bannerGifUrl, gifView, new ImageUtil.GifListener() {
             @Override
             public void gifPlayComplete() {
                 Log.i("AppScroll", "bright8#Banner#gifPlayComplete");
-                ImageUtil.loadImage(bannerCycleGifUrl, gifView, GifDrawable.LOOP_FOREVER, false, false);
+                ImageView tempGifView = gifView;
+                if(tempGifView != null) {
+                    ImageUtil.loadImage(bannerCycleGifUrl, tempGifView, GifDrawable.LOOP_FOREVER, false, false);
+                }
+
             }
 
             @Override

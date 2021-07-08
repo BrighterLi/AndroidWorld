@@ -1,8 +1,10 @@
 package com.widget.banner.banner2;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.text.TextUtils;
 import android.widget.ImageView;
 
@@ -17,6 +19,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.Target;
 import com.bumptech.glide.request.transition.Transition;
+import com.widget.aaaview.custom_view.gif.GifDemoActivity;
 
 import java.io.File;
 import java.lang.reflect.Field;
@@ -63,9 +66,12 @@ public class ImageUtil {
             return;
         }
         Context context = imageView.getContext();
+        if (isActivityDestroyed(context)) {
+            return;
+        }
 
         if (gifMaxLoopCount != GifDrawable.LOOP_FOREVER) {
-            Glide.with(context).load(url).listener(new RequestListener<Drawable>() {
+            Glide.with(context).load(url).skipMemoryCache(true).listener(new RequestListener<Drawable>() {
                 @Override
                 public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target,
                                             boolean isFirstResource) {
@@ -84,9 +90,9 @@ public class ImageUtil {
             }).into(imageView);
         } else {
             if (anim) {
-                Glide.with(context).load(url).transition(withCrossFade()).into(imageView);
+                Glide.with(context).load(url).skipMemoryCache(true).transition(withCrossFade()).into(imageView);
             } else {
-                Glide.with(context).load(url).transition(withNoTransition()).into(imageView);
+                Glide.with(context).load(url).skipMemoryCache(true).transition(withNoTransition()).into(imageView);
             }
         }
     }
@@ -217,9 +223,25 @@ public class ImageUtil {
                 }
                 return false;
             }
-        }).into(imageView);
+        }).skipMemoryCache(true).into(imageView);
     }
 
-
+    public static boolean isActivityDestroyed(Context context) {
+        if (context == null) {
+            return true;
+        }
+        if (context instanceof Activity) {
+            Activity activity = (Activity) context;
+            if (activity.isFinishing()) {
+                return true;
+            }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                if (activity.isDestroyed()) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
 }
