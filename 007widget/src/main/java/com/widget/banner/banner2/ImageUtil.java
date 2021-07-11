@@ -6,13 +6,18 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.text.TextUtils;
+import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestBuilder;
 import com.bumptech.glide.load.DataSource;
+import com.bumptech.glide.load.Transformation;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.engine.GlideException;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.gif.GifDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
@@ -174,18 +179,23 @@ public class ImageUtil {
 
 
     private static void loadOneTimeGif(RequestBuilder<GifDrawable> gifDrawableRequestBuilder, final ImageView imageView, final GifListener gifListener) {
+        Log.i("ImageUtil", "bright8#Banner#loadOneTimeGif");
         if (gifDrawableRequestBuilder == null) {
             return;
         }
         gifDrawableRequestBuilder.listener(new RequestListener<GifDrawable>() {
             @Override
             public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<GifDrawable> target, boolean isFirstResource) {
+                Log.i("ImageUtil", "bright8#Banner#onLoadFailed#e:" +e.toString());
                 return false;
             }
 
             @Override
             public boolean onResourceReady(GifDrawable resource, Object model, Target<GifDrawable> target, DataSource dataSource, boolean isFirstResource) {
+                //imageView.setVisibility(View.VISIBLE);
+                //imageView.setLayoutParams(layoutParams);
                 try {
+                    Log.i("ImageUtil", "bright8#Banner#onResourceReady");
                     Field gifStateField = GifDrawable.class.getDeclaredField("state");
                     gifStateField.setAccessible(true);
                     Class gifStateClass = Class.forName("com.bumptech.glide.load.resource.gif.GifDrawable$GifState");
@@ -242,6 +252,19 @@ public class ImageUtil {
             }
         }
         return false;
+    }
+
+
+    /**
+     * 通过这个方法可以兼容显示jpg/png/webp静图 以及 gif动图 webp动图
+     */
+    public static void loadCompat(final ImageView imageView, String url, @Nullable Transformation<Bitmap> transformation) {
+        Transformation<Bitmap> transform = transformation != null ? transformation : new CenterCrop();
+        Glide.with(imageView.getContext())
+                .load(url)
+                .optionalTransform(transform)
+                //.optionalTransform(WebpDrawable.class, new WebpDrawableTransformation(transform))
+                .into(imageView);
     }
 
 }

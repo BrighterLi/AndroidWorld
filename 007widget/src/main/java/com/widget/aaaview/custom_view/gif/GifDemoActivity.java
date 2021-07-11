@@ -5,8 +5,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.FitCenter;
 import com.bumptech.glide.load.resource.gif.GifDrawable;
 import com.widget.R;
 import com.widget.banner.banner2.ImageUtil;
@@ -32,6 +34,7 @@ public class GifDemoActivity extends AppCompatActivity {
         btPause = findViewById(R.id.bt_pause_gif);
         btClose = findViewById(R.id.bt_close_gif);
         gifView = findViewById(R.id.gif_view);
+        createGifView();
 
         btStart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +70,13 @@ public class GifDemoActivity extends AppCompatActivity {
         Log.i("AppScroll", "bright8#Banner#createGifView#gifView:" + gifView);
         //final WeakReference<ImageView> weakReference = new WeakReference<>(gifView);
         //weakReference.get().setVisibility(View.VISIBLE);
-        gifView.setVisibility(View.VISIBLE);
+
+
+        //gifView.setVisibility(View.VISIBLE);
+        /*LinearLayout.LayoutParams layoutParams = ((LinearLayout.LayoutParams) gifView.getLayoutParams());
+        LinearLayout.LayoutParams layoutParams2 = new  LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,100);
+        layoutParams2.height = 1;
+       gifView.setLayoutParams(layoutParams2);*/
         ImageUtil.loadOneTimeGif(bannerGifUrl, gifView, new ImageUtil.GifListener() {
             @Override
             public void gifPlayComplete() {
@@ -85,6 +94,8 @@ public class GifDemoActivity extends AppCompatActivity {
             }
 
         });
+
+       //ImageUtil.loadCompat(gifView, bannerGifUrl, new FitCenter());
 
     }
 

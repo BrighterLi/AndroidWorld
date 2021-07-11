@@ -13,7 +13,7 @@
         android:layout_height="161dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="5dp"
-        android:visibility="gone"/>
+        android:scaleType="fitXY"/>
 
     <Button
         android:id="@+id/bt_start_gif"
