@@ -70,14 +70,14 @@ public class SchemeActivity extends Activity {
 
     //跳到APP内的某个页面，隐式跳转
     private void switchActivityByScheme() {
-        Uri uri = Uri.parse("app://test");   //   app://test 相当于 http://www.baidu.com
+        Uri uri = Uri.parse("app://combination_to_left_righht");   //   app://combination_to_left_righht 相当于 http://www.baidu.com
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
 
     //跳到第三方APP的页面,第三方APP必须已经安装
     private void switchActivityByScheme2() {
-        Uri uri = Uri.parse("app2://test2");   //   app://test 相当于 http://www.baidu.com
+        Uri uri = Uri.parse("app2://test2");   //   app://combination_to_left_righht 相当于 http://www.baidu.com
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
@@ -85,7 +85,7 @@ public class SchemeActivity extends Activity {
     //跳到分期乐APP的页面,第三方APP必须已经安装
     private void switchActivityBySchemeToFenle() {
         //Uri uri = Uri.parse("fenqile://app");
-        //Uri uri = Uri.parse("fenqile://app/webview?url=http://sale.fen？？？le.com/2016010802/index.html");   //   app://test 相当于 http://www.baidu.com
+        //Uri uri = Uri.parse("fenqile://app/webview?url=http://sale.fen？？？le.com/2016010802/index.html");   //   app://combination_to_left_righht 相当于 http://www.baidu.com
         Uri uri = Uri.parse("fen???le://app/webview?url=http://www.baidu.com");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
@@ -94,7 +94,7 @@ public class SchemeActivity extends Activity {
     private void switchActivityBySchemeToLehka() {
         //Uri uri = Uri.parse("lehuaka://app");
         //可以在app内部实现跳转到指定页面http://sale.fen？？？le.com/2016010802/index.html
-        Uri uri = Uri.parse("lehuaka://app/webview?url=http://sale.fen???le.com/2016010802/index.html");   //   app://test 相当于 http://www.baidu.com
+        Uri uri = Uri.parse("lehuaka://app/webview?url=http://sale.fen???le.com/2016010802/index.html");   //   app://combination_to_left_righht 相当于 http://www.baidu.com
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }

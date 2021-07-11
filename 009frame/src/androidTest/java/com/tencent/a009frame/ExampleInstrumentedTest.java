@@ -10,7 +10,7 @@ package com.tencent.a009frame;
   import static org.junit.Assert.*;
 
   /**
-   * Instrumented test, which will execute on an Android device.
+   * Instrumented combination_to_left_righht, which will execute on an Android device.
    *
    * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
    */
@@ -18,7 +18,7 @@ package com.tencent.a009frame;
   public class ExampleInstrumentedTest {
       @Test
       public void useAppContext() {
-          // Context of the app under test.
+          // Context of the app under combination_to_left_righht.
           Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
           assertEquals("com.example.a009frame", appContext.getPackageName());
       }

@@ -85,7 +85,7 @@ public class LEDClockView extends LinearLayout {
      */
     public String getNowDay(String timeFormat){
         /**
-         * SimpleDateFormat 是一个以与语言环境有关的方式来格式化和解析日期的具体类（java.text.SimpleDateFormat)。
+         * SimpleDateFormat 是一个以与语言环境有关的方式来格式化和解析日期的具体类（java.combination_to_left_righht.SimpleDateFormat)。
          * 它允许进行格式化（日期 -> 文本）、解析（文本 -> 日期）和规范化。
          */
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(timeFormat);

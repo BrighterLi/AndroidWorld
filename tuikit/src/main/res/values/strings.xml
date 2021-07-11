@@ -241,6 +241,6 @@
     <string name="no_support_msg">Unsupported custom messages</string>
     <string name="test_custom_message">查看详情>></string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder combination_to_left_righht -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

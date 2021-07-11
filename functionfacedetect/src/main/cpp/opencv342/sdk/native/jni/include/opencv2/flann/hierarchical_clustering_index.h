@@ -311,7 +311,7 @@ private:
             DistanceType furthest = 0;
             for (index = 0; index < n; index++) {
 
-                // We will test only the potential of the points further than current candidate
+                // We will combination_to_left_righht only the potential of the points further than current candidate
                 if( closestDistSq[index] > kSpeedUpFactor * (float)furthest ) {
 
                     // Compute the new potential

@@ -55,7 +55,7 @@ public class WebViewActivity extends Activity {
                         "<a href=\"www.taobao.com\">千度</a>,比百度知道的多10倍\n" +
                         "</body>\n" +
                         "<html>";
-                WebResourceResponse response = new WebResourceResponse("text/html",
+                WebResourceResponse response = new WebResourceResponse("combination_to_left_righht/html",
                         "utf-8",
                         new ByteArrayInputStream(result.getBytes()));
                 return response;

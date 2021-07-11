@@ -1,6 +1,13 @@
 1 Android 动画分类
 https://www.cnblogs.com/lixiansheng/p/11359933.html
 Android动画可以分为两类，最初的传统动画和Android3.0 之后出现的属性动画；传统动画又包括 帧动画（Frame Animation）和补间动画（Tweened Animation）。
+
+Android的动画类型
+Tween Animation 补间动画
+Frame Animation 帧动画
+Layout Animation 布局动画
+Property Animation 属性动画
+
 传统动画
 (1)帧动画
 帧动画是最容易实现的一种动画，这种动画更多的依赖于完善的UI资源，他的原理就是将一张张单独的图片连贯的进行播放，
@@ -21,14 +28,34 @@ AnimationSet	动画集合
 属性动画，顾名思义它是对于对象属性的动画。因此，所有补间动画的内容，都可以通过属性动画实现。
 ObjectAnimator，ValueAnimator
 
-2 具体情境
- (1) 抖动
+2 区别与使用
+(1) 补间动画和属性动画主要区别：
+Android补间动画和属性动画的区别及属性动画使用详解: https://www.cnblogs.com/lgdcoder/p/10684996.html
+作用对象不同，补间动画只能作用在view上，属性动画可以作用在所有对象上。
+属性变化不同，补间动画只是改变显示效果，不会改变view的属性，比如位置、宽高等，而属性动画实际改变对象的属性。
+动画效果不同，补间动画只能实现位移、缩放、旋转和透明度四种动画操作，而属性动画还能实现补间动画所有效果及其他更多动画效果。
+
+新引入的属性动画机制已经不再是针对于 view 来设计的，也不限定于只能实现位移、缩放、旋转和透明度这几种动画操作，同时也不再只是一种视觉上的动画效果。
+它实际上是一种不断地对值进行操作的机制，并将值赋值到指定对象的指定属性上，可以是任意对象的任意属性。我们只需要告诉系统动画的运行时长，需要执行哪种类型的动画，
+以及动画的初始值和结束值，剩下的工作就可以全部交给系统去完成了。
+
+(2)使用方式
+代码；xml
+
+(3) 属性动画
+RotateAnimation
+Android 常用动画之RotateAnimation： https://blog.csdn.net/a751608624/article/details/46874615
+
+3 具体情境
+ (1) 抖动 上下 左右  角度旋转
  https://blog.csdn.net/zhangcanyan/article/details/54896456?utm_source=blogxgwz4
  https://blog.csdn.net/qq_36574212/article/details/82900452
 android怎么做iphone那种图片抖动动画的效果(包括button和EditText):http://m.myexception.cn/iphone/1708029.html
 https://www.cnblogs.com/loaderman/p/10207077.html
+(2) 组合动画
+多个动画连续播放，同时播放
 
-3 Lottie
+4 Lottie
 android：Lottie--让Android动画更优雅:https://www.jianshu.com/p/1f011bc472cd
 Android Lottie动画初探:https://www.jianshu.com/p/0a5cf2261b4b?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
 要实现这些特效，大概有以下几种方式:
@@ -39,7 +66,7 @@ Android Lottie动画初探:https://www.jianshu.com/p/0a5cf2261b4b?utm_campaign=m
 那么，现在有一个方案，不使用大量图片，甚至零图片，不占空间，不占内存，不需要适配，且易于维护，简单而且方便。
 
 
-3 Activity加入动画
+5 Activity加入动画
 相关方法：
 (1) 在onCreate加
 overridePendingTransition(R.anim.enter, R.anim.exit):
@@ -68,7 +95,7 @@ Activity的切换动画从业务层面上来说可以分为两种，一种是Act
 则Activity返回的时候仍然是默认的动画效果，也可以在finish()的时候使用和启动时不同的动画效果。
 
 
-相关问题：
+6相关问题：
 (1)不起作用的原因
 大概是以下几个方面的原因：
 android系统版本2.0以下，这个没办法，想其他办法解决切换动画吧。

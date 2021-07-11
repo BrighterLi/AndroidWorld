@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this, IncludeTestActivity.class));
                 break;
             case R.id.bt_test:
-                Toast.makeText(this, "test", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "combination_to_left_righht", Toast.LENGTH_SHORT).show();
                 break;
         }
     }

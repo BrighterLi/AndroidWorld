@@ -90,7 +90,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 }
             }
 
-            String html = " <p><img src=\"http://test.hitheone.com/uploads/ueditor/image/20160506/1462524899133986.jpg\" style=\"\" title=\"1462524899133986.jpg\"/></p><p><img src=\"http://test.hitheone.com/uploads/ueditor/image/20160506/1462524905929684.jpg\" style=\"\" title=\"1462524905929684.jpg\"/></p><p><img src=\"http://test.hitheone.com/uploads/ueditor/image/20160506/1462524910520453.jpg\" style=\"\" title=\"1462524910520453.jpg\"/></p><p><img src=\"http://test.hitheone.com/uploads/ueditor/image/20160506/1462524914347104.jpg\" style=\"\" title=\"1462524914347104.jpg\"/></p><p><img src=\"http://test.hitheone.com/uploads/ueditor/image/20160506/1462524927778143.jpg\" style=\"\" title=\"1462524927778143.jpg\"/></p><p><img src=\"http://test.hitheone.com/uploads/ueditor/image/20160506/1462535930458058.jpg\" title=\"1462535930458058.jpg\" alt=\"806337621792081796.jpg\"/></p><p><img src=\"http://test.hitheone.com/uploads/ueditor/image/20160506/1462535960619691.jpg\" style=\"\" title=\"1462535960619691.jpg\"/></p><p><img src=\"http://test.hitheone.com/uploads/ueditor/image/20160506/1462535965617029.jpg\" style=\"\" title=\"1462535965617029.jpg\"/></p><p><br/></p><p><br/></p><p><br/></p>\n";
+            String html = " <p><img src=\"http://combination_to_left_righht.hitheone.com/uploads/ueditor/image/20160506/1462524899133986.jpg\" style=\"\" title=\"1462524899133986.jpg\"/></p><p><img src=\"http://combination_to_left_righht.hitheone.com/uploads/ueditor/image/20160506/1462524905929684.jpg\" style=\"\" title=\"1462524905929684.jpg\"/></p><p><img src=\"http://combination_to_left_righht.hitheone.com/uploads/ueditor/image/20160506/1462524910520453.jpg\" style=\"\" title=\"1462524910520453.jpg\"/></p><p><img src=\"http://combination_to_left_righht.hitheone.com/uploads/ueditor/image/20160506/1462524914347104.jpg\" style=\"\" title=\"1462524914347104.jpg\"/></p><p><img src=\"http://combination_to_left_righht.hitheone.com/uploads/ueditor/image/20160506/1462524927778143.jpg\" style=\"\" title=\"1462524927778143.jpg\"/></p><p><img src=\"http://combination_to_left_righht.hitheone.com/uploads/ueditor/image/20160506/1462535930458058.jpg\" title=\"1462535930458058.jpg\" alt=\"806337621792081796.jpg\"/></p><p><img src=\"http://combination_to_left_righht.hitheone.com/uploads/ueditor/image/20160506/1462535960619691.jpg\" style=\"\" title=\"1462535960619691.jpg\"/></p><p><img src=\"http://combination_to_left_righht.hitheone.com/uploads/ueditor/image/20160506/1462535965617029.jpg\" style=\"\" title=\"1462535965617029.jpg\"/></p><p><br/></p><p><br/></p><p><br/></p>\n";
 
             private void initWebView(View itemView) {
                 mWebView = (WebView1) itemView;
@@ -154,7 +154,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
                     }
                 });
 
-                //mWebView.loadData(html,"text/html","utf-8");
+                //mWebView.loadData(html,"combination_to_left_righht/html","utf-8");
                 mWebView.loadUrl(url);
             }
         }

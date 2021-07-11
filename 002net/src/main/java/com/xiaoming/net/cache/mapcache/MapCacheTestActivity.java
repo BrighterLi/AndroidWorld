@@ -44,12 +44,12 @@ public class MapCacheTestActivity extends AppCompatActivity {
     //测试缓存和缓存失效
     public void testCacheManager() {
         CacheManagerImpl cacheManagerImpl = new CacheManagerImpl();
-        cacheManagerImpl.putCache("test","test", 10 * 1000L);
+        cacheManagerImpl.putCache("combination_to_left_righht","combination_to_left_righht", 10 * 1000L);
         cacheManagerImpl.putCache("myTest", "myTest", 15 * 1000L);
         CacheListener cacheListener = new CacheListener(cacheManagerImpl);
         //监听失效数据并移除
         cacheListener.startListen();
-        logger.info("test:" + cacheManagerImpl.getCacheByKey("test").getDatas());
+        logger.info("combination_to_left_righht:" + cacheManagerImpl.getCacheByKey("combination_to_left_righht").getDatas());
         logger.info("myTest:" + cacheManagerImpl.getCacheByKey("myTest").getDatas());
 
         try {
@@ -60,7 +60,7 @@ public class MapCacheTestActivity extends AppCompatActivity {
         }
 
         //清除后此时为空
-        logger.info("test:" + cacheManagerImpl.getCacheByKey("test"));
+        logger.info("combination_to_left_righht:" + cacheManagerImpl.getCacheByKey("combination_to_left_righht"));
         logger.info("myTest:" + cacheManagerImpl.getCacheByKey("myTest"));
     }
 

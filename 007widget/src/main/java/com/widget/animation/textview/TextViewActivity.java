@@ -10,8 +10,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.OvershootInterpolator;
+import android.view.animation.RotateAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.TextView;
 
@@ -19,7 +23,8 @@ import com.widget.R;
 
 
 public class TextViewActivity extends AppCompatActivity {
-    private TextView tvShow;
+    private TextView tvShow; //使用代码做代码
+    private TextView tvShow2; //使用xml做动画
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +32,20 @@ public class TextViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_text_view);
 
         tvShow = findViewById(R.id.tv_show);
-        showBlowUpAnimation();
-        //showShake();
+
+        combinnationToLeftRight(tvShow);
+        //showRotateToRight(tvShow);
+        //showBlowUpAnimation();
+        //showUpDownShake();
+        //showLeftRightSway(tvShow);
+        /*showRotateShake11(tvShow);
+        tvShow.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                showRotateShake12(tvShow);
+            }
+        }, 1000);*/
+        //showRotateShake2(tvShow);
         //showShake2();
         //showShake3();
         //showShake4();
@@ -54,10 +71,102 @@ public class TextViewActivity extends AppCompatActivity {
         tvShow.startAnimation(animation);
     }
 
-    //补间动画左右/上下抖动
-    private void showShake() {
+    //补间动画上下抖动
+    private void showUpDownShake() {
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.textview_shake);
         tvShow.startAnimation(animation);
+    }
+
+    //补间动画
+    private void combinnationToLeftRight(View view) {
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.combination_to_left_righht);
+        Animation animation2 = AnimationUtils.loadAnimation(this, R.anim.combination_to_right_left);
+        //view.startAnimation(animation);
+        view.startAnimation(animation2);
+    }
+
+    //补间动画左右摆动
+    private void showLeftRightSway(View view) {
+        TranslateAnimation animation = new TranslateAnimation(0, -5, 0, 0);
+        animation.setInterpolator(new OvershootInterpolator());
+        animation.setDuration(100);
+        animation.setRepeatCount(-1);
+        animation.setRepeatMode(Animation.REVERSE);
+        view.startAnimation(animation);
+    }
+
+    //补间动画，角度旋转,往左
+    private void showRotateToLeft(View view) {
+        Animation anim =new RotateAnimation(0f, -45f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        //anim.setDuration(1000); // 设置动画时间
+        anim.setInterpolator(new LinearInterpolator()); // 设置插入器，控制速度
+        anim.setRepeatMode(0); //重复的次数，默认为0，必须是int，可以为-1表示不停止
+        //animationSet.addAnimation(anim2);
+        anim.setDuration(500);
+        view.startAnimation(anim);
+    }
+
+    //补间动画，角度旋转,往右
+    private void showRotateToRight(View view) {
+        Animation anim =new RotateAnimation(0f, 45f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        //anim.setDuration(1000); // 设置动画时间
+        anim.setInterpolator(new LinearInterpolator()); // 设置插入器，控制速度
+        anim.setRepeatMode(0); //重复的次数，默认为0，必须是int，可以为-1表示不停止
+        //animationSet.addAnimation(anim2);
+        anim.setDuration(500);
+        view.startAnimation(anim);
+    }
+
+    //补间动画，角度旋转,先往左再往右
+    private void showRotateShake11(View view) {
+        AnimationSet animationSet = new AnimationSet(true);
+        Animation anim =new RotateAnimation(0f, -45f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        Animation anim2 =new RotateAnimation(0f, 45f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        //anim.setFillAfter(true); // 设置保持动画最后的状态
+        //anim.setDuration(1000); // 设置动画时间
+        anim.setInterpolator(new LinearInterpolator()); // 设置插入器，控制速度
+        animationSet.addAnimation(anim);
+        animationSet.setRepeatMode(0); //重复的次数，默认为0，必须是int，可以为-1表示不停止
+        //animationSet.addAnimation(anim2);
+        animationSet.setDuration(1000);
+        view.startAnimation(animationSet);
+    }
+
+    //补间动画，角度旋转,先往左再往右
+    private void showRotateShake12(View view) {
+        AnimationSet animationSet = new AnimationSet(true);
+        Animation anim =new RotateAnimation(0f, -45f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        Animation anim2 =new RotateAnimation(0f, 45f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        //anim.setFillAfter(true); // 设置保持动画最后的状态
+        //anim.setDuration(1000); // 设置动画时间
+        anim.setInterpolator(new LinearInterpolator()); // 设置插入器，控制速度
+        animationSet.addAnimation(anim2);
+        animationSet.setRepeatMode(0); //重复的次数，默认为0，必须是int，可以为-1表示不停止
+        //animationSet.addAnimation(anim2);
+        animationSet.setDuration(1000);
+        view.startAnimation(animationSet);
+    }
+
+
+
+    //属性动画，角度旋转
+    private void showRotateShake2(View view) {
+        AnimatorSet set=new AnimatorSet();
+        set.playTogether(
+                //ObjectAnimator.ofFloat(view,"rotationX",0,60),//绕X轴翻转
+                //ObjectAnimator.ofFloat(view,"rotationY",0,60),//绕Y轴旋转
+                //ObjectAnimator.ofFloat(view,"rotationY",0,-60)//绕Y轴旋转
+                ObjectAnimator.ofFloat(view,"rotation",0,45),
+                ObjectAnimator.ofFloat(view,"rotation",45,0),
+                ObjectAnimator.ofFloat(view,"rotation",0,-45),
+                ObjectAnimator.ofFloat(view,"rotation",-45,0)//绕中心点逆时针旋转
+                //ObjectAnimator.ofFloat(view,"translationX",0,90),//X轴平移
+                //ObjectAnimator.ofFloat(view,"translationY",0,90),//y轴平移
+                //ObjectAnimator.ofFloat(view,"scaleX",1,1.5f),//X轴拉伸
+                //ObjectAnimator.ofFloat(view,"scaleY",0,0.5f),//Y轴从零拉伸
+                //ObjectAnimator.ofFloat(view,"alpha",1,0.25f,1)//透明度
+        );
+        set.setDuration(2*1000).start();//时间
     }
 
     //Java代码实现左右摇摆/上下摇摆动画

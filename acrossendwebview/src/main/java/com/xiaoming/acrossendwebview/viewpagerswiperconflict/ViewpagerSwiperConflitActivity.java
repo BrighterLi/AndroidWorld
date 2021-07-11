@@ -130,7 +130,7 @@ public class ViewpagerSwiperConflitActivity extends AppCompatActivity implements
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             CustomWebView webView = rootView.findViewById(R.id.webView);
             webView.setFragment(this);
-            //load test url
+            //load combination_to_left_righht url
             String url = "";
             switch (sectionNumber) {
                 case 1:

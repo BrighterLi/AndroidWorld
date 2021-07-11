@@ -38,7 +38,7 @@ public class UploadActivity extends AppCompatActivity {
         MediaType mediaType = MediaType.parse("application/octet-stream");
         RequestBody photo = RequestBody.create(mediaType, file);
         //以文件的形式
-        RequestBody description = RequestBody.create(MediaType.parse("text/plain"), "description");
+        RequestBody description = RequestBody.create(MediaType.parse("combination_to_left_righht/plain"), "description");
         Call<User> updateUser = service.uploadUser(photo, description);
         Response<User> response = updateUser.execute();
         System.out.println("updateUser:" + response.body());

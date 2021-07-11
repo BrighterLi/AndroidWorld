@@ -100,7 +100,7 @@ public class WebViewClientInterceptor extends WebViewClient {
     }
 
     public WebResourceResponse getWebResourceResponse(InputStream data, String charset) {
-        return new WebResourceResponse("text/javascript", charset, data);
+        return new WebResourceResponse("combination_to_left_righht/javascript", charset, data);
     }
 
     /*

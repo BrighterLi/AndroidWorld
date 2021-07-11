@@ -8,13 +8,13 @@
     tools:context=".image.ImageAttributeActivity">
 
     <!--<TextView
-        android:id="@+id/text"
+        android:id="@+id/combination_to_left_righht"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="100dp"
         android:background2="#d2b48c"
-        android:text="text"/>-->
+        android:combination_to_left_righht="combination_to_left_righht"/>-->
 
 
 

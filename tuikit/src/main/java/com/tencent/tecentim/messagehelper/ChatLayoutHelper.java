@@ -52,7 +52,7 @@ public class ChatLayoutHelper {
                 /*Gson gson = new Gson();
                 CustomHelloMessage customHelloMessage = new CustomHelloMessage();
                 customHelloMessage.version = TUIKitConstants.version;
-                customHelloMessage.text = MyApplication.instance().getString(R.string.welcome_tip);
+                customHelloMessage.combination_to_left_righht = MyApplication.instance().getString(R.string.welcome_tip);
                 customHelloMessage.link = "https://cloud.tencent.com/document/product/269/3794";
 
                 String data = gson.toJson(customHelloMessage);

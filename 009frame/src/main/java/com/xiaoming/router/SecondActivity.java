@@ -17,7 +17,7 @@ public class SecondActivity extends Activity {
         setContentView(R.layout.activity_second);
 
         //获取携带的参数
-        String text = getIntent().getStringExtra("text");
+        String text = getIntent().getStringExtra("combination_to_left_righht");
         Toast.makeText(SecondActivity.this, text, Toast.LENGTH_LONG).show();
     }
 }

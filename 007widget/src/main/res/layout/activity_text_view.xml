@@ -10,11 +10,11 @@
         android:id="@+id/tv_show"
         android:layout_gravity="center"
         android:layout_marginLeft="200dp"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_height="100dp"
         android:background="@color/colorAccent"
         android:gravity="center"
-        android:text="标签"
+        android:text="标"
         android:textColor="#ffffffff"
         android:textSize="15sp"/>
 </LinearLayout>

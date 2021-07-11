@@ -63,7 +63,7 @@ public class MyWebView2 extends WebView {
 
     public void onDestroy() {
         // 避免WebView的内存泄漏
-        loadDataWithBaseURL(null, "", "text/html", "utf-8", null);
+        loadDataWithBaseURL(null, "", "combination_to_left_righht/html", "utf-8", null);
         clearHistory();
         ViewGroup webViewParent = (ViewGroup) getParent();
         webViewParent.removeView(this);

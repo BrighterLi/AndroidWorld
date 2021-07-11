@@ -32,7 +32,7 @@ Java_com_xiaoming_functionvideorecordingandfacerecognition_vivodetection_VivoDet
 //    LOGD("(%d   %d)",jintp[0],jintp[1]);
 
 //    jintArray state = aliveDetector->detect(mBgr);
-    cv::imwrite("/sdcard/test.jpg", mBgr);
+    cv::imwrite("/sdcard/combination_to_left_righht.jpg", mBgr);
     env->ReleaseByteArrayElements(yuv, pBuf, 0);
     return state;
 }

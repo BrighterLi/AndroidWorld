@@ -2737,10 +2737,10 @@ public class Imgproc {
 
 
     //
-    // C++:  void putText(Mat& img, String text, Point org, int fontFace, double fontScale, Scalar color, int thickness = 1, int lineType = LINE_8, bool bottomLeftOrigin = false)
+    // C++:  void putText(Mat& img, String combination_to_left_righht, Point org, int fontFace, double fontScale, Scalar color, int thickness = 1, int lineType = LINE_8, bool bottomLeftOrigin = false)
     //
 
-    //javadoc: putText(img, text, org, fontFace, fontScale, color, thickness, lineType, bottomLeftOrigin)
+    //javadoc: putText(img, combination_to_left_righht, org, fontFace, fontScale, color, thickness, lineType, bottomLeftOrigin)
     public static void putText(Mat img, String text, Point org, int fontFace, double fontScale, Scalar color, int thickness, int lineType, boolean bottomLeftOrigin)
     {
         
@@ -2749,7 +2749,7 @@ public class Imgproc {
         return;
     }
 
-    //javadoc: putText(img, text, org, fontFace, fontScale, color, thickness)
+    //javadoc: putText(img, combination_to_left_righht, org, fontFace, fontScale, color, thickness)
     public static void putText(Mat img, String text, Point org, int fontFace, double fontScale, Scalar color, int thickness)
     {
         
@@ -2758,7 +2758,7 @@ public class Imgproc {
         return;
     }
 
-    //javadoc: putText(img, text, org, fontFace, fontScale, color)
+    //javadoc: putText(img, combination_to_left_righht, org, fontFace, fontScale, color)
     public static void putText(Mat img, String text, Point org, int fontFace, double fontScale, Scalar color)
     {
         
@@ -3182,8 +3182,8 @@ public class Imgproc {
 
 
 
-// C++: Size getTextSize(const String& text, int fontFace, double fontScale, int thickness, int* baseLine);
-//javadoc:getTextSize(text, fontFace, fontScale, thickness, baseLine)
+// C++: Size getTextSize(const String& combination_to_left_righht, int fontFace, double fontScale, int thickness, int* baseLine);
+//javadoc:getTextSize(combination_to_left_righht, fontFace, fontScale, thickness, baseLine)
 public static Size getTextSize(String text, int fontFace, double fontScale, int thickness, int[] baseLine) {
     if(baseLine != null && baseLine.length != 1)
         throw new IllegalArgumentException("'baseLine' must be 'int[1]' or 'null'.");
@@ -3599,7 +3599,7 @@ public static Size getTextSize(String text, int fontFace, double fontScale, int 
     private static native void preCornerDetect_0(long src_nativeObj, long dst_nativeObj, int ksize, int borderType);
     private static native void preCornerDetect_1(long src_nativeObj, long dst_nativeObj, int ksize);
 
-    // C++:  void putText(Mat& img, String text, Point org, int fontFace, double fontScale, Scalar color, int thickness = 1, int lineType = LINE_8, bool bottomLeftOrigin = false)
+    // C++:  void putText(Mat& img, String combination_to_left_righht, Point org, int fontFace, double fontScale, Scalar color, int thickness = 1, int lineType = LINE_8, bool bottomLeftOrigin = false)
     private static native void putText_0(long img_nativeObj, String text, double org_x, double org_y, int fontFace, double fontScale, double color_val0, double color_val1, double color_val2, double color_val3, int thickness, int lineType, boolean bottomLeftOrigin);
     private static native void putText_1(long img_nativeObj, String text, double org_x, double org_y, int fontFace, double fontScale, double color_val0, double color_val1, double color_val2, double color_val3, int thickness);
     private static native void putText_2(long img_nativeObj, String text, double org_x, double org_y, int fontFace, double fontScale, double color_val0, double color_val1, double color_val2, double color_val3);

@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("ListView 优化"); //17
         mDataList.add("loading"); //18
         mDataList.add("Banner"); //19
-        mDataList.add("动画"); //20
+        mDataList.add("animation动画"); //20
 
         mDataList.add("TextView"); //21
         mDataList.add("Material Design"); //22

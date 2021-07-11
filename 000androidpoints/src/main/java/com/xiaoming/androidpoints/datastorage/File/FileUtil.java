@@ -151,7 +151,7 @@ public class FileUtil {
         Log.i("bright8", "str4:" + str4);
         String str5 = activity.getFileStreamPath("").getAbsolutePath();
         Log.i("bright8", "str5:" + str5);
-        String str6 = activity.getFileStreamPath("test").getAbsolutePath();
+        String str6 = activity.getFileStreamPath("combination_to_left_righht").getAbsolutePath();
         Log.i("bright8", "str6:" + str6);
         return str;
         //str: /storage/emulated/0/Android/data/com.fenqile.androidknowledgepoints/cache
@@ -168,7 +168,7 @@ public class FileUtil {
     public static String getStrFromAssetsFile(Activity activity) {
         try {
             //InputStreamReader类是从字节流到字符流的桥接器：它使用指定的字符集读取字节并将它们解码为字符
-            InputStreamReader inputStreamReader = new InputStreamReader(activity.getAssets().open("test.txt"));
+            InputStreamReader inputStreamReader = new InputStreamReader(activity.getAssets().open("combination_to_left_righht.txt"));
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             String line = "";
             String result = "";
@@ -188,7 +188,7 @@ public class FileUtil {
     //从assets下面的文件读取文件内容,InputStreamReader
     public static void getStrFromAssetsFile2(Activity activity) {
         try {
-            InputStreamReader inputStreamReader = new InputStreamReader(activity.getAssets().open("test.txt"));
+            InputStreamReader inputStreamReader = new InputStreamReader(activity.getAssets().open("combination_to_left_righht.txt"));
             int c;
             //inputStreamReader.read()读取的是单个字符
             while ((c = inputStreamReader.read()) != '\n') {

@@ -16,7 +16,7 @@ public class HttpUtil {
     private static final String TAG = "HttpUtils";
 
     /**
-     * 默认 test-a环境
+     * 默认 combination_to_left_righht-a环境
      */
     public static String BASE_URL = "https://www.wanandroid.com/";
 

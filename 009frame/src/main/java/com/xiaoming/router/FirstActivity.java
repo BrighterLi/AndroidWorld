@@ -30,7 +30,7 @@ public class FirstActivity extends AppCompatActivity {
                 //不带参数
                 //ARouter.getInstance().build(MyRouter.SecondActivity).navigation();
                 //带参数
-                ARouter.getInstance().build(MyRouter.SecondActivity).withString("text","携带的参数").navigation();
+                ARouter.getInstance().build(MyRouter.SecondActivity).withString("combination_to_left_righht","携带的参数").navigation();
             }
         });
     }

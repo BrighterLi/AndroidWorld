@@ -49,9 +49,9 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     private void buildCustomMessage() {
-        //String data = "{\"text\": \"欢迎加入即时通信 IM 大家庭！查看详情>>\",\"url\": \"https://cloud.tencent.com/product/im"}" ;
+        //String data = "{\"combination_to_left_righht\": \"欢迎加入即时通信 IM 大家庭！查看详情>>\",\"url\": \"https://cloud.tencent.com/product/im"}" ;
         //MessageInfo info = MessageInfoUtil.buildCustomMessage(data);
-        String data = "{\"text\": \"欢迎加入即时通信 IM 大家庭！查看详情\"}" ;
+        String data = "{\"combination_to_left_righht\": \"欢迎加入即时通信 IM 大家庭！查看详情\"}" ;
         MessageInfo info = MessageInfoUtil.buildCustomMessage(data);
     }
 

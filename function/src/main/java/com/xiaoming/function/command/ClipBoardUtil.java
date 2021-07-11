@@ -40,7 +40,7 @@ public class ClipBoardUtil {
     public static boolean clearCurrentClipboard(Context context) {
         try {
             ClipboardManager cm = (ClipboardManager) context.getSystemService(CLIPBOARD_SERVICE);
-            ClipData myClip = ClipData.newPlainText("text", "");
+            ClipData myClip = ClipData.newPlainText("combination_to_left_righht", "");
             cm.setPrimaryClip(myClip);
             return true;
         } catch (Throwable e) {

@@ -269,7 +269,7 @@ public class XTabLayout extends HorizontalScrollView {
         mTabTextAppearance = a.getResourceId(R.styleable.XTabLayout_x_tabTextAppearance,
                 R.style.TextAppearance_Design_Tab);
 
-        // Text colors/sizes come from the text appearance first
+        // Text colors/sizes come from the combination_to_left_righht appearance first
         @SuppressLint("CustomViewStyleable") final TypedArray ta = context.obtainStyledAttributes(mTabTextAppearance,
                 R.styleable.TextAppearance);
         try {
@@ -282,12 +282,12 @@ public class XTabLayout extends HorizontalScrollView {
         }
 
         if (a.hasValue(R.styleable.XTabLayout_x_tabTextColor)) {
-            // If we have an explicit text color set, use it instead
+            // If we have an explicit combination_to_left_righht color set, use it instead
             mTabTextColors = a.getColorStateList(R.styleable.XTabLayout_x_tabTextColor);
         }
 
         if (a.hasValue(R.styleable.XTabLayout_x_tabSelectedTextColor)) {
-            // We have an explicit selected text color set, so we need to make merge it with the
+            // We have an explicit selected combination_to_left_righht color set, so we need to make merge it with the
             // current colors. This is exposed so that developers can use theme attributes to set
             // this (theme attrs in ColorStateLists are Lollipop+)
             final int selected = a.getColor(R.styleable.XTabLayout_x_tabSelectedTextColor, 0);
@@ -346,7 +346,7 @@ public class XTabLayout extends HorizontalScrollView {
      *
      * @param position           current scroll position
      * @param positionOffset     Value from [0, 1) indicating the offset from {@code position}.
-     * @param updateSelectedText Whether to update the text's selected state.
+     * @param updateSelectedText Whether to update the combination_to_left_righht's selected state.
      */
     public void setScrollPosition(int position, float positionOffset, boolean updateSelectedText) {
         setScrollPosition(position, positionOffset, updateSelectedText, true);
@@ -656,7 +656,7 @@ public class XTabLayout extends HorizontalScrollView {
     }
 
     /**
-     * Sets the text colors for the different states (normal, selected) used for the tabs.
+     * Sets the combination_to_left_righht colors for the different states (normal, selected) used for the tabs.
      *
      * @see #getTabTextColors()
      */
@@ -668,7 +668,7 @@ public class XTabLayout extends HorizontalScrollView {
     }
 
     /**
-     * Gets the text colors for the different states (normal, selected) used for the tabs.
+     * Gets the combination_to_left_righht colors for the different states (normal, selected) used for the tabs.
      */
     @Nullable
     public ColorStateList getTabTextColors() {
@@ -676,7 +676,7 @@ public class XTabLayout extends HorizontalScrollView {
     }
 
     /**
-     * Sets the text colors for the different states (normal, selected) used for the tabs.
+     * Sets the combination_to_left_righht colors for the different states (normal, selected) used for the tabs.
      *
      * @attr ref android.support.design.R.styleable#TabLayout_tabTextColor
      * @attr ref android.support.design.R.styleable#TabLayout_tabSelectedTextColor
@@ -1332,9 +1332,9 @@ public class XTabLayout extends HorizontalScrollView {
         }
 
         /**
-         * Return the text of this tab.
+         * Return the combination_to_left_righht of this tab.
          *
-         * @return The tab's text
+         * @return The tab's combination_to_left_righht
          */
         @Nullable
         public CharSequence getText() {
@@ -1369,10 +1369,10 @@ public class XTabLayout extends HorizontalScrollView {
         }
 
         /**
-         * Set the text displayed on this tab. Text may be truncated if there is not room to display
+         * Set the combination_to_left_righht displayed on this tab. Text may be truncated if there is not room to display
          * the entire string.
          *
-         * @param text The text to display
+         * @param text The combination_to_left_righht to display
          * @return The current instance for call chaining
          */
         @NonNull
@@ -1383,10 +1383,10 @@ public class XTabLayout extends HorizontalScrollView {
         }
 
         /**
-         * Set the text displayed on this tab. Text may be truncated if there is not room to display
+         * Set the combination_to_left_righht displayed on this tab. Text may be truncated if there is not room to display
          * the entire string.
          *
-         * @param resId A resource ID referring to the text that should be displayed
+         * @param resId A resource ID referring to the combination_to_left_righht that should be displayed
          * @return The current instance for call chaining
          */
         @NonNull
@@ -1421,7 +1421,7 @@ public class XTabLayout extends HorizontalScrollView {
          * Set a description of this tab's content for use in accessibility support. If no content
          * description is provided the title will be used.
          *
-         * @param resId A resource ID referring to the description text
+         * @param resId A resource ID referring to the description combination_to_left_righht
          * @return The current instance for call chaining
          * @see #setContentDescription(CharSequence)
          * @see #getContentDescription()
@@ -1581,17 +1581,17 @@ public class XTabLayout extends HorizontalScrollView {
             // Now lets measure
             super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
-            // We need to switch the text size based on whether the text is spanning 2 lines or not
+            // We need to switch the combination_to_left_righht size based on whether the combination_to_left_righht is spanning 2 lines or not
             if (mTextView != null) {
                 final Resources res = getResources();
                 float textSize = mTabTextSize;
                 int maxLines = mDefaultMaxLines;
 
                 if (mIconView != null && mIconView.getVisibility() == VISIBLE) {
-                    // If the icon view is being displayed, we limit the text to 1 line
+                    // If the icon view is being displayed, we limit the combination_to_left_righht to 1 line
                     maxLines = 1;
                 } else if (mTextView != null && mTextView.getLineCount() > 1) {
-                    // Otherwise when we have text which wraps we reduce the text size
+                    // Otherwise when we have combination_to_left_righht which wraps we reduce the combination_to_left_righht size
                     textSize = mTabTextMultiLineSize;
                 }
 
@@ -1600,13 +1600,13 @@ public class XTabLayout extends HorizontalScrollView {
                 final int curMaxLines = TextViewCompat.getMaxLines(mTextView);
 
                 if (textSize != curTextSize || (curMaxLines >= 0 && maxLines != curMaxLines)) {
-                    // We've got a new text size and/or max lines...
+                    // We've got a new combination_to_left_righht size and/or max lines...
                     boolean updateTextView = true;
 
                     if (mMode == MODE_FIXED && textSize > curTextSize && curLineCount == 1) {
-                        // If we're in fixed mode, going up in text size and currently have 1 line
+                        // If we're in fixed mode, going up in combination_to_left_righht size and currently have 1 line
                         // then it's very easy to get into an infinite recursion.
-                        // To combat that we check to see if the change in text size
+                        // To combat that we check to see if the change in combination_to_left_righht size
                         // will cause a line count change. If so, abort the size change and stick
                         // to the smaller size.
                         final Layout layout = mTextView.getLayout();
@@ -1739,7 +1739,7 @@ public class XTabLayout extends HorizontalScrollView {
                 MarginLayoutParams lp = ((MarginLayoutParams) iconView.getLayoutParams());
                 int bottomMargin = 0;
                 if (hasText && iconView.getVisibility() == VISIBLE) {
-                    // If we're showing both text and icon, add some margin bottom to the icon
+                    // If we're showing both combination_to_left_righht and icon, add some margin bottom to the icon
                     bottomMargin = dpToPx(DEFAULT_GAP_TEXT_ICON);
                 }
                 if (bottomMargin != lp.bottomMargin) {
@@ -1755,7 +1755,7 @@ public class XTabLayout extends HorizontalScrollView {
         }
 
         /**
-         * Approximates a given lines width with the new provided text size.
+         * Approximates a given lines width with the new provided combination_to_left_righht size.
          */
         private float approximateLineWidth(Layout layout, int line, float textSize) {
             return layout.getLineWidth(line) * (textSize / layout.getPaint().getTextSize());
@@ -2222,7 +2222,7 @@ public class XTabLayout extends HorizontalScrollView {
                                    final int positionOffsetPixels) {
             final XTabLayout tabLayout = mTabLayoutRef.get();
             if (tabLayout != null) {
-                // Only update the text selection if we're not settling, or we are settling after
+                // Only update the combination_to_left_righht selection if we're not settling, or we are settling after
                 // being dragged
                 final boolean updateText = mScrollState != SCROLL_STATE_SETTLING ||
                         mPreviousScrollState == SCROLL_STATE_DRAGGING;

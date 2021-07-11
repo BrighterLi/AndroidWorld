@@ -180,7 +180,7 @@
 #    Also be aware that toolchain also sets configuration-specific compiler
 #    flags and linker flags.
 #
-#    ANDROID and BUILD_ANDROID will be set to true, you may test any of these
+#    ANDROID and BUILD_ANDROID will be set to true, you may combination_to_left_righht any of these
 #    variables to make necessary Android-specific configuration changes.
 #
 #    Also ARMEABI or ARMEABI_V7A or ARMEABI_V7A_HARD or X86 or MIPS or ARM64_V8A or X86_64 or MIPS64

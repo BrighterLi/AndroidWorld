@@ -104,10 +104,10 @@ public class StatModel extends Algorithm {
 
 
     //
-    // C++:  float calcError(Ptr_TrainData data, bool test, Mat& resp)
+    // C++:  float calcError(Ptr_TrainData data, bool combination_to_left_righht, Mat& resp)
     //
 
-    //javadoc: StatModel::calcError(data, test, resp)
+    //javadoc: StatModel::calcError(data, combination_to_left_righht, resp)
     public  float calcError(TrainData data, boolean test, Mat resp)
     {
         
@@ -177,7 +177,7 @@ public class StatModel extends Algorithm {
     private static native boolean train_1(long nativeObj, long trainData_nativeObj, int flags);
     private static native boolean train_2(long nativeObj, long trainData_nativeObj);
 
-    // C++:  float calcError(Ptr_TrainData data, bool test, Mat& resp)
+    // C++:  float calcError(Ptr_TrainData data, bool combination_to_left_righht, Mat& resp)
     private static native float calcError_0(long nativeObj, long data_nativeObj, boolean test, long resp_nativeObj);
 
     // C++:  float predict(Mat samples, Mat& results = Mat(), int flags = 0)
