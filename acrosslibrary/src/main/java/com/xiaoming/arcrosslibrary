@@ -1,0 +1,4 @@
+1 module之间调用
+(1) 主module调用子module
+(2) 子module调用主module
+利用ARouter实现组件间通信，解决子模块调用主模块问题: https://www.cnblogs.com/Im-Victor/p/11440023.html

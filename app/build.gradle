@@ -17,7 +17,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.combination_to_left_righht.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -32,14 +32,15 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.combination_to_left_righht:runner:1.1.0-alpha4'
-    androidTestImplementation 'androidx.combination_to_left_righht.espresso:espresso-core:3.1.0-alpha4'
+    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
     //flutter源码依赖方式
     implementation project(':flutter')
     implementation 'com.google.code.gson:gson:2.2.4'
 
     //依赖本地的其它Module
     implementation project(':acrosslibrary')
+    //implementation project(':000androidpoints')
 
     //fastjson
     implementation 'com.alibaba:fastjson:1.1.45'
@@ -49,4 +50,8 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:3.7.0'
     //?用在哪里了
     implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
+
+    //arouter(Android页面路由框架)https://github.com/alibaba/ARouter
+    compile 'com.alibaba:arouter-api:1.2.2'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.3'
 }

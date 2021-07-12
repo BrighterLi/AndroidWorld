@@ -1,0 +1,5 @@
+1 module之间接口调用
+(1) 主module调用子module
+android studio如何创建一个子module并引入主工程: https://www.imooc.com/article/269084
+(2)子module调用主module
+利用ARouter实现组件间通信，解决子模块调用主模块问题: https://www.cnblogs.com/Im-Victor/p/11440023.html
