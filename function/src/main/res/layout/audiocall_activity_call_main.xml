@@ -31,7 +31,7 @@
         android:id="@+id/tv_inviting_tag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/them_exist"
+        android:text="他们也在"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/trtc_layout_manager" />
@@ -52,7 +52,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:textSize="@dimen/text_size_middle"
         app:layout_constraintBottom_toTopOf="@+id/ll_hangup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +72,7 @@
             android:id="@+id/img_mute"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/bg_mute_mic" />
+            android:src="@drawable/ic_launcher_foreground" />
 
     </LinearLayout>
 
@@ -92,7 +91,7 @@
             android:id="@+id/img_hangup"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_hangup" />
+            android:src="@drawable/ic_launcher_foreground" />
 
     </LinearLayout>
 
@@ -111,7 +110,7 @@
             android:id="@+id/img_handsfree"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/bg_handsfree" />
+            android:src="@drawable/ic_launcher_foreground" />
 
     </LinearLayout>
 
@@ -130,7 +129,7 @@
             android:id="@+id/img_dialing"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_dialing" />
+            android:src="@drawable/ic_launcher_foreground" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
