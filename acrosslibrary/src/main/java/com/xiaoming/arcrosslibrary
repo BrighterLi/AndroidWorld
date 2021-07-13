@@ -25,3 +25,6 @@ Library 插件，id: com.android.library
 可以通过「接口」+「实现」的方式进行
 (4) 组件类（例如：Fragment）的获取,以及夸组件页面跳转和通讯
 各个组件间页面的跳转可以通过阿里的ARouter实现
+
+3 library生成aar/jar
+android studio library生成jar包和aar的方法总结: https://blog.csdn.net/g777520/article/details/53331797
