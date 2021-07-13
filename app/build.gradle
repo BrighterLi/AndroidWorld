@@ -39,8 +39,8 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.2.4'
 
     //依赖本地的其它Module
-    implementation project(':acrosslibrary')
-    //implementation project(':000androidpoints')
+    implementation project(':acrosslibrary') //可以依赖library
+    //implementation project(':000androidpoints') //无法依赖application
 
     //fastjson
     implementation 'com.alibaba:fastjson:1.1.45'

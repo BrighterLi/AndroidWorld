@@ -2,3 +2,11 @@
 (1) 主module调用子module
 (2) 子module调用主module
 利用ARouter实现组件间通信，解决子模块调用主模块问题: https://www.cnblogs.com/Im-Victor/p/11440023.html
+
+2 com.android.library与com.android.application区别
+Android组件开发时Module的library与application自由切换配置: https://www.jianshu.com/p/cec5c3576573
+Android Library和Android APP、Java Library的区别: https://www.cnblogs.com/songjianzaina/p/10373260.html
+*一个application工程是不能直接引用（compile）另一个application工程的
+
+3 组件化方案
+Android彻底组件化demo发布: https://www.jianshu.com/p/59822a7b2fad/
