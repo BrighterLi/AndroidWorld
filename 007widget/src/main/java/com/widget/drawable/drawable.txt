@@ -1,0 +1,9 @@
+1、drawable
+Android的Drawable: https://blog.csdn.net/qq_39074954/article/details/100043195
+    Android的Drawable为Android的UI界面提供了丰富多彩的显示效果。例如，我们View的src属性、background属性可以设置的内容就包括各式各样的drawable资源文件。drawable文件夹下的资源可以是一张图片（jpg/png/bmp等格式），还可以是一个xml文件。
+    Drawable是一个抽象的概念，它可以被canvas绘制，常见的有颜色和图片都可以是一个drawable。因为drawable可以做出一些特殊的ui效果，所以对比图片来说，它的优点如下：
+ 1、首先，它的使用比较简单，在xml里已经定义了大量的属性方法，我们只要熟悉各个属性的ui效果和特点就可以自己组合各种的界面效果。
+ 2、其次，它的实现成本比自定义View低，一些比较简单的、定制性、重复性的UI效果使用drawable将会缩小开发成本。但是一些比较复杂的ui场景，drawable却表现不出自定义view的那种效果。
+ 3、相比较于图片而言，drawable占用空间更小，这样有利于缩小apk的体积。
+     Drawable虽然有这些优点，但与此同时，它的分类又是比较细的。比如，android常用的Drawable有BitmapDrawable、ShapeDrawable、LayerDrawable、ScaleDrawable、TransitionDrawable等等。当然，还有一些我没有列举出来的，下文会逐步讲解它们的特点以及用法。
+

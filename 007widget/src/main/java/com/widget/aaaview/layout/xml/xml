@@ -1,0 +1,12 @@
+1、tools,android,app的区别
+android:visibility 和 tools:visibility 有什么区别: https://www.imooc.com/wenda/detail/394711
+android中xml tools属性详解: http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0309/2567.html
+xmlns:android=“http://schemas.android.com/apk/res/android”
+有了他，Android Studio就会在我们编写布局文件的时候给出提示，提示我们可以输入什么，不可以输入什么。也可以理解为语法文件，或者语法判断器。我个人理解为一些系统自带的公共属性。
+xmlns:app=“http://schemas.android.com/apk/res-auto”
+在项目需求中，我们很可能需要导入自定义控件的一些属性，或者support支持包之类的。为了引入自定义的属性，我们可以xmlns:前缀=http://schemas.android.com/apk/res/你的应用程序包路径，将其导入。现在普遍的做法是xmlns:app="http://schemas.android.com/apk/res-auto"引用，因为res-auto可以引用所有的自定义包名。我个人理解为引入控件特有的属性。
+xmlns:tools=“http://schemas.android.com/tools”
+tools会告诉安卓，哪些属性在运行时是不考虑进去的。ok，那也就是说想在运行的时候让某些属性不起作用，那么就使用tools。tools最常用的场景：
+  写界面的时候可以在xml看到控件位置，便于调试。在网络延迟或者出错的时候，使控件的显示为空，而非你在xml写的测试内容。如果用android，就会显示你现在随意写的东西了，那就是一个bug了。
+
+tools 下的参数是给开发工具使用的，主要是方便在 IDE 中预览。而 android 下的参数是用于 apk 的实际参数
