@@ -1,0 +1,5 @@
+Android 颜色渐变（gradient）的实现总结: https://blog.csdn.net/mq2553299/article/details/72629321
+1、gradient
+渐变色
+2、实现方式
+xml;代码

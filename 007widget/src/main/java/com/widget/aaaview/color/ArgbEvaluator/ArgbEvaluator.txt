@@ -1,0 +1,9 @@
+1 ArgbEvaluator
+[android]奇思妙想之实用类ArgbEvaluator（渐变色效果）: https://www.jianshu.com/p/866d7910c3c3
+渐变色效果
+图标文字颜色跟随背景进行变化：背景白色文字图标黑色，背景黑色文字图标白色，背景也是根据滑动距离或者其它的变量变化
+
+应用场景: 滑动背景变化；白天黑夜不同时间背景不一样
+
+ArgbEvaluator.evaluateColor
+setColorFilter
