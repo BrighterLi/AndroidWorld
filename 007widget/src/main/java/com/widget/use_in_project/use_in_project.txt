@@ -1,0 +1,12 @@
+一、项目种常用的视觉控件、组件
+1、轮播Banner
+2、集中的功能展示区（需要翻页、无需翻页GridView网格）
+(1)实现方式
+RecyclerView横向滑动指示器: https://www.jianshu.com/p/5ac538c067d9
+一种是类似于banner的翻页的(banner实现)，比如京东app；另一种是平滑的滚动(RecyclerView实现)，比如淘宝app。
+3、数据列表RecyclerView
+4、Tab+ViewPager+Fragment+RecyclerView
+5、头部导航栏
+6、底部tab导航栏
+7、搜索框
+8、

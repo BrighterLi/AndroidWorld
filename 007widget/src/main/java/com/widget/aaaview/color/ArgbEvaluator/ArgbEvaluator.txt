@@ -6,4 +6,7 @@
 应用场景: 滑动背景变化；白天黑夜不同时间背景不一样
 
 ArgbEvaluator.evaluateColor
-setColorFilter
+setColorFilter 图形混合
+
+2 Demo
+Android-使用 SetColorFilter 神奇地改变图片的颜色: https://blog.csdn.net/qq_32452623/article/details/79878132
