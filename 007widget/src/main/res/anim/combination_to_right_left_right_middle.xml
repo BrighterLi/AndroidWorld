@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true"
+    android:fillEnabled="true">
+    <rotate
+        android:fromDegrees="0"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toDegrees="25"
+        android:duration="160">
+    </rotate>
+
+    <rotate
+        android:fromDegrees="0"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toDegrees="-45"
+        android:startOffset="160"
+        android:duration="160">
+    </rotate>
+
+
+    <rotate
+        android:fromDegrees="0"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toDegrees="35"
+        android:startOffset="320"
+        android:duration="160">
+    </rotate>
+
+    <rotate
+        android:fromDegrees="0"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toDegrees="-15"
+        android:startOffset="480"
+        android:duration="160">
+    </rotate>
+</set>
+
+
+<!--
+        android:fillAfter="true"
+-->
+
+<!--
+从0转到+25，用时0.16秒，再转到-20，用时0.16秒，再转到+15，用时0.16秒，最后转回0，用时0.16秒，整个动画时长0.16×4
+-->
