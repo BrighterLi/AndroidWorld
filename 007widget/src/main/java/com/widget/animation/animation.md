@@ -18,7 +18,7 @@ Property Animation 属性动画
 View Animation
 又称补间动画，在 android.view.animation.Animation 类之下衍生了五个子类。
 AlphaAnimation	渐变透明度
-RotateAnimation	旋转
+RotateAnimation	旋转   注意:起始角是当前的角度为0，顺时针再转45度，就是toDegrees=+45
 ScaleAnimation	尺寸缩放
 TranslateAnimation	位置平移
 AnimationSet	动画集合

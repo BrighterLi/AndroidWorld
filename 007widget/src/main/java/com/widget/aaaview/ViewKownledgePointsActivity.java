@@ -15,6 +15,7 @@ import com.widget.aaaview.custom_view.gif.GifDemoActivity;
 import com.widget.aaaview.custom_view.round_view.RoundFrameLayout;
 import com.widget.aaaview.custom_view.round_view.RoundFrameLayoutActivity;
 import com.widget.aaaview.get_tag.ViewGetTagActivity;
+import com.widget.aaaview.layout.dynamic_add_remove.DynamicAddOrRemoveActivity;
 import com.widget.aaaview.shape.ViewShapeActivity;
 import com.widget.aaaview.share_a_view.ShareAViewActivity;
 
@@ -42,6 +43,7 @@ public class ViewKownledgePointsActivity extends AppCompatActivity {
         mDataList.add("自定义View: 圆角矩形框背景RoundFrameLayout");
         mDataList.add("View加上shape，圆角");
         mDataList.add("View: Gif");
+        mDataList.add("动态添加删除布局");
 
     }
 
@@ -70,6 +72,9 @@ public class ViewKownledgePointsActivity extends AppCompatActivity {
                         break;
                     case 5:
                         startActivity(new Intent(ViewKownledgePointsActivity.this, GifDemoActivity.class));
+                        break;
+                    case 6:
+                        startActivity(new Intent(ViewKownledgePointsActivity.this, DynamicAddOrRemoveActivity.class));
                         break;
                 }
             }
