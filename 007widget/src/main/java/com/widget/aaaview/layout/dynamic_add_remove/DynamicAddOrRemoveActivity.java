@@ -18,6 +18,8 @@ import android.widget.TextView;
 import com.widget.R;
 
 //基于Android在布局中动态添加view的两种方法(总结): https://www.jb51.net/article/125267.htm
+//LinearLayout
+//xml和java添加方式
 public class DynamicAddOrRemoveActivity extends AppCompatActivity implements View.OnClickListener{
     private Context mContext;
     private TextView mTv_title;;
