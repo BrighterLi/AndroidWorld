@@ -1,0 +1,7 @@
+1、alpha
+2、view.setAlpha（）和 view.getBackground().setAlpha()的区别
+对一个空间设置其透明度  Android提供了setAlpha（）和 getBackground().setAlpha()，下面说说它们的区别：
+传参：setAlpha（）传参是0-1的foalt数 而 getBackground().setAlpha()传入的是0-255的int数；
+（最终它们都会转化成16进制  setAlpha（）传入的参数会先*255转化为int型）
+效果：setAlpha（）是对整个view的透明度（包括它的子view）进行设置，setAlpha（0）时view和子view就会消失；
+getBackground().setAlpha()是对View的背景透明度设置：getBackground().setAlpha(0)时背景为全透明。

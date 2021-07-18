@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.widget.R;
+import com.widget.aaaview.alpha.AlphaActivity;
 import com.widget.aaaview.custom_view.fish.FishActivity;
 import com.widget.aaaview.custom_view.gif.GifDemoActivity;
 import com.widget.aaaview.custom_view.round_view.RoundFrameLayout;
@@ -49,6 +50,7 @@ public class ViewKownledgePointsActivity extends AppCompatActivity {
         mDataList.add("动态添加删除布局");
         mDataList.add("SurfaceView");
         mDataList.add("TextureView");
+        mDataList.add("alpha透明度变化");
 
     }
 
@@ -88,6 +90,9 @@ public class ViewKownledgePointsActivity extends AppCompatActivity {
                         break;
                     case 8:
                         startActivity(new Intent(ViewKownledgePointsActivity.this, TextureViewActivity.class));
+                        break;
+                    case 9:
+                        startActivity(new Intent(ViewKownledgePointsActivity.this, AlphaActivity.class));
                         break;
                 }
             }
