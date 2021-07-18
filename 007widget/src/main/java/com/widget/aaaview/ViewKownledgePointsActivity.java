@@ -19,6 +19,8 @@ import com.widget.aaaview.layout.dynamic_add_remove.DynamicAddOrRemoveActivity;
 import com.widget.aaaview.layout.dynamic_add_remove.DynamicAddOrRemoveActivity2;
 import com.widget.aaaview.shape.ViewShapeActivity;
 import com.widget.aaaview.share_a_view.ShareAViewActivity;
+import com.widget.aaaview.surfaceview.SurfaceViewActivity;
+import com.widget.aaaview.textureview.TextureViewActivity;
 
 
 import java.util.ArrayList;
@@ -45,6 +47,8 @@ public class ViewKownledgePointsActivity extends AppCompatActivity {
         mDataList.add("View加上shape，圆角");
         mDataList.add("View: Gif");
         mDataList.add("动态添加删除布局");
+        mDataList.add("SurfaceView");
+        mDataList.add("TextureView");
 
     }
 
@@ -77,6 +81,13 @@ public class ViewKownledgePointsActivity extends AppCompatActivity {
                     case 6:
                         //startActivity(new Intent(ViewKownledgePointsActivity.this, DynamicAddOrRemoveActivity.class));
                         startActivity(new Intent(ViewKownledgePointsActivity.this, DynamicAddOrRemoveActivity2.class));
+                        break;
+                    case 7:
+                        //startActivity(new Intent(ViewKownledgePointsActivity.this, DynamicAddOrRemoveActivity.class));
+                        startActivity(new Intent(ViewKownledgePointsActivity.this, SurfaceViewActivity.class));
+                        break;
+                    case 8:
+                        startActivity(new Intent(ViewKownledgePointsActivity.this, TextureViewActivity.class));
                         break;
                 }
             }

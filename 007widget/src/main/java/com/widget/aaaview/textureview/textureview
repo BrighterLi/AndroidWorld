@@ -1,0 +1,16 @@
+1、TextureView
+Android控件--TextureView: https://blog.csdn.net/HardWorkingAnt/article/details/72784044
+应用程序的视频或者opengl内容往往是显示在一个特别的UI控件中：SurfaceView。SurfaceView的工作方式是创建
+一个置于应用窗口之后的新窗口。这种方式的效率非常高，因为SurfaceView窗口刷新的时候不需要重绘应用程序的
+窗口（android普通窗口的视图绘制机制是一层一层的，任何一个子元素或者是局部的刷新都会导致整个视图结构全
+部重绘一次，因此效率非常低下，不过满足普通应用界面的需求还是绰绰有余），但是SurfaceView也有一些非常不
+便的限制。
+
+因为SurfaceView的内容不在应用窗口上，所以不能使用变换（平移、缩放、旋转等）。也难以放在ListView或者
+ScrollView中，不能使用UI控件的一些特性比如View.setAlpha()。
+
+与SurfaceView相比，TextureView并没有创建一个单独的Surface（表面）用来绘制，这使得它可以像一般的View
+一样执行一些变换操作，设置透明度等。另外，Textureview必须在硬件加速开启的窗口中。
+
+TextureView看似更像一个通用的View，可以应用动画、变换和缩放，就如同TextView。TextureView只能用在硬件加速
+的窗口。但是，TextureView比SurfaceView更耗内存，而且可能会有1～3帧的延迟。

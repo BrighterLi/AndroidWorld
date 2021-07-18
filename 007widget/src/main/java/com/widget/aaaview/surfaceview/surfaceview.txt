@@ -1,0 +1,42 @@
+1、SurfaceView
+SurfaceView和普通view的区别及简单使用: https://blog.csdn.net/u010126792/article/details/86249399
+SurfaceView 用法: https://www.jianshu.com/p/a40c84580952
+
+SurfaceView第一印象它是一个view，因为它继承了View，有两个直接子类GLSurfaceView,VideoView。
+但根据SDK文档SurfaceView和普通的view又有较大区别。
+
+最显著的区别就是普通view和它的宿主窗口共享一个绘图表面（Surface），SurfaceView虽然也在View的树形结构中，
+但是它有属于自己的绘图表面，Surface 内部持有一个Canvas，可以利用这个Canvas绘制。
+
+SurfaceView提供一个直接的绘图表面（Surface）嵌入到视图结构层次中。你可以控制这个Surface的格式，大小，
+SurfaceView负责在屏幕上正确的摆放Surface。简单说就是SurfaceView拥有自己的Surface，它与宿主窗口是分离的。
+我们知道窗口中的view共享一个window，window又对应一个Surface，所以窗口中的view共享一个Surface，
+而SurfaceView拥有自己的Surface。SurfaceView会创建一个置于应用窗口之后的新窗口，SurfaceView相当于在Window上
+挖一个洞，它就是显示在这个洞里，其他的View是显示在Window上，所以View可以显示在 SurfaceView之上，也可以添加
+一些层在SurfaceView之上。
+
+SurfaceView 拥有独立的绘图表面，即它不与其宿主窗口共享同一个绘图表面。由于拥有独立的绘图表面，因此SurfaceView
+的UI就可以在一个独立的线程中进行绘制。又由于不会占用主线程资源，SurfaceView 一方面可以实现复杂而高效的UI，
+另一方面又不会导致用户输入得不到及时响应。
+
+SurfaceView继承之View，但拥有独立的绘制表面，即它不与其宿主窗口共享同一个绘图表面，可以单独在一个线程进行绘制，
+并不会占用主线程的资源。这样，绘制就会比较高效，游戏，视频播放，还有最近热门的直播，都可以用SurfaceView
+SurfaceView有两个子类GLSurfaceView和VideoView
+
+2、View和SurfaceView的区别：
+ (1)View适用主动更新，SurfaceView 适用被动更新，如频繁的刷新
+ (2)View在UI线程更新，在非UI线程更新会报错，当在主线程更新view时如果耗时过长也会出错, SurfaceView在子线程刷新不会
+ 阻塞主线程，适用于界面频繁更新、对帧率要求较高的情况。
+ (3)SurfaceView可以控制刷新频率。
+ (4)SurfaceView底层利用双缓存机制，绘图时不会出现闪烁问题。
+
+3、双缓冲技术
+是游戏开发中的一个重要的技术。当一个动画争先显示时，程序又在改变它，前面还没有显示完，程序又请求重新绘制，
+这样屏幕就会不停地闪烁。而双缓冲技术是把要处理的图片在内存中处理好之后，再将其显示在屏幕上。双缓冲主要是为了
+解决 反复局部刷屏带来的闪烁。把要画的东西先画到一个内存区域里，然后整体的一次性画出来。
+
+4、SurfaceView存在如下两个缺点：
+  不能应用动画、变换和缩放
+  不能叠加（Overlay）两个SurfaceView
+
+
