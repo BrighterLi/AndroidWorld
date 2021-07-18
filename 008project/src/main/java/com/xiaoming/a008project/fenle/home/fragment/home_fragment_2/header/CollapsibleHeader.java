@@ -86,7 +86,6 @@ public class CollapsibleHeader extends ConstraintLayout {
         mCollapsibleContent = new CollapsibleContent(viewStubQuotaContent);
         ViewStub viewStubQuotaTip = mRootView.findViewById(R.id.viewStubQuotaTip);
         mCollapsibleTips = new CollapsibleTips(viewStubQuotaTip);
-
     }
 
     public void initPull(View rootView){

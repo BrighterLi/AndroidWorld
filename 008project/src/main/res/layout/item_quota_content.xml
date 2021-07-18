@@ -97,7 +97,6 @@
         android:src="@drawable/ico_default_user_img"
         app:layout_constraintTop_toTopOf="@id/textAvailableQuotaTip"
         android:layout_marginStart="4dp"
-        android:visibility="gone"
         />
 
     <Space
