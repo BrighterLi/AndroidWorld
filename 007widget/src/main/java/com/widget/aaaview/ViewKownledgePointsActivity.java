@@ -13,15 +13,14 @@ import com.widget.R;
 import com.widget.aaaview.alpha.AlphaActivity;
 import com.widget.aaaview.custom_view.fish.FishActivity;
 import com.widget.aaaview.custom_view.gif.GifDemoActivity;
-import com.widget.aaaview.custom_view.round_view.RoundFrameLayout;
 import com.widget.aaaview.custom_view.round_view.RoundFrameLayoutActivity;
 import com.widget.aaaview.get_tag.ViewGetTagActivity;
-import com.widget.aaaview.layout.dynamic_add_remove.DynamicAddOrRemoveActivity;
 import com.widget.aaaview.layout.dynamic_add_remove.DynamicAddOrRemoveActivity2;
 import com.widget.aaaview.shape.ViewShapeActivity;
 import com.widget.aaaview.share_a_view.ShareAViewActivity;
 import com.widget.aaaview.surfaceview.SurfaceViewActivity;
 import com.widget.aaaview.textureview.TextureViewActivity;
+
 
 
 import java.util.ArrayList;

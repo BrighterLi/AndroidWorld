@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".aaaview.alpha.AlphaActivity"></activity>
+        <activity android:name=".image.drawable.DrawableActivity"></activity>
+        <activity android:name=".aaaview.alpha.AlphaActivity" />
         <activity android:name=".aaaview.textureview.TextureViewActivity" />
         <activity android:name=".aaaview.surfaceview.SurfaceViewActivity" />
         <activity android:name=".aaaview.layout.dynamic_add_remove.DynamicAddOrRemoveActivity2" />

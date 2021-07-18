@@ -13,6 +13,7 @@ import com.widget.banner.BannerTestActivity;
 import com.widget.dialog.DialogTestActivity;
 import com.widget.horizontalscrollview.TabStripActivity;
 import com.widget.image.ImageTestActivity;
+import com.widget.image.drawable.DrawableActivity;
 import com.widget.keyboard.KeyboardEntranceActivity;
 import com.widget.listview.backtotop.BackToTopActivity;
 import com.widget.listview.listviewdemo.demo1.ListView1Activity;
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("TextView"); //21
         mDataList.add("Material Design"); //22
         mDataList.add("上拉刷新下拉加载框架Ultra-Pull-To-Refresh"); //23
+        mDataList.add("Drawable"); //24
 
     }
 
@@ -170,6 +172,10 @@ public class MainActivity extends AppCompatActivity {
 
                     case 24:  //刷新加载框架Ultra-Pull-To-Refresh
                         startActivity(new Intent(MainActivity.this, PullToRefreshDemoActivity.class));
+                        break;
+
+                    case 25:  //刷新加载框架Ultra-Pull-To-Refresh
+                        startActivity(new Intent(MainActivity.this, DrawableActivity.class));
                         break;
 
                 }

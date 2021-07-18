@@ -1,0 +1,52 @@
+1、BitMap
+Android Bitmap详解: https://www.cnblogs.com/winter-is-coming/p/9112192.html
+
+Bitmap位图包括像素以及长、宽、颜色等描述信息。长宽和像素位数是用来描述图片的，可以通过这些信息计算
+出图片的像素占用内存的大小。
+位图可以理解为一个画架，把图放到上面然后可以对图片做一些列的处理。
+位图文件图像显示效果好，但是非压缩格式，需要占用较大的存储空间。
+
+在android系统当中，bitmap是图像处理最重要的类之一。用它可以获取图像文件信息，进行图像剪切、旋转、
+缩放等操作，并可以指定格式保存图像文件。
+
+2、 CompressFormat：Bitmap.CompressFormat.JPEG、Bitmap.CompressFormat.PNG、Bitmap.CompressFormat.WEBP三种压缩格式
+    JPEG：一种有损压缩（JPEG2000既可以有损也可以无损），".jpg"或者".jpeg"; 优点：采用了直接色，有丰富的色彩，
+适合存储照片和生动图像效果；缺点：有损，不适合用来存储logo、线框类图。
+    PNG: 一种无损压缩，".png"; 优点：支持透明、无损，主要用于小图标，透明背景等；缺点：若色彩复杂，
+则图片生成后文件很大；
+    WEBP:以WebP算法进行压缩；Google开发的新的图片格式，同时支持无损和有损压缩，使用直接色。无损压缩，
+相同质量的webp比PNG小大约26%；有损压缩，相同质量的webp比JPEG小25%-34% 支持动图，基本取代gif
+
+3、几个名词的概念：
+  Drawable：通用的图形对象，用于装载常用格式的图像，既可以是PNG，JPG这样的图像，
+  也是前面学的那13种Drawable类型的可视化对象！我们可以理解成一个用来放画的——画框！
+
+  Bitmap(位图)：我们可以把他看作一个画架，我们先把画放到上面，然后我们可以
+  进行一些处理，比如获取图像文件信息，做旋转切割，放大缩小等操作！
+
+  Canvas(画布)：如其名，画布，我们可以在上面作画(绘制)，你既可以用Paint(画笔)，
+  来画各种形状或者写字，又可以用Path(路径)来绘制多个点，然后连接成各种图形！
+
+  Matrix(矩阵)：用于图形特效处理的，颜色矩阵(ColorMatrix)，还有使用Matrix进行图像的
+  平移，缩放，旋转，倾斜等！
+
+
+ 4、BitMap的用法
+ Android学习之位图BitMap: https://www.cnblogs.com/summers/p/4096776.html
+(1)从资源文件中获取
+Bitmap rawBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.img1);
+(2)从SD卡中得到图片
+(方法1)
+String SDCarePath=Environment.getExternalStorageDirectory().toString();
+String filePath=SDCarePath+"/"+"haha.jpg";
+Bitmap rawBitmap1 = BitmapFactory.decodeFile(filePath, null);
+(方法2)
+InputStream inputStream=getBitmapInputStreamFromSDCard("haha.jpg");
+Bitmap rawBitmap2 = BitmapFactory.decodeStream(inputStream);
+(3)设置图片的圆角，返回设置后的BitMap
+(4)将图片高宽和的大小kB压缩
+(5)将Bitmap转换为Drawable   Drawable转Bitmap
+
+
+
+
