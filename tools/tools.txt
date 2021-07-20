@@ -1,0 +1,11 @@
+Maven
+
+1 开发工具
+(1)ActivityTaskView
+ActivityTaskView: 直观的Activity任务栈和LaunchMode分析工具:https://www.jianshu.com/p/c34483bb5c0f
+(2) 阿里soloπ
+内存，帧率，cpu
+(3) 在线工具
+http://www.txttool.com/WenBen_StrLength.asp
+在线计算字符串长度: https://www.toolbaba.cn/d/dev_str_count
+在线颜色生成: http://www.ku51.net/color/rgb.html

@@ -11,6 +11,9 @@ RecyclerView横向滑动指示器: https://www.jianshu.com/p/5ac538c067d9
 7、搜索框
 8、floating 浮标
 9、弹窗系统
+10、下拉刷新
+11、加载更多
+12、广告词上下轮播
 
 二、非视觉控件
 1、权限
@@ -19,4 +22,8 @@ RecyclerView横向滑动指示器: https://www.jianshu.com/p/5ac538c067d9
 三、第三方引入功能
 1、分享
 
+四、功能模块
+1、登录注册
+2、日志上报记录
+3、二维码
 
