@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".image.drawable.DrawableActivity"></activity>
+        <activity android:name=".camera.CameraActivity"></activity>
+        <activity android:name=".image.drawable.DrawableActivity" />
         <activity android:name=".aaaview.alpha.AlphaActivity" />
         <activity android:name=".aaaview.textureview.TextureViewActivity" />
         <activity android:name=".aaaview.surfaceview.SurfaceViewActivity" />
@@ -100,6 +101,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".video.VideoActivity" />
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.widget.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
     </application>
 
 </manifest>

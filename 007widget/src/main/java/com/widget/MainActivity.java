@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 import com.widget.aaaview.ViewKownledgePointsActivity;
 import com.widget.banner.BannerTestActivity;
+import com.widget.camera.CameraActivity;
 import com.widget.dialog.DialogTestActivity;
 import com.widget.horizontalscrollview.TabStripActivity;
 import com.widget.image.ImageTestActivity;
@@ -84,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("Material Design"); //22
         mDataList.add("上拉刷新下拉加载框架Ultra-Pull-To-Refresh"); //23
         mDataList.add("Drawable"); //24
+        mDataList.add("Camera"); //25
 
     }
 
@@ -174,8 +176,11 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, PullToRefreshDemoActivity.class));
                         break;
 
-                    case 25:  //刷新加载框架Ultra-Pull-To-Refresh
+                    case 25:  //drawable
                         startActivity(new Intent(MainActivity.this, DrawableActivity.class));
+                        break;
+                    case 26:  //Camera
+                        startActivity(new Intent(MainActivity.this, CameraActivity.class));
                         break;
 
                 }

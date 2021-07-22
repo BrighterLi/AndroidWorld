@@ -1,0 +1,12 @@
+1、FileProvider
+FileProvider的使用: https://www.jianshu.com/p/47fcd7873f39
+
+FileProvider 这个组件在Android 22.0.0 (也就是 Android 5.0 ) 版本下加入进Android系统,该组件是ContentProvider的子类,
+功能就是用来提供文件在跨进程间的访问能力。
+
+注意需要设置一个meta-data，里面指向一个xml文件。
+
+为什么要写这么个xml文件？
+因为要使用content://uri替代file://uri，那么，content://的uri如何定义呢？总不能使用文件路径。
+所以，需要一个虚拟的路径对文件路径进行映射，所以需要编写个xml文件，通过path以及xml节点确定可访问的目录，
+通过name属性来映射真实的文件路径。
