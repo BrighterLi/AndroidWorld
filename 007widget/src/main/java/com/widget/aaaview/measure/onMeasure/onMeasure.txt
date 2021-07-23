@@ -1,0 +1,78 @@
+1 自定义View为什么要重写onMeasure
+Android自定义View-------为什么重写onMeasure()以及怎么重写: https://blog.csdn.net/chziroy/article/details/43069975
+自定义的scrollview嵌套listview时重写onMeasure的原因: https://blog.csdn.net/xuefu_78/article/details/51760585
+Android 自定义View onMeasure方法的实现: http://www.360doc.cn/article/9200790_580207829.html
+Android 自定义 view（四）—— onMeasure 方法理解: https://www.cnblogs.com/yishujun/p/5560838.html
+
+自定义View学习笔记之详解onMeasure: https://www.cnblogs.com/xs104/p/5906413.html
+1）自定义组件时什么情况下需要实现onMeasure()方法，
+2）怎么实现onMeasure()方法
+3）为什么需要实现onMeasure()方法
+
+当控件的父元素正要放置该控件时调用.父元素会问子控件一个问题，“你想要用多大地方啊？”，然后传入两个参数——widthMeasureSpec和heightMeasureSpec.
+这两个参数指明控件可获得的空间以及关于这个空间描述的元数据.
+更好的方法是你传递View的高度和宽度到setMeasuredDimension方法里,这样可以直接告诉父控件，需要多大地方放置子控件.
+
+重写onMeasure()方法是为了自定义View尺寸的规则
+如果你的自定义View的尺寸是根据父控件行为一致，就不需要重写onMeasure()方法
+
+onMeasure 作用
+（1）一般情况重写onMeasure()方法作用是为了自定义View尺寸的规则，如果你的自定义View的尺寸是根据父控件行为一致，
+就不需要重写onMeasure()方法
+（2）如果不重写onMeasure方法，那么自定义view的尺寸默认就和父控件一样大小，当然也可以在布局文件里面写死宽高，
+而重写该方法可以根据自己的需求设置自定义view大小
+
+认识 onMeasure
+（0）onMeasure (int widthMeasureSpec, int heightMeasureSpec）是view自己的方法
+（1）onMeasure 方法简单的理解就是是用于测量视图的大小，主要是用来测量自己和内容的来确定宽度和高度
+（2）onMeasure有两个参数 （ int widthMeasureSpec, int heightMeasureSpec），该参数表示控件可获得的
+空间以及关于这个空间描述的元数据.
+（3）widthMeasureSpec和heightMeasureSpec这两个值通常情况下都是由父视图经过计算后传递给子视图的，
+说明父视图会在一定程度上决定子视图的大小。
+
+认识 MeasureSpec
+在测量自定义view的大小之前，我们需要认识一个类MeasureSpec，它封装了父布局传递给子布局的布局要求，
+每个MeasureSpec代表了一组宽度和高度的要求  MeasureSpec由size和mode组成。
+
+specMode一共有三种类型，如下所示：
+1. EXACTLY
+表示父视图希望子视图的大小应该是由specSize的值来决定的，系统默认会按照这个规则来设置子视图的大小，简单的说
+（当设置width或height为match_parent时，模式为EXACTLY，因为子view会占据剩余容器的空间，所以它大小是确定的）
+2. AT_MOST
+表示子视图最多只能是specSize中指定的大小。（当设置为wrap_content时，模式为AT_MOST, 表示子view的大小最多是多少，
+这样子view会根据这个上限来设置自己的尺寸）
+3. UNSPECIFIED
+表示开发人员可以将视图按照自己的意愿设置成任意的大小，没有任何限制。这种情况比较少见，不太会用到。
+
+2、onMeasure Demo
+android中对View的onMeasure()方法的理解: https://blog.csdn.net/lovexieyuan520/article/details/50614670
+结论：
+1、View默认的测量规则是android:layout_width和android:layout_height为match_parent或者wrap_content时，是填充全屏的。
+2、android:layout_width和android:layout_height设置为具体值时，那么是多少，宽高就是多少。
+显然，默认的规则大部分不符合我们的需求
+
+onMeasure方法的作用就是计算出自定义View的宽度和高度。这个计算的过程参照父布局给出的大小，以及自己特点算出结果
+
+测量控件大小是父控件发起的
+父控件要测量子控件大小，需要重写onMeasure方法，然后调用measureChildren或者measureChildWithMargins方法
+View的onMeasure方法的参数是通过getChildMeasureSpec生成的
+如果我们自定义控件需要使用wrap_content属性,我们需要重写onMeasure方法
+测量控件的步骤：
+父控件onMeasure->measureChildren/measureChildWithMargin->getChildMeasureSpec
+-> 子控件的measure->onMeasure->setMeasureDimension-> 父控件onMeasure结束调用setMeasureDimension
+最后保存自己的大小
+
+从源码我们了解到：
+如果View的宽高模式为未指定，他的宽高将设置为android:minWidth/Height =”“值与背景宽高值中较大的一个；
+如果View的宽高 模式为 EXACTLY （具体的size ），最终宽高就是这个size值；
+如果View的宽高模式为EXACTLY （填充父控件 ），最终宽高将为填充父控件；
+如果View的宽高模式为AT_MOST （包裹内容），最终宽高也是填充父控件。
+也就是说如果我们的自定义控件在布局文件中，只需要设置指定的具体宽高，或者MATCH_PARENT 的情况，我们可以不用重写onMeasure方法。
+但如果自定义控件需要设置包裹内容WRAP_CONTENT ，我们需要重写onMeasure方法，为控件设置需要的尺寸；
+默认情况下WRAP_CONTENT 的处理也将填充整个父控件。(上文中已经提到过WRAP_CONTENT的时候采用默认长度)
+
+setMeasuredDimension
+onMeasure方法最后需要调用setMeasuredDimension方法来保存测量的宽高值，如果不调用这个方法，可能会产生不可预测的问题。
+
+3、疑问
+子View的layout_width和layout_height的值与specMode是什么关系，与specSize什么关系？
