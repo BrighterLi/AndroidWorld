@@ -9,3 +9,5 @@ ActivityTaskView: 直观的Activity任务栈和LaunchMode分析工具:https://ww
 http://www.txttool.com/WenBen_StrLength.asp
 在线计算字符串长度: https://www.toolbaba.cn/d/dev_str_count
 在线颜色生成: http://www.ku51.net/color/rgb.html
+base64转图片: https://tool.jisuapi.com/base642pic.html
+时间戳: http://tool.chinaz.com/Tools/unixtime.aspx

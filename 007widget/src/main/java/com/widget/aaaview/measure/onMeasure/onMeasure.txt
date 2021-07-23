@@ -75,12 +75,17 @@ setMeasuredDimension
 onMeasure方法最后需要调用setMeasuredDimension方法来保存测量的宽高值，如果不调用这个方法，可能会产生不可预测的问题。
 
 3、疑问
-子View的layout_width和layout_height的值与specMode是什么关系，与specSize什么关系？
+(1) 子View的layout_width和layout_height的值与specMode是什么关系，与specSize什么关系？
 
-顶层View的MeasureSpec是谁指定?
+(2) 顶层View的MeasureSpec是谁指定?
 Android自定义View：MeasureSpec的真正意义与View大小控制: https://segmentfault.com/a/1190000007948959
+Android自定义View中MeasureSpec浅析: http://blog.iderzheng.com/how-to-use-measurespec-in-android-custom-view/
 传递给子View的MeasureSpec是父容器根据自己的MeasureSpec及子View的布局参数所确定的，那么根MeasureSpec是谁创建的呢？
 我们用最常用的两种Window来解释一下，Activity与Dialog，DecorView是Activity的根布局，传递给DecorView的MeasureSpec
 是系统根据Activity或者Dialog的Theme来确定的，也就是说，最初的MeasureSpec是直接根据Window的属性构建的，
 一般对于Activity来说，根MeasureSpec是EXACTLY+屏幕尺寸，对于Dialog来说，如果不做特殊设定会采用AT_MOST+屏幕尺寸。
 这里牵扯到WindowManagerService跟ActivityManagerService
+
+父控件会参考自己的MeasureSpec跟子View的布局参数，为子View构建合适的MeasureSpec
+
+(3) wrap_content这种具体的大小是怎么确定的？
