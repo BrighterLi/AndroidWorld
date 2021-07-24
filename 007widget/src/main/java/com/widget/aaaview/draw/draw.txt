@@ -1,0 +1,7 @@
+1、onDraw
+Android视图绘制流程之onDraw(): https://www.jianshu.com/p/f0f44cd58711
+onDraw 方法中的参数为 canvas，这个类型为 Canvas 的实例，就是我们主要操作的对象。中文意思为画布，也很形象哈，
+onDraw 就是在画布上将东西画上去。那么既然是把内容画上去，那么第一件事情就是要有一个画笔。Android 提供了这样
+的工具，也就是 Paint 类。
+
+2、贝塞尔曲线

@@ -14,6 +14,7 @@ import com.widget.aaaview.alpha.AlphaActivity;
 import com.widget.aaaview.custom_view.fish.FishActivity;
 import com.widget.aaaview.custom_view.gif.GifDemoActivity;
 import com.widget.aaaview.custom_view.round_view.RoundFrameLayoutActivity;
+import com.widget.aaaview.draw.ondraw.OnDrawActivity;
 import com.widget.aaaview.get_tag.ViewGetTagActivity;
 import com.widget.aaaview.layout.dynamic_add_remove.DynamicAddOrRemoveActivity2;
 import com.widget.aaaview.layout.onLayout.OnLayoutActivity;
@@ -57,6 +58,7 @@ public class ViewKownledgePointsActivity extends AppCompatActivity {
 
         mDataList.add("onMeasure"); //10
         mDataList.add("onLayout");
+        mDataList.add("onDraw");
 
     }
 
@@ -107,8 +109,11 @@ public class ViewKownledgePointsActivity extends AppCompatActivity {
                         startActivity(new Intent(ViewKownledgePointsActivity.this, OnMeasureActivity3.class));
                         break;
                     case 11: //onLayout
-                    startActivity(new Intent(ViewKownledgePointsActivity.this, OnLayoutActivity.class));
-                    break;
+                        startActivity(new Intent(ViewKownledgePointsActivity.this, OnLayoutActivity.class));
+                        break;
+                    case 12: //onLayout
+                        startActivity(new Intent(ViewKownledgePointsActivity.this, OnDrawActivity.class));
+                        break;
                 }
             }
         });
