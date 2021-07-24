@@ -89,3 +89,33 @@ Android自定义View中MeasureSpec浅析: http://blog.iderzheng.com/how-to-use-m
 父控件会参考自己的MeasureSpec跟子View的布局参数，为子View构建合适的MeasureSpec
 
 (3) wrap_content这种具体的大小是怎么确定的？
+
+(4)为什么自定义View没有重写onMeasure函数，MeasureSpec.AT_MOST跟MeasureSpec.AT_MOST的表现是一样？
+也就是wrap_content就跟match_parent一个效果
+public static int getDefaultSize(int size, int measureSpec) {
+    int result = size;
+    int specMode = MeasureSpec.getMode(measureSpec);
+    int specSize = MeasureSpec.getSize(measureSpec);
+
+    switch (specMode) {
+    case MeasureSpec.UNSPECIFIED:
+        result = size;
+        break;
+    case MeasureSpec.AT_MOST:
+    case MeasureSpec.EXACTLY:
+        result = specSize;
+        break;
+    }
+    return result;
+}
+
+
+
+
+
+
+
+
+
+
+

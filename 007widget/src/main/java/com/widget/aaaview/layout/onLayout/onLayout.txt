@@ -1,0 +1,8 @@
+1、onLayout、layout
+Android的onLayout、layout方法讲解: https://www.cnblogs.com/hsqdboke/p/5301172.html
+onLayout方法是ViewGroup中子View的布局方法，用于放置子View的位置。放置子View很简单，只需在重写onLayout方法，
+然后获取子View的实例，调用子View的layout方法实现布局。在实际开发中，一般要配合onMeasure测量方法一起使用。
+ @Override
+ protectedabstractvoidonLayout(booleanchanged,intl,intt,intr,intb);
+ //@param changed 该参数指出当前ViewGroup的尺寸或者位置是否发生了改变
+ //@param left top right bottom 当前ViewGroup相对于其父控件的坐标位置

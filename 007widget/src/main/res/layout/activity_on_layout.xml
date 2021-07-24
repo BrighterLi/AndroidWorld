@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".aaaview.layout.onLayout.OnLayoutActivity">
+
+    <com.widget.aaaview.layout.onLayout.MyViewGroup
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#0000ff">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff0000"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00ff00"/>
+
+    </com.widget.aaaview.layout.onLayout.MyViewGroup>
+
+
+</RelativeLayout>
