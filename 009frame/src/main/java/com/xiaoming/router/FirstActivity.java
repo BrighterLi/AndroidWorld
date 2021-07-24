@@ -28,7 +28,7 @@ public class FirstActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //发起路由操作,替换intent意图跳转
                 //不带参数
-                //ARouter.getInstance().build(MyRouter.SecondActivity).navigation();
+                //ARouter.getInstance().build(MyRouter.EventBusSecondActivity).navigation();
                 //带参数
                 ARouter.getInstance().build(MyRouter.SecondActivity).withString("combination_to_left_righht","携带的参数").navigation();
             }

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="com.xiaoming.eventbus.demo.EventBusFirstActivity">
 
     <Button
-        android:id="@+id/bt_router"
+        android:id="@+id/eb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="路由框架"/>
-
-    <Button
-        android:id="@+id/bt_event_bus"
+        android:text="注册事件"/>
+    <TextView
+        android:id="@+id/show"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="EventBus"/>
+        android:text="接收事件:  "/>
 
 </LinearLayout>
