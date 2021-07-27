@@ -1,0 +1,29 @@
+https://www.wanandroid.com/user/login    请求链接
+username=Derry-vip&password=123456  请求参数
+
+登录成功 Response 结果信息：
+{
+    "data": {
+        "admin": false,
+        "chapterTops": [],
+        "collectIds": [],
+        "email": "",
+        "icon": "",
+        "id": 66720,
+        "nickname": "Derry-vip",
+        "password": "",
+        "publicName": "Derry-vip",
+        "token": "",
+        "type": 0,
+        "username": "Derry-vip"
+    },
+    "errorCode": 0,
+    "errorMsg": ""
+}
+
+登录失败 Response 结果信息：
+{
+    "data": null,
+    "errorCode": -1,
+    "errorMsg": "账号密码不匹配！"
+}

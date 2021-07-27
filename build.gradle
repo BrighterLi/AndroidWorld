@@ -7,7 +7,6 @@ buildscript {
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' } //由于下载不了Arouter框架故添加
         google()
         jcenter()
-
     }
     dependencies {
         //classpath 'com.android.tools.build:gradle:3.3.0-rc03'
