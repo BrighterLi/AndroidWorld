@@ -22,5 +22,8 @@ Android Studio编写Kotlin程序: https://blog.csdn.net/chichengjunma/article/de
 
 4 Kotlin语法
 :  属性
-:: 继承
+::
+Kotlin 双冒号 :: 使用：https://blog.csdn.net/lv_fq/article/details/72869124
+ 双冒号操作符 表示把一个方法当做一个参数，传递到另一个方法中进行使用，通俗的来讲就是引用一个方法
+ 在 Class 中的某个方法中使用双冒号调用当前 Class 的内部方法时
 -> lamada
