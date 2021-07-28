@@ -18,3 +18,9 @@ Kotlin是一门运行在JVM之上的语言。它由Jetbrains创建，而Jetbrain
 
 3 使用Kotlin
 Android Studio编写Kotlin程序: https://blog.csdn.net/chichengjunma/article/details/72520662
+
+
+4 Kotlin语法
+:  属性
+:: 继承
+-> lamada

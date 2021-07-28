@@ -6,6 +6,12 @@ http://algorithm-visualizer.org
 旧金山大学数据结构和算法:
 https://www.cs.usfca.edu/~galles/visualization/source.html
 
-1 深度学习
+2语言
+python
+
+3 深度学习
+机器学习&深度学习算法及代码实现：https://blog.csdn.net/custamg2008/article/details/78867314
 (1)感知器
 感知器：https://blog.csdn.net/wang19950207/article/details/78693107
+
+半监督学习
