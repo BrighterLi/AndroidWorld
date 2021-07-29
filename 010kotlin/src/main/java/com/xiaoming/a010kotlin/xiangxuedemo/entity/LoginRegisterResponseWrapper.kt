@@ -30,4 +30,4 @@ package com.xiaoming.a010kotlin.xiangxuedemo.entity
 }
 
  */
-data class LoginResponseWrapper<T> (val data: T, val errorCode: Int, val errorMsg: String)
+data class LoginRegisterResponseWrapper<T> (val data: T, val errorCode: Int, val errorMsg: String)
