@@ -21,4 +21,15 @@ interface WanAndroidAPI {
                     @Field("password") password: String)
     : Observable<LoginRegisterResponseWrapper<LoginRegisterResponse>> //返回值
 
+
+    /**
+     * 注册的API
+     */
+    @POST("/user/register")
+    @FormUrlEncoded
+    fun registerAction(@Field("username") username: String,
+                       @Field("password") password: String,
+                       @Field("repassword") repassword: String)
+            : Observable<LoginRegisterResponseWrapper<LoginRegisterResponse>> // 返回值
+
 }

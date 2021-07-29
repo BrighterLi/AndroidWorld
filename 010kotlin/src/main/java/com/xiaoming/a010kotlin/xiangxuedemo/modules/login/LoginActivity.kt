@@ -18,6 +18,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import com.xiaoming.a010kotlin.MainActivity
 import com.xiaoming.a010kotlin.xiangxuedemo.base.BaseActivity
+import com.xiaoming.a010kotlin.xiangxuedemo.modules.home.HomeActivity
 import com.xiaoming.a010kotlin.xiangxuedemo.modules.login.interfaces.LoginPresenter
 import com.xiaoming.a010kotlin.xiangxuedemo.modules.login.interfaces.LoginView
 import com.xiaoming.a010kotlin.xiangxuedemo.modules.register.RegisterActivity
@@ -58,7 +59,7 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LoginView {
     override fun loginSuccess(loginBean: LoginRegisterResponse?) {
         Toast.makeText(this@LoginActivity, "登录成功😀", Toast.LENGTH_SHORT).show()
 
-        val intent = Intent(this@LoginActivity,  MainActivity::class.java)
+        val intent = Intent(this@LoginActivity,  HomeActivity::class.java)
         startActivity(intent)
     }
 
