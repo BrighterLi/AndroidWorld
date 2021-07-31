@@ -30,6 +30,7 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LoginView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        hideActionBar()
 
         user_login_bt.setOnClickListener(onClickListener)
 

@@ -20,7 +20,12 @@ class LoginModelImpl : LoginModule {
 
     }
 
-    override fun login(context: Context, username: String, password: String, onLoginListener: LoginPresenter.OnLoginListener) {
+    override fun login(
+            context: Context,
+            username: String,
+            password: String,
+            onLoginListener: LoginPresenter.OnLoginListener)
+    {
         APIClient.instance.instanceRetrofit(WanAndroidAPI::class.java)
 
                 // 全部都是RxJava知识了

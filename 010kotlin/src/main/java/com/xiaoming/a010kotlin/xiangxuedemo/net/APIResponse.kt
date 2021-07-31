@@ -18,10 +18,12 @@ abstract class APIResponse<T>(val context: Context) //主构造
     }
 
     //成功怎么办
-    abstract fun success(data: T?)
+    abstract fun success(data: T ?)
 
     //失败怎么办
-    abstract fun failure(errorMsg: String?)
+    abstract fun failure(errorMsg: String ?)
+
+    // todo +++++++++++++++++++++++++++++++++  RxJava 相关的函数
 
     // 启点分发的时候
     override fun onSubscribe(d: Disposable) {

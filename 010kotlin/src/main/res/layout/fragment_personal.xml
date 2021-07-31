@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/root_bg_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_notifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{vm.text}"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+        <!-- top_bg_color -->
+        <TextView
+            android:id="@+id/user_login_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:drawableLeft="@drawable/center_default_head"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="20dp"
+            android:text="登录/注册"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/user_logined_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_dark"
+            android:gravity="center_vertical"
+            android:padding="20dp"
+            android:visibility="gone">
+
+            <!-- 圆角的 需要大量自定义代码，所以先不写了 -->
+            <!--<com.derry.googleproject.ui.view.RoundImageView
+                android:id="@+id/user_head_iv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/center_default_head" />-->
+            <ImageView
+                android:id="@+id/user_head_iv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/center_default_head" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/user_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Derry"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/user_location_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="湖南省长沙市"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_code" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未签到" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="我的任务"
+                    android:textSize="@dimen/default_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未签到" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="我的任务"
+                    android:textSize="@dimen/default_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/recharge_coin_ll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="我的金币"
+                    android:textSize="@dimen/default_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:drawableTop="@drawable/purchase_records"
+                android:drawablePadding="10dp"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="购买记录" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:drawableTop="@drawable/my_order"
+                android:drawablePadding="10dp"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="我的订单" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:drawableTop="@drawable/my_publish"
+                android:drawablePadding="10dp"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="我的发布" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:drawableTop="@drawable/worker_manage_center"
+                android:drawablePadding="10dp"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="工人管理中心" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:drawableTop="@drawable/team_manage_center"
+                android:drawablePadding="10dp"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="团队管理中心" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:drawableTop="@drawable/expert_manage_center"
+                android:drawablePadding="10dp"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="技术管理中心" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/income_statistics"
+            android:drawableRight="@drawable/right_arrow"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="我的财富" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/common_problem"
+            android:drawableRight="@drawable/right_arrow"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="常见问题" />
+
+        <TextView
+            android:id="@+id/user_exit_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/contact_service"
+            android:drawableRight="@drawable/right_arrow"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="管理中心" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/company_certificate_min"
+            android:drawableRight="@drawable/right_arrow"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="全网认证" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/equipment_rent"
+            android:drawableRight="@drawable/right_arrow"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="租房信息" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/equipment_transfer"
+            android:drawableRight="@drawable/right_arrow"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="旺铺转让" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/expert_resume"
+            android:drawableRight="@drawable/right_arrow"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="页面详情" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/help_tutorial"
+            android:drawableRight="@drawable/right_arrow"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="实验中心" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/rb_message_press"
+            android:drawableRight="@drawable/right_arrow"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="微信平台" />
+
+        <TextView
+            android:id="@+id/tv_exit_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/rb_myself_press"
+            android:drawableRight="@drawable/right_arrow"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:onClick="@{()->click.exitLoginInfoAction()}"
+            android:padding="10dp"
+            android:text="退出登录" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/rb_message_press"
+            android:drawableRight="@drawable/right_arrow"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="联系我们"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+</ScrollView>
