@@ -70,6 +70,51 @@ fun main() {
 
 
 
+/*method()
+    method(9999, 8888)
+    method(100000)*/
+
+
+
+
+
+
+
+
+    // TODO 先看这个  1
+
+    // TODO  ------------------- 高阶登录需求 --------------------
+    loginEngine("Derry2", "123456")
+
+    run {}
+}
+
+/*
+fun method(n1: Int = 9 , n2: Int = 100) {
+    println("n1:$n1, n2:$n2")
+}*/
+
+
+// --------------
+// 对外暴漏
+fun loginEngine(userName: String, userPwd: String) : Unit {
+
+    // 使用高阶  {}
+    loginService(userName, userPwd) { name, pwd ->
+        if (name == "Derry" && pwd == "123456") {
+            println("恭喜:${name}登录成功")
+        } else {
+            println("登录失败，请检查 用户名 或 密码....!!")
+        }
+    }
+}
+
+// 标准  String String --> Unit
+typealias RequestLogin = (String, String) -> Unit
+
+private fun loginService(userName: String, userPwd: String, requestLogin: RequestLogin) : Unit {
+    requestLogin(userName, userPwd)
+}
 
 
 
