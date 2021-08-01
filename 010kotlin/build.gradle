@@ -77,4 +77,8 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.1.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.1.0'
 
+    // 协程 支持包   ------   AndroidX 扩展包
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7'
+
 }
