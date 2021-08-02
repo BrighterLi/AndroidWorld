@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">FrameApp</string>
-    <string name="title_activity_base">BaseActivity</string>
-
-    <!-- TODO: Remove or change this placeholder combination_to_left_righht -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-</resources>
