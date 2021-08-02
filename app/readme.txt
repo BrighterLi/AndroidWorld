@@ -176,3 +176,7 @@ https://www.jb51.net/article/88663.htm
  <1> Cookie、Session
   https://blog.csdn.net/lishuai05251986/article/details/84804199
 <2> token
+
+
+6其它
+65536问题64k问题：https://yanzhenjie.blog.csdn.net/article/details/51818269

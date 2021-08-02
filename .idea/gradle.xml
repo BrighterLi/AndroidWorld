@@ -4,7 +4,6 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
@@ -32,7 +31,6 @@
             <option value="$PROJECT_DIR$/acrosslibrary" />
             <option value="$PROJECT_DIR$/algorithmopenvc" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/frameapp" />
             <option value="$PROJECT_DIR$/framearouter" />
             <option value="$PROJECT_DIR$/framebutterknife" />
             <option value="$PROJECT_DIR$/framelifecycle" />
@@ -58,7 +56,7 @@
             <option value="$PROJECT_DIR$/widgetreddot" />
             <option value="$PROJECT_DIR$/widgettimer" />
             <option value="$PROJECT_DIR$/widgetwheelview" />
-            <option value="$PROJECT_DIR$/../flutter_mix/.android/Flutter" />
+            <option value="E:/flutter_mix/.android/Flutter" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

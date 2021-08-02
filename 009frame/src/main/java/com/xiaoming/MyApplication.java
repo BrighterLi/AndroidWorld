@@ -1,9 +1,11 @@
 package com.xiaoming;
 
 import android.app.Application;
+import android.content.Context;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.xiaoming.framearouter.BuildConfig;
+
 
 //要在AndroidManifest中设置Application的name属性，导致没有关联自定义的Application
 public class MyApplication extends Application {
@@ -17,4 +19,5 @@ public class MyApplication extends Application {
         }
         ARouter.init(this); // 尽可能早，推荐在Application中初始化
     }
+
 }
