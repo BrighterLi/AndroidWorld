@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xiaoming.framearouter">
+    package="com.xiaoming.framearouter" >
 
     <application
         android:name="com.xiaoming.MyApplication"
@@ -9,22 +9,24 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name="com.xiaoming.eventbus.demo.EventBusSecondActivity"></activity>
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.xiaoming.eventbus.demo.EventBusFirst2Activity" >
+        </activity>
+        <activity android:name="com.xiaoming.eventbus.demo.EventBusSecondActivity" />
         <activity android:name="com.xiaoming.eventbus.demo.EventBusFirstActivity" />
-        <activity android:name="com.xiaoming.MainActivity">
+        <activity android:name="com.xiaoming.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.xiaoming.router.FirstActivity">
+        <activity android:name="com.xiaoming.router.FirstActivity" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.xiaoming.router.SecondActivity">
+        <activity android:name="com.xiaoming.router.SecondActivity" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
