@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.xiaoming.eventbus.demo.EventBusFirst2Activity;
 import com.xiaoming.eventbus.demo.EventBusFirstActivity;
 import com.xiaoming.framearouter.R;
 import com.xiaoming.mvx.xiangxue.mvc.controller.MvcJinziqiActivityDemo;
@@ -47,7 +48,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 startActivity(new Intent(MainActivity.this, FirstActivity.class));
                 break;
             case R.id.bt_event_bus:
-                startActivity(new Intent(MainActivity.this, EventBusFirstActivity.class));
+                startActivity(new Intent(MainActivity.this, EventBusFirst2Activity.class));
                 break;
         }
     }
