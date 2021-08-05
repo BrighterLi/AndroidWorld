@@ -1,5 +1,6 @@
 package com.xiaoming.androidkindsdemo.acrossend.flutter;
 
+/*
 import android.app.Activity;
 import androidx.annotation.NonNull;
 
@@ -42,3 +43,4 @@ public class FlutterEvent implements MethodChannel.MethodCallHandler {
         }
     }
 }
+*/

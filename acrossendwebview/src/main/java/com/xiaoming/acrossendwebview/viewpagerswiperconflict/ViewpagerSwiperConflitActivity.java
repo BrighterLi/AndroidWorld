@@ -2,11 +2,11 @@ package com.xiaoming.acrossendwebview.viewpagerswiperconflict;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
-import androidx.core.app.Fragment;
-import androidx.core.app.FragmentManager;
-import androidx.core.app.FragmentPagerAdapter;
-import androidx.core.view.ViewPager;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -23,19 +23,10 @@ import com.xiaoming.acrossendwebview.R;
 //安卓viewpager嵌套webview的滑动冲突解决
 //安卓viewpager嵌套webview的滑动冲突解决:https://blog.csdn.net/qq_40281800/article/details/86619870
 public class ViewpagerSwiperConflitActivity extends AppCompatActivity implements ParentRequestInterface {
-    /**
-     * The {@link androidx.core.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link androidx.core.app.FragmentStatePagerAdapter}.
-     */
+
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
-    /**
-     * The {@link ViewPager} that will host the section contents.
-     */
+
     private CustomViewPager mViewPager;
 
     @Override

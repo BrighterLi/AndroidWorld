@@ -13,10 +13,8 @@
         <activity android:name="com.xiaoming.eventbus.demo.EventBusFirst2Activity" >
         </activity>
         <activity android:name="com.xiaoming.eventbus.demo.EventBusSecondActivity" />
-        android:theme="@style/AppTheme">
         <activity android:name="com.xiaoming.mvx.xiangxue.mvc.controller.MvcJinziqiActivityDemo"/>
         <activity android:name="com.xiaoming.mvx.xiangxue.JinziqiActivity" />
-        <activity android:name="com.xiaoming.eventbus.demo.EventBusSecondActivity" />
         <activity android:name="com.xiaoming.eventbus.demo.EventBusFirstActivity" />
         <activity android:name="com.xiaoming.MainActivity" >
             <intent-filter>

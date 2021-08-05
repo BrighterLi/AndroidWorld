@@ -10,6 +10,7 @@ import com.xiaoming.androidkindsdemo.base.BaseActivity;
 
 import java.util.HashMap;
 
+/*
 import io.flutter.embedding.android.FlutterView;
 
 public class CustomFlutterActivity extends BaseActivity {
@@ -66,3 +67,4 @@ public class CustomFlutterActivity extends BaseActivity {
     }
 
 }
+*/

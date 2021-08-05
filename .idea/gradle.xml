@@ -31,7 +31,6 @@
             <option value="$PROJECT_DIR$/acrosslibrary" />
             <option value="$PROJECT_DIR$/algorithmopenvc" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/frameapp" />
             <option value="$PROJECT_DIR$/framearouter" />
             <option value="$PROJECT_DIR$/framebutterknife" />
             <option value="$PROJECT_DIR$/framelifecycle" />
@@ -57,7 +56,6 @@
             <option value="$PROJECT_DIR$/widgetreddot" />
             <option value="$PROJECT_DIR$/widgettimer" />
             <option value="$PROJECT_DIR$/widgetwheelview" />
-            <option value="E:/flutter_mix/.android/Flutter" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

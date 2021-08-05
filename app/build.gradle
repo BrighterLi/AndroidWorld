@@ -38,7 +38,7 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
     //flutter源码依赖方式
-    implementation project(':flutter')
+    //implementation project(':flutter')
     implementation 'com.google.code.gson:gson:2.2.4'
 
     //依赖本地的其它Module
