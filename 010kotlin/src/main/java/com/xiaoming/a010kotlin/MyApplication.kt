@@ -12,7 +12,7 @@ class MyApplication : Application() {
         Log.d(Flag.TAG, "MyApplication onCreate run")
 
         // 初始化
-        StudentDatabase.getDatabase(this)
+        //StudentDatabase.getDatabase(this)
     }
 
 }
