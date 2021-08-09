@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.xiaoming.androidpoints.R;
+import com.xiaoming.androidpoints.aaabug.lx.AnimationBug.FirstActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +31,7 @@ public class BugTestActivity extends AppCompatActivity {
     private void initListData() {
         mList = new ArrayList<>();
         mList.add("java.util.ConcurrentModificationException"); //0
+        mList.add("动画失效Bug"); //1
     }
 
     private void initListView() {
@@ -42,6 +44,10 @@ public class BugTestActivity extends AppCompatActivity {
                 switch (i) {
                     case 0:
                         ConcurrentModificationException.testList();
+                        break;
+                    case 1:
+                        startActivity(new Intent(BugTestActivity.this, FirstActivity.class));
+                        break;
                 }
             }
         });

@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_4bae4f"
-    tools:context=".animation.activity.Activity1">
+    android:background="@color/yellow"
+    tools:context="com.xiaoming.androidpoints.aaabug.lx.AnimationBug.SecondActivity">
 
     <Button
-        android:id="@+id/bt_jump"
+        android:id="@+id/bt_finish_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="跳转"
-        tools:ignore="MissingConstraints" />
+        android:text="关闭SecondActivity"/>
 
 </LinearLayout>

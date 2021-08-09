@@ -1,0 +1,1 @@
+1 FirstActivity打开ThirdActivity再打开SecondActivity，SecondActivity入场动画无效
