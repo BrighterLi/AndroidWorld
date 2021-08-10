@@ -14,6 +14,7 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.popwindow_in2, R.anim.popwindow_no_anim);
         setContentView(R.layout.activity_second3);
 
 
