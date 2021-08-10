@@ -1,1 +1,5 @@
 1 FirstActivity打开ThirdActivity再打开SecondActivity，SecondActivity入场动画无效
+Android动画一：Activity过渡动画详细实现原理：https://segmentfault.com/a/1190000020485087
+Activity 转场动画踩坑: https://blog.csdn.net/zhaizu/article/details/79486750
+Activity设置切换动画时黑屏问题的解决: https://blog.csdn.net/tndroid/article/details/47446423
+Android中Activity的切换动画实现（总结）: https://blog.csdn.net/lpCrazyBoy/article/details/83060096

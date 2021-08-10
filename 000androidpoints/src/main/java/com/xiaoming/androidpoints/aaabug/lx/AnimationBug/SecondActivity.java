@@ -23,7 +23,7 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-                overridePendingTransition(0, R.anim.popwindow_out2);
+                overridePendingTransition(R.anim.popwindow_no_anim, R.anim.popwindow_out2);
             }
         });
     }

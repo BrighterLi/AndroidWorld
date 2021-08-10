@@ -34,11 +34,11 @@ public class FirstActivity extends AppCompatActivity {
 
     private void startSecondActivity() {
         startActivity(new Intent(FirstActivity.this, SecondActivity.class));
-        overridePendingTransition(R.anim.popwindow_in2, 0);
+        overridePendingTransition(R.anim.popwindow_in2, R.anim.popwindow_no_anim);
     }
 
     private void startThirdActivity() {
         startActivity(new Intent(FirstActivity.this, ThirdActivity.class));
-        overridePendingTransition(0, 0);
+        //overridePendingTransition(0, 0);
     }
 }
