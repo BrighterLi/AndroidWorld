@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.widget.ArrayAdapter;
 
 import com.xiaoming.function.command.CommandActivity;
+import com.xiaoming.function.share.share1.Share1Activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +31,7 @@ public class MainActivity extends Activity {
     private void initDemoData() {
         demoDataList = new ArrayList<>();
         demoDataList.add("乐口令");
+        demoDataList.add("分享功能1");
     }
 
     private void initView() {
@@ -43,6 +45,9 @@ public class MainActivity extends Activity {
                 switch (position) {
                     case 0:
                         startActivity(new Intent(MainActivity.this, CommandActivity.class));
+                        break;
+                    case 1:
+                        startActivity(new Intent(MainActivity.this, Share1Activity.class));
                         break;
                 }
             }

@@ -3,6 +3,7 @@
     package="com.xiaoming.function">
 
     <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.tencent.liteav.trtcvideocalldemo.ui.TRTCVideoCallActivity"></activity>
+        <activity android:name=".share.share1.Share1Activity"></activity>
+        <activity android:name="com.tencent.liteav.trtcvideocalldemo.ui.TRTCVideoCallActivity" />
         <activity android:name="com.tencent.liteav.trtcvideocalldemo.TRTCAudioCallActivity" />
         <activity android:name="com.tencent.liteav.SelectContactActivity" />
         <activity android:name="com.tencent.liteav.trtcaudiocalldemo.ui.TRTCAudioCallActivity" />

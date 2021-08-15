@@ -1,0 +1,8 @@
+1、分享方法
+Android-原生系统分享小记：https://blog.csdn.net/qq_29443203/article/details/77887999
+android 实现分享功能两种方法: https://blog.csdn.net/u010597493/article/details/53994338
+方法1：安卓系统自带的分享来实现
+方法2：现在的社会化分享大多是使用的第三方的分享，例如友盟，ShareSDK等等
+一个sdk，但是要申请各个平台的AppKey
+方法3：当然也用使用微信，qq等官方的SDK分享
+各个平台对应一个sdk，多个sdk
