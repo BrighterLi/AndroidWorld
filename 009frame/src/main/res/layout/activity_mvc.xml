@@ -1,33 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.xiaoming.lifecycle.LifeCycleActivity">
+    tools:context="com.xiaoming.mvx.mvc.MvcActivity">
 
-    <Button
-        android:id="@+id/bt_mvx"
+    <EditText
+        android:id="@+id/et_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="App架构Mvx"/>
+        android:text="联系人"/>
 
     <Button
-        android:id="@+id/bt_router"
-        android:layout_width="match_parent"
+        android:id="@+id/bt_search"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="路由框架"/>
+        android:text="搜索"/>
 
-    <Button
-        android:id="@+id/bt_event_bus"
+    <TextView
+        android:id="@+id/tv_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="EventBus"/>
-
-    <Button
-        android:id="@+id/bt_lifecycle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="LifeCycle"/>
+        android:text="号码"/>
 
 </LinearLayout>
