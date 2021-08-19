@@ -38,3 +38,9 @@ MVP特点：
 2、可以更高效地使用模型，因为所有的交互都发生在一个地方——Presenter内部
 3、我们可以将一个Presenter用于多个视图，而不需要改变Presenter的逻辑。这个特性非常的有用，因为视图的变化总是比模型的变化频繁。
 4、如果我们把逻辑放在Presenter中，那么我们就可以脱离用户接口来测试这些逻辑（单元测试）
+
+
+3 MVVM
+一篇文章带你入门 Android MVVM: https://www.jianshu.com/p/a15d6e68d93f
+DataBinding: 实现数据和UI双向绑定的框架
+MVVM是一种设计思想，而DataBinding只是实现MVVM模式的一种方式而已，除此之外，实现MVVM还有另一种方式，那就是ViewModel+LiveData+Repository
