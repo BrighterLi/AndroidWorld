@@ -30,4 +30,10 @@
         android:layout_height="wrap_content"
         android:text="LifeCycle"/>
 
+    <Button
+        android:id="@+id/bt_databinding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DataBinding"/>
+
 </LinearLayout>

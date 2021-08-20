@@ -6,13 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.xiaoming.databinding.demo1.DataBindingActivity;
+import com.xiaoming.databinding.demo2.DataBindingActivity2;
 import com.xiaoming.eventbus.demo.EventBusFirst2Activity;
-import com.xiaoming.eventbus.demo.EventBusFirstActivity;
 import com.xiaoming.framearouter.R;
 import com.xiaoming.lifecycle.LifeCycleActivity;
-import com.xiaoming.mvx.mvc.MvcActivity;
 import com.xiaoming.mvx.mvp.MvpActivity;
-import com.xiaoming.mvx.xiangxue.mvc.controller.MvcJinziqiActivityDemo;
 import com.xiaoming.router.FirstActivity;
 
 //在支持路由的页面上添加注解
@@ -21,6 +20,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     private Button mBtRouter;
     private Button mBtEventBus;
     private Button mBtLifeCycle;
+    private Button mBtDataBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
         mMvx.setOnClickListener(this);
         mBtLifeCycle = findViewById(R.id.bt_lifecycle);
         mBtLifeCycle.setOnClickListener(this);
+        mBtDataBinding = findViewById(R.id.bt_databinding);
+        mBtDataBinding.setOnClickListener(this);
     }
 
     @Override
@@ -59,6 +61,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.bt_lifecycle:
                 startActivity(new Intent(MainActivity.this, LifeCycleActivity.class));
+                break;
+            case R.id.bt_databinding:
+                //startActivity(new Intent(MainActivity.this, DataBindingActivity.class));
+                startActivity(new Intent(MainActivity.this, DataBindingActivity2.class));
                 break;
         }
     }

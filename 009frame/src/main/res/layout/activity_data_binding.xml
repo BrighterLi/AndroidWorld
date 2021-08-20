@@ -3,7 +3,7 @@
     <data>
         <variable
             name="stu"
-            type="com.xiaoming.databinding.Student" />
+            type="com.xiaoming.databinding.demo1.Student" />
     </data>
 
     <LinearLayout

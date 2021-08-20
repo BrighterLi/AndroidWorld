@@ -1,4 +1,4 @@
-package com.xiaoming.databinding;
+package com.xiaoming.databinding.demo1;
 
 public class Student {
     private String name;
