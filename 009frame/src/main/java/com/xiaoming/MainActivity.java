@@ -12,6 +12,7 @@ import com.xiaoming.eventbus.demo.EventBusFirst2Activity;
 import com.xiaoming.framearouter.R;
 import com.xiaoming.lifecycle.LifeCycleActivity;
 import com.xiaoming.mvx.mvp.MvpActivity;
+import com.xiaoming.mvx.mvvm.demo1.view.MvvmActivity;
 import com.xiaoming.router.FirstActivity;
 
 //在支持路由的页面上添加注解
@@ -51,7 +52,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 //startActivity(new Intent(MainActivity.this, MvcJinziqiActivityDemo.class));
 
                 //startActivity(new Intent(MainActivity.this, MvcActivity.class));
-                startActivity(new Intent(MainActivity.this, MvpActivity.class));
+                //startActivity(new Intent(MainActivity.this, MvpActivity.class));
+                startActivity(new Intent(MainActivity.this, MvvmActivity.class));
                 break;
             case R.id.bt_router:
                 startActivity(new Intent(MainActivity.this, FirstActivity.class));
