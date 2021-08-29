@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".aaaview.draw.ondraw.OnDrawActivity"></activity>
+        <activity android:name=".notification.NotificationActivity"></activity>
+        <activity android:name=".aaaview.draw.ondraw.OnDrawActivity" />
         <activity android:name=".aaaview.layout.onLayout.OnLayoutActivity" />
         <activity android:name=".aaaview.measure.onMeasure.OnMeasureActivity3" />
         <activity android:name=".aaaview.measure.onMeasure.OnMeasureActivity2" />

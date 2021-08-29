@@ -22,6 +22,7 @@ import com.widget.listview.listviewdemo.demo2.ListView2Activity;
 import com.widget.listview.listviewdemo.demo3.ListView3Activity;
 import com.widget.loading.LoadingDemoActivity;
 import com.widget.material_design.MaterialDesignActivity;
+import com.widget.notification.NotificationActivity;
 import com.widget.pullrefresh.PullRefreshActivity;
 import com.widget.pullrefresh.pull_to_refresh.PullToRefreshDemoActivity;
 import com.widget.recyclerview.RecyclerViewActivity;
@@ -86,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("上拉刷新下拉加载框架Ultra-Pull-To-Refresh"); //23
         mDataList.add("Drawable"); //24
         mDataList.add("Camera"); //25
+        mDataList.add("Notification"); //26
 
     }
 
@@ -181,6 +183,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 26:  //Camera
                         startActivity(new Intent(MainActivity.this, CameraActivity.class));
+                        break;
+                    case 27:  //Camera
+                        startActivity(new Intent(MainActivity.this, NotificationActivity.class));
                         break;
 
                 }
