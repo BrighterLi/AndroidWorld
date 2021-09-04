@@ -23,7 +23,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".aaabug.lx.AnimationBug.ThirdActivity"></activity>
+        <activity android:name=".aaajavaknowledge.aop.aspectj.AspectJDemoActivity"></activity>
+        <activity android:name=".aaabug.lx.AnimationBug.ThirdActivity" />
         <activity android:name=".aaabug.lx.AnimationBug.SecondActivity" />
         <activity android:name=".aaabug.lx.AnimationBug.FirstActivity" />
         <activity android:name=".aaabug.BugTestActivity" />
