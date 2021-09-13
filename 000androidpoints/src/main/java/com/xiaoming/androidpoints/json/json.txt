@@ -1,3 +1,6 @@
+Gson
+Gson是谷歌推出的一个用于生成和解析JSON数据格式的工具
+
 1 org.json.JSONObject
 (1) 两个JSONObject合并
 java中，怎么把两个jsonObject合并成一个？https://wenda.so.com/q/1534908798210384
