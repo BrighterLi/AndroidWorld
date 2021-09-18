@@ -17,6 +17,8 @@
             name="input"
             type="String" />
 
+        <import type="android.view.View" />
+
     </data>
 
     <LinearLayout
