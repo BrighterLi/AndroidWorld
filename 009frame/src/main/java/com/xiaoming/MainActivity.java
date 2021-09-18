@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.xiaoming.aop.aspectj.demo.AspectJActivity;
 import com.xiaoming.databinding.demo1.DataBindingActivity;
 import com.xiaoming.databinding.demo2.DataBindingActivity2;
 import com.xiaoming.eventbus.demo.EventBusFirst2Activity;
@@ -22,6 +23,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     private Button mBtEventBus;
     private Button mBtLifeCycle;
     private Button mBtDataBinding;
+    private Button mBtAop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
         mBtLifeCycle.setOnClickListener(this);
         mBtDataBinding = findViewById(R.id.bt_databinding);
         mBtDataBinding.setOnClickListener(this);
+        mBtAop = findViewById(R.id.bt_aop);
+        mBtAop.setOnClickListener(this);
     }
 
     @Override
@@ -67,6 +71,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
             case R.id.bt_databinding:
                 //startActivity(new Intent(MainActivity.this, DataBindingActivity.class));
                 startActivity(new Intent(MainActivity.this, DataBindingActivity2.class));
+                break;
+            case R.id.bt_aop:
+                //startActivity(new Intent(MainActivity.this, DataBindingActivity.class));
+                startActivity(new Intent(MainActivity.this, AspectJActivity.class));
                 break;
         }
     }
