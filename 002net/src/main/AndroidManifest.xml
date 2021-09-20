@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".frame.rxjava.okhttp_retrofit_rxjava.RxJavaRetrofitActivity"></activity>
+        <activity android:name=".frame.rxjava.rxjava_retrofit.demo.RxjavaRetrofitActivity"></activity>
+        <activity android:name=".frame.rxjava.okhttp_retrofit_rxjava.RxJavaRetrofitActivity" />
         <activity android:name=".frame.retrofit.demo.RetrofitDemoActivity" />
         <activity android:name=".frame.retrofit.RetrofitActivity" />
         <activity android:name=".frame.httpurlconnection.HttpUrlConnectionActivity" />
