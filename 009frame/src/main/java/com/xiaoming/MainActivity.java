@@ -6,13 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.xiaoming.aop.aspectj.demo.AspectJActivity;
-import com.xiaoming.databinding.demo1.DataBindingActivity;
+import com.xiaoming.aop.aspectj.activity_life_demo.AspectJActivity;
+import com.xiaoming.aop.aspectj.click_demo.AspectJActivity2;
 import com.xiaoming.databinding.demo2.DataBindingActivity2;
 import com.xiaoming.eventbus.demo.EventBusFirst2Activity;
 import com.xiaoming.framearouter.R;
 import com.xiaoming.lifecycle.LifeCycleActivity;
-import com.xiaoming.mvx.mvp.MvpActivity;
 import com.xiaoming.mvx.mvvm.demo1.view.MvvmActivity;
 import com.xiaoming.router.FirstActivity;
 
@@ -74,7 +73,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.bt_aop:
                 //startActivity(new Intent(MainActivity.this, DataBindingActivity.class));
-                startActivity(new Intent(MainActivity.this, AspectJActivity.class));
+                //startActivity(new Intent(MainActivity.this, AspectJActivity.class));
+                startActivity(new Intent(MainActivity.this, AspectJActivity2.class));
                 break;
         }
     }

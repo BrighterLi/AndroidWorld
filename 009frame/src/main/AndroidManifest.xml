@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.xiaoming.aop.aspectj.demo.AspectJActivity"></activity>
+        <activity android:name="com.xiaoming.aop.aspectj.click_demo.AspectJActivity2"></activity>
+        <activity android:name="com.xiaoming.aop.aspectj.activity_life_demo.AspectJActivity" />
         <activity android:name="com.xiaoming.mvx.mvvm.demo1.view.MvvmActivity" />
         <activity android:name="com.xiaoming.databinding.demo2.DataBindingActivity2" />
         <activity android:name="com.xiaoming.databinding.demo1.DataBindingActivity" />

@@ -73,6 +73,7 @@ dependencies {
 
 }
 
+//脚本
 /*Aspectj配置*/
 import org.aspectj.bridge.IMessage
 import org.aspectj.bridge.MessageHandler
@@ -101,11 +102,9 @@ variants.all { variant ->
                          "-bootclasspath", project.android.bootClasspath.join(File.pathSeparator)]
         log.debug "ajc args: " + Arrays.toString(args)
 
-
         //主要这两句使aspectj 生效
         MessageHandler handler = new MessageHandler(true);
         new Main().run(args, handler);
-
 
         //在编译时打印信息如警告、error 等等
         for (IMessage message : handler.getMessages(null, true)) {
