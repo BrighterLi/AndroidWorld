@@ -24,6 +24,7 @@ import com.xiaoming.androidpoints.intent.IntentActivity;
 import com.xiaoming.androidpoints.jnidemo.JniActivity;
 import com.xiaoming.androidpoints.jnidemo2.Jni2Activity;
 import com.xiaoming.androidpoints.json.JsonActivity;
+import com.xiaoming.androidpoints.layout.relativelayout.RelativeLayoutDemoActivity;
 import com.xiaoming.androidpoints.layout_extend.ExtendActivity;
 import com.xiaoming.androidpoints.layout_extend.LayoutBaseActivity;
 import com.xiaoming.androidpoints.permission.PermissionActivity;
@@ -168,6 +169,10 @@ public class MainActivity extends Activity {
                         //startActivity(new Intent(MainActivity.this, LayoutBaseActivity.class));
                         startActivity(new Intent(MainActivity.this, BugTestActivity.class));
                         break;
+                    case 34: //布局layout
+                        //startActivity(new Intent(MainActivity.this, LayoutBaseActivity.class));
+                        startActivity(new Intent(MainActivity.this, RelativeLayoutDemoActivity.class));
+                        break;
                 }
             }
         });
@@ -215,5 +220,6 @@ public class MainActivity extends Activity {
         demoDataList.add("插件化");
         demoDataList.add("BaseActivity布局继承");
         demoDataList.add("bug");
+        demoDataList.add("layout");
     }
 }
