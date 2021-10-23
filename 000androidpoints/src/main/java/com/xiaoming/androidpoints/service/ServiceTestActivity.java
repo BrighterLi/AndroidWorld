@@ -75,6 +75,7 @@ public class ServiceTestActivity extends AppCompatActivity {
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
+            Log.i(TAG, "bright8#ServiceConnection#onServiceDisconnected");
 
         }
     };
