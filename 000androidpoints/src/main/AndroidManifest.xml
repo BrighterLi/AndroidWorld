@@ -23,7 +23,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".layout.relativelayout.RelativeLayoutDemoActivity"></activity>
+        <service
+            android:name=".service.LocalService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".service.ServiceTestActivity" />
+        <activity android:name=".layout.relativelayout.RelativeLayoutDemoActivity" />
         <activity android:name=".aaajavaknowledge.aop.aspectj.AspectJDemoActivity" />
         <activity android:name=".aaabug.lx.AnimationBug.ThirdActivity" />
         <activity android:name=".aaabug.lx.AnimationBug.SecondActivity" />
