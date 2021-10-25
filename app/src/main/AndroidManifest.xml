@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".acrossend.weex.WeexPageActivity"></activity>
         <activity android:name=".acrossend.web.WebViewActivity" />
-        <activity android:name=".acrossend.flutter.CustomFlutterActivity" />
+       <!-- <activity android:name=".acrossend.flutter.CustomFlutterActivity" />-->
         <activity android:name=".base.BaseActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
