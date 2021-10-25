@@ -23,10 +23,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".service.demo4.ServiceTest4Activity"></activity>
+
+        <service
+            android:name=".service.demo4.TService"
+            android:enabled="true"
+            android:exported="true" />
         <service
             android:name=".service.demo3.MyService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
         <activity android:name=".service.demo2.ServiceTest2Activity" />
 

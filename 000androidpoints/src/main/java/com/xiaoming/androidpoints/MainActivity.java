@@ -35,6 +35,7 @@ import com.xiaoming.androidpoints.scheme.SchemeActivity;
 import com.xiaoming.androidpoints.serialization.GoToActivity;
 import com.xiaoming.androidpoints.service.ServiceTestActivity;
 import com.xiaoming.androidpoints.service.demo2.ServiceTest2Activity;
+import com.xiaoming.androidpoints.service.demo4.ServiceTest4Activity;
 import com.xiaoming.androidpoints.solib.SoLibEntranceActivity;
 import com.xiaoming.androidpoints.uiframe.EnterUiFrameActivity;
 import com.xiaoming.androidpoints.aaautils.UtilActivity;
@@ -177,7 +178,8 @@ public class MainActivity extends Activity {
                         break;
                     case 35: //service
                         //startActivity(new Intent(MainActivity.this, ServiceTestActivity.class));
-                        startActivity(new Intent(MainActivity.this, ServiceTest2Activity.class));
+                        //startActivity(new Intent(MainActivity.this, ServiceTest2Activity.class));
+                        startActivity(new Intent(MainActivity.this, ServiceTest4Activity.class));
                         break;
                 }
             }
