@@ -24,9 +24,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <service
-            android:name=".service.LocalService"
+            android:name=".service.demo3.MyService"
             android:enabled="true"
             android:exported="true"></service>
+
+        <activity android:name=".service.demo2.ServiceTest2Activity" />
+
+        <service
+            android:name=".service.demo2.LocalService2"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.LocalService"
+            android:enabled="true"
+            android:exported="true" />
 
         <activity android:name=".service.ServiceTestActivity" />
         <activity android:name=".layout.relativelayout.RelativeLayoutDemoActivity" />

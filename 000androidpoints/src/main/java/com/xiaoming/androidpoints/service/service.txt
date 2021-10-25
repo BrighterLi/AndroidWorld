@@ -1,0 +1,46 @@
+bindService
+Android Service绑定与跨进程通信:https://blog.csdn.net/desmondj/article/details/47446941
+为什么要绑定Service？
+Android的在服务器-客户端模式大量使用了Service绑定。绑定Service的好处就是你可以向Service发送、接收请求，甚至可以跨进程通信(IPC)。
+被绑定的服务通常是为了其他进程服务，而不是正常情况下的后台处理事件。
+
+绑定Service的办法
+在客户端中使用bindService (Intent service, ServiceConnection conn, int flags)。
+其中几个参数分别意义为：
+Intent: 指向绑定Service的Intent。若是在其他进程中的Service，需要调用Intent.setComponent(new ComponentName(String packageName, String className))来指定Service。
+ServiceConnection：提供绑定连接的接口，有两个方法必须实现：
+onServiceConnected(ComponentName name, IBinder service)
+在连接建立时被调用的函数，参数意义如下：
+name 被绑定服务的具体名，格式：”ComponentInfo{app_package/service_package.service_class}”。
+service 服务的onBind方法所返回的IBinder，可以用来与服务通信。
+onServiceDisconnected(ComponentName name)
+在连接断开时被调用的函数，参数name与onServiceConnected中含义相同。
+
+要和所绑定的Service交互，都是通过实现ServiceConnection接口，在其中的onServiceConnected方法中获取到IBinder示例，并通过以下几种方法进行沟通。
+1. 继承Binder
+如果服务器提供的Service与客户端在一个进程内(说白了就是访问自己进程内的另一个Service)， 用这种方法访问Service是你最好的选择。
+你可以通过在Service中实现一个公共内部类继承Binder，并在Service的onBind()方法中返回这个内部类的一个实例。
+在客户端中可以直接将获取到的IBinder类型转换为Service中定义的公共内部类，并通过它来与Service通信。
+2. 使用Messenger
+如果客户端访问的Service在其他进程中，你可以通过Messenger来提供/获取服务接口。
+Service可以实现一个Handler来处理不同的消息，Messenger可以通过IBinder将Handler传递给客户端，从而实现消息传递。同时客户端也可以使用Messenger让服务端传消息过来。
+这是最简单的跨进程交流的办法，因为Messenger将消息队列保持在一个线程之内，服务端同一时间只能处理一个请求，你不需要考虑复杂的线程同步问题。
+3. 使用AIDL
+AIDL将消息压缩成原始数据流然后在进程之间传递，Messenger的实现就是基于AIDL。 仅仅当你的Service需要同时处理多个请求时你才需要自己实现AIDL，否则你应该使用Messenger实现跨进程交流。
+如果要实现AIDL，你要创建一个.aidl文件，Android ADK tool会自动创建一个虚类来提供处理IPC消息的接口，你可以通过实现接口来处理消息。
+再一次提示：大部分应用并不适合直接实现AIDL，只有当Service必须同时处理多个请求时，你才直接实现它。
+
+被绑定Service的生命周期
+1、如果Service只是由bindService启动的，那么无须关注它的生命周期，当所有对Service的绑定断开之后，系统会自动杀死Service。
+2、但是当Service是由startService启动的，则情况就不一样了。这种情况下Service的onStartCommand会被执行，必须显式地调用stopService，service才会被杀死。
+这种情况下你可以让Service判断是否有客户端在解除绑定后重新绑定，并实现onRebind进行相应操作（可以返回与onBind不一样的IBinder）。通过重写Service的onUnBind函数返回true
+来告诉Service是否要使用onRebind。
+
+几点提示
+1、由于服务进程是有可能在中途被杀死的，在客户端保持mBound布尔值来判断是否连接仍然健康是必要的，否则你应该监控是否有DeadObjectException的发生。
+2、绑定Service后一定要在onStop或者onDestroy中调用unBindService释放连接，否则会有内存泄露。 具体要和哪个生命周期进行搭配，取决于应用需要，参考Managing the Activity Lifecycle.
+3、无论Service被多少个线程绑定，它都只会返回同一个IBinder实例。
+
+
+
+
