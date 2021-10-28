@@ -21,6 +21,7 @@ public class UiThreadActivity extends AppCompatActivity {
     }
 
     //由于在主线程一直做耗时操作，会导致anr
+    //该方法在onCreate中，onCreate也是一个消息事件，会在主线程的MessageQueue中，取出来执行非常耗时
     private void doWasteTimeWork() {
         while(true) {
             num++;
