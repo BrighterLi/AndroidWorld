@@ -6,10 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/bt_memory_leak"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="内存泄漏"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/mBtMemoryLeak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="内存泄漏"/>
+        <Button
+            android:id="@+id/mBtUiThread"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="主线程执行耗时操作"/>
+
+    </LinearLayout>
+
+
+
 
 </ScrollView>

@@ -7,9 +7,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.xiaoming.a004performance.memoryleak.MemoryLeakActivity;
+import com.xiaoming.a004performance.smallpoints.UiThreadActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private Button mBtMemoryLeak;
+    private Button mBtUiThread;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,15 +22,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initView() {
-        mBtMemoryLeak = findViewById(R.id.bt_memory_leak);
+        mBtMemoryLeak = findViewById(R.id.mBtMemoryLeak);
+        mBtUiThread = findViewById(R.id.mBtUiThread);
         mBtMemoryLeak.setOnClickListener(this);
+        mBtUiThread.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.bt_memory_leak:
+            case R.id.mBtMemoryLeak:
                 startActivity(new Intent(MainActivity.this, MemoryLeakActivity.class));
+                break;
+            case R.id.mBtUiThread:
+                startActivity(new Intent(MainActivity.this, UiThreadActivity.class));
                 break;
         }
     }

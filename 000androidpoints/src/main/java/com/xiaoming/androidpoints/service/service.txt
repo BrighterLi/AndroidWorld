@@ -1,4 +1,4 @@
-bindService
+1、bindService
 Android Service绑定与跨进程通信:https://blog.csdn.net/desmondj/article/details/47446941
 为什么要绑定Service？
 Android的在服务器-客户端模式大量使用了Service绑定。绑定Service的好处就是你可以向Service发送、接收请求，甚至可以跨进程通信(IPC)。
@@ -42,5 +42,6 @@ AIDL将消息压缩成原始数据流然后在进程之间传递，Messenger的�
 3、无论Service被多少个线程绑定，它都只会返回同一个IBinder实例。
 
 
-
+2、bindService跨进程Demo
+Android开发面试被问Binder还不会，收藏这一篇就够了（附图解）: https://www.cnblogs.com/Android-Alvin/p/13918154.html
 
