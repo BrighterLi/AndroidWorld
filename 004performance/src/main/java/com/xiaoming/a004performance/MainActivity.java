@@ -7,7 +7,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.xiaoming.a004performance.block.blockcanary.BlockCanaryActivity;
-import com.xiaoming.a004performance.memoryleak.MemoryLeakActivity;
+
+import com.xiaoming.a004performance.memory.memoryleak.MemoryLeakActivity;
 import com.xiaoming.a004performance.smallpoints.UiThreadActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{

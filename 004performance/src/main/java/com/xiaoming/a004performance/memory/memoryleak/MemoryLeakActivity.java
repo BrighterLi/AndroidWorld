@@ -1,4 +1,4 @@
-package com.xiaoming.a004performance.memoryleak;
+package com.xiaoming.a004performance.memory.memoryleak;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

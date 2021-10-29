@@ -12,8 +12,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".block.blockcanary.BlockCanaryActivity"></activity>
         <activity android:name=".smallpoints.UiThreadActivity" />
-        <activity android:name=".outofmemory.OutOfMemoryActivity" />
-        <activity android:name=".memoryleak.MemoryLeakActivity" />
+        <activity android:name=".memory.outofmemory.OutOfMemoryActivity" />
+        <activity android:name=".memory.memoryleak.MemoryLeakActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.xiaoming.a004performance.outofmemory;
+package com.xiaoming.a004performance.memory.outofmemory;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
