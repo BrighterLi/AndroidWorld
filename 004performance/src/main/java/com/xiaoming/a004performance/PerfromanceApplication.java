@@ -1,11 +1,12 @@
-package com.xiaoming.a004performanceblock;
+package com.xiaoming.a004performance;
 
 import android.app.Application;
 
 import com.github.moduth.blockcanary.BlockCanary;
-import com.xiaoming.a004performanceblock.blockcanary.AppBlockCanaryContext;
+import com.xiaoming.a004performance.block.blockcanary.AppBlockCanaryContext;
 
-public class BlockApplication extends Application {
+public class PerfromanceApplication extends Application {
+
     @Override
     public void onCreate() {
         super.onCreate();

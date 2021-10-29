@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.xiaoming.a004performance.block.blockcanary.BlockCanaryActivity;
 import com.xiaoming.a004performance.memoryleak.MemoryLeakActivity;
 import com.xiaoming.a004performance.smallpoints.UiThreadActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private Button mBtMemoryLeak;
     private Button mBtUiThread;
+    private Button mBtBlock;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +26,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initView() {
         mBtMemoryLeak = findViewById(R.id.mBtMemoryLeak);
         mBtUiThread = findViewById(R.id.mBtUiThread);
+        mBtBlock = findViewById(R.id.mBtBlock);
         mBtMemoryLeak.setOnClickListener(this);
         mBtUiThread.setOnClickListener(this);
+        mBtBlock.setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +40,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.mBtUiThread:
                 startActivity(new Intent(MainActivity.this, UiThreadActivity.class));
+                break;
+            case R.id.mBtBlock:
+                startActivity(new Intent(MainActivity.this, BlockCanaryActivity.class));
                 break;
         }
     }

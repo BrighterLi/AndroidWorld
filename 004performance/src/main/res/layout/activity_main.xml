@@ -21,6 +21,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="主线程执行耗时操作"/>
+        <Button
+            android:id="@+id/mBtBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="卡顿"/>
 
     </LinearLayout>
 

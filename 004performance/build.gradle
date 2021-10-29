@@ -34,4 +34,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+
+    //blockcanary
+    debugCompile 'com.github.markzhai:blockcanary-android:1.5.0'
+    releaseCompile 'com.github.markzhai:blockcanary-no-op:1.5.0'
 }

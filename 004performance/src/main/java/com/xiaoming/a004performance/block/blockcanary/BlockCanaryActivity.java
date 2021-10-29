@@ -1,20 +1,21 @@
-package com.xiaoming.a004performanceblock.blockcanary;
+package com.xiaoming.a004performance.block.blockcanary;
 
-import android.os.SystemClock;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
-import com.xiaoming.a004performanceblock.R;
 
-public class TestBlockCanaryActivity extends AppCompatActivity {
+import com.xiaoming.a004performance.R;
+
+public class BlockCanaryActivity extends AppCompatActivity {
     private Button mBtnBlockTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_block_canary);
-
+        setContentView(R.layout.activity_block_canary);
         initView();
     }
 

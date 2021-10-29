@@ -1,4 +1,4 @@
-package com.xiaoming.a004performanceblock.blockcanary;
+package com.xiaoming.a004performance.block.blockcanary;
 
 import android.content.Context;
 
