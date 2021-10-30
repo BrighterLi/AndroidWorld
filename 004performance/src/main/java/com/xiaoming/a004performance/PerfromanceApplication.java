@@ -3,6 +3,7 @@ package com.xiaoming.a004performance;
 import android.app.Application;
 
 import com.github.moduth.blockcanary.BlockCanary;
+import com.squareup.leakcanary.LeakCanary;
 import com.xiaoming.a004performance.block.blockcanary.AppBlockCanaryContext;
 
 public class PerfromanceApplication extends Application {
@@ -12,5 +13,6 @@ public class PerfromanceApplication extends Application {
         super.onCreate();
         //在主进程初始化
         BlockCanary.install(this, new AppBlockCanaryContext()).start();
+        LeakCanary.install(this);
     }
 }

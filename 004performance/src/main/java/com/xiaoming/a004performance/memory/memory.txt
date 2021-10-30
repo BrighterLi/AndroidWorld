@@ -1,0 +1,8 @@
+1 检测工具
+1、LeakCanary
+
+
+2 内存泄漏
+非静态内部类
+https://www.cnblogs.com/Jack-cx/p/10190739.html
+Android 非静态内部类导致的内存泄露（非static内部类）：https://blog.csdn.net/lsyz0021/article/details/51473819

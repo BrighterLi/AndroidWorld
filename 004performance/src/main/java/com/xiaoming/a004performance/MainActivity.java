@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.xiaoming.a004performance.block.blockcanary.BlockCanaryActivity;
 
 import com.xiaoming.a004performance.memory.memoryleak.MemoryLeakActivity;
+import com.xiaoming.a004performance.memory.memoryleak.MemoryLeakActivity2;
 import com.xiaoming.a004performance.smallpoints.UiThreadActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -37,7 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.mBtMemoryLeak:
-                startActivity(new Intent(MainActivity.this, MemoryLeakActivity.class));
+                //startActivity(new Intent(MainActivity.this, MemoryLeakActivity.class));
+                startActivity(new Intent(MainActivity.this, MemoryLeakActivity2.class));
                 break;
             case R.id.mBtUiThread:
                 startActivity(new Intent(MainActivity.this, UiThreadActivity.class));
