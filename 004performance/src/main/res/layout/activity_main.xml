@@ -26,6 +26,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="卡顿"/>
+        <Button
+            android:id="@+id/mBtStrictMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="严苛模式"/>
 
     </LinearLayout>
 

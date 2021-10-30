@@ -11,11 +11,13 @@ import com.xiaoming.a004performance.block.blockcanary.BlockCanaryActivity;
 import com.xiaoming.a004performance.memory.memoryleak.MemoryLeakActivity;
 import com.xiaoming.a004performance.memory.memoryleak.MemoryLeakActivity2;
 import com.xiaoming.a004performance.smallpoints.UiThreadActivity;
+import com.xiaoming.a004performance.tool.strictmode.StrictModeActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private Button mBtMemoryLeak;
     private Button mBtUiThread;
     private Button mBtBlock;
+    private Button mBtStrictMode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +31,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtMemoryLeak = findViewById(R.id.mBtMemoryLeak);
         mBtUiThread = findViewById(R.id.mBtUiThread);
         mBtBlock = findViewById(R.id.mBtBlock);
+        mBtStrictMode = findViewById(R.id.mBtStrictMode);
+
         mBtMemoryLeak.setOnClickListener(this);
         mBtUiThread.setOnClickListener(this);
         mBtBlock.setOnClickListener(this);
+        mBtStrictMode.setOnClickListener(this);
     }
 
     @Override
@@ -46,6 +51,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.mBtBlock:
                 startActivity(new Intent(MainActivity.this, BlockCanaryActivity.class));
+                break;
+            case R.id.mBtStrictMode:
+                startActivity(new Intent(MainActivity.this, StrictModeActivity.class));
                 break;
         }
     }
