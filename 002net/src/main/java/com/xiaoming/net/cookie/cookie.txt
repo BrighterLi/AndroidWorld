@@ -1,4 +1,6 @@
 1、Cookie
+什么是cookie：
+最简单理解就是由http衍生出来的一种特殊的浏览器的缓存，特点是具有时效性、账户相关性、存储在客户端等。
 Cookie是由服务器端生成，发送给User-Agent（一般是浏览器），浏览器会将Cookie的key/value保存到某个目录下的文本文件内，
 下次请求同一网站时就发送该Cookie给服务器（前提是浏览器设置为启用cookie）。Cookie名称和值可以由服务器端开发自己定义，
 对于JSP而言也可以直接写入jsessionid，这样服务器可以知道该用户是否合法用户以及是否需要重新登录等。
@@ -7,11 +9,44 @@ cookie是一种记录当前登录状态的一个东西. 如果开启,当你下�
 开启cookie(如劲爆篮球) 如果关闭,则不会记录当前登录,同时也可以多开,但可能导致部分游戏不能进行
 
 cookie的作用：
-服务器可以利用Cookies包含信息的任意性来筛选并经常性维护这些信息，以判断在HTTP传输中的状态。Cookies最典型的应用是判定注册用户
+    作为客户端的用户认证的通行证，比如服务端可以通过cookie来区分到底是哪个用户。
+    服务器可以利用Cookies包含信息的任意性来筛选并经常性维护这些信息，以判断在HTTP传输中的状态。Cookies最典型的应用是判定注册用户
 是否已经登录网站，用户可能会得到提示，是否在下一次进入此网站时保留用户信息以便简化登录手续，这些都是Cookies的功用。另一个
 重要应用场合是“购物车”之类处理。用户可能会在一段时间内在同一家网站的不同页面中选择不同的商品，这些信息都会写入Cookies，
 以便在最后付款时提取信息。
 
-2、cookie注入
+Android 中Cookie的管理相关：
+说到cookie的管理，其实本质上就是数据的存储问题。在早期的cookie是由CookieSyncManager进行管理的，但是在API 21 之后CookieSyncManager被抛弃了，换成了CookieManager来进行管理。
 
+Android中Cookie的存储：
+项目中使用 WebView 其实会自动将 Cookie 保存在本地数据库中。保存是路径为 data/data/package_name/app_WebView/Cookies 虽然不是 .db 结尾的，实际就是一个 .db 文件
+
+2、cookie注入
 app为什么要注入cookie
+CookieManager: https://www.cnblogs.com/anni-qianqian/p/6092947.html
+在混合开发中，有时候需要将原生页面的cookie传到H5的页面，这时就可以用到CookieManager
+
+3、Cookie管理
+CookieManager
+Cookie 和 CookieManager: https://www.jianshu.com/p/0d1bd9443caa
+手动设置cookie：
+HttpCookie cookie = new HttpCookie(name, value);
+cookie.setDomain("");               // 设置域名
+cookie.setPath("/");                // 设置path
+cookie.setMaxAge(233);          // 设置过期时间
+// 调用CookieManager 的方法设置cookie
+// 具有相同的 host 和 path 和 name 的任何现有的 Cookie 将会被替换为新的 Cookie
+CookieManager.getInstance().setCookie(url, cookie.toString());
+注：只有cookie的domain和path与请求的URL匹配才会发送这个cookie。
+
+删除cookie操作：底层实现是异步清除数据库的记录
+//非常简洁
+CookieManager.getInstance().removeAllCookies(null);
+CookieManager.getInstance().flush();
+
+//通常删除cookie的是这样写的
+CookieSyncManager.createInstance(this);
+CookieManager.getInstance().removeAllCookie();
+CookieManager.getInstance().removeSessionCookie();
+CookieSyncManager.getInstance().sync();
+CookieSyncManager.getInstance().startSync();
