@@ -24,7 +24,36 @@ Android中Cookie的存储：
 2、cookie注入
 app为什么要注入cookie
 CookieManager: https://www.cnblogs.com/anni-qianqian/p/6092947.html
+Android开发中怎样使用cookieManager来管理cookie: https://blog.csdn.net/oQiHaoGongYuan/article/details/50253557
+Android 原生和H5 同一cookie: https://blog.csdn.net/JerryWu145/article/details/84195093
+Android 与H5的交互，拿到cookie设置给WebView: https://www.jianshu.com/p/f3b3727e378d
+场景：
 在混合开发中，有时候需要将原生页面的cookie传到H5的页面，这时就可以用到CookieManager
+
+例如在一个项目中，登录界面为原生开发，而一些订单预定处理页面使用WebView嵌套Html5页面。
+
+Android中的CookieManager：https://blog.csdn.net/yp321/article/details/40540111
+在Android应用程序中经常会加载一个WebView页，如果需要客户端向WebView传递信息，比如Cookie，也是可以的。
+需要应用程序先将Cookie注入进去，打开该网页时，WebView会将加载的url通过http请求传输到服务器。同时，在这次请求中，会将Cookie信息通过http header传递过去。
+流程如下：
+    1、客户端通过以下代码设置cookie
+
+public static void synCookies(Context context, String url) {
+	    CookieSyncManager.createInstance(context);
+	    CookieManager cookieManager = CookieManager.getInstance();
+	    cookieManager.setCookie(url, "uid=1243432");
+	    CookieSyncManager.getInstance().sync();
+	}
+   2、CookieManager会将这个Cookie存入该应用程序/data/data/databases/目录下的webviewCookiesChromium.db数据库的cookies表中
+   3、打开网页，WebView从数据库中读取该cookie值，放到http请求的头部，传递到服务器
+   4、客户端可以在注销登录时清除该应用程序用到的所有cookies
+private void removeCookie(Context context) {
+		CookieSyncManager.createInstance(context);
+		CookieManager cookieManager = CookieManager.getInstance();
+		cookieManager.removeAllCookie();
+		CookieSyncManager.getInstance().sync();
+	}
+
 
 3、Cookie管理
 CookieManager
