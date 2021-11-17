@@ -58,6 +58,7 @@ private void removeCookie(Context context) {
 3、Cookie管理
 CookieManager
 Cookie 和 CookieManager: https://www.jianshu.com/p/0d1bd9443caa
+Http中cookie的使用以及用CookieManager管理cookie: https://www.cnblogs.com/jylee/p/9417911.html
 手动设置cookie：
 HttpCookie cookie = new HttpCookie(name, value);
 cookie.setDomain("");               // 设置域名
