@@ -12,6 +12,7 @@ import com.xiaoming.androidpoints.aaabug.BugTestActivity;
 import com.xiaoming.androidpoints.aaajavaknowledge.hook.demo2.HookActivity2;
 import com.xiaoming.androidpoints.activity.ActivityTestActivity;
 import com.xiaoming.androidpoints.aaajavaknowledge.JavaKnowledgeActivity;
+import com.xiaoming.androidpoints.activity.activitystack.ActivityStackActivity;
 import com.xiaoming.androidpoints.background.SetBackgroundActivity;
 import com.xiaoming.androidpoints.broadcast.LocalBroadcastReceiverActivity;
 import com.xiaoming.androidpoints.datastorage.DataStorageActivity;
@@ -181,6 +182,9 @@ public class MainActivity extends Activity {
                         //startActivity(new Intent(MainActivity.this, ServiceTest2Activity.class));
                         startActivity(new Intent(MainActivity.this, ServiceTest4Activity.class));
                         break;
+                    case 36: //service
+                        startActivity(new Intent(MainActivity.this, ActivityStackActivity.class));
+                        break;
                 }
             }
         });
@@ -230,5 +234,6 @@ public class MainActivity extends Activity {
         demoDataList.add("bug");
         demoDataList.add("layout");
         demoDataList.add("service");
+        demoDataList.add("activity stack");
     }
 }
