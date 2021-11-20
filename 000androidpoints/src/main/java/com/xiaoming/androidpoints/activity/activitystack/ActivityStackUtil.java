@@ -10,6 +10,8 @@ import java.util.Map;
 
 public class ActivityStackUtil {
 
+    //这种方法获取堆栈里的activity没有顺序
+    //Android 获取activity栈中activity: https://blog.csdn.net/yaojie5519/article/details/82252439
     public static List<Activity> getActivitiesByApplication(Application application) {
         List<Activity> list = new ArrayList<>();
         try {
