@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".notification.NotificationActivity"></activity>
+        <activity android:name=".video.choosevideo.ChooseActivity"></activity>
+        <activity android:name=".notification.NotificationActivity" />
         <activity android:name=".aaaview.draw.ondraw.OnDrawActivity" />
         <activity android:name=".aaaview.layout.onLayout.OnLayoutActivity" />
         <activity android:name=".aaaview.measure.onMeasure.OnMeasureActivity3" />
@@ -106,7 +107,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".video.VideoActivity" />
+        <activity android:name=".video.playvideo.VideoActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
