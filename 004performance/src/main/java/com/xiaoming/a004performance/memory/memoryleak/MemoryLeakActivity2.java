@@ -11,7 +11,7 @@ import com.xiaoming.a004performance.R;
 
 import java.lang.ref.WeakReference;
 
-//非静态内部类导致内存泄漏
+//非静态内部类导致内存泄漏, 非静态Handler
 //Android 非静态内部类导致的内存泄露（非static内部类）：https://blog.csdn.net/lsyz0021/article/details/51473819
 //手把手教你在Android Studio 3.0上分析内存泄漏： https://www.jianshu.com/p/bdfd2a6b2681
 public class MemoryLeakActivity2 extends AppCompatActivity {
@@ -22,7 +22,7 @@ public class MemoryLeakActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memory_leak2);
 
-        //反复打开页面5次，手动GC，看下当前的堆栈情况
+        //反复打开页面5次，手动GC，看下当前的堆栈情况。gc后内存没减少则内存泄漏
         //memoryLeakDemo();
         memoryNoLeakDemo();
 
@@ -53,6 +53,13 @@ public class MemoryLeakActivity2 extends AppCompatActivity {
     //静态内部类，不会导致内存泄漏
     private void memoryNoLeakDemo() {
         myHandler.postDelayed(sRunnable,10*60*1000);
+        //Runnable必须也是静态的，不然也会导致内存泄漏
+        /*myHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        }, 10*60*1000);*/
     }
 
     private static final Runnable sRunnable = new Runnable() {
