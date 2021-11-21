@@ -43,7 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.mBtMemoryLeak:
+                //leakcanary内存泄漏
                 //startActivity(new Intent(MainActivity.this, MemoryLeakActivity.class));
+                //非静态内部类导致内存泄漏
                 startActivity(new Intent(MainActivity.this, MemoryLeakActivity2.class));
                 break;
             case R.id.mBtUiThread:

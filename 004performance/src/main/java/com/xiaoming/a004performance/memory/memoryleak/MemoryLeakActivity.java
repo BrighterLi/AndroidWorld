@@ -8,8 +8,8 @@ import android.widget.Toast;
 
 import com.xiaoming.a004performance.R;
 
-//https://www.cnblogs.com/Jack-cx/p/10190739.html
-
+//leakcanary使用
+//leakcanary内存泄漏：此篇有加了内存泄漏的apk demo: https://www.cnblogs.com/Jack-cx/p/10190739.html
 public class MemoryLeakActivity extends AppCompatActivity {
     EditText name;   //用户名
     EditText pass;    //密码    //内存泄漏
