@@ -11,6 +11,7 @@ import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -18,6 +19,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.widget.R;
+
+import java.net.URISyntaxException;
 
 
 public class ChooseActivity extends AppCompatActivity {
@@ -71,11 +74,28 @@ public class ChooseActivity extends AppCompatActivity {
         }
     }
 
+    //VideoProcessor
+    //https://github.com/yellowcath/VideoProcessor
     private void compressVideo(String inputVideoPath) {
         /*VideoProcessor.processor(this)
                 .input(inputVideoPath)
                 .output(outputVideoPath)
                 .process();*/
+    }
+
+    //SiliCompressor
+    // Android视频压缩并且上传   https://www.cnblogs.com/wzqnxd/p/10038881.html
+    private void compressVideo2(final String inputVideoPath) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                /*try {
+                    String compressPath = SiliCompressor.with(this).compressVideo(inputVideoPath, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getPath());
+                } catch (URISyntaxException e) {
+                    e.printStackTrace();
+                }*/
+            }
+        }).start();
     }
 
     @Override
