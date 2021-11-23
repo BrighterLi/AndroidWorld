@@ -24,11 +24,13 @@ https://github.com/yellowcath/VideoProcessor
 android视频压缩库fishwjy/VideoCompressor与yellowcath/VideoProcessor 的比较：https://mingdeju.com/archives/android-VideoCompressor.html
 
 VideoCompressor -- 比VideoProcessor还快，但是没有进度回调
+https://github.com/fishwjy/VideoCompressor
 
 FFmpeg -- 视频压缩 体积大，压缩时间长，功能完善强大
 FFmpegAndroid -- android端基于FFmpeg
 FFMPEG-AAC-264-Android-32-64 -- 编译好的ffmpeg压缩aar
 FFmpegDemo --lastYear使用FFmpeg压缩的Demo
+
 SiliCompressor -- 保证质量，但只能压缩，不能控制码率和进度
 Android视频压缩并且上传   https://www.cnblogs.com/wzqnxd/p/10038881.html
 

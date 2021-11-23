@@ -98,6 +98,32 @@ public class ChooseActivity extends AppCompatActivity {
         }).start();
     }
 
+    //VideoCompressor
+    //https://github.com/fishwjy/VideoCompressor
+    private void compressVideo3(final String inputVideoPath) {
+        /*VideoCompressTask task = VideoCompress.compressVideoLow(inputVideoPath, destPath, new VideoCompress.CompressListener() {
+            @Override
+            public void onStart() {
+                //Start Compress
+            }
+
+            @Override
+            public void onSuccess() {
+                //Finish successfully
+            }
+
+            @Override
+            public void onFail() {
+                //Failed
+            }
+
+            @Override
+            public void onProgress(float percent) {
+                //Progress
+            }
+        });*/
+    }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
