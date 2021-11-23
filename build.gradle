@@ -5,8 +5,10 @@ buildscript {
 
     repositories {
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' } //由于下载不了Arouter框架故添加
+        //VideoProcessor视频压缩下载
         google()
         jcenter()
+        maven { url 'https://www.jitpack.io' }
     }
     dependencies {
         //classpath 'com.android.tools.build:gradle:3.3.0-rc03'

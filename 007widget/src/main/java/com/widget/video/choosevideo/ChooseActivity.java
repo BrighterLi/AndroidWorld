@@ -65,8 +65,17 @@ public class ChooseActivity extends AppCompatActivity {
             //long videoSize = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Video.Media.SIZE));
             //AppLog.i(TAG, "onActivityResult#videoPath：" + videoPath + " #videoSize" + videoSize / 1024 / 1024);
             Toast.makeText(this, videoPath, Toast.LENGTH_LONG).show();
+            Log.i("ChooseActivity", "chooseActivity#videoPath: " + videoPath);
+            compressVideo(videoPath);
             cursor.close();
         }
+    }
+
+    private void compressVideo(String inputVideoPath) {
+        /*VideoProcessor.processor(this)
+                .input(inputVideoPath)
+                .output(outputVideoPath)
+                .process();*/
     }
 
     @Override
