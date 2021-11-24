@@ -7,6 +7,7 @@ buildscript {
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' } //由于下载不了Arouter框架故添加
         //VideoProcessor视频压缩下载
         google()
+        mavenCentral()//注意下这个顺序，放在jcenter()上面
         jcenter()
         maven { url 'https://www.jitpack.io' }
     }
@@ -29,7 +30,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-
+        maven { url 'https://www.jitpack.io' }
     }
 }
 
