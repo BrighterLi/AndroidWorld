@@ -18,9 +18,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.hw.videoprocessor.VideoProcessor;
 import com.widget.R;
 
+import java.io.File;
 import java.net.URISyntaxException;
+import java.util.Calendar;
 
 
 public class ChooseActivity extends AppCompatActivity {
@@ -77,10 +80,65 @@ public class ChooseActivity extends AppCompatActivity {
     //VideoProcessor
     //https://github.com/yellowcath/VideoProcessor
     private void compressVideo(String inputVideoPath) {
-        /*VideoProcessor.processor(this)
-                .input(inputVideoPath)
-                .output(outputVideoPath)
-                .process();*/
+        String outputPath = getOutputPath();
+        try {
+            VideoProcessor.processor(this)
+                    .input(inputVideoPath)
+                    .output(outputPath)
+                    .process();
+        } catch (Exception e) {
+            Log.i("ChooseActivity", "chooseActivity#compressVideo#e: " + e);
+            e.printStackTrace();
+        }
+    }
+
+    private String getOutputPath() {
+        File mVideoFile;
+        String outputPath;
+        outputPath = getSDPath();
+        if (outputPath != null) {
+            //创建文件
+            mVideoFile = new File(outputPath + "/recordvideo");
+            if (!mVideoFile.exists()) {
+                mVideoFile.mkdir();
+            }
+            outputPath = mVideoFile + "/" + getData() + ".mp4"; // mPath: /storage/emulated/0/recordvideo/
+            //把视频放到本地sd card的mPath路径的文件
+            return outputPath;
+        }
+        return null;
+
+    }
+
+    /**
+     * 获取SD path
+     */
+    public String getSDPath() {
+        File sdDir = null;
+        //获取sd卡是否存在
+        boolean sdCardExist = Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED); //sdcard
+        if (sdCardExist) {
+            //获取根目录
+            sdDir = Environment.getExternalStorageDirectory();
+            return sdDir.toString();
+        }
+        return null;
+    }
+
+    /**
+     * 获取系统时间
+     */
+    public static String getData() {
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DATE);
+        int minute = calendar.get(Calendar.MINUTE);
+        int hour = calendar.get(Calendar.HOUR);
+        int second = calendar.get(Calendar.SECOND);
+
+        return "" + year + (month + 1) + day + hour + minute + second;
+
     }
 
     //SiliCompressor
