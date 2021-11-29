@@ -47,7 +47,8 @@ I/art(198): Explicit concurrent mark sweep GC freed 700(30KB) AllocSpace objects
 2) 瞬间产生大量的对象会严重占用Young Generation的内存区域，当达到阀值，剩余空间不够的时候，也会触发GC。即使每次分配的对象占用了很少的内存，但是他们叠加在一起会增加 Heap的压力，从而触发更多其他类型的GC。这个操作有可能会影响到帧率，并使得用户感知到性能问题。
 
 检测工具
-严格模式StrictMode
+严格模式StrictMode：
+Android StrictMode模式检测内存泄漏 https://blog.csdn.net/qq_16247851/article/details/92812932
 LeakCanary:
 LeakCanary会检测应用的内存回收情况，如果发现有垃圾对象没有被回收，就会去分析当前的内存快照，也就是上边MAT用到的.hprof文件，找到对象的引用链，并显示在页面上。这款插件的好处就是,可以在手机端直接查看内存泄露的地方,可以辅助我们检测内存泄露
 
