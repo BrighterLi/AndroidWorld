@@ -182,7 +182,7 @@ public class MainActivity extends Activity {
                         //startActivity(new Intent(MainActivity.this, ServiceTest2Activity.class));
                         startActivity(new Intent(MainActivity.this, ServiceTest4Activity.class));
                         break;
-                    case 36: //service
+                    case 36: //activity stack
                         startActivity(new Intent(MainActivity.this, ActivityStackActivity.class));
                         break;
                 }

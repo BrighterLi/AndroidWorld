@@ -9,6 +9,8 @@ import android.widget.ListView;
 import android.widget.ArrayAdapter;
 
 import com.xiaoming.androidpoints.R;
+import com.xiaoming.androidpoints.aaajavaknowledge.abstractclass.AClass;
+import com.xiaoming.androidpoints.aaajavaknowledge.abstractclass.BClass;
 import com.xiaoming.androidpoints.aaajavaknowledge.initialize.InitializeActivity;
 import com.xiaoming.androidpoints.aaajavaknowledge.localvarible.LocalVaribleActivity;
 import com.xiaoming.androidpoints.aaajavaknowledge.valuetransition.ValueTransitionActivity;
@@ -33,8 +35,9 @@ public class JavaKnowledgeActivity extends Activity {
         mDemoListData =  new ArrayList<>();
         mDemoListData.add("值传递");
         mDemoListData.add("局部变量");
-        //mDemoListData.add("多线程");
+        mDemoListData.add("多线程");
         mDemoListData.add("初始化");
+        mDemoListData.add("抽象类");
     }
 
     private void initView() {
@@ -56,7 +59,10 @@ public class JavaKnowledgeActivity extends Activity {
                     case 3:
                         startActivity(new Intent(JavaKnowledgeActivity.this, InitializeActivity.class));
                         break;
-
+                    case 4:
+                        AClass aClass = new AClass();
+                        BClass bClass = new BClass();
+                        break;
                 }
             }
         });
