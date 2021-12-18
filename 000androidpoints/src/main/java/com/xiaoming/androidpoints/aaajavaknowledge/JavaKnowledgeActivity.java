@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import com.xiaoming.androidpoints.R;
 import com.xiaoming.androidpoints.aaajavaknowledge.abstractclass.AClass;
 import com.xiaoming.androidpoints.aaajavaknowledge.abstractclass.BClass;
+import com.xiaoming.androidpoints.aaajavaknowledge.abstractclass.constructorfun2.Test;
 import com.xiaoming.androidpoints.aaajavaknowledge.initialize.InitializeActivity;
 import com.xiaoming.androidpoints.aaajavaknowledge.localvarible.LocalVaribleActivity;
 import com.xiaoming.androidpoints.aaajavaknowledge.valuetransition.ValueTransitionActivity;
@@ -60,8 +61,9 @@ public class JavaKnowledgeActivity extends Activity {
                         startActivity(new Intent(JavaKnowledgeActivity.this, InitializeActivity.class));
                         break;
                     case 4:
-                        AClass aClass = new AClass();
-                        BClass bClass = new BClass();
+                       /* AClass aClass = new AClass();
+                        BClass bClass = new BClass();*/
+                        Test.main();
                         break;
                 }
             }
