@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
                     case 26:  //Camera
                         startActivity(new Intent(MainActivity.this, CameraActivity.class));
                         break;
-                    case 27:  //Camera
+                    case 27:  //通知
                         startActivity(new Intent(MainActivity.this, NotificationActivity.class));
                         break;
 

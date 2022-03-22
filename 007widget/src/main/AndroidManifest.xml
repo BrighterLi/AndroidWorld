@@ -14,7 +14,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".video.choosevideo.ChooseActivity"></activity>
+        <receiver android:name=".appwidget.MulAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget_demo_info" />
+        </receiver>
+
+        <activity android:name=".video.choosevideo.ChooseActivity" />
         <activity android:name=".notification.NotificationActivity" />
         <activity android:name=".aaaview.draw.ondraw.OnDrawActivity" />
         <activity android:name=".aaaview.layout.onLayout.OnLayoutActivity" />
