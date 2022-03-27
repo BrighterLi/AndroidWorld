@@ -1,0 +1,6 @@
+1、AlertDialog
+setView
+setContentView
+addView:
+弹窗内容高度随着内容增加而增加，增加到最大高度，内容可以滚动，而且内容是一个一个权限的声明item，具有相似性
+ScrollView/LinearLayout动态添加item

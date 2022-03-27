@@ -1,6 +1,8 @@
 package com.widget.dialog;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -15,6 +17,7 @@ import com.widget.R;
 public class DialogTestActivity extends AppCompatActivity {
     private Button mBtFullScreenDialog;
     private Button mBtFullScreenDialogDynamic;
+    private Button mBtAlertDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,5 +95,16 @@ public class DialogTestActivity extends AppCompatActivity {
 
             }
         });
+
+        //AlertDialog
+        mBtAlertDialog = findViewById(R.id.bt_alert_dialog);
+        mBtAlertDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DialogTestActivity.this, AlertDialogActivity.class));
+            }
+        });
+
+
     }
 }
