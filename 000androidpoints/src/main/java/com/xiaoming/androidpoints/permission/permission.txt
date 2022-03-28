@@ -1,1 +1,13 @@
 手动获取判断处理权限: https://www.cnblogs.com/ganchuanpu/p/6798682.html
+
+GrantPermissionsActivity
+android GrantPermissionsActivity 详解: https://blog.csdn.net/shift_wwx/article/details/80263467
+/**
+     * The action used to request that the user approve a permission request
+     * from the application.
+     *
+     * @hide
+     */
+    @SystemApi
+    public static final String ACTION_REQUEST_PERMISSIONS =
+            "android.content.pm.action.REQUEST_PERMISSIONS";
