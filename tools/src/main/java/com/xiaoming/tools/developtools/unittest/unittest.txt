@@ -81,3 +81,7 @@ java的单元测试，主要通过jUnit框架来实现，通过注解来标注�
 
 2、单元测试覆盖率
 jacoco
+
+
+3、Mockk
+mockk框架遵循 mock - 监听 - 执行 - 验证 的流程，所以如果你之前已经学习过 Mockito，那么你将更加容易上手mockk

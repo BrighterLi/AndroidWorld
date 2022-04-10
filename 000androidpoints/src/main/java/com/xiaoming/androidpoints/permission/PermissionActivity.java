@@ -66,29 +66,4 @@ public class PermissionActivity extends Activity {
 
         demoListData.add("通知权限判断");
     }
-
-    public final void requestPermissions(@NonNull String[] permissions, int requestCode) {
-        if (requestCode < 0) { //requestCode 必须为正数
-            throw new IllegalArgumentException("requestCode should be >= 0");
-        }
-        if (mHasCurrentPermissionsRequest) {
-            Log.w(TAG, "Can reqeust only one set of permissions at a time");
-            // Dispatch the callback with empty arrays which means a cancellation.
-            onRequestPermissionsResult(requestCode, new String[0], new int[0]);
-            return;
-        }
-        Intent intent = getPackageManager().buildRequestPermissionsIntent(permissions);
-        startActivityForResult(REQUEST_PERMISSIONS_WHO_PREFIX, intent, requestCode, null);
-        mHasCurrentPermissionsRequest = true;
-    }
-
-    public Intent buildRequestPermissionsIntent(@NonNull String[] permissions) {
-        if (ArrayUtils.isEmpty(permissions)) {
-            throw new IllegalArgumentException("permission cannot be null or empty");
-        }
-        Intent intent = new Intent(ACTION_REQUEST_PERMISSIONS);
-        intent.putExtra(EXTRA_REQUEST_PERMISSIONS_NAMES, permissions);
-        intent.setPackage(getPermissionControllerPackageName());
-        return intent;
-    }
 }
