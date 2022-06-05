@@ -28,7 +28,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".kt_grammer.xc.XcActivity"></activity>
+        <activity android:name="com.xiaoming.net.NetDemoActivity"></activity>
+        <activity android:name=".kt_grammer.xc.XcActivity" />
         <activity android:name=".xiangxuedemo.modules.home.HomeActivity" />
         <activity android:name=".xiangxuedemo.modules.register.RegisterActivity" />
         <activity android:name=".xiangxuedemo.modules.login.LoginActivity" />

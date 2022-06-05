@@ -8,11 +8,13 @@ import android.widget.Button;
 
 import com.xiaoming.a010kotlin.xiangxuedemo.modules.home.HomeActivity;
 import com.xiaoming.a010kotlin.xiangxuedemo.modules.login.LoginActivity;
+import com.xiaoming.net.NetDemoActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     private Button mBtXiangxue;
+    private Button mBtNet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +28,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView() {
         mBtXiangxue = findViewById(R.id.bt_xiangxue);
+        mBtNet = findViewById(R.id.bt_net);
         mBtXiangxue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, HomeActivity.class));
                 //startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            }
+        });
+        mBtNet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, NetDemoActivity.class));
             }
         });
     }
