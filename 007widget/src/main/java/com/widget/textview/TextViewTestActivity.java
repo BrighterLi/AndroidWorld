@@ -10,6 +10,7 @@ import com.widget.R;
 
 public class TextViewTestActivity extends AppCompatActivity implements View.OnClickListener{
     private Button mBt1;
+    private Button mBt2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,8 @@ public class TextViewTestActivity extends AppCompatActivity implements View.OnCl
 
         mBt1 = findViewById(R.id.bt1);
         mBt1.setOnClickListener(this);
+        mBt2 = findViewById(R.id.bt2);
+        mBt2.setOnClickListener(this);
     }
 
     @Override
@@ -25,6 +28,9 @@ public class TextViewTestActivity extends AppCompatActivity implements View.OnCl
         switch (v.getId()) {
             case R.id.bt1:
                 startActivity(new Intent(TextViewTestActivity.this, TextView1Activity.class));
+                break;
+            case R.id.bt2:
+                startActivity(new Intent(TextViewTestActivity.this, FoldAndExpansionActivity.class));
                 break;
         }
     }
