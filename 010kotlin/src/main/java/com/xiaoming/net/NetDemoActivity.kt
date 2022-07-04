@@ -54,9 +54,12 @@ class NetDemoActivity : AppCompatActivity() {
             initNetworkCallbacks()
         }
         val connectivityManager: ConnectivityManager = this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        Log.d(TAG, "network#registerNetworkChangeCallbacks: Looper.myLooper:${ Looper.myLooper()}")
+        Log.d(TAG, "network#registerNetworkChangeCallbacks: Looper.getMainLooper:${ Looper.getMainLooper()}")
         Looper.myLooper()?.let {
-            connectivityManager.registerDefaultNetworkCallback(networkCallback, Handler(it))
             Log.d(TAG, "network#registerNetworkChangeCallbacks:registerDefaultNetworkCallback")
+            connectivityManager.registerDefaultNetworkCallback(networkCallback, Handler(it))
+            Log.d(TAG, "network#registerNetworkChangeCallbacks:registerDefaultNetworkCallback2")
         }
     }
 

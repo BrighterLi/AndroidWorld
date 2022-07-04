@@ -28,7 +28,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.xiaoming.net.NetDemoActivity"></activity>
+        <activity android:name=".androidpoints.activitylifecycle.TranslucentActivity"
+            android:theme="@style/TransparentTheme" ></activity>
+        <activity
+            android:name=".androidpoints.activitylifecycle.BActivity"
+            android:theme="@style/TransparentTheme" />
+        <activity android:name=".androidpoints.activitylifecycle.AActivity" />
+        <activity android:name="com.xiaoming.net.NetDemoActivity" />
         <activity android:name=".kt_grammer.xc.XcActivity" />
         <activity android:name=".xiangxuedemo.modules.home.HomeActivity" />
         <activity android:name=".xiangxuedemo.modules.register.RegisterActivity" />
