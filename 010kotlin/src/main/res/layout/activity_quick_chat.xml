@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center"
     tools:context=".project.quick_chat.demo1.QuickChatActivity">
 
     <androidx.recyclerview.widget.RecyclerView
