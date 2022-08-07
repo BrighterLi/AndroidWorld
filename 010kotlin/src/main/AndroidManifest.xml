@@ -28,7 +28,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".project.quick_chat.demo1.QuickChatActivity"></activity>
+        <activity android:name=".androidpoints.viewmodel.demo1.ViewModelTestActivity"></activity>
+        <activity android:name=".project.quick_chat.demo1.QuickChatActivity" />
         <activity android:name=".project.ProjectActivity" />
         <activity
             android:name=".androidpoints.activitylifecycle.TranslucentActivity"

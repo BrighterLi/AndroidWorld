@@ -1,0 +1,31 @@
+ViewModel是一个抽象类，其中只有一个onCleared()方法。当ViewModel不再被需要，
+即与之相关的Activity都被销毁时，该方法会被系统调用。我们可以在该方法中执行一些资源释放
+的相关操作。注意: 当屏幕旋转而导致的Activity重建，并不会调用该方法。
+
+ViewModel最重要的作用是将视图与数据分离，并独立于Activity的重建
+
+ViewModel 简单来说 这个类是设计用来存储UI层的数据，以及管理对应的数据，并且这些数据不受配置变化的影响。
+能够做到当数据修改的时候，可以马上刷新Ui效果，比如屏幕的旋转操作。
+
+使用场景
+某页面屏幕旋转导致Activity/ Fragment销毁重建数据不能保存。
+你可能会说我用onSaveInstanceState保存下来，然后某onCreate, onRestoreInstanceState还原啊。
+onSaveInstanceState设计用来存储那些小的与 UI 相关的并且序列化或者反序列化不复杂的数据。
+如果被序列化的对象复杂的话，序列化会消耗大量的内存。由于这一过程发生在主线程的配置更改期间，
+它需要快速处理才不会丢帧和引起视觉上的卡顿。
+仍然是屏幕旋转问题，一般页面重建后需要重新请求数据，如果能缓存下来是不是就能减少一次请求？
+又或者静置后台一小会回来用onSaveInstance实现就略麻烦了。
+Activity+ Fragments时单个Fragment希望主动拿到Activity的数据完成渲染。此场景换成Activity/ Fragment
++自定义View也是一样的。
+你可能又说我让Activity实现个接口，Fragment中将context对象转成接口不就能拿到Activity的数据了
+嘛。
+我想说还得定义接口，有没有不那么麻烦的方法；另外如果不恰当地调用，Activity被销毁了还会出现
+空指针啊。
+想象某Activity+ Fragments需要Fragment之间通信，甚至某Fragment的更改影响到其他Fragment。
+估计大家的第一反应是让Activity当中介或者用Eventbus这种去通知吧
+
+总之，学习了ViewModel你会发现一种新思路去解决这些问题。既能保持数据在生命周期内的唯一性又不
+需要考虑因为异步操作导致的空指针。
+
+Demo
+https://blog.csdn.net/weixin_34204722/article/details/88021119

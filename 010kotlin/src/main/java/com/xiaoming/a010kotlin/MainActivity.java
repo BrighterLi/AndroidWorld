@@ -8,6 +8,8 @@ import android.widget.Button;
 
 import com.xiaoming.a010kotlin.androidpoints.activitylifecycle.AActivity;
 import com.xiaoming.a010kotlin.androidpoints.activitylifecycle.TranslucentActivity;
+import com.xiaoming.a010kotlin.androidpoints.viewmodel.demo1.ViewModelTest;
+import com.xiaoming.a010kotlin.androidpoints.viewmodel.demo1.ViewModelTestActivity;
 import com.xiaoming.a010kotlin.project.ProjectActivity;
 import com.xiaoming.a010kotlin.xiangxuedemo.modules.home.HomeActivity;
 import com.xiaoming.a010kotlin.xiangxuedemo.modules.login.LoginActivity;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtNet;
     private Button mBtActivityLifecycle;
     private Button mBtProject;
+    private Button mBtViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         mBtNet = findViewById(R.id.bt_net);
         mBtActivityLifecycle = findViewById(R.id.bt_activity_lifecycle);
         mBtProject = findViewById(R.id.bt_project);
+        mBtViewModel = findViewById(R.id.bt_view_model);
         mBtXiangxue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,6 +63,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ProjectActivity.class));
+            }
+        });
+        mBtViewModel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ViewModelTestActivity.class));
             }
         });
     }
