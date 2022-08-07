@@ -1,2 +1,10 @@
 1、Emoji
+(1)获取Emoji图标方案
+1）本地配置所有的图标图片
+https://github.com/diycoder/EasyEmoji
+2）通过json文件里的unicode映射对应的图标各自系统去渲染各自的
 Android 显示原生Emoji: https://blog.csdn.net/zgcqflqinhao/article/details/79298805
+
+(2)问题
+1）图标颜色比较淡
+2）有些显示不出来x

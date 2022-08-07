@@ -18,12 +18,12 @@ class EmojiAdapter(private val emojiEntityList: List<EmojiEntity>) : RecyclerVie
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.tvName.text = emojiEntityList[position].name
+        //holder.tvName.text = emojiEntityList[position].name
         holder.tvEmoji.text = String(Character.toChars(emojiEntityList[position].unicode))
     }
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var tvName: TextView = itemView.findViewById(R.id.tv_name)
+        //var tvName: TextView = itemView.findViewById(R.id.tv_name)
         var tvEmoji: TextView = itemView.findViewById(R.id.tv_emoji)
     }
 }
