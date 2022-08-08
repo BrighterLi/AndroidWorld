@@ -28,4 +28,5 @@ Activity+ Fragments时单个Fragment希望主动拿到Activity的数据完成渲
 需要考虑因为异步操作导致的空指针。
 
 Demo
+https://blog.csdn.net/gpf1320253667/article/details/102638645
 https://blog.csdn.net/weixin_34204722/article/details/88021119
