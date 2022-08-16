@@ -1,8 +1,23 @@
+资料
+官方文档：https://developer.android.google.cn/topic/libraries/architecture/viewmodel
+
+Demo
+https://blog.csdn.net/gpf1320253667/article/details/102638645
+https://blog.csdn.net/weixin_34204722/article/details/88021119
+https://www.jianshu.com/p/5fbde7a2189e
+
 ViewModel是一个抽象类，其中只有一个onCleared()方法。当ViewModel不再被需要，
 即与之相关的Activity都被销毁时，该方法会被系统调用。我们可以在该方法中执行一些资源释放
 的相关操作。注意: 当屏幕旋转而导致的Activity重建，并不会调用该方法。
 
 ViewModel最重要的作用是将视图与数据分离，并独立于Activity的重建
+
+诸如 Activity 和 Fragment 之类的界面控制器主要用于显示界面数据、对用户操作做出响应或
+处理操作系统通信（如权限请求）。如果要求界面控制器也负责从数据库或网络加载数据，那么会
+使类越发膨胀。为界面控制器分配过多的责任可能会导致单个类尝试自己处理应用的所有工作，而
+不是将工作委托给其他类。以这种方式为界面控制器分配过多的责任也会大大增加测试的难度。
+
+从界面控制器逻辑中分离出视图数据所有权的操作更容易且更高效。
 
 ViewModel 简单来说 这个类是设计用来存储UI层的数据，以及管理对应的数据，并且这些数据不受配置变化的影响。
 能够做到当数据修改的时候，可以马上刷新Ui效果，比如屏幕的旋转操作。
@@ -27,6 +42,3 @@ Activity+ Fragments时单个Fragment希望主动拿到Activity的数据完成渲
 总之，学习了ViewModel你会发现一种新思路去解决这些问题。既能保持数据在生命周期内的唯一性又不
 需要考虑因为异步操作导致的空指针。
 
-Demo
-https://blog.csdn.net/gpf1320253667/article/details/102638645
-https://blog.csdn.net/weixin_34204722/article/details/88021119
