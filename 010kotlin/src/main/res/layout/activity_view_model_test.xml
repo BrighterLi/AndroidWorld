@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".androidpoints.viewmodel.demo1.ViewModelTestActivity">
+    tools:context=".androidpoints.jetpack.viewmodel.demo1.ViewModelTestActivity">
 
     <TextView
         android:id="@+id/tv_view_model"

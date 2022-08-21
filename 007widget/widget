@@ -1,0 +1,4 @@
+各种功能实现
+1、View拖动比交换位置
+最简单的android拖拽交换view：https://blog.csdn.net/u010111268/article/details/80003848
+DragView,DraggableGridView

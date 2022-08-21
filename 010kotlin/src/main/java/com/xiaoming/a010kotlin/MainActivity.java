@@ -7,12 +7,9 @@ import android.view.View;
 import android.widget.Button;
 
 import com.xiaoming.a010kotlin.androidpoints.activitylifecycle.AActivity;
-import com.xiaoming.a010kotlin.androidpoints.activitylifecycle.TranslucentActivity;
-import com.xiaoming.a010kotlin.androidpoints.viewmodel.demo1.ViewModelTest;
-import com.xiaoming.a010kotlin.androidpoints.viewmodel.demo1.ViewModelTestActivity;
+import com.xiaoming.a010kotlin.androidpoints.jetpack.viewmodel.demo1.ViewModelTestActivity;
 import com.xiaoming.a010kotlin.project.ProjectActivity;
 import com.xiaoming.a010kotlin.xiangxuedemo.modules.home.HomeActivity;
-import com.xiaoming.a010kotlin.xiangxuedemo.modules.login.LoginActivity;
 import com.xiaoming.net.NetDemoActivity;
 
 import androidx.appcompat.app.AppCompatActivity;

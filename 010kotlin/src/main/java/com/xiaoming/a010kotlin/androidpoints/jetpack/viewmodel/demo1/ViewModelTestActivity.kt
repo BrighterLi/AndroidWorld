@@ -1,4 +1,4 @@
-package com.xiaoming.a010kotlin.androidpoints.viewmodel.demo1
+package com.xiaoming.a010kotlin.androidpoints.jetpack.viewmodel.demo1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

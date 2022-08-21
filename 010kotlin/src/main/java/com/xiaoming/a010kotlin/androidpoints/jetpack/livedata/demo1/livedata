@@ -1,0 +1,5 @@
+demo
+https://www.jianshu.com/p/546be976d711
+
+它的用处就是感知相关 Activity 的生命周期，当应用处于 onStart-onPause 之间时，就会正常传递数据，如果不是则中止传递数据。
+使用 liveData 包装数据会只在界面可见状态下才传递，避免了那种界面不可见或者销毁状态下的内存泄漏的问题。

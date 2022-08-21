@@ -6,6 +6,9 @@ https://blog.csdn.net/gpf1320253667/article/details/102638645
 https://blog.csdn.net/weixin_34204722/article/details/88021119
 https://www.jianshu.com/p/5fbde7a2189e
 
+原理
+https://blog.csdn.net/u012165769/article/details/109454192
+
 ViewModel是一个抽象类，其中只有一个onCleared()方法。当ViewModel不再被需要，
 即与之相关的Activity都被销毁时，该方法会被系统调用。我们可以在该方法中执行一些资源释放
 的相关操作。注意: 当屏幕旋转而导致的Activity重建，并不会调用该方法。
