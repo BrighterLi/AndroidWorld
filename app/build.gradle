@@ -55,8 +55,8 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
 
     //arouter(Android页面路由框架)https://github.com/alibaba/ARouter
-    compile 'com.alibaba:arouter-api:1.2.2'
+    implementation 'com.alibaba:arouter-api:1.2.2'
     annotationProcessor 'com.alibaba:arouter-compiler:1.1.3'
 
-    compile 'com.android.support:multidex:1.0.1'
+    implementation 'com.android.support:multidex:1.0.1'
 }

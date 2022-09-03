@@ -6,4 +6,12 @@ https://www.bilibili.com/video/BV1PE411g7o7
 LiveData
 https://www.bilibili.com/video/BV1Q4411p7ab
 DataBinding
-https://www.bilibili.com/video/BV1i4411p7gD
+https://www.bilibli.com/video/BV1i4411p7gD
+Data Binding的劣势也很明显：
+它侵入了xml文件，因为只有布局文件的根标签必须是layout时, Data Binding才会生成对应的Binding Class。
+Annotation Processor不仅对构建速度有负面影响，也会产生部分性能问题。
+最最关键的，一些Data Binding相关的bug很难跟踪和解决，开发者在MVVM模式上的bug需要花费更多的时间，我觉得这也是MVVM没有在移动端发展起来的原因之一。
+
+ViewBinding
+https://blog.csdn.net/chuyouyinghe/article/details/124420874
+https://www.jianshu.com/p/66728b95baaa

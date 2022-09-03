@@ -59,6 +59,7 @@ android {
             jniLibs.srcDirs = ['libs'] //引用的xx.so文件的地址
         }
     }
+    ndkVersion '21.4.7075529'
 
 }
 

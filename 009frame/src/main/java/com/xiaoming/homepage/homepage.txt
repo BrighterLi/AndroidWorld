@@ -1,2 +1,0 @@
-app首页架构
-https://github.com/getActivity/AndroidProject

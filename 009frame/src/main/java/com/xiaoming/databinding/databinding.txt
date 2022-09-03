@@ -1,4 +1,0 @@
-databinding: 数据绑定框架
-DataBinding的基本使用（一）: https://blog.csdn.net/qq_33689414/article/details/52205703
-DataBinding的基本使用（二）: https://blog.csdn.net/qq_33689414/article/details/52205718
-DataBinding的基本使用(三): https://blog.csdn.net/qq_33689414/article/details/52205724

@@ -36,9 +36,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
 
     //blockcanary
-    debugCompile 'com.github.markzhai:blockcanary-android:1.5.0'
-    releaseCompile 'com.github.markzhai:blockcanary-no-op:1.5.0'
+    implementation 'com.github.markzhai:blockcanary-android:1.5.0'
+    implementation 'com.github.markzhai:blockcanary-no-op:1.5.0'
     //内存泄漏
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    implementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    implementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
 }

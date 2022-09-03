@@ -42,7 +42,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
 
     //arouter(Android页面路由框架)https://github.com/alibaba/ARouter
-    compile 'com.alibaba:arouter-api:1.2.2'
+    implementation 'com.alibaba:arouter-api:1.2.2'
     annotationProcessor 'com.alibaba:arouter-compiler:1.1.3'
 }
 
