@@ -1,0 +1,6 @@
+1、录音波形View
+录音功能
+AudioRecord/MediaRecorder
+
+根据音频大小动效
+Android根据音量大小绘制心电图(附源码)：https://blog.csdn.net/pengguichu/article/details/51867403

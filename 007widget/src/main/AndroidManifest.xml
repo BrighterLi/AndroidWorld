@@ -2,11 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.widget">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,19 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".textview.FoldAndExpansionActivity"></activity>
-
-        <receiver android:name=".appwidget.MulAppWidgetProvider">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/app_widget_demo_info" />
-        </receiver>
+        <activity
+            android:name=".WaveViewActivity"
+            android:exported="false" />
+        <activity android:name=".textview.FoldAndExpansionActivity" />
 
         <activity android:name=".video.choosevideo.ChooseActivity" />
+
         <activity android:name=".notification.NotificationActivity" />
         <activity android:name=".aaaview.draw.ondraw.OnDrawActivity" />
         <activity android:name=".aaaview.layout.onLayout.OnLayoutActivity" />
@@ -120,7 +109,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".video.playvideo.VideoActivity" />
-
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.widget.FileProvider"
@@ -130,6 +118,21 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <receiver android:name=".appwidget.MulAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget_demo_info" />
+        </receiver>
     </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>
