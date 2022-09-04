@@ -1,6 +1,12 @@
-1、录音波形View
-录音功能
+1、声波动效View
+录音功能：
 AudioRecord/MediaRecorder
+android 录音机mic的大小,Android 获取 AudioRecord 麦克风音量大小并做选择性发送
+https://blog.csdn.net/weixin_39796868/article/details/117543589
+获取麦克风音量大小：
+android 实时获取 麦克风 音量大小：https://blog.csdn.net/weixin_33985679/article/details/85514664
 
-根据音频大小动效
+根据音频大小动效：
+Android自绘控件开发与性能优化实践——以录音波浪动画为例：https://blog.csdn.net/google_acmer/article/details/76405835
 Android根据音量大小绘制心电图(附源码)：https://blog.csdn.net/pengguichu/article/details/51867403
+Android 仿微信语音聊天音量大小显示控件：https://blog.csdn.net/qq_16811177/article/details/77947474
