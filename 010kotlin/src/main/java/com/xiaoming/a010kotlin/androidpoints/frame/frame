@@ -1,0 +1,9 @@
+1、EventBus
+EventBus是一款针对Android优化的发布/订阅事件总线
+EventBus主要功能是代替Intent、Handler、BroadCast等在Activity，Fragment，Service线程之间传递消息的。
+EventBus代码开销小、更加优雅、彻底解耦
+EventBus原理
+https://blog.csdn.net/weixin_43115440/article/details/106080725
+1、在register的时候，Eventbus类通过反射的方式，获取注册对象的所有带有@Subscribe注解的接收方法，不能是static和非public的，同时数据参数只有一个， 然后放到一个列表中。（如果在类中找不到接收方法，将会报异常）
+2、发消息的地方，post方法，通过PostingThreadState 进行消息的分发，分发消息就是查找列表中是否有符合参数要求的对象，然后通过反射的消息，invoke调用对应对象的方法。
+3、在postToSubscription方法中，会区分事件的类型PostThread、MainThread、BackgroundThread、Async，如果是在本线程中分发事件，直接调用invoke进行。如果需要切换线程，则使用Handler sendMessage之后，在handleMessage中，发送事件。

@@ -90,4 +90,6 @@ dependencies {
 
     implementation "androidx.lifecycle:lifecycle-viewmodel:2.2.0"
 
+    implementation 'org.greenrobot:eventbus:3.2.0'
+
 }
