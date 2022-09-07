@@ -1,4 +1,5 @@
 1、声波动效View
+Android实现录音功能汇总:https://blog.csdn.net/chuyangchangxi/article/details/91383932
 录音功能：
 AudioRecord/MediaRecorder
 android 录音机mic的大小,Android 获取 AudioRecord 麦克风音量大小并做选择性发送
