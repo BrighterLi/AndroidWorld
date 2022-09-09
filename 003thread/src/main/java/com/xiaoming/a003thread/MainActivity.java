@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.xiaoming.a003thread.coroutine.CoroutinesActivity;
 import com.xiaoming.a003thread.multithreads.MultiThreadsActivity;
 
 import java.util.ArrayList;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private void initDemoListData() {
         mDemoListData.add("主线程和子线程方法执行顺序");
         mDemoListData.add("两个线程+共享变量");
+        mDemoListData.add("协程");
     }
 
     private void initView(){
@@ -44,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 1:
                         startActivity(new Intent(MainActivity.this, MultiThreadsActivity.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(MainActivity.this, CoroutinesActivity.class));
                         break;
                 }
             }

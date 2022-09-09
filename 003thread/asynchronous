@@ -32,7 +32,20 @@ Futures，Promises 等等
 响应式扩展（Rx）
 
 协程
+https://www.jianshu.com/p/8b2952fc1130
+https://blog.csdn.net/yu540135101/article/details/113246177
+可以帮我们极大地简化异步、并发编程、优化软件架构。通过协程，我们不仅可以提高开发效率，还能提高代码的可读性，
+由此也就可以降低代码出错的概率。
+和RxJava（不懂的请看之前写的Rxjava文章）比较的优点:
+使用协程能让代码更加简洁，极大避免回调方法
+避免了耗费资源的线程切换（核心优势呀）
+缺点:
+较少的语言支持协程，比如Java
+对各种控制流的支持应该还没有全覆盖，RxJava几乎全搞定
 
-
-
-
+GlobalScope
+lifecycleScope
+viewModelScope
+GlobalScope是生命周期是process级别的，即使Activity或Fragment已经被销毁，协程仍然在执行。所以需要绑定生命周期。
+lifecycleScope只能在Activity、Fragment中使用，会绑定Activity和Fragment的生命周期
+viewModelScope只能在ViewModel中使用，绑定ViewModel的生命周期
