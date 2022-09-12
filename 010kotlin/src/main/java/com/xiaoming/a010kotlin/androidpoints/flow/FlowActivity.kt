@@ -5,10 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import com.xiaoming.a010kotlin.R
 import kotlinx.coroutines.*
-import kotlinx.coroutines.flow.channelFlow
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.collect
-import kotlin.coroutines.CoroutineContext
+import kotlinx.coroutines.flow.*
 import kotlin.system.measureTimeMillis
 
 class FlowActivity : AppCompatActivity() {
@@ -22,8 +19,9 @@ class FlowActivity : AppCompatActivity() {
 
         runBlocking { //创建协程
             //flowTest()
-            flowTest2()
+            //flowTest2()
             //flowTest3()
+            flowTest4()
         }
     }
 
@@ -63,6 +61,29 @@ class FlowActivity : AppCompatActivity() {
             }
         }
         print("cost $time")
+    }
+
+    //背压
+    //当流的收集器不堪重负时，它可以简单地挂起发射器，并在准备好接受更多元素时稍后将其恢复
+    suspend fun flowTest4() {
+        var start = 0L
+        val time = measureTimeMillis {
+            (1..5)
+                .asFlow()
+                .onStart { start = System.currentTimeMillis() }
+                .onEach {
+                    delay(100)
+                    println("Emit $it (${System.currentTimeMillis() - start}ms) ")
+                    Log.d(TAG, "flowTest4 Emit $it (${System.currentTimeMillis() - start}ms))")
+                }
+                .buffer()
+                .flowOn(Dispatchers.IO)
+                .collect {
+                    Log.d(TAG, "flowTest4 Collect $it starts (${System.currentTimeMillis() - start}ms)")
+                    delay(500)
+                    Log.d(TAG, "flowTest4 Collect $it ends (${System.currentTimeMillis() - start}ms") }
+        }
+        Log.d(TAG, "flowTest4 Cost $time ms")
     }
 
 }

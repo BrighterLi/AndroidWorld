@@ -1,5 +1,6 @@
 Flow
 https://www.jianshu.com/p/6ecf6da3286f
+Flow操作符: https://www.jianshu.com/p/d7dc63c78374
 异步流
 Flow是kotlin提供的一个工具，使用协程封装成生产者-消费者模式，上流来负责生产，下流来接收消耗。
 
