@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.xiaoming.a010kotlin.androidpoints.activitylifecycle.AActivity;
+import com.xiaoming.a010kotlin.androidpoints.flow.FlowActivity;
 import com.xiaoming.a010kotlin.androidpoints.frame.eventbus.EventBusActivity;
 import com.xiaoming.a010kotlin.androidpoints.jetpack.viewbinding.demo.ViewBindingActivity;
 import com.xiaoming.a010kotlin.androidpoints.jetpack.viewmodel.demo1.ViewModelTestActivity;
@@ -72,7 +73,8 @@ public class MainActivity extends AppCompatActivity {
                 //ViewBinding
                 // startActivity(new Intent(MainActivity.this, ViewBindingActivity.class));
                 //EventBus
-                startActivity(new Intent(MainActivity.this, EventBusActivity.class));
+                //startActivity(new Intent(MainActivity.this, EventBusActivity.class));
+                startActivity(new Intent(MainActivity.this, FlowActivity.class));
             }
         });
     }

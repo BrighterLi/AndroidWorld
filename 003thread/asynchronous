@@ -49,3 +49,14 @@ viewModelScope
 GlobalScope是生命周期是process级别的，即使Activity或Fragment已经被销毁，协程仍然在执行。所以需要绑定生命周期。
 lifecycleScope只能在Activity、Fragment中使用，会绑定Activity和Fragment的生命周期
 viewModelScope只能在ViewModel中使用，绑定ViewModel的生命周期
+
+创建协程方式
+runBlocking
+launch (CoroutineScope.lauch / GlobalScope.lauch)
+withContext
+async
+1、lauch 与 runBlocking都能在全局开启一个协程，但 lauch 是非阻塞的 而 runBlocking 是阻塞的
+2、withContext 与 async 都可以返回耗时任务的执行结果。 一般来说，多个 withContext 任务是串行的，
+且withContext 可直接返回耗时任务的结果。 多个 async 任务是并行的，async 返回的是一个Deferred<T>，
+需要调用其await()方法获取结果。
+
