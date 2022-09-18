@@ -2,19 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xiaoming.androidpoints">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -23,35 +10,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.activitystack.Activity3"></activity>
+        <activity
+            android:name=".FileProviderActivity"
+            android:exported="false" />
+        <activity android:name=".activity.activitystack.Activity3" />
         <activity android:name=".activity.activitystack.Activity2" />
         <activity android:name=".activity.activitystack.ActivityStackActivity" />
         <activity android:name=".service.demo4.ServiceTest4Activity" />
 
-        <service
-            android:name=".service.demo4.TService"
-            android:enabled="true"
-            android:exported="true" />
-        <service
-            android:name=".service.demo3.MyService"
-            android:enabled="true"
-            android:exported="true" />
-
         <activity android:name=".service.demo2.ServiceTest2Activity" />
-
-        <service
-            android:name=".service.demo2.LocalService2"
-            android:enabled="true"
-            android:exported="true" />
-        <service
-            android:name=".service.LocalService"
-            android:enabled="true"
-            android:exported="true" />
-
         <activity android:name=".service.ServiceTestActivity" />
+
         <activity android:name=".layout.relativelayout.RelativeLayoutDemoActivity" />
+
         <activity android:name=".aaajavaknowledge.aop.aspectj.AspectJDemoActivity" />
         <activity android:name=".aaabug.lx.AnimationBug.ThirdActivity" />
+
         <activity android:name=".aaabug.lx.AnimationBug.SecondActivity" />
         <activity android:name=".aaabug.lx.AnimationBug.FirstActivity" />
         <activity android:name=".aaabug.BugTestActivity" />
@@ -166,6 +140,22 @@
             </intent-filter>
         </activity>
         <activity android:name=".aaajavaknowledge.JavaKnowledgeActivity" />
+        <service
+            android:name=".service.demo4.TService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.demo3.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.demo2.LocalService2"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.LocalService"
+            android:enabled="true"
+            android:exported="true" />
 
         <service
             android:name=".floating.floating.service.FloatingService2"
@@ -180,5 +170,18 @@
             android:enabled="true"
             android:exported="true" />
     </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
 </manifest>
