@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import com.widget.R;
 
 //嵌套滑动：ScrollView+RecyclerView
-public class ScrollviewActivity extends AppCompatActivity {
+public class ScrollviewActivityDemo extends AppCompatActivity {
 
     private InterceptScrollView mScrollView;
     private TabLayout tabLayout;
@@ -42,7 +42,7 @@ public class ScrollviewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scrollview);
+        setContentView(R.layout.activity_scrollview_demo2);
 
         mScrollView=findViewById(R.id.interceptScrollView);
         tabLayout=findViewById(R.id.tabLayout);
@@ -96,12 +96,12 @@ public class ScrollviewActivity extends AppCompatActivity {
             @Override
             public void onScrollChanged(int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
                 currentScrollY=scrollY;
-                if (scrollY >= DpUtils.dp2px(ScrollviewActivity.this, 60)&&tabLayout.getParent()==container_normal) {
+                if (scrollY >= DpUtils.dp2px(ScrollviewActivityDemo.this, 60)&&tabLayout.getParent()==container_normal) {
                     container_normal.removeView(tabLayout);
                     container_top.addView(tabLayout);
                     viewPlace.setVisibility(View.INVISIBLE);
                     isTabLayoutSuspend=true;
-                } else if(scrollY < DpUtils.dp2px(ScrollviewActivity.this, 60)&&tabLayout.getParent()==container_top){
+                } else if(scrollY < DpUtils.dp2px(ScrollviewActivityDemo.this, 60)&&tabLayout.getParent()==container_top){
                     container_top.removeView(tabLayout);
                     container_normal.addView(tabLayout, 1);
                     viewPlace.setVisibility(View.GONE);
@@ -121,8 +121,8 @@ public class ScrollviewActivity extends AppCompatActivity {
                 //如果导航栏悬浮
                 if(isTabLayoutSuspend){
                     //当前页面的滑动距离为0或者小于60dp，那么只需滑动60dp，让导航栏悬浮即可
-                    if(scrollMap.get(i)==0||scrollMap.get(i)<DpUtils.dp2px(ScrollviewActivity.this,60)){
-                        mScrollView.scrollTo(0,DpUtils.dp2px(ScrollviewActivity.this,60));
+                    if(scrollMap.get(i)==0||scrollMap.get(i)<DpUtils.dp2px(ScrollviewActivityDemo.this,60)){
+                        mScrollView.scrollTo(0,DpUtils.dp2px(ScrollviewActivityDemo.this,60));
                     }else{//如果页面滑动的距离大于60dp，那么直接滑动对应的距离即可
                         mScrollView.scrollTo(0,scrollMap.get(i));
                     }

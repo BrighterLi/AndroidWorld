@@ -13,6 +13,7 @@ import com.widget.R;
 import com.widget.recyclerview.ItemDecoration.ItemDecorationTestActivity;
 import com.widget.recyclerview.ceiling.CeilingActivity;
 import com.widget.recyclerview.gridrecyclerview.GridRecyclerViewActivity;
+import com.widget.recyclerview.heightchange.RVHeightChangeActivity;
 import com.widget.recyclerview.horilinearrecyclerview.HoriLinearRecyclerViewActivity;
 import com.widget.recyclerview.itemdecoration2.ItemDecorationTest2Activity;
 import com.widget.recyclerview.linearrecyclerview.LinearRecyclerViewActivity;
@@ -71,6 +72,9 @@ public class RecyclerViewActivity extends AppCompatActivity {
                     case 9:
                         startActivity(new Intent(RecyclerViewActivity.this, RecyclerActivity.class));
                         break;
+                    case 10:
+                        startActivity(new Intent(RecyclerViewActivity.this, RVHeightChangeActivity.class));
+                        break;
                 }
             }
         });
@@ -91,5 +95,6 @@ public class RecyclerViewActivity extends AppCompatActivity {
         demoListData.add("RcyclerView的间距设置ItemDecoration");
         demoListData.add("RecyclerView吸顶");
         demoListData.add("RcyclerView缓存复用");
+        demoListData.add("RcyclerView高度动态变化");
     }
 }

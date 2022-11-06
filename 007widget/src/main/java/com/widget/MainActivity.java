@@ -26,7 +26,7 @@ import com.widget.notification.NotificationActivity;
 import com.widget.pullrefresh.PullRefreshActivity;
 import com.widget.pullrefresh.pull_to_refresh.PullToRefreshDemoActivity;
 import com.widget.recyclerview.RecyclerViewActivity;
-import com.widget.scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivity;
+import com.widget.scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivityDemo;
 import com.widget.scroll.scrollconflict.demo1.ScrollConflictActivity;
 import com.widget.scroll.scrollconflict.demo2.ScrollConflict2Activity;
 import com.widget.scroll.scrollconflict.demo3.ScrollConflict3Activity;
@@ -34,7 +34,6 @@ import com.widget.statusbar.StatusBarTestActivity;
 import com.widget.animation.AnimationTestActivity;
 import com.widget.textview.TextViewTestActivity;
 import com.widget.video.choosevideo.ChooseActivity;
-import com.widget.video.playvideo.VideoActivity;
 import com.widget.listview.pagingrequest.PagingRequestActivity;
 import com.widget.viewpager.ViewPagerActivity;
 
@@ -115,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, PullRefreshActivity.class));
                         break;
                     case 4:
-                        startActivity(new Intent(MainActivity.this, ScrollviewActivity.class));
+                        startActivity(new Intent(MainActivity.this, ScrollviewActivityDemo.class));
                         break;
                     case 5:
                         startActivity(new Intent(MainActivity.this, TabStripActivity.class));

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivity">
+    tools:context=".scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivityDemo">
 
     <com.widget.scroll.doublescroll.scrollviewrecyclerview.InterceptScrollView
         android:id="@+id/interceptScrollView"

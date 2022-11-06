@@ -10,12 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".recyclerview.heightchange.RVHeightChangeActivity"
+            android:exported="false" />
+        <activity
             android:name=".WaveViewActivity"
             android:exported="false" />
         <activity android:name=".textview.FoldAndExpansionActivity" />
-
         <activity android:name=".video.choosevideo.ChooseActivity" />
-
         <activity android:name=".notification.NotificationActivity" />
         <activity android:name=".aaaview.draw.ondraw.OnDrawActivity" />
         <activity android:name=".aaaview.layout.onLayout.OnLayoutActivity" />
@@ -92,7 +93,7 @@
         <activity android:name=".scroll.scrollconflict.demo1.ScrollConflictActivity" />
         <activity android:name=".scroll.doublescroll.recyclerviewrecyclerview.ScrollViewActivity" />
         <activity android:name=".horizontalscrollview.TabStripActivity" />
-        <activity android:name=".scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivity" />
+        <activity android:name=".scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivityDemo" />
         <activity android:name=".keyboard.KeyboardEntranceActivity" />
         <activity android:name=".pullrefresh.PullRefreshActivity" />
         <activity android:name=".recyclerview.twoitemsrecyclerview.TwoItemsRecyclerViewActivity" />
@@ -109,6 +110,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".video.playvideo.VideoActivity" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.widget.FileProvider"
@@ -129,10 +131,10 @@
                 android:resource="@xml/app_widget_demo_info" />
         </receiver>
     </application>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 </manifest>
