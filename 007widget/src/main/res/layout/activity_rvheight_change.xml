@@ -23,14 +23,21 @@
             android:layout_height="match_parent" />
     </LinearLayout>
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom1"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:gravity="center"
-        android:text="下滑收拢变短"
-        android:background="@color/Red900"
-        android:orientation="horizontal"/>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:gravity="center"
+            android:text="下滑收拢变短"
+            android:background="@color/Red900"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="horizontal"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/bottom2"

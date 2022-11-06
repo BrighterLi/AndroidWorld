@@ -1,7 +1,9 @@
 /**
  * User: BrightLi
  * Date: 2022-11-06-02:01
- * DESC: RecyclerView高度动态变化
+ * DESC: RecyclerView高度动态变化;滑动到底部状态变化；smooth滑动
+ * https://blog.csdn.net/weixin_36110673/article/details/117633153
+ * ScrollView滑动到底部继续向上滑和滑动到顶部继续向下滑 https://blog.csdn.net/XiFangzheng/article/details/53543800
  */
 
 package com.widget.recyclerview.heightchange
@@ -65,12 +67,14 @@ class RVHeightChangeActivity : AppCompatActivity() {
             TransitionManager.beginDelayedTransition(viewBinding.root)
             viewBinding.bottom1.visibility = View.GONE
             viewBinding.bottom2.visibility = View.VISIBLE
+            smoothScrollMsgRvToBottom()
         }
 
         viewBinding.bottom2.setOnClickListener {
             TransitionManager.beginDelayedTransition(viewBinding.root)
             viewBinding.bottom1.visibility = View.VISIBLE
             viewBinding.bottom2.visibility = View.GONE
+            smoothScrollMsgRvToBottom()
         }
     }
 
@@ -87,12 +91,22 @@ class RVHeightChangeActivity : AppCompatActivity() {
                         if(!canScrollVertically(1)) {
                             Log.d(TAG, "[initMsgRvView] to bottom newState: $newState")
                             TransitionManager.beginDelayedTransition(viewBinding.root)
-                            viewBinding.bottom1.visibility = View.GONE
-                            viewBinding.bottom2.visibility = View.VISIBLE
+                            viewBinding.bottom1.visibility = View.VISIBLE
+                            viewBinding.bottom2.visibility = View.GONE
+                            smoothScrollMsgRvToBottom()
                         }
                     }
                 }
             })
         }
     }
+
+    private fun scrollMsgRvToBottom() {
+        viewBinding.rv.scrollToPosition(msgListAdapter.data.size -1)
+    }
+
+    private fun smoothScrollMsgRvToBottom() {
+        viewBinding.rv.smoothScrollToPosition(msgListAdapter.data.size -1)
+    }
+
 }
