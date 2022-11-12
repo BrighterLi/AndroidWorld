@@ -36,6 +36,7 @@ import com.widget.textview.TextViewTestActivity;
 import com.widget.video.choosevideo.ChooseActivity;
 import com.widget.listview.pagingrequest.PagingRequestActivity;
 import com.widget.viewpager.ViewPagerActivity;
+import com.widget.window.WindowActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,36 +58,37 @@ public class MainActivity extends AppCompatActivity {
 
     private void initDemoData() {
         mDataList = new ArrayList<>();
-        mDataList.add("View知识点");
-        mDataList.add("视频"); //0
-        mDataList.add("输入键盘"); //1
-        mDataList.add("下拉刷新"); //2
-        mDataList.add("ScrollView"); //3
-        mDataList.add("通過HorizontalScrollView自定义TabLayout"); //4
-        mDataList.add("滑动冲突:ScrollView+ListView;同向，内部拦截法"); //5
-        mDataList.add("滑动冲突：ViewPager+ListView;  外部左右+内部上下;外部拦截法+内部拦截法"); //6
-        mDataList.add("滑动冲突：SwipeRefreshLayout+ScrollView+ViewPager+ListView；上下滑动+左右滑动；内部拦截法"); //7
-        mDataList.add("ListView:分页请求"); //8
-        mDataList.add("ViewPager"); //9
-        mDataList.add("ListView:点击悬浮按钮回到顶部"); //10
+        mDataList.add("View知识点"); //0
+        mDataList.add("视频"); //1
+        mDataList.add("输入键盘"); //2
+        mDataList.add("下拉刷新"); //3
+        mDataList.add("ScrollView"); //4
+        mDataList.add("通過HorizontalScrollView自定义TabLayout"); //5
+        mDataList.add("滑动冲突:ScrollView+ListView;同向，内部拦截法"); //6
+        mDataList.add("滑动冲突：ViewPager+ListView;  外部左右+内部上下;外部拦截法+内部拦截法"); //7
+        mDataList.add("滑动冲突：SwipeRefreshLayout+ScrollView+ViewPager+ListView；上下滑动+左右滑动；内部拦截法"); //8
+        mDataList.add("ListView:分页请求"); //9
+        mDataList.add("ViewPager"); //10
 
-        mDataList.add("Dialog:全屏dialog"); //11
-        mDataList.add("Image"); //12
-        mDataList.add("状态栏"); //13
-        mDataList.add("RecyclerView"); //14
-        mDataList.add("ListView 基本用法"); //15
-        mDataList.add("ListView 自定义Item"); //16
-        mDataList.add("ListView 优化"); //17
-        mDataList.add("loading"); //18
-        mDataList.add("Banner"); //19
-        mDataList.add("animation动画"); //20
+        mDataList.add("ListView:点击悬浮按钮回到顶部"); //11
+        mDataList.add("Dialog:全屏dialog"); //12
+        mDataList.add("Image"); //13
+        mDataList.add("状态栏"); //14
+        mDataList.add("RecyclerView"); //15
+        mDataList.add("ListView 基本用法"); //16
+        mDataList.add("ListView 自定义Item"); //17
+        mDataList.add("ListView 优化"); //18
+        mDataList.add("loading"); //19
+        mDataList.add("Banner"); //20
 
-        mDataList.add("TextView"); //21
-        mDataList.add("Material Design"); //22
-        mDataList.add("上拉刷新下拉加载框架Ultra-Pull-To-Refresh"); //23
-        mDataList.add("Drawable"); //24
-        mDataList.add("Camera"); //25
-        mDataList.add("Notification"); //26
+        mDataList.add("animation动画"); //21
+        mDataList.add("TextView"); //22
+        mDataList.add("Material Design"); //23
+        mDataList.add("上拉刷新下拉加载框架Ultra-Pull-To-Refresh"); //24
+        mDataList.add("Drawable"); //25
+        mDataList.add("Camera"); //26
+        mDataList.add("Notification"); //27
+        mDataList.add("window"); //28
 
     }
 
@@ -134,10 +136,10 @@ public class MainActivity extends AppCompatActivity {
                     case 10:
                         startActivity(new Intent(MainActivity.this, ViewPagerActivity.class));
                         break;
+
                     case 11:
                         startActivity(new Intent(MainActivity.this, BackToTopActivity.class));
                         break;
-
                     case 12:
                         startActivity(new Intent(MainActivity.this, DialogTestActivity.class));
                         break;
@@ -165,21 +167,19 @@ public class MainActivity extends AppCompatActivity {
                     case 20:  //Banner
                         startActivity(new Intent(MainActivity.this, BannerTestActivity.class));
                         break;
+
                     case 21:  //动画
                         startActivity(new Intent(MainActivity.this, AnimationTestActivity.class));
                         break;
-
                     case 22:  //TextView
                         startActivity(new Intent(MainActivity.this, TextViewTestActivity.class));
                         break;
                     case 23:  //MaterialDesign
                         startActivity(new Intent(MainActivity.this, MaterialDesignActivity.class));
                         break;
-
                     case 24:  //刷新加载框架Ultra-Pull-To-Refresh
                         startActivity(new Intent(MainActivity.this, PullToRefreshDemoActivity.class));
                         break;
-
                     case 25:  //drawable
                         startActivity(new Intent(MainActivity.this, DrawableActivity.class));
                         break;
@@ -189,7 +189,9 @@ public class MainActivity extends AppCompatActivity {
                     case 27:  //通知
                         startActivity(new Intent(MainActivity.this, NotificationActivity.class));
                         break;
-
+                    case 28:  //window
+                        startActivity(new Intent(MainActivity.this, WindowActivity.class));
+                        break;
                 }
             }
         });

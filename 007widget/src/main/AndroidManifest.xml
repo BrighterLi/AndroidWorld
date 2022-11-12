@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name="com.widget.window.WindowActivity"/>
         <activity
             android:name=".recyclerview.heightchange.RVHeightChangeActivity"
             android:exported="false" />
@@ -110,7 +111,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".video.playvideo.VideoActivity" />
-
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.widget.FileProvider"
@@ -130,11 +130,18 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/app_widget_demo_info" />
         </receiver>
-    </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+        <service
+            android:name=".window.WindowService"
+            android:enabled="true"
+            android:exported="true"></service>
+    </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
 
 </manifest>
