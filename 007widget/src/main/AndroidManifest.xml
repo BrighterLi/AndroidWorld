@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.widget.window.WindowActivity"/>
+        <activity
+            android:name=".ObjectAnimatorActivity"
+            android:exported="false" />
+        <activity android:name="com.widget.window.WindowActivity" />
         <activity
             android:name=".recyclerview.heightchange.RVHeightChangeActivity"
             android:exported="false" />
@@ -38,6 +41,7 @@
         <activity android:name=".pullrefresh.pull_to_refresh.PullToRefreshDemoActivity" />
         <activity android:name=".animation.activity.Activity2" />
         <activity android:name=".animation.activity.Activity1" />
+        <activity android:name=".animation.ObjectAnimatorActivity"/>
         <activity android:name=".aaaview.share_a_view.ShareAView2Activity" />
         <activity android:name=".aaaview.share_a_view.ShareAViewActivity" />
         <activity android:name=".material_design.coordinatorlayout.coordinatorlayout2.CoordinatorLayout2Activity" />
@@ -111,6 +115,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".video.playvideo.VideoActivity" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.widget.FileProvider"
@@ -134,14 +139,14 @@
         <service
             android:name=".window.WindowService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
     </application>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>

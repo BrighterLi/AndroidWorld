@@ -14,6 +14,7 @@ import com.widget.animation.textview.TextViewActivity;
 public class AnimationTestActivity extends AppCompatActivity implements View.OnClickListener{
     private Button btl;
     private Button bt2;
+    private Button bt3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,8 @@ public class AnimationTestActivity extends AppCompatActivity implements View.OnC
         btl.setOnClickListener(this);
         bt2 = findViewById(R.id.bt2);
         bt2.setOnClickListener(this);
+        bt3 = findViewById(R.id.bt3);
+        bt3.setOnClickListener(this);
     }
 
     @Override
@@ -34,6 +37,9 @@ public class AnimationTestActivity extends AppCompatActivity implements View.OnC
                 break;
             case R.id.bt2:
                 startActivity(new Intent(AnimationTestActivity.this, Activity1.class));
+                break;
+            case R.id.bt3:
+                startActivity(new Intent(AnimationTestActivity.this, ObjectAnimatorActivity.class));
                 break;
         }
     }
