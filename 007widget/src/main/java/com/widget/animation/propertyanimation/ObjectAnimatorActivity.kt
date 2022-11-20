@@ -1,4 +1,4 @@
-package com.widget.animation
+package com.widget.animation.propertyanimation
 
 import android.animation.ObjectAnimator
 import androidx.appcompat.app.AppCompatActivity

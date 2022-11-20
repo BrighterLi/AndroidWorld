@@ -22,5 +22,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="属性动画"/>
+    <Button
+        android:id="@+id/bt4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="view跟手移动"/>
 
 </LinearLayout>

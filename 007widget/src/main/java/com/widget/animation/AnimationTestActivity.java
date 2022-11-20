@@ -1,6 +1,5 @@
 package com.widget.animation;
 
-import android.app.Activity;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,12 +8,15 @@ import android.widget.Button;
 
 import com.widget.R;
 import com.widget.animation.activity.Activity1;
+import com.widget.animation.moveview.MoveViewActivity;
+import com.widget.animation.propertyanimation.ObjectAnimatorActivity;
 import com.widget.animation.textview.TextViewActivity;
 
 public class AnimationTestActivity extends AppCompatActivity implements View.OnClickListener{
     private Button btl;
     private Button bt2;
     private Button bt3;
+    private Button bt4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,8 @@ public class AnimationTestActivity extends AppCompatActivity implements View.OnC
         bt2.setOnClickListener(this);
         bt3 = findViewById(R.id.bt3);
         bt3.setOnClickListener(this);
+        bt4 = findViewById(R.id.bt4);
+        bt4.setOnClickListener(this);
     }
 
     @Override
@@ -40,6 +44,9 @@ public class AnimationTestActivity extends AppCompatActivity implements View.OnC
                 break;
             case R.id.bt3:
                 startActivity(new Intent(AnimationTestActivity.this, ObjectAnimatorActivity.class));
+                break;
+            case R.id.bt4:
+                startActivity(new Intent(AnimationTestActivity.this, MoveViewActivity.class));
                 break;
         }
     }
