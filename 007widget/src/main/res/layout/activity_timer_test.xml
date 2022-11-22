@@ -27,5 +27,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="view跟手移动"/>
+    <Button
+        android:id="@+id/bt5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="页面跟手移动"/>
 
 </LinearLayout>

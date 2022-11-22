@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.widget.R;
 import com.widget.animation.activity.Activity1;
 import com.widget.animation.moveview.MoveViewActivity;
+import com.widget.animation.pagescroll.PageScrollActivity;
 import com.widget.animation.propertyanimation.ObjectAnimatorActivity;
 import com.widget.animation.textview.TextViewActivity;
 
@@ -17,6 +18,7 @@ public class AnimationTestActivity extends AppCompatActivity implements View.OnC
     private Button bt2;
     private Button bt3;
     private Button bt4;
+    private Button bt5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,8 @@ public class AnimationTestActivity extends AppCompatActivity implements View.OnC
         bt3.setOnClickListener(this);
         bt4 = findViewById(R.id.bt4);
         bt4.setOnClickListener(this);
+        bt5 = findViewById(R.id.bt5);
+        bt5.setOnClickListener(this);
     }
 
     @Override
@@ -47,6 +51,9 @@ public class AnimationTestActivity extends AppCompatActivity implements View.OnC
                 break;
             case R.id.bt4:
                 startActivity(new Intent(AnimationTestActivity.this, MoveViewActivity.class));
+                break;
+            case R.id.bt5:
+                startActivity(new Intent(AnimationTestActivity.this, PageScrollActivity.class));
                 break;
         }
     }

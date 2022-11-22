@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".PageScrollActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity"
+            android:exported="false" />
+        <activity
             android:name=".MoveViewActivity"
             android:exported="false" />
         <activity
@@ -45,7 +51,8 @@
         <activity android:name=".animation.activity.Activity2" />
         <activity android:name=".animation.activity.Activity1" />
         <activity android:name=".animation.propertyanimation.ObjectAnimatorActivity" />
-        <activity android:name=".animation.moveview.MoveViewActivity"></activity>
+        <activity android:name=".animation.moveview.MoveViewActivity" />
+        <activity android:name=".animation.pagescroll.PageScrollActivity" />
         <activity android:name=".aaaview.share_a_view.ShareAView2Activity" />
         <activity android:name=".aaaview.share_a_view.ShareAViewActivity" />
         <activity android:name=".material_design.coordinatorlayout.coordinatorlayout2.CoordinatorLayout2Activity" />
@@ -145,12 +152,12 @@
             android:enabled="true"
             android:exported="true" />
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>
