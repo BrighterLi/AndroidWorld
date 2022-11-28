@@ -10,6 +10,7 @@
         <entry key="..\:/AndroidWorld/AndroidWorld/003thread/src/main/res/layout/activity_coroutines.xml" value="0.33" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_.xml" value="0.13722826086956522" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_move_view.xml" value="0.13134057971014493" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_normal_swipe_back.xml" value="0.1" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_object_animator.xml" value="0.25" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_page_scroll.xml" value="0.13020833333333334" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_recycler_view.xml" value="0.1" />
@@ -20,6 +21,7 @@
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_window.xml" value="0.25" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/item_base.xml" value="0.1" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/item_rv_height.xml" value="0.1" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/swipe_layout.xml" value="0.1" />
         <entry key="..\:/AndroidWorld/AndroidWorld/008project/src/main/res/layout/activity_scrollview.xml" value="0.1" />
         <entry key="..\:/AndroidWorld/AndroidWorld/010kotlin/src/main/res/layout/activity_flow.xml" value="0.11775362318840579" />
         <entry key="..\:/AndroidWorld/AndroidWorld/010kotlin/src/main/res/layout/activity_view_binding.xml" value="0.15052083333333333" />

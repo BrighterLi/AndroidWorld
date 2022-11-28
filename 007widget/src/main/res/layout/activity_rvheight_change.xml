@@ -9,6 +9,7 @@
 
 
     <LinearLayout
+        android:id="@+id/ll_msg"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -32,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:gravity="center"
-            android:text="下滑收拢变短"
+            android:text="bottom1"
             android:background="@color/Red900"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -44,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:gravity="center"
-        android:text="上滑展开变高"
+        android:text="bottom2"
         android:orientation="vertical"
         android:background="@color/Red900"
         android:visibility="gone">

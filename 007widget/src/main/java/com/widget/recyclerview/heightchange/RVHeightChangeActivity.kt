@@ -11,6 +11,7 @@ package com.widget.recyclerview.heightchange
 import android.os.Bundle
 import android.transition.TransitionManager
 import android.util.Log
+import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,10 +21,20 @@ import com.widget.databinding.ActivityRvheightChangeBinding
 class RVHeightChangeActivity : AppCompatActivity() {
     companion object {
         private const val TAG = "RVHeightChangeActivity"
+        private const val STATE_RV_EXPANDED = 0
+        private const val STATE_RV_NOT_EXPANDED = 1
     }
 
     private lateinit var viewBinding: ActivityRvheightChangeBinding
     private var msgList = mutableListOf<String>()
+    private var curRvState = STATE_RV_NOT_EXPANDED
+    private var rvScrollState = -1
+
+    private var startX = 0
+    private var startY = 0
+    private var offsetX = 0
+    private var offsetY = 0
+
     private val msgRvLayoutManager by lazy {
         LinearLayoutManager(this, RecyclerView.VERTICAL, false)
     }
@@ -58,24 +69,78 @@ class RVHeightChangeActivity : AppCompatActivity() {
         msgList.add("555555555555555555")
         msgList.add("66666666666666666666666")
         msgList.add("7777777777777777777777777")
-        msgList.add("8888888888888888888888888888")
+        msgList.add(
+            "8888888888888888888888888888ddddddddfffffffffffffffffffffffeeeeeeeeeeeeeeeee" +
+                    "eeeeeeeeettttttttttttttttttttttttttttttttttttqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq" +
+                    "qqqqqqqqqwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwweeeeeeeeeeee" +
+                    "eeeeeeeeeeeeeeeeeeeeeerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrryyyyyyyyyyyyyyyyyyyyyyyyyyyy" +
+                    "yyyyyygggggggggggggggggggggggg"
+        )
     }
 
     private fun initView() {
         initMsgRvView()
+
+        curRvState = STATE_RV_NOT_EXPANDED
+        viewBinding.bottom1.visibility = View.VISIBLE
+        viewBinding.bottom2.visibility = View.GONE
         viewBinding.bottom1.setOnClickListener {
-            TransitionManager.beginDelayedTransition(viewBinding.root)
-            viewBinding.bottom1.visibility = View.GONE
-            viewBinding.bottom2.visibility = View.VISIBLE
-            smoothScrollMsgRvToBottom()
+            Log.d(TAG, "[initView] bottom1 click curRvState: $curRvState")
+            if (curRvState == STATE_RV_NOT_EXPANDED) {
+                TransitionManager.beginDelayedTransition(viewBinding.root)
+                viewBinding.bottom1.visibility = View.GONE
+                viewBinding.bottom2.visibility = View.VISIBLE
+                curRvState = STATE_RV_EXPANDED
+                Log.d(TAG, "[initView] bottom1 2 click curRvState: $curRvState")
+                smoothScrollMsgRvToBottom()
+            }
         }
 
         viewBinding.bottom2.setOnClickListener {
-            TransitionManager.beginDelayedTransition(viewBinding.root)
-            viewBinding.bottom1.visibility = View.VISIBLE
-            viewBinding.bottom2.visibility = View.GONE
-            smoothScrollMsgRvToBottom()
+            Log.d(TAG, "[initView] bottom2 click curRvState: $curRvState")
+            /*if (curRvState == STATE_RV_EXPANDED) {
+                TransitionManager.beginDelayedTransition(viewBinding.root)
+                viewBinding.bottom1.visibility = View.VISIBLE
+                viewBinding.bottom2.visibility = View.GONE
+                curRvState = STATE_RV_NOT_EXPANDED
+                Log.d(TAG, "[initView] bottom2 2 click curRvState: $curRvState")
+                smoothScrollMsgRvToBottom()
+            }*/
         }
+
+        viewBinding.rv.setOnTouchListener { v, event ->
+            Log.d(TAG, "[initView] rv touch1 curRvState: $curRvState offsetY: $offsetY")
+            when(event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    startX = event.x.toInt()
+                    startY = event.y.toInt()
+                }
+                MotionEvent.ACTION_UP -> {
+                    offsetX = (event.x - startX).toInt()
+                    offsetY = (event.y - startY).toInt()
+                    /*if(offsetY > 1 && curRvState == STATE_RV_NOT_EXPANDED) {
+                        Log.d(TAG, "[initView] rv touch2 curRvState: $curRvState offsetY: $offsetY")
+                        viewBinding.bottom1.visibility = View.VISIBLE
+                        viewBinding.bottom2.visibility = View.GONE
+                        curRvState = STATE_RV_EXPANDED
+                        true
+                    }*/
+                }
+            }
+            false
+        }
+
+        /*viewBinding.rv.setOnClickListener {
+            Log.d(TAG, "[initView] rv click curRvState: $curRvState")
+            if(curRvState == STATE_RV_NOT_EXPANDED) {
+                TransitionManager.beginDelayedTransition(viewBinding.root)
+                viewBinding.bottom1.visibility = View.GONE
+                viewBinding.bottom2.visibility = View.VISIBLE
+                curRvState = STATE_RV_EXPANDED
+                Log.d(TAG, "[initView] rv 2 click curRvState: $curRvState")
+                smoothScrollMsgRvToBottom()
+            }
+        }*/
     }
 
     private fun initMsgRvView() {
@@ -86,27 +151,46 @@ class RVHeightChangeActivity : AppCompatActivity() {
             addOnScrollListener(object : RecyclerView.OnScrollListener() {
                 override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                     super.onScrollStateChanged(recyclerView, newState)
-                    Log.d(TAG, "[initMsgRvView] newState: $newState" )
-                    if(newState == RecyclerView.SCROLL_STATE_IDLE) {
-                        if(!canScrollVertically(1)) {
-                            Log.d(TAG, "[initMsgRvView] to bottom newState: $newState")
+                    rvScrollState = newState
+                    Log.d(TAG, "[initMsgRvView] curRvState: $curRvState offsetY: $offsetY newState: $newState")
+                    if (newState == RecyclerView.SCROLL_STATE_IDLE && curRvState == STATE_RV_EXPANDED && offsetY < 0) {
+                        if (!canScrollVertically(1)) {
+                            Log.d(TAG, "[initMsgRvView] to bottom curRvState: $curRvState")
                             TransitionManager.beginDelayedTransition(viewBinding.root)
                             viewBinding.bottom1.visibility = View.VISIBLE
                             viewBinding.bottom2.visibility = View.GONE
-                            smoothScrollMsgRvToBottom()
+                            curRvState = STATE_RV_NOT_EXPANDED
+                            //smoothScrollMsgRvToBottom()
+                            Log.d(TAG, "[initMsgRvView] to bottom curRvState2: $curRvState")
                         }
                     }
+                }
+
+                override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                    super.onScrolled(recyclerView, dx, dy)
+                    Log.d(TAG, "[initMsgRvView] onScrolled curRvState: $curRvState offsetY: $offsetY dy: $dy rvScrollState: $rvScrollState")
+                    /*if (rvScrollState == RecyclerView.SCROLL_STATE_IDLE && curRvState == STATE_RV_EXPANDED && offsetY < 0) {
+                        if (!canScrollVertically(1)) {
+                            Log.d(TAG, "[initMsgRvView] to bottom curRvState: $curRvState")
+                            TransitionManager.beginDelayedTransition(viewBinding.root)
+                            viewBinding.bottom1.visibility = View.VISIBLE
+                            viewBinding.bottom2.visibility = View.GONE
+                            curRvState = STATE_RV_NOT_EXPANDED
+                            //smoothScrollMsgRvToBottom()
+                            Log.d(TAG, "[initMsgRvView] onScrolled curRvState2: $curRvState")
+                        }
+                    }*/
                 }
             })
         }
     }
 
     private fun scrollMsgRvToBottom() {
-        viewBinding.rv.scrollToPosition(msgListAdapter.data.size -1)
+        viewBinding.rv.scrollToPosition(msgListAdapter.data.size - 1)
     }
 
     private fun smoothScrollMsgRvToBottom() {
-        viewBinding.rv.smoothScrollToPosition(msgListAdapter.data.size -1)
+        viewBinding.rv.smoothScrollToPosition(msgListAdapter.data.size - 1)
     }
 
 }
