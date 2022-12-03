@@ -1,0 +1,24 @@
+Android创建不同的productFlavor: https://blog.csdn.net/qq_29951983/article/details/112850442
+Android之通过配置Flavor实现一个项目打包成多个apk: https://www.cnblogs.com/zhujiabin/p/7650924.html
+
+构建类型 = productFlavors + buildTypes
+
+manifestPlaceholders
+可以替换androidmanifest文件中的标签，可作为快速渠道打包替换渠道名的一种方式，也可以自定义标签用来替
+换需要的文本，多作为不同环境不同key的修改。
+
+替换Assets资源打包
+
+AndroidManifest
+Android基于ProductFlavors动态配置权限:https://blog.csdn.net/u012971339/article/details/106191541
+Android 多版本 flavor 配置之资源文件和清单文件合并介绍: https://my.oschina.net/u/4478396/blog/5557088
+
+不同so库在选择
+Android-Studio Gradle Build Flavor 使用小结: https://www.jianshu.com/p/4d81abcb8115
+
+不同jar包的选择
+android 不同渠道 添加不同依赖jar 使用不同代码 https://blog.csdn.net/qq_38373150/article/details/102653296
+
+不同的类的选择
+
+compileOnly: 只编译依赖不打入包里

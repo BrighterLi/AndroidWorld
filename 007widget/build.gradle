@@ -32,6 +32,35 @@ android {
     buildFeatures {
         viewBinding true
     }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            zipAlignEnabled false
+            //manifestPlaceholders = [area: "domestic"]
+        }
+    }
+    flavorDimensions "area"
+    productFlavors {
+        domestic {
+            dimension "area"
+        }
+        export {
+            dimension "area"
+        }
+    }
+
+    sourceSets {
+        domestic {
+        }
+        export {
+        }
+    }
 }
 
 repositories {
@@ -42,6 +71,9 @@ repositories {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //不同渠道包加载不同的jar包
+    //domesticCompile files('src/main/lib/test.jar')
 
     implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
     implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
