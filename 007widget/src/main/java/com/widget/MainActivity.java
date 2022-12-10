@@ -2,7 +2,11 @@ package com.widget;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -93,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        getChannel();
         mLvMain = findViewById(R.id.lv_main);
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, mDataList);
         mLvMain.setAdapter(arrayAdapter);
@@ -195,5 +200,27 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    /**
+     * 获取渠道号
+     */
+    private void getChannel() {
+        Log.i("Channel","getChannel");
+        try {
+            PackageManager packageManager = getApplicationContext().getPackageManager();
+            if (packageManager != null) {
+                ApplicationInfo applicationInfo = packageManager.getApplicationInfo(getApplicationContext().getPackageName(), PackageManager.GET_META_DATA);
+                if (applicationInfo != null) {
+                    if (applicationInfo.metaData != null) {
+                        String channel = applicationInfo.metaData.get("Widget")+"";
+                        Log.i("Channel","当前的渠道为:"+channel );
+                    }
+                }
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+            Log.e("Channel",e.getMessage()+"");
+        }
     }
 }

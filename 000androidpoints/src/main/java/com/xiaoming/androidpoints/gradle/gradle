@@ -22,3 +22,12 @@ android 不同渠道 添加不同依赖jar 使用不同代码 https://blog.csdn.
 不同的类的选择
 
 compileOnly: 只编译依赖不打入包里
+
+
+sourceSets配置
+sourceSets——安卓gradle https://blog.csdn.net/weixin_37625173/article/details/102616036
+
+
+获取渠道号
+AndroidStudio 多渠道打包及获取渠道值以及如何转义纯数字：http://events.jianshu.io/p/e2756dee05ae
+AndroidManifest.xml文件详解（meta-data）https://www.cnblogs.com/zhangxia/p/4958276.html
