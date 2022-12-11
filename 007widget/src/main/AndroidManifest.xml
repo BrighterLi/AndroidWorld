@@ -14,7 +14,7 @@
             android:name="Widget"
             android:value="${CHANNEL_VALUE}"/>
         <activity
-            android:name="com.widget.recyclerview.scroll.ScrollActivity"
+            android:name="com.widget.recyclerview.scroll.RvScrollControlActivity"
             android:exported="false" />
         <activity android:name="com.widget.window.WindowActivity" />
         <activity
