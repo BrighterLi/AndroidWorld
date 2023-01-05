@@ -9,7 +9,6 @@ import android.widget.Button;
 import com.widget.R;
 import com.widget.animation.activity.Activity1;
 import com.widget.animation.moveview.MoveViewActivity;
-import com.widget.animation.pagescroll.NormalSwipeBackActivity;
 import com.widget.animation.pagescroll.PageScrollActivity;
 import com.widget.animation.propertyanimation.ObjectAnimatorActivity;
 import com.widget.animation.textview.TextViewActivity;
@@ -55,7 +54,7 @@ public class AnimationTestActivity extends AppCompatActivity implements View.OnC
                 break;
             case R.id.bt5:
                 //startActivity(new Intent(AnimationTestActivity.this, PageScrollActivity.class));
-                startActivity(new Intent(AnimationTestActivity.this, NormalSwipeBackActivity.class));
+                startActivity(new Intent(AnimationTestActivity.this, PageScrollActivity.class));
                 break;
         }
     }
