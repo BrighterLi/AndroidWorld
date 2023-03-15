@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <meta-data
-            android:name="Widget"
-            android:value="${CHANNEL_VALUE}"/>
+        <activity
+            android:name=".animation.pagescroll.demo2.SecondScrollActivity"
+            android:exported="false" />
+        <activity
+            android:name=".animation.pagescroll.demo2.PageScrollActivity2"
+            android:exported="false" />
         <activity
             android:name="com.widget.recyclerview.scroll.RvScrollControlActivity"
             android:exported="false" />
@@ -122,6 +124,10 @@
         </activity>
         <activity android:name=".video.playvideo.VideoActivity" />
 
+        <meta-data
+            android:name="Widget"
+            android:value="${CHANNEL_VALUE}" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.widget.FileProvider"
@@ -147,12 +153,12 @@
             android:enabled="true"
             android:exported="true" />
     </application>
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
 
 </manifest>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.widget.animation.pagescroll.demo2.SildingFinishLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/slide_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Red900"
+    tools:context=".animation.pagescroll.demo2.SecondScrollActivity">
+
+</com.widget.animation.pagescroll.demo2.SildingFinishLayout>

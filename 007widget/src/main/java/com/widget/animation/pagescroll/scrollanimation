@@ -1,4 +1,13 @@
 页面跟手滑动
+页面跟手出现，前一个页面高斯模糊或者透明度变化消失
+页面跟手消失，前一个页面高斯模糊或者透明度变化出现
+跟手消失框架/全局跟手右滑退出
+
+Activity右滑返回框架
+---SwipeBackLayout
+---https://github.com/luckybilly/SmartSwipe
+
+页面跟手滑动
 https://blog.csdn.net/LanTingShuXu/article/details/53423250
 手势滑动关闭Activity(随手指消失)的辅助类的实现: https://blog.csdn.net/LanTingShuXu/article/details/53423250
 Android 仿微信侧滑关闭页面效果: https://blog.csdn.net/qwe511455842/article/details/49496511
@@ -6,3 +15,13 @@ Android从上往下滑动或从下往上滑动结束Activity https://blog.csdn.n
 实现Activity滑动退出: https://www.jianshu.com/p/7b0dfd2bf011
 仿微信：Activity跟随手指滑动效果SlideFinishActivity https://blog.csdn.net/liuyi1207164339/article/details/71940950
 https://blog.csdn.net/weixin_39557576/article/details/117628832
+
+android右滑返回动画,Android仿微信右滑返回功能的实例代码:https://blog.csdn.net/weixin_32495691/article/details/117554975
+android一级界面,Android滑动返回上一级界面: https://blog.csdn.net/weixin_36339234/article/details/117736100
+
+ViewDragHelper 部分原理分析 http://blog.qiji.tech/archives/8295
+Android 实现滑动的几种方法 http://blog.qiji.tech/archives/8295
+SwipeBackLayout源码解析 https://blog.csdn.net/yoonerloop/article/details/78839322
+Android ViewDragHelper源码解析 https://www.jianshu.com/p/3e2e1775f5b6
+
+Android 向右滑动销毁（finish）Activity, 随着手势的滑动而滑动的效果：https://blog.csdn.net/xiaanming/article/details/20934541
