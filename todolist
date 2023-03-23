@@ -1,1 +1,28 @@
-1、页面跟手滑动
+专业；CY；英语；锻炼
+Afr list
+1、动画
+页面跟手滑动
+页面间view过渡动画
+列表弹簧效果动画
+2、框架
+mvvm、mvi
+recyclerview
+dependency injection（DI）依赖注入：Dragger、Hilt、koin
+viewmodel
+room
+3、网络
+4、自定义View、事件冲突
+列表下滑到顶后，外部列表继续下滑/整个页面从顶到底下滑退出
+事件拦截分发
+5、性能优化
+内存
+卡顿
+6、多线程
+
+Study list
+1、解耦方式
+2、provider
+3、通知
+4、数据库
+
+
