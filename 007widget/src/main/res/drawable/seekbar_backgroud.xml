@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="0"
+        android:endColor="#FFFFFF"
+        android:startColor="#000000"
+        android:type="linear" />
+    <corners android:radius="20dp"/>
+    <size android:height="20dp"/>
+    &lt;!&ndash;<solid android:color="@color/Blue900"/>&ndash;&gt;
+</shape>-->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- 添加一个颜色为"#1F000000"的线条 -->
+<item>
+    <shape android:shape="oval">
+        <solid android:color="@color/Red900" />
+        <size android:width="40dp" android:height="40dp" />
+    </shape>
+</item>
+<!-- 设置SeekBar的背景颜色 -->
+<item>
+    <shape android:shape="rectangle">
+        <gradient
+            android:angle="0"
+            android:endColor="#FFFFFF"
+            android:startColor="#000000"
+            android:type="linear" />
+        <corners android:radius="20dp"/>
+    </shape>
+</item>
+</layer-list>

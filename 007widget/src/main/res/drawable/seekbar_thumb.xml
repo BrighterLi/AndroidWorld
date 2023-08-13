@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- seekbar_thumb.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 添加一个颜色为"#1F000000"的圆环 -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#1F000000" />
+            <size android:width="36dp" android:height="36dp" />
+        </shape>
+    </item>
+    <!-- 添加一个36dp大小的白色圆 -->
+    <item android:top="2dp" android:left="2dp" android:right="2dp" android:bottom="2dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" />
+            <size android:width="35.5dp" android:height="35.5dp" />
+        </shape>
+    </item>
+    <!-- 添加一个28dp大小的红色圆 -->
+    <item android:top="6dp" android:left="6dp" android:right="6dp" android:bottom="6dp">
+        <shape android:shape="oval">
+            <solid android:color="#FF0000" />
+            <size android:width="28dp" android:height="28dp" />
+        </shape>
+    </item>
+</layer-list>

@@ -34,6 +34,7 @@ import com.widget.scroll.doublescroll.scrollviewrecyclerview.ScrollviewActivityD
 import com.widget.scroll.scrollconflict.demo1.ScrollConflictActivity;
 import com.widget.scroll.scrollconflict.demo2.ScrollConflict2Activity;
 import com.widget.scroll.scrollconflict.demo3.ScrollConflict3Activity;
+import com.widget.seekbar.SeekbarActivity;
 import com.widget.statusbar.StatusBarTestActivity;
 import com.widget.animation.AnimationTestActivity;
 import com.widget.textview.TextViewTestActivity;
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("Camera"); //26
         mDataList.add("Notification"); //27
         mDataList.add("window"); //28
-
+        mDataList.add("SeekBar"); //29
     }
 
     private void initView() {
@@ -196,6 +197,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 28:  //window
                         startActivity(new Intent(MainActivity.this, WindowActivity.class));
+                        break;
+                    case 29:  //SeekBar
+                        startActivity(new Intent(MainActivity.this, SeekbarActivity.class));
                         break;
                 }
             }

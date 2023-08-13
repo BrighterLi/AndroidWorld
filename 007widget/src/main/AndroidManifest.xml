@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".SeekbarActivity"
+            android:exported="false" />
+        <activity
             android:name=".animation.pagescroll.demo2.SecondScrollActivity"
             android:exported="false" />
         <activity
@@ -123,6 +126,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".video.playvideo.VideoActivity" />
+        <activity android:name=".seekbar.SeekbarActivity"/>
 
         <meta-data
             android:name="Widget"
@@ -153,12 +157,12 @@
             android:enabled="true"
             android:exported="true" />
     </application>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-
     <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>

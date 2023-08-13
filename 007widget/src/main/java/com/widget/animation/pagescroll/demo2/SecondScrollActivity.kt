@@ -16,9 +16,13 @@ class SecondScrollActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-        viewBinding.slideLayout.setOnSildingFinishListener {
-            finish()
-        }
+        viewBinding.slideLayout.setOnSildingFinishListener(object:
+            SildingFinishLayout.OnSildingFinishListener {
+            override fun onSildingFinish() {
+                finish()
+            }
+
+        })
         viewBinding.slideLayout
     }
 }
