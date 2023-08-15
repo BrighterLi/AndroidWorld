@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SeekbarActivity"
+            android:name=".seekbar.SeekbarActivity"
             android:exported="false" />
         <activity
             android:name=".animation.pagescroll.demo2.SecondScrollActivity"
@@ -126,7 +126,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".video.playvideo.VideoActivity" />
-        <activity android:name=".seekbar.SeekbarActivity"/>
 
         <meta-data
             android:name="Widget"
