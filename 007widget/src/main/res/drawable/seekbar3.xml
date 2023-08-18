@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+   <!-- 添加一个颜色为"#1F000000"的线条 -->
+   <item>
+      <shape android:shape="oval">
+         <solid android:color="@color/Red900" />
+         <size android:width="40dp" android:height="40dp" />
+      </shape>
+   </item>
+   <!-- 设置SeekBar的背景颜色 -->
+   <item>
+      <shape android:shape="rectangle">
+         <gradient
+             android:angle="0"
+             android:endColor="#FFFFFF"
+             android:startColor="#000000"
+             android:type="linear" />
+         <corners android:radius="20dp"/>
+      </shape>
+   </item>
+</layer-list>
+
+
+
+<!--
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+   <item>
+      <shape android:shape="rectangle">
+         <solid android:color="@color/color_005eaa" />  &lt;!&ndash; 设置滑动条的背景颜色 &ndash;&gt;
+         <corners android:radius="10dp" />  &lt;!&ndash; 设置滑动条的圆角半径 &ndash;&gt;
+      </shape>
+   </item>
+   <item>
+      <shape android:shape="oval">
+         <solid android:color="@color/Red900" />  &lt;!&ndash; 设置椭圆环的颜色 &ndash;&gt;
+         <size android:width="100dp" android:height="100dp" />  &lt;!&ndash; 设置椭圆环的大小 &ndash;&gt;
+      </shape>
+   </item>
+   <item>
+      <shape android:shape="oval">
+         <solid android:color="@color/Blue900" />  &lt;!&ndash; 设置椭圆环边框的颜色 &ndash;&gt;
+         <size android:width="102dp" android:height="102dp" />  &lt;!&ndash; 设置椭圆环边框的大小 &ndash;&gt;
+      </shape>
+   </item>
+</layer-list>
+-->
+
+
+
+
+
+
+
+
+
