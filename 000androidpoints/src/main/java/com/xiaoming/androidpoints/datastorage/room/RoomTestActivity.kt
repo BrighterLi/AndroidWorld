@@ -2,6 +2,7 @@ package com.xiaoming.androidpoints.datastorage.room
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.SeekBar
 import android.widget.Toast
@@ -20,7 +21,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 //https://www.codeleading.com/article/34856435475/#google_vignette
-class RoomActivity : AppCompatActivity() {
+class RoomTestActivity : AppCompatActivity() {
     private val TAG = "RoomTestActivity"
     private lateinit var studentDao: StudentDao
     private lateinit var adapter: MyListAdapter
@@ -36,9 +37,9 @@ class RoomActivity : AppCompatActivity() {
         studentDao = MyDateBaseHelper.getInstance(applicationContext)!!.getStudentDao()
 
         GlobalScope.launch(Dispatchers.Main) {
-            adapter = MyListAdapter(this@RoomActivity)
-            recycler.layoutManager = LinearLayoutManager(this@RoomActivity)
-            recycler.addItemDecoration(DividerItemDecoration(this@RoomActivity, RecyclerView.VERTICAL))
+            adapter = MyListAdapter(this@RoomTestActivity)
+            recycler.layoutManager = LinearLayoutManager(this@RoomTestActivity)
+            recycler.addItemDecoration(DividerItemDecoration(this@RoomTestActivity, RecyclerView.VERTICAL))
             recycler.adapter = adapter
 
             updateList()
@@ -60,7 +61,6 @@ class RoomActivity : AppCompatActivity() {
         }
     }
 
-
     private fun btnClick(view: View) {
         when (view.id){
             R.id.button ->{
@@ -80,8 +80,9 @@ class RoomActivity : AppCompatActivity() {
                 //删除seekBar选中的id
                 GlobalScope.launch(Dispatchers.Main){
                     val student = getStudent(seekBar.progress)
+                    Log.d(TAG, "btnDelete student: $student  progress: ${seekBar.progress}")
                     if(student == null){
-                        Toast.makeText(this@RoomActivity,"student == null",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@RoomTestActivity,"student == null",Toast.LENGTH_SHORT).show()
                         return@launch
                     }
                     studentDao.deleteStudent(student)
@@ -92,8 +93,9 @@ class RoomActivity : AppCompatActivity() {
                 //更新，把seekBar选中的id的那个对象修改名字和年龄
                 GlobalScope.launch(Dispatchers.Main){
                     val student = getStudent(seekBar.progress)
+                    Log.d(TAG, "btnUpdate student: $student progress: ${seekBar.progress}")
                     if(student == null){
-                        Toast.makeText(this@RoomActivity,"student == null",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@RoomTestActivity,"student == null",Toast.LENGTH_SHORT).show()
                         return@launch
                     }
                     student.age = 25
@@ -107,6 +109,7 @@ class RoomActivity : AppCompatActivity() {
 
     private suspend fun getStudent(progress:Int):Student?{
         val id = adapter.currentList[progress].id
+        Log.d(TAG, "getStudent id: $id")
         return withContext(Dispatchers.IO){
             studentDao.getStudent(id)
         }
@@ -114,11 +117,12 @@ class RoomActivity : AppCompatActivity() {
 
     private suspend fun updateList(){
         val list = withContext(Dispatchers.IO){
+            Log.d(TAG, "updateList")
             studentDao.getAllStudents()
         }
+        Log.d(TAG, "updateList list: $list")
         adapter.submitList(list)
         seekBar.max = list.size - 1
         seekBar.progress = 0
     }
-
 }

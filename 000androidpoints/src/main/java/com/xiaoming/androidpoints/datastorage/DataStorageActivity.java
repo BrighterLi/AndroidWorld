@@ -9,11 +9,12 @@ import android.widget.Button;
 import com.xiaoming.androidpoints.R;
 import com.xiaoming.androidpoints.datastorage.File.FileActivity;
 import com.xiaoming.androidpoints.datastorage.cp.CPActivity;
-import com.xiaoming.androidpoints.datastorage.room.RoomActivity;
+import com.xiaoming.androidpoints.datastorage.room.RoomTestActivity;
 
 public class DataStorageActivity extends Activity implements View.OnClickListener{
     private Button mBtFile;
     private Button mBtCP;
+    private Button mBtRoom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,8 @@ public class DataStorageActivity extends Activity implements View.OnClickListene
         mBtFile.setOnClickListener(this);
         mBtCP = findViewById(R.id.bt_cp);
         mBtCP.setOnClickListener(this);
+        mBtRoom = findViewById(R.id.bt_room);
+        mBtRoom.setOnClickListener(this);
     }
 
     @Override
@@ -40,7 +43,7 @@ public class DataStorageActivity extends Activity implements View.OnClickListene
                 startActivity(new Intent(DataStorageActivity.this, CPActivity.class));
                 break;
             case R.id.bt_room:
-                startActivity(new Intent(DataStorageActivity.this, RoomActivity.class));
+                startActivity(new Intent(DataStorageActivity.this, RoomTestActivity.class));
                 break;
         }
     }
