@@ -11,11 +11,13 @@ import com.xiaoming.androidpoints.datastorage.File.FileActivity;
 import com.xiaoming.androidpoints.datastorage.cp.CPActivity;
 import com.xiaoming.androidpoints.datastorage.cp.demo2.CpActivity2;
 import com.xiaoming.androidpoints.datastorage.room.RoomTestActivity;
+import com.xiaoming.androidpoints.datastorage.sqlite.SqliteActivity;
 
 public class DataStorageActivity extends Activity implements View.OnClickListener{
     private Button mBtFile;
     private Button mBtCP;
     private Button mBtRoom;
+    private Button mSqlite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,8 @@ public class DataStorageActivity extends Activity implements View.OnClickListene
         mBtCP.setOnClickListener(this);
         mBtRoom = findViewById(R.id.bt_room);
         mBtRoom.setOnClickListener(this);
+        mSqlite = findViewById(R.id.bt_sqlite);
+        mSqlite.setOnClickListener(this);
     }
 
     @Override
@@ -46,6 +50,9 @@ public class DataStorageActivity extends Activity implements View.OnClickListene
                 break;
             case R.id.bt_room:
                 startActivity(new Intent(DataStorageActivity.this, RoomTestActivity.class));
+                break;
+            case R.id.bt_sqlite:
+                startActivity(new Intent(DataStorageActivity.this, SqliteActivity.class));
                 break;
         }
     }

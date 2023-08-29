@@ -23,5 +23,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="room"/>
+    <Button
+        android:id="@+id/bt_sqlite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sqlite"/>
 
 </LinearLayout>

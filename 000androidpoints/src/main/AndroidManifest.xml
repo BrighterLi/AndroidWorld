@@ -137,19 +137,19 @@
         </activity>
         <activity android:name=".aaajavaknowledge.JavaKnowledgeActivity" />
         <activity android:name=".datastorage.cp.CPActivity" />
-        <activity android:name=".datastorage.cp.demo2.CpActivity2"/>
+        <activity android:name=".datastorage.cp.demo2.CpActivity2" />
         <activity android:name=".datastorage.room.RoomTestActivity" />
+        <activity android:name="com.xiaoming.androidpoints.datastorage.sqlite.SqliteActivity"/>
 
         <provider
             android:name=".datastorage.cp.UserContentProvider"
             android:authorities="com.example.iplayer.testprovider"
             android:exported="true" />
-
         <provider
             android:name=".datastorage.cp.demo2.MyContentProvider"
             android:authorities="cn.cxy.contentproviderdemo.provider"
             android:enabled="true"
-            android:exported="true"></provider>
+            android:exported="true" />
 
         <service
             android:name=".service.demo4.TService"
