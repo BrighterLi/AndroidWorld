@@ -13,6 +13,7 @@ Sqlite
 greendao
 
 ContentProvider
+https://blog.csdn.net/qq_32920803/article/details/55001307
 Android ContentProvider 完全解析及简单DEMO:https://blog.csdn.net/yhaolpz/article/details/51304345
 ContentProvider 本来它的作用只是提供内容性质的跨进程访问。APP-A通过APP-B的ContentProvider相关实现，可以获取B的向外暴露的SQL或者SP数据
 

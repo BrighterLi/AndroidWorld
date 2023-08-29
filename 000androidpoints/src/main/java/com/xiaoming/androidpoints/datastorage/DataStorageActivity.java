@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.xiaoming.androidpoints.R;
 import com.xiaoming.androidpoints.datastorage.File.FileActivity;
 import com.xiaoming.androidpoints.datastorage.cp.CPActivity;
+import com.xiaoming.androidpoints.datastorage.cp.demo2.CpActivity2;
 import com.xiaoming.androidpoints.datastorage.room.RoomTestActivity;
 
 public class DataStorageActivity extends Activity implements View.OnClickListener{
@@ -40,7 +41,8 @@ public class DataStorageActivity extends Activity implements View.OnClickListene
                 startActivity(new Intent(DataStorageActivity.this, FileActivity.class));
                 break;
             case R.id.bt_cp:
-                startActivity(new Intent(DataStorageActivity.this, CPActivity.class));
+                //startActivity(new Intent(DataStorageActivity.this, CPActivity.class));
+                startActivity(new Intent(DataStorageActivity.this, CpActivity2.class));
                 break;
             case R.id.bt_room:
                 startActivity(new Intent(DataStorageActivity.this, RoomTestActivity.class));

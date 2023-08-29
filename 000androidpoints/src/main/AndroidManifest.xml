@@ -17,15 +17,11 @@
         <activity android:name=".activity.activitystack.Activity2" />
         <activity android:name=".activity.activitystack.ActivityStackActivity" />
         <activity android:name=".service.demo4.ServiceTest4Activity" />
-
         <activity android:name=".service.demo2.ServiceTest2Activity" />
         <activity android:name=".service.ServiceTestActivity" />
-
         <activity android:name=".layout.relativelayout.RelativeLayoutDemoActivity" />
-
         <activity android:name=".aaajavaknowledge.aop.aspectj.AspectJDemoActivity" />
         <activity android:name=".aaabug.lx.AnimationBug.ThirdActivity" />
-
         <activity android:name=".aaabug.lx.AnimationBug.SecondActivity" />
         <activity android:name=".aaabug.lx.AnimationBug.FirstActivity" />
         <activity android:name=".aaabug.BugTestActivity" />
@@ -141,13 +137,19 @@
         </activity>
         <activity android:name=".aaajavaknowledge.JavaKnowledgeActivity" />
         <activity android:name=".datastorage.cp.CPActivity" />
-        <activity android:name=".datastorage.room.RoomTestActivity"/>
+        <activity android:name=".datastorage.cp.demo2.CpActivity2"/>
+        <activity android:name=".datastorage.room.RoomTestActivity" />
 
         <provider
-            android:authorities="com.example.iplayer.testprovider"
             android:name=".datastorage.cp.UserContentProvider"
-            android:exported="true"
-            />
+            android:authorities="com.example.iplayer.testprovider"
+            android:exported="true" />
+
+        <provider
+            android:name=".datastorage.cp.demo2.MyContentProvider"
+            android:authorities="cn.cxy.contentproviderdemo.provider"
+            android:enabled="true"
+            android:exported="true"></provider>
 
         <service
             android:name=".service.demo4.TService"
@@ -165,7 +167,6 @@
             android:name=".service.LocalService"
             android:enabled="true"
             android:exported="true" />
-
         <service
             android:name=".floating.floating.service.FloatingService2"
             android:enabled="true"
