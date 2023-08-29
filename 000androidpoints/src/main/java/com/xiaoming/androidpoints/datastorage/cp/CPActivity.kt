@@ -6,12 +6,15 @@ import android.database.Cursor
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.WindowManager
 import com.xiaoming.androidpoints.R
+import java.util.logging.Logger
 
 class CPActivity : AppCompatActivity() {
 
     companion object {
+        private const val TAG = "CPActivity"
         private var helperDB: OpenHelperDB? = null
         private var resolver: ContentResolver? = null
         private val NAME: String = "name"
@@ -31,7 +34,7 @@ class CPActivity : AppCompatActivity() {
             resolver = contentResolver
             helperDB = OpenHelperDB(this, "test.db", 1);
 //            helperDB?.readableDatabase?.execSQL("insert into user values(null, ?)", arrayOf("旧名"))
-//            insert()
+            insert()
 //            delete()
             update()
             query()
@@ -49,6 +52,7 @@ class CPActivity : AppCompatActivity() {
             while(cursor.moveToNext()){
                 var index_name:Int = cursor.getColumnIndex(NAME)
                 println(cursor.getString(index_name))
+                Log.d(TAG, "query index_name: $index_name : ${cursor.getString(index_name)}")
             }
         }
     }
@@ -78,5 +82,6 @@ class CPActivity : AppCompatActivity() {
         values.put(NAME, "新")
         var select:String = "$NAME = ?"
         resolver?.update(ALL_URI, values, select, arrayOf("旧名"))
+        Log.d(TAG, "update select: $select")
     }
 }

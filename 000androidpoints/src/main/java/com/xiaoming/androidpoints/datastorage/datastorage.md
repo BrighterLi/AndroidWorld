@@ -13,7 +13,13 @@ Sqlite
 greendao
 
 ContentProvider
+Android ContentProvider 完全解析及简单DEMO:https://blog.csdn.net/yhaolpz/article/details/51304345
 ContentProvider 本来它的作用只是提供内容性质的跨进程访问。APP-A通过APP-B的ContentProvider相关实现，可以获取B的向外暴露的SQL或者SP数据
+
+在创建ContentProvider前，首先要实现底层的数据源，数据源包括数据库、文件系统或网络等，
+然后继承ContentProvider类中实现基本数据操作的接口函数。调用者不能直接调用ContentProvider
+的接口函数，需要通过ContentResolver对象，通过URI间接调用ContentProvider。
+
 
 ContentProvider：一般是成熟的App暴露自己的数据，其他app可以获取到数据，数据本身不是实时的。
 Broadcast、Aidl、Messager中数据的实时更新的
