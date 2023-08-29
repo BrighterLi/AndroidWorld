@@ -7,8 +7,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/activity_cp.xml" value="0.14583333333333334" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/activity_data_storage.xml" value="0.25" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/activity_main2.xml" value="0.1" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/activity_room.xml" value="0.15715579710144928" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/adapter_room_item.xml" value="0.1" />
         <entry key="..\:/AndroidWorld/AndroidWorld/003thread/src/main/res/layout/activity_coroutines.xml" value="0.33" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/drawable/dot_selected.xml" value="0.1" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/drawable/seekbar.xml" value="0.1" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/drawable/seekbar2.xml" value="0.1" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/drawable/seekbar3.xml" value="0.1" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/drawable/seekbar_backgroud.xml" value="0.1" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/drawable/seekbar_slider.xml" value="0.1" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_.xml" value="0.13722826086956522" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_fold_and_expansion.xml" value="0.10572916666666667" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_move_view.xml" value="0.13134057971014493" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_normal_swipe_back.xml" value="0.1" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_object_animator.xml" value="0.25" />
@@ -20,6 +32,7 @@
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_scrollview.xml" value="0.1" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_scrollview_demo.xml" value="0.1" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_second_scroll.xml" value="0.10190217391304347" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_seekbar.xml" value="0.1" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_timer_test.xml" value="0.1" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_view_pager2.xml" value="0.10190217391304347" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/activity_window.xml" value="0.25" />

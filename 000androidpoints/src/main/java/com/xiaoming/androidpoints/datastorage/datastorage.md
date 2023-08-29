@@ -13,5 +13,16 @@ Sqlite
 greendao
 
 ContentProvider
+ContentProvider 本来它的作用只是提供内容性质的跨进程访问。APP-A通过APP-B的ContentProvider相关实现，可以获取B的向外暴露的SQL或者SP数据
+
+ContentProvider：一般是成熟的App暴露自己的数据，其他app可以获取到数据，数据本身不是实时的。
+Broadcast、Aidl、Messager中数据的实时更新的
+采用ContentProvider方式，其解耦了底层数据的存储方式，使得无论底层数据存储采用何种方式，外界对数据的访问方式都是统一的，这使得访问简单高效
+如一开始数据存储方式 采用 SQLite 数据库，后来把数据库换成MongoDB ，也不会对上层数据 ContentProvider 使用代码产生影响
+
+ContentProvider 也分为三种，一，作为数据的存储和查询，也就是别人来调用你ContentProvider。二，调用者ContentResolver ，用来调用插入和查询数据。三，观察者ContentObserver ,比如监控短信的变化。
+
 
 room
++flow 监听
+数据库升级

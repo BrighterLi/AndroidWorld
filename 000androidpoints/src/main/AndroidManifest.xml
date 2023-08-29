@@ -140,6 +140,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".aaajavaknowledge.JavaKnowledgeActivity" />
+        <activity android:name=".datastorage.cp.CPActivity" />
+        <activity android:name=".datastorage.room.RoomTestActivity"/>
+
+        <provider
+            android:authorities="com.example.iplayer.testprovider"
+            android:name=".datastorage.cp.UserContentProvider"
+            android:exported="true"
+            />
+
         <service
             android:name=".service.demo4.TService"
             android:enabled="true"

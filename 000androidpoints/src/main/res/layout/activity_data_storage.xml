@@ -4,12 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.xiaoming.androidpoints.datastorage.DataStorageActivity">
+    tools:context="com.xiaoming.androidpoints.datastorage.DataStorageActivity"
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/bt_file"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="file"/>
+
+    <Button
+        android:id="@+id/bt_cp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="contentprovider"/>
+    <Button
+        android:id="@+id/bt_room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="room"/>
 
 </LinearLayout>
