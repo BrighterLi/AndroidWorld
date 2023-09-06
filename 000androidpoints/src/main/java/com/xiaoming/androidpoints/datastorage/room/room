@@ -1,0 +1,5 @@
+Room数据库配合Flow监听数据变化 https://www.jianshu.com/p/86979a70543c
+Kotlin协程 - - - Flow+Room 数据库: https://blog.csdn.net/m0_47914176/article/details/123134915
+Android数据库的使用：room: https://zhuanlan.zhihu.com/p/103143431
+Room 使用 Flow 和 collect() 监听数据库的变化、动态更新页面 https://blog.csdn.net/jiaoyangwm/article/details/127106606
+kotlin--Flow结合Room运用  https://blog.csdn.net/qq_24000367/article/details/120795904

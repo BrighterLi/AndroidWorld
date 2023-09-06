@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".RoomActivity2"
+            android:exported="false" />
+        <activity
             android:name=".FileProviderActivity"
             android:exported="false" />
         <activity android:name=".activity.activitystack.Activity3" />
@@ -139,8 +142,8 @@
         <activity android:name=".datastorage.cp.CPActivity" />
         <activity android:name=".datastorage.cp.demo2.CpActivity2" />
         <activity android:name=".datastorage.room.RoomTestActivity" />
-        <activity android:name="com.xiaoming.androidpoints.datastorage.sqlite.SqliteActivity"/>
-
+        <activity android:name="com.xiaoming.androidpoints.datastorage.sqlite.SqliteActivity" />
+        <activity android:name="com.xiaoming.androidpoints.datastorage.room.roomandflow.RoomFlowActivity"/>
         <provider
             android:name=".datastorage.cp.UserContentProvider"
             android:authorities="com.example.iplayer.testprovider"

@@ -11,6 +11,7 @@ import com.xiaoming.androidpoints.datastorage.File.FileActivity;
 import com.xiaoming.androidpoints.datastorage.cp.CPActivity;
 import com.xiaoming.androidpoints.datastorage.cp.demo2.CpActivity2;
 import com.xiaoming.androidpoints.datastorage.room.RoomTestActivity;
+import com.xiaoming.androidpoints.datastorage.room.roomandflow.RoomFlowActivity;
 import com.xiaoming.androidpoints.datastorage.sqlite.SqliteActivity;
 
 public class DataStorageActivity extends Activity implements View.OnClickListener{
@@ -49,7 +50,8 @@ public class DataStorageActivity extends Activity implements View.OnClickListene
                 startActivity(new Intent(DataStorageActivity.this, CpActivity2.class));
                 break;
             case R.id.bt_room:
-                startActivity(new Intent(DataStorageActivity.this, RoomTestActivity.class));
+                //startActivity(new Intent(DataStorageActivity.this, RoomTestActivity.class));
+                startActivity(new Intent(DataStorageActivity.this, RoomFlowActivity.class));
                 break;
             case R.id.bt_sqlite:
                 startActivity(new Intent(DataStorageActivity.this, SqliteActivity.class));

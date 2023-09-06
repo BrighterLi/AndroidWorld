@@ -8,10 +8,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/activity_cp.xml" value="0.14583333333333334" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/activity_cp2.xml" value="0.13405797101449277" />
         <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/activity_data_storage.xml" value="0.25" />
         <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/activity_main2.xml" value="0.1" />
         <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/activity_room.xml" value="0.15715579710144928" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/activity_room2.xml" value="0.14479166666666668" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/activity_room_flow.xml" value="0.1" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/activity_sqlite.xml" value="0.10869565217391304" />
         <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/adapter_room_item.xml" value="0.1" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/fragment_room.xml" value="0.1" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/fragment_room_and_flow.xml" value="0.1" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/item_rv.xml" value="0.16077898550724637" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/item_user.xml" value="0.1" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/item_userinfo.xml" value="0.1" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/000androidpoints/src/main/res/layout/waterfall_item2.xml" value="0.16077898550724637" />
         <entry key="..\:/AndroidWorld/AndroidWorld/003thread/src/main/res/layout/activity_coroutines.xml" value="0.33" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/drawable/dot_selected.xml" value="0.1" />
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/drawable/seekbar.xml" value="0.1" />
@@ -41,7 +51,11 @@
         <entry key="..\:/AndroidWorld/AndroidWorld/007widget/src/main/res/layout/swipe_layout.xml" value="0.1" />
         <entry key="..\:/AndroidWorld/AndroidWorld/008project/src/main/res/layout/activity_scrollview.xml" value="0.1" />
         <entry key="..\:/AndroidWorld/AndroidWorld/010kotlin/src/main/res/layout/activity_flow.xml" value="0.11775362318840579" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/010kotlin/src/main/res/layout/activity_flow2.xml" value="0.1" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/010kotlin/src/main/res/layout/activity_main.xml" value="0.16614583333333333" />
         <entry key="..\:/AndroidWorld/AndroidWorld/010kotlin/src/main/res/layout/activity_view_binding.xml" value="0.15052083333333333" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/010kotlin/src/main/res/layout/fragment_room.xml" value="0.1" />
+        <entry key="..\:/AndroidWorld/AndroidWorld/010kotlin/src/main/res/layout/item_userinfo.xml" value="0.1" />
       </map>
     </option>
   </component>
