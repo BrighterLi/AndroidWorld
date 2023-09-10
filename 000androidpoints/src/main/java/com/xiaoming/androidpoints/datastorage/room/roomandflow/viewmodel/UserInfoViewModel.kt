@@ -30,15 +30,16 @@ class UserInfoViewModel : ViewModel() {
     val id = MutableLiveData<String>()
     val name = MutableLiveData<String>()
     val age = MutableLiveData<String>()
+    val city = MutableLiveData<String>()
     private val userInfoDao: UserInfoDao by lazy {
         MyDatabase.getInstance().getUserDao()
     }
     fun insert(v: View) {
-        Log.d(TAG, "insert id.value: ${id.value} name.value: ${name.value} age.value: ${age.value}")
+        Log.d(TAG, "insert id.value: ${id.value} name.value: ${name.value} age.value: ${age.value} city: ${city.value}")
         if (id.value == null || name.value == null || age.value == null) {
             return
         }
-        val userInfo = UserInfo(id.value!!.toInt(), name.value!!, age.value!!.toInt())
+        val userInfo = UserInfo(id.value!!.toInt(), name.value!!, age.value!!.toInt(), city.value!!.toInt())
         GlobalScope.launch(Dispatchers.IO) {
             Log.d(TAG, "insert userInfo: $userInfo")
             userInfoDao.insert(userInfo)

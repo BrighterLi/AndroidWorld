@@ -25,6 +25,12 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="@{String.valueOf(userInfo.age)}" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@{String.valueOf(userInfo.city)}" />
     </LinearLayout>
 
     <data>

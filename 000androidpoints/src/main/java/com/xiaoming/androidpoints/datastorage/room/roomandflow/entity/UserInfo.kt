@@ -15,5 +15,6 @@ import androidx.room.PrimaryKey
 data class UserInfo(
     @PrimaryKey val id: Int,
     var userName: String,
-    var age: Int
+    var age: Int,
+    var city: Int
 )

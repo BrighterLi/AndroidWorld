@@ -51,6 +51,12 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="age" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="city" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -88,6 +94,14 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:text="@={userInfoViewModel.age}" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="@={userInfoViewModel.city}" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
