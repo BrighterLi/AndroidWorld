@@ -1,0 +1,14 @@
+ViewModel
+原理
+https://zhuanlan.zhihu.com/p/488904151
+
+
+LiveData
+LiveData 是 Jetpack 推出的基于观察者的消息订阅/分发的可观察数据组件，具有宿主（Activity、Fragment）生命周期感知能力，
+这种感知能力可确保 LiveData 仅分发消息给处于活跃状态的观察者，即只有处于活跃状态的观察者才能收到消息。
+LiveData 需要与 ViewModel 合起来使用
+使用 liveData 包装数据会只在界面可见状态下才传递，避免了那种界面不可见或者销毁状态下的内存泄漏的问题
+demo
+https://www.jianshu.com/p/546be976d711
+https://blog.csdn.net/
+原理
