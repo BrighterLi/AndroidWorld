@@ -12,6 +12,13 @@ https://blog.csdn.net/u012165769/article/details/109454192
 ViewModel是一个抽象类，其中只有一个onCleared()方法。当ViewModel不再被需要，
 即与之相关的Activity都被销毁时，该方法会被系统调用。我们可以在该方法中执行一些资源释放
 的相关操作。注意: 当屏幕旋转而导致的Activity重建，并不会调用该方法。
+ViewModel的功能之一是当activity重建时里面的数据不会丢失
+优点
+如果不使用ViewModel，我们一般的做法都是在activity中创建全局的成员变量int=0，然后在按钮的点击事件中直接操作该数据，并设置给TextView，而且在activity重建之后数据还会丢失，还需要我们进行额外的数据保存和恢复操作。
+通过上面简单的实例我们可以明显感受到使用了ViewModel之后，两个优点：
+1，将数据管理从activity中分离，使模块更清晰，进一步解耦
+2，同时也不用我们在额外的处理数据的保存和恢复，同样当一个activity中包含多个fragment时，也可以很方便的实现数据在各个fragment之间的共享。
+
 
 ViewModel最重要的作用是将视图与数据分离，并独立于Activity的重建
 
@@ -44,4 +51,6 @@ Activity+ Fragments时单个Fragment希望主动拿到Activity的数据完成渲
 
 总之，学习了ViewModel你会发现一种新思路去解决这些问题。既能保持数据在生命周期内的唯一性又不
 需要考虑因为异步操作导致的空指针。
+
+
 

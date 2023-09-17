@@ -1,0 +1,22 @@
+mvvm有一个很大的优点就是可以做junit test 测试， 那么理论上我们的所有的逻辑代码，
+for、if、swith等等都要写在viewmodel。view只用来展示数据，相反，写在viewmodel的代
+码也应该是可测试的java 代码，不能包含android的东西
+
+
+1.Model负责数据实体模型、数据获取、存储等。
+
+2.View负责界面对应xml和activity/fragment
+
+3.VM是负责Model和View之间的交互
+VM是ViewModel的缩写可以理解成是View的数据模型和Presenter的合体，负责Model和View
+之间的交互，处理业务逻辑，ViewModel和View层之间的交互通过谷歌的框架data-binding来完成，
+而Data Binding可以实现双向的交互，这就使得视图和控制层之间的耦合程度进一步降低，
+关注点分离更为彻底，同时减轻了Activity的压力。
+ViewModel的功能之一是当activity重建时里面的数据不会丢失
+
+demo
+https://blog.csdn.net/liulanzaijia/article/details/89641144
+https://www.jianshu.com/p/114a5996dab6
+
+原理
+https://zhuanlan.zhihu.com/p/488904151

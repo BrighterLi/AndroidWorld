@@ -29,3 +29,11 @@ Kotlin 双冒号 :: 使用：https://blog.csdn.net/lv_fq/article/details/7286912
 -> lamada
 闭包
 高阶
+
+
+distinctBy：去重
+https://www.coder.work/article/7321819
+filter
+map
+flapMap
+mapNotNull
