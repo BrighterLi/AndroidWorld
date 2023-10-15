@@ -20,6 +20,7 @@ import com.xiaoming.androidpoints.datastorage.File.FileActivity;
 import com.xiaoming.androidpoints.deeplink.DeepLinkActivity;
 import com.xiaoming.androidpoints.dialog.DialogTestActivity;
 import com.xiaoming.androidpoints.floating.floating.FloatingActivity;
+import com.xiaoming.androidpoints.frame.mvx.mvvm.mvi.MVIActivity;
 import com.xiaoming.androidpoints.innerclass.InnerClassAndVariableActivity;
 import com.xiaoming.androidpoints.intent.IntentActivity;
 import com.xiaoming.androidpoints.jnidemo.JniActivity;
@@ -185,6 +186,9 @@ public class MainActivity extends Activity {
                     case 36: //activity stack
                         startActivity(new Intent(MainActivity.this, ActivityStackActivity.class));
                         break;
+                    case 37: //activity stack
+                        startActivity(new Intent(MainActivity.this, MVIActivity.class));
+                        break;
                 }
             }
         });
@@ -235,5 +239,6 @@ public class MainActivity extends Activity {
         demoDataList.add("layout");
         demoDataList.add("service");
         demoDataList.add("activity stack");
+        demoDataList.add("mvx");
     }
 }
