@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".textview.TextView1Activity">
 
-    <TextView
+    <!--<TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -36,5 +36,20 @@
         app:layout_constraintLeft_toRightOf="@id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="174dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/Blue900"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+
+        android:text="123456789123456789123456789123456789123456789123456789123456789123456789"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="16dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
