@@ -260,3 +260,6 @@ for(int i = list.size(); I > -1; i--)
 带有final修饰符的类是不可派生的。在Java核心API中，有许多应用 final的例子，例如java.lang.String。为String类指定final防止了使用者覆盖length()方法。另外，如果一个类是 final的，则该类所有方法都是final的。Java编译器会寻找机会内联（inline）所有的final方法（这和具体的编译器实现有关）。此举能够使性能平均提高50%。
 
 
+Perfetto
+Perfetto分析进阶: https://blog.csdn.net/feelabclihu/article/details/126672666?spm=1001.2014.3001.5502
+
